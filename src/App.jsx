@@ -1,44 +1,26 @@
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-// countries 数据（这里先写一小部分例子）
-const countries = [
-  {
-    countryEn: "United States",
-    countryZh: "美国",
-    agencyEn: "Environmental Protection Agency (EPA)",
-    agencyZh: "环境保护署",
-    website: "https://www.epa.gov/",
-    flagUrl: "https://flagcdn.com/us.svg",
-    description: "美国环保署负责制定环境保护法规，管理空气、水和土地污染等问题。",
-    data: { forestCoverage: 33, carbonEmission: 5000 },
-    region: "North America"
-  },
-  {
-    countryEn: "China",
-    countryZh: "中国",
-    agencyEn: "Ministry of Ecology and Environment (MEE)",
-    agencyZh: "生态环境部",
-    website: "https://www.mee.gov.cn/",
-    flagUrl: "https://flagcdn.com/cn.svg",
-    description: "中国生态环境部负责全国生态环境保护与污染防治的政策制定与实施。",
-    data: { forestCoverage: 23, carbonEmission: 10000 },
-    region: "Asia"
-  },
-];
-
-const ITEMS_PER_PAGE = 9;
-
 export default function GlobalEnvironmentalAgencies() {
+  const [countries, setCountries] = useState([]);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const [regionFilter, setRegionFilter] = useState("");
   const [language, setLanguage] = useState("zh");
   const [sortOrder, setSortOrder] = useState("none");
   const [openDialogIndex, setOpenDialogIndex] = useState(null);
+
+  useEffect(() => {
+    fetch('/src/countries.json')
+      .then(response => response.json())
+      .then(data => setCountries(data));
+  }, []);
+
+  const ITEMS_PER_PAGE = 9;
 
   const filteredCountries = countries
     .filter((item) =>
@@ -68,18 +50,12 @@ export default function GlobalEnvironmentalAgencies() {
           type="text"
           placeholder={t("搜索国家或环境部门", "Search by country or agency")}
           value={search}
-          onChange={(e) => {
-            setSearch(e.target.value);
-            setPage(1);
-          }}
+          onChange={(e) => { setSearch(e.target.value); setPage(1); }}
           className="border p-2 rounded w-full md:w-1/2"
         />
         <select
           value={regionFilter}
-          onChange={(e) => {
-            setRegionFilter(e.target.value);
-            setPage(1);
-          }}
+          onChange={(e) => { setRegionFilter(e.target.value); setPage(1); }}
           className="border p-2 rounded"
         >
           <option value="">{t("全部地区", "All Regions")}</option>
@@ -108,7 +84,7 @@ export default function GlobalEnvironmentalAgencies() {
           {language === "zh" ? "切换到英文" : "Switch to Chinese"}
         </button>
       </div>
-      {/* 国家卡片列表 */}
+      {/* 渲染国家卡片 */}
     </div>
   );
 }
