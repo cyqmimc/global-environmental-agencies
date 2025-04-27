@@ -7,10 +7,7 @@
     "website": "https://www.epa.gov/",
     "flagUrl": "https://flagcdn.com/us.svg",
     "description": "美国环保署负责制定环境保护法规，管理空气、水和土地污染等问题。",
-    "data": {
-      "forestCoverage": 33,
-      "carbonEmission": 5000
-    },
+    "data": { "forestCoverage": 33, "carbonEmission": 5000 },
     "region": "North America"
   },
   {
@@ -21,10 +18,207 @@
     "website": "https://www.mee.gov.cn/",
     "flagUrl": "https://flagcdn.com/cn.svg",
     "description": "中国生态环境部负责全国生态环境保护与污染防治的政策制定与实施。",
-    "data": {
-      "forestCoverage": 23,
-      "carbonEmission": 10000
-    },
+    "data": { "forestCoverage": 23, "carbonEmission": 10000 },
     "region": "Asia"
+  },
+  {
+    "countryEn": "Germany",
+    "countryZh": "德国",
+    "agencyEn": "Federal Ministry for the Environment, Nature Conservation, Nuclear Safety and Consumer Protection (BMUV)",
+    "agencyZh": "联邦环境、自然保护、核安全与消费者保护部",
+    "website": "https://www.bmuv.de/",
+    "flagUrl": "https://flagcdn.com/de.svg",
+    "description": "德国联邦环境部负责制定环境、自然保护和核安全的政策。",
+    "data": { "forestCoverage": 32, "carbonEmission": 800 },
+    "region": "Europe"
+  },
+  {
+    "countryEn": "Japan",
+    "countryZh": "日本",
+    "agencyEn": "Ministry of the Environment (MOE)",
+    "agencyZh": "环境省",
+    "website": "https://www.env.go.jp/en/",
+    "flagUrl": "https://flagcdn.com/jp.svg",
+    "description": "日本环境省负责环境保护、气候变化对策及自然保护。",
+    "data": { "forestCoverage": 68, "carbonEmission": 1200 },
+    "region": "Asia"
+  },
+  {
+    "countryEn": "France",
+    "countryZh": "法国",
+    "agencyEn": "Ministry for the Ecological Transition",
+    "agencyZh": "生态转型部",
+    "website": "https://www.ecologie.gouv.fr/",
+    "flagUrl": "https://flagcdn.com/fr.svg",
+    "description": "法国生态转型部负责生态、能源和可持续发展的政策制定。",
+    "data": { "forestCoverage": 31, "carbonEmission": 600 },
+    "region": "Europe"
+  },
+  {
+    "countryEn": "India",
+    "countryZh": "印度",
+    "agencyEn": "Ministry of Environment, Forest and Climate Change (MoEFCC)",
+    "agencyZh": "环境、森林与气候变化部",
+    "website": "http://moef.gov.in/",
+    "flagUrl": "https://flagcdn.com/in.svg",
+    "description": "印度环境部负责生态保护和气候政策。",
+    "data": { "forestCoverage": 24, "carbonEmission": 2600 },
+    "region": "Asia"
+  },
+  {
+    "countryEn": "United Kingdom",
+    "countryZh": "英国",
+    "agencyEn": "Department for Environment, Food and Rural Affairs (DEFRA)",
+    "agencyZh": "环境、食品与乡村事务部",
+    "website": "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs",
+    "flagUrl": "https://flagcdn.com/gb.svg",
+    "description": "英国DEFRA负责环境保护、农业、渔业及乡村事务。",
+    "data": { "forestCoverage": 13, "carbonEmission": 400 },
+    "region": "Europe"
+  },
+  {
+    "countryEn": "Brazil",
+    "countryZh": "巴西",
+    "agencyEn": "Ministry of the Environment and Climate Change (MMA)",
+    "agencyZh": "环境与气候变化部",
+    "website": "https://www.gov.br/mma/pt-br",
+    "flagUrl": "https://flagcdn.com/br.svg",
+    "description": "巴西环境部负责保护亚马逊森林及应对气候变化。",
+    "data": { "forestCoverage": 60, "carbonEmission": 500 },
+    "region": "South America"
+  },
+  {
+    "countryEn": "Australia",
+    "countryZh": "澳大利亚",
+    "agencyEn": "Department of Climate Change, Energy, the Environment and Water",
+    "agencyZh": "气候变化、能源、环境与水资源部",
+    "website": "https://www.dcceew.gov.au/",
+    "flagUrl": "https://flagcdn.com/au.svg",
+    "description": "澳大利亚环境部负责气候、能源及生态保护事务。",
+    "data": { "forestCoverage": 17, "carbonEmission": 400 },
+    "region": "Oceania"
+  },
+  {
+    "countryEn": "South Africa",
+    "countryZh": "南非",
+    "agencyEn": "Department of Forestry, Fisheries and the Environment (DFFE)",
+    "agencyZh": "林业、渔业与环境部",
+    "website": "https://www.dffe.gov.za/",
+    "flagUrl": "https://flagcdn.com/za.svg",
+    "description": "南非DFFE负责自然资源管理与环境保护。",
+    "data": { "forestCoverage": 7, "carbonEmission": 400 },
+    "region": "Africa"
   }
+
+,
+{
+  "countryEn": "Canada",
+  "countryZh": "加拿大",
+  "agencyEn": "Environment and Climate Change Canada (ECCC)",
+  "agencyZh": "环境与气候变化部",
+  "website": "https://www.canada.ca/en/environment-climate-change.html",
+  "flagUrl": "https://flagcdn.com/ca.svg",
+  "description": "加拿大环境部负责生态保护与气候政策应对。",
+  "data": { "forestCoverage": 38, "carbonEmission": 700 },
+  "region": "North America"
+},
+{
+  "countryEn": "Mexico",
+  "countryZh": "墨西哥",
+  "agencyEn": "Secretariat of Environment and Natural Resources (SEMARNAT)",
+  "agencyZh": "环境与自然资源部",
+  "website": "https://www.gob.mx/semarnat",
+  "flagUrl": "https://flagcdn.com/mx.svg",
+  "description": "墨西哥环境部负责保护自然资源及应对气候变化。",
+  "data": { "forestCoverage": 33, "carbonEmission": 450 },
+  "region": "North America"
+},
+{
+  "countryEn": "Saudi Arabia",
+  "countryZh": "沙特阿拉伯",
+  "agencyEn": "Ministry of Environment, Water and Agriculture",
+  "agencyZh": "环境、水利与农业部",
+  "website": "https://www.mewa.gov.sa/",
+  "flagUrl": "https://flagcdn.com/sa.svg",
+  "description": "沙特环境部主管水资源管理及生态保护事务。",
+  "data": { "forestCoverage": 0.5, "carbonEmission": 600 },
+  "region": "Asia"
+},
+{
+  "countryEn": "Indonesia",
+  "countryZh": "印度尼西亚",
+  "agencyEn": "Ministry of Environment and Forestry",
+  "agencyZh": "环境与林业部",
+  "website": "https://www.menlhk.go.id/",
+  "flagUrl": "https://flagcdn.com/id.svg",
+  "description": "印尼环境部负责森林保护及气候变化应对。",
+  "data": { "forestCoverage": 50, "carbonEmission": 1200 },
+  "region": "Asia"
+},
+{
+  "countryEn": "Italy",
+  "countryZh": "意大利",
+  "agencyEn": "Ministry of Environment and Energy Security",
+  "agencyZh": "环境与能源安全部",
+  "website": "https://www.mase.gov.it/",
+  "flagUrl": "https://flagcdn.com/it.svg",
+  "description": "意大利环境部致力于可再生能源及生态保护政策。",
+  "data": { "forestCoverage": 36, "carbonEmission": 450 },
+  "region": "Europe"
+},
+{
+  "countryEn": "Spain",
+  "countryZh": "西班牙",
+  "agencyEn": "Ministry for the Ecological Transition and the Demographic Challenge",
+  "agencyZh": "生态转型与人口挑战部",
+  "website": "https://www.miteco.gob.es/",
+  "flagUrl": "https://flagcdn.com/es.svg",
+  "description": "西班牙生态转型部主管环境保护与能源政策。",
+  "data": { "forestCoverage": 37, "carbonEmission": 320 },
+  "region": "Europe"
+},
+{
+  "countryEn": "Russia",
+  "countryZh": "俄罗斯",
+  "agencyEn": "Ministry of Natural Resources and Environment",
+  "agencyZh": "自然资源与环境部",
+  "website": "https://www.mnr.gov.ru/",
+  "flagUrl": "https://flagcdn.com/ru.svg",
+  "description": "俄罗斯自然资源部主管环境资源开发与保护。",
+  "data": { "forestCoverage": 49, "carbonEmission": 1500 },
+  "region": "Europe"
+},
+{
+  "countryEn": "Singapore",
+  "countryZh": "新加坡",
+  "agencyEn": "Ministry of Sustainability and the Environment",
+  "agencyZh": "可持续发展与环境部",
+  "website": "https://www.mse.gov.sg/",
+  "flagUrl": "https://flagcdn.com/sg.svg",
+  "description": "新加坡环境部推行绿色经济和气候应对政策。",
+  "data": { "forestCoverage": 23, "carbonEmission": 60 },
+  "region": "Asia"
+},
+{
+  "countryEn": "Egypt",
+  "countryZh": "埃及",
+  "agencyEn": "Ministry of Environment",
+  "agencyZh": "环境部",
+  "website": "http://www.eeaa.gov.eg/",
+  "flagUrl": "https://flagcdn.com/eg.svg",
+  "description": "埃及环境部负责应对沙漠化和水资源保护事务。",
+  "data": { "forestCoverage": 0.1, "carbonEmission": 250 },
+  "region": "Africa"
+},
+{
+  "countryEn": "South Korea",
+  "countryZh": "韩国",
+  "agencyEn": "Ministry of Environment",
+  "agencyZh": "环境部",
+  "website": "http://eng.me.go.kr/eng/web/main.do",
+  "flagUrl": "https://flagcdn.com/kr.svg",
+  "description": "韩国环境部主管空气质量、水资源及气候变化政策。",
+  "data": { "forestCoverage": 64, "carbonEmission": 700 },
+  "region": "Asia"
+}
 ]
