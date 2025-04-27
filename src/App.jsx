@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from 'chart.js';
@@ -15,7 +14,7 @@ export default function GlobalEnvironmentalAgencies() {
   const [openDialogIndex, setOpenDialogIndex] = useState(null);
 
   useEffect(() => {
-    fetch('/src/countries.json')
+    fetch('/countries.json')
       .then(response => response.json())
       .then(data => setCountries(data));
   }, []);
@@ -84,7 +83,71 @@ export default function GlobalEnvironmentalAgencies() {
           {language === "zh" ? "切换到英文" : "Switch to Chinese"}
         </button>
       </div>
-      {/* 渲染国家卡片 */}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {paginatedCountries.map((item, idx) => (
+          <div
+            key={idx}
+            className="border rounded-2xl p-4 flex flex-col items-center hover:shadow-lg transition-transform transform hover:scale-105 cursor-pointer"
+            onClick={() => setOpenDialogIndex(idx)}
+          >
+            <img src={item.flagUrl} alt={item.countryEn} className="w-16 h-10 object-cover rounded-md mb-2" />
+            <h2 className="text-lg font-semibold">{language === "zh" ? item.countryZh : item.countryEn}</h2>
+            <p className="text-center text-sm my-1">{language === "zh" ? item.agencyZh : item.agencyEn}</p>
+            <a
+              href={item.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-block bg-green-500 text-white px-4 py-2 rounded"
+            >
+              {t("访问官网", "Visit Website")}
+            </a>
+          </div>
+        ))}
+      </div>
+
+      {openDialogIndex !== null && (
+        <div className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 w-11/12 max-w-md relative">
+            <button
+              onClick={() => setOpenDialogIndex(null)}
+              className="absolute top-2 right-2 text-gray-500"
+            >
+              ✖
+            </button>
+            <div className="flex flex-col items-center">
+              <img src={paginatedCountries[openDialogIndex].flagUrl} alt="flag" className="w-20 h-14 object-cover rounded-md mb-2" />
+              <h3 className="text-lg font-bold mb-2">{language === "zh" ? paginatedCountries[openDialogIndex].countryZh : paginatedCountries[openDialogIndex].countryEn}</h3>
+              <p>{language === "zh" ? paginatedCountries[openDialogIndex].agencyZh : paginatedCountries[openDialogIndex].agencyEn}</p>
+              <p className="text-sm my-2">{paginatedCountries[openDialogIndex].description}</p>
+              {paginatedCountries[openDialogIndex].data && (
+                <div className="mt-4 w-full">
+                  <Bar
+                    data={{
+                      labels: [t('森林覆盖率 (%)', 'Forest Coverage (%)'), t('碳排放 (百万吨)', 'Carbon Emission (Mt)')],
+                      datasets: [
+                        {
+                          label: language === "zh" ? paginatedCountries[openDialogIndex].countryZh : paginatedCountries[openDialogIndex].countryEn,
+                          data: [
+                            paginatedCountries[openDialogIndex].data.forestCoverage,
+                            paginatedCountries[openDialogIndex].data.carbonEmission,
+                          ],
+                          backgroundColor: ['#4ade80', '#f87171'],
+                        },
+                      ],
+                    }}
+                    options={{
+                      responsive: true,
+                      plugins: { legend: { display: false } },
+                      scales: { y: { beginAtZero: true } },
+                    }}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
