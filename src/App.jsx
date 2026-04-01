@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -11,14 +11,28 @@ import {
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
+const RESPONSIBILITY_LABELS = {
+  climate: { zh: "气候", en: "Climate" },
+  water: { zh: "水资源", en: "Water" },
+  biodiversity: { zh: "生物多样性", en: "Biodiversity" },
+  forest: { zh: "森林", en: "Forest" },
+  air: { zh: "空气", en: "Air" },
+  waste: { zh: "废弃物", en: "Waste" },
+  energy: { zh: "能源", en: "Energy" },
+  chemicals: { zh: "化学品", en: "Chemicals" },
+  nuclear: { zh: "核安全", en: "Nuclear" },
+};
+
 export default function GlobalEnvironmentalAgencies() {
   const [countries, setCountries] = useState([]);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const [regionFilter, setRegionFilter] = useState("");
+  const [tagFilter, setTagFilter] = useState("");
   const [language, setLanguage] = useState("zh");
   const [sortOrder, setSortOrder] = useState("none");
   const [openDialogIndex, setOpenDialogIndex] = useState(null);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     fetch("/countries.json")
@@ -27,6 +41,22 @@ export default function GlobalEnvironmentalAgencies() {
   }, []);
 
   const ITEMS_PER_PAGE = 12;
+  const t = (zh, en) => (language === "zh" ? zh : en);
+
+  // Global averages
+  const globalAvg = useMemo(() => {
+    if (countries.length === 0) return { forestCoverage: 0, carbonEmission: 0 };
+    return {
+      forestCoverage: +(
+        countries.reduce((s, c) => s + c.data.forestCoverage, 0) /
+        countries.length
+      ).toFixed(1),
+      carbonEmission: +(
+        countries.reduce((s, c) => s + c.data.carbonEmission, 0) /
+        countries.length
+      ).toFixed(0),
+    };
+  }, [countries]);
 
   const filteredCountries = countries
     .filter(
@@ -35,7 +65,8 @@ export default function GlobalEnvironmentalAgencies() {
           item.countryZh.includes(search) ||
           item.agencyEn.toLowerCase().includes(search.toLowerCase()) ||
           item.agencyZh.includes(search)) &&
-        (regionFilter ? item.region === regionFilter : true)
+        (regionFilter ? item.region === regionFilter : true) &&
+        (tagFilter ? item.responsibilities.includes(tagFilter) : true)
     )
     .sort((a, b) => {
       if (sortOrder === "forestAsc")
@@ -55,8 +86,6 @@ export default function GlobalEnvironmentalAgencies() {
     page * ITEMS_PER_PAGE
   );
 
-  const t = (zh, en) => (language === "zh" ? zh : en);
-
   const regions = [
     { value: "", labelZh: "全部地区", labelEn: "All Regions" },
     { value: "Asia", labelZh: "亚洲", labelEn: "Asia" },
@@ -67,13 +96,26 @@ export default function GlobalEnvironmentalAgencies() {
     { value: "South America", labelZh: "南美洲", labelEn: "South America" },
   ];
 
-  const regionCounts = {};
-  countries.forEach((c) => {
-    regionCounts[c.region] = (regionCounts[c.region] || 0) + 1;
-  });
+  const regionCount = new Set(countries.map((c) => c.region)).size;
 
   const selectedCountry =
     openDialogIndex !== null ? paginatedCountries[openDialogIndex] : null;
+
+  const handleCopy = (country) => {
+    const name = language === "zh" ? country.agencyZh : country.agencyEn;
+    const countryName =
+      language === "zh" ? country.countryZh : country.countryEn;
+    const responsibilities = country.responsibilities
+      .map((r) => (RESPONSIBILITY_LABELS[r] ? RESPONSIBILITY_LABELS[r][language] : r))
+      .join(", ");
+    const text = `${countryName} — ${name}\n${t("职能领域", "Responsibilities")}: ${responsibilities}\n${t("官网", "Website")}: ${country.website}`;
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
+  const resetPage = () => setPage(1);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
@@ -102,50 +144,27 @@ export default function GlobalEnvironmentalAgencies() {
         </div>
       </header>
 
-      {/* Stats Bar */}
+      {/* Stats Bar — simplified */}
       <div className="max-w-7xl mx-auto px-6 -mt-4">
         <div className="bg-white rounded-xl shadow-md p-4 flex flex-wrap gap-6 justify-center">
           <div className="text-center">
             <p className="text-2xl font-bold text-green-700">
               {countries.length}
             </p>
-            <p className="text-sm text-gray-500">{t("国家/地区", "Countries")}</p>
-          </div>
-          <div className="text-center">
-            <p className="text-2xl font-bold text-blue-700">
-              {Object.keys(regionCounts).length}
-            </p>
-            <p className="text-sm text-gray-500">{t("大洲", "Regions")}</p>
-          </div>
-          <div className="text-center">
-            <p className="text-2xl font-bold text-amber-600">
-              {countries.length > 0
-                ? (
-                    countries.reduce(
-                      (sum, c) => sum + c.data.forestCoverage,
-                      0
-                    ) / countries.length
-                  ).toFixed(1)
-                : 0}
-              %
-            </p>
             <p className="text-sm text-gray-500">
-              {t("平均森林覆盖率", "Avg. Forest Coverage")}
+              {t("收录国家", "Countries")}
             </p>
           </div>
           <div className="text-center">
-            <p className="text-2xl font-bold text-red-600">
-              {countries.length > 0
-                ? (
-                    countries.reduce(
-                      (sum, c) => sum + c.data.carbonEmission,
-                      0
-                    ) / 1000
-                  ).toFixed(1)
-                : 0}
-            </p>
+            <p className="text-2xl font-bold text-blue-700">{regionCount}</p>
             <p className="text-sm text-gray-500">
-              {t("总碳排放 (十亿吨)", "Total Carbon (Gt)")}
+              {t("覆盖大洲", "Regions")}
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-2xl font-bold text-gray-500">2026-04</p>
+            <p className="text-sm text-gray-500">
+              {t("最近更新", "Last Updated")}
             </p>
           </div>
         </div>
@@ -168,7 +187,7 @@ export default function GlobalEnvironmentalAgencies() {
                 value={search}
                 onChange={(e) => {
                   setSearch(e.target.value);
-                  setPage(1);
+                  resetPage();
                 }}
                 className="w-full border border-gray-200 pl-10 pr-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition"
               />
@@ -177,7 +196,7 @@ export default function GlobalEnvironmentalAgencies() {
               value={regionFilter}
               onChange={(e) => {
                 setRegionFilter(e.target.value);
-                setPage(1);
+                resetPage();
               }}
               className="border border-gray-200 px-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white min-w-[140px]"
             >
@@ -192,9 +211,7 @@ export default function GlobalEnvironmentalAgencies() {
               onChange={(e) => setSortOrder(e.target.value)}
               className="border border-gray-200 px-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white min-w-[180px]"
             >
-              <option value="none">
-                {t("默认排序", "Default Sorting")}
-              </option>
+              <option value="none">{t("默认排序", "Default Sorting")}</option>
               <option value="forestAsc">
                 {t("森林覆盖率 ↑", "Forest Coverage ↑")}
               </option>
@@ -209,6 +226,40 @@ export default function GlobalEnvironmentalAgencies() {
               </option>
             </select>
           </div>
+
+          {/* Tag Filter */}
+          <div className="flex flex-wrap gap-2 mt-3">
+            <button
+              onClick={() => {
+                setTagFilter("");
+                resetPage();
+              }}
+              className={`px-3 py-1 rounded-full text-sm font-medium transition-colors cursor-pointer ${
+                tagFilter === ""
+                  ? "bg-green-600 text-white"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              }`}
+            >
+              {t("全部职能", "All")}
+            </button>
+            {Object.entries(RESPONSIBILITY_LABELS).map(([key, label]) => (
+              <button
+                key={key}
+                onClick={() => {
+                  setTagFilter(tagFilter === key ? "" : key);
+                  resetPage();
+                }}
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-colors cursor-pointer ${
+                  tagFilter === key
+                    ? "bg-green-600 text-white"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                }`}
+              >
+                {language === "zh" ? label.zh : label.en}
+              </button>
+            ))}
+          </div>
+
           <p className="text-sm text-gray-400 mt-3">
             {t(
               `共 ${filteredCountries.length} 个结果`,
@@ -230,7 +281,7 @@ export default function GlobalEnvironmentalAgencies() {
             {paginatedCountries.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white border border-gray-100 rounded-2xl p-5 flex flex-col items-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
+                className="bg-white border border-gray-100 rounded-2xl p-5 flex flex-col items-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
                 onClick={() => setOpenDialogIndex(idx)}
               >
                 <img
@@ -247,13 +298,22 @@ export default function GlobalEnvironmentalAgencies() {
                 <span className="mt-2 inline-block bg-green-50 text-green-700 text-xs font-medium px-2.5 py-1 rounded-full">
                   {item.region}
                 </span>
+                {/* Responsibility tags */}
+                <div className="flex flex-wrap gap-1 mt-2 justify-center">
+                  {item.responsibilities.slice(0, 3).map((r) => (
+                    <span
+                      key={r}
+                      className="bg-blue-50 text-blue-600 text-xs px-2 py-0.5 rounded-full"
+                    >
+                      {RESPONSIBILITY_LABELS[r]
+                        ? RESPONSIBILITY_LABELS[r][language]
+                        : r}
+                    </span>
+                  ))}
+                </div>
                 <div className="mt-3 flex gap-4 text-xs text-gray-400">
-                  <span>
-                    🌲 {item.data.forestCoverage}%
-                  </span>
-                  <span>
-                    💨 {item.data.carbonEmission} Mt
-                  </span>
+                  <span>🌲 {item.data.forestCoverage}%</span>
+                  <span>💨 {item.data.carbonEmission} Mt</span>
                 </div>
                 <a
                   href={item.website}
@@ -307,7 +367,10 @@ export default function GlobalEnvironmentalAgencies() {
       {selectedCountry && (
         <div
           className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4"
-          onClick={() => setOpenDialogIndex(null)}
+          onClick={() => {
+            setOpenDialogIndex(null);
+            setCopied(false);
+          }}
         >
           <div
             className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto"
@@ -316,7 +379,10 @@ export default function GlobalEnvironmentalAgencies() {
             {/* Dialog Header */}
             <div className="bg-gradient-to-r from-green-600 to-emerald-500 p-6 rounded-t-2xl text-white relative">
               <button
-                onClick={() => setOpenDialogIndex(null)}
+                onClick={() => {
+                  setOpenDialogIndex(null);
+                  setCopied(false);
+                }}
                 className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors cursor-pointer"
               >
                 ✕
@@ -344,9 +410,13 @@ export default function GlobalEnvironmentalAgencies() {
 
             {/* Dialog Body */}
             <div className="p-6">
-              <div className="flex flex-wrap gap-3 mb-4">
+              {/* Tags row */}
+              <div className="flex flex-wrap gap-2 mb-4">
                 <span className="bg-green-50 text-green-700 text-sm font-medium px-3 py-1 rounded-full">
                   {selectedCountry.region}
+                </span>
+                <span className="bg-amber-50 text-amber-700 text-sm font-medium px-3 py-1 rounded-full">
+                  {t("成立于", "Est.")} {selectedCountry.established}
                 </span>
                 <a
                   href={selectedCountry.website}
@@ -358,11 +428,80 @@ export default function GlobalEnvironmentalAgencies() {
                 </a>
               </div>
 
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="text-gray-600 leading-relaxed mb-4">
                 {language === "zh"
-                  ? selectedCountry.descriptionZh || selectedCountry.description
-                  : selectedCountry.descriptionEn || selectedCountry.description}
+                  ? selectedCountry.descriptionZh
+                  : selectedCountry.descriptionEn}
               </p>
+
+              {/* Responsibilities */}
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-gray-500 mb-2">
+                  {t("职能领域", "Responsibilities")}
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {selectedCountry.responsibilities.map((r) => (
+                    <span
+                      key={r}
+                      className="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full"
+                    >
+                      {RESPONSIBILITY_LABELS[r]
+                        ? RESPONSIBILITY_LABELS[r][language]
+                        : r}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Treaties */}
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-gray-500 mb-2">
+                  {t("参与国际公约", "International Treaties")}
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {selectedCountry.treaties.map((tr) => (
+                    <span
+                      key={tr}
+                      className="bg-purple-50 text-purple-700 text-sm px-3 py-1 rounded-full"
+                    >
+                      {tr}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Contact */}
+              {selectedCountry.contact?.email && (
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-500 mb-2">
+                    {t("联系方式", "Contact")}
+                  </h4>
+                  <a
+                    href={`mailto:${selectedCountry.contact.email}`}
+                    className="text-blue-600 hover:underline text-sm"
+                  >
+                    {selectedCountry.contact.email}
+                  </a>
+                </div>
+              )}
+
+              {/* Copy button */}
+              <button
+                onClick={() => handleCopy(selectedCountry)}
+                className="mb-6 w-full py-2.5 rounded-lg border border-gray-200 text-sm font-medium hover:bg-gray-50 transition-colors cursor-pointer flex items-center justify-center gap-2"
+              >
+                {copied ? (
+                  <>
+                    <span className="text-green-600">✓</span>
+                    {t("已复制到剪贴板", "Copied to clipboard")}
+                  </>
+                ) : (
+                  <>
+                    <span>📋</span>
+                    {t("复制机构信息", "Copy agency info")}
+                  </>
+                )}
+              </button>
 
               {/* Data Cards */}
               <div className="grid grid-cols-2 gap-4 mb-6">
@@ -373,6 +512,9 @@ export default function GlobalEnvironmentalAgencies() {
                   <p className="text-sm text-green-600 mt-1">
                     {t("森林覆盖率", "Forest Coverage")}
                   </p>
+                  <p className="text-xs text-gray-400 mt-1">
+                    {t("全球均值", "Global avg.")} {globalAvg.forestCoverage}%
+                  </p>
                 </div>
                 <div className="bg-red-50 rounded-xl p-4 text-center">
                   <p className="text-3xl font-bold text-red-600">
@@ -381,19 +523,22 @@ export default function GlobalEnvironmentalAgencies() {
                   <p className="text-sm text-red-500 mt-1">
                     {t("碳排放 (百万吨)", "Carbon Emission (Mt)")}
                   </p>
+                  <p className="text-xs text-gray-400 mt-1">
+                    {t("全球均值", "Global avg.")} {globalAvg.carbonEmission} Mt
+                  </p>
                 </div>
               </div>
 
-              {/* Chart */}
+              {/* Chart: this country vs global average */}
               <div className="bg-gray-50 rounded-xl p-4">
                 <h4 className="text-sm font-semibold text-gray-500 mb-3">
-                  {t("环境数据概览", "Environmental Data Overview")}
+                  {t("与全球均值对比", "Compared to Global Average")}
                 </h4>
                 <Bar
                   data={{
                     labels: [
                       t("森林覆盖率 (%)", "Forest Coverage (%)"),
-                      t("碳排放 (百万吨)", "Carbon Emission (Mt)"),
+                      t("碳排放 (Mt)", "Carbon Emission (Mt)"),
                     ],
                     datasets: [
                       {
@@ -408,19 +553,32 @@ export default function GlobalEnvironmentalAgencies() {
                         backgroundColor: ["#22c55e", "#ef4444"],
                         borderRadius: 8,
                       },
+                      {
+                        label: t("全球均值", "Global Average"),
+                        data: [
+                          globalAvg.forestCoverage,
+                          globalAvg.carbonEmission,
+                        ],
+                        backgroundColor: ["#bbf7d0", "#fecaca"],
+                        borderRadius: 8,
+                      },
                     ],
                   }}
                   options={{
                     responsive: true,
-                    plugins: { legend: { display: false } },
+                    plugins: {
+                      legend: {
+                        display: true,
+                        position: "bottom",
+                        labels: { boxWidth: 12, padding: 16 },
+                      },
+                    },
                     scales: {
                       y: {
                         beginAtZero: true,
                         grid: { color: "#e5e7eb" },
                       },
-                      x: {
-                        grid: { display: false },
-                      },
+                      x: { grid: { display: false } },
                     },
                   }}
                 />
@@ -435,8 +593,8 @@ export default function GlobalEnvironmentalAgencies() {
         <div className="max-w-7xl mx-auto px-6 py-8 text-center text-sm">
           <p>
             {t(
-              "© 2026 全球环境保护机构数据库 — 数据仅供参考",
-              "© 2026 Global Environmental Agencies Database — Data for reference only"
+              "© 2026 全球环境保护机构数据库 · 数据来源：各国政府官方网站、联合国环境规划署、世界银行",
+              "© 2026 Global Environmental Agencies Database · Sources: National government websites, UNEP, World Bank"
             )}
           </p>
         </div>

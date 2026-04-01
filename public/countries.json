@@ -9,7 +9,11 @@
     "descriptionZh": "美国环保署负责制定环境保护法规，管理空气、水和土地污染等问题，是世界上最具影响力的环保机构之一。",
     "descriptionEn": "The EPA is responsible for creating and enforcing environmental regulations, managing air, water and land pollution. It is one of the most influential environmental agencies in the world.",
     "data": { "forestCoverage": 33, "carbonEmission": 5000 },
-    "region": "North America"
+    "region": "North America",
+    "established": 1970,
+    "responsibilities": ["air", "water", "waste", "chemicals"],
+    "contact": { "email": "public-access@epa.gov" },
+    "treaties": ["Paris Agreement", "Montreal Protocol", "Basel Convention"]
   },
   {
     "countryEn": "China",
@@ -21,7 +25,11 @@
     "descriptionZh": "中国生态环境部负责全国生态环境保护与污染防治的政策制定与实施，推动碳达峰碳中和目标。",
     "descriptionEn": "China's MEE is responsible for national ecological and environmental protection policies, pollution prevention, and driving carbon peak and neutrality goals.",
     "data": { "forestCoverage": 23, "carbonEmission": 10000 },
-    "region": "Asia"
+    "region": "Asia",
+    "established": 2018,
+    "responsibilities": ["climate", "air", "water", "biodiversity"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "Montreal Protocol", "Basel Convention"]
   },
   {
     "countryEn": "Germany",
@@ -33,7 +41,11 @@
     "descriptionZh": "德国联邦环境部负责制定环境、自然保护和核安全的政策，是欧洲绿色转型的先驱。",
     "descriptionEn": "Germany's BMUV is responsible for environmental policy, nature conservation, and nuclear safety. Germany is a pioneer in Europe's green transition.",
     "data": { "forestCoverage": 32, "carbonEmission": 800 },
-    "region": "Europe"
+    "region": "Europe",
+    "established": 1986,
+    "responsibilities": ["climate", "nuclear", "biodiversity", "waste"],
+    "contact": { "email": "service@bmuv.bund.de" },
+    "treaties": ["Paris Agreement", "CBD", "UNFCCC", "Basel Convention"]
   },
   {
     "countryEn": "Japan",
@@ -45,7 +57,11 @@
     "descriptionZh": "日本环境省负责环境保护、气候变化对策及自然保护，推动循环经济和零碳社会建设。",
     "descriptionEn": "Japan's MOE oversees environmental protection, climate change countermeasures, and nature conservation, promoting a circular economy and carbon-neutral society.",
     "data": { "forestCoverage": 68, "carbonEmission": 1200 },
-    "region": "Asia"
+    "region": "Asia",
+    "established": 2001,
+    "responsibilities": ["climate", "waste", "biodiversity", "chemicals"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "Minamata Convention", "Basel Convention"]
   },
   {
     "countryEn": "France",
@@ -57,7 +73,11 @@
     "descriptionZh": "法国生态转型部负责生态、能源和可持续发展的政策制定，积极推动核能与可再生能源结合。",
     "descriptionEn": "France's Ministry for the Ecological Transition handles ecology, energy, and sustainable development policy, actively combining nuclear and renewable energy.",
     "data": { "forestCoverage": 31, "carbonEmission": 600 },
-    "region": "Europe"
+    "region": "Europe",
+    "established": 1971,
+    "responsibilities": ["climate", "energy", "biodiversity", "water"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "UNFCCC", "Ramsar Convention"]
   },
   {
     "countryEn": "India",
@@ -69,7 +89,11 @@
     "descriptionZh": "印度环境部负责生态保护和气候政策，管理广袤的森林资源和生物多样性。",
     "descriptionEn": "India's MoEFCC is responsible for ecological protection and climate policy, managing vast forest resources and biodiversity.",
     "data": { "forestCoverage": 24, "carbonEmission": 2600 },
-    "region": "Asia"
+    "region": "Asia",
+    "established": 1985,
+    "responsibilities": ["forest", "climate", "biodiversity", "water"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "UNCCD", "Ramsar Convention"]
   },
   {
     "countryEn": "United Kingdom",
@@ -81,7 +105,11 @@
     "descriptionZh": "英国DEFRA负责环境保护、农业、渔业及乡村事务，推动净零排放目标。",
     "descriptionEn": "DEFRA is responsible for environmental protection, agriculture, fisheries, and rural affairs, driving the UK's net-zero emissions target.",
     "data": { "forestCoverage": 13, "carbonEmission": 400 },
-    "region": "Europe"
+    "region": "Europe",
+    "established": 2001,
+    "responsibilities": ["climate", "water", "biodiversity", "waste"],
+    "contact": { "email": "defra.helpline@defra.gov.uk" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"]
   },
   {
     "countryEn": "Brazil",
@@ -93,7 +121,11 @@
     "descriptionZh": "巴西环境部负责保护亚马逊森林及应对气候变化，管理全球最大的热带雨林。",
     "descriptionEn": "Brazil's MMA is responsible for protecting the Amazon rainforest and addressing climate change, managing the world's largest tropical rainforest.",
     "data": { "forestCoverage": 60, "carbonEmission": 500 },
-    "region": "South America"
+    "region": "South America",
+    "established": 1992,
+    "responsibilities": ["forest", "climate", "biodiversity", "water"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Amazon Cooperation Treaty"]
   },
   {
     "countryEn": "Australia",
@@ -105,7 +137,11 @@
     "descriptionZh": "澳大利亚环境部负责气候、能源及生态保护事务，应对干旱和珊瑚礁退化挑战。",
     "descriptionEn": "Australia's DCCEEW handles climate, energy, and ecological protection, addressing challenges from drought and coral reef degradation.",
     "data": { "forestCoverage": 17, "carbonEmission": 400 },
-    "region": "Oceania"
+    "region": "Oceania",
+    "established": 2022,
+    "responsibilities": ["climate", "energy", "water", "biodiversity"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"]
   },
   {
     "countryEn": "South Africa",
@@ -117,7 +153,11 @@
     "descriptionZh": "南非DFFE负责自然资源管理与环境保护，保护丰富的野生动物资源。",
     "descriptionEn": "South Africa's DFFE manages natural resources and environmental protection, safeguarding rich wildlife resources.",
     "data": { "forestCoverage": 7, "carbonEmission": 400 },
-    "region": "Africa"
+    "region": "Africa",
+    "established": 2009,
+    "responsibilities": ["forest", "biodiversity", "water", "waste"],
+    "contact": { "email": "callcentre@dffe.gov.za" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "UNCCD"]
   },
   {
     "countryEn": "Canada",
@@ -129,7 +169,11 @@
     "descriptionZh": "加拿大环境部负责生态保护与气候政策应对，管理广袤的北方森林和淡水资源。",
     "descriptionEn": "ECCC handles ecological protection and climate policy, managing vast boreal forests and freshwater resources.",
     "data": { "forestCoverage": 38, "carbonEmission": 700 },
-    "region": "North America"
+    "region": "North America",
+    "established": 1971,
+    "responsibilities": ["climate", "water", "biodiversity", "air"],
+    "contact": { "email": "ec.enviroinfo.ec@canada.ca" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Montreal Protocol"]
   },
   {
     "countryEn": "Mexico",
@@ -141,7 +185,11 @@
     "descriptionZh": "墨西哥环境部负责保护自然资源及应对气候变化，守护丰富的生物多样性。",
     "descriptionEn": "SEMARNAT protects natural resources and addresses climate change, safeguarding Mexico's rich biodiversity.",
     "data": { "forestCoverage": 33, "carbonEmission": 450 },
-    "region": "North America"
+    "region": "North America",
+    "established": 1994,
+    "responsibilities": ["forest", "biodiversity", "water", "waste"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Basel Convention"]
   },
   {
     "countryEn": "Saudi Arabia",
@@ -153,7 +201,11 @@
     "descriptionZh": "沙特环境部主管水资源管理及生态保护事务，推动沙漠绿化和可持续农业。",
     "descriptionEn": "Saudi Arabia's ministry manages water resources and ecological protection, promoting desert greening and sustainable agriculture.",
     "data": { "forestCoverage": 0.5, "carbonEmission": 600 },
-    "region": "Asia"
+    "region": "Asia",
+    "established": 2003,
+    "responsibilities": ["water", "climate", "biodiversity"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "UNCCD", "CBD"]
   },
   {
     "countryEn": "Indonesia",
@@ -165,7 +217,11 @@
     "descriptionZh": "印尼环境部负责森林保护及气候变化应对，管理全球第三大热带雨林。",
     "descriptionEn": "Indonesia's ministry handles forest protection and climate change response, managing the world's third-largest tropical rainforest.",
     "data": { "forestCoverage": 50, "carbonEmission": 1200 },
-    "region": "Asia"
+    "region": "Asia",
+    "established": 2014,
+    "responsibilities": ["forest", "climate", "biodiversity", "waste"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"]
   },
   {
     "countryEn": "Italy",
@@ -177,7 +233,11 @@
     "descriptionZh": "意大利环境部致力于可再生能源及生态保护政策，保护地中海沿岸生态系统。",
     "descriptionEn": "Italy's ministry focuses on renewable energy and ecological protection, safeguarding Mediterranean coastal ecosystems.",
     "data": { "forestCoverage": 36, "carbonEmission": 450 },
-    "region": "Europe"
+    "region": "Europe",
+    "established": 1986,
+    "responsibilities": ["energy", "climate", "biodiversity", "water"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "Barcelona Convention", "Basel Convention"]
   },
   {
     "countryEn": "Spain",
@@ -189,7 +249,11 @@
     "descriptionZh": "西班牙生态转型部主管环境保护与能源政策，大力发展太阳能和风能。",
     "descriptionEn": "Spain's ministry oversees environmental protection and energy policy, with a strong focus on solar and wind energy development.",
     "data": { "forestCoverage": 37, "carbonEmission": 320 },
-    "region": "Europe"
+    "region": "Europe",
+    "established": 2018,
+    "responsibilities": ["energy", "climate", "water", "biodiversity"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "Barcelona Convention", "UNCCD"]
   },
   {
     "countryEn": "Russia",
@@ -201,7 +265,11 @@
     "descriptionZh": "俄罗斯自然资源部主管环境资源开发与保护，管理全球最大面积的森林。",
     "descriptionEn": "Russia's ministry manages natural resource development and environmental protection, overseeing the world's largest forest area.",
     "data": { "forestCoverage": 49, "carbonEmission": 1500 },
-    "region": "Europe"
+    "region": "Europe",
+    "established": 2008,
+    "responsibilities": ["forest", "water", "biodiversity", "waste"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"]
   },
   {
     "countryEn": "Singapore",
@@ -213,7 +281,11 @@
     "descriptionZh": "新加坡环境部推行绿色经济和气候应对政策，打造花园城市和零废弃目标。",
     "descriptionEn": "Singapore's ministry promotes green economy and climate response policies, building a Garden City with zero-waste goals.",
     "data": { "forestCoverage": 23, "carbonEmission": 60 },
-    "region": "Asia"
+    "region": "Asia",
+    "established": 2020,
+    "responsibilities": ["climate", "waste", "water", "air"],
+    "contact": { "email": "MSE_Feedback@mse.gov.sg" },
+    "treaties": ["Paris Agreement", "CBD", "Basel Convention", "Montreal Protocol"]
   },
   {
     "countryEn": "Egypt",
@@ -225,7 +297,11 @@
     "descriptionZh": "埃及环境部负责应对沙漠化和水资源保护事务，保护尼罗河流域生态。",
     "descriptionEn": "Egypt's Ministry of Environment addresses desertification and water resource protection, safeguarding the Nile basin ecosystem.",
     "data": { "forestCoverage": 0.1, "carbonEmission": 250 },
-    "region": "Africa"
+    "region": "Africa",
+    "established": 1997,
+    "responsibilities": ["water", "climate", "biodiversity", "waste"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "UNCCD", "Ramsar Convention"]
   },
   {
     "countryEn": "South Korea",
@@ -237,7 +313,11 @@
     "descriptionZh": "韩国环境部主管空气质量、水资源及气候变化政策，推动绿色新政和碳中和。",
     "descriptionEn": "South Korea's MOE manages air quality, water resources, and climate change policy, driving the Green New Deal and carbon neutrality.",
     "data": { "forestCoverage": 64, "carbonEmission": 700 },
-    "region": "Asia"
+    "region": "Asia",
+    "established": 1990,
+    "responsibilities": ["air", "water", "climate", "waste"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "Montreal Protocol", "Basel Convention"]
   },
   {
     "countryEn": "Sweden",
@@ -249,7 +329,11 @@
     "descriptionZh": "瑞典气候部致力于推动清洁能源和可持续发展，是全球环保领域的先驱国家。",
     "descriptionEn": "Sweden's ministry promotes clean energy and sustainable development, making Sweden a global pioneer in environmental protection.",
     "data": { "forestCoverage": 69, "carbonEmission": 50 },
-    "region": "Europe"
+    "region": "Europe",
+    "established": 1987,
+    "responsibilities": ["climate", "energy", "chemicals", "biodiversity"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "UNFCCC", "Montreal Protocol"]
   },
   {
     "countryEn": "Norway",
@@ -261,7 +345,11 @@
     "descriptionZh": "挪威气候与环境部推动低碳经济，是全球电动汽车普及率最高的国家之一。",
     "descriptionEn": "Norway's ministry promotes a low-carbon economy and leads globally in electric vehicle adoption.",
     "data": { "forestCoverage": 33, "carbonEmission": 50 },
-    "region": "Europe"
+    "region": "Europe",
+    "established": 1972,
+    "responsibilities": ["climate", "biodiversity", "water", "chemicals"],
+    "contact": { "email": "postmottak@kld.dep.no" },
+    "treaties": ["Paris Agreement", "CBD", "OSPAR Convention", "Ramsar Convention"]
   },
   {
     "countryEn": "New Zealand",
@@ -273,7 +361,11 @@
     "descriptionZh": "新西兰环境部致力于保护独特的自然遗产和生物多样性，推动零碳法案实施。",
     "descriptionEn": "New Zealand's Ministry for the Environment protects unique natural heritage and biodiversity, advancing the Zero Carbon Act.",
     "data": { "forestCoverage": 38, "carbonEmission": 80 },
-    "region": "Oceania"
+    "region": "Oceania",
+    "established": 1986,
+    "responsibilities": ["climate", "biodiversity", "water", "waste"],
+    "contact": { "email": "info@mfe.govt.nz" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"]
   },
   {
     "countryEn": "Kenya",
@@ -285,7 +377,11 @@
     "descriptionZh": "肯尼亚环境部管理野生动物保护区和应对气候变化，是联合国环境规划署总部所在地。",
     "descriptionEn": "Kenya's ministry manages wildlife reserves and climate response. Nairobi hosts the UNEP headquarters.",
     "data": { "forestCoverage": 8, "carbonEmission": 20 },
-    "region": "Africa"
+    "region": "Africa",
+    "established": 1999,
+    "responsibilities": ["forest", "climate", "biodiversity", "water"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "UNCCD"]
   },
   {
     "countryEn": "Nigeria",
@@ -297,7 +393,11 @@
     "descriptionZh": "尼日利亚环境部负责管理石油开发对环境的影响，保护西非生态系统。",
     "descriptionEn": "Nigeria's ministry manages the environmental impact of oil development and protects West African ecosystems.",
     "data": { "forestCoverage": 7, "carbonEmission": 120 },
-    "region": "Africa"
+    "region": "Africa",
+    "established": 1999,
+    "responsibilities": ["climate", "water", "waste", "biodiversity"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "Basel Convention", "UNCCD"]
   },
   {
     "countryEn": "Argentina",
@@ -309,7 +409,11 @@
     "descriptionZh": "阿根廷环境部负责保护巴塔哥尼亚冰川和潘帕斯草原等独特生态系统。",
     "descriptionEn": "Argentina's ministry protects unique ecosystems including Patagonian glaciers and Pampas grasslands.",
     "data": { "forestCoverage": 10, "carbonEmission": 200 },
-    "region": "South America"
+    "region": "South America",
+    "established": 2015,
+    "responsibilities": ["climate", "biodiversity", "forest", "water"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Antarctic Treaty"]
   },
   {
     "countryEn": "Colombia",
@@ -321,7 +425,11 @@
     "descriptionZh": "哥伦比亚环境部管理全球生物多样性第二丰富的国家的自然资源保护。",
     "descriptionEn": "Colombia's ministry manages natural resource protection for the world's second most biodiverse country.",
     "data": { "forestCoverage": 53, "carbonEmission": 100 },
-    "region": "South America"
+    "region": "South America",
+    "established": 1993,
+    "responsibilities": ["biodiversity", "forest", "water", "climate"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"]
   },
   {
     "countryEn": "Thailand",
@@ -333,7 +441,11 @@
     "descriptionZh": "泰国自然资源部负责保护热带雨林和海洋生态，推动绿色旅游发展。",
     "descriptionEn": "Thailand's ministry protects tropical rainforests and marine ecology, promoting green tourism development.",
     "data": { "forestCoverage": 38, "carbonEmission": 300 },
-    "region": "Asia"
+    "region": "Asia",
+    "established": 2002,
+    "responsibilities": ["forest", "water", "biodiversity", "climate"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"]
   },
   {
     "countryEn": "Netherlands",
@@ -345,7 +457,11 @@
     "descriptionZh": "荷兰水管理部在水资源管理和防洪方面全球领先，推动循环经济发展。",
     "descriptionEn": "The Netherlands' ministry leads globally in water management and flood prevention, advancing the circular economy.",
     "data": { "forestCoverage": 11, "carbonEmission": 180 },
-    "region": "Europe"
+    "region": "Europe",
+    "established": 2010,
+    "responsibilities": ["water", "climate", "air", "waste"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "OSPAR Convention", "Basel Convention"]
   },
   {
     "countryEn": "Turkey",
@@ -357,6 +473,10 @@
     "descriptionZh": "土耳其环境部致力于城市可持续发展和应对气候变化，保护横跨欧亚的独特生态。",
     "descriptionEn": "Turkey's ministry focuses on sustainable urban development and climate change, protecting unique transcontinental ecosystems.",
     "data": { "forestCoverage": 28, "carbonEmission": 500 },
-    "region": "Asia"
+    "region": "Asia",
+    "established": 2003,
+    "responsibilities": ["climate", "water", "waste", "biodiversity"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "Barcelona Convention", "Ramsar Convention"]
   }
 ]
