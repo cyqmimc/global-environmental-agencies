@@ -11,9 +11,16 @@
     "data": { "forestCoverage": 33, "carbonEmission": 5000 },
     "region": "North America",
     "established": 1970,
-    "responsibilities": ["air", "water", "waste", "chemicals"],
+    "responsibilities": ["air", "chemicals"],
     "contact": { "email": "public-access@epa.gov" },
-    "treaties": ["Paris Agreement", "Montreal Protocol", "Basel Convention"]
+    "treaties": ["Paris Agreement", "Montreal Protocol", "Basel Convention"],
+    "epiScore": 51.1,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "清洁空气法", "nameEn": "Clean Air Act", "year": 1970 },
+      { "nameZh": "清洁水法", "nameEn": "Clean Water Act", "year": 1972 },
+      { "nameZh": "通胀削减法案（气候条款）", "nameEn": "Inflation Reduction Act (Climate)", "year": 2022 }
+    ]
   },
   {
     "countryEn": "China",
@@ -27,25 +34,39 @@
     "data": { "forestCoverage": 23, "carbonEmission": 10000 },
     "region": "Asia",
     "established": 2018,
-    "responsibilities": ["climate", "air", "water", "biodiversity"],
+    "responsibilities": ["climate", "air"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "Montreal Protocol", "Basel Convention"]
+    "treaties": ["Paris Agreement", "CBD", "Montreal Protocol", "Basel Convention"],
+    "epiScore": 28.4,
+    "netZeroTarget": 2060,
+    "keyLaws": [
+      { "nameZh": "环境保护法", "nameEn": "Environmental Protection Law", "year": 2014 },
+      { "nameZh": "大气污染防治法", "nameEn": "Air Pollution Prevention and Control Law", "year": 2015 },
+      { "nameZh": "长江保护法", "nameEn": "Yangtze River Protection Law", "year": 2021 }
+    ]
   },
   {
     "countryEn": "Germany",
     "countryZh": "德国",
     "agencyEn": "Federal Ministry for the Environment (BMUV)",
     "agencyZh": "联邦环境、自然保护、核安全与消费者保护部",
-    "website": "https://www.bmuv.de/",
+    "website": "https://www.bundesumweltministerium.de/",
     "flagUrl": "https://flagcdn.com/de.svg",
     "descriptionZh": "德国联邦环境部负责制定环境、自然保护和核安全的政策，是欧洲绿色转型的先驱。",
     "descriptionEn": "Germany's BMUV is responsible for environmental policy, nature conservation, and nuclear safety. Germany is a pioneer in Europe's green transition.",
     "data": { "forestCoverage": 32, "carbonEmission": 800 },
     "region": "Europe",
     "established": 1986,
-    "responsibilities": ["climate", "nuclear", "biodiversity", "waste"],
+    "responsibilities": ["nuclear", "energy"],
     "contact": { "email": "service@bmuv.bund.de" },
-    "treaties": ["Paris Agreement", "CBD", "UNFCCC", "Basel Convention"]
+    "treaties": ["Paris Agreement", "CBD", "UNFCCC", "Basel Convention"],
+    "epiScore": 62.4,
+    "netZeroTarget": 2045,
+    "keyLaws": [
+      { "nameZh": "联邦气候保护法", "nameEn": "Federal Climate Protection Act", "year": 2019 },
+      { "nameZh": "可再生能源法", "nameEn": "Renewable Energy Sources Act (EEG)", "year": 2000 },
+      { "nameZh": "核能退出法", "nameEn": "Nuclear Phase-Out Act", "year": 2011 }
+    ]
   },
   {
     "countryEn": "Japan",
@@ -59,9 +80,16 @@
     "data": { "forestCoverage": 68, "carbonEmission": 1200 },
     "region": "Asia",
     "established": 2001,
-    "responsibilities": ["climate", "waste", "biodiversity", "chemicals"],
+    "responsibilities": ["waste", "chemicals"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "Minamata Convention", "Basel Convention"]
+    "treaties": ["Paris Agreement", "CBD", "Minamata Convention", "Basel Convention"],
+    "epiScore": 57.2,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "环境基本法", "nameEn": "Basic Environment Law", "year": 1993 },
+      { "nameZh": "循环型社会形成推进基本法", "nameEn": "Basic Act for Establishing a Sound Material-Cycle Society", "year": 2000 },
+      { "nameZh": "地球温暖化对策推进法", "nameEn": "Act on Promotion of Global Warming Countermeasures", "year": 1998 }
+    ]
   },
   {
     "countryEn": "France",
@@ -75,25 +103,39 @@
     "data": { "forestCoverage": 31, "carbonEmission": 600 },
     "region": "Europe",
     "established": 1971,
-    "responsibilities": ["climate", "energy", "biodiversity", "water"],
+    "responsibilities": ["energy", "nuclear"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "UNFCCC", "Ramsar Convention"]
+    "treaties": ["Paris Agreement", "CBD", "UNFCCC", "Ramsar Convention"],
+    "epiScore": 62.5,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "气候与韧性法", "nameEn": "Climate and Resilience Law", "year": 2021 },
+      { "nameZh": "能源转型法", "nameEn": "Energy Transition for Green Growth Act", "year": 2015 },
+      { "nameZh": "环境宪章", "nameEn": "Environmental Charter", "year": 2004 }
+    ]
   },
   {
     "countryEn": "India",
     "countryZh": "印度",
     "agencyEn": "Ministry of Environment, Forest and Climate Change (MoEFCC)",
     "agencyZh": "环境、森林与气候变化部",
-    "website": "http://moef.gov.in/",
+    "website": "https://moef.gov.in/",
     "flagUrl": "https://flagcdn.com/in.svg",
     "descriptionZh": "印度环境部负责生态保护和气候政策，管理广袤的森林资源和生物多样性。",
     "descriptionEn": "India's MoEFCC is responsible for ecological protection and climate policy, managing vast forest resources and biodiversity.",
     "data": { "forestCoverage": 24, "carbonEmission": 2600 },
     "region": "Asia",
     "established": 1985,
-    "responsibilities": ["forest", "climate", "biodiversity", "water"],
+    "responsibilities": ["forest", "biodiversity"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "UNCCD", "Ramsar Convention"]
+    "treaties": ["Paris Agreement", "CBD", "UNCCD", "Ramsar Convention"],
+    "epiScore": 18.9,
+    "netZeroTarget": 2070,
+    "keyLaws": [
+      { "nameZh": "环境保护法", "nameEn": "Environment Protection Act", "year": 1986 },
+      { "nameZh": "森林保护法", "nameEn": "Forest Conservation Act", "year": 1980 },
+      { "nameZh": "生物多样性法", "nameEn": "Biological Diversity Act", "year": 2002 }
+    ]
   },
   {
     "countryEn": "United Kingdom",
@@ -107,9 +149,16 @@
     "data": { "forestCoverage": 13, "carbonEmission": 400 },
     "region": "Europe",
     "established": 2001,
-    "responsibilities": ["climate", "water", "biodiversity", "waste"],
+    "responsibilities": ["climate", "waste"],
     "contact": { "email": "defra.helpline@defra.gov.uk" },
-    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"]
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"],
+    "epiScore": 63.0,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "气候变化法", "nameEn": "Climate Change Act", "year": 2008 },
+      { "nameZh": "环境法", "nameEn": "Environment Act", "year": 2021 },
+      { "nameZh": "清洁空气法", "nameEn": "Clean Air Act", "year": 1993 }
+    ]
   },
   {
     "countryEn": "Brazil",
@@ -123,9 +172,16 @@
     "data": { "forestCoverage": 60, "carbonEmission": 500 },
     "region": "South America",
     "established": 1992,
-    "responsibilities": ["forest", "climate", "biodiversity", "water"],
+    "responsibilities": ["forest", "biodiversity"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "CITES", "Amazon Cooperation Treaty"]
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Amazon Cooperation Treaty"],
+    "epiScore": 36.7,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "森林法典", "nameEn": "Forest Code", "year": 2012 },
+      { "nameZh": "国家环境政策法", "nameEn": "National Environmental Policy Act", "year": 1981 },
+      { "nameZh": "大西洋森林法", "nameEn": "Atlantic Forest Law", "year": 2006 }
+    ]
   },
   {
     "countryEn": "Australia",
@@ -139,9 +195,16 @@
     "data": { "forestCoverage": 17, "carbonEmission": 400 },
     "region": "Oceania",
     "established": 2022,
-    "responsibilities": ["climate", "energy", "water", "biodiversity"],
+    "responsibilities": ["energy", "water"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"]
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"],
+    "epiScore": 60.1,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "环境保护与生物多样性保护法", "nameEn": "Environment Protection and Biodiversity Conservation Act (EPBC)", "year": 1999 },
+      { "nameZh": "气候变化法", "nameEn": "Climate Change Act", "year": 2022 },
+      { "nameZh": "可再生能源目标法", "nameEn": "Renewable Energy Target Act", "year": 2000 }
+    ]
   },
   {
     "countryEn": "South Africa",
@@ -155,9 +218,16 @@
     "data": { "forestCoverage": 7, "carbonEmission": 400 },
     "region": "Africa",
     "established": 2009,
-    "responsibilities": ["forest", "biodiversity", "water", "waste"],
+    "responsibilities": ["biodiversity", "forest"],
     "contact": { "email": "callcentre@dffe.gov.za" },
-    "treaties": ["Paris Agreement", "CBD", "CITES", "UNCCD"]
+    "treaties": ["Paris Agreement", "CBD", "CITES", "UNCCD"],
+    "epiScore": 29.8,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "国家环境管理法", "nameEn": "National Environmental Management Act (NEMA)", "year": 1998 },
+      { "nameZh": "碳税法", "nameEn": "Carbon Tax Act", "year": 2019 },
+      { "nameZh": "国家水法", "nameEn": "National Water Act", "year": 1998 }
+    ]
   },
   {
     "countryEn": "Canada",
@@ -171,9 +241,16 @@
     "data": { "forestCoverage": 38, "carbonEmission": 700 },
     "region": "North America",
     "established": 1971,
-    "responsibilities": ["climate", "water", "biodiversity", "air"],
+    "responsibilities": ["water", "air"],
     "contact": { "email": "ec.enviroinfo.ec@canada.ca" },
-    "treaties": ["Paris Agreement", "CBD", "CITES", "Montreal Protocol"]
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Montreal Protocol"],
+    "epiScore": 49.9,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "加拿大环境保护法", "nameEn": "Canadian Environmental Protection Act (CEPA)", "year": 1999 },
+      { "nameZh": "净零排放问责法", "nameEn": "Net-Zero Emissions Accountability Act", "year": 2021 },
+      { "nameZh": "影响评估法", "nameEn": "Impact Assessment Act", "year": 2019 }
+    ]
   },
   {
     "countryEn": "Mexico",
@@ -187,9 +264,16 @@
     "data": { "forestCoverage": 33, "carbonEmission": 450 },
     "region": "North America",
     "established": 1994,
-    "responsibilities": ["forest", "biodiversity", "water", "waste"],
+    "responsibilities": ["biodiversity", "forest"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "CITES", "Basel Convention"]
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Basel Convention"],
+    "epiScore": 31.5,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "气候变化总法", "nameEn": "General Law on Climate Change", "year": 2012 },
+      { "nameZh": "生态平衡与环境保护总法", "nameEn": "General Law of Ecological Balance and Environmental Protection", "year": 1988 },
+      { "nameZh": "可持续林业发展总法", "nameEn": "General Law for Sustainable Forest Development", "year": 2003 }
+    ]
   },
   {
     "countryEn": "Saudi Arabia",
@@ -203,25 +287,38 @@
     "data": { "forestCoverage": 0.5, "carbonEmission": 600 },
     "region": "Asia",
     "established": 2003,
-    "responsibilities": ["water", "climate", "biodiversity"],
+    "responsibilities": ["water", "energy"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "UNCCD", "CBD"]
+    "treaties": ["Paris Agreement", "UNCCD", "CBD"],
+    "epiScore": 30.7,
+    "netZeroTarget": 2060,
+    "keyLaws": [
+      { "nameZh": "环境总规章", "nameEn": "General Environmental Regulations", "year": 2001 },
+      { "nameZh": "沙特绿色倡议", "nameEn": "Saudi Green Initiative", "year": 2021 }
+    ]
   },
   {
     "countryEn": "Indonesia",
     "countryZh": "印度尼西亚",
-    "agencyEn": "Ministry of Environment and Forestry",
-    "agencyZh": "环境与林业部",
+    "agencyEn": "Ministry of Environment / Environmental Control Agency",
+    "agencyZh": "环境部 / 环境控制局",
     "website": "https://www.menlhk.go.id/",
     "flagUrl": "https://flagcdn.com/id.svg",
-    "descriptionZh": "印尼环境部负责森林保护及气候变化应对，管理全球第三大热带雨林。",
-    "descriptionEn": "Indonesia's ministry handles forest protection and climate change response, managing the world's third-largest tropical rainforest.",
+    "descriptionZh": "印尼环境与林业部于2024年拆分为环境部和林业部。环境部（环境控制局）负责污染防治和气候变化应对，管理全球第三大热带雨林的生态保护。",
+    "descriptionEn": "Indonesia's Ministry of Environment and Forestry was split in 2024 into separate environment and forestry ministries. The environmental agency handles pollution control and climate response, protecting the world's third-largest tropical rainforest.",
     "data": { "forestCoverage": 50, "carbonEmission": 1200 },
     "region": "Asia",
     "established": 2014,
-    "responsibilities": ["forest", "climate", "biodiversity", "waste"],
+    "responsibilities": ["forest", "biodiversity"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"]
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"],
+    "epiScore": 28.2,
+    "netZeroTarget": 2060,
+    "keyLaws": [
+      { "nameZh": "环境保护与管理法", "nameEn": "Environmental Protection and Management Law", "year": 2009 },
+      { "nameZh": "林业法", "nameEn": "Forestry Law", "year": 1999 },
+      { "nameZh": "综合创造就业法（环境章节）", "nameEn": "Omnibus Job Creation Law (Environmental Chapter)", "year": 2020 }
+    ]
   },
   {
     "countryEn": "Italy",
@@ -235,9 +332,16 @@
     "data": { "forestCoverage": 36, "carbonEmission": 450 },
     "region": "Europe",
     "established": 1986,
-    "responsibilities": ["energy", "climate", "biodiversity", "water"],
+    "responsibilities": ["energy", "water"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "Barcelona Convention", "Basel Convention"]
+    "treaties": ["Paris Agreement", "CBD", "Barcelona Convention", "Basel Convention"],
+    "epiScore": 57.7,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "环境法典", "nameEn": "Environmental Code (D.Lgs. 152/2006)", "year": 2006 },
+      { "nameZh": "宪法环境条款修正案", "nameEn": "Constitutional Amendment on Environmental Protection", "year": 2022 },
+      { "nameZh": "国家气候与能源计划", "nameEn": "National Energy and Climate Plan (NECP)", "year": 2019 }
+    ]
   },
   {
     "countryEn": "Spain",
@@ -251,9 +355,16 @@
     "data": { "forestCoverage": 37, "carbonEmission": 320 },
     "region": "Europe",
     "established": 2018,
-    "responsibilities": ["energy", "climate", "water", "biodiversity"],
+    "responsibilities": ["energy", "climate"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "Barcelona Convention", "UNCCD"]
+    "treaties": ["Paris Agreement", "CBD", "Barcelona Convention", "UNCCD"],
+    "epiScore": 55.6,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "气候变化与能源转型法", "nameEn": "Climate Change and Energy Transition Law", "year": 2021 },
+      { "nameZh": "国家气候与能源综合计划", "nameEn": "National Integrated Energy and Climate Plan (PNIEC)", "year": 2020 },
+      { "nameZh": "环境影响评估法", "nameEn": "Environmental Impact Assessment Law", "year": 2013 }
+    ]
   },
   {
     "countryEn": "Russia",
@@ -267,9 +378,16 @@
     "data": { "forestCoverage": 49, "carbonEmission": 1500 },
     "region": "Europe",
     "established": 2008,
-    "responsibilities": ["forest", "water", "biodiversity", "waste"],
+    "responsibilities": ["forest", "water"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"]
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"],
+    "epiScore": 37.5,
+    "netZeroTarget": 2060,
+    "keyLaws": [
+      { "nameZh": "环境保护法", "nameEn": "Federal Law on Environmental Protection", "year": 2002 },
+      { "nameZh": "森林法典", "nameEn": "Forest Code", "year": 2006 },
+      { "nameZh": "温室气体排放限制法", "nameEn": "Law on Limiting Greenhouse Gas Emissions", "year": 2021 }
+    ]
   },
   {
     "countryEn": "Singapore",
@@ -283,9 +401,16 @@
     "data": { "forestCoverage": 23, "carbonEmission": 60 },
     "region": "Asia",
     "established": 2020,
-    "responsibilities": ["climate", "waste", "water", "air"],
+    "responsibilities": ["waste", "air"],
     "contact": { "email": "MSE_Feedback@mse.gov.sg" },
-    "treaties": ["Paris Agreement", "CBD", "Basel Convention", "Montreal Protocol"]
+    "treaties": ["Paris Agreement", "CBD", "Basel Convention", "Montreal Protocol"],
+    "epiScore": 50.9,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "环境保护与管理法", "nameEn": "Environmental Protection and Management Act", "year": 1999 },
+      { "nameZh": "碳定价法", "nameEn": "Carbon Pricing Act", "year": 2018 },
+      { "nameZh": "资源可持续性法", "nameEn": "Resource Sustainability Act", "year": 2019 }
+    ]
   },
   {
     "countryEn": "Egypt",
@@ -299,25 +424,39 @@
     "data": { "forestCoverage": 0.1, "carbonEmission": 250 },
     "region": "Africa",
     "established": 1997,
-    "responsibilities": ["water", "climate", "biodiversity", "waste"],
+    "responsibilities": ["water", "waste"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "UNCCD", "Ramsar Convention"]
+    "treaties": ["Paris Agreement", "CBD", "UNCCD", "Ramsar Convention"],
+    "epiScore": 30.4,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "环境法", "nameEn": "Environment Law No. 4", "year": 1994 },
+      { "nameZh": "可再生能源法", "nameEn": "Renewable Energy Law", "year": 2014 },
+      { "nameZh": "废弃物管理法", "nameEn": "Waste Management Law", "year": 2020 }
+    ]
   },
   {
     "countryEn": "South Korea",
     "countryZh": "韩国",
     "agencyEn": "Ministry of Environment",
     "agencyZh": "环境部",
-    "website": "http://eng.me.go.kr/eng/web/main.do",
+    "website": "https://eng.me.go.kr/eng/web/main.do",
     "flagUrl": "https://flagcdn.com/kr.svg",
     "descriptionZh": "韩国环境部主管空气质量、水资源及气候变化政策，推动绿色新政和碳中和。",
     "descriptionEn": "South Korea's MOE manages air quality, water resources, and climate change policy, driving the Green New Deal and carbon neutrality.",
     "data": { "forestCoverage": 64, "carbonEmission": 700 },
     "region": "Asia",
     "established": 1990,
-    "responsibilities": ["air", "water", "climate", "waste"],
+    "responsibilities": ["air", "climate"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "Montreal Protocol", "Basel Convention"]
+    "treaties": ["Paris Agreement", "CBD", "Montreal Protocol", "Basel Convention"],
+    "epiScore": 57.8,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "碳中和与绿色增长基本法", "nameEn": "Framework Act on Carbon Neutrality and Green Growth", "year": 2021 },
+      { "nameZh": "环境政策基本法", "nameEn": "Framework Act on Environmental Policy", "year": 1990 },
+      { "nameZh": "清洁空气保护法", "nameEn": "Clean Air Conservation Act", "year": 1990 }
+    ]
   },
   {
     "countryEn": "Sweden",
@@ -331,9 +470,16 @@
     "data": { "forestCoverage": 69, "carbonEmission": 50 },
     "region": "Europe",
     "established": 1987,
-    "responsibilities": ["climate", "energy", "chemicals", "biodiversity"],
+    "responsibilities": ["climate", "chemicals"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "UNFCCC", "Montreal Protocol"]
+    "treaties": ["Paris Agreement", "CBD", "UNFCCC", "Montreal Protocol"],
+    "epiScore": 72.7,
+    "netZeroTarget": 2045,
+    "keyLaws": [
+      { "nameZh": "气候政策框架", "nameEn": "Climate Policy Framework", "year": 2017 },
+      { "nameZh": "环境法典", "nameEn": "Environmental Code", "year": 1999 },
+      { "nameZh": "化学品政策法", "nameEn": "Chemical Products Act", "year": 1985 }
+    ]
   },
   {
     "countryEn": "Norway",
@@ -347,9 +493,16 @@
     "data": { "forestCoverage": 33, "carbonEmission": 50 },
     "region": "Europe",
     "established": 1972,
-    "responsibilities": ["climate", "biodiversity", "water", "chemicals"],
+    "responsibilities": ["climate", "energy"],
     "contact": { "email": "postmottak@kld.dep.no" },
-    "treaties": ["Paris Agreement", "CBD", "OSPAR Convention", "Ramsar Convention"]
+    "treaties": ["Paris Agreement", "CBD", "OSPAR Convention", "Ramsar Convention"],
+    "epiScore": 64.5,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "气候变化法", "nameEn": "Climate Change Act", "year": 2017 },
+      { "nameZh": "污染控制法", "nameEn": "Pollution Control Act", "year": 1981 },
+      { "nameZh": "自然多样性法", "nameEn": "Nature Diversity Act", "year": 2009 }
+    ]
   },
   {
     "countryEn": "New Zealand",
@@ -363,9 +516,16 @@
     "data": { "forestCoverage": 38, "carbonEmission": 80 },
     "region": "Oceania",
     "established": 1986,
-    "responsibilities": ["climate", "biodiversity", "water", "waste"],
+    "responsibilities": ["biodiversity", "climate"],
     "contact": { "email": "info@mfe.govt.nz" },
-    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"]
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"],
+    "epiScore": 56.7,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "零碳修正法", "nameEn": "Climate Change Response (Zero Carbon) Amendment Act", "year": 2019 },
+      { "nameZh": "资源管理法", "nameEn": "Resource Management Act", "year": 1991 },
+      { "nameZh": "排放交易法", "nameEn": "NZ Emissions Trading Scheme", "year": 2008 }
+    ]
   },
   {
     "countryEn": "Kenya",
@@ -379,9 +539,16 @@
     "data": { "forestCoverage": 8, "carbonEmission": 20 },
     "region": "Africa",
     "established": 1999,
-    "responsibilities": ["forest", "climate", "biodiversity", "water"],
+    "responsibilities": ["biodiversity", "forest"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "CITES", "UNCCD"]
+    "treaties": ["Paris Agreement", "CBD", "CITES", "UNCCD"],
+    "epiScore": 30.8,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "环境管理与协调法", "nameEn": "Environmental Management and Co-ordination Act (EMCA)", "year": 1999 },
+      { "nameZh": "气候变化法", "nameEn": "Climate Change Act", "year": 2016 },
+      { "nameZh": "野生动物保护与管理法", "nameEn": "Wildlife Conservation and Management Act", "year": 2013 }
+    ]
   },
   {
     "countryEn": "Nigeria",
@@ -395,9 +562,16 @@
     "data": { "forestCoverage": 7, "carbonEmission": 120 },
     "region": "Africa",
     "established": 1999,
-    "responsibilities": ["climate", "water", "waste", "biodiversity"],
+    "responsibilities": ["waste", "water"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "Basel Convention", "UNCCD"]
+    "treaties": ["Paris Agreement", "CBD", "Basel Convention", "UNCCD"],
+    "epiScore": 22.5,
+    "netZeroTarget": 2060,
+    "keyLaws": [
+      { "nameZh": "国家环境标准与法规执行机构法", "nameEn": "NESREA Act", "year": 2007 },
+      { "nameZh": "气候变化法", "nameEn": "Climate Change Act", "year": 2021 },
+      { "nameZh": "环境影响评估法", "nameEn": "Environmental Impact Assessment Act", "year": 1992 }
+    ]
   },
   {
     "countryEn": "Argentina",
@@ -411,9 +585,16 @@
     "data": { "forestCoverage": 10, "carbonEmission": 200 },
     "region": "South America",
     "established": 2015,
-    "responsibilities": ["climate", "biodiversity", "forest", "water"],
+    "responsibilities": ["climate", "biodiversity"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "CITES", "Antarctic Treaty"]
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Antarctic Treaty"],
+    "epiScore": 34.1,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "环境政策总法", "nameEn": "General Environmental Law", "year": 2002 },
+      { "nameZh": "冰川保护法", "nameEn": "Glacier Protection Law", "year": 2010 },
+      { "nameZh": "气候变化适应与减缓法", "nameEn": "Climate Change Adaptation and Mitigation Law", "year": 2019 }
+    ]
   },
   {
     "countryEn": "Colombia",
@@ -427,9 +608,16 @@
     "data": { "forestCoverage": 53, "carbonEmission": 100 },
     "region": "South America",
     "established": 1993,
-    "responsibilities": ["biodiversity", "forest", "water", "climate"],
+    "responsibilities": ["biodiversity", "forest"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"]
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"],
+    "epiScore": 35.4,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "国家自然资源法典", "nameEn": "National Code of Natural Resources", "year": 1974 },
+      { "nameZh": "气候变化法", "nameEn": "Climate Change Law", "year": 2018 },
+      { "nameZh": "环境许可证法", "nameEn": "Environmental Licensing Decree", "year": 2014 }
+    ]
   },
   {
     "countryEn": "Thailand",
@@ -443,9 +631,16 @@
     "data": { "forestCoverage": 38, "carbonEmission": 300 },
     "region": "Asia",
     "established": 2002,
-    "responsibilities": ["forest", "water", "biodiversity", "climate"],
+    "responsibilities": ["forest", "water"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"]
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"],
+    "epiScore": 32.9,
+    "netZeroTarget": 2065,
+    "keyLaws": [
+      { "nameZh": "环境质量促进与保护法", "nameEn": "Enhancement and Conservation of National Environmental Quality Act", "year": 1992 },
+      { "nameZh": "国家公园法", "nameEn": "National Park Act", "year": 2019 },
+      { "nameZh": "气候变化总体规划", "nameEn": "Climate Change Master Plan", "year": 2015 }
+    ]
   },
   {
     "countryEn": "Netherlands",
@@ -459,9 +654,16 @@
     "data": { "forestCoverage": 11, "carbonEmission": 180 },
     "region": "Europe",
     "established": 2010,
-    "responsibilities": ["water", "climate", "air", "waste"],
+    "responsibilities": ["water", "waste"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "OSPAR Convention", "Basel Convention"]
+    "treaties": ["Paris Agreement", "CBD", "OSPAR Convention", "Basel Convention"],
+    "epiScore": 62.6,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "气候法", "nameEn": "Climate Act", "year": 2019 },
+      { "nameZh": "环境与规划法", "nameEn": "Environment and Planning Act", "year": 2024 },
+      { "nameZh": "水法", "nameEn": "Water Act", "year": 2009 }
+    ]
   },
   {
     "countryEn": "Turkey",
@@ -475,8 +677,429 @@
     "data": { "forestCoverage": 28, "carbonEmission": 500 },
     "region": "Asia",
     "established": 2003,
-    "responsibilities": ["climate", "water", "waste", "biodiversity"],
+    "responsibilities": ["climate", "waste"],
     "contact": { "email": "" },
-    "treaties": ["Paris Agreement", "CBD", "Barcelona Convention", "Ramsar Convention"]
+    "treaties": ["Paris Agreement", "CBD", "Barcelona Convention", "Ramsar Convention"],
+    "epiScore": 36.4,
+    "netZeroTarget": 2053,
+    "keyLaws": [
+      { "nameZh": "环境法", "nameEn": "Environment Law", "year": 1983 },
+      { "nameZh": "气候变化行动计划", "nameEn": "Climate Change Action Plan", "year": 2011 },
+      { "nameZh": "零废弃法规", "nameEn": "Zero Waste Regulation", "year": 2019 }
+    ]
+  },
+  {
+    "countryEn": "Denmark",
+    "countryZh": "丹麦",
+    "agencyEn": "Ministry of Environment",
+    "agencyZh": "环境部",
+    "website": "https://eng.mim.dk/",
+    "flagUrl": "https://flagcdn.com/dk.svg",
+    "descriptionZh": "丹麦环境部负责环境与自然保护政策，推动绿色能源转型，是全球风电发展的领导者。",
+    "descriptionEn": "Denmark's Ministry of Environment manages environmental and nature protection policy, driving green energy transition as a global leader in wind power.",
+    "data": { "forestCoverage": 14, "carbonEmission": 33 },
+    "region": "Europe",
+    "established": 1971,
+    "responsibilities": ["energy", "water"],
+    "contact": { "email": "mim@mim.dk" },
+    "treaties": ["Paris Agreement", "CBD", "OSPAR Convention", "Ramsar Convention"],
+    "epiScore": 67.3,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "气候法", "nameEn": "Climate Act", "year": 2020 },
+      { "nameZh": "环境保护法", "nameEn": "Environmental Protection Act", "year": 1991 },
+      { "nameZh": "自然保护法", "nameEn": "Nature Protection Act", "year": 1992 }
+    ]
+  },
+  {
+    "countryEn": "Finland",
+    "countryZh": "芬兰",
+    "agencyEn": "Ministry of the Environment",
+    "agencyZh": "环境部",
+    "website": "https://ym.fi/en/front-page",
+    "flagUrl": "https://flagcdn.com/fi.svg",
+    "descriptionZh": "芬兰环境部负责环境保护、住房建设和气候政策，是全球清洁技术的先驱国家。",
+    "descriptionEn": "Finland's Ministry of the Environment handles environmental protection, housing, and climate policy. Finland is a global pioneer in clean technology.",
+    "data": { "forestCoverage": 73, "carbonEmission": 48 },
+    "region": "Europe",
+    "established": 1983,
+    "responsibilities": ["climate", "forest"],
+    "contact": { "email": "kirjaamo.ym@gov.fi" },
+    "treaties": ["Paris Agreement", "CBD", "UNFCCC", "HELCOM Convention"],
+    "epiScore": 65.2,
+    "netZeroTarget": 2035,
+    "keyLaws": [
+      { "nameZh": "气候变化法", "nameEn": "Climate Change Act", "year": 2022 },
+      { "nameZh": "环境保护法", "nameEn": "Environmental Protection Act", "year": 2014 },
+      { "nameZh": "自然保护法", "nameEn": "Nature Conservation Act", "year": 2023 }
+    ]
+  },
+  {
+    "countryEn": "Switzerland",
+    "countryZh": "瑞士",
+    "agencyEn": "Federal Office for the Environment (FOEN)",
+    "agencyZh": "联邦环境办公室",
+    "website": "https://www.bafu.admin.ch/bafu/en/home.html",
+    "flagUrl": "https://flagcdn.com/ch.svg",
+    "descriptionZh": "瑞士联邦环境办公室负责环境保护、自然灾害防治和资源管理，以高标准的环境治理著称。",
+    "descriptionEn": "Switzerland's FOEN handles environmental protection, natural hazard prevention, and resource management, known for its high environmental governance standards.",
+    "data": { "forestCoverage": 32, "carbonEmission": 46 },
+    "region": "Europe",
+    "established": 1971,
+    "responsibilities": ["air", "biodiversity"],
+    "contact": { "email": "info@bafu.admin.ch" },
+    "treaties": ["Paris Agreement", "CBD", "Basel Convention", "Alpine Convention"],
+    "epiScore": 65.9,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "环境保护法", "nameEn": "Environmental Protection Act", "year": 1983 },
+      { "nameZh": "CO₂法", "nameEn": "CO₂ Act", "year": 2011 },
+      { "nameZh": "气候与创新法", "nameEn": "Climate and Innovation Act", "year": 2023 }
+    ]
+  },
+  {
+    "countryEn": "Austria",
+    "countryZh": "奥地利",
+    "agencyEn": "Federal Ministry for Climate Action, Environment, Energy, Mobility, Innovation and Technology (BMK)",
+    "agencyZh": "联邦气候行动、环境、能源、交通、创新与技术部",
+    "website": "https://www.bmk.gv.at/en.html",
+    "flagUrl": "https://flagcdn.com/at.svg",
+    "descriptionZh": "奥地利气候行动部统筹环境保护、能源转型与交通脱碳政策，推动阿尔卑斯生态保护。",
+    "descriptionEn": "Austria's BMK coordinates environmental protection, energy transition and transport decarbonization, promoting Alpine ecological protection.",
+    "data": { "forestCoverage": 47, "carbonEmission": 77 },
+    "region": "Europe",
+    "established": 2020,
+    "responsibilities": ["energy", "climate"],
+    "contact": { "email": "servicebuero@bmk.gv.at" },
+    "treaties": ["Paris Agreement", "CBD", "Alpine Convention", "Ramsar Convention"],
+    "epiScore": 62.4,
+    "netZeroTarget": 2040,
+    "keyLaws": [
+      { "nameZh": "气候保护法", "nameEn": "Climate Protection Act", "year": 2011 },
+      { "nameZh": "可再生能源扩展法", "nameEn": "Renewable Energy Expansion Act (EAG)", "year": 2021 },
+      { "nameZh": "环境影响评估法", "nameEn": "Environmental Impact Assessment Act", "year": 2000 }
+    ]
+  },
+  {
+    "countryEn": "Portugal",
+    "countryZh": "葡萄牙",
+    "agencyEn": "Ministry of Environment and Climate Action",
+    "agencyZh": "环境与气候行动部",
+    "website": "https://www.portugal.gov.pt/en/gc23/ministries/environment-and-climate-action",
+    "flagUrl": "https://flagcdn.com/pt.svg",
+    "descriptionZh": "葡萄牙环境部推动可再生能源和碳中和战略，在太阳能和海洋能源领域表现突出。",
+    "descriptionEn": "Portugal's ministry promotes renewable energy and carbon neutrality, excelling in solar and ocean energy development.",
+    "data": { "forestCoverage": 36, "carbonEmission": 50 },
+    "region": "Europe",
+    "established": 1990,
+    "responsibilities": ["energy", "water"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "Barcelona Convention", "UNCCD"],
+    "epiScore": 57.0,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "气候基本法", "nameEn": "Climate Base Law", "year": 2021 },
+      { "nameZh": "国家能源与气候计划", "nameEn": "National Energy and Climate Plan (PNEC)", "year": 2019 },
+      { "nameZh": "环境基本法", "nameEn": "Environmental Base Law", "year": 2014 }
+    ]
+  },
+  {
+    "countryEn": "Israel",
+    "countryZh": "以色列",
+    "agencyEn": "Ministry of Environmental Protection",
+    "agencyZh": "环境保护部",
+    "website": "https://www.gov.il/en/departments/ministry_of_environmental_protection",
+    "flagUrl": "https://flagcdn.com/il.svg",
+    "descriptionZh": "以色列环境保护部在水资源回收利用和沙漠农业技术方面全球领先，推动清洁技术创新。",
+    "descriptionEn": "Israel's Ministry of Environmental Protection leads globally in water recycling and desert agriculture technology, driving clean-tech innovation.",
+    "data": { "forestCoverage": 7, "carbonEmission": 65 },
+    "region": "Asia",
+    "established": 1988,
+    "responsibilities": ["water", "air"],
+    "contact": { "email": "info@sviva.gov.il" },
+    "treaties": ["Paris Agreement", "CBD", "Basel Convention", "UNCCD"],
+    "epiScore": 53.5,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "清洁空气法", "nameEn": "Clean Air Act", "year": 2008 },
+      { "nameZh": "气候法", "nameEn": "Climate Law", "year": 2022 },
+      { "nameZh": "水法", "nameEn": "Water Law", "year": 1959 }
+    ]
+  },
+  {
+    "countryEn": "UAE",
+    "countryZh": "阿联酋",
+    "agencyEn": "Ministry of Climate Change and Environment",
+    "agencyZh": "气候变化与环境部",
+    "website": "https://www.moccae.gov.ae/",
+    "flagUrl": "https://flagcdn.com/ae.svg",
+    "descriptionZh": "阿联酋气候变化与环境部推动绿色经济多元化，是COP28的主办国，大力投资清洁能源。",
+    "descriptionEn": "UAE's Ministry of Climate Change and Environment drives green economic diversification, hosted COP28, and invests heavily in clean energy.",
+    "data": { "forestCoverage": 4, "carbonEmission": 200 },
+    "region": "Asia",
+    "established": 2016,
+    "responsibilities": ["climate", "energy"],
+    "contact": { "email": "info@moccae.gov.ae" },
+    "treaties": ["Paris Agreement", "CBD", "UNCCD", "Montreal Protocol"],
+    "epiScore": 38.4,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "联邦气候变化法", "nameEn": "Federal Climate Change Law", "year": 2023 },
+      { "nameZh": "环境保护与发展法", "nameEn": "Environmental Protection and Development Law", "year": 1999 },
+      { "nameZh": "净零2050战略", "nameEn": "Net Zero 2050 Strategic Initiative", "year": 2021 }
+    ]
+  },
+  {
+    "countryEn": "Malaysia",
+    "countryZh": "马来西亚",
+    "agencyEn": "Ministry of Natural Resources and Environmental Sustainability (NRES)",
+    "agencyZh": "自然资源与环境可持续性部",
+    "website": "https://www.nres.gov.my/",
+    "flagUrl": "https://flagcdn.com/my.svg",
+    "descriptionZh": "马来西亚自然资源部负责管理热带雨林和生物多样性资源，推动棕榈油产业的可持续发展。",
+    "descriptionEn": "Malaysia's NRES manages tropical rainforests and biodiversity resources, promoting sustainable development in the palm oil industry.",
+    "data": { "forestCoverage": 55, "carbonEmission": 250 },
+    "region": "Asia",
+    "established": 2022,
+    "responsibilities": ["forest", "biodiversity"],
+    "contact": { "email": "pro@nres.gov.my" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"],
+    "epiScore": 33.4,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "环境质量法", "nameEn": "Environmental Quality Act", "year": 1974 },
+      { "nameZh": "国家林业法", "nameEn": "National Forestry Act", "year": 1984 },
+      { "nameZh": "气候变化法（草案）", "nameEn": "Climate Change Act (Draft)", "year": 2024 }
+    ]
+  },
+  {
+    "countryEn": "Vietnam",
+    "countryZh": "越南",
+    "agencyEn": "Ministry of Natural Resources and Environment (MONRE)",
+    "agencyZh": "自然资源与环境部",
+    "website": "https://www.monre.gov.vn/",
+    "flagUrl": "https://flagcdn.com/vn.svg",
+    "descriptionZh": "越南自然资源与环境部负责土地、水资源和环境管理，应对湄公河三角洲气候脆弱性。",
+    "descriptionEn": "Vietnam's MONRE manages land, water resources, and environmental protection, addressing climate vulnerability in the Mekong Delta.",
+    "data": { "forestCoverage": 42, "carbonEmission": 350 },
+    "region": "Asia",
+    "established": 2002,
+    "responsibilities": ["water", "climate"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "Ramsar Convention", "UNCCD"],
+    "epiScore": 29.6,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "环境保护法", "nameEn": "Law on Environmental Protection", "year": 2020 },
+      { "nameZh": "林业法", "nameEn": "Law on Forestry", "year": 2017 },
+      { "nameZh": "水资源法", "nameEn": "Law on Water Resources", "year": 2023 }
+    ]
+  },
+  {
+    "countryEn": "Philippines",
+    "countryZh": "菲律宾",
+    "agencyEn": "Department of Environment and Natural Resources (DENR)",
+    "agencyZh": "环境与自然资源部",
+    "website": "https://www.denr.gov.ph/",
+    "flagUrl": "https://flagcdn.com/ph.svg",
+    "descriptionZh": "菲律宾环境部负责森林、矿产和海洋资源管理，是全球台风频发区的气候适应先行者。",
+    "descriptionEn": "The Philippines' DENR manages forests, minerals, and marine resources, pioneering climate adaptation in a typhoon-prone region.",
+    "data": { "forestCoverage": 24, "carbonEmission": 170 },
+    "region": "Asia",
+    "established": 1987,
+    "responsibilities": ["biodiversity", "forest"],
+    "contact": { "email": "osec@denr.gov.ph" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"],
+    "epiScore": 28.9,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "清洁空气法", "nameEn": "Philippine Clean Air Act", "year": 1999 },
+      { "nameZh": "生态固体废弃物管理法", "nameEn": "Ecological Solid Waste Management Act", "year": 2000 },
+      { "nameZh": "气候变化法", "nameEn": "Climate Change Act", "year": 2009 }
+    ]
+  },
+  {
+    "countryEn": "Chile",
+    "countryZh": "智利",
+    "agencyEn": "Ministry of the Environment",
+    "agencyZh": "环境部",
+    "website": "https://mma.gob.cl/",
+    "flagUrl": "https://flagcdn.com/cl.svg",
+    "descriptionZh": "智利环境部负责保护安第斯山脉和巴塔哥尼亚生态系统，是拉美气候立法的先行者。",
+    "descriptionEn": "Chile's Ministry of the Environment protects Andean and Patagonian ecosystems, pioneering climate legislation in Latin America.",
+    "data": { "forestCoverage": 24, "carbonEmission": 100 },
+    "region": "South America",
+    "established": 2010,
+    "responsibilities": ["climate", "biodiversity"],
+    "contact": { "email": "consultaciudadana@mma.gob.cl" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Escazú Agreement"],
+    "epiScore": 44.3,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "气候变化框架法", "nameEn": "Framework Law on Climate Change", "year": 2022 },
+      { "nameZh": "环境基本法", "nameEn": "General Environmental Law", "year": 1994 },
+      { "nameZh": "生物多样性与自然保护区法", "nameEn": "Biodiversity and Protected Areas Act", "year": 2023 }
+    ]
+  },
+  {
+    "countryEn": "Peru",
+    "countryZh": "秘鲁",
+    "agencyEn": "Ministry of the Environment (MINAM)",
+    "agencyZh": "环境部",
+    "website": "https://www.gob.pe/minam",
+    "flagUrl": "https://flagcdn.com/pe.svg",
+    "descriptionZh": "秘鲁环境部负责保护亚马逊雨林和安第斯高原生态，管理全球生物多样性最丰富的地区之一。",
+    "descriptionEn": "Peru's MINAM protects the Amazon rainforest and Andean highland ecology, managing one of the world's most biodiverse regions.",
+    "data": { "forestCoverage": 58, "carbonEmission": 55 },
+    "region": "South America",
+    "established": 2008,
+    "responsibilities": ["biodiversity", "forest"],
+    "contact": { "email": "atencion@minam.gob.pe" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"],
+    "epiScore": 35.2,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "环境总法", "nameEn": "General Environmental Law", "year": 2005 },
+      { "nameZh": "气候变化框架法", "nameEn": "Framework Law on Climate Change", "year": 2018 },
+      { "nameZh": "森林与野生动物法", "nameEn": "Forestry and Wildlife Law", "year": 2011 }
+    ]
+  },
+  {
+    "countryEn": "Morocco",
+    "countryZh": "摩洛哥",
+    "agencyEn": "Ministry of Energy Transition and Sustainable Development",
+    "agencyZh": "能源转型与可持续发展部",
+    "website": "https://www.mem.gov.ma/",
+    "flagUrl": "https://flagcdn.com/ma.svg",
+    "descriptionZh": "摩洛哥能源转型部推动非洲最大的太阳能项目，是非洲清洁能源转型的领导者。",
+    "descriptionEn": "Morocco's ministry drives Africa's largest solar energy projects, leading clean energy transition on the continent.",
+    "data": { "forestCoverage": 13, "carbonEmission": 70 },
+    "region": "Africa",
+    "established": 2021,
+    "responsibilities": ["energy", "climate"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "UNCCD", "Barcelona Convention"],
+    "epiScore": 36.3,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "可再生能源法", "nameEn": "Renewable Energy Law", "year": 2010 },
+      { "nameZh": "环境保护与可持续发展法", "nameEn": "Environmental Protection and Sustainable Development Law", "year": 2003 },
+      { "nameZh": "国家可持续发展战略", "nameEn": "National Strategy for Sustainable Development", "year": 2017 }
+    ]
+  },
+  {
+    "countryEn": "Ghana",
+    "countryZh": "加纳",
+    "agencyEn": "Ministry of Environment, Science, Technology and Innovation",
+    "agencyZh": "环境、科学、技术与创新部",
+    "website": "https://www.mesti.gov.gh/",
+    "flagUrl": "https://flagcdn.com/gh.svg",
+    "descriptionZh": "加纳环境部推动西非绿色发展议程，在碳交易和可再生能源领域积极探索。",
+    "descriptionEn": "Ghana's ministry promotes the West African green development agenda, actively exploring carbon trading and renewable energy.",
+    "data": { "forestCoverage": 21, "carbonEmission": 20 },
+    "region": "Africa",
+    "established": 1993,
+    "responsibilities": ["forest", "waste"],
+    "contact": { "email": "info@mesti.gov.gh" },
+    "treaties": ["Paris Agreement", "CBD", "UNCCD", "Basel Convention"],
+    "epiScore": 30.2,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "环境保护局法", "nameEn": "Environmental Protection Agency Act", "year": 1994 },
+      { "nameZh": "可再生能源法", "nameEn": "Renewable Energy Act", "year": 2011 },
+      { "nameZh": "危害废弃物控制与管理法", "nameEn": "Hazardous and Electronic Waste Control and Management Act", "year": 2016 }
+    ]
+  },
+  {
+    "countryEn": "Costa Rica",
+    "countryZh": "哥斯达黎加",
+    "agencyEn": "Ministry of Environment and Energy (MINAE)",
+    "agencyZh": "环境与能源部",
+    "website": "https://www.minae.go.cr/",
+    "flagUrl": "https://flagcdn.com/cr.svg",
+    "descriptionZh": "哥斯达黎加环境部以「生态支付」模式全球闻名，可再生能源发电占比超过98%，是碳中和先驱。",
+    "descriptionEn": "Costa Rica's MINAE is globally renowned for its 'Payment for Ecosystem Services' model, with over 98% renewable electricity generation, pioneering carbon neutrality.",
+    "data": { "forestCoverage": 54, "carbonEmission": 10 },
+    "region": "North America",
+    "established": 1986,
+    "responsibilities": ["biodiversity", "energy"],
+    "contact": { "email": "contactenos@minae.go.cr" },
+    "treaties": ["Paris Agreement", "CBD", "CITES", "Ramsar Convention"],
+    "epiScore": 52.5,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "生物多样性法", "nameEn": "Biodiversity Law", "year": 1998 },
+      { "nameZh": "森林法", "nameEn": "Forestry Law", "year": 1996 },
+      { "nameZh": "国家脱碳计划", "nameEn": "National Decarbonization Plan", "year": 2019 }
+    ]
+  },
+  {
+    "countryEn": "Poland",
+    "countryZh": "波兰",
+    "agencyEn": "Ministry of Climate and Environment",
+    "agencyZh": "气候与环境部",
+    "website": "https://www.gov.pl/web/climate",
+    "flagUrl": "https://flagcdn.com/pl.svg",
+    "descriptionZh": "波兰气候与环境部推动煤炭经济向绿色经济转型，管理欧洲最大的原始森林之一。",
+    "descriptionEn": "Poland's Ministry of Climate and Environment drives the transition from coal to green economy, managing one of Europe's largest primeval forests.",
+    "data": { "forestCoverage": 31, "carbonEmission": 380 },
+    "region": "Europe",
+    "established": 2019,
+    "responsibilities": ["energy", "forest"],
+    "contact": { "email": "info@klimat.gov.pl" },
+    "treaties": ["Paris Agreement", "CBD", "UNFCCC", "Ramsar Convention"],
+    "epiScore": 50.2,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "环境保护法", "nameEn": "Environmental Protection Law", "year": 2001 },
+      { "nameZh": "可再生能源法", "nameEn": "Renewable Energy Sources Act", "year": 2015 },
+      { "nameZh": "能源政策2040", "nameEn": "Energy Policy of Poland until 2040", "year": 2021 }
+    ]
+  },
+  {
+    "countryEn": "Fiji",
+    "countryZh": "斐济",
+    "agencyEn": "Ministry of Environment and Climate Change",
+    "agencyZh": "环境与气候变化部",
+    "website": "https://www.environment.gov.fj/",
+    "flagUrl": "https://flagcdn.com/fj.svg",
+    "descriptionZh": "斐济环境部积极推动太平洋岛国气候适应议程，是COP23主席国，海洋保护的全球倡导者。",
+    "descriptionEn": "Fiji's ministry actively promotes the Pacific island climate adaptation agenda, presided over COP23, and is a global advocate for ocean protection.",
+    "data": { "forestCoverage": 55, "carbonEmission": 2 },
+    "region": "Oceania",
+    "established": 1999,
+    "responsibilities": ["climate", "water"],
+    "contact": { "email": "info@environment.gov.fj" },
+    "treaties": ["Paris Agreement", "CBD", "UNCCD", "Pacific Islands Forum"],
+    "epiScore": 34.5,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "气候变化法", "nameEn": "Climate Change Act", "year": 2021 },
+      { "nameZh": "环境管理法", "nameEn": "Environment Management Act", "year": 2005 },
+      { "nameZh": "国家海洋政策", "nameEn": "National Ocean Policy", "year": 2020 }
+    ]
+  },
+  {
+    "countryEn": "Ethiopia",
+    "countryZh": "埃塞俄比亚",
+    "agencyEn": "Environment, Forest and Climate Change Commission",
+    "agencyZh": "环境、森林与气候变化委员会",
+    "website": "https://www.efccc.gov.et/",
+    "flagUrl": "https://flagcdn.com/et.svg",
+    "descriptionZh": "埃塞俄比亚环境委员会推动绿色遗产倡议，在全国范围内开展大规模植树造林运动。",
+    "descriptionEn": "Ethiopia's commission drives the Green Legacy Initiative, conducting large-scale tree planting campaigns nationwide.",
+    "data": { "forestCoverage": 15, "carbonEmission": 25 },
+    "region": "Africa",
+    "established": 2018,
+    "responsibilities": ["forest", "climate"],
+    "contact": { "email": "" },
+    "treaties": ["Paris Agreement", "CBD", "UNCCD", "Ramsar Convention"],
+    "epiScore": 22.7,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      { "nameZh": "环境影响评估公告", "nameEn": "Environmental Impact Assessment Proclamation", "year": 2002 },
+      { "nameZh": "气候韧性绿色经济战略", "nameEn": "Climate-Resilient Green Economy Strategy", "year": 2011 },
+      { "nameZh": "森林发展与利用公告", "nameEn": "Forest Development and Utilization Proclamation", "year": 2018 }
+    ]
   }
 ]
