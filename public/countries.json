@@ -77,6 +77,21 @@
       "target30x30": 30,
       "commitmentZh": "美国已签署但未批准CBD；支持30x30目标，通过'美丽美国'倡议推动国内保护",
       "commitmentEn": "US signed but not ratified CBD; supports 30x30 through 'America the Beautiful' initiative"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "联邦层面无碳定价；加州等州有区域碳交易",
+      "noteEn": "No federal carbon pricing; California and other states have regional ETS"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1",
+      "statusEn": "BTR1 submitted"
     }
   },
   {
@@ -158,6 +173,21 @@
       "target30x30": 30,
       "commitmentZh": "作为COP15主席国推动通过昆明-蒙特利尔框架；承诺2030年保护30%陆地和海洋",
       "commitmentEn": "Presided over COP15 adopting Kunming-Montreal Framework; committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": 11,
+      "coveragePercent": 40,
+      "noteZh": "2021年启动全国碳排放交易体系，覆盖电力行业",
+      "noteEn": "National ETS launched 2021, covering power sector"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 4,
+      "statusZh": "已提交BTR1",
+      "statusEn": "BTR1 submitted"
     }
   },
   {
@@ -239,6 +269,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；已将30%陆地纳入保护体系",
       "commitmentEn": "Committed to 30x30 target; already designated 30%+ of land as protected areas"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": true,
+      "priceUSD": 85,
+      "coveragePercent": 45,
+      "noteZh": "EU ETS覆盖电力和工业；国内燃料排放交易体系碳价45欧元/吨",
+      "noteEn": "EU ETS for power/industry; national fuel emissions trading at €45/t"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
     }
   },
   {
@@ -320,6 +365,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；推动30x30高雄心联盟",
       "commitmentEn": "Committed to 30x30 target; promotes High Ambition Coalition for 30x30"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": true,
+      "priceUSD": 2,
+      "coveragePercent": 70,
+      "noteZh": "碳税289日元/吨CO₂；2023年启动GX-ETS碳交易",
+      "noteEn": "Carbon tax ¥289/tCO₂; GX-ETS launched 2023"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1",
+      "statusEn": "BTR1 submitted"
     }
   },
   {
@@ -401,6 +461,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；已保护约33%国土面积",
       "commitmentEn": "Committed to 30x30; approximately 33% of national territory already protected"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": true,
+      "priceUSD": 85,
+      "coveragePercent": 35,
+      "noteZh": "EU ETS覆盖电力工业；国内碳税约45欧元/吨覆盖交通建筑",
+      "noteEn": "EU ETS for power/industry; domestic carbon tax ~€45/t for transport/buildings"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
     }
   },
   {
@@ -482,6 +557,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；拥有全球最丰富的生物多样性之一",
       "commitmentEn": "Committed to 30x30 target; one of the most biodiverse nations"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": true,
+      "priceUSD": 2,
+      "coveragePercent": 10,
+      "noteZh": "煤炭税（GST补偿税）约400卢比/吨；碳信用交易制度筹备中",
+      "noteEn": "Coal cess (GST compensation) ~₹400/t; carbon credit trading scheme under development"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -567,6 +657,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；推动全球海洋保护联盟",
       "commitmentEn": "Committed to 30x30; champions Global Ocean Alliance for marine protection"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": true,
+      "priceUSD": 50,
+      "coveragePercent": 30,
+      "noteZh": "英国碳排放交易体系(UK ETS)，脱欧后独立运营；碳底价机制",
+      "noteEn": "UK ETS operating independently post-Brexit; carbon price floor mechanism"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1",
+      "statusEn": "BTR1 submitted"
     }
   },
   {
@@ -648,6 +753,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；管理全球最大的生物多样性资源",
       "commitmentEn": "Committed to 30x30; stewards the largest biodiversity resources globally"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳市场法案2024年通过，预计2025年启动",
+      "noteEn": "Carbon market bill passed 2024, expected launch 2025"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 4,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -729,6 +849,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；重点保护大堡礁等世界遗产",
       "commitmentEn": "Committed to 30x30; focusing on Great Barrier Reef and World Heritage protection"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": 30,
+      "coveragePercent": 28,
+      "noteZh": "减排基金保障机制(Safeguard Mechanism)，覆盖大型排放设施",
+      "noteEn": "Safeguard Mechanism covering large emitting facilities"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1",
+      "statusEn": "BTR1 submitted"
     }
   },
   {
@@ -810,6 +945,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；是全球生物多样性热点地区",
       "commitmentEn": "Committed to 30x30; one of the global biodiversity hotspots"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": true,
+      "priceUSD": 9,
+      "coveragePercent": 80,
+      "noteZh": "2019年实施碳税，约159兰特/吨CO₂当量",
+      "noteEn": "Carbon tax since 2019, ~R159/tCO₂eq"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 4,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -891,6 +1041,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；目前已保护约13%陆地和14%海洋",
       "commitmentEn": "Committed to 30x30; currently around 13% land and 14% marine protected"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": true,
+      "priceUSD": 65,
+      "coveragePercent": 80,
+      "noteZh": "联邦碳定价基准：80加元/吨(2024)，逐年递增至170加元(2030)",
+      "noteEn": "Federal carbon price: C$80/t (2024), rising to C$170/t by 2030"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1",
+      "statusEn": "BTR1 submitted"
     }
   },
   {
@@ -972,6 +1137,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；全球生物多样性第五大国",
       "commitmentEn": "Committed to 30x30; fifth most biodiverse country globally"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": true,
+      "priceUSD": 4,
+      "coveragePercent": 40,
+      "noteZh": "碳税约55比索/吨CO₂；碳排放交易试点运行中",
+      "noteEn": "Carbon tax ~MXN55/tCO₂; pilot ETS operational"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 6,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -1047,6 +1227,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；推动红海珊瑚礁保护",
       "commitmentEn": "Committed to 30x30; advancing Red Sea coral reef conservation"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "目前无碳定价机制；通过沙特绿色倡议推动减排",
+      "noteEn": "No carbon pricing; pursuing emission reductions through Saudi Green Initiative"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -1132,6 +1327,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；拥有全球最丰富的海洋生物多样性",
       "commitmentEn": "Committed to 30x30; richest marine biodiversity globally"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": 2,
+      "coveragePercent": 25,
+      "noteZh": "2023年启动碳交易所，覆盖电力行业",
+      "noteEn": "Carbon exchange launched 2023, covering power sector"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -1213,6 +1423,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；推动地中海海洋保护",
       "commitmentEn": "Committed to 30x30; advancing Mediterranean marine conservation"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": 85,
+      "coveragePercent": 40,
+      "noteZh": "参与EU ETS，覆盖电力、工业和航空部门",
+      "noteEn": "Participates in EU ETS covering power, industry and aviation"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
     }
   },
   {
@@ -1294,6 +1519,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；欧洲生物多样性最丰富的国家之一",
       "commitmentEn": "Committed to 30x30; one of Europe's most biodiverse nations"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": 85,
+      "coveragePercent": 40,
+      "noteZh": "参与EU ETS，覆盖电力、工业和航空部门",
+      "noteEn": "Participates in EU ETS covering power, industry and aviation"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
     }
   },
   {
@@ -1375,6 +1615,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；管理全球最大面积的自然保护区",
       "commitmentEn": "Committed to 30x30; manages largest network of nature reserves globally"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "萨哈林地区碳交易试点；联邦层面无碳定价",
+      "noteEn": "Sakhalin regional ETS pilot; no federal carbon pricing"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 8,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -1456,6 +1711,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；推动城市生物多样性保护",
       "commitmentEn": "Committed to 30x30; promotes urban biodiversity conservation"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": true,
+      "priceUSD": 25,
+      "coveragePercent": 80,
+      "noteZh": "碳税25新元/吨(2024)，2030年前升至50-80新元/吨",
+      "noteEn": "Carbon tax S$25/t (2024), rising to S$50-80/t by 2030"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 4,
+      "statusZh": "已提交BTR1",
+      "statusEn": "BTR1 submitted"
     }
   },
   {
@@ -1537,6 +1807,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护尼罗河流域和红海生态系统",
       "commitmentEn": "Committed to 30x30; protecting Nile basin and Red Sea ecosystems"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "目前无碳定价机制；自愿碳市场发展中",
+      "noteEn": "No carbon pricing; voluntary carbon market under development"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -1618,6 +1903,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；推动DMZ生态走廊保护",
       "commitmentEn": "Committed to 30x30; promoting DMZ ecological corridor conservation"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": 8,
+      "coveragePercent": 73,
+      "noteZh": "韩国碳排放交易体系(K-ETS)，亚洲最大碳市场之一",
+      "noteEn": "Korea ETS (K-ETS), one of the largest carbon markets in Asia"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 4,
+      "statusZh": "已提交BTR1",
+      "statusEn": "BTR1 submitted"
     }
   },
   {
@@ -1699,6 +1999,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；北欧生态保护先驱",
       "commitmentEn": "Committed to 30x30; Nordic pioneer in ecological conservation"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": true,
+      "priceUSD": 130,
+      "coveragePercent": 40,
+      "noteZh": "全球最高碳税约1330瑞典克朗/吨CO₂(约$130)；同时参与EU ETS",
+      "noteEn": "World's highest carbon tax ~SEK1330/tCO₂ (~$130); also in EU ETS"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
     }
   },
   {
@@ -1784,6 +2099,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；推动北极生态保护",
       "commitmentEn": "Committed to 30x30; advancing Arctic ecosystem conservation"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": true,
+      "priceUSD": 95,
+      "coveragePercent": 65,
+      "noteZh": "碳税约950挪威克朗/吨CO₂(石油行业更高)；同时参与EU ETS",
+      "noteEn": "Carbon tax ~NOK950/tCO₂ (higher for petroleum); also in EU ETS"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1",
+      "statusEn": "BTR1 submitted"
     }
   },
   {
@@ -1865,6 +2195,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护独特的本土物种",
       "commitmentEn": "Committed to 30x30; protecting unique endemic species"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": 35,
+      "coveragePercent": 49,
+      "noteZh": "新西兰碳排放交易体系(NZ ETS)，覆盖林业、能源、工业",
+      "noteEn": "NZ ETS covering forestry, energy, and industrial sectors"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1",
+      "statusEn": "BTR1 submitted"
     }
   },
   {
@@ -1946,6 +2291,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；联合国环境规划署总部所在地",
       "commitmentEn": "Committed to 30x30; hosts UNEP headquarters"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "目前无碳定价机制；碳市场研究阶段",
+      "noteEn": "No carbon pricing; carbon market under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -2027,6 +2387,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护西非热带雨林",
       "commitmentEn": "Committed to 30x30; protecting West African tropical forests"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "目前无碳定价机制；碳市场法案讨论中",
+      "noteEn": "No carbon pricing; carbon market legislation under discussion"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -2108,6 +2483,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护巴塔哥尼亚和南极周边生态",
       "commitmentEn": "Committed to 30x30; protecting Patagonian and sub-Antarctic ecosystems"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": true,
+      "priceUSD": 5,
+      "coveragePercent": 20,
+      "noteZh": "液体燃料碳税（内部碳税），覆盖部分化石燃料",
+      "noteEn": "Carbon tax on liquid fuels, covering part of fossil fuel consumption"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 4,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -2189,6 +2579,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；全球生物多样性第二大国",
       "commitmentEn": "Committed to 30x30; second most biodiverse country globally"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": true,
+      "priceUSD": 5,
+      "coveragePercent": 24,
+      "noteZh": "碳税约25,000比索/吨CO₂(约$5)，覆盖化石燃料",
+      "noteEn": "Carbon tax ~COP25,000/tCO₂ (~$5), covering fossil fuels"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -2270,6 +2675,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护热带雨林和海洋生态",
       "commitmentEn": "Committed to 30x30; protecting tropical rainforests and marine ecosystems"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳信用交易所2023年启动；强制碳定价研究中",
+      "noteEn": "Carbon credit exchange launched 2023; mandatory carbon pricing under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -2351,6 +2771,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；推动北海海洋保护",
       "commitmentEn": "Committed to 30x30; advancing North Sea marine conservation"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": true,
+      "priceUSD": 85,
+      "coveragePercent": 50,
+      "noteZh": "EU ETS + 国内最低碳价机制，确保碳价不低于一定水平",
+      "noteEn": "EU ETS + domestic minimum carbon price floor mechanism"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
     }
   },
   {
@@ -2432,6 +2867,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护横跨欧亚的独特生态系统",
       "commitmentEn": "Committed to 30x30; protecting unique transcontinental ecosystems"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳排放交易体系筹备中，预计与EU ETS对接",
+      "noteEn": "ETS under preparation, expected to link with EU ETS"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 7,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -2513,6 +2963,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；推动格陵兰和北极生态保护",
       "commitmentEn": "Committed to 30x30; advancing Greenland and Arctic conservation"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": true,
+      "priceUSD": 100,
+      "coveragePercent": 45,
+      "noteZh": "EU ETS + 国内碳税约750丹麦克朗/吨(约$100)，2030年大幅提高",
+      "noteEn": "EU ETS + domestic carbon tax ~DKK750/t (~$100), rising sharply by 2030"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
     }
   },
   {
@@ -2594,6 +3059,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护北方针叶林生态",
       "commitmentEn": "Committed to 30x30; protecting boreal forest ecosystems"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": true,
+      "priceUSD": 85,
+      "coveragePercent": 50,
+      "noteZh": "EU ETS + 国内碳税覆盖交通和供暖燃料",
+      "noteEn": "EU ETS + domestic carbon tax covering transport and heating fuels"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
     }
   },
   {
@@ -2675,6 +3155,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护阿尔卑斯高山生态",
       "commitmentEn": "Committed to 30x30; protecting Alpine mountain ecosystems"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": true,
+      "priceUSD": 120,
+      "coveragePercent": 35,
+      "noteZh": "瑞士碳排放交易体系与EU ETS链接；碳税120瑞郎/吨覆盖供暖燃料",
+      "noteEn": "Swiss ETS linked to EU ETS; carbon levy CHF120/t on heating fuels"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1",
+      "statusEn": "BTR1 submitted"
     }
   },
   {
@@ -2756,6 +3251,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护阿尔卑斯和多瑙河流域生态",
       "commitmentEn": "Committed to 30x30; protecting Alpine and Danube basin ecosystems"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": true,
+      "priceUSD": 85,
+      "coveragePercent": 45,
+      "noteZh": "EU ETS + 2022年启动国内碳排放交易(交通建筑)，起步价30欧元/吨",
+      "noteEn": "EU ETS + national ETS for transport/buildings since 2022, starting at €30/t"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
     }
   },
   {
@@ -2837,6 +3347,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；推动亚速尔群岛海洋保护",
       "commitmentEn": "Committed to 30x30; advancing Azores marine conservation"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": 85,
+      "coveragePercent": 35,
+      "noteZh": "参与EU ETS，覆盖电力和工业部门",
+      "noteEn": "Participates in EU ETS covering power and industrial sectors"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
     }
   },
   {
@@ -2918,6 +3443,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护地中海和内盖夫沙漠生态",
       "commitmentEn": "Committed to 30x30; protecting Mediterranean coast and Negev desert ecosystems"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳交易体系和碳税方案评估中",
+      "noteEn": "ETS and carbon tax options under evaluation"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -3003,6 +3543,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；推动海湾地区海洋保护",
       "commitmentEn": "Committed to 30x30; advancing Gulf region marine conservation"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳信用抵消框架建立中；Abu Dhabi碳交易所筹备",
+      "noteEn": "Carbon offset framework under development; Abu Dhabi carbon exchange planned"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 4,
+      "statusZh": "已提交BTR1",
+      "statusEn": "BTR1 submitted"
     }
   },
   {
@@ -3084,6 +3639,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护婆罗洲热带雨林",
       "commitmentEn": "Committed to 30x30; protecting Borneo tropical rainforest"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "自愿碳市场(BCX交易所)2022年启动；强制机制研究中",
+      "noteEn": "Voluntary carbon market (BCX exchange) launched 2022; mandatory mechanism under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -3165,6 +3735,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护湄公河三角洲生态",
       "commitmentEn": "Committed to 30x30; protecting Mekong Delta ecosystems"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳交易试点2025年启动，2028年全面运行",
+      "noteEn": "ETS pilot launching 2025, fully operational by 2028"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -3246,6 +3831,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；全球海洋生物多样性热点",
       "commitmentEn": "Committed to 30x30; global marine biodiversity hotspot"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳定价机制研究阶段",
+      "noteEn": "Carbon pricing mechanism under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 2,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -3327,6 +3927,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护安第斯和太平洋沿岸生态",
       "commitmentEn": "Committed to 30x30; protecting Andean and Pacific coast ecosystems"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": true,
+      "priceUSD": 5,
+      "coveragePercent": 39,
+      "noteZh": "碳税$5/吨CO₂覆盖大型排放源；绿色税收改革推进中",
+      "noteEn": "Carbon tax $5/tCO₂ on large emitters; green tax reform in progress"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 4,
+      "statusZh": "已提交BTR1",
+      "statusEn": "BTR1 submitted"
     }
   },
   {
@@ -3408,6 +4023,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；亚马逊流域生物多样性热点",
       "commitmentEn": "Committed to 30x30; Amazon basin biodiversity hotspot"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳定价机制评估阶段",
+      "noteEn": "Carbon pricing under evaluation"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -3489,6 +4119,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护阿特拉斯山脉和撒哈拉边缘生态",
       "commitmentEn": "Committed to 30x30; protecting Atlas Mountains and Sahara fringe ecosystems"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳市场研究阶段；参与Article 6合作框架",
+      "noteEn": "Carbon market under study; participates in Article 6 cooperation"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -3570,6 +4215,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护几内亚湾沿岸生态",
       "commitmentEn": "Committed to 30x30; protecting Gulf of Guinea coastal ecosystems"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳定价机制评估阶段；参与自愿碳市场",
+      "noteEn": "Carbon pricing under evaluation; participates in voluntary carbon market"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -3651,6 +4311,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；全球单位面积生物多样性最高的国家之一",
       "commitmentEn": "Committed to 30x30; among the highest biodiversity per unit area globally"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": true,
+      "priceUSD": 10,
+      "coveragePercent": 30,
+      "noteZh": "燃料碳税约3.5%；国家脱碳计划配套碳定价",
+      "noteEn": "Fuel carbon tax ~3.5%; carbon pricing aligned with national decarbonization plan"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 4,
+      "statusZh": "已提交BTR1",
+      "statusEn": "BTR1 submitted"
     }
   },
   {
@@ -3732,6 +4407,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护比亚沃韦扎原始森林",
       "commitmentEn": "Committed to 30x30; protecting Bialowieza primeval forest"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": 85,
+      "coveragePercent": 45,
+      "noteZh": "参与EU ETS，覆盖电力和工业部门；煤炭转型基金支持",
+      "noteEn": "Participates in EU ETS; supported by Just Transition Fund for coal phase-out"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
     }
   },
   {
@@ -3813,6 +4503,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；推动太平洋岛国海洋保护",
       "commitmentEn": "Committed to 30x30; advancing Pacific island marine conservation"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "作为小岛国推动国际碳定价倡议",
+      "noteEn": "As a SIDS, advocates for international carbon pricing initiatives"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 2,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   },
   {
@@ -3894,6 +4599,21 @@
       "target30x30": 30,
       "commitmentZh": "承诺2030年保护30%陆地和海洋；保护东非大裂谷生态系统",
       "commitmentEn": "Committed to 30x30; protecting East African Rift Valley ecosystems"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳市场机制研究阶段",
+      "noteEn": "Carbon market mechanism under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 2,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
     }
   }
 ]

@@ -876,6 +876,32 @@ export default function GlobalEnvironmentalAgencies() {
                     </tr>
                     <tr className="border-b border-gray-100">
                       <td className="py-3 px-2 text-gray-500">
+                        {t("碳价", "Carbon Price")}
+                      </td>
+                      {compareList.map((c) => (
+                        <td key={c.countryEn} className="py-3 px-2 text-center">
+                          {c.carbonPricing?.priceUSD != null ? (
+                            <span className="font-bold text-amber-700">${c.carbonPricing.priceUSD}/t</span>
+                          ) : (
+                            <span className="text-gray-400">{t("无", "None")}</span>
+                          )}
+                        </td>
+                      ))}
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-2 text-gray-500">
+                        BTR {t("报告", "Report")}
+                      </td>
+                      {compareList.map((c) => (
+                        <td key={c.countryEn} className="py-3 px-2 text-center">
+                          <span className={`text-xs px-2 py-0.5 rounded-full text-white ${c.reportingStatus?.btrSubmitted ? "bg-green-600" : "bg-red-500"}`}>
+                            {c.reportingStatus?.btrSubmitted ? t("已提交", "Submitted") : t("待提交", "Pending")}
+                          </span>
+                        </td>
+                      ))}
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-2 text-gray-500">
                         {t("NDC 承诺", "NDC Target")}
                       </td>
                       {compareList.map((c) => (
@@ -1070,31 +1096,57 @@ export default function GlobalEnvironmentalAgencies() {
                 </div>
               </div>
 
-              {/* Treaty Compliance Dashboard */}
+              {/* Treaty Compliance Dashboard - 5 rows */}
               {(() => {
                 const pa = selectedCountry.parisAgreement;
                 const mp = selectedCountry.montrealProtocol;
                 const cbd = selectedCountry.cbd;
+                const cp = selectedCountry.carbonPricing;
+                const rp = selectedCountry.reportingStatus;
                 const protArea = selectedCountry.wb?.protectedAreas;
                 const ratingCfg = pa?.ndcRating ? NDC_RATING_CONFIG[pa.ndcRating] : null;
                 const montrealOk = mp?.kigaliAmendment;
                 const cbdPct = protArea != null ? Math.min(100, (protArea / 30) * 100) : 0;
+                const hasPrice = cp?.priceUSD != null;
+                const btrOk = rp?.btrSubmitted;
 
                 return (
                   <div className="mb-4 bg-gray-50 rounded-xl p-4 border border-gray-200">
                     <h4 className="text-sm font-semibold text-gray-700 mb-3">
-                      {t("三大公约合规概览", "Treaty Compliance Overview")}
+                      {t("履约合规全景", "Compliance Overview")}
                     </h4>
                     <div className="space-y-2.5">
-                      {/* Paris */}
+                      {/* Paris NDC */}
                       <div className="flex items-center gap-2">
-                        <span className="text-xs text-gray-500 w-20 shrink-0">{t("巴黎协定", "Paris")}</span>
+                        <span className="text-xs text-gray-500 w-20 shrink-0">{t("NDC 雄心", "NDC Ambition")}</span>
                         <div className="flex-1 bg-gray-200 rounded-full h-3">
                           <div className={`h-3 rounded-full ${ratingCfg?.barColor || "bg-gray-300"}`}
                             style={{ width: pa?.ndcRating === "1.5C" ? "100%" : pa?.ndcRating === "2C" ? "80%" : pa?.ndcRating === "almost_sufficient" ? "65%" : pa?.ndcRating === "insufficient" ? "45%" : pa?.ndcRating === "highly_insufficient" ? "25%" : pa?.ndcRating === "critically_insufficient" ? "15%" : "5%" }} />
                         </div>
                         <span className={`text-xs font-medium w-24 text-right ${ratingCfg?.textColor || "text-gray-500"}`}>
                           {ratingCfg ? (language === "zh" ? ratingCfg.zh : ratingCfg.en) : "—"}
+                        </span>
+                      </div>
+                      {/* Carbon Pricing */}
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-gray-500 w-20 shrink-0">{t("碳定价", "Carbon Price")}</span>
+                        <div className="flex-1 bg-gray-200 rounded-full h-3">
+                          <div className={`h-3 rounded-full ${hasPrice ? (cp.priceUSD >= 50 ? "bg-green-500" : cp.priceUSD >= 20 ? "bg-lime-400" : "bg-yellow-400") : "bg-gray-300"}`}
+                            style={{ width: hasPrice ? `${Math.min(100, cp.priceUSD / 1.3)}%` : "3%" }} />
+                        </div>
+                        <span className={`text-xs font-medium w-24 text-right ${hasPrice ? "text-green-700" : "text-gray-400"}`}>
+                          {hasPrice ? `$${cp.priceUSD}/t` : t("无", "None")}
+                        </span>
+                      </div>
+                      {/* Reporting */}
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-gray-500 w-20 shrink-0">{t("透明度", "Transparency")}</span>
+                        <div className="flex-1 bg-gray-200 rounded-full h-3">
+                          <div className={`h-3 rounded-full ${btrOk ? "bg-green-500" : "bg-red-400"}`}
+                            style={{ width: btrOk ? "100%" : "30%" }} />
+                        </div>
+                        <span className={`text-xs font-medium w-24 text-right ${btrOk ? "text-green-600" : "text-red-500"}`}>
+                          {btrOk ? t("BTR 已提交", "BTR Submitted") : t("BTR 待提交", "BTR Pending")}
                         </span>
                       </div>
                       {/* Montreal */}
@@ -1265,6 +1317,58 @@ export default function GlobalEnvironmentalAgencies() {
                   </p>
                 </div>
               )}
+
+              {/* Carbon Pricing + Reporting */}
+              <div className="grid grid-cols-2 gap-3 mb-4">
+                {/* Carbon Pricing */}
+                {selectedCountry.carbonPricing && (
+                  <div className="bg-amber-50 rounded-xl p-3 border border-amber-100">
+                    <h4 className="text-xs font-semibold text-amber-800 mb-2">{t("碳定价机制", "Carbon Pricing")}</h4>
+                    <div className="flex gap-2 mb-2">
+                      {selectedCountry.carbonPricing.hasETS && (
+                        <span className="bg-amber-600 text-white text-xs px-2 py-0.5 rounded-full">ETS</span>
+                      )}
+                      {selectedCountry.carbonPricing.hasCarbonTax && (
+                        <span className="bg-amber-500 text-white text-xs px-2 py-0.5 rounded-full">{t("碳税", "Carbon Tax")}</span>
+                      )}
+                      {!selectedCountry.carbonPricing.hasETS && !selectedCountry.carbonPricing.hasCarbonTax && (
+                        <span className="bg-gray-300 text-gray-600 text-xs px-2 py-0.5 rounded-full">{t("无", "None")}</span>
+                      )}
+                    </div>
+                    {selectedCountry.carbonPricing.priceUSD != null && (
+                      <p className="text-2xl font-bold text-amber-700">${selectedCountry.carbonPricing.priceUSD}<span className="text-xs font-normal">/tCO₂</span></p>
+                    )}
+                    {selectedCountry.carbonPricing.coveragePercent > 0 && (
+                      <p className="text-xs text-amber-600 mt-1">{t("覆盖", "Coverage")} {selectedCountry.carbonPricing.coveragePercent}% {t("排放", "emissions")}</p>
+                    )}
+                    <p className="text-xs text-amber-700 mt-1 leading-relaxed">
+                      {language === "zh" ? selectedCountry.carbonPricing.noteZh : selectedCountry.carbonPricing.noteEn}
+                    </p>
+                  </div>
+                )}
+                {/* Reporting Status */}
+                {selectedCountry.reportingStatus && (
+                  <div className={`rounded-xl p-3 border ${selectedCountry.reportingStatus.btrSubmitted ? "bg-green-50 border-green-100" : "bg-red-50 border-red-100"}`}>
+                    <h4 className={`text-xs font-semibold mb-2 ${selectedCountry.reportingStatus.btrSubmitted ? "text-green-800" : "text-red-800"}`}>
+                      {t("透明度报告", "Transparency Reporting")}
+                    </h4>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className={`text-xs px-2 py-0.5 rounded-full text-white ${selectedCountry.reportingStatus.btrSubmitted ? "bg-green-600" : "bg-red-500"}`}>
+                        BTR {selectedCountry.reportingStatus.btrSubmitted ? "✓" : "✗"}
+                      </span>
+                      {selectedCountry.reportingStatus.btrYear && (
+                        <span className="text-xs text-green-600">{selectedCountry.reportingStatus.btrYear}</span>
+                      )}
+                    </div>
+                    <p className="text-xs text-gray-600">
+                      {t("国家信息通报", "National Communications")}: {selectedCountry.reportingStatus.nationalComm} {t("次", "submitted")}
+                    </p>
+                    <p className={`text-xs mt-1 font-medium ${selectedCountry.reportingStatus.btrSubmitted ? "text-green-700" : "text-red-600"}`}>
+                      {language === "zh" ? selectedCountry.reportingStatus.statusZh : selectedCountry.reportingStatus.statusEn}
+                    </p>
+                  </div>
+                )}
+              </div>
 
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-gray-500 mb-2">
