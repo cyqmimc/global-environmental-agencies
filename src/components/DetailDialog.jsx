@@ -1,6 +1,5 @@
 import { useState } from "react";
-import "../chartSetup";
-import { Radar } from "react-chartjs-2";
+import RadarChart from "./charts/RadarChart";
 import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG } from "../constants";
 import Scorecard from "./Scorecard";
 
@@ -49,7 +48,6 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
               </p>
             </div>
           </div>
-          {/* Quick stats under header */}
           <div className="flex flex-wrap gap-2 mt-3">
             <span className="bg-white/20 text-white text-xs font-medium px-2.5 py-1 rounded-full">
               {selectedCountry.region}
@@ -90,7 +88,6 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
           {/* ===== Overview Tab ===== */}
           {tab === "overview" && (
             <>
-              {/* Scorecard */}
               {allCountries && allCountries.length > 0 && (
                 <Scorecard
                   country={selectedCountry}
@@ -100,14 +97,12 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                 />
               )}
 
-              {/* Description */}
               <p className="text-sm text-gray-600 leading-relaxed mb-4">
                 {language === "zh"
                   ? selectedCountry.descriptionZh
                   : selectedCountry.descriptionEn}
               </p>
 
-              {/* Focus Areas */}
               <div className="mb-4">
                 <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
                   {t("特色领域", "Focus Areas")}
@@ -126,7 +121,6 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                 </div>
               </div>
 
-              {/* Key Laws */}
               {selectedCountry.keyLaws && selectedCountry.keyLaws.length > 0 && (
                 <div className="mb-4">
                   <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
@@ -150,7 +144,6 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                 </div>
               )}
 
-              {/* Actions */}
               <div className="flex gap-2">
                 <a
                   href={selectedCountry.website}
@@ -181,7 +174,6 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
           {/* ===== Compliance Tab ===== */}
           {tab === "compliance" && (
             <>
-              {/* Compliance Progress Bars */}
               {(() => {
                 const pa = selectedCountry.parisAgreement;
                 const mp = selectedCountry.montrealProtocol;
@@ -255,9 +247,7 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                 );
               })()}
 
-              {/* Treaty Detail Cards */}
               <div className="space-y-3">
-                {/* Paris Agreement */}
                 {selectedCountry.parisAgreement && (
                   <details className="group bg-blue-50 rounded-xl border border-blue-100" open>
                     <summary className="flex items-center justify-between p-4 cursor-pointer list-none">
@@ -324,7 +314,6 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                   </details>
                 )}
 
-                {/* Montreal Protocol */}
                 {selectedCountry.montrealProtocol && (
                   <details className="group bg-cyan-50 rounded-xl border border-cyan-100">
                     <summary className="flex items-center justify-between p-4 cursor-pointer list-none">
@@ -357,7 +346,6 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                   </details>
                 )}
 
-                {/* CBD 30x30 */}
                 {selectedCountry.cbd && (
                   <details className="group bg-emerald-50 rounded-xl border border-emerald-100">
                     <summary className="flex items-center justify-between p-4 cursor-pointer list-none">
@@ -410,7 +398,6 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                   </details>
                 )}
 
-                {/* Carbon Pricing & Reporting - compact 2-col */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {selectedCountry.carbonPricing && (
                     <div className="bg-amber-50 rounded-xl p-3 border border-amber-100">
@@ -454,7 +441,6 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                   )}
                 </div>
 
-                {/* Other Treaties */}
                 <div>
                   <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
                     {t("其他国际公约", "Other International Treaties")}
@@ -477,7 +463,6 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
           {/* ===== Data Tab ===== */}
           {tab === "data" && (
             <>
-              {/* 6-metric data cards */}
               {(() => {
                 const dy = selectedCountry.wb?.dataYear || {};
                 return (
@@ -533,71 +518,47 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                 );
               })()}
 
-              {/* Radar chart */}
               {selectedCountry.wb && (
                 <div className="bg-gray-50 rounded-xl p-4">
                   <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
                     {t("环境综合画像", "Environmental Profile")}
                   </h4>
-                  <Radar
-                    data={{
-                      labels: [
-                        t("森林覆盖", "Forest"),
-                        t("可再生能源", "Renewable"),
-                        t("保护区", "Protected"),
-                        t("空气质量", "Air Quality"),
-                        t("碳效率", "CO₂ Efficiency"),
-                        "EPI",
-                      ],
-                      datasets: [
-                        {
-                          label: language === "zh" ? selectedCountry.countryZh : selectedCountry.countryEn,
-                          data: [
-                            Math.min(selectedCountry.wb.forestArea ?? 0, 100),
-                            Math.min(selectedCountry.wb.renewableEnergy ?? 0, 100),
-                            Math.min(selectedCountry.wb.protectedAreas ?? 0, 100),
-                            Math.max(0, 100 - (selectedCountry.wb.pm25 ?? 100)),
-                            Math.max(0, 100 - Math.min((selectedCountry.wb.co2PerCapita ?? 0) * 5, 100)),
-                            selectedCountry.epiScore ?? 0,
-                          ],
-                          backgroundColor: "rgba(34, 197, 94, 0.2)",
-                          borderColor: "#22c55e",
-                          pointBackgroundColor: "#22c55e",
-                          borderWidth: 2,
-                        },
-                        {
-                          label: t("全球均值", "Global Average"),
-                          data: [
-                            globalAvg.forestCoverage ?? 0,
-                            globalAvg.renewableEnergy ?? 0,
-                            globalAvg.protectedAreas ?? 0,
-                            Math.max(0, 100 - (globalAvg.pm25 ?? 100)),
-                            Math.max(0, 100 - Math.min((globalAvg.co2PerCapita ?? 0) * 5, 100)),
-                            50,
-                          ],
-                          backgroundColor: "rgba(156, 163, 175, 0.1)",
-                          borderColor: "#9ca3af",
-                          pointBackgroundColor: "#9ca3af",
-                          borderWidth: 1,
-                          borderDash: [4, 4],
-                        },
-                      ],
-                    }}
-                    options={{
-                      responsive: true,
-                      scales: {
-                        r: {
-                          beginAtZero: true,
-                          max: 100,
-                          ticks: { stepSize: 25, display: false },
-                          pointLabels: { font: { size: 11 } },
-                          grid: { color: "#e5e7eb" },
-                        },
+                  <RadarChart
+                    labels={[
+                      t("森林覆盖", "Forest"),
+                      t("可再生能源", "Renewable"),
+                      t("保护区", "Protected"),
+                      t("空气质量", "Air Quality"),
+                      t("碳效率", "CO₂ Efficiency"),
+                      "EPI",
+                    ]}
+                    datasets={[
+                      {
+                        label: language === "zh" ? selectedCountry.countryZh : selectedCountry.countryEn,
+                        data: [
+                          Math.min(selectedCountry.wb.forestArea ?? 0, 100),
+                          Math.min(selectedCountry.wb.renewableEnergy ?? 0, 100),
+                          Math.min(selectedCountry.wb.protectedAreas ?? 0, 100),
+                          Math.max(0, 100 - (selectedCountry.wb.pm25 ?? 100)),
+                          Math.max(0, 100 - Math.min((selectedCountry.wb.co2PerCapita ?? 0) * 5, 100)),
+                          selectedCountry.epiScore ?? 0,
+                        ],
+                        color: "#22c55e",
                       },
-                      plugins: {
-                        legend: { display: true, position: "bottom", labels: { boxWidth: 12, padding: 16 } },
+                      {
+                        label: t("全球均值", "Global Average"),
+                        data: [
+                          globalAvg.forestCoverage ?? 0,
+                          globalAvg.renewableEnergy ?? 0,
+                          globalAvg.protectedAreas ?? 0,
+                          Math.max(0, 100 - (globalAvg.pm25 ?? 100)),
+                          Math.max(0, 100 - Math.min((globalAvg.co2PerCapita ?? 0) * 5, 100)),
+                          50,
+                        ],
+                        color: "#9ca3af",
+                        dash: true,
                       },
-                    }}
+                    ]}
                   />
                 </div>
               )}

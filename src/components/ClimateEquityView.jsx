@@ -1,6 +1,5 @@
 import { useMemo } from "react";
-import "../chartSetup";
-import { Scatter } from "react-chartjs-2";
+import ScatterChart from "./charts/ScatterChart";
 
 const REGION_COLORS = {
   Asia: { bg: "rgba(249, 115, 22, 0.6)", border: "#f97316" },
@@ -23,77 +22,23 @@ export default function ClimateEquityView({ countries, language, t, onCountryCli
         y: c.climateEquity.vulnerabilityIndex * 100,
         country: c,
         label: language === "zh" ? c.countryZh : c.countryEn,
+        tooltipLines: [
+          language === "zh" ? c.countryZh : c.countryEn,
+          `${language === "zh" ? "累计排放" : "Cumulative CO₂"}: ${c.climateEquity.cumulativeCO2Gt} Gt`,
+          `${language === "zh" ? "脆弱性" : "Vulnerability"}: ${(c.climateEquity.vulnerabilityIndex * 100).toFixed(0)}`,
+          `${language === "zh" ? "NDC 评级" : "NDC Rating"}: ${c.parisAgreement?.ndcRating || "N/A"}`,
+        ],
       });
     });
 
-    return {
-      datasets: Object.entries(byRegion).map(([region, points]) => ({
-        label: region,
-        data: points,
-        backgroundColor: REGION_COLORS[region]?.bg || "rgba(156,163,175,0.5)",
-        borderColor: REGION_COLORS[region]?.border || "#9ca3af",
-        borderWidth: 1.5,
-        pointRadius: points.map((p) => Math.max(5, Math.min(18, Math.sqrt(p.x) * 2.5))),
-        pointHoverRadius: points.map((p) => Math.max(8, Math.min(22, Math.sqrt(p.x) * 2.5 + 3))),
-      })),
-    };
+    return Object.entries(byRegion).map(([region, points]) => ({
+      label: region,
+      data: points,
+      backgroundColor: REGION_COLORS[region]?.bg || "rgba(156,163,175,0.5)",
+      borderColor: REGION_COLORS[region]?.border || "#9ca3af",
+      pointRadius: points.map((p) => Math.max(5, Math.min(18, Math.sqrt(p.x) * 2.5))),
+    }));
   }, [countries, language]);
-
-  const options = {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      x: {
-        type: "logarithmic",
-        title: {
-          display: true,
-          text: language === "zh" ? "历史累计 CO₂ 排放 (Gt, 1850-2022)" : "Cumulative CO₂ Emissions (Gt, 1850-2022)",
-          font: { size: 12 },
-        },
-        min: 0.01,
-        grid: { color: "#f3f4f6" },
-      },
-      y: {
-        title: {
-          display: true,
-          text: language === "zh" ? "气候脆弱性指数 (ND-GAIN, 0-100)" : "Climate Vulnerability Index (ND-GAIN, 0-100)",
-          font: { size: 12 },
-        },
-        min: 20,
-        max: 70,
-        grid: { color: "#f3f4f6" },
-      },
-    },
-    plugins: {
-      tooltip: {
-        callbacks: {
-          label: (ctx) => {
-            const p = ctx.raw;
-            return [
-              p.label,
-              `${language === "zh" ? "累计排放" : "Cumulative CO₂"}: ${p.country.climateEquity.cumulativeCO2Gt} Gt`,
-              `${language === "zh" ? "脆弱性" : "Vulnerability"}: ${(p.country.climateEquity.vulnerabilityIndex * 100).toFixed(0)}`,
-              `${language === "zh" ? "NDC 评级" : "NDC Rating"}: ${p.country.parisAgreement?.ndcRating || "N/A"}`,
-            ];
-          },
-        },
-      },
-      legend: {
-        position: "bottom",
-        labels: { boxWidth: 10, padding: 15, font: { size: 11 } },
-      },
-    },
-    onClick: (evt, elements) => {
-      if (elements.length > 0) {
-        const idx = elements[0].index;
-        const datasetIdx = elements[0].datasetIndex;
-        const point = chartData.datasets[datasetIdx].data[idx];
-        if (point?.country && onCountryClick) {
-          onCountryClick(point.country);
-        }
-      }
-    },
-  };
 
   // Quadrant labels
   const quadrants = [
@@ -132,9 +77,17 @@ export default function ClimateEquityView({ countries, language, t, onCountryCli
       </div>
 
       {/* Chart */}
-      <div className="relative" style={{ height: "400px" }}>
-        <Scatter data={chartData} options={options} />
-      </div>
+      <ScatterChart
+        datasets={chartData}
+        xLabel={language === "zh" ? "历史累计 CO₂ 排放 (Gt, 1850-2022)" : "Cumulative CO₂ Emissions (Gt, 1850-2022)"}
+        yLabel={language === "zh" ? "气候脆弱性指数 (ND-GAIN, 0-100)" : "Climate Vulnerability Index (ND-GAIN, 0-100)"}
+        xMin={0.01}
+        yMin={20}
+        yMax={70}
+        xLog
+        height={400}
+        onClick={onCountryClick}
+      />
 
       {/* Data source */}
       <p className="text-xs text-gray-400 mt-2 text-center">

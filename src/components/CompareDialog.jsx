@@ -1,5 +1,4 @@
-import "../chartSetup";
-import { Bar } from "react-chartjs-2";
+import BarChart from "./charts/BarChart";
 import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG } from "../constants";
 
 const COMPARE_COLORS = ["#22c55e", "#3b82f6", "#f59e0b"];
@@ -314,38 +313,17 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
             <h4 className="text-sm font-semibold text-gray-500 mb-3">
               {t("数据对比", "Data Comparison")}
             </h4>
-            <Bar
-              data={{
-                labels: [
-                  t("森林覆盖率 (%)", "Forest Coverage (%)"),
-                  t("碳排放 (Mt)", "Carbon Emission (Mt)"),
-                  t("EPI 评分", "EPI Score"),
-                ],
-                datasets: compareList.map((c, i) => ({
-                  label:
-                    language === "zh" ? c.countryZh : c.countryEn,
-                  data: [c.data.forestCoverage, c.data.carbonEmission, c.epiScore],
-                  backgroundColor: COMPARE_COLORS[i],
-                  borderRadius: 8,
-                })),
-              }}
-              options={{
-                responsive: true,
-                plugins: {
-                  legend: {
-                    display: true,
-                    position: "bottom",
-                    labels: { boxWidth: 12, padding: 16 },
-                  },
-                },
-                scales: {
-                  y: {
-                    beginAtZero: true,
-                    grid: { color: "#e5e7eb" },
-                  },
-                  x: { grid: { display: false } },
-                },
-              }}
+            <BarChart
+              labels={[
+                t("森林覆盖率 (%)", "Forest (%)"),
+                t("碳排放 (Mt)", "CO₂ (Mt)"),
+                t("EPI 评分", "EPI Score"),
+              ]}
+              datasets={compareList.map((c, i) => ({
+                label: language === "zh" ? c.countryZh : c.countryEn,
+                data: [c.data.forestCoverage, c.data.carbonEmission, c.epiScore],
+                color: COMPARE_COLORS[i],
+              }))}
             />
           </div>
 

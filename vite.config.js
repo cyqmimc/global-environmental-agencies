@@ -7,14 +7,5 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     target: 'es2020',
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes('chart.js') || id.includes('react-chartjs-2')) {
-            return 'chart';
-          }
-        },
-      },
-    },
   },
 })
