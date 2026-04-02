@@ -4,12 +4,14 @@ import DetailDialog from "./components/DetailDialog";
 import CompareDialog from "./components/CompareDialog";
 import AboutPage from "./components/AboutPage";
 import RankingsView from "./components/RankingsView";
-import { Bar, Radar } from "react-chartjs-2";
+import ClimateEquityView from "./components/ClimateEquityView";
+import { Bar, Radar, Scatter } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   BarElement,
   CategoryScale,
   LinearScale,
+  LogarithmicScale,
   RadialLinearScale,
   PointElement,
   LineElement,
@@ -27,7 +29,7 @@ import {
 } from "./constants";
 
 ChartJS.register(
-  BarElement, CategoryScale, LinearScale,
+  BarElement, CategoryScale, LinearScale, LogarithmicScale,
   RadialLinearScale, PointElement, LineElement, Filler,
   Tooltip, Legend
 );
@@ -481,9 +483,44 @@ export default function GlobalEnvironmentalAgencies() {
           >
             {t("排行榜", "Rankings")}
           </button>
+          <button
+            onClick={() => setViewMode("equity")}
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
+              viewMode === "equity"
+                ? "bg-green-600 text-white shadow-sm"
+                : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50"
+            }`}
+          >
+            {t("气候公平", "Climate Equity")}
+          </button>
         </div>
 
-        {viewMode === "rankings" ? (
+        {viewMode === "equity" ? (
+          <ClimateEquityView
+            countries={filteredCountries}
+            language={language}
+            t={t}
+            onCountryClick={(country) => {
+              const idx = paginatedCountries.findIndex(
+                (c) => c.isoCode === country.isoCode
+              );
+              if (idx >= 0) {
+                setOpenDialogIndex(idx);
+              } else {
+                const fullIdx = filteredCountries.findIndex(
+                  (c) => c.isoCode === country.isoCode
+                );
+                if (fullIdx >= 0) {
+                  const targetPage = Math.floor(fullIdx / ITEMS_PER_PAGE) + 1;
+                  setPage(targetPage);
+                  setTimeout(() => {
+                    setOpenDialogIndex(fullIdx % ITEMS_PER_PAGE);
+                  }, 50);
+                }
+              }
+            }}
+          />
+        ) : viewMode === "rankings" ? (
           <RankingsView
             countries={filteredCountries}
             language={language}

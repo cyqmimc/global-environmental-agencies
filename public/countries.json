@@ -92,6 +92,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1",
       "statusEn": "BTR1 submitted"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.36,
+      "cumulativeCO2Gt": 422.0
     }
   },
   {
@@ -188,6 +192,10 @@
       "nationalComm": 4,
       "statusZh": "已提交BTR1",
       "statusEn": "BTR1 submitted"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.42,
+      "cumulativeCO2Gt": 284.0
     }
   },
   {
@@ -284,6 +292,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1（通过EU联合提交）",
       "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.34,
+      "cumulativeCO2Gt": 92.0
     }
   },
   {
@@ -380,6 +392,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1",
       "statusEn": "BTR1 submitted"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.37,
+      "cumulativeCO2Gt": 65.0
     }
   },
   {
@@ -476,6 +492,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1（通过EU联合提交）",
       "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.33,
+      "cumulativeCO2Gt": 37.0
     }
   },
   {
@@ -572,6 +592,10 @@
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.52,
+      "cumulativeCO2Gt": 55.0
     }
   },
   {
@@ -672,6 +696,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1",
       "statusEn": "BTR1 submitted"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.31,
+      "cumulativeCO2Gt": 78.0
     }
   },
   {
@@ -768,6 +796,10 @@
       "nationalComm": 4,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.43,
+      "cumulativeCO2Gt": 15.0
     }
   },
   {
@@ -864,6 +896,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1",
       "statusEn": "BTR1 submitted"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.34,
+      "cumulativeCO2Gt": 18.0
     }
   },
   {
@@ -960,6 +996,10 @@
       "nationalComm": 4,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.47,
+      "cumulativeCO2Gt": 17.0
     }
   },
   {
@@ -1056,6 +1096,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1",
       "statusEn": "BTR1 submitted"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.33,
+      "cumulativeCO2Gt": 33.0
     }
   },
   {
@@ -1152,6 +1196,10 @@
       "nationalComm": 6,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.44,
+      "cumulativeCO2Gt": 18.0
     }
   },
   {
@@ -1242,6 +1290,10 @@
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.41,
+      "cumulativeCO2Gt": 15.0
     }
   },
   {
@@ -1342,6 +1394,10 @@
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.48,
+      "cumulativeCO2Gt": 14.0
     }
   },
   {
@@ -1438,6 +1494,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1（通过EU联合提交）",
       "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.34,
+      "cumulativeCO2Gt": 24.0
     }
   },
   {
@@ -1534,6 +1594,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1（通过EU联合提交）",
       "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.36,
+      "cumulativeCO2Gt": 16.0
     }
   },
   {
@@ -1630,6 +1694,10 @@
       "nationalComm": 8,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.39,
+      "cumulativeCO2Gt": 115.0
     }
   },
   {
@@ -1726,6 +1794,10 @@
       "nationalComm": 4,
       "statusZh": "已提交BTR1",
       "statusEn": "BTR1 submitted"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.3,
+      "cumulativeCO2Gt": 1.2
     }
   },
   {
@@ -1822,6 +1894,10 @@
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.48,
+      "cumulativeCO2Gt": 5.5
     }
   },
   {
@@ -1918,6 +1994,10 @@
       "nationalComm": 4,
       "statusZh": "已提交BTR1",
       "statusEn": "BTR1 submitted"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.36,
+      "cumulativeCO2Gt": 19.0
     }
   },
   {
@@ -2014,6 +2094,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1（通过EU联合提交）",
       "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.29,
+      "cumulativeCO2Gt": 5.0
     }
   },
   {
@@ -2114,6 +2198,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1",
       "statusEn": "BTR1 submitted"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.28,
+      "cumulativeCO2Gt": 2.8
     }
   },
   {
@@ -2210,6 +2298,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1",
       "statusEn": "BTR1 submitted"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.32,
+      "cumulativeCO2Gt": 1.5
     }
   },
   {
@@ -2306,6 +2398,10 @@
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.55,
+      "cumulativeCO2Gt": 0.4
     }
   },
   {
@@ -2402,6 +2498,10 @@
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.56,
+      "cumulativeCO2Gt": 3.0
     }
   },
   {
@@ -2498,6 +2598,10 @@
       "nationalComm": 4,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.4,
+      "cumulativeCO2Gt": 9.5
     }
   },
   {
@@ -2594,6 +2698,10 @@
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.47,
+      "cumulativeCO2Gt": 3.5
     }
   },
   {
@@ -2690,6 +2798,10 @@
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.46,
+      "cumulativeCO2Gt": 10.0
     }
   },
   {
@@ -2786,6 +2898,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1（通过EU联合提交）",
       "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.3,
+      "cumulativeCO2Gt": 11.0
     }
   },
   {
@@ -2882,6 +2998,10 @@
       "nationalComm": 7,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.42,
+      "cumulativeCO2Gt": 15.0
     }
   },
   {
@@ -2978,6 +3098,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1（通过EU联合提交）",
       "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.28,
+      "cumulativeCO2Gt": 3.5
     }
   },
   {
@@ -3074,6 +3198,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1（通过EU联合提交）",
       "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.28,
+      "cumulativeCO2Gt": 2.5
     }
   },
   {
@@ -3170,6 +3298,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1",
       "statusEn": "BTR1 submitted"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.28,
+      "cumulativeCO2Gt": 2.5
     }
   },
   {
@@ -3266,6 +3398,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1（通过EU联合提交）",
       "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.3,
+      "cumulativeCO2Gt": 4.5
     }
   },
   {
@@ -3362,6 +3498,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1（通过EU联合提交）",
       "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.35,
+      "cumulativeCO2Gt": 3.0
     }
   },
   {
@@ -3458,6 +3598,10 @@
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.37,
+      "cumulativeCO2Gt": 2.5
     }
   },
   {
@@ -3558,6 +3702,10 @@
       "nationalComm": 4,
       "statusZh": "已提交BTR1",
       "statusEn": "BTR1 submitted"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.36,
+      "cumulativeCO2Gt": 5.0
     }
   },
   {
@@ -3654,6 +3802,10 @@
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.42,
+      "cumulativeCO2Gt": 6.5
     }
   },
   {
@@ -3750,6 +3902,10 @@
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.5,
+      "cumulativeCO2Gt": 4.5
     }
   },
   {
@@ -3846,6 +4002,10 @@
       "nationalComm": 2,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.55,
+      "cumulativeCO2Gt": 3.0
     }
   },
   {
@@ -3942,6 +4102,10 @@
       "nationalComm": 4,
       "statusZh": "已提交BTR1",
       "statusEn": "BTR1 submitted"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.39,
+      "cumulativeCO2Gt": 4.0
     }
   },
   {
@@ -4038,6 +4202,10 @@
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.48,
+      "cumulativeCO2Gt": 2.5
     }
   },
   {
@@ -4134,6 +4302,10 @@
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.44,
+      "cumulativeCO2Gt": 2.0
     }
   },
   {
@@ -4230,6 +4402,10 @@
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.53,
+      "cumulativeCO2Gt": 0.6
     }
   },
   {
@@ -4326,6 +4502,10 @@
       "nationalComm": 4,
       "statusZh": "已提交BTR1",
       "statusEn": "BTR1 submitted"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.4,
+      "cumulativeCO2Gt": 0.3
     }
   },
   {
@@ -4422,6 +4602,10 @@
       "nationalComm": 8,
       "statusZh": "已提交BTR1（通过EU联合提交）",
       "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.35,
+      "cumulativeCO2Gt": 25.0
     }
   },
   {
@@ -4518,6 +4702,10 @@
       "nationalComm": 2,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.52,
+      "cumulativeCO2Gt": 0.03
     }
   },
   {
@@ -4614,6 +4802,10 @@
       "nationalComm": 2,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.6,
+      "cumulativeCO2Gt": 0.4
     }
   },
   {
@@ -4705,6 +4897,10 @@
     "flagUrl": "https://flagcdn.com/pk.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.55,
+      "cumulativeCO2Gt": 5.5
     }
   },
   {
@@ -4796,6 +4992,10 @@
     "flagUrl": "https://flagcdn.com/bd.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.58,
+      "cumulativeCO2Gt": 1.5
     }
   },
   {
@@ -4877,6 +5077,10 @@
     "flagUrl": "https://flagcdn.com/iq.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.52,
+      "cumulativeCO2Gt": 10.0
     }
   },
   {
@@ -4959,6 +5163,10 @@
     "flagUrl": "https://flagcdn.com/ir.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.45,
+      "cumulativeCO2Gt": 20.0
     }
   },
   {
@@ -5050,6 +5258,10 @@
     "flagUrl": "https://flagcdn.com/kz.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.4,
+      "cumulativeCO2Gt": 12.0
     }
   },
   {
@@ -5141,6 +5353,10 @@
     "flagUrl": "https://flagcdn.com/ua.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.43,
+      "cumulativeCO2Gt": 30.0
     }
   },
   {
@@ -5232,6 +5448,10 @@
     "flagUrl": "https://flagcdn.com/gr.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.36,
+      "cumulativeCO2Gt": 5.0
     }
   },
   {
@@ -5318,6 +5538,10 @@
     "flagUrl": "https://flagcdn.com/ie.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.29,
+      "cumulativeCO2Gt": 3.5
     }
   },
   {
@@ -5409,6 +5633,10 @@
     "flagUrl": "https://flagcdn.com/ro.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.39,
+      "cumulativeCO2Gt": 8.0
     }
   },
   {
@@ -5500,6 +5728,10 @@
     "flagUrl": "https://flagcdn.com/cz.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.33,
+      "cumulativeCO2Gt": 13.0
     }
   },
   {
@@ -5586,6 +5818,10 @@
     "flagUrl": "https://flagcdn.com/be.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.3,
+      "cumulativeCO2Gt": 8.5
     }
   },
   {
@@ -5672,6 +5908,10 @@
     "flagUrl": "https://flagcdn.com/hu.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.36,
+      "cumulativeCO2Gt": 5.5
     }
   },
   {
@@ -5758,6 +5998,10 @@
     "flagUrl": "https://flagcdn.com/tz.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.56,
+      "cumulativeCO2Gt": 0.3
     }
   },
   {
@@ -5844,6 +6088,10 @@
     "flagUrl": "https://flagcdn.com/dz.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.46,
+      "cumulativeCO2Gt": 6.0
     }
   },
   {
@@ -5930,6 +6178,10 @@
     "flagUrl": "https://flagcdn.com/sn.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.55,
+      "cumulativeCO2Gt": 0.3
     }
   },
   {
@@ -6021,6 +6273,10 @@
     "flagUrl": "https://flagcdn.com/cd.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.62,
+      "cumulativeCO2Gt": 0.2
     }
   },
   {
@@ -6112,6 +6368,10 @@
     "flagUrl": "https://flagcdn.com/ec.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.46,
+      "cumulativeCO2Gt": 1.5
     }
   },
   {
@@ -6198,6 +6458,10 @@
     "flagUrl": "https://flagcdn.com/uy.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.36,
+      "cumulativeCO2Gt": 0.5
     }
   },
   {
@@ -6284,6 +6548,10 @@
     "flagUrl": "https://flagcdn.com/jm.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.47,
+      "cumulativeCO2Gt": 0.4
     }
   },
   {
@@ -6375,6 +6643,10 @@
     "flagUrl": "https://flagcdn.com/pg.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.57,
+      "cumulativeCO2Gt": 0.2
     }
   },
   {
@@ -6461,6 +6733,10 @@
     "flagUrl": "https://flagcdn.com/lk.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.48,
+      "cumulativeCO2Gt": 1.0
     }
   },
   {
@@ -6547,6 +6823,10 @@
     "flagUrl": "https://flagcdn.com/np.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.53,
+      "cumulativeCO2Gt": 0.3
     }
   },
   {
@@ -6628,6 +6908,10 @@
     "flagUrl": "https://flagcdn.com/mm.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.55,
+      "cumulativeCO2Gt": 1.0
     }
   },
   {
@@ -6714,6 +6998,10 @@
     "flagUrl": "https://flagcdn.com/kh.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.54,
+      "cumulativeCO2Gt": 0.2
     }
   },
   {
@@ -6800,6 +7088,10 @@
     "flagUrl": "https://flagcdn.com/mn.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.44,
+      "cumulativeCO2Gt": 0.6
     }
   },
   {
@@ -6885,6 +7177,10 @@
     "flagUrl": "https://flagcdn.com/uz.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.44,
+      "cumulativeCO2Gt": 5.0
     }
   },
   {
@@ -6966,6 +7262,10 @@
     "flagUrl": "https://flagcdn.com/ao.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.55,
+      "cumulativeCO2Gt": 1.0
     }
   },
   {
@@ -7052,6 +7352,10 @@
     "flagUrl": "https://flagcdn.com/mz.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.58,
+      "cumulativeCO2Gt": 0.3
     }
   },
   {
@@ -7134,6 +7438,10 @@
     "flagUrl": "https://flagcdn.com/ve.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.48,
+      "cumulativeCO2Gt": 8.0
     }
   },
   {
@@ -7216,6 +7524,10 @@
     "flagUrl": "https://flagcdn.com/bo.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.49,
+      "cumulativeCO2Gt": 1.0
     }
   },
   {
@@ -7303,6 +7615,10 @@
     "flagUrl": "https://flagcdn.com/cu.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.42,
+      "cumulativeCO2Gt": 2.5
     }
   },
   {
@@ -7388,6 +7704,10 @@
     "flagUrl": "https://flagcdn.com/do.svg",
     "contact": {
       "email": ""
+    },
+    "climateEquity": {
+      "vulnerabilityIndex": 0.45,
+      "cumulativeCO2Gt": 1.0
     }
   }
 ]
