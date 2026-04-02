@@ -38,6 +38,7 @@ export default function GlobalEnvironmentalAgencies() {
   const [page, setPage] = useState(urlParams.page);
   const [regionFilter, setRegionFilter] = useState(urlParams.region);
   const [tagFilter, setTagFilter] = useState(urlParams.tag);
+  const [complianceFilter, setComplianceFilter] = useState("");
   const [language, setLanguage] = useState(urlParams.lang);
   const [sortOrder, setSortOrder] = useState(urlParams.sort);
   const [openDialogIndex, setOpenDialogIndex] = useState(null);
@@ -104,7 +105,19 @@ export default function GlobalEnvironmentalAgencies() {
           item.agencyEn.toLowerCase().includes(search.toLowerCase()) ||
           item.agencyZh.includes(search)) &&
         (regionFilter ? item.region === regionFilter : true) &&
-        (tagFilter ? item.responsibilities.includes(tagFilter) : true)
+        (tagFilter ? item.responsibilities.includes(tagFilter) : true) &&
+        (complianceFilter
+          ? complianceFilter === "ndc_good" ? (item.parisAgreement?.ndcRating === "1.5C" || item.parisAgreement?.ndcRating === "2C" || item.parisAgreement?.ndcRating === "almost_sufficient")
+          : complianceFilter === "ndc_bad" ? (item.parisAgreement?.ndcRating === "highly_insufficient" || item.parisAgreement?.ndcRating === "critically_insufficient")
+          : complianceFilter === "has_carbon_price" ? (item.carbonPricing?.priceUSD != null)
+          : complianceFilter === "no_carbon_price" ? (item.carbonPricing?.priceUSD == null)
+          : complianceFilter === "btr_submitted" ? (item.reportingStatus?.btrSubmitted === true)
+          : complianceFilter === "btr_pending" ? (item.reportingStatus?.btrSubmitted === false)
+          : complianceFilter === "kigali_yes" ? (item.montrealProtocol?.kigaliAmendment === true)
+          : complianceFilter === "kigali_no" ? (item.montrealProtocol?.kigaliAmendment === false)
+          : complianceFilter === "30x30_met" ? ((item.wb?.protectedAreas ?? 0) >= 30)
+          : true
+          : true)
     )
     .sort((a, b) => {
       if (sortOrder === "forestAsc")
@@ -378,31 +391,44 @@ export default function GlobalEnvironmentalAgencies() {
             </select>
           </div>
 
-          {/* Tag Filter */}
-          <div className="flex flex-wrap gap-2 mt-3">
-            <button
-              onClick={() => {
-                setTagFilter("");
-                resetPage();
-              }}
-              className={`px-3 py-1 rounded-full text-sm font-medium transition-colors cursor-pointer ${
-                tagFilter === ""
-                  ? "bg-green-600 text-white"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-              }`}
-            >
-              {t("全部职能", "All")}
-            </button>
+          {/* Compliance Filter */}
+          <div className="flex flex-wrap gap-1.5 mt-3">
+            <span className="text-xs text-gray-400 leading-6 mr-1">{t("履约", "Compliance")}</span>
+            {[
+              { key: "", zh: "全部", en: "All", active: "bg-green-600 text-white" },
+              { key: "ndc_good", zh: "NDC 达标", en: "NDC On Track", active: "bg-green-600 text-white" },
+              { key: "ndc_bad", zh: "NDC 不足", en: "NDC Insufficient", active: "bg-red-600 text-white" },
+              { key: "has_carbon_price", zh: "有碳价", en: "Has Carbon Price", active: "bg-amber-600 text-white" },
+              { key: "no_carbon_price", zh: "无碳价", en: "No Carbon Price", active: "bg-gray-600 text-white" },
+              { key: "btr_submitted", zh: "BTR 已交", en: "BTR Submitted", active: "bg-green-600 text-white" },
+              { key: "btr_pending", zh: "BTR 未交", en: "BTR Pending", active: "bg-red-600 text-white" },
+              { key: "kigali_yes", zh: "基加利 ✓", en: "Kigali ✓", active: "bg-cyan-600 text-white" },
+              { key: "30x30_met", zh: "30×30 达标", en: "30×30 Met", active: "bg-emerald-600 text-white" },
+            ].map((f) => (
+              <button
+                key={f.key}
+                onClick={() => { setComplianceFilter(complianceFilter === f.key ? "" : f.key); resetPage(); }}
+                className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer ${
+                  complianceFilter === f.key
+                    ? f.active
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                }`}
+              >
+                {language === "zh" ? f.zh : f.en}
+                {complianceFilter === f.key && f.key !== "" && " ✕"}
+              </button>
+            ))}
+          </div>
+          {/* Responsibility Filter */}
+          <div className="flex flex-wrap gap-1.5 mt-2">
+            <span className="text-xs text-gray-400 leading-6 mr-1">{t("职能", "Focus")}</span>
             {Object.entries(RESPONSIBILITY_LABELS).map(([key, label]) => (
               <button
                 key={key}
-                onClick={() => {
-                  setTagFilter(tagFilter === key ? "" : key);
-                  resetPage();
-                }}
-                className={`px-3 py-1 rounded-full text-sm font-medium transition-colors cursor-pointer ${
+                onClick={() => { setTagFilter(tagFilter === key ? "" : key); resetPage(); }}
+                className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer ${
                   tagFilter === key
-                    ? "bg-green-600 text-white"
+                    ? "bg-blue-600 text-white"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
               >
