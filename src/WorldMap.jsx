@@ -155,7 +155,7 @@ export default function WorldMap({ countries, language, onCountryClick }) {
         <>
           <div
             ref={containerRef}
-            className="relative w-full overflow-hidden max-h-[280px]"
+            className="relative w-full overflow-hidden"
             onMouseMove={handleMouseMove}
             onClick={handleClick}
             onMouseLeave={handleMouseLeave}
