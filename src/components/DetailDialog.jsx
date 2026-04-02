@@ -1,7 +1,8 @@
 import { Radar } from "react-chartjs-2";
 import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG } from "../constants";
+import Scorecard from "./Scorecard";
 
-export default function DetailDialog({ selectedCountry, language, t, globalAvg, onClose, copied, onCopy }) {
+export default function DetailDialog({ selectedCountry, language, t, globalAvg, onClose, copied, onCopy, allCountries }) {
   return (
     <div
       className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4"
@@ -40,6 +41,16 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
         </div>
 
         <div className="p-6">
+          {/* Environmental Scorecard */}
+          {allCountries && allCountries.length > 0 && (
+            <Scorecard
+              country={selectedCountry}
+              language={language}
+              t={t}
+              allCountries={allCountries}
+            />
+          )}
+
           <div className="flex flex-wrap gap-2 mb-4">
             <span className="bg-green-50 text-green-700 text-sm font-medium px-3 py-1 rounded-full">
               {selectedCountry.region}

@@ -3,6 +3,7 @@ import WorldMap from "./WorldMap";
 import DetailDialog from "./components/DetailDialog";
 import CompareDialog from "./components/CompareDialog";
 import AboutPage from "./components/AboutPage";
+import RankingsView from "./components/RankingsView";
 import { Bar, Radar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -47,6 +48,7 @@ export default function GlobalEnvironmentalAgencies() {
   const [showCompare, setShowCompare] = useState(false);
   const [wbMeta, setWbMeta] = useState(null);
   const [showAbout, setShowAbout] = useState(false);
+  const [viewMode, setViewMode] = useState("cards");
 
   useEffect(() => {
     Promise.all([
@@ -457,115 +459,168 @@ export default function GlobalEnvironmentalAgencies() {
           </div>
         </div>
 
-        {/* Cards Grid */}
-        {paginatedCountries.length === 0 ? (
-          <div className="text-center py-20 text-gray-400">
-            <p className="text-5xl mb-4">🔍</p>
-            <p className="text-lg">
-              {t("没有找到匹配的结果", "No results found")}
-            </p>
-          </div>
+        {/* View Toggle */}
+        <div className="flex items-center gap-2 mb-4">
+          <button
+            onClick={() => setViewMode("cards")}
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
+              viewMode === "cards"
+                ? "bg-green-600 text-white shadow-sm"
+                : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50"
+            }`}
+          >
+            {t("卡片", "Cards")}
+          </button>
+          <button
+            onClick={() => setViewMode("rankings")}
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
+              viewMode === "rankings"
+                ? "bg-green-600 text-white shadow-sm"
+                : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50"
+            }`}
+          >
+            {t("排行榜", "Rankings")}
+          </button>
+        </div>
+
+        {viewMode === "rankings" ? (
+          <RankingsView
+            countries={filteredCountries}
+            language={language}
+            t={t}
+            onCountryClick={(country) => {
+              const idx = paginatedCountries.findIndex(
+                (c) => c.isoCode === country.isoCode
+              );
+              if (idx >= 0) {
+                setOpenDialogIndex(idx);
+              } else {
+                const fullIdx = filteredCountries.findIndex(
+                  (c) => c.isoCode === country.isoCode
+                );
+                if (fullIdx >= 0) {
+                  const targetPage = Math.floor(fullIdx / ITEMS_PER_PAGE) + 1;
+                  setPage(targetPage);
+                  setTimeout(() => {
+                    setOpenDialogIndex(fullIdx % ITEMS_PER_PAGE);
+                  }, 50);
+                }
+              }
+            }}
+          />
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-            {paginatedCountries.map((item, idx) => (
-              <div
-                key={idx}
-                className={`bg-white border rounded-2xl p-5 flex flex-col items-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer relative ${
-                  isInCompare(item)
-                    ? "border-green-500 ring-2 ring-green-200"
-                    : "border-gray-100"
-                }`}
-                onClick={() => setOpenDialogIndex(idx)}
-              >
-                {/* Compare checkbox */}
-                <button
-                  onClick={(e) => toggleCompare(item, e)}
-                  className={`absolute top-3 right-3 w-6 h-6 rounded-md border-2 flex items-center justify-center text-xs transition-colors cursor-pointer ${
-                    isInCompare(item)
-                      ? "bg-green-600 border-green-600 text-white"
-                      : "border-gray-300 hover:border-green-400 text-transparent hover:text-green-400"
-                  }`}
-                  title={t("加入对比", "Add to compare")}
-                >
-                  ✓
-                </button>
-
-                <img
-                  src={item.flagUrl}
-                  alt={item.countryEn}
-                  className="w-16 h-11 object-cover rounded shadow-sm mb-3"
-                />
-                <h2 className="text-lg font-bold text-gray-800 text-center">
-                  {language === "zh" ? item.countryZh : item.countryEn}
-                </h2>
-                <p className="text-sm text-gray-500 text-center mt-1 line-clamp-2">
-                  {language === "zh" ? item.agencyZh : item.agencyEn}
+          <>
+            {/* Cards Grid */}
+            {paginatedCountries.length === 0 ? (
+              <div className="text-center py-20 text-gray-400">
+                <p className="text-5xl mb-4">🔍</p>
+                <p className="text-lg">
+                  {t("没有找到匹配的结果", "No results found")}
                 </p>
-                <span className="mt-2 inline-block bg-green-50 text-green-700 text-xs font-medium px-2.5 py-1 rounded-full">
-                  {item.region}
-                </span>
-                <div className="flex flex-wrap gap-1 mt-2 justify-center">
-                  {item.responsibilities.map((r) => (
-                    <span
-                      key={r}
-                      className="bg-blue-50 text-blue-600 text-xs px-2 py-0.5 rounded-full"
-                    >
-                      {RESPONSIBILITY_LABELS[r]
-                        ? RESPONSIBILITY_LABELS[r][language]
-                        : r}
-                    </span>
-                  ))}
-                </div>
-                <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs text-gray-400 justify-center">
-                  <span>🌲 {item.wb?.forestArea?.toFixed(1) ?? item.data.forestCoverage}%</span>
-                  <span>⚡ {item.wb?.renewableEnergy?.toFixed(0) ?? "—"}%</span>
-                  <span className="text-amber-600 font-medium">EPI {item.epiScore}</span>
-                </div>
-                <a
-                  href={item.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                  className="mt-3 w-full text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
-                >
-                  {t("访问官网", "Visit Website")}
-                </a>
               </div>
-            ))}
-          </div>
-        )}
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                {paginatedCountries.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className={`bg-white border rounded-2xl p-5 flex flex-col items-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer relative ${
+                      isInCompare(item)
+                        ? "border-green-500 ring-2 ring-green-200"
+                        : "border-gray-100"
+                    }`}
+                    onClick={() => setOpenDialogIndex(idx)}
+                  >
+                    {/* Compare checkbox */}
+                    <button
+                      onClick={(e) => toggleCompare(item, e)}
+                      className={`absolute top-3 right-3 w-6 h-6 rounded-md border-2 flex items-center justify-center text-xs transition-colors cursor-pointer ${
+                        isInCompare(item)
+                          ? "bg-green-600 border-green-600 text-white"
+                          : "border-gray-300 hover:border-green-400 text-transparent hover:text-green-400"
+                      }`}
+                      title={t("加入对比", "Add to compare")}
+                    >
+                      ✓
+                    </button>
 
-        {/* Pagination */}
-        {pageCount > 1 && (
-          <div className="flex items-center justify-center gap-2 mt-8">
-            <button
-              onClick={() => setPage((p) => Math.max(1, p - 1))}
-              disabled={page === 1}
-              className="px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors cursor-pointer"
-            >
-              {t("上一页", "Prev")}
-            </button>
-            {Array.from({ length: pageCount }, (_, i) => i + 1).map((p) => (
-              <button
-                key={p}
-                onClick={() => setPage(p)}
-                className={`w-10 h-10 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
-                  p === page
-                    ? "bg-green-600 text-white shadow-sm"
-                    : "border border-gray-200 hover:bg-gray-50"
-                }`}
-              >
-                {p}
-              </button>
-            ))}
-            <button
-              onClick={() => setPage((p) => Math.min(pageCount, p + 1))}
-              disabled={page === pageCount}
-              className="px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors cursor-pointer"
-            >
-              {t("下一页", "Next")}
-            </button>
-          </div>
+                    <img
+                      src={item.flagUrl}
+                      alt={item.countryEn}
+                      className="w-16 h-11 object-cover rounded shadow-sm mb-3"
+                    />
+                    <h2 className="text-lg font-bold text-gray-800 text-center">
+                      {language === "zh" ? item.countryZh : item.countryEn}
+                    </h2>
+                    <p className="text-sm text-gray-500 text-center mt-1 line-clamp-2">
+                      {language === "zh" ? item.agencyZh : item.agencyEn}
+                    </p>
+                    <span className="mt-2 inline-block bg-green-50 text-green-700 text-xs font-medium px-2.5 py-1 rounded-full">
+                      {item.region}
+                    </span>
+                    <div className="flex flex-wrap gap-1 mt-2 justify-center">
+                      {item.responsibilities.map((r) => (
+                        <span
+                          key={r}
+                          className="bg-blue-50 text-blue-600 text-xs px-2 py-0.5 rounded-full"
+                        >
+                          {RESPONSIBILITY_LABELS[r]
+                            ? RESPONSIBILITY_LABELS[r][language]
+                            : r}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs text-gray-400 justify-center">
+                      <span>🌲 {item.wb?.forestArea?.toFixed(1) ?? item.data.forestCoverage}%</span>
+                      <span>⚡ {item.wb?.renewableEnergy?.toFixed(0) ?? "—"}%</span>
+                      <span className="text-amber-600 font-medium">EPI {item.epiScore}</span>
+                    </div>
+                    <a
+                      href={item.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="mt-3 w-full text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+                    >
+                      {t("访问官网", "Visit Website")}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Pagination */}
+            {pageCount > 1 && (
+              <div className="flex items-center justify-center gap-2 mt-8">
+                <button
+                  onClick={() => setPage((p) => Math.max(1, p - 1))}
+                  disabled={page === 1}
+                  className="px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors cursor-pointer"
+                >
+                  {t("上一页", "Prev")}
+                </button>
+                {Array.from({ length: pageCount }, (_, i) => i + 1).map((p) => (
+                  <button
+                    key={p}
+                    onClick={() => setPage(p)}
+                    className={`w-10 h-10 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
+                      p === page
+                        ? "bg-green-600 text-white shadow-sm"
+                        : "border border-gray-200 hover:bg-gray-50"
+                    }`}
+                  >
+                    {p}
+                  </button>
+                ))}
+                <button
+                  onClick={() => setPage((p) => Math.min(pageCount, p + 1))}
+                  disabled={page === pageCount}
+                  className="px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors cursor-pointer"
+                >
+                  {t("下一页", "Next")}
+                </button>
+              </div>
+            )}
+          </>
         )}
       </main>
 
@@ -640,6 +695,7 @@ export default function GlobalEnvironmentalAgencies() {
           }}
           copied={copied}
           onCopy={handleCopy}
+          allCountries={countries}
         />
       )}
 
