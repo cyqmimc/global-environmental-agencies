@@ -197,13 +197,13 @@ export default function GlobalEnvironmentalAgencies() {
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       {/* Header */}
       <header className="bg-gradient-to-r from-green-700 to-emerald-600 text-white shadow-lg">
-        <div className="max-w-7xl mx-auto px-6 py-3">
+        <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold tracking-tight">
+              <h1 className="text-3xl font-bold tracking-tight">
                 🌍 {t("全球环境治理观察", "Global Environmental Governance Tracker")}
               </h1>
-              <p className="mt-1 text-green-100 text-sm">
+              <p className="mt-2 text-green-100 text-lg">
                 {t(
                   "各国环保机构 · 环境数据 · 公约履约追踪",
                   "Environmental Agencies · Data · Treaty Compliance Tracking"
