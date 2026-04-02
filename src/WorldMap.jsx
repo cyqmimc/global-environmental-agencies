@@ -53,6 +53,7 @@ export default function WorldMap({ countries, language, onCountryClick }) {
   const [svgContent, setSvgContent] = useState("");
   const [metric, setMetric] = useState("epiScore");
   const [tooltip, setTooltip] = useState(null);
+  const [collapsed, setCollapsed] = useState(false);
   const containerRef = useRef(null);
 
   const t = (zh, en) => (language === "zh" ? zh : en);
@@ -117,40 +118,52 @@ export default function WorldMap({ countries, language, onCountryClick }) {
 
   return (
     <div className="bg-white rounded-xl shadow-sm p-4 mb-6">
-      {/* Metric selector */}
-      <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-        <h3 className="text-sm font-semibold text-gray-700">
-          {t("全球地图可视化", "World Map Visualization")}
-        </h3>
-        <div className="flex gap-1 overflow-x-auto">
-          {Object.entries(METRIC_CONFIG).map(([key, c]) => (
-            <button
-              key={key}
-              onClick={() => setMetric(key)}
-              className={`text-xs px-2.5 py-1 rounded-full transition-colors cursor-pointer ${
-                metric === key
-                  ? "bg-green-600 text-white"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-              }`}
-            >
-              {language === "zh" ? c.zh : c.en}
-            </button>
-          ))}
+      {/* Header with metric selector + collapse toggle */}
+      <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+        <div className="flex items-center gap-2">
+          <h3 className="text-sm font-semibold text-gray-700">
+            {t("全球地图", "World Map")}
+          </h3>
+          <button
+            onClick={() => setCollapsed(!collapsed)}
+            className="text-xs text-gray-400 hover:text-gray-600 cursor-pointer"
+          >
+            {collapsed ? "▼" : "▲"}
+          </button>
         </div>
+        {!collapsed && (
+          <div className="flex gap-1 overflow-x-auto">
+            {Object.entries(METRIC_CONFIG).map(([key, c]) => (
+              <button
+                key={key}
+                onClick={() => setMetric(key)}
+                className={`text-xs px-2.5 py-1 rounded-full transition-colors cursor-pointer whitespace-nowrap ${
+                  metric === key
+                    ? "bg-green-600 text-white"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                }`}
+              >
+                {language === "zh" ? c.zh : c.en}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* Map */}
-      <div
-        ref={containerRef}
-        className="relative w-full overflow-hidden"
-        onMouseMove={handleMouseMove}
-        onClick={handleClick}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div
-          className="w-full [&_svg]:w-full [&_svg]:h-auto [&_.country-path:hover]:opacity-75"
-          dangerouslySetInnerHTML={{ __html: coloredSvg }}
-        />
+      {/* Map - collapsible, max height limited */}
+      {!collapsed && (
+        <>
+          <div
+            ref={containerRef}
+            className="relative w-full overflow-hidden max-h-[320px]"
+            onMouseMove={handleMouseMove}
+            onClick={handleClick}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div
+              className="w-full [&_svg]:w-full [&_svg]:h-auto [&_.country-path:hover]:opacity-75"
+              dangerouslySetInnerHTML={{ __html: coloredSvg }}
+            />
 
         {/* Tooltip */}
         {tooltip && (
@@ -166,21 +179,23 @@ export default function WorldMap({ countries, language, onCountryClick }) {
             <p className="text-gray-300">{tooltip.metricLabel}: {tooltip.value}</p>
           </div>
         )}
-      </div>
-
-      {/* Legend */}
-      <div className="flex items-center justify-center gap-3 mt-2">
-        {LEGEND_STOPS.map((s, i) => (
-          <div key={i} className="flex items-center gap-1">
-            <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: s.color }} />
-            <span className="text-xs text-gray-500">{language === "zh" ? s.label.zh : s.label.en}</span>
           </div>
-        ))}
-        <div className="flex items-center gap-1">
-          <div className="w-3 h-3 rounded-sm bg-gray-200" />
-          <span className="text-xs text-gray-500">{t("无数据", "No data")}</span>
-        </div>
-      </div>
+
+          {/* Legend */}
+          <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
+            {LEGEND_STOPS.map((s, i) => (
+              <div key={i} className="flex items-center gap-1">
+                <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: s.color }} />
+                <span className="text-xs text-gray-500">{language === "zh" ? s.label.zh : s.label.en}</span>
+              </div>
+            ))}
+            <div className="flex items-center gap-1">
+              <div className="w-3 h-3 rounded-sm bg-gray-200" />
+              <span className="text-xs text-gray-500">{t("无数据", "No data")}</span>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }
