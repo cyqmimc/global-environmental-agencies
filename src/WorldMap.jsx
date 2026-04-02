@@ -122,7 +122,7 @@ export default function WorldMap({ countries, language, onCountryClick }) {
         <h3 className="text-sm font-semibold text-gray-700">
           {t("全球地图可视化", "World Map Visualization")}
         </h3>
-        <div className="flex gap-1">
+        <div className="flex gap-1 overflow-x-auto">
           {Object.entries(METRIC_CONFIG).map(([key, c]) => (
             <button
               key={key}
