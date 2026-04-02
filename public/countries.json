@@ -50,7 +50,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-09-03",
       "ndcTargetZh": "2030年温室气体排放比2005年减少50-52%",
-      "ndcTargetEn": "Reduce GHG emissions 50-52% below 2005 levels by 2030"
+      "ndcTargetEn": "Reduce GHG emissions 50-52% below 2005 levels by 2030",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "NDC 2.0",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -119,7 +131,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-09-03",
       "ndcTargetZh": "2030年前碳达峰；碳强度比2005年降低65%以上；非化石能源占比达25%",
-      "ndcTargetEn": "Peak CO₂ before 2030; reduce carbon intensity 65%+ vs 2005; 25% non-fossil energy by 2030"
+      "ndcTargetEn": "Peak CO₂ before 2030; reduce carbon intensity 65%+ vs 2005; 25% non-fossil energy by 2030",
+      "ndcRating": "highly_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -188,7 +212,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
       "ndcTargetZh": "2030年温室气体排放比1990年减少65%（EU整体目标：减少55%）",
-      "ndcTargetEn": "Reduce GHG 65% below 1990 levels by 2030 (EU target: -55%)"
+      "ndcTargetEn": "Reduce GHG 65% below 1990 levels by 2030 (EU target: -55%)",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -257,7 +293,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-11-08",
       "ndcTargetZh": "2030年温室气体排放比2013年减少46%，力争50%",
-      "ndcTargetEn": "Reduce GHG 46% below 2013 levels by 2030, strive for 50%"
+      "ndcTargetEn": "Reduce GHG 46% below 2013 levels by 2030, strive for 50%",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -326,7 +374,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
       "ndcTargetZh": "2030年温室气体排放比1990年减少40%（EU整体目标：减少55%）",
-      "ndcTargetEn": "Reduce GHG 40% below 1990 levels by 2030 (EU target: -55%)"
+      "ndcTargetEn": "Reduce GHG 40% below 1990 levels by 2030 (EU target: -55%)",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -395,7 +455,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-10-02",
       "ndcTargetZh": "2030年GDP碳强度比2005年降低45%；非化石能源装机达500GW",
-      "ndcTargetEn": "Reduce GDP carbon intensity 45% vs 2005 by 2030; 500GW non-fossil capacity"
+      "ndcTargetEn": "Reduce GDP carbon intensity 45% vs 2005 by 2030; 500GW non-fossil capacity",
+      "ndcRating": "2C",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2022
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -464,7 +536,23 @@
       "status": "ratified",
       "ratifiedDate": "2016-11-18",
       "ndcTargetZh": "2030年温室气体排放比1990年减少68%",
-      "ndcTargetEn": "Reduce GHG 68% below 1990 levels by 2030"
+      "ndcTargetEn": "Reduce GHG 68% below 1990 levels by 2030",
+      "ndcRating": "almost_sufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "NDC",
+          "year": 2020
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2022
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -533,7 +621,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
       "ndcTargetZh": "2030年温室气体排放比2005年减少50%",
-      "ndcTargetEn": "Reduce GHG 50% below 2005 levels by 2030"
+      "ndcTargetEn": "Reduce GHG 50% below 2005 levels by 2030",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2022
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -602,7 +702,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-11-09",
       "ndcTargetZh": "2030年温室气体排放比2005年减少43%",
-      "ndcTargetEn": "Reduce GHG 43% below 2005 levels by 2030"
+      "ndcTargetEn": "Reduce GHG 43% below 2005 levels by 2030",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2022
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -671,7 +783,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-11-01",
       "ndcTargetZh": "2030年温室气体排放控制在350-420 Mt CO₂当量",
-      "ndcTargetEn": "Limit GHG to 350-420 Mt CO₂eq by 2030"
+      "ndcTargetEn": "Limit GHG to 350-420 Mt CO₂eq by 2030",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -740,7 +864,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
       "ndcTargetZh": "2030年温室气体排放比2005年减少40-45%",
-      "ndcTargetEn": "Reduce GHG 40-45% below 2005 levels by 2030"
+      "ndcTargetEn": "Reduce GHG 40-45% below 2005 levels by 2030",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -809,7 +945,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
       "ndcTargetZh": "2030年温室气体排放比基准情景减少35%",
-      "ndcTargetEn": "Reduce GHG 35% below BAU by 2030"
+      "ndcTargetEn": "Reduce GHG 35% below BAU by 2030",
+      "ndcRating": "highly_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2022
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -872,7 +1020,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-11-03",
       "ndcTargetZh": "2030年每年减少2.78亿吨CO₂当量排放",
-      "ndcTargetEn": "Reduce 278 Mt CO₂eq annually by 2030"
+      "ndcTargetEn": "Reduce 278 Mt CO₂eq annually by 2030",
+      "ndcRating": "critically_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -941,7 +1101,23 @@
       "status": "ratified",
       "ratifiedDate": "2016-10-31",
       "ndcTargetZh": "2030年温室气体排放比基准情景减少31.89%（自主）或43.2%（国际支持）",
-      "ndcTargetEn": "Reduce GHG 31.89% (unconditional) or 43.2% (with support) below BAU by 2030"
+      "ndcTargetEn": "Reduce GHG 31.89% (unconditional) or 43.2% (with support) below BAU by 2030",
+      "ndcRating": "highly_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        },
+        {
+          "version": "Enhanced NDC",
+          "year": 2022
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1010,7 +1186,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
       "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%（EU整体目标）",
-      "ndcTargetEn": "Reduce GHG at least 55% below 1990 levels by 2030 (EU target)"
+      "ndcTargetEn": "Reduce GHG at least 55% below 1990 levels by 2030 (EU target)",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1079,7 +1267,19 @@
       "status": "ratified",
       "ratifiedDate": "2017-01-12",
       "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%（EU整体目标）",
-      "ndcTargetEn": "Reduce GHG at least 55% below 1990 levels by 2030 (EU target)"
+      "ndcTargetEn": "Reduce GHG at least 55% below 1990 levels by 2030 (EU target)",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1148,7 +1348,19 @@
       "status": "ratified",
       "ratifiedDate": "2019-09-23",
       "ndcTargetZh": "2030年温室气体排放不超过1990年的70%",
-      "ndcTargetEn": "Limit GHG to 70% of 1990 levels by 2030"
+      "ndcTargetEn": "Limit GHG to 70% of 1990 levels by 2030",
+      "ndcRating": "critically_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1217,7 +1429,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
       "ndcTargetZh": "2030年排放强度比2005年降低36%；绝对排放峰值6500万吨",
-      "ndcTargetEn": "Reduce emission intensity 36% vs 2005 by 2030; peak at 65 Mt"
+      "ndcTargetEn": "Reduce emission intensity 36% vs 2005 by 2030; peak at 65 Mt",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2022
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1286,7 +1510,19 @@
       "status": "ratified",
       "ratifiedDate": "2017-06-29",
       "ndcTargetZh": "到2030年可再生能源装机达42%；减少电力部门排放33%",
-      "ndcTargetEn": "42% renewable energy capacity by 2030; reduce power sector emissions 33%"
+      "ndcTargetEn": "42% renewable energy capacity by 2030; reduce power sector emissions 33%",
+      "ndcRating": "2C",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2022
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1355,7 +1591,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-11-03",
       "ndcTargetZh": "2030年温室气体排放比2018年减少40%",
-      "ndcTargetEn": "Reduce GHG 40% below 2018 levels by 2030"
+      "ndcTargetEn": "Reduce GHG 40% below 2018 levels by 2030",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1424,7 +1672,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
       "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%（EU目标）；国内目标：2045年净零",
-      "ndcTargetEn": "EU target: -55% by 2030 vs 1990; national: net zero by 2045"
+      "ndcTargetEn": "EU target: -55% by 2030 vs 1990; national: net zero by 2045",
+      "ndcRating": "almost_sufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1493,7 +1753,23 @@
       "status": "ratified",
       "ratifiedDate": "2016-06-20",
       "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%",
-      "ndcTargetEn": "Reduce GHG at least 55% below 1990 levels by 2030"
+      "ndcTargetEn": "Reduce GHG at least 55% below 1990 levels by 2030",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2020
+        },
+        {
+          "version": "Enhanced NDC",
+          "year": 2022
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1562,7 +1838,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-10-04",
       "ndcTargetZh": "2030年净温室气体排放比2005年减少50%",
-      "ndcTargetEn": "Reduce net GHG 50% below 2005 levels by 2030"
+      "ndcTargetEn": "Reduce net GHG 50% below 2005 levels by 2030",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1631,7 +1919,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-12-28",
       "ndcTargetZh": "2030年温室气体排放比基准情景减少32%",
-      "ndcTargetEn": "Reduce GHG 32% below BAU by 2030"
+      "ndcTargetEn": "Reduce GHG 32% below BAU by 2030",
+      "ndcRating": "1.5C",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1700,7 +2000,19 @@
       "status": "ratified",
       "ratifiedDate": "2017-05-16",
       "ndcTargetZh": "2030年温室气体排放比基准情景减少20%（无条件）或47%（有条件）",
-      "ndcTargetEn": "Reduce GHG 20% (unconditional) or 47% (conditional) below BAU by 2030"
+      "ndcTargetEn": "Reduce GHG 20% (unconditional) or 47% (conditional) below BAU by 2030",
+      "ndcRating": "2C",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1769,7 +2081,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
       "ndcTargetZh": "2030年温室气体排放不超过3.49亿吨CO₂当量",
-      "ndcTargetEn": "Limit GHG to 349 Mt CO₂eq by 2030"
+      "ndcTargetEn": "Limit GHG to 349 Mt CO₂eq by 2030",
+      "ndcRating": "highly_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1838,7 +2162,19 @@
       "status": "ratified",
       "ratifiedDate": "2018-07-12",
       "ndcTargetZh": "2030年温室气体排放比基准情景减少51%",
-      "ndcTargetEn": "Reduce GHG 51% below BAU by 2030"
+      "ndcTargetEn": "Reduce GHG 51% below BAU by 2030",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1907,7 +2243,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
       "ndcTargetZh": "2030年温室气体排放比基准情景减少30-40%",
-      "ndcTargetEn": "Reduce GHG 30-40% below BAU by 2030"
+      "ndcTargetEn": "Reduce GHG 30-40% below BAU by 2030",
+      "ndcRating": "critically_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2022
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1976,7 +2324,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
       "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%（EU目标）",
-      "ndcTargetEn": "Reduce GHG at least 55% below 1990 levels by 2030 (EU target)"
+      "ndcTargetEn": "Reduce GHG at least 55% below 1990 levels by 2030 (EU target)",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2045,7 +2405,19 @@
       "status": "ratified",
       "ratifiedDate": "2021-10-07",
       "ndcTargetZh": "2030年温室气体排放比基准情景减少41%",
-      "ndcTargetEn": "Reduce GHG 41% below BAU by 2030"
+      "ndcTargetEn": "Reduce GHG 41% below BAU by 2030",
+      "ndcRating": "critically_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "NDC",
+          "year": 2023
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2114,7 +2486,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
       "ndcTargetZh": "2030年温室气体排放比1990年减少70%",
-      "ndcTargetEn": "Reduce GHG 70% below 1990 levels by 2030"
+      "ndcTargetEn": "Reduce GHG 70% below 1990 levels by 2030",
+      "ndcRating": "almost_sufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2183,7 +2567,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-11-14",
       "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%（EU目标）；国内目标：2035年碳中和",
-      "ndcTargetEn": "EU target: -55% by 2030 vs 1990; national: carbon neutral by 2035"
+      "ndcTargetEn": "EU target: -55% by 2030 vs 1990; national: carbon neutral by 2035",
+      "ndcRating": "almost_sufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2252,7 +2648,19 @@
       "status": "ratified",
       "ratifiedDate": "2017-10-06",
       "ndcTargetZh": "2030年温室气体排放比1990年减少50%",
-      "ndcTargetEn": "Reduce GHG 50% below 1990 levels by 2030"
+      "ndcTargetEn": "Reduce GHG 50% below 1990 levels by 2030",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2321,7 +2729,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
       "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%（EU目标）；国内目标：2040年碳中和",
-      "ndcTargetEn": "EU target: -55% by 2030 vs 1990; national: carbon neutral by 2040"
+      "ndcTargetEn": "EU target: -55% by 2030 vs 1990; national: carbon neutral by 2040",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2390,7 +2810,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
       "ndcTargetZh": "2030年温室气体排放比2005年减少55%（EU目标）",
-      "ndcTargetEn": "Reduce GHG 55% below 2005 levels by 2030 (EU target)"
+      "ndcTargetEn": "Reduce GHG 55% below 2005 levels by 2030 (EU target)",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2459,7 +2891,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-11-22",
       "ndcTargetZh": "2030年人均温室气体排放降至7.7吨CO₂当量",
-      "ndcTargetEn": "Reduce per capita GHG to 7.7t CO₂eq by 2030"
+      "ndcTargetEn": "Reduce per capita GHG to 7.7t CO₂eq by 2030",
+      "ndcRating": "not_assessed",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2528,7 +2972,23 @@
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
       "ndcTargetZh": "2030年温室气体排放比基准情景减少31%",
-      "ndcTargetEn": "Reduce GHG 31% below BAU by 2030"
+      "ndcTargetEn": "Reduce GHG 31% below BAU by 2030",
+      "ndcRating": "highly_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2022
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2023
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2597,7 +3057,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-11-16",
       "ndcTargetZh": "2030年GDP碳强度比2005年降低45%（无条件）",
-      "ndcTargetEn": "Reduce GDP carbon intensity 45% vs 2005 by 2030 (unconditional)"
+      "ndcTargetEn": "Reduce GDP carbon intensity 45% vs 2005 by 2030 (unconditional)",
+      "ndcRating": "highly_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2666,7 +3138,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-11-03",
       "ndcTargetZh": "2030年温室气体排放比基准情景减少15.8%（无条件）或43.5%（有条件）",
-      "ndcTargetEn": "Reduce GHG 15.8% (unconditional) or 43.5% (conditional) below BAU by 2030"
+      "ndcTargetEn": "Reduce GHG 15.8% (unconditional) or 43.5% (conditional) below BAU by 2030",
+      "ndcRating": "critically_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2022
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2735,7 +3219,19 @@
       "status": "ratified",
       "ratifiedDate": "2017-03-23",
       "ndcTargetZh": "2030年温室气体排放比基准情景减少75%（有条件，含72.29%国际支持）",
-      "ndcTargetEn": "Reduce GHG 75% below BAU by 2030 (conditional, 72.29% with international support)"
+      "ndcTargetEn": "Reduce GHG 75% below BAU by 2030 (conditional, 72.29% with international support)",
+      "ndcRating": "2C",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2804,7 +3300,19 @@
       "status": "ratified",
       "ratifiedDate": "2017-02-10",
       "ndcTargetZh": "2030年GDP碳强度比2007年降低40%；2025年碳排放达峰",
-      "ndcTargetEn": "Reduce GDP carbon intensity 40% vs 2007 by 2030; peak emissions by 2025"
+      "ndcTargetEn": "Reduce GDP carbon intensity 40% vs 2007 by 2030; peak emissions by 2025",
+      "ndcRating": "almost_sufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2873,7 +3381,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-07-25",
       "ndcTargetZh": "2030年温室气体排放比基准情景减少30%",
-      "ndcTargetEn": "Reduce GHG 30% below BAU by 2030"
+      "ndcTargetEn": "Reduce GHG 30% below BAU by 2030",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2942,7 +3462,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
       "ndcTargetZh": "2030年温室气体排放比基准情景减少45.5%（有条件）",
-      "ndcTargetEn": "Reduce GHG 45.5% below BAU by 2030 (conditional)"
+      "ndcTargetEn": "Reduce GHG 45.5% below BAU by 2030 (conditional)",
+      "ndcRating": "almost_sufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3011,7 +3543,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
       "ndcTargetZh": "2030年温室气体排放比基准情景减少15%（无条件）或45%（有条件）",
-      "ndcTargetEn": "Reduce GHG 15% (unconditional) or 45% (conditional) below BAU by 2030"
+      "ndcTargetEn": "Reduce GHG 15% (unconditional) or 45% (conditional) below BAU by 2030",
+      "ndcRating": "2C",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3080,7 +3624,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-10-13",
       "ndcTargetZh": "2030年绝对排放上限989.5万吨CO₂当量；2050年净零排放",
-      "ndcTargetEn": "Cap absolute emissions at 9.895 Mt CO₂eq by 2030; net zero by 2050"
+      "ndcTargetEn": "Cap absolute emissions at 9.895 Mt CO₂eq by 2030; net zero by 2050",
+      "ndcRating": "1.5C",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3149,7 +3705,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
       "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%（EU目标）",
-      "ndcTargetEn": "Reduce GHG at least 55% below 1990 levels by 2030 (EU target)"
+      "ndcTargetEn": "Reduce GHG at least 55% below 1990 levels by 2030 (EU target)",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3218,7 +3786,19 @@
       "status": "ratified",
       "ratifiedDate": "2016-04-22",
       "ndcTargetZh": "2030年能源部门CO₂排放比基准情景减少30%",
-      "ndcTargetEn": "Reduce energy sector CO₂ 30% below BAU by 2030"
+      "ndcTargetEn": "Reduce energy sector CO₂ 30% below BAU by 2030",
+      "ndcRating": "almost_sufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3287,7 +3867,19 @@
       "status": "ratified",
       "ratifiedDate": "2017-03-09",
       "ndcTargetZh": "2030年温室气体排放比基准情景减少68.8%",
-      "ndcTargetEn": "Reduce GHG 68.8% below BAU by 2030"
+      "ndcTargetEn": "Reduce GHG 68.8% below BAU by 2030",
+      "ndcRating": "1.5C",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
     },
     "montrealProtocol": {
       "status": "ratified",

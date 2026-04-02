@@ -51,6 +51,16 @@ const RESPONSIBILITY_LABELS = {
   nuclear: { zh: "核安全", en: "Nuclear" },
 };
 
+const NDC_RATING_CONFIG = {
+  "1.5C": { zh: "1.5°C 兼容", en: "1.5°C Compatible", color: "bg-green-600", textColor: "text-green-700", barColor: "bg-green-500" },
+  "2C": { zh: "2°C 兼容", en: "2°C Compatible", color: "bg-lime-500", textColor: "text-lime-700", barColor: "bg-lime-400" },
+  "almost_sufficient": { zh: "接近充分", en: "Almost Sufficient", color: "bg-yellow-500", textColor: "text-yellow-700", barColor: "bg-yellow-400" },
+  "insufficient": { zh: "不足", en: "Insufficient", color: "bg-orange-500", textColor: "text-orange-700", barColor: "bg-orange-400" },
+  "highly_insufficient": { zh: "严重不足", en: "Highly Insufficient", color: "bg-red-500", textColor: "text-red-700", barColor: "bg-red-400" },
+  "critically_insufficient": { zh: "极度不足", en: "Critically Insufficient", color: "bg-red-700", textColor: "text-red-800", barColor: "bg-red-600" },
+  "not_assessed": { zh: "未评估", en: "Not Assessed", color: "bg-gray-400", textColor: "text-gray-500", barColor: "bg-gray-300" },
+};
+
 // --- URL state helpers ---
 function getUrlParams() {
   const p = new URLSearchParams(window.location.search);
@@ -849,6 +859,23 @@ export default function GlobalEnvironmentalAgencies() {
                     </tr>
                     <tr className="border-b border-gray-100">
                       <td className="py-3 px-2 text-gray-500">
+                        {t("NDC 评级", "NDC Rating")}
+                      </td>
+                      {compareList.map((c) => {
+                        const cfg = NDC_RATING_CONFIG[c.parisAgreement?.ndcRating];
+                        return (
+                          <td key={c.countryEn} className="py-3 px-2 text-center">
+                            {cfg ? (
+                              <span className={`${cfg.color} text-white text-xs px-2 py-1 rounded-full`}>
+                                {language === "zh" ? cfg.zh : cfg.en}
+                              </span>
+                            ) : "—"}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-2 text-gray-500">
                         {t("NDC 承诺", "NDC Target")}
                       </td>
                       {compareList.map((c) => (
@@ -1043,32 +1070,120 @@ export default function GlobalEnvironmentalAgencies() {
                 </div>
               </div>
 
+              {/* Treaty Compliance Dashboard */}
+              {(() => {
+                const pa = selectedCountry.parisAgreement;
+                const mp = selectedCountry.montrealProtocol;
+                const cbd = selectedCountry.cbd;
+                const protArea = selectedCountry.wb?.protectedAreas;
+                const ratingCfg = pa?.ndcRating ? NDC_RATING_CONFIG[pa.ndcRating] : null;
+                const montrealOk = mp?.kigaliAmendment;
+                const cbdPct = protArea != null ? Math.min(100, (protArea / 30) * 100) : 0;
+
+                return (
+                  <div className="mb-4 bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <h4 className="text-sm font-semibold text-gray-700 mb-3">
+                      {t("三大公约合规概览", "Treaty Compliance Overview")}
+                    </h4>
+                    <div className="space-y-2.5">
+                      {/* Paris */}
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-gray-500 w-20 shrink-0">{t("巴黎协定", "Paris")}</span>
+                        <div className="flex-1 bg-gray-200 rounded-full h-3">
+                          <div className={`h-3 rounded-full ${ratingCfg?.barColor || "bg-gray-300"}`}
+                            style={{ width: pa?.ndcRating === "1.5C" ? "100%" : pa?.ndcRating === "2C" ? "80%" : pa?.ndcRating === "almost_sufficient" ? "65%" : pa?.ndcRating === "insufficient" ? "45%" : pa?.ndcRating === "highly_insufficient" ? "25%" : pa?.ndcRating === "critically_insufficient" ? "15%" : "5%" }} />
+                        </div>
+                        <span className={`text-xs font-medium w-24 text-right ${ratingCfg?.textColor || "text-gray-500"}`}>
+                          {ratingCfg ? (language === "zh" ? ratingCfg.zh : ratingCfg.en) : "—"}
+                        </span>
+                      </div>
+                      {/* Montreal */}
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-gray-500 w-20 shrink-0">{t("蒙特利尔", "Montreal")}</span>
+                        <div className="flex-1 bg-gray-200 rounded-full h-3">
+                          <div className={`h-3 rounded-full ${montrealOk ? "bg-green-500" : "bg-yellow-400"}`}
+                            style={{ width: montrealOk ? "100%" : "70%" }} />
+                        </div>
+                        <span className={`text-xs font-medium w-24 text-right ${montrealOk ? "text-green-600" : "text-yellow-600"}`}>
+                          {montrealOk ? t("完全合规", "Fully Compliant") : t("基加利待批", "Kigali Pending")}
+                        </span>
+                      </div>
+                      {/* CBD */}
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-gray-500 w-20 shrink-0">CBD 30×30</span>
+                        <div className="flex-1 bg-gray-200 rounded-full h-3">
+                          <div className={`h-3 rounded-full ${cbdPct >= 100 ? "bg-green-500" : "bg-emerald-400"}`}
+                            style={{ width: `${cbdPct}%` }} />
+                        </div>
+                        <span className={`text-xs font-medium w-24 text-right ${cbdPct >= 100 ? "text-green-600" : "text-gray-600"}`}>
+                          {protArea != null ? `${protArea.toFixed(1)}% / 30%` : "—"}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })()}
+
               {/* Paris Agreement NDC */}
               {selectedCountry.parisAgreement && (
                 <div className="mb-4 bg-blue-50 rounded-xl p-4 border border-blue-100">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-center flex-wrap gap-2 mb-2">
                     <h4 className="text-sm font-semibold text-blue-800">
-                      {t("巴黎协定 · 国家自主贡献 (NDC)", "Paris Agreement · NDC")}
+                      {t("巴黎协定 · NDC", "Paris Agreement · NDC")}
                     </h4>
                     <span className="bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full">
                       {t("已批准", "Ratified")}
                     </span>
+                    {(() => {
+                      const cfg = NDC_RATING_CONFIG[selectedCountry.parisAgreement.ndcRating];
+                      return cfg ? (
+                        <span className={`${cfg.color} text-white text-xs px-2 py-0.5 rounded-full`}>
+                          {language === "zh" ? cfg.zh : cfg.en}
+                        </span>
+                      ) : null;
+                    })()}
                   </div>
                   {selectedCountry.parisAgreement.ratifiedDate && (
                     <p className="text-xs text-blue-500 mb-2">
                       {t("批准日期", "Ratified")} {selectedCountry.parisAgreement.ratifiedDate}
                       {selectedCountry.netZeroTarget && (
                         <span className="ml-3">
-                          {t("碳中和目标", "Net Zero Target")}: <strong>{selectedCountry.netZeroTarget}</strong>
+                          {t("碳中和目标", "Net Zero")}: <strong>{selectedCountry.netZeroTarget}</strong>
                         </span>
                       )}
                     </p>
                   )}
-                  <p className="text-sm text-blue-900 leading-relaxed">
+                  <p className="text-sm text-blue-900 leading-relaxed mb-3">
                     {language === "zh"
                       ? selectedCountry.parisAgreement.ndcTargetZh
                       : selectedCountry.parisAgreement.ndcTargetEn}
                   </p>
+                  {/* NDC Timeline */}
+                  {selectedCountry.parisAgreement.ndcHistory && (
+                    <div className="border-t border-blue-100 pt-2">
+                      <p className="text-xs font-medium text-blue-600 mb-1.5">{t("NDC 提交时间线", "NDC Submission Timeline")}</p>
+                      <div className="flex items-center gap-1 flex-wrap">
+                        {selectedCountry.parisAgreement.ndcHistory.map((h, i) => (
+                          <div key={i} className="flex items-center gap-1">
+                            <span className="bg-blue-100 text-blue-700 text-xs px-2 py-0.5 rounded">
+                              {h.year} {h.version}
+                            </span>
+                            {i < selectedCountry.parisAgreement.ndcHistory.length - 1 && (
+                              <span className="text-blue-300">→</span>
+                            )}
+                          </div>
+                        ))}
+                        {selectedCountry.parisAgreement.nextNdcDeadline && (
+                          <>
+                            <span className="text-blue-300">→</span>
+                            <span className="bg-blue-600 text-white text-xs px-2 py-0.5 rounded animate-pulse">
+                              {selectedCountry.parisAgreement.nextNdcDeadline} {t("下次更新", "Next Update")}
+                            </span>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
 
