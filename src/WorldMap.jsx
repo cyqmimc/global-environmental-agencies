@@ -117,7 +117,7 @@ export default function WorldMap({ countries, language, onCountryClick }) {
   if (!svgContent) return null;
 
   return (
-    <div className="bg-white rounded-xl shadow-sm p-4 mb-6">
+    <div className="bg-white rounded-xl shadow-sm p-3 mb-4">
       {/* Header with metric selector + collapse toggle */}
       <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
         <div className="flex items-center gap-2">
@@ -155,7 +155,7 @@ export default function WorldMap({ countries, language, onCountryClick }) {
         <>
           <div
             ref={containerRef}
-            className="relative w-full overflow-hidden max-h-[320px]"
+            className="relative w-full overflow-hidden max-h-[280px]"
             onMouseMove={handleMouseMove}
             onClick={handleClick}
             onMouseLeave={handleMouseLeave}

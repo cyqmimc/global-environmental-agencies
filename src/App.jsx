@@ -197,7 +197,7 @@ export default function GlobalEnvironmentalAgencies() {
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       {/* Header */}
       <header className="bg-gradient-to-r from-green-700 to-emerald-600 text-white shadow-lg">
-        <div className="max-w-7xl mx-auto px-6 py-8">
+        <div className="max-w-7xl mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl font-bold tracking-tight">
@@ -231,52 +231,52 @@ export default function GlobalEnvironmentalAgencies() {
 
       {/* Stats Bar */}
       <div className="max-w-7xl mx-auto px-6 -mt-4">
-        <div className="bg-white rounded-xl shadow-md p-4 flex flex-wrap gap-4 sm:gap-6 justify-center">
+        <div className="bg-white rounded-xl shadow-md px-4 py-3 flex flex-wrap gap-4 sm:gap-8 justify-center">
           <div className="text-center">
-            <p className="text-2xl font-bold text-green-700">
+            <p className="text-xl font-bold text-green-700">
               {countries.length}
             </p>
-            <p className="text-sm text-gray-500">
+            <p className="text-xs text-gray-500">
               {t("收录国家", "Countries")}
             </p>
           </div>
           <div className="text-center">
-            <p className="text-2xl font-bold text-blue-700">3</p>
-            <p className="text-sm text-gray-500">
-              {t("公约追踪", "Treaties Tracked")}
+            <p className="text-xl font-bold text-gray-600">3</p>
+            <p className="text-xs text-gray-500">
+              {t("公约追踪", "Treaties")}
             </p>
           </div>
           <div className="text-center">
-            <p className="text-2xl font-bold text-amber-600">
+            <p className="text-xl font-bold text-amber-600">
               {countries.filter((c) => c.carbonPricing?.priceUSD != null).length}
             </p>
-            <p className="text-sm text-gray-500">
-              {t("已实施碳定价", "Carbon Pricing")}
+            <p className="text-xs text-gray-500">
+              {t("已碳定价", "Carbon Priced")}
             </p>
           </div>
           <div className="text-center">
-            <p className="text-2xl font-bold text-emerald-600">
+            <p className="text-xl font-bold text-emerald-600">
               {countries.filter((c) => c.reportingStatus?.btrSubmitted).length}
             </p>
-            <p className="text-sm text-gray-500">
-              {t("BTR 已提交", "BTR Submitted")}
+            <p className="text-xs text-gray-500">
+              {t("BTR 已交", "BTR Filed")}
             </p>
           </div>
           <div className="text-center">
-            <p className="text-2xl font-bold text-red-500">
+            <p className="text-xl font-bold text-red-500">
               {countries.filter((c) => {
                 const r = c.parisAgreement?.ndcRating;
                 return r === "highly_insufficient" || r === "critically_insufficient";
               }).length}
             </p>
-            <p className="text-sm text-gray-500">
-              {t("NDC 严重不足", "NDC Insufficient")}
+            <p className="text-xs text-gray-500">
+              {t("NDC 不足", "NDC Weak")}
             </p>
           </div>
         </div>
       </div>
 
-      <main className="max-w-7xl mx-auto px-6 py-6">
+      <main className="max-w-7xl mx-auto px-6 pt-4 pb-6">
         {/* World Map */}
         {countries.length > 0 && (
           <WorldMap
