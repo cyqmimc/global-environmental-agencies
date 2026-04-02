@@ -216,7 +216,7 @@ export default function GlobalEnvironmentalAgencies() {
 
       {/* Stats Bar */}
       <div className="max-w-7xl mx-auto px-6 -mt-4">
-        <div className="bg-white rounded-xl shadow-md p-4 flex flex-wrap gap-6 justify-center">
+        <div className="bg-white rounded-xl shadow-md p-4 flex flex-wrap gap-4 sm:gap-6 justify-center">
           <div className="text-center">
             <p className="text-2xl font-bold text-green-700">
               {countries.length}
@@ -226,25 +226,36 @@ export default function GlobalEnvironmentalAgencies() {
             </p>
           </div>
           <div className="text-center">
-            <p className="text-2xl font-bold text-blue-700">{regionCount}</p>
+            <p className="text-2xl font-bold text-blue-700">3</p>
             <p className="text-sm text-gray-500">
-              {t("覆盖大洲", "Regions")}
+              {t("公约追踪", "Treaties Tracked")}
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-2xl font-bold text-amber-600">
+              {countries.filter((c) => c.carbonPricing?.priceUSD != null).length}
+            </p>
+            <p className="text-sm text-gray-500">
+              {t("已实施碳定价", "Carbon Pricing")}
             </p>
           </div>
           <div className="text-center">
             <p className="text-2xl font-bold text-emerald-600">
-              {globalAvg.renewableEnergy ? `${globalAvg.renewableEnergy}%` : "—"}
+              {countries.filter((c) => c.reportingStatus?.btrSubmitted).length}
             </p>
             <p className="text-sm text-gray-500">
-              {t("平均可再生能源", "Avg. Renewable")}
+              {t("BTR 已提交", "BTR Submitted")}
             </p>
           </div>
           <div className="text-center">
-            <p className="text-2xl font-bold text-gray-500">
-              <span className="text-base">World Bank</span>
+            <p className="text-2xl font-bold text-red-500">
+              {countries.filter((c) => {
+                const r = c.parisAgreement?.ndcRating;
+                return r === "highly_insufficient" || r === "critically_insufficient";
+              }).length}
             </p>
             <p className="text-sm text-gray-500">
-              {t("数据来源", "Data Source")}
+              {t("NDC 严重不足", "NDC Insufficient")}
             </p>
           </div>
         </div>
