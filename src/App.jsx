@@ -1,38 +1,18 @@
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback, useRef, lazy, Suspense } from "react";
 import WorldMap from "./WorldMap";
-import DetailDialog from "./components/DetailDialog";
-import CompareDialog from "./components/CompareDialog";
-import AboutPage from "./components/AboutPage";
-import RankingsView from "./components/RankingsView";
-import ClimateEquityView from "./components/ClimateEquityView";
-import { Bar, Radar, Scatter } from "react-chartjs-2";
 import {
-  Chart as ChartJS,
-  BarElement,
-  CategoryScale,
-  LinearScale,
-  LogarithmicScale,
-  RadialLinearScale,
-  PointElement,
-  LineElement,
-  Filler,
-  Tooltip,
-  Legend,
-} from "chart.js";
-import {
-  TREATY_LABELS,
   RESPONSIBILITY_LABELS,
-  NDC_RATING_CONFIG,
   getUrlParams,
   setUrlParams,
   exportCSV,
 } from "./constants";
 
-ChartJS.register(
-  BarElement, CategoryScale, LinearScale, LogarithmicScale,
-  RadialLinearScale, PointElement, LineElement, Filler,
-  Tooltip, Legend
-);
+// Lazy load heavy components (chart.js ~200KB only loads on demand)
+const DetailDialog = lazy(() => import("./components/DetailDialog"));
+const CompareDialog = lazy(() => import("./components/CompareDialog"));
+const ClimateEquityView = lazy(() => import("./components/ClimateEquityView"));
+const AboutPage = lazy(() => import("./components/AboutPage"));
+const RankingsView = lazy(() => import("./components/RankingsView"));
 
 export default function GlobalEnvironmentalAgencies() {
   const urlParams = getUrlParams();
@@ -79,6 +59,15 @@ export default function GlobalEnvironmentalAgencies() {
     });
   }, [search, regionFilter, tagFilter, sortOrder, page, language]);
 
+  // Debounced search
+  const [debouncedSearch, setDebouncedSearch] = useState(search);
+  const debounceRef = useRef(null);
+  const updateSearch = useCallback((val) => {
+    setSearch(val);
+    clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => setDebouncedSearch(val), 200);
+  }, []);
+
   const ITEMS_PER_PAGE = 12;
   const t = useCallback(
     (zh, en) => (language === "zh" ? zh : en),
@@ -101,13 +90,13 @@ export default function GlobalEnvironmentalAgencies() {
     };
   }, [countries]);
 
-  const filteredCountries = countries
+  const filteredCountries = useMemo(() => countries
     .filter(
       (item) =>
-        (item.countryEn.toLowerCase().includes(search.toLowerCase()) ||
-          item.countryZh.includes(search) ||
-          item.agencyEn.toLowerCase().includes(search.toLowerCase()) ||
-          item.agencyZh.includes(search)) &&
+        (item.countryEn.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
+          item.countryZh.includes(debouncedSearch) ||
+          item.agencyEn.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
+          item.agencyZh.includes(debouncedSearch)) &&
         (regionFilter ? item.region === regionFilter : true) &&
         (tagFilter ? item.responsibilities.includes(tagFilter) : true) &&
         (complianceFilter
@@ -141,7 +130,7 @@ export default function GlobalEnvironmentalAgencies() {
       if (sortOrder === "co2pcAsc") return (a.wb?.co2PerCapita ?? 999) - (b.wb?.co2PerCapita ?? 999);
       if (sortOrder === "co2pcDesc") return (b.wb?.co2PerCapita ?? 0) - (a.wb?.co2PerCapita ?? 0);
       return 0;
-    });
+    }), [countries, debouncedSearch, regionFilter, tagFilter, complianceFilter, sortOrder]);
 
   const pageCount = Math.ceil(filteredCountries.length / ITEMS_PER_PAGE);
   const paginatedCountries = filteredCountries.slice(
@@ -339,7 +328,7 @@ export default function GlobalEnvironmentalAgencies() {
                 )}
                 value={search}
                 onChange={(e) => {
-                  setSearch(e.target.value);
+                  updateSearch(e.target.value);
                   resetPage();
                 }}
                 className="w-full border border-gray-200 pl-10 pr-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition"
@@ -495,6 +484,7 @@ export default function GlobalEnvironmentalAgencies() {
           </button>
         </div>
 
+        <Suspense fallback={<div className="text-center py-20 text-gray-400">Loading...</div>}>
         {viewMode === "equity" ? (
           <ClimateEquityView
             countries={filteredCountries}
@@ -659,6 +649,7 @@ export default function GlobalEnvironmentalAgencies() {
             )}
           </>
         )}
+        </Suspense>
       </main>
 
       {/* Compare floating bar */}
@@ -705,6 +696,7 @@ export default function GlobalEnvironmentalAgencies() {
       )}
 
       {/* Compare Dialog */}
+      <Suspense fallback={null}>
       {showCompare && compareList.length >= 2 && (
         <CompareDialog
           compareList={compareList}
@@ -743,6 +735,7 @@ export default function GlobalEnvironmentalAgencies() {
           onClose={() => setShowAbout(false)}
         />
       )}
+      </Suspense>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-gray-400 mt-12">

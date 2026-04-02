@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import "../chartSetup";
 import { Scatter } from "react-chartjs-2";
 
 const REGION_COLORS = {
