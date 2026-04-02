@@ -8,8 +8,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run build` — production build to `dist/`
 - `npm run preview` — preview production build locally
 - `npm run fetch-data` — fetch latest World Bank data → `public/wb-data.json` (recommend quarterly)
+- `npm run check-updates` — scan all data sources, report what may need updating
 
-No test runner or linter is configured.
+No test runner or linter is configured. See `DATA-MAINTENANCE.md` for data update sources and procedures.
 
 ## Architecture
 

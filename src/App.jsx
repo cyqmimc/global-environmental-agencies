@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useCallback } from "react";
+import WorldMap from "./WorldMap";
 import { Bar, Radar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -301,12 +302,12 @@ export default function GlobalEnvironmentalAgencies() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl font-bold tracking-tight">
-                🌍 {t("全球环境保护机构", "Global Environmental Agencies")}
+                🌍 {t("全球环境治理观察", "Global Environmental Governance Tracker")}
               </h1>
               <p className="mt-2 text-green-100 text-lg">
                 {t(
-                  "探索世界各国环境保护部门及其环境数据",
-                  "Explore environmental agencies and data from countries worldwide"
+                  "各国环保机构 · 环境数据 · 公约履约追踪",
+                  "Environmental Agencies · Data · Treaty Compliance Tracking"
                 )}
               </p>
             </div>
@@ -357,6 +358,51 @@ export default function GlobalEnvironmentalAgencies() {
       </div>
 
       <main className="max-w-7xl mx-auto px-6 py-6">
+        {/* World Map */}
+        {countries.length > 0 && (
+          <WorldMap
+            countries={countries}
+            language={language}
+            onCountryClick={(country) => {
+              // Find the country in the full filtered list and open its detail
+              const idx = paginatedCountries.findIndex(
+                (c) => c.isoCode === country.isoCode
+              );
+              if (idx >= 0) {
+                setOpenDialogIndex(idx);
+              } else {
+                // Country might be on a different page or filtered out — find in full list
+                const fullIdx = filteredCountries.findIndex(
+                  (c) => c.isoCode === country.isoCode
+                );
+                if (fullIdx >= 0) {
+                  const targetPage = Math.floor(fullIdx / ITEMS_PER_PAGE) + 1;
+                  setPage(targetPage);
+                  setTimeout(() => {
+                    setOpenDialogIndex(fullIdx % ITEMS_PER_PAGE);
+                  }, 50);
+                } else {
+                  // Country is filtered out — clear filters and show it
+                  setSearch("");
+                  setRegionFilter("");
+                  setTagFilter("");
+                  setSortOrder("none");
+                  setTimeout(() => {
+                    const newIdx = countries.findIndex(
+                      (c) => c.isoCode === country.isoCode
+                    );
+                    if (newIdx >= 0) {
+                      const tp = Math.floor(newIdx / ITEMS_PER_PAGE) + 1;
+                      setPage(tp);
+                      setTimeout(() => setOpenDialogIndex(newIdx % ITEMS_PER_PAGE), 50);
+                    }
+                  }, 50);
+                }
+              }
+            }}
+          />
+        )}
+
         {/* Filters */}
         <div className="bg-white rounded-xl shadow-sm p-4 mb-6">
           <div className="flex flex-wrap gap-3 items-center">
