@@ -4615,5 +4615,2779 @@
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
     }
+  },
+  {
+    "isoCode": "pk",
+    "countryEn": "Pakistan",
+    "countryZh": "巴基斯坦",
+    "agencyEn": "Ministry of Climate Change and Environmental Coordination",
+    "agencyZh": "气候变化与环境协调部",
+    "website": "https://mocc.gov.pk/",
+    "region": "Asia",
+    "descriptionEn": "Pakistan's ministry coordinates national climate adaptation strategies, addressing extreme vulnerability to floods and glacial melt.",
+    "descriptionZh": "巴基斯坦气候部协调国家气候适应战略，应对洪水和冰川融化的极端脆弱性。",
+    "established": 2012,
+    "responsibilities": [
+      "climate",
+      "water"
+    ],
+    "epiScore": 24.6,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "气候变化法",
+        "nameEn": "Climate Change Act",
+        "year": 2017
+      },
+      {
+        "nameZh": "国家气候变化政策",
+        "nameEn": "National Climate Change Policy",
+        "year": 2012
+      }
+    ],
+    "data": {
+      "forestCoverage": 5,
+      "carbonEmission": 235
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-11-10",
+      "ndcTargetZh": "2030年排放比基准情景减少50%（有条件）",
+      "ndcTargetEn": "Reduce GHG 50% below BAU by 2030 (conditional)",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1992-12-18",
+      "kigaliAmendment": true,
+      "commitmentZh": "已完全淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1994-07-26",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳定价机制研究阶段",
+      "noteEn": "Carbon pricing under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 2,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "UNCCD",
+      "Montreal Protocol"
+    ],
+    "flagUrl": "https://flagcdn.com/pk.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "bd",
+    "countryEn": "Bangladesh",
+    "countryZh": "孟加拉国",
+    "agencyEn": "Ministry of Environment, Forest and Climate Change",
+    "agencyZh": "环境、森林与气候变化部",
+    "website": "https://moef.gov.bd/",
+    "region": "Asia",
+    "descriptionEn": "Bangladesh's ministry addresses extreme climate vulnerability as one of the world's most flood-prone nations.",
+    "descriptionZh": "孟加拉国环境部应对极端气候脆弱性，是全球最易受洪灾影响的国家之一。",
+    "established": 1989,
+    "responsibilities": [
+      "climate",
+      "water"
+    ],
+    "epiScore": 23.1,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境保护法",
+        "nameEn": "Environment Conservation Act",
+        "year": 1995
+      },
+      {
+        "nameZh": "气候变化信托基金法",
+        "nameEn": "Climate Change Trust Fund Act",
+        "year": 2010
+      }
+    ],
+    "data": {
+      "forestCoverage": 11,
+      "carbonEmission": 100
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-09-21",
+      "ndcTargetZh": "2030年排放比基准情景减少22%（有条件）",
+      "ndcTargetEn": "Reduce GHG 22% below BAU by 2030 (conditional)",
+      "ndcRating": "2C",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1990-08-02",
+      "kigaliAmendment": true,
+      "commitmentZh": "已完全淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1994-05-03",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋；保护孙德尔本斯红树林",
+      "commitmentEn": "Committed to 30x30; protecting Sundarbans mangroves"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳市场研究阶段",
+      "noteEn": "Carbon market under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "UNCCD",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/bd.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "iq",
+    "countryEn": "Iraq",
+    "countryZh": "伊拉克",
+    "agencyEn": "Ministry of Environment",
+    "agencyZh": "环境部",
+    "website": "https://moen.gov.iq/",
+    "region": "Asia",
+    "descriptionEn": "Iraq's Ministry of Environment manages environmental challenges including desertification, water scarcity, and oil-related pollution.",
+    "descriptionZh": "伊拉克环境部应对荒漠化、水资源短缺和石油污染等环境挑战。",
+    "established": 2003,
+    "responsibilities": [
+      "water",
+      "waste"
+    ],
+    "epiScore": 21.2,
+    "netZeroTarget": 2060,
+    "keyLaws": [
+      {
+        "nameZh": "环境保护与改善法",
+        "nameEn": "Environment Protection and Improvement Law",
+        "year": 2009
+      }
+    ],
+    "data": {
+      "forestCoverage": 2,
+      "carbonEmission": 200
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2021-02-01",
+      "ndcTargetZh": "2030年排放比基准情景减少15%",
+      "ndcTargetEn": "Reduce GHG 15% below BAU by 2030",
+      "ndcRating": "not_assessed",
+      "ndcHistory": [
+        {
+          "version": "NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "2008-07-25",
+      "kigaliAmendment": false,
+      "commitmentZh": "已淘汰主要受控物质；基加利修正案尚未批准",
+      "commitmentEn": "Phased out main ODS; Kigali Amendment not yet ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "2009-07-28",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "无碳定价机制",
+      "noteEn": "No carbon pricing mechanism"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 1,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "UNCCD"
+    ],
+    "flagUrl": "https://flagcdn.com/iq.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "ir",
+    "countryEn": "Iran",
+    "countryZh": "伊朗",
+    "agencyEn": "Department of Environment",
+    "agencyZh": "环境局",
+    "website": "https://www.doe.ir/",
+    "region": "Asia",
+    "descriptionEn": "Iran's Department of Environment manages biodiversity conservation and combats severe desertification and water crisis.",
+    "descriptionZh": "伊朗环境局管理生物多样性保护，应对严峻的荒漠化和水资源危机。",
+    "established": 1971,
+    "responsibilities": [
+      "water",
+      "biodiversity"
+    ],
+    "epiScore": 32.4,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境保护与促进法",
+        "nameEn": "Environmental Protection and Enhancement Act",
+        "year": 1974
+      }
+    ],
+    "data": {
+      "forestCoverage": 7,
+      "carbonEmission": 750
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-11-22",
+      "ndcTargetZh": "2030年排放比基准情景减少12%（无条件）",
+      "ndcTargetEn": "Reduce GHG 12% below BAU by 2030 (unconditional)",
+      "ndcRating": "critically_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1990-10-03",
+      "kigaliAmendment": false,
+      "commitmentZh": "已淘汰主要受控物质；基加利修正案尚未批准",
+      "commitmentEn": "Phased out main ODS; Kigali Amendment not yet ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1996-08-06",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "无碳定价机制",
+      "noteEn": "No carbon pricing mechanism"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "UNCCD",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/ir.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "kz",
+    "countryEn": "Kazakhstan",
+    "countryZh": "哈萨克斯坦",
+    "agencyEn": "Ministry of Ecology and Natural Resources",
+    "agencyZh": "生态与自然资源部",
+    "website": "https://www.gov.kz/memleket/entities/ecogeo",
+    "region": "Asia",
+    "descriptionEn": "Kazakhstan's ministry manages the Aral Sea crisis response and green economy transition from fossil fuel dependence.",
+    "descriptionZh": "哈萨克斯坦生态部管理咸海危机应对和从化石燃料依赖向绿色经济转型。",
+    "established": 2019,
+    "responsibilities": [
+      "water",
+      "energy"
+    ],
+    "epiScore": 37.8,
+    "netZeroTarget": 2060,
+    "keyLaws": [
+      {
+        "nameZh": "生态法典",
+        "nameEn": "Ecological Code",
+        "year": 2021
+      },
+      {
+        "nameZh": "绿色经济转型构想",
+        "nameEn": "Green Economy Transition Concept",
+        "year": 2013
+      }
+    ],
+    "data": {
+      "forestCoverage": 1,
+      "carbonEmission": 300
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-12-06",
+      "ndcTargetZh": "2030年排放比1990年减少15%（无条件）",
+      "ndcTargetEn": "Reduce GHG 15% below 1990 by 2030 (unconditional)",
+      "ndcRating": "critically_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2023
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1998-04-26",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs等受控物质；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1994-09-06",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": 1,
+      "coveragePercent": 46,
+      "noteZh": "2013年启动碳排放交易，中亚首个ETS",
+      "noteEn": "ETS launched 2013, first in Central Asia"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 4,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "UNCCD",
+      "Basel Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/kz.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "ua",
+    "countryEn": "Ukraine",
+    "countryZh": "乌克兰",
+    "agencyEn": "Ministry of Environmental Protection and Natural Resources",
+    "agencyZh": "环境保护与自然资源部",
+    "website": "https://mepr.gov.ua/en/",
+    "region": "Europe",
+    "descriptionEn": "Ukraine's ministry manages environmental recovery from conflict damage while pursuing EU environmental standards alignment.",
+    "descriptionZh": "乌克兰环境部管理冲突造成的环境恢复，同时推动与欧盟环境标准对接。",
+    "established": 2011,
+    "responsibilities": [
+      "waste",
+      "water"
+    ],
+    "epiScore": 37.6,
+    "netZeroTarget": 2060,
+    "keyLaws": [
+      {
+        "nameZh": "环境保护法",
+        "nameEn": "Environmental Protection Law",
+        "year": 1991
+      },
+      {
+        "nameZh": "环境影响评估法",
+        "nameEn": "Environmental Impact Assessment Law",
+        "year": 2017
+      }
+    ],
+    "data": {
+      "forestCoverage": 16,
+      "carbonEmission": 210
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-09-19",
+      "ndcTargetZh": "2030年排放不超过1990年的35%",
+      "ndcTargetEn": "Limit GHG to 35% of 1990 levels by 2030",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1988-09-20",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰所有受控物质；基加利修正案已批准",
+      "commitmentEn": "Phased out all ODS; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1995-02-07",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": true,
+      "priceUSD": 1,
+      "coveragePercent": 30,
+      "noteZh": "碳税约30格里夫纳/吨CO₂；EU ETS对接筹备中",
+      "noteEn": "Carbon tax ~UAH30/tCO₂; EU ETS alignment under preparation"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 4,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "UNFCCC",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/ua.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "gr",
+    "countryEn": "Greece",
+    "countryZh": "希腊",
+    "agencyEn": "Ministry of Environment and Energy",
+    "agencyZh": "环境与能源部",
+    "website": "https://ypen.gov.gr/",
+    "region": "Europe",
+    "descriptionEn": "Greece's ministry manages Mediterranean biodiversity protection and ambitious renewable energy expansion, especially solar and wind.",
+    "descriptionZh": "希腊环境部管理地中海生物多样性保护和雄心勃勃的可再生能源扩张。",
+    "established": 1980,
+    "responsibilities": [
+      "energy",
+      "biodiversity"
+    ],
+    "epiScore": 52.4,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "国家气候法",
+        "nameEn": "National Climate Law",
+        "year": 2022
+      },
+      {
+        "nameZh": "可再生能源法",
+        "nameEn": "Renewable Energy Law",
+        "year": 2006
+      }
+    ],
+    "data": {
+      "forestCoverage": 32,
+      "carbonEmission": 70
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-10-05",
+      "ndcTargetZh": "2030年排放比1990年减少至少55%（EU目标）",
+      "ndcTargetEn": "EU target: -55% by 2030 vs 1990",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1988-12-16",
+      "kigaliAmendment": true,
+      "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准",
+      "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1994-08-04",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": 85,
+      "coveragePercent": 40,
+      "noteZh": "参与EU ETS",
+      "noteEn": "Participates in EU ETS"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "Barcelona Convention",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/gr.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "ie",
+    "countryEn": "Ireland",
+    "countryZh": "爱尔兰",
+    "agencyEn": "Department of the Environment, Climate and Communications",
+    "agencyZh": "环境、气候与通信部",
+    "website": "https://www.gov.ie/en/organisation/department-of-the-environment-climate-and-communications/",
+    "region": "Europe",
+    "descriptionEn": "Ireland's department leads ambitious climate action plans targeting 51% emission cuts by 2030 with a strong focus on agriculture.",
+    "descriptionZh": "爱尔兰环境部推动雄心勃勃的气候行动计划，目标2030年减排51%，重点关注农业。",
+    "established": 2020,
+    "responsibilities": [
+      "climate",
+      "energy"
+    ],
+    "epiScore": 57.4,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "气候行动与低碳发展修正法",
+        "nameEn": "Climate Action and Low Carbon Development (Amendment) Act",
+        "year": 2021
+      }
+    ],
+    "data": {
+      "forestCoverage": 11,
+      "carbonEmission": 60
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-10-05",
+      "ndcTargetZh": "2030年排放比1990年减少至少55%（EU目标）；国内目标51%",
+      "ndcTargetEn": "EU target: -55% by 2030 vs 1990; national target: -51%",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1988-12-16",
+      "kigaliAmendment": true,
+      "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准",
+      "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1996-03-22",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": true,
+      "priceUSD": 85,
+      "coveragePercent": 50,
+      "noteZh": "EU ETS + 国内碳税约48欧元/吨",
+      "noteEn": "EU ETS + domestic carbon tax ~€48/t"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "OSPAR Convention",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/ie.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "ro",
+    "countryEn": "Romania",
+    "countryZh": "罗马尼亚",
+    "agencyEn": "Ministry of the Environment, Water and Forests",
+    "agencyZh": "环境、水利与森林部",
+    "website": "https://www.mmediu.ro/",
+    "region": "Europe",
+    "descriptionEn": "Romania's ministry protects the Danube Delta biosphere and manages one of Europe's largest remaining old-growth forests.",
+    "descriptionZh": "罗马尼亚环境部保护多瑙河三角洲生物圈，管理欧洲最大的原始森林之一。",
+    "established": 1990,
+    "responsibilities": [
+      "forest",
+      "water"
+    ],
+    "epiScore": 43.7,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境保护法",
+        "nameEn": "Environmental Protection Law",
+        "year": 1995
+      },
+      {
+        "nameZh": "林业法典",
+        "nameEn": "Forestry Code",
+        "year": 2008
+      }
+    ],
+    "data": {
+      "forestCoverage": 30,
+      "carbonEmission": 80
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2017-06-01",
+      "ndcTargetZh": "2030年排放比1990年减少至少55%（EU目标）",
+      "ndcTargetEn": "EU target: -55% by 2030 vs 1990",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1993-01-27",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰所有受控物质；基加利修正案已批准",
+      "commitmentEn": "Phased out all ODS; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1994-08-17",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋；保护多瑙河三角洲",
+      "commitmentEn": "Committed to 30x30; protecting Danube Delta biosphere"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": 85,
+      "coveragePercent": 40,
+      "noteZh": "参与EU ETS",
+      "noteEn": "Participates in EU ETS"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "Ramsar Convention",
+      "Basel Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/ro.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "cz",
+    "countryEn": "Czech Republic",
+    "countryZh": "捷克",
+    "agencyEn": "Ministry of the Environment",
+    "agencyZh": "环境部",
+    "website": "https://www.mzp.cz/en",
+    "region": "Europe",
+    "descriptionEn": "Czech Republic's ministry manages transition from coal dependency while protecting Bohemian forest ecosystems.",
+    "descriptionZh": "捷克环境部管理从煤炭依赖转型，同时保护波西米亚森林生态系统。",
+    "established": 1990,
+    "responsibilities": [
+      "energy",
+      "air"
+    ],
+    "epiScore": 52.0,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境保护法",
+        "nameEn": "Environmental Protection Act",
+        "year": 1992
+      },
+      {
+        "nameZh": "气候保护政策",
+        "nameEn": "Climate Protection Policy",
+        "year": 2017
+      }
+    ],
+    "data": {
+      "forestCoverage": 34,
+      "carbonEmission": 110
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2017-10-05",
+      "ndcTargetZh": "2030年排放比1990年减少至少55%（EU目标）",
+      "ndcTargetEn": "EU target: -55% by 2030 vs 1990",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1993-01-01",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰所有受控物质；基加利修正案已批准",
+      "commitmentEn": "Phased out all ODS; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1993-12-03",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": 85,
+      "coveragePercent": 40,
+      "noteZh": "参与EU ETS",
+      "noteEn": "Participates in EU ETS"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "UNFCCC",
+      "Basel Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/cz.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "be",
+    "countryEn": "Belgium",
+    "countryZh": "比利时",
+    "agencyEn": "Federal Public Service Health, Food Chain Safety and Environment",
+    "agencyZh": "联邦公共卫生、食品安全与环境服务局",
+    "website": "https://www.health.belgium.be/en/environment",
+    "region": "Europe",
+    "descriptionEn": "Belgium's environmental service coordinates federal and regional environmental policies within a complex federal structure.",
+    "descriptionZh": "比利时环境服务局在复杂的联邦结构中协调联邦和地区环境政策。",
+    "established": 2001,
+    "responsibilities": [
+      "chemicals",
+      "climate"
+    ],
+    "epiScore": 61.2,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "国家气候法",
+        "nameEn": "National Climate Law",
+        "year": 2023
+      }
+    ],
+    "data": {
+      "forestCoverage": 23,
+      "carbonEmission": 110
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2017-04-06",
+      "ndcTargetZh": "2030年排放比1990年减少至少55%（EU目标）",
+      "ndcTargetEn": "EU target: -55% by 2030 vs 1990",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1988-12-16",
+      "kigaliAmendment": true,
+      "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准",
+      "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1996-11-22",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": 85,
+      "coveragePercent": 40,
+      "noteZh": "参与EU ETS",
+      "noteEn": "Participates in EU ETS"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 8,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "OSPAR Convention",
+      "Basel Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/be.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "hu",
+    "countryEn": "Hungary",
+    "countryZh": "匈牙利",
+    "agencyEn": "Ministry of Energy",
+    "agencyZh": "能源部",
+    "website": "https://www.kormany.hu/en/ministry-of-energy",
+    "region": "Europe",
+    "descriptionEn": "Hungary's Energy Ministry manages environmental protection and nuclear energy expansion alongside renewable targets.",
+    "descriptionZh": "匈牙利能源部管理环境保护和核能扩展，同时推进可再生能源目标。",
+    "established": 2022,
+    "responsibilities": [
+      "energy",
+      "nuclear"
+    ],
+    "epiScore": 49.5,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "气候保护法",
+        "nameEn": "Climate Protection Act",
+        "year": 2020
+      }
+    ],
+    "data": {
+      "forestCoverage": 23,
+      "carbonEmission": 55
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-10-05",
+      "ndcTargetZh": "2030年排放比1990年减少至少55%（EU目标）",
+      "ndcTargetEn": "EU target: -55% by 2030 vs 1990",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "EU NDC",
+          "year": 2015
+        },
+        {
+          "version": "EU Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1989-04-20",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰所有受控物质；基加利修正案已批准",
+      "commitmentEn": "Phased out all ODS; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1994-02-24",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": true,
+      "hasCarbonTax": false,
+      "priceUSD": 85,
+      "coveragePercent": 35,
+      "noteZh": "参与EU ETS",
+      "noteEn": "Participates in EU ETS"
+    },
+    "reportingStatus": {
+      "btrSubmitted": true,
+      "btrYear": 2024,
+      "nationalComm": 7,
+      "statusZh": "已提交BTR1（通过EU联合提交）",
+      "statusEn": "BTR1 submitted (via EU joint submission)"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "Ramsar Convention",
+      "Basel Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/hu.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "tz",
+    "countryEn": "Tanzania",
+    "countryZh": "坦桑尼亚",
+    "agencyEn": "Vice President's Office - Environment",
+    "agencyZh": "副总统办公室-环境部门",
+    "website": "https://www.vpo.go.tz/",
+    "region": "Africa",
+    "descriptionEn": "Tanzania's environmental division manages Serengeti and Kilimanjaro conservation while addressing climate adaptation.",
+    "descriptionZh": "坦桑尼亚环境部门管理塞伦盖蒂和乞力马扎罗山保护，同时应对气候适应。",
+    "established": 2005,
+    "responsibilities": [
+      "biodiversity",
+      "forest"
+    ],
+    "epiScore": 26.7,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境管理法",
+        "nameEn": "Environmental Management Act",
+        "year": 2004
+      }
+    ],
+    "data": {
+      "forestCoverage": 52,
+      "carbonEmission": 15
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2018-04-18",
+      "ndcTargetZh": "2030年排放比基准情景减少30-35%",
+      "ndcTargetEn": "Reduce GHG 30-35% below BAU by 2030",
+      "ndcRating": "2C",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1993-04-16",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs等受控物质；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1996-03-08",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋；保护塞伦盖蒂生态",
+      "commitmentEn": "Committed to 30x30; protecting Serengeti ecosystem"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳市场机制研究阶段",
+      "noteEn": "Carbon market under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 2,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "CITES",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/tz.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "dz",
+    "countryEn": "Algeria",
+    "countryZh": "阿尔及利亚",
+    "agencyEn": "Ministry of the Environment and Renewable Energies",
+    "agencyZh": "环境与可再生能源部",
+    "website": "https://www.me.gov.dz/",
+    "region": "Africa",
+    "descriptionEn": "Algeria's ministry manages the largest country in Africa's environmental challenges including Saharan desertification.",
+    "descriptionZh": "阿尔及利亚环境部管理非洲最大国家的环境挑战，包括撒哈拉沙漠化。",
+    "established": 2001,
+    "responsibilities": [
+      "energy",
+      "water"
+    ],
+    "epiScore": 30.1,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境保护法",
+        "nameEn": "Environmental Protection Law",
+        "year": 2003
+      }
+    ],
+    "data": {
+      "forestCoverage": 1,
+      "carbonEmission": 180
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-10-20",
+      "ndcTargetZh": "2030年排放比基准情景减少7-22%",
+      "ndcTargetEn": "Reduce GHG 7-22% below BAU by 2030",
+      "ndcRating": "highly_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2022
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1992-09-20",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1995-08-14",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "无碳定价机制",
+      "noteEn": "No carbon pricing mechanism"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "UNCCD",
+      "Barcelona Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/dz.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "sn",
+    "countryEn": "Senegal",
+    "countryZh": "塞内加尔",
+    "agencyEn": "Ministry of the Environment, Ecological Transition and Sustainable Development",
+    "agencyZh": "环境、生态转型与可持续发展部",
+    "website": "https://www.environnement.gouv.sn/",
+    "region": "Africa",
+    "descriptionEn": "Senegal's ministry leads West African climate adaptation and promotes the Great Green Wall initiative against Sahel desertification.",
+    "descriptionZh": "塞内加尔环境部引领西非气候适应，推动绿色长城计划对抗萨赫勒沙漠化。",
+    "established": 2003,
+    "responsibilities": [
+      "climate",
+      "forest"
+    ],
+    "epiScore": 29.0,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境法典",
+        "nameEn": "Environmental Code",
+        "year": 2001
+      }
+    ],
+    "data": {
+      "forestCoverage": 43,
+      "carbonEmission": 12
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-09-21",
+      "ndcTargetZh": "2030年排放比基准情景减少30%（有条件）",
+      "ndcTargetEn": "Reduce GHG 30% below BAU by 2030 (conditional)",
+      "ndcRating": "almost_sufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1993-03-19",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1994-10-17",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋；推动绿色长城计划",
+      "commitmentEn": "Committed to 30x30; advancing Great Green Wall initiative"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳市场机制研究阶段",
+      "noteEn": "Carbon market under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "UNCCD",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/sn.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "cd",
+    "countryEn": "DR Congo",
+    "countryZh": "刚果民主共和国",
+    "agencyEn": "Ministry of the Environment and Sustainable Development",
+    "agencyZh": "环境与可持续发展部",
+    "website": "https://www.medd.gouv.cd/",
+    "region": "Africa",
+    "descriptionEn": "DR Congo's ministry protects the Congo Basin, the world's second-largest tropical rainforest and a critical global carbon sink.",
+    "descriptionZh": "刚果民主共和国环境部保护刚果盆地，全球第二大热带雨林和关键碳汇。",
+    "established": 1975,
+    "responsibilities": [
+      "forest",
+      "biodiversity"
+    ],
+    "epiScore": 20.5,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境保护法",
+        "nameEn": "Environmental Protection Law",
+        "year": 2011
+      },
+      {
+        "nameZh": "森林法典",
+        "nameEn": "Forest Code",
+        "year": 2002
+      }
+    ],
+    "data": {
+      "forestCoverage": 67,
+      "carbonEmission": 5
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2017-12-13",
+      "ndcTargetZh": "2030年排放比基准情景减少21%",
+      "ndcTargetEn": "Reduce GHG 21% below BAU by 2030",
+      "ndcRating": "almost_sufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1994-11-30",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1994-12-15",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋；保护刚果盆地雨林",
+      "commitmentEn": "Committed to 30x30; protecting Congo Basin rainforest"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "通过REDD+框架获取碳信用",
+      "noteEn": "Accessing carbon credits through REDD+ framework"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 2,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "CITES",
+      "UNCCD"
+    ],
+    "flagUrl": "https://flagcdn.com/cd.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "ec",
+    "countryEn": "Ecuador",
+    "countryZh": "厄瓜多尔",
+    "agencyEn": "Ministry of the Environment, Water and Ecological Transition",
+    "agencyZh": "环境、水利与生态转型部",
+    "website": "https://www.ambiente.gob.ec/",
+    "region": "South America",
+    "descriptionEn": "Ecuador's ministry manages Galapagos conservation and pioneered constitutional rights of nature in 2008.",
+    "descriptionZh": "厄瓜多尔环境部管理加拉帕戈斯群岛保护，2008年在全球率先将自然权利写入宪法。",
+    "established": 1996,
+    "responsibilities": [
+      "biodiversity",
+      "water"
+    ],
+    "epiScore": 36.8,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "宪法自然权利条款",
+        "nameEn": "Constitutional Rights of Nature",
+        "year": 2008
+      },
+      {
+        "nameZh": "环境法典",
+        "nameEn": "Environmental Organic Code",
+        "year": 2017
+      }
+    ],
+    "data": {
+      "forestCoverage": 50,
+      "carbonEmission": 45
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2017-03-29",
+      "ndcTargetZh": "2025年排放比基准情景减少20.9-25%",
+      "ndcTargetEn": "Reduce GHG 20.9-25% below BAU by 2025",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2019
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1990-04-30",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1993-02-23",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋；保护加拉帕戈斯",
+      "commitmentEn": "Committed to 30x30; protecting Galapagos Islands"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳市场机制研究阶段",
+      "noteEn": "Carbon market under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "CITES",
+      "Escazú Agreement"
+    ],
+    "flagUrl": "https://flagcdn.com/ec.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "uy",
+    "countryEn": "Uruguay",
+    "countryZh": "乌拉圭",
+    "agencyEn": "Ministry of the Environment",
+    "agencyZh": "环境部",
+    "website": "https://www.gub.uy/ministerio-ambiente/",
+    "region": "South America",
+    "descriptionEn": "Uruguay's ministry leads South American clean energy transition with 98% renewable electricity and strong environmental governance.",
+    "descriptionZh": "乌拉圭环境部引领南美清洁能源转型，可再生电力占比98%，环境治理水平领先。",
+    "established": 2020,
+    "responsibilities": [
+      "energy",
+      "water"
+    ],
+    "epiScore": 45.2,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境保护总法",
+        "nameEn": "General Environmental Protection Law",
+        "year": 2000
+      }
+    ],
+    "data": {
+      "forestCoverage": 11,
+      "carbonEmission": 10
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-10-19",
+      "ndcTargetZh": "到2025年CO₂排放强度比1990年降低24%",
+      "ndcTargetEn": "Reduce CO₂ intensity 24% below 1990 by 2025",
+      "ndcRating": "almost_sufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2022
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1991-02-08",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1993-11-05",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": true,
+      "priceUSD": 10,
+      "coveragePercent": 20,
+      "noteZh": "碳税覆盖部分化石燃料",
+      "noteEn": "Carbon tax covering part of fossil fuels"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 4,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "Ramsar Convention",
+      "Escazú Agreement"
+    ],
+    "flagUrl": "https://flagcdn.com/uy.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "jm",
+    "countryEn": "Jamaica",
+    "countryZh": "牙买加",
+    "agencyEn": "Ministry of Economic Growth and Job Creation - Environment Division",
+    "agencyZh": "经济增长与就业创造部-环境司",
+    "website": "https://megjc.gov.jm/",
+    "region": "North America",
+    "descriptionEn": "Jamaica's environment division manages Caribbean climate resilience, coral reef protection, and hurricane preparedness.",
+    "descriptionZh": "牙买加环境司管理加勒比气候韧性、珊瑚礁保护和飓风防备。",
+    "established": 2001,
+    "responsibilities": [
+      "climate",
+      "biodiversity"
+    ],
+    "epiScore": 33.8,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "气候变化政策框架",
+        "nameEn": "Climate Change Policy Framework",
+        "year": 2015
+      }
+    ],
+    "data": {
+      "forestCoverage": 52,
+      "carbonEmission": 10
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2017-04-10",
+      "ndcTargetZh": "2030年排放比基准情景减少28.5%（有条件）",
+      "ndcTargetEn": "Reduce GHG 28.5% below BAU by 2030 (conditional)",
+      "ndcRating": "almost_sufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1993-03-31",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1995-01-06",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳市场机制研究阶段",
+      "noteEn": "Carbon market under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "CITES",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/jm.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "pg",
+    "countryEn": "Papua New Guinea",
+    "countryZh": "巴布亚新几内亚",
+    "agencyEn": "Conservation and Environment Protection Authority (CEPA)",
+    "agencyZh": "自然保护与环境保护局",
+    "website": "https://www.cepa.gov.pg/",
+    "region": "Oceania",
+    "descriptionEn": "PNG's CEPA manages the world's third-largest tropical rainforest and extraordinary endemic biodiversity.",
+    "descriptionZh": "巴新环保局管理全球第三大热带雨林和丰富的特有生物多样性。",
+    "established": 2014,
+    "responsibilities": [
+      "forest",
+      "biodiversity"
+    ],
+    "epiScore": 26.4,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境法",
+        "nameEn": "Environment Act",
+        "year": 2000
+      },
+      {
+        "nameZh": "气候变化管理法",
+        "nameEn": "Climate Change (Management) Act",
+        "year": 2015
+      }
+    ],
+    "data": {
+      "forestCoverage": 74,
+      "carbonEmission": 7
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-09-21",
+      "ndcTargetZh": "2030年排放比基准情景减少50%（有条件）",
+      "ndcTargetEn": "Reduce GHG 50% below BAU by 2030 (conditional)",
+      "ndcRating": "almost_sufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1992-10-27",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1993-03-16",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "通过REDD+获取碳信用",
+      "noteEn": "Accessing carbon credits through REDD+"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 2,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "CITES",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/pg.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "lk",
+    "countryEn": "Sri Lanka",
+    "countryZh": "斯里兰卡",
+    "agencyEn": "Ministry of Environment",
+    "agencyZh": "环境部",
+    "website": "https://www.env.gov.lk/",
+    "region": "Asia",
+    "descriptionEn": "Sri Lanka's ministry manages biodiversity hotspot protection and climate adaptation for this island nation.",
+    "descriptionZh": "斯里兰卡环境部管理生物多样性热点保护和岛屿国家的气候适应。",
+    "established": 1990,
+    "responsibilities": [
+      "biodiversity",
+      "water"
+    ],
+    "epiScore": 29.5,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "国家环境法",
+        "nameEn": "National Environmental Act",
+        "year": 1980
+      }
+    ],
+    "data": {
+      "forestCoverage": 29,
+      "carbonEmission": 25
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-09-21",
+      "ndcTargetZh": "2030年排放比基准情景减少14.5%（无条件）",
+      "ndcTargetEn": "Reduce GHG 14.5% below BAU by 2030 (unconditional)",
+      "ndcRating": "2C",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1989-12-15",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1994-03-23",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳定价研究阶段",
+      "noteEn": "Carbon pricing under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "CITES",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/lk.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "np",
+    "countryEn": "Nepal",
+    "countryZh": "尼泊尔",
+    "agencyEn": "Ministry of Forests and Environment",
+    "agencyZh": "森林与环境部",
+    "website": "https://mofe.gov.np/",
+    "region": "Asia",
+    "descriptionEn": "Nepal's ministry manages Himalayan ecosystem conservation and glacial lake outburst flood risks.",
+    "descriptionZh": "尼泊尔森林与环境部管理喜马拉雅生态保护和冰湖溃决洪水风险。",
+    "established": 2018,
+    "responsibilities": [
+      "forest",
+      "climate"
+    ],
+    "epiScore": 25.8,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境保护法",
+        "nameEn": "Environment Protection Act",
+        "year": 2019
+      }
+    ],
+    "data": {
+      "forestCoverage": 25,
+      "carbonEmission": 12
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-10-05",
+      "ndcTargetZh": "2030年排放比基准情景减少23.7%（有条件）",
+      "ndcTargetEn": "Reduce GHG 23.7% below BAU by 2030 (conditional)",
+      "ndcRating": "1.5C",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1994-07-06",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1993-11-23",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋；保护珠峰地区生态",
+      "commitmentEn": "Committed to 30x30; protecting Everest region ecosystems"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳市场研究阶段",
+      "noteEn": "Carbon market under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 2,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "CITES",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/np.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "mm",
+    "countryEn": "Myanmar",
+    "countryZh": "缅甸",
+    "agencyEn": "Ministry of Natural Resources and Environmental Conservation",
+    "agencyZh": "自然资源与环境保护部",
+    "website": "https://www.monrec.gov.mm/",
+    "region": "Asia",
+    "descriptionEn": "Myanmar's ministry manages rich teak forests and biodiversity along the Indo-Burma hotspot.",
+    "descriptionZh": "缅甸自然资源部管理丰富的柚木森林和印度-缅甸生物多样性热点。",
+    "established": 2016,
+    "responsibilities": [
+      "forest",
+      "biodiversity"
+    ],
+    "epiScore": 24.0,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境保护法",
+        "nameEn": "Environmental Conservation Law",
+        "year": 2012
+      }
+    ],
+    "data": {
+      "forestCoverage": 42,
+      "carbonEmission": 30
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2017-09-19",
+      "ndcTargetZh": "减少林业部门碳排放，提高可再生能源至37%",
+      "ndcTargetEn": "Reduce forestry emissions; increase renewable energy to 37%",
+      "ndcRating": "critically_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1993-11-24",
+      "kigaliAmendment": false,
+      "commitmentZh": "已淘汰CFCs；基加利修正案尚未批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment not yet ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1994-11-25",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "无碳定价机制",
+      "noteEn": "No carbon pricing"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 1,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "CITES"
+    ],
+    "flagUrl": "https://flagcdn.com/mm.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "kh",
+    "countryEn": "Cambodia",
+    "countryZh": "柬埔寨",
+    "agencyEn": "Ministry of Environment",
+    "agencyZh": "环境部",
+    "website": "https://www.moe.gov.kh/",
+    "region": "Asia",
+    "descriptionEn": "Cambodia's ministry manages Tonle Sap Lake and Mekong River conservation with focus on deforestation prevention.",
+    "descriptionZh": "柬埔寨环境部管理洞里萨湖和湄公河保护，重点防治森林砍伐。",
+    "established": 1993,
+    "responsibilities": [
+      "forest",
+      "water"
+    ],
+    "epiScore": 26.3,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境保护与自然资源管理法",
+        "nameEn": "Environmental Protection and Natural Resources Management Law",
+        "year": 1996
+      }
+    ],
+    "data": {
+      "forestCoverage": 46,
+      "carbonEmission": 15
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2017-02-06",
+      "ndcTargetZh": "2030年排放比基准情景减少42%（有条件）",
+      "ndcTargetEn": "Reduce GHG 42% below BAU by 2030 (conditional)",
+      "ndcRating": "almost_sufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "2001-06-27",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1995-02-09",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳信用市场发展中",
+      "noteEn": "Carbon credit market developing"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 2,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "CITES",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/kh.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "mn",
+    "countryEn": "Mongolia",
+    "countryZh": "蒙古国",
+    "agencyEn": "Ministry of Environment and Tourism",
+    "agencyZh": "环境与旅游部",
+    "website": "https://www.met.gov.mn/",
+    "region": "Asia",
+    "descriptionEn": "Mongolia's ministry manages vast steppe grasslands and combats severe desertification from overgrazing and climate change.",
+    "descriptionZh": "蒙古国环境部管理广袤的草原草地，应对过度放牧和气候变化造成的严重荒漠化。",
+    "established": 2012,
+    "responsibilities": [
+      "biodiversity",
+      "climate"
+    ],
+    "epiScore": 30.5,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境保护法",
+        "nameEn": "Environmental Protection Law",
+        "year": 2012
+      }
+    ],
+    "data": {
+      "forestCoverage": 8,
+      "carbonEmission": 35
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-09-21",
+      "ndcTargetZh": "2030年排放比基准情景减少22.7%",
+      "ndcTargetEn": "Reduce GHG 22.7% below BAU by 2030",
+      "ndcRating": "2C",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1996-03-07",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1993-09-30",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳市场研究阶段",
+      "noteEn": "Carbon market under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "UNCCD",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/mn.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "uz",
+    "countryEn": "Uzbekistan",
+    "countryZh": "乌兹别克斯坦",
+    "agencyEn": "Ministry of Ecology, Environmental Protection and Climate Change",
+    "agencyZh": "生态、环境保护与气候变化部",
+    "website": "https://eco.gov.uz/",
+    "region": "Asia",
+    "descriptionEn": "Uzbekistan's ministry manages the Aral Sea environmental disaster recovery and water-scarce Central Asian climate adaptation.",
+    "descriptionZh": "乌兹别克斯坦生态部管理咸海环境灾难恢复和中亚缺水地区的气候适应。",
+    "established": 2017,
+    "responsibilities": [
+      "water",
+      "climate"
+    ],
+    "epiScore": 31.2,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境保护法",
+        "nameEn": "Environmental Protection Law",
+        "year": 1992
+      }
+    ],
+    "data": {
+      "forestCoverage": 8,
+      "carbonEmission": 120
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2018-11-09",
+      "ndcTargetZh": "2030年人均排放比2010年降低35%",
+      "ndcTargetEn": "Reduce per capita GHG 35% below 2010 by 2030",
+      "ndcRating": "not_assessed",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2017
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1993-05-18",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1995-10-19",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳市场机制研究阶段",
+      "noteEn": "Carbon market under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "UNCCD"
+    ],
+    "flagUrl": "https://flagcdn.com/uz.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "ao",
+    "countryEn": "Angola",
+    "countryZh": "安哥拉",
+    "agencyEn": "Ministry of the Environment",
+    "agencyZh": "环境部",
+    "website": "https://www.minamb.gov.ao/",
+    "region": "Africa",
+    "descriptionEn": "Angola's ministry manages rich biodiversity and oil-dependent economy's environmental transition.",
+    "descriptionZh": "安哥拉环境部管理丰富的生物多样性和石油依赖经济的环境转型。",
+    "established": 1998,
+    "responsibilities": [
+      "biodiversity",
+      "water"
+    ],
+    "epiScore": 23.5,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境基本法",
+        "nameEn": "Environmental Base Law",
+        "year": 1998
+      }
+    ],
+    "data": {
+      "forestCoverage": 46,
+      "carbonEmission": 35
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2020-11-10",
+      "ndcTargetZh": "2025年排放比基准情景减少35%（有条件）",
+      "ndcTargetEn": "Reduce GHG 35% below BAU by 2025 (conditional)",
+      "ndcRating": "not_assessed",
+      "ndcHistory": [
+        {
+          "version": "NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "2000-03-17",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1998-04-01",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "无碳定价机制",
+      "noteEn": "No carbon pricing"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 1,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "UNCCD"
+    ],
+    "flagUrl": "https://flagcdn.com/ao.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "mz",
+    "countryEn": "Mozambique",
+    "countryZh": "莫桑比克",
+    "agencyEn": "Ministry of Land and Environment",
+    "agencyZh": "土地与环境部",
+    "website": "https://www.mta.gov.mz/",
+    "region": "Africa",
+    "descriptionEn": "Mozambique's ministry manages coastal ecosystem protection and climate adaptation for one of Africa's most vulnerable nations.",
+    "descriptionZh": "莫桑比克土地部管理沿海生态保护和非洲最脆弱国家之一的气候适应。",
+    "established": 2015,
+    "responsibilities": [
+      "climate",
+      "water"
+    ],
+    "epiScore": 22.8,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境法",
+        "nameEn": "Environment Law",
+        "year": 1997
+      }
+    ],
+    "data": {
+      "forestCoverage": 36,
+      "carbonEmission": 10
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2018-06-04",
+      "ndcTargetZh": "2030年排放比基准情景减少40%（有条件）",
+      "ndcTargetEn": "Reduce GHG 40% below BAU by 2030 (conditional)",
+      "ndcRating": "2C",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2021
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1994-09-09",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1995-08-25",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳市场研究阶段",
+      "noteEn": "Carbon market under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 2,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "UNCCD",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/mz.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "ve",
+    "countryEn": "Venezuela",
+    "countryZh": "委内瑞拉",
+    "agencyEn": "Ministry of Ecosocialism",
+    "agencyZh": "生态社会主义部",
+    "website": "https://www.minec.gob.ve/",
+    "region": "South America",
+    "descriptionEn": "Venezuela's ministry manages rich biodiversity including the Amazon, Orinoco Delta, and tepui ecosystems.",
+    "descriptionZh": "委内瑞拉生态部管理丰富的生物多样性，包括亚马逊、奥里诺科三角洲和台地生态系统。",
+    "established": 2014,
+    "responsibilities": [
+      "biodiversity",
+      "forest"
+    ],
+    "epiScore": 31.5,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境基本法",
+        "nameEn": "Organic Environmental Law",
+        "year": 2006
+      }
+    ],
+    "data": {
+      "forestCoverage": 52,
+      "carbonEmission": 120
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2017-07-21",
+      "ndcTargetZh": "2030年排放比基准情景减少20%",
+      "ndcTargetEn": "Reduce GHG 20% below BAU by 2030",
+      "ndcRating": "highly_insufficient",
+      "ndcHistory": [
+        {
+          "version": "NDC",
+          "year": 2017
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1989-02-06",
+      "kigaliAmendment": false,
+      "commitmentZh": "已淘汰CFCs；基加利修正案尚未批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment not yet ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1994-09-13",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "无碳定价机制",
+      "noteEn": "No carbon pricing"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 2,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "CITES",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/ve.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "bo",
+    "countryEn": "Bolivia",
+    "countryZh": "玻利维亚",
+    "agencyEn": "Ministry of the Environment and Water",
+    "agencyZh": "环境与水资源部",
+    "website": "https://www.mmaya.gob.bo/",
+    "region": "South America",
+    "descriptionEn": "Bolivia's ministry manages Andean and Amazon ecosystems with a unique 'Mother Earth' legal framework.",
+    "descriptionZh": "玻利维亚环境部管理安第斯和亚马逊生态系统，拥有独特的「地球母亲」法律框架。",
+    "established": 2009,
+    "responsibilities": [
+      "water",
+      "biodiversity"
+    ],
+    "epiScore": 32.5,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "地球母亲权利法",
+        "nameEn": "Law of the Rights of Mother Earth",
+        "year": 2010
+      }
+    ],
+    "data": {
+      "forestCoverage": 50,
+      "carbonEmission": 25
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2016-10-05",
+      "ndcTargetZh": "2030年前保持森林碳汇并增加可再生能源",
+      "ndcTargetEn": "Maintain forest carbon sinks and increase renewable energy by 2030",
+      "ndcRating": "highly_insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1994-10-03",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1994-10-03",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "无碳定价机制",
+      "noteEn": "No carbon pricing"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "CITES",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/bo.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "cu",
+    "countryEn": "Cuba",
+    "countryZh": "古巴",
+    "agencyEn": "Ministry of Science, Technology and the Environment (CITMA)",
+    "agencyZh": "科学、技术与环境部",
+    "website": "https://www.citma.gob.cu/",
+    "region": "North America",
+    "descriptionEn": "Cuba's CITMA manages Caribbean biodiversity conservation and climate adaptation with world-leading disaster preparedness.",
+    "descriptionZh": "古巴科技环境部管理加勒比生物多样性保护和世界领先的灾害防备体系。",
+    "established": 1994,
+    "responsibilities": [
+      "biodiversity",
+      "climate"
+    ],
+    "epiScore": 37.4,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境法",
+        "nameEn": "Environmental Law",
+        "year": 1997
+      },
+      {
+        "nameZh": "气候变化应对计划",
+        "nameEn": "Plan for Climate Change (Tarea Vida)",
+        "year": 2017
+      }
+    ],
+    "data": {
+      "forestCoverage": 32,
+      "carbonEmission": 30
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2017-01-28",
+      "ndcTargetZh": "提高可再生能源至24%并保护沿海生态",
+      "ndcTargetEn": "Increase renewable energy to 24% and protect coastal ecosystems",
+      "ndcRating": "not_assessed",
+      "ndcHistory": [
+        {
+          "version": "NDC",
+          "year": 2017
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1992-07-14",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1994-03-08",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "无碳定价机制",
+      "noteEn": "No carbon pricing"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "CITES",
+      "Ramsar Convention"
+    ],
+    "flagUrl": "https://flagcdn.com/cu.svg",
+    "contact": {
+      "email": ""
+    }
+  },
+  {
+    "isoCode": "do",
+    "countryEn": "Dominican Republic",
+    "countryZh": "多米尼加",
+    "agencyEn": "Ministry of the Environment and Natural Resources",
+    "agencyZh": "环境与自然资源部",
+    "website": "https://ambiente.gob.do/",
+    "region": "North America",
+    "descriptionEn": "Dominican Republic's ministry manages Caribbean island biodiversity and coral reef conservation.",
+    "descriptionZh": "多米尼加环境部管理加勒比岛屿生物多样性和珊瑚礁保护。",
+    "established": 2000,
+    "responsibilities": [
+      "biodiversity",
+      "water"
+    ],
+    "epiScore": 32.8,
+    "netZeroTarget": 2050,
+    "keyLaws": [
+      {
+        "nameZh": "环境与自然资源总法",
+        "nameEn": "General Law on the Environment and Natural Resources",
+        "year": 2000
+      }
+    ],
+    "data": {
+      "forestCoverage": 41,
+      "carbonEmission": 25
+    },
+    "parisAgreement": {
+      "status": "ratified",
+      "ratifiedDate": "2017-09-21",
+      "ndcTargetZh": "2030年排放比基准情景减少27%",
+      "ndcTargetEn": "Reduce GHG 27% below BAU by 2030",
+      "ndcRating": "insufficient",
+      "ndcHistory": [
+        {
+          "version": "INDC",
+          "year": 2015
+        },
+        {
+          "version": "Updated NDC",
+          "year": 2020
+        }
+      ],
+      "nextNdcDeadline": 2025
+    },
+    "montrealProtocol": {
+      "status": "ratified",
+      "ratifiedDate": "1993-03-18",
+      "kigaliAmendment": true,
+      "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+      "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+    },
+    "cbd": {
+      "status": "ratified",
+      "ratifiedDate": "1996-11-25",
+      "target30x30": 30,
+      "commitmentZh": "承诺2030年保护30%陆地和海洋",
+      "commitmentEn": "Committed to 30x30 target"
+    },
+    "carbonPricing": {
+      "hasETS": false,
+      "hasCarbonTax": false,
+      "priceUSD": null,
+      "coveragePercent": 0,
+      "noteZh": "碳市场研究阶段",
+      "noteEn": "Carbon market under study"
+    },
+    "reportingStatus": {
+      "btrSubmitted": false,
+      "btrYear": null,
+      "nationalComm": 3,
+      "statusZh": "BTR1待提交",
+      "statusEn": "BTR1 pending"
+    },
+    "treaties": [
+      "Paris Agreement",
+      "CBD",
+      "CITES"
+    ],
+    "flagUrl": "https://flagcdn.com/do.svg",
+    "contact": {
+      "email": ""
+    }
   }
 ]
