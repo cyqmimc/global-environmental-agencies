@@ -1,15 +1,43 @@
 import { useState, useEffect, useMemo, useCallback } from "react";
-import { Bar } from "react-chartjs-2";
+import { Bar, Radar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   BarElement,
   CategoryScale,
   LinearScale,
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
   Tooltip,
   Legend,
 } from "chart.js";
 
-ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
+ChartJS.register(
+  BarElement, CategoryScale, LinearScale,
+  RadialLinearScale, PointElement, LineElement, Filler,
+  Tooltip, Legend
+);
+
+const TREATY_LABELS = {
+  "Paris Agreement": "巴黎协定",
+  "CBD": "生物多样性公约",
+  "CITES": "濒危物种贸易公约",
+  "UNFCCC": "联合国气候变化框架公约",
+  "UNCCD": "联合国防治荒漠化公约",
+  "Montreal Protocol": "蒙特利尔议定书",
+  "Basel Convention": "巴塞尔公约",
+  "Ramsar Convention": "拉姆萨尔湿地公约",
+  "Minamata Convention": "水俣公约",
+  "Barcelona Convention": "巴塞罗那公约",
+  "OSPAR Convention": "OSPAR海洋保护公约",
+  "Alpine Convention": "阿尔卑斯公约",
+  "Amazon Cooperation Treaty": "亚马逊合作条约",
+  "Antarctic Treaty": "南极条约",
+  "HELCOM Convention": "赫尔辛基海洋保护公约",
+  "Escazú Agreement": "埃斯卡苏协定",
+  "Pacific Islands Forum": "太平洋岛国论坛",
+};
 
 const RESPONSIBILITY_LABELS = {
   climate: { zh: "气候", en: "Climate" },
@@ -62,6 +90,12 @@ function exportCSV(items, language) {
     t("碳排放(Mt)", "Carbon Emission(Mt)"),
     "EPI",
     t("碳中和目标年", "Net Zero Target"),
+    t("可再生能源(%)", "Renewable Energy(%)"),
+    "PM2.5 (µg/m³)",
+    t("人均CO₂(吨)", "CO₂/Capita(t)"),
+    t("保护区面积(%)", "Protected Areas(%)"),
+    t("人口", "Population"),
+    t("GDP (USD)", "GDP (USD)"),
     t("核心法律", "Key Laws"),
     t("国际公约", "Treaties"),
     t("官网", "Website"),
@@ -78,8 +112,14 @@ function exportCSV(items, language) {
     c.data.carbonEmission,
     c.epiScore,
     c.netZeroTarget,
+    c.wb?.renewableEnergy?.toFixed(1) ?? "",
+    c.wb?.pm25?.toFixed(1) ?? "",
+    c.wb?.co2PerCapita?.toFixed(2) ?? "",
+    c.wb?.protectedAreas?.toFixed(1) ?? "",
+    c.wb?.population ?? "",
+    c.wb?.gdp ? Math.round(c.wb.gdp) : "",
     (c.keyLaws || []).map((l) => (language === "zh" ? l.nameZh : l.nameEn) + "(" + l.year + ")").join(" / "),
-    c.treaties.join(" / "),
+    c.treaties.map((tr) => language === "zh" ? (TREATY_LABELS[tr] || tr) : tr).join(" / "),
     c.website,
   ]);
   const BOM = "\uFEFF";
@@ -107,11 +147,21 @@ export default function GlobalEnvironmentalAgencies() {
   const [copied, setCopied] = useState(false);
   const [compareList, setCompareList] = useState([]);
   const [showCompare, setShowCompare] = useState(false);
+  const [wbMeta, setWbMeta] = useState(null);
 
   useEffect(() => {
-    fetch("/countries.json")
-      .then((response) => response.json())
-      .then((data) => setCountries(data));
+    Promise.all([
+      fetch("/countries.json").then((r) => r.json()),
+      fetch("/wb-data.json").then((r) => r.json()).catch(() => ({ countries: {}, meta: null })),
+    ]).then(([countriesData, wbData]) => {
+      if (wbData.meta) setWbMeta(wbData.meta);
+      const merged = countriesData.map((c) => {
+        const code = c.isoCode || c.flagUrl?.match(/flagcdn\.com\/(\w{2})\.svg/)?.[1];
+        const wb = code ? wbData.countries?.[code] || null : null;
+        return { ...c, wb };
+      });
+      setCountries(merged);
+    });
   }, []);
 
   // Sync state to URL
@@ -133,16 +183,18 @@ export default function GlobalEnvironmentalAgencies() {
   );
 
   const globalAvg = useMemo(() => {
-    if (countries.length === 0) return { forestCoverage: 0, carbonEmission: 0 };
+    if (countries.length === 0) return {};
+    const avg = (fn) => {
+      const vals = countries.map(fn).filter((v) => v != null);
+      return vals.length ? +(vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(2) : null;
+    };
     return {
-      forestCoverage: +(
-        countries.reduce((s, c) => s + c.data.forestCoverage, 0) /
-        countries.length
-      ).toFixed(1),
-      carbonEmission: +(
-        countries.reduce((s, c) => s + c.data.carbonEmission, 0) /
-        countries.length
-      ).toFixed(0),
+      forestCoverage: avg((c) => c.data.forestCoverage),
+      carbonEmission: avg((c) => c.data.carbonEmission),
+      co2PerCapita: avg((c) => c.wb?.co2PerCapita),
+      renewableEnergy: avg((c) => c.wb?.renewableEnergy),
+      pm25: avg((c) => c.wb?.pm25),
+      protectedAreas: avg((c) => c.wb?.protectedAreas),
     };
   }, [countries]);
 
@@ -167,6 +219,12 @@ export default function GlobalEnvironmentalAgencies() {
         return b.data.carbonEmission - a.data.carbonEmission;
       if (sortOrder === "epiAsc") return a.epiScore - b.epiScore;
       if (sortOrder === "epiDesc") return b.epiScore - a.epiScore;
+      if (sortOrder === "renewAsc") return (a.wb?.renewableEnergy ?? -1) - (b.wb?.renewableEnergy ?? -1);
+      if (sortOrder === "renewDesc") return (b.wb?.renewableEnergy ?? -1) - (a.wb?.renewableEnergy ?? -1);
+      if (sortOrder === "pm25Asc") return (a.wb?.pm25 ?? 999) - (b.wb?.pm25 ?? 999);
+      if (sortOrder === "pm25Desc") return (b.wb?.pm25 ?? 0) - (a.wb?.pm25 ?? 0);
+      if (sortOrder === "co2pcAsc") return (a.wb?.co2PerCapita ?? 999) - (b.wb?.co2PerCapita ?? 999);
+      if (sortOrder === "co2pcDesc") return (b.wb?.co2PerCapita ?? 0) - (a.wb?.co2PerCapita ?? 0);
       return 0;
     });
 
@@ -270,9 +328,19 @@ export default function GlobalEnvironmentalAgencies() {
             </p>
           </div>
           <div className="text-center">
-            <p className="text-2xl font-bold text-gray-500">2026-04</p>
+            <p className="text-2xl font-bold text-emerald-600">
+              {globalAvg.renewableEnergy ? `${globalAvg.renewableEnergy}%` : "—"}
+            </p>
             <p className="text-sm text-gray-500">
-              {t("最近更新", "Last Updated")}
+              {t("平均可再生能源", "Avg. Renewable")}
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-2xl font-bold text-gray-500">
+              <span className="text-base">World Bank</span>
+            </p>
+            <p className="text-sm text-gray-500">
+              {t("数据来源", "Data Source")}
             </p>
           </div>
         </div>
@@ -337,6 +405,15 @@ export default function GlobalEnvironmentalAgencies() {
               </option>
               <option value="epiDesc">
                 {t("EPI 评分 ↓", "EPI Score ↓")}
+              </option>
+              <option value="renewDesc">
+                {t("可再生能源 ↓", "Renewable Energy ↓")}
+              </option>
+              <option value="pm25Asc">
+                {t("空气质量 最优", "Best Air Quality")}
+              </option>
+              <option value="co2pcAsc">
+                {t("人均碳排 最低", "Lowest CO₂/Capita")}
               </option>
             </select>
           </div>
@@ -453,9 +530,9 @@ export default function GlobalEnvironmentalAgencies() {
                     </span>
                   ))}
                 </div>
-                <div className="mt-3 flex gap-3 text-xs text-gray-400">
-                  <span>🌲 {item.data.forestCoverage}%</span>
-                  <span>💨 {item.data.carbonEmission} Mt</span>
+                <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs text-gray-400 justify-center">
+                  <span>🌲 {item.wb?.forestArea?.toFixed(1) ?? item.data.forestCoverage}%</span>
+                  <span>⚡ {item.wb?.renewableEnergy?.toFixed(0) ?? "—"}%</span>
                   <span className="text-amber-600 font-medium">EPI {item.epiScore}</span>
                 </div>
                 <a
@@ -705,6 +782,86 @@ export default function GlobalEnvironmentalAgencies() {
                         </td>
                       ))}
                     </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-2 text-gray-500">
+                        {t("可再生能源", "Renewable Energy")}
+                      </td>
+                      {compareList.map((c) => (
+                        <td key={c.countryEn} className="py-3 px-2 text-center font-bold text-emerald-600">
+                          {c.wb?.renewableEnergy?.toFixed(1) ?? "—"}%
+                        </td>
+                      ))}
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-2 text-gray-500">
+                        PM2.5 (µg/m³)
+                      </td>
+                      {compareList.map((c) => (
+                        <td key={c.countryEn} className="py-3 px-2 text-center font-bold text-amber-600">
+                          {c.wb?.pm25?.toFixed(1) ?? "—"}
+                        </td>
+                      ))}
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-2 text-gray-500">
+                        {t("人均CO₂ (吨)", "CO₂/Capita (t)")}
+                      </td>
+                      {compareList.map((c) => (
+                        <td key={c.countryEn} className="py-3 px-2 text-center font-bold text-red-500">
+                          {c.wb?.co2PerCapita?.toFixed(1) ?? "—"}
+                        </td>
+                      ))}
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-2 text-gray-500">
+                        {t("保护区面积", "Protected Areas")}
+                      </td>
+                      {compareList.map((c) => (
+                        <td key={c.countryEn} className="py-3 px-2 text-center font-bold text-teal-600">
+                          {c.wb?.protectedAreas?.toFixed(1) ?? "—"}%
+                        </td>
+                      ))}
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-2 text-gray-500">
+                        {t("30×30 进度", "30×30 Progress")}
+                      </td>
+                      {compareList.map((c) => {
+                        const pa = c.wb?.protectedAreas;
+                        return (
+                          <td key={c.countryEn} className="py-3 px-2 text-center">
+                            {pa != null ? (
+                              <div>
+                                <div className="w-full bg-gray-200 rounded-full h-2 mb-1">
+                                  <div
+                                    className={`h-2 rounded-full ${pa >= 30 ? "bg-emerald-600" : "bg-emerald-400"}`}
+                                    style={{ width: `${Math.min(100, (pa / 30) * 100)}%` }}
+                                  />
+                                </div>
+                                <span className={`text-xs font-bold ${pa >= 30 ? "text-emerald-600" : "text-gray-600"}`}>
+                                  {pa.toFixed(1)}% / 30%
+                                </span>
+                              </div>
+                            ) : "—"}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-2 text-gray-500">
+                        {t("NDC 承诺", "NDC Target")}
+                      </td>
+                      {compareList.map((c) => (
+                        <td
+                          key={c.countryEn}
+                          className="py-3 px-2 text-center text-xs text-blue-800 leading-relaxed"
+                        >
+                          {language === "zh"
+                            ? c.parisAgreement?.ndcTargetZh || "—"
+                            : c.parisAgreement?.ndcTargetEn || "—"}
+                        </td>
+                      ))}
+                    </tr>
                     <tr>
                       <td className="py-3 px-2 text-gray-500">
                         {t("国际公约", "Treaties")}
@@ -720,7 +877,7 @@ export default function GlobalEnvironmentalAgencies() {
                                 key={tr}
                                 className="bg-purple-50 text-purple-600 text-xs px-2 py-0.5 rounded-full"
                               >
-                                {tr}
+                                {language === "zh" ? (TREATY_LABELS[tr] || tr) : tr}
                               </span>
                             ))}
                           </div>
@@ -886,9 +1043,117 @@ export default function GlobalEnvironmentalAgencies() {
                 </div>
               </div>
 
+              {/* Paris Agreement NDC */}
+              {selectedCountry.parisAgreement && (
+                <div className="mb-4 bg-blue-50 rounded-xl p-4 border border-blue-100">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h4 className="text-sm font-semibold text-blue-800">
+                      {t("巴黎协定 · 国家自主贡献 (NDC)", "Paris Agreement · NDC")}
+                    </h4>
+                    <span className="bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full">
+                      {t("已批准", "Ratified")}
+                    </span>
+                  </div>
+                  {selectedCountry.parisAgreement.ratifiedDate && (
+                    <p className="text-xs text-blue-500 mb-2">
+                      {t("批准日期", "Ratified")} {selectedCountry.parisAgreement.ratifiedDate}
+                      {selectedCountry.netZeroTarget && (
+                        <span className="ml-3">
+                          {t("碳中和目标", "Net Zero Target")}: <strong>{selectedCountry.netZeroTarget}</strong>
+                        </span>
+                      )}
+                    </p>
+                  )}
+                  <p className="text-sm text-blue-900 leading-relaxed">
+                    {language === "zh"
+                      ? selectedCountry.parisAgreement.ndcTargetZh
+                      : selectedCountry.parisAgreement.ndcTargetEn}
+                  </p>
+                </div>
+              )}
+
+              {/* Montreal Protocol */}
+              {selectedCountry.montrealProtocol && (
+                <div className="mb-4 bg-cyan-50 rounded-xl p-4 border border-cyan-100">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h4 className="text-sm font-semibold text-cyan-800">
+                      {t("蒙特利尔议定书 · 臭氧层保护", "Montreal Protocol · Ozone Protection")}
+                    </h4>
+                    <span className="bg-cyan-600 text-white text-xs px-2 py-0.5 rounded-full">
+                      {t("已批准", "Ratified")}
+                    </span>
+                    {selectedCountry.montrealProtocol.kigaliAmendment ? (
+                      <span className="bg-cyan-100 text-cyan-700 text-xs px-2 py-0.5 rounded-full">
+                        {t("基加利修正案 ✓", "Kigali ✓")}
+                      </span>
+                    ) : (
+                      <span className="bg-gray-100 text-gray-500 text-xs px-2 py-0.5 rounded-full">
+                        {t("基加利修正案 ✗", "Kigali ✗")}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-xs text-cyan-500 mb-2">
+                    {t("批准日期", "Ratified")} {selectedCountry.montrealProtocol.ratifiedDate}
+                  </p>
+                  <p className="text-sm text-cyan-900 leading-relaxed">
+                    {language === "zh"
+                      ? selectedCountry.montrealProtocol.commitmentZh
+                      : selectedCountry.montrealProtocol.commitmentEn}
+                  </p>
+                </div>
+              )}
+
+              {/* CBD 30x30 */}
+              {selectedCountry.cbd && (
+                <div className="mb-4 bg-emerald-50 rounded-xl p-4 border border-emerald-100">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h4 className="text-sm font-semibold text-emerald-800">
+                      {t("生物多样性公约 · 30×30 目标", "CBD · 30×30 Target")}
+                    </h4>
+                    <span className={`text-white text-xs px-2 py-0.5 rounded-full ${
+                      selectedCountry.cbd.status === "ratified" ? "bg-emerald-600" : "bg-amber-500"
+                    }`}>
+                      {selectedCountry.cbd.status === "ratified" ? t("已批准", "Ratified") : t("已签署", "Signed")}
+                    </span>
+                  </div>
+                  {selectedCountry.cbd.ratifiedDate && (
+                    <p className="text-xs text-emerald-500 mb-2">
+                      {t("批准日期", "Ratified")} {selectedCountry.cbd.ratifiedDate}
+                    </p>
+                  )}
+                  {/* 30x30 progress bar */}
+                  {selectedCountry.wb?.protectedAreas != null && (
+                    <div className="mb-2">
+                      <div className="flex justify-between text-xs text-emerald-700 mb-1">
+                        <span>{t("当前保护区覆盖", "Current Protected Areas")}: {selectedCountry.wb.protectedAreas.toFixed(1)}%</span>
+                        <span>{t("目标", "Target")}: 30%</span>
+                      </div>
+                      <div className="w-full bg-emerald-200 rounded-full h-3">
+                        <div
+                          className={`h-3 rounded-full transition-all ${
+                            selectedCountry.wb.protectedAreas >= 30 ? "bg-emerald-600" : "bg-emerald-500"
+                          }`}
+                          style={{ width: `${Math.min(100, (selectedCountry.wb.protectedAreas / 30) * 100)}%` }}
+                        />
+                      </div>
+                      <p className="text-xs text-emerald-600 mt-1 text-right">
+                        {selectedCountry.wb.protectedAreas >= 30
+                          ? t("✓ 已达标", "✓ Target met")
+                          : `${t("还需", "Need")} ${(30 - selectedCountry.wb.protectedAreas).toFixed(1)}%`}
+                      </p>
+                    </div>
+                  )}
+                  <p className="text-sm text-emerald-900 leading-relaxed">
+                    {language === "zh"
+                      ? selectedCountry.cbd.commitmentZh
+                      : selectedCountry.cbd.commitmentEn}
+                  </p>
+                </div>
+              )}
+
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-gray-500 mb-2">
-                  {t("参与国际公约", "International Treaties")}
+                  {t("其他国际公约", "Other International Treaties")}
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {selectedCountry.treaties.map((tr) => (
@@ -896,7 +1161,7 @@ export default function GlobalEnvironmentalAgencies() {
                       key={tr}
                       className="bg-purple-50 text-purple-700 text-sm px-3 py-1 rounded-full"
                     >
-                      {tr}
+                      {language === "zh" ? (TREATY_LABELS[tr] || tr) : tr}
                     </span>
                   ))}
                 </div>
@@ -957,84 +1222,130 @@ export default function GlobalEnvironmentalAgencies() {
                 )}
               </button>
 
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-green-50 rounded-xl p-4 text-center">
-                  <p className="text-3xl font-bold text-green-700">
-                    {selectedCountry.data.forestCoverage}%
-                  </p>
-                  <p className="text-sm text-green-600 mt-1">
-                    {t("森林覆盖率", "Forest Coverage")}
-                  </p>
-                  <p className="text-xs text-gray-400 mt-1">
-                    {t("全球均值", "Global avg.")} {globalAvg.forestCoverage}%
-                  </p>
-                </div>
-                <div className="bg-red-50 rounded-xl p-4 text-center">
-                  <p className="text-3xl font-bold text-red-600">
-                    {selectedCountry.data.carbonEmission}
-                  </p>
-                  <p className="text-sm text-red-500 mt-1">
-                    {t("碳排放 (百万吨)", "Carbon Emission (Mt)")}
-                  </p>
-                  <p className="text-xs text-gray-400 mt-1">
-                    {t("全球均值", "Global avg.")} {globalAvg.carbonEmission} Mt
-                  </p>
-                </div>
-              </div>
+              {/* 6-metric data cards with data year */}
+              {(() => {
+                const dy = selectedCountry.wb?.dataYear || {};
+                return (
+                  <div className="grid grid-cols-3 gap-3 mb-6">
+                    <div className="bg-green-50 rounded-xl p-3 text-center">
+                      <p className="text-2xl font-bold text-green-700">
+                        {selectedCountry.wb?.forestArea?.toFixed(1) ?? selectedCountry.data.forestCoverage}%
+                      </p>
+                      <p className="text-xs text-green-600 mt-1">{t("森林覆盖率", "Forest Area")}</p>
+                      <p className="text-xs text-gray-400">{t("均值", "Avg")} {globalAvg.forestCoverage}%</p>
+                      {dy.forestArea && <p className="text-xs text-gray-300 mt-0.5">{dy.forestArea}</p>}
+                    </div>
+                    <div className="bg-emerald-50 rounded-xl p-3 text-center">
+                      <p className="text-2xl font-bold text-emerald-700">
+                        {selectedCountry.wb?.renewableEnergy?.toFixed(1) ?? "—"}%
+                      </p>
+                      <p className="text-xs text-emerald-600 mt-1">{t("可再生能源", "Renewable Energy")}</p>
+                      <p className="text-xs text-gray-400">{t("均值", "Avg")} {globalAvg.renewableEnergy}%</p>
+                      {dy.renewableEnergy && <p className="text-xs text-gray-300 mt-0.5">{dy.renewableEnergy}</p>}
+                    </div>
+                    <div className="bg-teal-50 rounded-xl p-3 text-center">
+                      <p className="text-2xl font-bold text-teal-700">
+                        {selectedCountry.wb?.protectedAreas?.toFixed(1) ?? "—"}%
+                      </p>
+                      <p className="text-xs text-teal-600 mt-1">{t("自然保护区", "Protected Areas")}</p>
+                      <p className="text-xs text-gray-400">{t("均值", "Avg")} {globalAvg.protectedAreas}%</p>
+                      {dy.protectedAreas && <p className="text-xs text-gray-300 mt-0.5">{dy.protectedAreas}</p>}
+                    </div>
+                    <div className="bg-amber-50 rounded-xl p-3 text-center">
+                      <p className="text-2xl font-bold text-amber-700">
+                        {selectedCountry.wb?.pm25?.toFixed(1) ?? "—"}
+                      </p>
+                      <p className="text-xs text-amber-600 mt-1">PM2.5 (µg/m³)</p>
+                      <p className="text-xs text-gray-400">{t("均值", "Avg")} {globalAvg.pm25}</p>
+                      {dy.pm25 && <p className="text-xs text-gray-300 mt-0.5">{dy.pm25}</p>}
+                    </div>
+                    <div className="bg-red-50 rounded-xl p-3 text-center">
+                      <p className="text-2xl font-bold text-red-600">
+                        {selectedCountry.wb?.co2PerCapita?.toFixed(1) ?? "—"}
+                      </p>
+                      <p className="text-xs text-red-500 mt-1">{t("人均CO₂ (吨)", "CO₂/Capita (t)")}</p>
+                      <p className="text-xs text-gray-400">{t("均值", "Avg")} {globalAvg.co2PerCapita}</p>
+                      {dy.co2Mt && <p className="text-xs text-gray-300 mt-0.5">{dy.co2Mt}</p>}
+                    </div>
+                    <div className="bg-orange-50 rounded-xl p-3 text-center">
+                      <p className="text-2xl font-bold text-orange-600">
+                        {selectedCountry.epiScore}
+                      </p>
+                      <p className="text-xs text-orange-500 mt-1">EPI {t("评分", "Score")}</p>
+                      <p className="text-xs text-gray-400">{t("满分 100", "Max 100")}</p>
+                    </div>
+                  </div>
+                );
+              })()}
 
-              <div className="bg-gray-50 rounded-xl p-4">
-                <h4 className="text-sm font-semibold text-gray-500 mb-3">
-                  {t("与全球均值对比", "Compared to Global Average")}
-                </h4>
-                <Bar
-                  data={{
-                    labels: [
-                      t("森林覆盖率 (%)", "Forest Coverage (%)"),
-                      t("碳排放 (Mt)", "Carbon Emission (Mt)"),
-                    ],
-                    datasets: [
-                      {
-                        label:
-                          language === "zh"
-                            ? selectedCountry.countryZh
-                            : selectedCountry.countryEn,
-                        data: [
-                          selectedCountry.data.forestCoverage,
-                          selectedCountry.data.carbonEmission,
-                        ],
-                        backgroundColor: ["#22c55e", "#ef4444"],
-                        borderRadius: 8,
+              {/* Radar chart */}
+              {selectedCountry.wb && (
+                <div className="bg-gray-50 rounded-xl p-4 mb-4">
+                  <h4 className="text-sm font-semibold text-gray-500 mb-3">
+                    {t("环境综合画像", "Environmental Profile")}
+                  </h4>
+                  <Radar
+                    data={{
+                      labels: [
+                        t("森林覆盖", "Forest"),
+                        t("可再生能源", "Renewable"),
+                        t("保护区", "Protected"),
+                        t("空气质量", "Air Quality"),
+                        t("碳效率", "CO₂ Efficiency"),
+                        "EPI",
+                      ],
+                      datasets: [
+                        {
+                          label: language === "zh" ? selectedCountry.countryZh : selectedCountry.countryEn,
+                          data: [
+                            Math.min(selectedCountry.wb.forestArea ?? 0, 100),
+                            Math.min(selectedCountry.wb.renewableEnergy ?? 0, 100),
+                            Math.min(selectedCountry.wb.protectedAreas ?? 0, 100),
+                            Math.max(0, 100 - (selectedCountry.wb.pm25 ?? 100)),
+                            Math.max(0, 100 - Math.min((selectedCountry.wb.co2PerCapita ?? 0) * 5, 100)),
+                            selectedCountry.epiScore ?? 0,
+                          ],
+                          backgroundColor: "rgba(34, 197, 94, 0.2)",
+                          borderColor: "#22c55e",
+                          pointBackgroundColor: "#22c55e",
+                          borderWidth: 2,
+                        },
+                        {
+                          label: t("全球均值", "Global Average"),
+                          data: [
+                            globalAvg.forestCoverage ?? 0,
+                            globalAvg.renewableEnergy ?? 0,
+                            globalAvg.protectedAreas ?? 0,
+                            Math.max(0, 100 - (globalAvg.pm25 ?? 100)),
+                            Math.max(0, 100 - Math.min((globalAvg.co2PerCapita ?? 0) * 5, 100)),
+                            50,
+                          ],
+                          backgroundColor: "rgba(156, 163, 175, 0.1)",
+                          borderColor: "#9ca3af",
+                          pointBackgroundColor: "#9ca3af",
+                          borderWidth: 1,
+                          borderDash: [4, 4],
+                        },
+                      ],
+                    }}
+                    options={{
+                      responsive: true,
+                      scales: {
+                        r: {
+                          beginAtZero: true,
+                          max: 100,
+                          ticks: { stepSize: 25, display: false },
+                          pointLabels: { font: { size: 11 } },
+                          grid: { color: "#e5e7eb" },
+                        },
                       },
-                      {
-                        label: t("全球均值", "Global Average"),
-                        data: [
-                          globalAvg.forestCoverage,
-                          globalAvg.carbonEmission,
-                        ],
-                        backgroundColor: ["#bbf7d0", "#fecaca"],
-                        borderRadius: 8,
+                      plugins: {
+                        legend: { display: true, position: "bottom", labels: { boxWidth: 12, padding: 16 } },
                       },
-                    ],
-                  }}
-                  options={{
-                    responsive: true,
-                    plugins: {
-                      legend: {
-                        display: true,
-                        position: "bottom",
-                        labels: { boxWidth: 12, padding: 16 },
-                      },
-                    },
-                    scales: {
-                      y: {
-                        beginAtZero: true,
-                        grid: { color: "#e5e7eb" },
-                      },
-                      x: { grid: { display: false } },
-                    },
-                  }}
-                />
-              </div>
+                    }}
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -1042,11 +1353,23 @@ export default function GlobalEnvironmentalAgencies() {
 
       {/* Footer */}
       <footer className="bg-gray-800 text-gray-400 mt-12">
-        <div className="max-w-7xl mx-auto px-6 py-8 text-center text-sm">
+        <div className="max-w-7xl mx-auto px-6 py-8 text-center text-sm space-y-2">
           <p>
             {t(
-              "© 2026 全球环境保护机构数据库 · 数据来源：各国政府官方网站、联合国环境规划署、世界银行",
-              "© 2026 Global Environmental Agencies Database · Sources: National government websites, UNEP, World Bank"
+              "© 2026 全球环境保护机构数据库 · 机构信息来源：各国政府官方网站",
+              "© 2026 Global Environmental Agencies Database · Agency data: National government websites"
+            )}
+          </p>
+          <p className="text-gray-500">
+            {t(
+              "环境数据来源：世界银行公开数据 (World Bank Open Data) · 各指标数据年份因国家和指标而异 (2018-2023)",
+              "Environmental data: World Bank Open Data · Data years vary by country and indicator (2018-2023)"
+            )}
+            {wbMeta?.fetchedAt && (
+              <span>
+                {" · "}
+                {t("数据获取于", "Fetched on")} {wbMeta.fetchedAt.slice(0, 10)}
+              </span>
             )}
           </p>
         </div>

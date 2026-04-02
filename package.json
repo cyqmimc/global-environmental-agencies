@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "fetch-data": "node scripts/fetch-world-bank-data.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
