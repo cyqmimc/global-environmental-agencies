@@ -12,6 +12,19 @@ const TABS = [
 
 export default function DetailDialog({ selectedCountry, language, t, globalAvg, onClose, copied, onCopy, allCountries }) {
   const [tab, setTab] = useState("overview");
+  const [pdfLoading, setPdfLoading] = useState(false);
+
+  const handlePDF = async () => {
+    setPdfLoading(true);
+    try {
+      const { generateCountryPDF } = await import("../utils/generateCountryPDF");
+      await generateCountryPDF(selectedCountry, language, globalAvg, allCountries);
+    } catch (e) {
+      console.error("PDF generation failed:", e);
+    } finally {
+      setPdfLoading(false);
+    }
+  };
 
   return (
     <div
@@ -159,6 +172,14 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                   className="px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium hover:bg-gray-50 transition-colors cursor-pointer"
                 >
                   {copied ? "✓" : "📋"}
+                </button>
+                <button
+                  onClick={handlePDF}
+                  disabled={pdfLoading}
+                  className="px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium hover:bg-gray-50 transition-colors cursor-pointer disabled:opacity-50"
+                  title={t("下载PDF报告", "Download PDF Report")}
+                >
+                  {pdfLoading ? "⏳" : "PDF"}
                 </button>
                 {selectedCountry.contact?.email && (
                   <a
