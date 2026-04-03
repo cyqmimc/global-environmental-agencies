@@ -104,8 +104,21 @@ function main() {
   if (noPricing.length > 0) {
     warn(`${noPricing.length} 个国家缺少碳定价数据`);
   }
-  // Carbon prices change annually - recommend yearly check
-  warn("碳定价数据建议每年更新一次 (来源: World Bank Carbon Pricing Dashboard)");
+  // Carbon prices change annually - only warn if not updated this year
+  const maintenancePath = resolve(ROOT, "DATA-MAINTENANCE.md");
+  try {
+    const mdText = readFileSync(maintenancePath, "utf-8");
+    const cpMatch = mdText.match(/碳定价数据\s*\|\s*(\d{4}-\d{2}-\d{2})/);
+    if (cpMatch) {
+      const cpDate = new Date(cpMatch[1]);
+      const cpMonths = (NOW - cpDate) / (1000 * 60 * 60 * 24 * 30);
+      if (cpMonths > 12) {
+        warn(`碳定价数据已 ${Math.round(cpMonths)} 个月未更新 (来源: World Bank Carbon Pricing Dashboard)`);
+      }
+    }
+  } catch {
+    warn("碳定价数据建议每年更新一次 (来源: World Bank Carbon Pricing Dashboard)");
+  }
 
   // --- 6. EPI score check ---
   // EPI is published every 2 years by Yale
