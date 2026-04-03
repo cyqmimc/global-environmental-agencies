@@ -23,7 +23,7 @@ Single-page React app: 80 countries, environmental agencies, World Bank data, tr
 - `src/constants.js` contains shared label maps and helpers used across many components: `TREATY_LABELS`, `RESPONSIBILITY_LABELS`, `NDC_RATING_CONFIG`, URL state sync, CSV export
 
 **Two-tier data loading:**
-1. Initial load fetches `countries-core.json` (53KB, slim fields for cards/filters/map) + `wb-data.json` (205KB, latest values + historical time series for 4 indicators) in parallel, merges by `isoCode` into `country.wb` namespace (including `wb.history`)
+1. Initial load fetches `countries-core.json` (53KB, slim fields for cards/filters/map) + `wb-data.json` (~240KB, latest values + historical time series for 4 indicators) in parallel, merges by `isoCode` into `country.wb` namespace (including `wb.history`)
 2. When a detail dialog opens, `countries-detail.json` (137KB, descriptions/treaties/laws/full treaty objects, keyed by isoCode) is fetched once and cached in memory
 3. `countries.json` (228KB) is the source of truth — the split files are generated from it via `scripts/split-countries.js`
 4. `wb-data.json` stores per-country `history` with yearly data for `forestArea`, `co2Mt`, `renewableEnergy`, `pm25` (2015-2023), used by TrendLineChart in DetailDialog
