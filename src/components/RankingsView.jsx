@@ -32,6 +32,7 @@ const COLUMNS = [
   { key: "composite", zhLabel: "综合评分", enLabel: "Composite", sortable: true, hideMobile: false },
   { key: "epi", zhLabel: "EPI", enLabel: "EPI", sortable: true, hideMobile: false },
   { key: "renewable", zhLabel: "可再生%", enLabel: "Renew%", sortable: true, hideMobile: true },
+  { key: "pm25", zhLabel: "PM2.5", enLabel: "PM2.5", sortable: true, hideMobile: true },
   { key: "co2", zhLabel: "CO₂/人", enLabel: "CO₂/Cap", sortable: true, hideMobile: true },
   { key: "carbonPrice", zhLabel: "碳价", enLabel: "C.Price", sortable: true, hideMobile: true },
   { key: "ndc", zhLabel: "NDC", enLabel: "NDC", sortable: false, hideMobile: false },
@@ -43,6 +44,7 @@ function getSortValue(country, key, compositeScores) {
     case "composite": return compositeScores.get(country) ?? 0;
     case "epi": return country.epiScore ?? 0;
     case "renewable": return country.wb?.renewableEnergy ?? -1;
+    case "pm25": return country.wb?.pm25 ?? 999;
     case "co2": return country.wb?.co2PerCapita ?? 999;
     case "carbonPrice": return country.carbonPricing?.priceUSD ?? -1;
     default: return 0;
@@ -76,7 +78,7 @@ export default function RankingsView({ countries, language, t, onCountryClick })
       setSortAsc(!sortAsc);
     } else {
       setSortKey(key);
-      setSortAsc(key === "co2"); // CO2: ascending by default (lower = better)
+      setSortAsc(key === "co2" || key === "pm25"); // CO2 & PM2.5: ascending by default (lower = better)
     }
   };
 
@@ -155,6 +157,12 @@ export default function RankingsView({ countries, language, t, onCountryClick })
                   <td className="px-3 py-2.5 text-gray-600 hidden md:table-cell">
                     {country.wb?.renewableEnergy != null
                       ? `${country.wb.renewableEnergy.toFixed(0)}%`
+                      : "—"}
+                  </td>
+                  {/* PM2.5 */}
+                  <td className="px-3 py-2.5 text-gray-600 hidden md:table-cell">
+                    {country.wb?.pm25 != null
+                      ? <span className={country.wb.pm25 > 25 ? "text-red-500 font-medium" : country.wb.pm25 > 10 ? "text-amber-600" : "text-green-600"}>{country.wb.pm25.toFixed(1)}</span>
                       : "—"}
                   </td>
                   {/* CO2/Capita */}

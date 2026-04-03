@@ -159,8 +159,10 @@ export default function GlobalEnvironmentalAgencies() {
             <p className="text-xs text-gray-500">{t("收录国家", "Countries")}</p>
           </div>
           <div className="text-center">
-            <p className="text-xl font-bold text-gray-600">3</p>
-            <p className="text-xs text-gray-500">{t("公约追踪", "Treaties")}</p>
+            <p className="text-xl font-bold text-blue-600">
+              {globalAvg.pm25 ?? "—"}
+            </p>
+            <p className="text-xs text-gray-500">{t("均值PM2.5", "Avg PM2.5")}</p>
           </div>
           <div className="text-center">
             <p className="text-xl font-bold text-amber-600">
@@ -370,9 +372,11 @@ export default function GlobalEnvironmentalAgencies() {
                         ))}
                       </div>
                       <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs text-gray-400 justify-center">
-                        <span>🌲 {item.wb?.forestArea?.toFixed(1) ?? item.data.forestCoverage}%</span>
-                        <span>⚡ {item.wb?.renewableEnergy?.toFixed(0) ?? "—"}%</span>
                         <span className="text-amber-600 font-medium">EPI {item.epiScore}</span>
+                        <span>⚡ {item.wb?.renewableEnergy?.toFixed(0) ?? "—"}%</span>
+                        <span className={item.wb?.pm25 > 25 ? "text-red-500" : item.wb?.pm25 > 10 ? "text-amber-500" : "text-green-600"}>
+                          PM {item.wb?.pm25?.toFixed(0) ?? "—"}
+                        </span>
                       </div>
                       <a
                         href={item.website}

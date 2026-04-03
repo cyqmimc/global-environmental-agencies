@@ -90,18 +90,36 @@ export default function TrendLineChart({ datasets, yLabel, yUnit = "" }) {
         {datasets.map((ds, di) => {
           if (!ds.data?.length) return null;
           const sorted = [...ds.data].sort((a, b) => a.year - b.year);
-          const pathD = sorted
-            .map((p, i) => `${i === 0 ? "M" : "L"} ${xScale(p.year)} ${yScale(p.value)}`)
-            .join(" ");
+          // Split into segments: solid for consecutive years, dashed for gaps > 1 year
+          const segments = [];
+          let seg = [sorted[0]];
+          for (let i = 1; i < sorted.length; i++) {
+            if (sorted[i].year - sorted[i - 1].year > 1) {
+              segments.push({ points: seg, gap: false });
+              segments.push({ points: [sorted[i - 1], sorted[i]], gap: true });
+              seg = [sorted[i]];
+            } else {
+              seg.push(sorted[i]);
+            }
+          }
+          if (seg.length) segments.push({ points: seg, gap: false });
+
           return (
             <g key={di}>
-              <path
-                d={pathD}
-                fill="none"
-                stroke={ds.color}
-                strokeWidth="2"
-                strokeDasharray={ds.dash ? "6 3" : "none"}
-              />
+              {segments.map((s, si) => {
+                const d = s.points.map((p, i) => `${i === 0 ? "M" : "L"} ${xScale(p.year)} ${yScale(p.value)}`).join(" ");
+                return (
+                  <path
+                    key={si}
+                    d={d}
+                    fill="none"
+                    stroke={ds.color}
+                    strokeWidth={s.gap ? 1.5 : 2}
+                    strokeDasharray={ds.dash || s.gap ? "6 3" : "none"}
+                    opacity={s.gap ? 0.5 : 1}
+                  />
+                );
+              })}
               {!ds.dash && sorted.map((p, i) => (
                 <circle key={i} cx={xScale(p.year)} cy={yScale(p.value)} r="3" fill={ds.color} />
               ))}
