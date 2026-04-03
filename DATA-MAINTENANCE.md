@@ -2,11 +2,33 @@
 
 运行 `npm run check-updates` 查看哪些数据需要更新。
 
+## 快速更新（一键）
+
+```bash
+npm run update-all   # = fetch-data + split-data + check-updates
+```
+
+## 数据流架构
+
+```
+countries.json (源文件, 手动编辑)
+    ├── split-countries.js ──→ countries-core.json (首屏)
+    │                      └─→ countries-detail.json (懒加载)
+    └── fetch-world-bank-data.js ──→ wb-data.json (WB + IQAir数据)
+
+前端合并: country = { ...core数据, wb: wb-data数据 }
+详情弹窗: country = { ...country, ...detail数据 }
+```
+
+**重要**: `wb-data.json` 中 PM2.5 数据来自 IQAir 2024（优先于 WB 卫星数据），`fetch-data` 会自动保留 IQAir 覆盖值不被 WB 旧数据覆盖。
+
 ## 自动化数据
 
 | 数据 | 命令 | 更新频率 | 说明 |
 |------|------|---------|------|
-| 世界银行环境指标 | `npm run fetch-data` | 每季度 | 森林面积、CO₂、可再生能源、PM2.5、保护区、人口、GDP |
+| 世界银行环境指标 | `npm run fetch-data` | 每季度 | CO₂(AR5→2024)、森林、可再生能源、PM2.5、保护区、人口、GDP |
+| PM2.5 补充 | 手动更新 wb-data.json | 每年 | IQAir World Air Quality Report (地面监测, 优先于WB卫星数据) |
+| 碳定价 | 手动更新 countries.json | 每年 | WB Carbon Pricing Dashboard Excel 下载 |
 
 ## 手动维护数据
 

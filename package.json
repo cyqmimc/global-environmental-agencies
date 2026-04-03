@@ -6,6 +6,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "fetch-data": "node scripts/fetch-world-bank-data.js",
+    "split-data": "node scripts/split-countries.js",
+    "update-all": "node scripts/fetch-world-bank-data.js && node scripts/split-countries.js && node scripts/check-updates.js",
     "check-updates": "node scripts/check-updates.js"
   },
   "dependencies": {

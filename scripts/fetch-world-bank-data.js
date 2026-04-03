@@ -192,7 +192,43 @@ async function main() {
     }
   }
 
-  // Step 4: Write output
+  // Step 4: Preserve IQAir PM2.5 overrides (newer than WB satellite data)
+  const existingPath = resolve(ROOT, "public/wb-data.json");
+  try {
+    const existing = JSON.parse(readFileSync(existingPath, "utf-8"));
+    if (existing.meta?.pm25Source?.includes("IQAir")) {
+      let preserved = 0;
+      for (const [iso2, ec] of Object.entries(existing.countries)) {
+        if (ec.dataYear?.pm25 === 2024 && output.countries[iso2]) {
+          const wbYear = output.countries[iso2].dataYear?.pm25;
+          // Only preserve IQAir data if WB data is older
+          if (!wbYear || wbYear < 2024) {
+            output.countries[iso2].pm25 = ec.pm25;
+            output.countries[iso2].dataYear.pm25 = 2024;
+            // Also preserve in history
+            if (ec.history?.pm25) {
+              const iqairPoint = ec.history.pm25.find(h => h.year === 2024);
+              if (iqairPoint && output.countries[iso2].history?.pm25) {
+                if (!output.countries[iso2].history.pm25.some(h => h.year === 2024)) {
+                  output.countries[iso2].history.pm25.push(iqairPoint);
+                  output.countries[iso2].history.pm25.sort((a, b) => a.year - b.year);
+                }
+              }
+            }
+            preserved++;
+          }
+        }
+      }
+      if (preserved > 0) {
+        output.meta.pm25Source = existing.meta.pm25Source;
+        console.log(`\n  ✓ Preserved IQAir 2024 PM2.5 data for ${preserved} countries`);
+      }
+    }
+  } catch {
+    // No existing file, skip preservation
+  }
+
+  // Step 5: Write output
   const outPath = resolve(ROOT, "public/wb-data.json");
   writeFileSync(outPath, JSON.stringify(output, null, 2), "utf-8");
 

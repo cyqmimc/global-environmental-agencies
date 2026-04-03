@@ -7,9 +7,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run dev` — start Vite dev server
 - `npm run build` — production build to `dist/`
 - `npm run preview` — preview production build locally
-- `npm run fetch-data` — fetch latest World Bank data + historical time series → `public/wb-data.json` (recommend quarterly)
+- `npm run fetch-data` — fetch latest World Bank data + historical time series → `public/wb-data.json` (recommend quarterly; preserves IQAir PM2.5 overrides)
+- `npm run split-data` — re-split `countries.json` → `countries-core.json` + `countries-detail.json` (must run after editing countries.json)
+- `npm run update-all` — run fetch-data + split-data + check-updates in sequence (recommended for routine updates)
 - `npm run check-updates` — scan all data sources, report what may need updating
-- `node scripts/split-countries.js` — re-split `countries.json` → `countries-core.json` + `countries-detail.json` (must run after editing countries.json)
 
 No test runner or linter is configured. See `DATA-MAINTENANCE.md` for data update sources and procedures.
 
