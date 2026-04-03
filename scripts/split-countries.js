@@ -74,7 +74,7 @@ data.forEach((c) => {
     co2: w.co2PerCapita ?? null, pm25: w.pm25 ?? null,
     renew: w.renewableEnergy ?? null, forest: w.forestArea ?? null,
     carbon: c.carbonPricing?.priceUSD ?? null,
-    region: c.region, flag: c.flagUrl,
+    region: c.region,
   };
 });
 fs.writeFileSync(path.join(outDir, "og-data.json"), JSON.stringify(ogData));

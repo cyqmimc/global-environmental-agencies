@@ -61,7 +61,7 @@ export default async function handler(req) {
           }}
         >
           <img
-            src={data.flag}
+            src={`https://flagcdn.com/${iso}.svg`}
             width={100}
             height={67}
             style={{ borderRadius: 8, objectFit: "cover", border: "2px solid rgba(255,255,255,0.3)" }}
