@@ -465,8 +465,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
-      "ndcTargetZh": "2030年温室气体排放比1990年减少40%（EU整体目标：减少55%）",
-      "ndcTargetEn": "Reduce GHG 40% below 1990 levels by 2030 (EU target: -55%)",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -476,6 +476,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -1499,8 +1503,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
-      "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%（EU整体目标）",
-      "ndcTargetEn": "Reduce GHG at least 55% below 1990 levels by 2030 (EU target)",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -1510,6 +1514,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -1599,8 +1607,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-01-12",
-      "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%（EU整体目标）",
-      "ndcTargetEn": "Reduce GHG at least 55% below 1990 levels by 2030 (EU target)",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -1610,6 +1618,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -2107,8 +2119,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
-      "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%（EU目标）；国内目标：2045年净零",
-      "ndcTargetEn": "EU target: -55% by 2030 vs 1990; national: net zero by 2045",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "almost_sufficient",
       "ndcHistory": [
         {
@@ -2118,6 +2130,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -2935,8 +2951,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
-      "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%（EU目标）",
-      "ndcTargetEn": "Reduce GHG at least 55% below 1990 levels by 2030 (EU target)",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -2946,6 +2962,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -3139,8 +3159,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
-      "ndcTargetZh": "2030年温室气体排放比1990年减少70%",
-      "ndcTargetEn": "Reduce GHG 70% below 1990 levels by 2030",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "almost_sufficient",
       "ndcHistory": [
         {
@@ -3150,6 +3170,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -3239,8 +3263,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-11-14",
-      "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%（EU目标）；国内目标：2035年碳中和",
-      "ndcTargetEn": "EU target: -55% by 2030 vs 1990; national: carbon neutral by 2035",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "almost_sufficient",
       "ndcHistory": [
         {
@@ -3250,6 +3274,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -3443,8 +3471,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
-      "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%（EU目标）；国内目标：2040年碳中和",
-      "ndcTargetEn": "EU target: -55% by 2030 vs 1990; national: carbon neutral by 2040",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -3454,6 +3482,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -3543,8 +3575,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
-      "ndcTargetZh": "2030年温室气体排放比2005年减少55%（EU目标）",
-      "ndcTargetEn": "Reduce GHG 55% below 2005 levels by 2030 (EU target)",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -3554,6 +3586,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -4655,8 +4691,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
-      "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%（EU目标）",
-      "ndcTargetEn": "Reduce GHG at least 55% below 1990 levels by 2030 (EU target)",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -4666,6 +4702,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -5351,8 +5391,8 @@
       "noteEn": "ETS launched 2013, first in Central Asia"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 4,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -5503,8 +5543,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
-      "ndcTargetZh": "2030年排放比1990年减少至少55%（EU目标）",
-      "ndcTargetEn": "EU target: -55% by 2030 vs 1990",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -5514,6 +5554,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -5593,8 +5637,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
-      "ndcTargetZh": "2030年排放比1990年减少至少55%（EU目标）；国内目标51%",
-      "ndcTargetEn": "EU target: -55% by 2030 vs 1990; national target: -51%",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -5604,6 +5648,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -5688,8 +5736,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-06-01",
-      "ndcTargetZh": "2030年排放比1990年减少至少55%（EU目标）",
-      "ndcTargetEn": "EU target: -55% by 2030 vs 1990",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -5699,6 +5747,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -5783,8 +5835,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-10-05",
-      "ndcTargetZh": "2030年排放比1990年减少至少55%（EU目标）",
-      "ndcTargetEn": "EU target: -55% by 2030 vs 1990",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -5794,6 +5846,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -5873,8 +5929,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-04-06",
-      "ndcTargetZh": "2030年排放比1990年减少至少55%（EU目标）",
-      "ndcTargetEn": "EU target: -55% by 2030 vs 1990",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -5884,6 +5940,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -5963,8 +6023,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
-      "ndcTargetZh": "2030年排放比1990年减少至少55%（EU目标）",
-      "ndcTargetEn": "EU target: -55% by 2030 vs 1990",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -5974,6 +6034,10 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030
@@ -6181,8 +6245,8 @@
       "noteEn": "No carbon pricing mechanism"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -6916,8 +6980,8 @@
       "noteEn": "Carbon market under study"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 2,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
