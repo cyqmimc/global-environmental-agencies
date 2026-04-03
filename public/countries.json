@@ -189,7 +189,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": false,
-      "priceUSD": 11,
+      "priceUSD": 11.8,
       "coveragePercent": 40,
       "noteZh": "2021年启动全国碳排放交易体系，覆盖电力行业",
       "noteEn": "National ETS launched 2021, covering power sector"
@@ -293,7 +293,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": true,
-      "priceUSD": 85,
+      "priceUSD": 70.4,
       "coveragePercent": 45,
       "noteZh": "EU ETS覆盖电力和工业；国内燃料排放交易体系碳价45欧元/吨",
       "noteEn": "EU ETS for power/industry; national fuel emissions trading at €45/t"
@@ -397,7 +397,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": true,
-      "priceUSD": 2,
+      "priceUSD": 1.9,
       "coveragePercent": 70,
       "noteZh": "碳税289日元/吨CO₂；2023年启动GX-ETS碳交易",
       "noteEn": "Carbon tax ¥289/tCO₂; GX-ETS launched 2023"
@@ -501,7 +501,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": true,
-      "priceUSD": 85,
+      "priceUSD": 70.4,
       "coveragePercent": 35,
       "noteZh": "EU ETS覆盖电力工业；国内碳税约45欧元/吨覆盖交通建筑",
       "noteEn": "EU ETS for power/industry; domestic carbon tax ~€45/t for transport/buildings"
@@ -709,7 +709,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": true,
-      "priceUSD": 50,
+      "priceUSD": 57.2,
       "coveragePercent": 30,
       "noteZh": "英国碳排放交易体系(UK ETS)，脱欧后独立运营；碳底价机制",
       "noteEn": "UK ETS operating independently post-Brexit; carbon price floor mechanism"
@@ -917,7 +917,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": false,
-      "priceUSD": 30,
+      "priceUSD": 21.8,
       "coveragePercent": 28,
       "noteZh": "减排基金保障机制(Safeguard Mechanism)，覆盖大型排放设施",
       "noteEn": "Safeguard Mechanism covering large emitting facilities"
@@ -1021,7 +1021,7 @@
     "carbonPricing": {
       "hasETS": false,
       "hasCarbonTax": true,
-      "priceUSD": 9,
+      "priceUSD": 12.8,
       "coveragePercent": 80,
       "noteZh": "2019年实施碳税，约159兰特/吨CO₂当量",
       "noteEn": "Carbon tax since 2019, ~R159/tCO₂eq"
@@ -1125,7 +1125,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": true,
-      "priceUSD": 65,
+      "priceUSD": 66.2,
       "coveragePercent": 80,
       "noteZh": "联邦碳定价基准：80加元/吨(2024)，逐年递增至170加元(2030)",
       "noteEn": "Federal carbon price: C$80/t (2024), rising to C$170/t by 2030"
@@ -1229,7 +1229,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": true,
-      "priceUSD": 4,
+      "priceUSD": 3.9,
       "coveragePercent": 40,
       "noteZh": "碳税约55比索/吨CO₂；碳排放交易试点运行中",
       "noteEn": "Carbon tax ~MXN55/tCO₂; pilot ETS operational"
@@ -1435,7 +1435,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": false,
-      "priceUSD": 2,
+      "priceUSD": 0.7,
       "coveragePercent": 25,
       "noteZh": "2023年启动碳交易所，覆盖电力行业",
       "noteEn": "Carbon exchange launched 2023, covering power sector"
@@ -1539,7 +1539,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": false,
-      "priceUSD": 85,
+      "priceUSD": 70.4,
       "coveragePercent": 40,
       "noteZh": "参与EU ETS，覆盖电力、工业和航空部门",
       "noteEn": "Participates in EU ETS covering power, industry and aviation"
@@ -1642,8 +1642,8 @@
     },
     "carbonPricing": {
       "hasETS": true,
-      "hasCarbonTax": false,
-      "priceUSD": 85,
+      "hasCarbonTax": true,
+      "priceUSD": 70.4,
       "coveragePercent": 40,
       "noteZh": "参与EU ETS，覆盖电力、工业和航空部门",
       "noteEn": "Participates in EU ETS covering power, industry and aviation"
@@ -1847,7 +1847,7 @@
     "carbonPricing": {
       "hasETS": false,
       "hasCarbonTax": true,
-      "priceUSD": 25,
+      "priceUSD": 18.6,
       "coveragePercent": 80,
       "noteZh": "碳税25新元/吨(2024)，2030年前升至50-80新元/吨",
       "noteEn": "Carbon tax S$25/t (2024), rising to S$50-80/t by 2030"
@@ -2051,7 +2051,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": false,
-      "priceUSD": 8,
+      "priceUSD": 6.5,
       "coveragePercent": 73,
       "noteZh": "韩国碳排放交易体系(K-ETS)，亚洲最大碳市场之一",
       "noteEn": "Korea ETS (K-ETS), one of the largest carbon markets in Asia"
@@ -2155,7 +2155,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": true,
-      "priceUSD": 130,
+      "priceUSD": 144.6,
       "coveragePercent": 40,
       "noteZh": "全球最高碳税约1330瑞典克朗/吨CO₂(约$130)；同时参与EU ETS",
       "noteEn": "World's highest carbon tax ~SEK1330/tCO₂ (~$130); also in EU ETS"
@@ -2263,7 +2263,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": true,
-      "priceUSD": 95,
+      "priceUSD": 133.9,
       "coveragePercent": 65,
       "noteZh": "碳税约950挪威克朗/吨CO₂(石油行业更高)；同时参与EU ETS",
       "noteEn": "Carbon tax ~NOK950/tCO₂ (higher for petroleum); also in EU ETS"
@@ -2367,7 +2367,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": false,
-      "priceUSD": 35,
+      "priceUSD": 32.0,
       "coveragePercent": 49,
       "noteZh": "新西兰碳排放交易体系(NZ ETS)，覆盖林业、能源、工业",
       "noteEn": "NZ ETS covering forestry, energy, and industrial sectors"
@@ -2675,7 +2675,7 @@
     "carbonPricing": {
       "hasETS": false,
       "hasCarbonTax": true,
-      "priceUSD": 5,
+      "priceUSD": 5.3,
       "coveragePercent": 20,
       "noteZh": "液体燃料碳税（内部碳税），覆盖部分化石燃料",
       "noteEn": "Carbon tax on liquid fuels, covering part of fossil fuel consumption"
@@ -2779,7 +2779,7 @@
     "carbonPricing": {
       "hasETS": false,
       "hasCarbonTax": true,
-      "priceUSD": 5,
+      "priceUSD": 6.5,
       "coveragePercent": 24,
       "noteZh": "碳税约25,000比索/吨CO₂(约$5)，覆盖化石燃料",
       "noteEn": "Carbon tax ~COP25,000/tCO₂ (~$5), covering fossil fuels"
@@ -2987,7 +2987,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": true,
-      "priceUSD": 85,
+      "priceUSD": 94.8,
       "coveragePercent": 50,
       "noteZh": "EU ETS + 国内最低碳价机制，确保碳价不低于一定水平",
       "noteEn": "EU ETS + domestic minimum carbon price floor mechanism"
@@ -3195,7 +3195,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": true,
-      "priceUSD": 100,
+      "priceUSD": 108.4,
       "coveragePercent": 45,
       "noteZh": "EU ETS + 国内碳税约750丹麦克朗/吨(约$100)，2030年大幅提高",
       "noteEn": "EU ETS + domestic carbon tax ~DKK750/t (~$100), rising sharply by 2030"
@@ -3299,7 +3299,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": true,
-      "priceUSD": 85,
+      "priceUSD": 70.4,
       "coveragePercent": 50,
       "noteZh": "EU ETS + 国内碳税覆盖交通和供暖燃料",
       "noteEn": "EU ETS + domestic carbon tax covering transport and heating fuels"
@@ -3403,7 +3403,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": true,
-      "priceUSD": 120,
+      "priceUSD": 136.0,
       "coveragePercent": 35,
       "noteZh": "瑞士碳排放交易体系与EU ETS链接；碳税120瑞郎/吨覆盖供暖燃料",
       "noteEn": "Swiss ETS linked to EU ETS; carbon levy CHF120/t on heating fuels"
@@ -3507,7 +3507,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": true,
-      "priceUSD": 85,
+      "priceUSD": 70.4,
       "coveragePercent": 45,
       "noteZh": "EU ETS + 2022年启动国内碳排放交易(交通建筑)，起步价30欧元/吨",
       "noteEn": "EU ETS + national ETS for transport/buildings since 2022, starting at €30/t"
@@ -3610,8 +3610,8 @@
     },
     "carbonPricing": {
       "hasETS": true,
-      "hasCarbonTax": false,
-      "priceUSD": 85,
+      "hasCarbonTax": true,
+      "priceUSD": 72.7,
       "coveragePercent": 35,
       "noteZh": "参与EU ETS，覆盖电力和工业部门",
       "noteEn": "Participates in EU ETS covering power and industrial sectors"
@@ -3710,8 +3710,8 @@
     },
     "carbonPricing": {
       "hasETS": false,
-      "hasCarbonTax": false,
-      "priceUSD": null,
+      "hasCarbonTax": true,
+      "priceUSD": 1.5,
       "coveragePercent": 0,
       "noteZh": "碳交易体系和碳税方案评估中",
       "noteEn": "ETS and carbon tax options under evaluation"
@@ -4219,7 +4219,7 @@
     "carbonPricing": {
       "hasETS": false,
       "hasCarbonTax": true,
-      "priceUSD": 5,
+      "priceUSD": 5.0,
       "coveragePercent": 39,
       "noteZh": "碳税$5/吨CO₂覆盖大型排放源；绿色税收改革推进中",
       "noteEn": "Carbon tax $5/tCO₂ on large emitters; green tax reform in progress"
@@ -4726,8 +4726,8 @@
     },
     "carbonPricing": {
       "hasETS": true,
-      "hasCarbonTax": false,
-      "priceUSD": 85,
+      "hasCarbonTax": true,
+      "priceUSD": 70.4,
       "coveragePercent": 45,
       "noteZh": "参与EU ETS，覆盖电力和工业部门；煤炭转型基金支持",
       "noteEn": "Participates in EU ETS; supported by Just Transition Fund for coal phase-out"
@@ -5385,7 +5385,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": false,
-      "priceUSD": 1,
+      "priceUSD": 0.9,
       "coveragePercent": 46,
       "noteZh": "2013年启动碳排放交易，中亚首个ETS",
       "noteEn": "ETS launched 2013, first in Central Asia"
@@ -5480,7 +5480,7 @@
     "carbonPricing": {
       "hasETS": false,
       "hasCarbonTax": true,
-      "priceUSD": 1,
+      "priceUSD": 0.7,
       "coveragePercent": 30,
       "noteZh": "碳税约30格里夫纳/吨CO₂；EU ETS对接筹备中",
       "noteEn": "Carbon tax ~UAH30/tCO₂; EU ETS alignment under preparation"
@@ -5579,7 +5579,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": false,
-      "priceUSD": 85,
+      "priceUSD": 70.4,
       "coveragePercent": 40,
       "noteZh": "参与EU ETS",
       "noteEn": "Participates in EU ETS"
@@ -5673,7 +5673,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": true,
-      "priceUSD": 85,
+      "priceUSD": 70.4,
       "coveragePercent": 50,
       "noteZh": "EU ETS + 国内碳税约48欧元/吨",
       "noteEn": "EU ETS + domestic carbon tax ~€48/t"
@@ -5772,7 +5772,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": false,
-      "priceUSD": 85,
+      "priceUSD": 70.4,
       "coveragePercent": 40,
       "noteZh": "参与EU ETS",
       "noteEn": "Participates in EU ETS"
@@ -5871,7 +5871,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": false,
-      "priceUSD": 85,
+      "priceUSD": 70.4,
       "coveragePercent": 40,
       "noteZh": "参与EU ETS",
       "noteEn": "Participates in EU ETS"
@@ -5965,7 +5965,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": false,
-      "priceUSD": 85,
+      "priceUSD": 70.4,
       "coveragePercent": 40,
       "noteZh": "参与EU ETS",
       "noteEn": "Participates in EU ETS"
@@ -6059,7 +6059,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": false,
-      "priceUSD": 85,
+      "priceUSD": 70.4,
       "coveragePercent": 35,
       "noteZh": "参与EU ETS",
       "noteEn": "Participates in EU ETS"
@@ -6609,7 +6609,7 @@
     "carbonPricing": {
       "hasETS": false,
       "hasCarbonTax": true,
-      "priceUSD": 10,
+      "priceUSD": 158.8,
       "coveragePercent": 20,
       "noteZh": "碳税覆盖部分化石燃料",
       "noteEn": "Carbon tax covering part of fossil fuels"
