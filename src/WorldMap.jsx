@@ -39,6 +39,22 @@ const METRIC_CONFIG = {
       v == null ? "#d1d5db" : v >= 40 ? "#16a34a" : v >= 25 ? "#65a30d" : v >= 15 ? "#eab308" : v >= 5 ? "#f97316" : "#dc2626",
     format: (v) => (v != null ? `${v.toFixed(0)}%` : "—"),
   },
+  pm25: {
+    zh: "空气质量 PM2.5",
+    en: "Air Quality PM2.5",
+    getValue: (c) => c.wb?.pm25,
+    getColor: (v) =>
+      v == null ? "#d1d5db" : v <= 10 ? "#16a34a" : v <= 15 ? "#65a30d" : v <= 25 ? "#eab308" : v <= 35 ? "#f97316" : "#dc2626",
+    format: (v) => (v != null ? `${v.toFixed(1)} µg/m³` : "—"),
+  },
+  protectedAreas: {
+    zh: "自然保护区 %",
+    en: "Protected Areas %",
+    getValue: (c) => c.wb?.protectedAreas,
+    getColor: (v) =>
+      v == null ? "#d1d5db" : v >= 30 ? "#16a34a" : v >= 20 ? "#65a30d" : v >= 10 ? "#eab308" : v >= 5 ? "#f97316" : "#dc2626",
+    format: (v) => (v != null ? `${v.toFixed(1)}%` : "—"),
+  },
 };
 
 const LEGEND_STOPS = [

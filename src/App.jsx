@@ -40,7 +40,7 @@ const COMPLIANCE_FILTERS = [
 export default function GlobalEnvironmentalAgencies() {
   const urlParams = getUrlParams();
   const [language, setLanguage] = useState(urlParams.lang);
-  const [openDialogIndex, setOpenDialogIndex] = useState(null);
+  const [openCountryIso, setOpenCountryIso] = useState(urlParams.country || null);
   const [copied, setCopied] = useState(false);
   const [compareList, setCompareList] = useState([]);
   const [showCompare, setShowCompare] = useState(false);
@@ -64,13 +64,16 @@ export default function GlobalEnvironmentalAgencies() {
       sort: filters.sortOrder,
       page: filters.page,
       lang: language,
+      country: openCountryIso || "",
     });
-  }, [filters.search, filters.regionFilter, filters.tagFilter, filters.sortOrder, filters.page, language]);
+  }, [filters.search, filters.regionFilter, filters.tagFilter, filters.sortOrder, filters.page, language, openCountryIso]);
 
-  const selectedCountryRaw =
-    openDialogIndex !== null ? filters.paginatedCountries[openDialogIndex] : null;
+  // Resolve selected country from ISO code
+  const selectedCountryRaw = openCountryIso
+    ? countries.find((c) => c.isoCode === openCountryIso) || null
+    : null;
 
-  // Eagerly load detail when dialog index changes
+  // Eagerly load detail when selected country changes
   useEffect(() => {
     if (selectedCountryRaw && !selectedCountryRaw._detail) {
       loadDetail(selectedCountryRaw);
@@ -79,7 +82,7 @@ export default function GlobalEnvironmentalAgencies() {
 
   // Use the enriched version from countries array if available
   const selectedCountry = selectedCountryRaw
-    ? countries.find((c) => c.isoCode === selectedCountryRaw.isoCode) || selectedCountryRaw
+    ? countries.find((c) => c.isoCode === selectedCountryRaw.isoCode && c._detail) || selectedCountryRaw
     : null;
 
   const handleCopy = (country) => {
@@ -109,40 +112,8 @@ export default function GlobalEnvironmentalAgencies() {
     compareList.some((c) => c.countryEn === country.countryEn);
 
   const openCountryDetail = useCallback((country) => {
-    const idx = filters.paginatedCountries.findIndex(
-      (c) => c.isoCode === country.isoCode
-    );
-    if (idx >= 0) {
-      setOpenDialogIndex(idx);
-    } else {
-      const fullIdx = filters.filteredCountries.findIndex(
-        (c) => c.isoCode === country.isoCode
-      );
-      if (fullIdx >= 0) {
-        const targetPage = Math.floor(fullIdx / filters.ITEMS_PER_PAGE) + 1;
-        filters.setPage(targetPage);
-        setTimeout(() => {
-          setOpenDialogIndex(fullIdx % filters.ITEMS_PER_PAGE);
-        }, 50);
-      } else {
-        // Country is filtered out — clear filters
-        filters.updateSearch("");
-        filters.setRegionFilter("");
-        filters.setTagFilter("");
-        filters.setSortOrder("none");
-        setTimeout(() => {
-          const newIdx = countries.findIndex(
-            (c) => c.isoCode === country.isoCode
-          );
-          if (newIdx >= 0) {
-            const tp = Math.floor(newIdx / filters.ITEMS_PER_PAGE) + 1;
-            filters.setPage(tp);
-            setTimeout(() => setOpenDialogIndex(newIdx % filters.ITEMS_PER_PAGE), 50);
-          }
-        }, 50);
-      }
-    }
-  }, [filters, countries]);
+    setOpenCountryIso(country.isoCode);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
@@ -368,7 +339,7 @@ export default function GlobalEnvironmentalAgencies() {
                       className={`bg-white border rounded-2xl p-5 flex flex-col items-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer relative ${
                         isInCompare(item) ? "border-green-500 ring-2 ring-green-200" : "border-gray-100"
                       }`}
-                      onClick={() => setOpenDialogIndex(idx)}
+                      onClick={() => setOpenCountryIso(item.isoCode)}
                     >
                       <button
                         onClick={(e) => toggleCompare(item, e)}
@@ -500,7 +471,7 @@ export default function GlobalEnvironmentalAgencies() {
             language={language}
             t={t}
             globalAvg={globalAvg}
-            onClose={() => { setOpenDialogIndex(null); setCopied(false); }}
+            onClose={() => { setOpenCountryIso(null); setCopied(false); }}
             copied={copied}
             onCopy={handleCopy}
             allCountries={countries}

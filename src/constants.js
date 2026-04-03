@@ -50,6 +50,7 @@ export function getUrlParams() {
     sort: p.get("sort") || "none",
     page: parseInt(p.get("page"), 10) || 1,
     lang: p.get("lang") || "zh",
+    country: p.get("country") || "",
   };
 }
 
@@ -61,6 +62,7 @@ export function setUrlParams(params) {
   if (params.sort && params.sort !== "none") p.set("sort", params.sort);
   if (params.page > 1) p.set("page", params.page);
   if (params.lang !== "zh") p.set("lang", params.lang);
+  if (params.country) p.set("country", params.country);
   const qs = p.toString();
   const url = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
   window.history.replaceState(null, "", url);

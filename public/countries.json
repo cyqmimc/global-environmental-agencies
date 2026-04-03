@@ -49,9 +49,9 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-09-03",
-      "ndcTargetZh": "2030年温室气体排放比2005年减少50-52%",
-      "ndcTargetEn": "Reduce GHG emissions 50-52% below 2005 levels by 2030",
-      "ndcRating": "insufficient",
+      "ndcTargetZh": "2035年较2005年减排61-66%",
+      "ndcTargetEn": "61-66% reduction below 2005 levels by 2035",
+      "ndcRating": "critically_insufficient",
       "ndcHistory": [
         {
           "version": "INDC",
@@ -60,9 +60,13 @@
         {
           "version": "NDC 2.0",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2024
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -95,7 +99,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.36,
-      "cumulativeCO2Gt": 422.0
+      "cumulativeCO2Gt": 422
     }
   },
   {
@@ -149,8 +153,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-09-03",
-      "ndcTargetZh": "2030年前碳达峰；碳强度比2005年降低65%以上；非化石能源占比达25%",
-      "ndcTargetEn": "Peak CO₂ before 2030; reduce carbon intensity 65%+ vs 2005; 25% non-fossil energy by 2030",
+      "ndcTargetZh": "2035年温室气体净排放较峰值降7-10%；非化石能源占比超30%；风光装机3600GW",
+      "ndcTargetEn": "Reduce net GHG emissions 7-10% from peak; non-fossil energy >30%; wind/solar 3,600GW by 2035",
       "ndcRating": "highly_insufficient",
       "ndcHistory": [
         {
@@ -160,9 +164,13 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -195,7 +203,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.42,
-      "cumulativeCO2Gt": 284.0
+      "cumulativeCO2Gt": 284
     }
   },
   {
@@ -249,8 +257,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
-      "ndcTargetZh": "2030年温室气体排放比1990年减少65%（EU整体目标：减少55%）",
-      "ndcTargetEn": "Reduce GHG 65% below 1990 levels by 2030 (EU target: -55%)",
+      "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+      "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -260,9 +268,13 @@
         {
           "version": "EU Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "EU NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -295,7 +307,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.34,
-      "cumulativeCO2Gt": 92.0
+      "cumulativeCO2Gt": 92
     }
   },
   {
@@ -349,8 +361,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-11-08",
-      "ndcTargetZh": "2030年温室气体排放比2013年减少46%，力争50%",
-      "ndcTargetEn": "Reduce GHG 46% below 2013 levels by 2030, strive for 50%",
+      "ndcTargetZh": "2035年较2013年减排60%",
+      "ndcTargetEn": "60% reduction below 2013 levels by 2035",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -360,9 +372,13 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -395,7 +411,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.37,
-      "cumulativeCO2Gt": 65.0
+      "cumulativeCO2Gt": 65
     }
   },
   {
@@ -462,7 +478,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -495,7 +511,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.33,
-      "cumulativeCO2Gt": 37.0
+      "cumulativeCO2Gt": 37
     }
   },
   {
@@ -562,7 +578,7 @@
           "year": 2022
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -587,15 +603,15 @@
       "noteEn": "Coal cess (GST compensation) ~₹400/t; carbon credit trading scheme under development"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.52,
-      "cumulativeCO2Gt": 55.0
+      "cumulativeCO2Gt": 55
     }
   },
   {
@@ -626,7 +642,7 @@
       "CITES",
       "Ramsar Convention"
     ],
-    "epiScore": 63.0,
+    "epiScore": 63,
     "netZeroTarget": 2050,
     "keyLaws": [
       {
@@ -649,9 +665,9 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-11-18",
-      "ndcTargetZh": "2030年温室气体排放比1990年减少68%",
-      "ndcTargetEn": "Reduce GHG 68% below 1990 levels by 2030",
-      "ndcRating": "almost_sufficient",
+      "ndcTargetZh": "2035年较1990年减排81%",
+      "ndcTargetEn": "81% reduction below 1990 levels by 2035",
+      "ndcRating": "1.5C",
       "ndcHistory": [
         {
           "version": "EU NDC",
@@ -664,9 +680,13 @@
         {
           "version": "Updated NDC",
           "year": 2022
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -699,7 +719,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.31,
-      "cumulativeCO2Gt": 78.0
+      "cumulativeCO2Gt": 78
     }
   },
   {
@@ -753,8 +773,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
-      "ndcTargetZh": "2030年温室气体排放比2005年减少50%",
-      "ndcTargetEn": "Reduce GHG 50% below 2005 levels by 2030",
+      "ndcTargetZh": "2035年较2005年净减排59-67%（含土地利用）",
+      "ndcTargetEn": "59-67% reduction below 2005 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -764,9 +784,13 @@
         {
           "version": "Updated NDC",
           "year": 2022
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2024
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -791,15 +815,15 @@
       "noteEn": "Carbon market bill passed 2024, expected launch 2025"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 4,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.43,
-      "cumulativeCO2Gt": 15.0
+      "cumulativeCO2Gt": 15
     }
   },
   {
@@ -853,8 +877,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-11-09",
-      "ndcTargetZh": "2030年温室气体排放比2005年减少43%",
-      "ndcTargetEn": "Reduce GHG 43% below 2005 levels by 2030",
+      "ndcTargetZh": "2035年较2005年减排62-70%",
+      "ndcTargetEn": "62-70% reduction below 2005 levels by 2035",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -864,9 +888,13 @@
         {
           "version": "Updated NDC",
           "year": 2022
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -899,7 +927,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.34,
-      "cumulativeCO2Gt": 18.0
+      "cumulativeCO2Gt": 18
     }
   },
   {
@@ -953,8 +981,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-11-01",
-      "ndcTargetZh": "2030年温室气体排放控制在350-420 Mt CO₂当量",
-      "ndcTargetEn": "Limit GHG to 350-420 Mt CO₂eq by 2030",
+      "ndcTargetZh": "2035年排放320-380百万吨CO2当量（含土地利用）",
+      "ndcTargetEn": "320-380 MtCO2e by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -964,9 +992,13 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -991,15 +1023,15 @@
       "noteEn": "Carbon tax since 2019, ~R159/tCO₂eq"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 4,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.47,
-      "cumulativeCO2Gt": 17.0
+      "cumulativeCO2Gt": 17
     }
   },
   {
@@ -1053,9 +1085,9 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
-      "ndcTargetZh": "2030年温室气体排放比2005年减少40-45%",
-      "ndcTargetEn": "Reduce GHG 40-45% below 2005 levels by 2030",
-      "ndcRating": "insufficient",
+      "ndcTargetZh": "2035年较2005年减排45-50%（不含林业）",
+      "ndcTargetEn": "45-50% reduction below 2005 levels by 2035 (excl. forestry)",
+      "ndcRating": "highly_insufficient",
       "ndcHistory": [
         {
           "version": "INDC",
@@ -1064,9 +1096,13 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1099,7 +1135,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.33,
-      "cumulativeCO2Gt": 33.0
+      "cumulativeCO2Gt": 33
     }
   },
   {
@@ -1153,8 +1189,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
-      "ndcTargetZh": "2030年温室气体排放比基准情景减少35%",
-      "ndcTargetEn": "Reduce GHG 35% below BAU by 2030",
+      "ndcTargetZh": "已提交2035目标",
+      "ndcTargetEn": "2035 target submitted",
       "ndcRating": "highly_insufficient",
       "ndcHistory": [
         {
@@ -1164,9 +1200,13 @@
         {
           "version": "Updated NDC",
           "year": 2022
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2026
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1191,15 +1231,15 @@
       "noteEn": "Carbon tax ~MXN55/tCO₂; pilot ETS operational"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 6,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.44,
-      "cumulativeCO2Gt": 18.0
+      "cumulativeCO2Gt": 18
     }
   },
   {
@@ -1247,8 +1287,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-11-03",
-      "ndcTargetZh": "2030年每年减少2.78亿吨CO₂当量排放",
-      "ndcTargetEn": "Reduce 278 Mt CO₂eq annually by 2030",
+      "ndcTargetZh": "已提交2035目标（详细评估待定）",
+      "ndcTargetEn": "2035 target submitted (details pending full assessment)",
       "ndcRating": "critically_insufficient",
       "ndcHistory": [
         {
@@ -1258,9 +1298,13 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1285,15 +1329,15 @@
       "noteEn": "No carbon pricing; pursuing emission reductions through Saudi Green Initiative"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.41,
-      "cumulativeCO2Gt": 15.0
+      "cumulativeCO2Gt": 15
     }
   },
   {
@@ -1347,9 +1391,9 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-31",
-      "ndcTargetZh": "2030年温室气体排放比基准情景减少31.89%（自主）或43.2%（国际支持）",
-      "ndcTargetEn": "Reduce GHG 31.89% (unconditional) or 43.2% (with support) below BAU by 2030",
-      "ndcRating": "highly_insufficient",
+      "ndcTargetZh": "无条件：较2019年增幅不超56%；有条件：增幅10-30%",
+      "ndcTargetEn": "Unconditional: limit increase to 56% above 2019; conditional: 10-30% increase",
+      "ndcRating": "critically_insufficient",
       "ndcHistory": [
         {
           "version": "INDC",
@@ -1362,9 +1406,13 @@
         {
           "version": "Enhanced NDC",
           "year": 2022
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1389,15 +1437,15 @@
       "noteEn": "Carbon exchange launched 2023, covering power sector"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.48,
-      "cumulativeCO2Gt": 14.0
+      "cumulativeCO2Gt": 14
     }
   },
   {
@@ -1464,7 +1512,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1497,7 +1545,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.34,
-      "cumulativeCO2Gt": 24.0
+      "cumulativeCO2Gt": 24
     }
   },
   {
@@ -1564,7 +1612,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1597,7 +1645,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.36,
-      "cumulativeCO2Gt": 16.0
+      "cumulativeCO2Gt": 16
     }
   },
   {
@@ -1651,8 +1699,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2019-09-23",
-      "ndcTargetZh": "2030年温室气体排放不超过1990年的70%",
-      "ndcTargetEn": "Limit GHG to 70% of 1990 levels by 2030",
+      "ndcTargetZh": "2035年温室气体排放控制在1990年水平的65-67%（含森林吸收）",
+      "ndcTargetEn": "Limit GHG to 65-67% of 1990 levels by 2035 (incl. forests)",
       "ndcRating": "critically_insufficient",
       "ndcHistory": [
         {
@@ -1662,9 +1710,13 @@
         {
           "version": "Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1689,15 +1741,15 @@
       "noteEn": "Sakhalin regional ETS pilot; no federal carbon pricing"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 8,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.39,
-      "cumulativeCO2Gt": 115.0
+      "cumulativeCO2Gt": 115
     }
   },
   {
@@ -1764,7 +1816,7 @@
           "year": 2022
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1864,7 +1916,7 @@
           "year": 2022
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1889,8 +1941,8 @@
       "noteEn": "No carbon pricing; voluntary carbon market under development"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -1951,8 +2003,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-11-03",
-      "ndcTargetZh": "2030年温室气体排放比2018年减少40%",
-      "ndcTargetEn": "Reduce GHG 40% below 2018 levels by 2030",
+      "ndcTargetZh": "2035年较2018年减排53-61%（含土地利用）",
+      "ndcTargetEn": "53-61% reduction below 2018 levels by 2035 (incl. LULUCF)",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -1962,9 +2014,13 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1997,7 +2053,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.36,
-      "cumulativeCO2Gt": 19.0
+      "cumulativeCO2Gt": 19
     }
   },
   {
@@ -2064,7 +2120,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2097,7 +2153,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.29,
-      "cumulativeCO2Gt": 5.0
+      "cumulativeCO2Gt": 5
     }
   },
   {
@@ -2151,9 +2207,9 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-06-20",
-      "ndcTargetZh": "2030年温室气体排放比1990年减少至少55%",
-      "ndcTargetEn": "Reduce GHG at least 55% below 1990 levels by 2030",
-      "ndcRating": "insufficient",
+      "ndcTargetZh": "已提交2035目标（CAT评为1.5°C兼容）",
+      "ndcTargetEn": "2035 target submitted (CAT rated 1.5°C compatible)",
+      "ndcRating": "1.5C",
       "ndcHistory": [
         {
           "version": "INDC",
@@ -2166,9 +2222,13 @@
         {
           "version": "Enhanced NDC",
           "year": 2022
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2255,8 +2315,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-04",
-      "ndcTargetZh": "2030年净温室气体排放比2005年减少50%",
-      "ndcTargetEn": "Reduce net GHG 50% below 2005 levels by 2030",
+      "ndcTargetZh": "已提交2035目标",
+      "ndcTargetEn": "2035 target submitted",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -2266,9 +2326,13 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2023
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2355,8 +2419,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-12-28",
-      "ndcTargetZh": "2030年温室气体排放比基准情景减少32%",
-      "ndcTargetEn": "Reduce GHG 32% below BAU by 2030",
+      "ndcTargetZh": "已提交2035目标",
+      "ndcTargetEn": "2035 target submitted",
       "ndcRating": "1.5C",
       "ndcHistory": [
         {
@@ -2366,9 +2430,13 @@
         {
           "version": "Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2026
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2393,8 +2461,8 @@
       "noteEn": "No carbon pricing; carbon market under study"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -2455,8 +2523,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-05-16",
-      "ndcTargetZh": "2030年温室气体排放比基准情景减少20%（无条件）或47%（有条件）",
-      "ndcTargetEn": "Reduce GHG 20% (unconditional) or 47% (conditional) below BAU by 2030",
+      "ndcTargetZh": "2035年较2018年减排32%",
+      "ndcTargetEn": "32% GHG reduction below 2018 levels by 2035",
       "ndcRating": "2C",
       "ndcHistory": [
         {
@@ -2466,9 +2534,13 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2493,15 +2565,15 @@
       "noteEn": "No carbon pricing; carbon market legislation under discussion"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.56,
-      "cumulativeCO2Gt": 3.0
+      "cumulativeCO2Gt": 3
     }
   },
   {
@@ -2568,7 +2640,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2593,8 +2665,8 @@
       "noteEn": "Carbon tax on liquid fuels, covering part of fossil fuel consumption"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 4,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -2655,8 +2727,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2018-07-12",
-      "ndcTargetZh": "2030年温室气体排放比基准情景减少51%",
-      "ndcTargetEn": "Reduce GHG 51% below BAU by 2030",
+      "ndcTargetZh": "已提交2035目标",
+      "ndcTargetEn": "2035 target submitted",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -2666,9 +2738,13 @@
         {
           "version": "Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2693,8 +2769,8 @@
       "noteEn": "Carbon tax ~COP25,000/tCO₂ (~$5), covering fossil fuels"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -2755,8 +2831,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
-      "ndcTargetZh": "2030年温室气体排放比基准情景减少30-40%",
-      "ndcTargetEn": "Reduce GHG 30-40% below BAU by 2030",
+      "ndcTargetZh": "已提交2035目标",
+      "ndcTargetEn": "2035 target submitted",
       "ndcRating": "critically_insufficient",
       "ndcHistory": [
         {
@@ -2766,9 +2842,13 @@
         {
           "version": "Updated NDC",
           "year": 2022
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2022
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2793,15 +2873,15 @@
       "noteEn": "Carbon credit exchange launched 2023; mandatory carbon pricing under study"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.46,
-      "cumulativeCO2Gt": 10.0
+      "cumulativeCO2Gt": 10
     }
   },
   {
@@ -2868,7 +2948,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2901,7 +2981,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.3,
-      "cumulativeCO2Gt": 11.0
+      "cumulativeCO2Gt": 11
     }
   },
   {
@@ -2955,8 +3035,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2021-10-07",
-      "ndcTargetZh": "2030年温室气体排放比基准情景减少41%",
-      "ndcTargetEn": "Reduce GHG 41% below BAU by 2030",
+      "ndcTargetZh": "已提交2035目标",
+      "ndcTargetEn": "2035 target submitted",
       "ndcRating": "critically_insufficient",
       "ndcHistory": [
         {
@@ -2966,9 +3046,13 @@
         {
           "version": "NDC",
           "year": 2023
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2993,15 +3077,15 @@
       "noteEn": "ETS under preparation, expected to link with EU ETS"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 7,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.42,
-      "cumulativeCO2Gt": 15.0
+      "cumulativeCO2Gt": 15
     }
   },
   {
@@ -3068,7 +3152,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3168,7 +3252,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3255,8 +3339,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-10-06",
-      "ndcTargetZh": "2030年温室气体排放比1990年减少50%",
-      "ndcTargetEn": "Reduce GHG 50% below 1990 levels by 2030",
+      "ndcTargetZh": "已提交2035目标",
+      "ndcTargetEn": "2035 target submitted",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -3266,9 +3350,13 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2024
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3368,7 +3456,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3432,7 +3520,7 @@
       "Barcelona Convention",
       "UNCCD"
     ],
-    "epiScore": 57.0,
+    "epiScore": 57,
     "netZeroTarget": 2050,
     "keyLaws": [
       {
@@ -3468,7 +3556,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3501,7 +3589,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.35,
-      "cumulativeCO2Gt": 3.0
+      "cumulativeCO2Gt": 3
     }
   },
   {
@@ -3568,7 +3656,7 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3593,8 +3681,8 @@
       "noteEn": "ETS and carbon tax options under evaluation"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -3672,7 +3760,7 @@
           "year": 2023
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3705,7 +3793,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.36,
-      "cumulativeCO2Gt": 5.0
+      "cumulativeCO2Gt": 5
     }
   },
   {
@@ -3772,7 +3860,7 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3797,8 +3885,8 @@
       "noteEn": "Voluntary carbon market (BCX exchange) launched 2022; mandatory mechanism under study"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -3872,7 +3960,7 @@
           "year": 2022
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3897,8 +3985,8 @@
       "noteEn": "ETS pilot launching 2025, fully operational by 2028"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -3972,7 +4060,7 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3997,15 +4085,15 @@
       "noteEn": "Carbon pricing mechanism under study"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 2,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.55,
-      "cumulativeCO2Gt": 3.0
+      "cumulativeCO2Gt": 3
     }
   },
   {
@@ -4059,8 +4147,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-02-10",
-      "ndcTargetZh": "2030年GDP碳强度比2007年降低40%；2025年碳排放达峰",
-      "ndcTargetEn": "Reduce GDP carbon intensity 40% vs 2007 by 2030; peak emissions by 2025",
+      "ndcTargetZh": "已提交2035目标",
+      "ndcTargetEn": "2035 target submitted",
       "ndcRating": "almost_sufficient",
       "ndcHistory": [
         {
@@ -4070,9 +4158,13 @@
         {
           "version": "Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4105,7 +4197,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.39,
-      "cumulativeCO2Gt": 4.0
+      "cumulativeCO2Gt": 4
     }
   },
   {
@@ -4159,8 +4251,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-07-25",
-      "ndcTargetZh": "2030年温室气体排放比基准情景减少30%",
-      "ndcTargetEn": "Reduce GHG 30% below BAU by 2030",
+      "ndcTargetZh": "已提交2035目标",
+      "ndcTargetEn": "2035 target submitted",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -4170,9 +4262,13 @@
         {
           "version": "Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4197,8 +4293,8 @@
       "noteEn": "Carbon pricing under evaluation"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -4272,7 +4368,7 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4297,15 +4393,15 @@
       "noteEn": "Carbon market under study; participates in Article 6 cooperation"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.44,
-      "cumulativeCO2Gt": 2.0
+      "cumulativeCO2Gt": 2
     }
   },
   {
@@ -4372,7 +4468,7 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4397,8 +4493,8 @@
       "noteEn": "Carbon pricing under evaluation; participates in voluntary carbon market"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -4472,7 +4568,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4572,7 +4668,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4605,7 +4701,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.35,
-      "cumulativeCO2Gt": 25.0
+      "cumulativeCO2Gt": 25
     }
   },
   {
@@ -4672,7 +4768,7 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4759,8 +4855,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-03-09",
-      "ndcTargetZh": "2030年温室气体排放比基准情景减少68.8%",
-      "ndcTargetEn": "Reduce GHG 68.8% below BAU by 2030",
+      "ndcTargetZh": "已提交2035目标",
+      "ndcTargetEn": "2035 target submitted",
       "ndcRating": "1.5C",
       "ndcHistory": [
         {
@@ -4770,9 +4866,13 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4797,8 +4897,8 @@
       "noteEn": "Carbon market mechanism under study"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 2,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -4844,8 +4944,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-11-10",
-      "ndcTargetZh": "2030年排放比基准情景减少50%（有条件）",
-      "ndcTargetEn": "Reduce GHG 50% below BAU by 2030 (conditional)",
+      "ndcTargetZh": "已提交2035目标",
+      "ndcTargetEn": "2035 target submitted",
       "ndcRating": "insufficient",
       "ndcHistory": [
         {
@@ -4855,9 +4955,13 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4882,8 +4986,8 @@
       "noteEn": "Carbon pricing under study"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 2,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -4939,8 +5043,8 @@
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
-      "ndcTargetZh": "2030年排放比基准情景减少22%（有条件）",
-      "ndcTargetEn": "Reduce GHG 22% below BAU by 2030 (conditional)",
+      "ndcTargetZh": "已提交2035目标",
+      "ndcTargetEn": "2035 target submitted",
       "ndcRating": "2C",
       "ndcHistory": [
         {
@@ -4950,9 +5054,13 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4977,8 +5085,8 @@
       "noteEn": "Carbon market under study"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -5038,7 +5146,7 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5080,7 +5188,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.52,
-      "cumulativeCO2Gt": 10.0
+      "cumulativeCO2Gt": 10
     }
   },
   {
@@ -5123,7 +5231,7 @@
           "year": 2015
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5166,7 +5274,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.45,
-      "cumulativeCO2Gt": 20.0
+      "cumulativeCO2Gt": 20
     }
   },
   {
@@ -5218,7 +5326,7 @@
           "year": 2023
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5261,7 +5369,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.4,
-      "cumulativeCO2Gt": 12.0
+      "cumulativeCO2Gt": 12
     }
   },
   {
@@ -5313,7 +5421,7 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5338,8 +5446,8 @@
       "noteEn": "Carbon tax ~UAH30/tCO₂; EU ETS alignment under preparation"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 4,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -5356,7 +5464,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.43,
-      "cumulativeCO2Gt": 30.0
+      "cumulativeCO2Gt": 30
     }
   },
   {
@@ -5408,7 +5516,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5451,7 +5559,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.36,
-      "cumulativeCO2Gt": 5.0
+      "cumulativeCO2Gt": 5
     }
   },
   {
@@ -5498,7 +5606,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5593,7 +5701,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5636,7 +5744,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.39,
-      "cumulativeCO2Gt": 8.0
+      "cumulativeCO2Gt": 8
     }
   },
   {
@@ -5654,7 +5762,7 @@
       "energy",
       "air"
     ],
-    "epiScore": 52.0,
+    "epiScore": 52,
     "netZeroTarget": 2050,
     "keyLaws": [
       {
@@ -5688,7 +5796,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5731,7 +5839,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.33,
-      "cumulativeCO2Gt": 13.0
+      "cumulativeCO2Gt": 13
     }
   },
   {
@@ -5778,7 +5886,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5868,7 +5976,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5958,7 +6066,7 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6048,7 +6156,7 @@
           "year": 2022
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6091,7 +6199,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.46,
-      "cumulativeCO2Gt": 6.0
+      "cumulativeCO2Gt": 6
     }
   },
   {
@@ -6109,7 +6217,7 @@
       "climate",
       "forest"
     ],
-    "epiScore": 29.0,
+    "epiScore": 29,
     "netZeroTarget": 2050,
     "keyLaws": [
       {
@@ -6138,7 +6246,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6233,7 +6341,7 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6328,7 +6436,7 @@
           "year": 2019
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6353,8 +6461,8 @@
       "noteEn": "Carbon market under study"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -6418,7 +6526,7 @@
           "year": 2022
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6443,8 +6551,8 @@
       "noteEn": "Carbon tax covering part of fossil fuels"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 4,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -6508,7 +6616,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6603,7 +6711,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6693,7 +6801,7 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6718,8 +6826,8 @@
       "noteEn": "Carbon pricing under study"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -6736,7 +6844,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.48,
-      "cumulativeCO2Gt": 1.0
+      "cumulativeCO2Gt": 1
     }
   },
   {
@@ -6783,7 +6891,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6844,7 +6952,7 @@
       "forest",
       "biodiversity"
     ],
-    "epiScore": 24.0,
+    "epiScore": 24,
     "netZeroTarget": 2050,
     "keyLaws": [
       {
@@ -6869,7 +6977,7 @@
           "year": 2015
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6911,7 +7019,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.55,
-      "cumulativeCO2Gt": 1.0
+      "cumulativeCO2Gt": 1
     }
   },
   {
@@ -6958,7 +7066,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7048,7 +7156,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7138,7 +7246,7 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7180,7 +7288,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.44,
-      "cumulativeCO2Gt": 5.0
+      "cumulativeCO2Gt": 5
     }
   },
   {
@@ -7223,7 +7331,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7265,7 +7373,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.55,
-      "cumulativeCO2Gt": 1.0
+      "cumulativeCO2Gt": 1
     }
   },
   {
@@ -7312,7 +7420,7 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7398,7 +7506,7 @@
           "year": 2017
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7441,7 +7549,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.48,
-      "cumulativeCO2Gt": 8.0
+      "cumulativeCO2Gt": 8
     }
   },
   {
@@ -7484,7 +7592,7 @@
           "year": 2015
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7527,7 +7635,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.49,
-      "cumulativeCO2Gt": 1.0
+      "cumulativeCO2Gt": 1
     }
   },
   {
@@ -7575,7 +7683,7 @@
           "year": 2017
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7665,7 +7773,7 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2025
+      "nextNdcDeadline": 2030
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7690,8 +7798,8 @@
       "noteEn": "Carbon market under study"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
       "statusZh": "BTR1待提交",
       "statusEn": "BTR1 pending"
@@ -7707,7 +7815,7 @@
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.45,
-      "cumulativeCO2Gt": 1.0
+      "cumulativeCO2Gt": 1
     }
   }
 ]

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import RadarChart from "./charts/RadarChart";
+import TrendLineChart from "./charts/TrendLineChart";
 import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG } from "../constants";
 import Scorecard from "./Scorecard";
 
@@ -517,6 +518,39 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                   </div>
                 );
               })()}
+
+              {/* Trend Charts */}
+              {selectedCountry.wb?.history && (
+                <div className="bg-gray-50 rounded-xl p-4 mb-5">
+                  <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
+                    {t("历史趋势", "Historical Trends")}
+                  </h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {[
+                      { key: "forestArea", zh: "森林覆盖率", en: "Forest Area", unit: "%", color: "#16a34a" },
+                      { key: "renewableEnergy", zh: "可再生能源", en: "Renewable Energy", unit: "%", color: "#059669" },
+                      { key: "co2Mt", zh: "CO₂排放 (百万吨)", en: "CO₂ Emissions (Mt)", unit: "", color: "#dc2626" },
+                      { key: "pm25", zh: "PM2.5 (µg/m³)", en: "PM2.5 (µg/m³)", unit: "", color: "#d97706" },
+                    ]
+                      .filter((m) => selectedCountry.wb.history[m.key]?.length > 1)
+                      .map((m) => (
+                        <div key={m.key}>
+                          <p className="text-xs font-medium text-gray-500 mb-1 text-center">
+                            {t(m.zh, m.en)}
+                          </p>
+                          <TrendLineChart
+                            datasets={[{
+                              label: language === "zh" ? selectedCountry.countryZh : selectedCountry.countryEn,
+                              data: selectedCountry.wb.history[m.key],
+                              color: m.color,
+                            }]}
+                            yUnit={m.unit}
+                          />
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              )}
 
               {selectedCountry.wb && (
                 <div className="bg-gray-50 rounded-xl p-4">

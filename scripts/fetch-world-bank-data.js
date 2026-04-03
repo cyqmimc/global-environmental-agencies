@@ -78,8 +78,7 @@ async function fetchIndicator(code, label) {
 
     const alpha3to2 = await getAlpha3to2Map();
 
-    // Index by country alpha-2 code
-    // country.id can be alpha-2 or alpha-3 depending on indicator source
+    // Index by country alpha-2 code, keeping both latest + history
     const result = {};
     for (const entry of data) {
       if (entry.value == null) continue;
@@ -97,9 +96,17 @@ async function fetchIndicator(code, label) {
       if (!key) continue;
 
       const year = parseInt(entry.date);
-      if (!result[key] || year > result[key].year) {
-        result[key] = { value: entry.value, year };
+      if (!result[key]) result[key] = { value: null, year: 0, history: [] };
+      result[key].history.push({ year, value: Math.round(entry.value * 100) / 100 });
+      if (year > result[key].year) {
+        result[key].value = entry.value;
+        result[key].year = year;
       }
+    }
+
+    // Sort history by year ascending
+    for (const key of Object.keys(result)) {
+      result[key].history.sort((a, b) => a.year - b.year);
     }
 
     console.log(`  ✓ Got data for ${Object.keys(result).length} countries`);
@@ -166,8 +173,18 @@ async function main() {
       countryData.co2PerCapita = null;
     }
 
+    // Collect history only for trend-chart indicators (keep payload small)
+    const HISTORY_KEYS = ["forestArea", "co2Mt", "renewableEnergy", "pm25"];
+    const history = {};
+    for (const key of HISTORY_KEYS) {
+      const entry = indicatorData[key]?.[iso2];
+      if (entry?.history?.length) {
+        history[key] = entry.history;
+      }
+    }
+
     if (hasAny) {
-      output.countries[iso2] = { ...countryData, dataYear };
+      output.countries[iso2] = { ...countryData, dataYear, history };
     }
   }
 
