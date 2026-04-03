@@ -1,10 +1,11 @@
 {
   "meta": {
-    "fetchedAt": "2026-04-03T01:09:48.115Z",
-    "dateRange": "2015:2023",
+    "fetchedAt": "2026-04-03T04:11:51.615Z",
+    "dateRange": "2015:2025",
     "indicators": {
       "forestArea": "AG.LND.FRST.ZS",
-      "co2Mt": "CC.CO2.EMSE.EL",
+      "co2Mt": "EN.GHG.CO2.MT.CE.AR5",
+      "co2PerCapitaDirect": "EN.GHG.CO2.PC.CE.AR5",
       "renewableEnergy": "EG.FEC.RNEW.ZS",
       "pm25": "EN.ATM.PM25.MC.M3",
       "protectedAreas": "ER.PTD.TOTL.ZS",
@@ -15,21 +16,21 @@
   "countries": {
     "us": {
       "forestArea": 33.87,
-      "co2Mt": 4981.3,
+      "co2Mt": 4632.16,
       "renewableEnergy": 10.9,
       "pm25": 7.81,
-      "protectedAreas": 15.9,
-      "population": 336806231,
-      "gdp": 27292170793214.4,
-      "co2PerCapita": 14.79,
+      "protectedAreas": 15.8,
+      "population": 340110988,
+      "gdp": 28750956130731.2,
+      "co2PerCapita": 13.62,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -73,19 +74,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 4982.79
+            "value": 5132.98
           },
           {
             "year": 2016,
-            "value": 4888.64
+            "value": 5028.95
           },
           {
             "year": 2017,
-            "value": 4813.72
+            "value": 4959.46
           },
           {
             "year": 2018,
-            "value": 4981.3
+            "value": 5118.37
+          },
+          {
+            "year": 2019,
+            "value": 4967.91
+          },
+          {
+            "year": 2020,
+            "value": 4466.88
+          },
+          {
+            "year": 2021,
+            "value": 4754.38
+          },
+          {
+            "year": 2022,
+            "value": 4815.77
+          },
+          {
+            "year": 2023,
+            "value": 4618.27
+          },
+          {
+            "year": 2024,
+            "value": 4632.16
           }
         ],
         "renewableEnergy": [
@@ -148,21 +173,21 @@
     },
     "cn": {
       "forestArea": 24.03,
-      "co2Mt": 10313.46,
+      "co2Mt": 13124.73,
       "renewableEnergy": 15.2,
       "pm25": 34.81,
       "protectedAreas": 14.7,
-      "population": 1410710000,
-      "gdp": 18270356654533.2,
-      "co2PerCapita": 7.31,
+      "population": 1408975000,
+      "gdp": 18743803170827.2,
+      "co2PerCapita": 9.32,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -206,19 +231,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 9830.43
+            "value": 10749.9
           },
           {
             "year": 2016,
-            "value": 9814.31
+            "value": 10773.73
           },
           {
             "year": 2017,
-            "value": 10017.77
+            "value": 10999.42
           },
           {
             "year": 2018,
-            "value": 10313.46
+            "value": 11527.51
+          },
+          {
+            "year": 2019,
+            "value": 11813.06
+          },
+          {
+            "year": 2020,
+            "value": 11964.13
+          },
+          {
+            "year": 2021,
+            "value": 12551.86
+          },
+          {
+            "year": 2022,
+            "value": 12518.68
+          },
+          {
+            "year": 2023,
+            "value": 13021.24
+          },
+          {
+            "year": 2024,
+            "value": 13124.73
           }
         ],
         "renewableEnergy": [
@@ -281,21 +330,21 @@
     },
     "de": {
       "forestArea": 32.68,
-      "co2Mt": 709.54,
+      "co2Mt": 579.94,
       "renewableEnergy": 17.6,
       "pm25": 10.29,
-      "protectedAreas": 38.7,
-      "population": 83287273,
-      "gdp": 4562207532490.28,
-      "co2PerCapita": 8.52,
+      "protectedAreas": 40.1,
+      "population": 83516593,
+      "gdp": 4685592577804.69,
+      "co2PerCapita": 6.94,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -339,19 +388,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 742.31
+            "value": 784.91
           },
           {
             "year": 2016,
-            "value": 747.15
+            "value": 789.25
           },
           {
             "year": 2017,
-            "value": 732.2
+            "value": 774.48
           },
           {
             "year": 2018,
-            "value": 709.54
+            "value": 746.7
+          },
+          {
+            "year": 2019,
+            "value": 696.5
+          },
+          {
+            "year": 2020,
+            "value": 642.09
+          },
+          {
+            "year": 2021,
+            "value": 670.67
+          },
+          {
+            "year": 2022,
+            "value": 658.09
+          },
+          {
+            "year": 2023,
+            "value": 589.66
+          },
+          {
+            "year": 2024,
+            "value": 579.94
           }
         ],
         "renewableEnergy": [
@@ -414,21 +487,21 @@
     },
     "jp": {
       "forestArea": 68.4,
-      "co2Mt": 1106.15,
+      "co2Mt": 972.27,
       "renewableEnergy": 8.8,
       "pm25": 12.84,
-      "protectedAreas": 15.2,
-      "population": 124516650,
-      "gdp": 4213167237905.83,
-      "co2PerCapita": 8.88,
+      "protectedAreas": 15.1,
+      "population": 123975371,
+      "gdp": 4027597523550.58,
+      "co2PerCapita": 7.84,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -472,19 +545,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 1181.5
+            "value": 1232.58
           },
           {
             "year": 2016,
-            "value": 1171.39
+            "value": 1228.65
           },
           {
             "year": 2017,
-            "value": 1151.93
+            "value": 1212.94
           },
           {
             "year": 2018,
-            "value": 1106.15
+            "value": 1163.13
+          },
+          {
+            "year": 2019,
+            "value": 1123.81
+          },
+          {
+            "year": 2020,
+            "value": 1060.23
+          },
+          {
+            "year": 2021,
+            "value": 1080.21
+          },
+          {
+            "year": 2022,
+            "value": 1050.5
+          },
+          {
+            "year": 2023,
+            "value": 1002.44
+          },
+          {
+            "year": 2024,
+            "value": 972.27
           }
         ],
         "renewableEnergy": [
@@ -547,21 +644,21 @@
     },
     "fr": {
       "forestArea": 32.48,
-      "co2Mt": 309.96,
+      "co2Mt": 274.45,
       "renewableEnergy": 16.2,
       "pm25": 9.6,
-      "protectedAreas": 36.6,
-      "population": 68372286,
-      "gdp": 3056250648138.29,
-      "co2PerCapita": 4.53,
+      "protectedAreas": 36.8,
+      "population": 68551653,
+      "gdp": 3160442622465.08,
+      "co2PerCapita": 4,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -605,19 +702,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 310.52
+            "value": 332.15
           },
           {
             "year": 2016,
-            "value": 312.71
+            "value": 334.77
           },
           {
             "year": 2017,
-            "value": 316.36
+            "value": 338.71
           },
           {
             "year": 2018,
-            "value": 309.96
+            "value": 328.55
+          },
+          {
+            "year": 2019,
+            "value": 322.9
+          },
+          {
+            "year": 2020,
+            "value": 287.09
+          },
+          {
+            "year": 2021,
+            "value": 316.7
+          },
+          {
+            "year": 2022,
+            "value": 307.68
+          },
+          {
+            "year": 2023,
+            "value": 284.15
+          },
+          {
+            "year": 2024,
+            "value": 274.45
           }
         ],
         "renewableEnergy": [
@@ -680,21 +801,21 @@
     },
     "in": {
       "forestArea": 24.54,
-      "co2Mt": 2434.52,
+      "co2Mt": 3153.83,
       "renewableEnergy": 34.9,
       "pm25": 48.39,
-      "protectedAreas": 4.4,
-      "population": 1438069596,
-      "gdp": 3638489096033.86,
-      "co2PerCapita": 1.69,
+      "protectedAreas": 4.5,
+      "population": 1450935791,
+      "gdp": 3909891533858.08,
+      "co2PerCapita": 2.17,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -738,19 +859,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 2150.22
+            "value": 2278.23
           },
           {
             "year": 2016,
-            "value": 2183.28
+            "value": 2311.98
           },
           {
             "year": 2017,
-            "value": 2301.44
+            "value": 2441.2
           },
           {
             "year": 2018,
-            "value": 2434.52
+            "value": 2556.72
+          },
+          {
+            "year": 2019,
+            "value": 2551.49
+          },
+          {
+            "year": 2020,
+            "value": 2356.96
+          },
+          {
+            "year": 2021,
+            "value": 2597.93
+          },
+          {
+            "year": 2022,
+            "value": 2807.08
+          },
+          {
+            "year": 2023,
+            "value": 3014.52
+          },
+          {
+            "year": 2024,
+            "value": 3153.83
           }
         ],
         "renewableEnergy": [
@@ -813,21 +958,21 @@
     },
     "gb": {
       "forestArea": 13.29,
-      "co2Mt": 358.8,
+      "co2Mt": 292.42,
       "renewableEnergy": 12.2,
       "pm25": 9.91,
-      "protectedAreas": 39.9,
-      "population": 68492000,
-      "gdp": 3420796653789.08,
-      "co2PerCapita": 5.24,
+      "protectedAreas": 42.1,
+      "population": 69226000,
+      "gdp": 3686033044482.13,
+      "co2PerCapita": 4.22,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -871,19 +1016,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 400.37
+            "value": 415.88
           },
           {
             "year": 2016,
-            "value": 378.89
+            "value": 391.86
           },
           {
             "year": 2017,
-            "value": 366.38
+            "value": 380.71
           },
           {
             "year": 2018,
-            "value": 358.8
+            "value": 373.88
+          },
+          {
+            "year": 2019,
+            "value": 359.01
+          },
+          {
+            "year": 2020,
+            "value": 319.7
+          },
+          {
+            "year": 2021,
+            "value": 337.91
+          },
+          {
+            "year": 2022,
+            "value": 324.99
+          },
+          {
+            "year": 2023,
+            "value": 304.79
+          },
+          {
+            "year": 2024,
+            "value": 292.42
           }
         ],
         "renewableEnergy": [
@@ -946,21 +1115,21 @@
     },
     "br": {
       "forestArea": 58.98,
-      "co2Mt": 427.71,
+      "co2Mt": 491.47,
       "renewableEnergy": 46.5,
       "pm25": 12.18,
-      "protectedAreas": 29.5,
-      "population": 211140729,
-      "gdp": 2191131869706.02,
-      "co2PerCapita": 2.03,
+      "protectedAreas": 29.4,
+      "population": 211998573,
+      "gdp": 2185821648943.86,
+      "co2PerCapita": 2.32,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -1004,19 +1173,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 479.97
+            "value": 517.94
           },
           {
             "year": 2016,
-            "value": 441.91
+            "value": 482.71
           },
           {
             "year": 2017,
-            "value": 449.84
+            "value": 494.76
           },
           {
             "year": 2018,
-            "value": 427.71
+            "value": 471.08
+          },
+          {
+            "year": 2019,
+            "value": 468.58
+          },
+          {
+            "year": 2020,
+            "value": 447.92
+          },
+          {
+            "year": 2021,
+            "value": 506.23
+          },
+          {
+            "year": 2022,
+            "value": 479.27
+          },
+          {
+            "year": 2023,
+            "value": 480.24
+          },
+          {
+            "year": 2024,
+            "value": 491.47
           }
         ],
         "renewableEnergy": [
@@ -1079,21 +1272,21 @@
     },
     "au": {
       "forestArea": 17.42,
-      "co2Mt": 386.62,
+      "co2Mt": 383.4,
       "renewableEnergy": 12.3,
       "pm25": 8.25,
-      "protectedAreas": 32.1,
-      "population": 26659922,
-      "gdp": 1734451264655.6,
-      "co2PerCapita": 14.5,
+      "protectedAreas": 33.5,
+      "population": 27196812,
+      "gdp": 1757022451652.83,
+      "co2PerCapita": 14.1,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -1137,19 +1330,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 375.97
+            "value": 400.63
           },
           {
             "year": 2016,
-            "value": 383.96
+            "value": 408.61
           },
           {
             "year": 2017,
-            "value": 387.2
+            "value": 411.21
           },
           {
             "year": 2018,
-            "value": 386.62
+            "value": 409.25
+          },
+          {
+            "year": 2019,
+            "value": 407.91
+          },
+          {
+            "year": 2020,
+            "value": 392.55
+          },
+          {
+            "year": 2021,
+            "value": 384.73
+          },
+          {
+            "year": 2022,
+            "value": 378.07
+          },
+          {
+            "year": 2023,
+            "value": 377.5
+          },
+          {
+            "year": 2024,
+            "value": 383.4
           }
         ],
         "renewableEnergy": [
@@ -1212,21 +1429,21 @@
     },
     "za": {
       "forestArea": 13.97,
-      "co2Mt": 433.25,
+      "co2Mt": 440.17,
       "renewableEnergy": 9.7,
       "pm25": 23.75,
-      "protectedAreas": 12.7,
-      "population": 63212384,
-      "gdp": 381440724491.23,
-      "co2PerCapita": 6.85,
+      "protectedAreas": 12.8,
+      "population": 64007187,
+      "gdp": 401144998373.59,
+      "co2PerCapita": 6.88,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -1270,19 +1487,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 424.88
+            "value": 462.27
           },
           {
             "year": 2016,
-            "value": 425.18
+            "value": 460.2
           },
           {
             "year": 2017,
-            "value": 435.14
+            "value": 469.58
           },
           {
             "year": 2018,
-            "value": 433.25
+            "value": 473.42
+          },
+          {
+            "year": 2019,
+            "value": 477.54
+          },
+          {
+            "year": 2020,
+            "value": 450.86
+          },
+          {
+            "year": 2021,
+            "value": 448.56
+          },
+          {
+            "year": 2022,
+            "value": 429.33
+          },
+          {
+            "year": 2023,
+            "value": 427.27
+          },
+          {
+            "year": 2024,
+            "value": 440.17
           }
         ],
         "renewableEnergy": [
@@ -1345,21 +1586,21 @@
     },
     "ca": {
       "forestArea": 39.46,
-      "co2Mt": 574.4,
+      "co2Mt": 577.97,
       "renewableEnergy": 23.8,
       "pm25": 6.57,
-      "protectedAreas": 11.5,
-      "population": 40083484,
-      "gdp": 2173339670064.33,
-      "co2PerCapita": 14.33,
+      "protectedAreas": 11.6,
+      "population": 41288599,
+      "gdp": 2243636826633.76,
+      "co2PerCapita": 14,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -1403,19 +1644,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 558.8
+            "value": 574.38
           },
           {
             "year": 2016,
-            "value": 550.48
+            "value": 574.1
           },
           {
             "year": 2017,
-            "value": 562.26
+            "value": 591.89
           },
           {
             "year": 2018,
-            "value": 574.4
+            "value": 612.58
+          },
+          {
+            "year": 2019,
+            "value": 609.08
+          },
+          {
+            "year": 2020,
+            "value": 548.45
+          },
+          {
+            "year": 2021,
+            "value": 561.73
+          },
+          {
+            "year": 2022,
+            "value": 575.84
+          },
+          {
+            "year": 2023,
+            "value": 567.1
+          },
+          {
+            "year": 2024,
+            "value": 577.97
           }
         ],
         "renewableEnergy": [
@@ -1478,21 +1743,21 @@
     },
     "mx": {
       "forestArea": 33.6,
-      "co2Mt": 472.14,
+      "co2Mt": 475.99,
       "renewableEnergy": 13,
       "pm25": 14.99,
-      "protectedAreas": 19,
-      "population": 129739759,
-      "gdp": 1798317581486.88,
+      "protectedAreas": 19.9,
+      "population": 130861007,
+      "gdp": 1856365616165.94,
       "co2PerCapita": 3.64,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -1536,19 +1801,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 472.59
+            "value": 490.43
           },
           {
             "year": 2016,
-            "value": 479.25
+            "value": 496.47
           },
           {
             "year": 2017,
-            "value": 471.81
+            "value": 500.69
           },
           {
             "year": 2018,
-            "value": 472.14
+            "value": 478.15
+          },
+          {
+            "year": 2019,
+            "value": 493.67
+          },
+          {
+            "year": 2020,
+            "value": 439.04
+          },
+          {
+            "year": 2021,
+            "value": 452.72
+          },
+          {
+            "year": 2022,
+            "value": 452.95
+          },
+          {
+            "year": 2023,
+            "value": 475.6
+          },
+          {
+            "year": 2024,
+            "value": 475.99
           }
         ],
         "renewableEnergy": [
@@ -1611,21 +1900,21 @@
     },
     "sa": {
       "forestArea": 0.45,
-      "co2Mt": 514.6,
+      "co2Mt": 652.51,
       "renewableEnergy": 0.1,
       "pm25": 53.15,
-      "protectedAreas": 14.2,
-      "population": 33702731,
-      "gdp": 1218584533333.33,
-      "co2PerCapita": 15.27,
+      "protectedAreas": 17,
+      "population": 35300280,
+      "gdp": 1239804533333.33,
+      "co2PerCapita": 18.48,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -1669,19 +1958,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 561.14
+            "value": 611.45
           },
           {
             "year": 2016,
-            "value": 556.74
+            "value": 609.51
           },
           {
             "year": 2017,
-            "value": 540.7
+            "value": 603.33
           },
           {
             "year": 2018,
-            "value": 514.6
+            "value": 580.04
+          },
+          {
+            "year": 2019,
+            "value": 579.81
+          },
+          {
+            "year": 2020,
+            "value": 577.1
+          },
+          {
+            "year": 2021,
+            "value": 590.32
+          },
+          {
+            "year": 2022,
+            "value": 620.43
+          },
+          {
+            "year": 2023,
+            "value": 635.43
+          },
+          {
+            "year": 2024,
+            "value": 652.51
           }
         ],
         "renewableEnergy": [
@@ -1744,21 +2057,21 @@
     },
     "id": {
       "forestArea": 47.72,
-      "co2Mt": 583.11,
+      "co2Mt": 812.2,
       "renewableEnergy": 20.2,
       "pm25": 17.88,
-      "protectedAreas": 5.3,
-      "population": 281190067,
-      "gdp": 1371169301563.62,
-      "co2PerCapita": 2.07,
+      "protectedAreas": 5.2,
+      "population": 283487931,
+      "gdp": 1396300098190.97,
+      "co2PerCapita": 2.87,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -1802,19 +2115,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 490.84
+            "value": 512.4
           },
           {
             "year": 2016,
-            "value": 494.98
+            "value": 507.1
           },
           {
             "year": 2017,
-            "value": 532.92
+            "value": 535.75
           },
           {
             "year": 2018,
-            "value": 583.11
+            "value": 596.47
+          },
+          {
+            "year": 2019,
+            "value": 637.57
+          },
+          {
+            "year": 2020,
+            "value": 596.28
+          },
+          {
+            "year": 2021,
+            "value": 622.69
+          },
+          {
+            "year": 2022,
+            "value": 722.7
+          },
+          {
+            "year": 2023,
+            "value": 772.56
+          },
+          {
+            "year": 2024,
+            "value": 812.2
           }
         ],
         "renewableEnergy": [
@@ -1877,21 +2214,21 @@
     },
     "it": {
       "forestArea": 32.89,
-      "co2Mt": 324.85,
+      "co2Mt": 299.23,
       "renewableEnergy": 17.5,
       "pm25": 14.66,
-      "protectedAreas": 14.5,
-      "population": 58984216,
-      "gdp": 2316727999333.18,
-      "co2PerCapita": 5.51,
+      "protectedAreas": 14.6,
+      "population": 58952704,
+      "gdp": 2380825077243.59,
+      "co2PerCapita": 5.08,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -1935,19 +2272,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 337.86
+            "value": 353.74
           },
           {
             "year": 2016,
-            "value": 333.34
+            "value": 349.17
           },
           {
             "year": 2017,
-            "value": 329.19
+            "value": 345.68
           },
           {
             "year": 2018,
-            "value": 324.85
+            "value": 340.37
+          },
+          {
+            "year": 2019,
+            "value": 332.56
+          },
+          {
+            "year": 2020,
+            "value": 295.21
+          },
+          {
+            "year": 2021,
+            "value": 330.35
+          },
+          {
+            "year": 2022,
+            "value": 331.01
+          },
+          {
+            "year": 2023,
+            "value": 304.31
+          },
+          {
+            "year": 2024,
+            "value": 299.23
           }
         ],
         "renewableEnergy": [
@@ -2010,21 +2371,21 @@
     },
     "es": {
       "forestArea": 37.19,
-      "co2Mt": 258.34,
+      "co2Mt": 220.08,
       "renewableEnergy": 19,
       "pm25": 9.58,
       "protectedAreas": 17.9,
-      "population": 48352528,
-      "gdp": 1619481980719.64,
-      "co2PerCapita": 5.34,
+      "population": 48848840,
+      "gdp": 1725671652742.19,
+      "co2PerCapita": 4.51,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -2068,19 +2429,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 256.28
+            "value": 271.54
           },
           {
             "year": 2016,
-            "value": 247.03
+            "value": 263.05
           },
           {
             "year": 2017,
-            "value": 263.44
+            "value": 278.38
           },
           {
             "year": 2018,
-            "value": 258.34
+            "value": 271.79
+          },
+          {
+            "year": 2019,
+            "value": 254.35
+          },
+          {
+            "year": 2020,
+            "value": 214.45
+          },
+          {
+            "year": 2021,
+            "value": 233.19
+          },
+          {
+            "year": 2022,
+            "value": 238.65
+          },
+          {
+            "year": 2023,
+            "value": 220.99
+          },
+          {
+            "year": 2024,
+            "value": 220.08
           }
         ],
         "renewableEnergy": [
@@ -2143,21 +2528,21 @@
     },
     "ru": {
       "forestArea": 49.78,
-      "co2Mt": 1607.55,
+      "co2Mt": 2009.15,
       "renewableEnergy": 3.5,
       "pm25": 11.27,
       "protectedAreas": 8.6,
-      "population": 143826130,
-      "gdp": 2071505725030.58,
-      "co2PerCapita": 11.18,
+      "population": 143533851,
+      "gdp": 2173835806671.66,
+      "co2PerCapita": 14,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -2201,19 +2586,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 1557.53
+            "value": 1757.11
           },
           {
             "year": 2016,
-            "value": 1530.9
+            "value": 1734.64
           },
           {
             "year": 2017,
-            "value": 1557.19
+            "value": 1763.24
           },
           {
             "year": 2018,
-            "value": 1607.55
+            "value": 1831.13
+          },
+          {
+            "year": 2019,
+            "value": 1858
+          },
+          {
+            "year": 2020,
+            "value": 1784.2
+          },
+          {
+            "year": 2021,
+            "value": 1938.46
+          },
+          {
+            "year": 2022,
+            "value": 1895.47
+          },
+          {
+            "year": 2023,
+            "value": 1948.3
+          },
+          {
+            "year": 2024,
+            "value": 2009.15
           }
         ],
         "renewableEnergy": [
@@ -2276,21 +2685,21 @@
     },
     "sg": {
       "forestArea": 20.93,
-      "co2Mt": 47.36,
+      "co2Mt": 58.87,
       "renewableEnergy": 1.1,
       "pm25": 13.87,
-      "protectedAreas": 2.5,
-      "population": 5917648,
-      "gdp": 505439514078.02,
-      "co2PerCapita": 8,
+      "protectedAreas": 2.1,
+      "population": 6036860,
+      "gdp": 547386645891.85,
+      "co2PerCapita": 9.75,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -2334,19 +2743,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 45.5
+            "value": 55.17
           },
           {
             "year": 2016,
-            "value": 46.16
+            "value": 52.97
           },
           {
             "year": 2017,
-            "value": 47.43
+            "value": 56.89
           },
           {
             "year": 2018,
-            "value": 47.36
+            "value": 54.21
+          },
+          {
+            "year": 2019,
+            "value": 55.89
+          },
+          {
+            "year": 2020,
+            "value": 53.88
+          },
+          {
+            "year": 2021,
+            "value": 55.72
+          },
+          {
+            "year": 2022,
+            "value": 56.35
+          },
+          {
+            "year": 2023,
+            "value": 56.1
+          },
+          {
+            "year": 2024,
+            "value": 58.87
           }
         ],
         "renewableEnergy": [
@@ -2409,21 +2842,21 @@
     },
     "eg": {
       "forestArea": 0.05,
-      "co2Mt": 246.26,
+      "co2Mt": 291.64,
       "renewableEnergy": 6.1,
       "pm25": 54.86,
-      "protectedAreas": 11.6,
-      "population": 114535772,
-      "gdp": 395926075163.01,
-      "co2PerCapita": 2.15,
+      "protectedAreas": 11.5,
+      "population": 116538258,
+      "gdp": 389059911003.57,
+      "co2PerCapita": 2.5,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -2467,19 +2900,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 225.95
+            "value": 239.41
           },
           {
             "year": 2016,
-            "value": 233.96
+            "value": 250.12
           },
           {
             "year": 2017,
-            "value": 238.69
+            "value": 261.71
           },
           {
             "year": 2018,
-            "value": 246.26
+            "value": 256.22
+          },
+          {
+            "year": 2019,
+            "value": 237.03
+          },
+          {
+            "year": 2020,
+            "value": 246.18
+          },
+          {
+            "year": 2021,
+            "value": 261.63
+          },
+          {
+            "year": 2022,
+            "value": 258.99
+          },
+          {
+            "year": 2023,
+            "value": 275.84
+          },
+          {
+            "year": 2024,
+            "value": 291.64
           }
         ],
         "renewableEnergy": [
@@ -2542,21 +2999,21 @@
     },
     "kr": {
       "forestArea": 64.11,
-      "co2Mt": 630.87,
+      "co2Mt": 588.01,
       "renewableEnergy": 3.6,
       "pm25": 25.94,
-      "protectedAreas": 5.9,
-      "population": 51712619,
-      "gdp": 1844800934391.54,
-      "co2PerCapita": 12.2,
+      "protectedAreas": 5.8,
+      "population": 51751065,
+      "gdp": 1875388209406.8,
+      "co2PerCapita": 11.36,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -2600,19 +3057,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 606.51
+            "value": 643.8
           },
           {
             "year": 2016,
-            "value": 614.78
+            "value": 648.82
           },
           {
             "year": 2017,
-            "value": 625.35
+            "value": 665.29
           },
           {
             "year": 2018,
-            "value": 630.87
+            "value": 680.5
+          },
+          {
+            "year": 2019,
+            "value": 654.99
+          },
+          {
+            "year": 2020,
+            "value": 617.34
+          },
+          {
+            "year": 2021,
+            "value": 638.77
+          },
+          {
+            "year": 2022,
+            "value": 613.55
+          },
+          {
+            "year": 2023,
+            "value": 590.37
+          },
+          {
+            "year": 2024,
+            "value": 588.01
           }
         ],
         "renewableEnergy": [
@@ -2675,21 +3156,21 @@
     },
     "se": {
       "forestArea": 68.7,
-      "co2Mt": 36,
+      "co2Mt": 37.77,
       "renewableEnergy": 57.9,
       "pm25": 5.64,
-      "protectedAreas": 15.5,
-      "population": 10536632,
-      "gdp": 578990915246.07,
-      "co2PerCapita": 3.42,
+      "protectedAreas": 15.6,
+      "population": 10569709,
+      "gdp": 603715224265.8,
+      "co2PerCapita": 3.57,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -2733,19 +3214,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 39.2
+            "value": 42.9
           },
           {
             "year": 2016,
-            "value": 38.79
+            "value": 42.49
           },
           {
             "year": 2017,
-            "value": 38.33
+            "value": 41.84
           },
           {
             "year": 2018,
-            "value": 36
+            "value": 39.65
+          },
+          {
+            "year": 2019,
+            "value": 39.5
+          },
+          {
+            "year": 2020,
+            "value": 38.04
+          },
+          {
+            "year": 2021,
+            "value": 40.48
+          },
+          {
+            "year": 2022,
+            "value": 37.75
+          },
+          {
+            "year": 2023,
+            "value": 36.67
+          },
+          {
+            "year": 2024,
+            "value": 37.77
           }
         ],
         "renewableEnergy": [
@@ -2808,21 +3313,21 @@
     },
     "no": {
       "forestArea": 33.5,
-      "co2Mt": 37.35,
+      "co2Mt": 40,
       "renewableEnergy": 61.4,
       "pm25": 6.06,
-      "protectedAreas": 5.6,
-      "population": 5519601,
-      "gdp": 482949731776.59,
-      "co2PerCapita": 6.77,
+      "protectedAreas": 5.4,
+      "population": 5572279,
+      "gdp": 483592648313.3,
+      "co2PerCapita": 7.18,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -2866,19 +3371,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 38.64
+            "value": 47.95
           },
           {
             "year": 2016,
-            "value": 37.95
+            "value": 47.37
           },
           {
             "year": 2017,
-            "value": 36.9
+            "value": 47.41
           },
           {
             "year": 2018,
-            "value": 37.35
+            "value": 46.64
+          },
+          {
+            "year": 2019,
+            "value": 45.35
+          },
+          {
+            "year": 2020,
+            "value": 43.71
+          },
+          {
+            "year": 2021,
+            "value": 44.43
+          },
+          {
+            "year": 2022,
+            "value": 43.55
+          },
+          {
+            "year": 2023,
+            "value": 41.6
+          },
+          {
+            "year": 2024,
+            "value": 40
           }
         ],
         "renewableEnergy": [
@@ -2941,21 +3470,21 @@
     },
     "nz": {
       "forestArea": 37.79,
-      "co2Mt": 32.21,
+      "co2Mt": 31.81,
       "renewableEnergy": 28.9,
       "pm25": 6.49,
       "protectedAreas": 30.6,
-      "population": 5200000,
-      "gdp": 255194972673.12,
-      "co2PerCapita": 6.19,
+      "population": 5287500,
+      "gdp": 260172385097.62,
+      "co2PerCapita": 6.02,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -2999,19 +3528,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 32.19
+            "value": 35.39
           },
           {
             "year": 2016,
-            "value": 31.18
+            "value": 34.74
           },
           {
             "year": 2017,
-            "value": 32.92
+            "value": 36.27
           },
           {
             "year": 2018,
-            "value": 32.21
+            "value": 35.63
+          },
+          {
+            "year": 2019,
+            "value": 37.25
+          },
+          {
+            "year": 2020,
+            "value": 34.67
+          },
+          {
+            "year": 2021,
+            "value": 34.71
+          },
+          {
+            "year": 2022,
+            "value": 32.12
+          },
+          {
+            "year": 2023,
+            "value": 31.78
+          },
+          {
+            "year": 2024,
+            "value": 31.81
           }
         ],
         "renewableEnergy": [
@@ -3074,21 +3627,21 @@
     },
     "ke": {
       "forestArea": 6.22,
-      "co2Mt": 18.4,
+      "co2Mt": 21.64,
       "renewableEnergy": 67.7,
       "pm25": 24.39,
-      "protectedAreas": 10.3,
-      "population": 55339003,
-      "gdp": 107500884685.01,
-      "co2PerCapita": 0.33,
+      "protectedAreas": 11.8,
+      "population": 56432944,
+      "gdp": 120339557905.93,
+      "co2PerCapita": 0.38,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -3132,19 +3685,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 17.09
+            "value": 17
           },
           {
             "year": 2016,
-            "value": 18.77
+            "value": 18.5
           },
           {
             "year": 2017,
-            "value": 18.89
+            "value": 19.25
           },
           {
             "year": 2018,
-            "value": 18.4
+            "value": 19.14
+          },
+          {
+            "year": 2019,
+            "value": 19.48
+          },
+          {
+            "year": 2020,
+            "value": 19.16
+          },
+          {
+            "year": 2021,
+            "value": 21.52
+          },
+          {
+            "year": 2022,
+            "value": 21.97
+          },
+          {
+            "year": 2023,
+            "value": 21.27
+          },
+          {
+            "year": 2024,
+            "value": 21.64
           }
         ],
         "renewableEnergy": [
@@ -3207,21 +3784,21 @@
     },
     "ng": {
       "forestArea": 23.21,
-      "co2Mt": 130.67,
+      "co2Mt": 131.91,
       "renewableEnergy": 80.3,
       "pm25": 56.53,
       "protectedAreas": 11.6,
-      "population": 227882945,
-      "gdp": 487387801880.6,
+      "population": 232679478,
+      "gdp": 252261880141.15,
       "co2PerCapita": 0.57,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -3265,19 +3842,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 108.15
+            "value": 118.45
           },
           {
             "year": 2016,
-            "value": 108.42
+            "value": 123.48
           },
           {
             "year": 2017,
-            "value": 112.92
+            "value": 116.04
           },
           {
             "year": 2018,
-            "value": 130.67
+            "value": 121.41
+          },
+          {
+            "year": 2019,
+            "value": 126.11
+          },
+          {
+            "year": 2020,
+            "value": 118.92
+          },
+          {
+            "year": 2021,
+            "value": 130.9
+          },
+          {
+            "year": 2022,
+            "value": 129.04
+          },
+          {
+            "year": 2023,
+            "value": 125.87
+          },
+          {
+            "year": 2024,
+            "value": 131.91
           }
         ],
         "renewableEnergy": [
@@ -3340,21 +3941,21 @@
     },
     "ar": {
       "forestArea": 10.32,
-      "co2Mt": 177.41,
+      "co2Mt": 183.27,
       "renewableEnergy": 9.2,
       "pm25": 14.91,
-      "protectedAreas": 9.6,
-      "population": 45538401,
-      "gdp": 649461687959.17,
-      "co2PerCapita": 3.9,
+      "protectedAreas": 9.7,
+      "population": 45696159,
+      "gdp": 638365455340.04,
+      "co2PerCapita": 4.01,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -3398,19 +3999,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 186.09
+            "value": 196.19
           },
           {
             "year": 2016,
-            "value": 184.28
+            "value": 194.14
           },
           {
             "year": 2017,
-            "value": 180.12
+            "value": 191.37
           },
           {
             "year": 2018,
-            "value": 177.41
+            "value": 189.82
+          },
+          {
+            "year": 2019,
+            "value": 183.27
+          },
+          {
+            "year": 2020,
+            "value": 168.12
+          },
+          {
+            "year": 2021,
+            "value": 185.68
+          },
+          {
+            "year": 2022,
+            "value": 195.04
+          },
+          {
+            "year": 2023,
+            "value": 189.89
+          },
+          {
+            "year": 2024,
+            "value": 183.27
           }
         ],
         "renewableEnergy": [
@@ -3473,21 +4098,21 @@
     },
     "co": {
       "forestArea": 52.77,
-      "co2Mt": 79.49,
+      "co2Mt": 95.08,
       "renewableEnergy": 29.7,
       "pm25": 14.18,
-      "protectedAreas": 16.7,
-      "population": 52321152,
-      "gdp": 366291836137.92,
-      "co2PerCapita": 1.52,
+      "protectedAreas": 26.4,
+      "population": 52886363,
+      "gdp": 418818154879.27,
+      "co2PerCapita": 1.8,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -3531,19 +4156,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 81.03
+            "value": 86.22
           },
           {
             "year": 2016,
-            "value": 83.76
+            "value": 88.49
           },
           {
             "year": 2017,
-            "value": 76.06
+            "value": 81
           },
           {
             "year": 2018,
-            "value": 79.49
+            "value": 85.4
+          },
+          {
+            "year": 2019,
+            "value": 86.06
+          },
+          {
+            "year": 2020,
+            "value": 84.3
+          },
+          {
+            "year": 2021,
+            "value": 92.17
+          },
+          {
+            "year": 2022,
+            "value": 88.34
+          },
+          {
+            "year": 2023,
+            "value": 92.8
+          },
+          {
+            "year": 2024,
+            "value": 95.08
           }
         ],
         "renewableEnergy": [
@@ -3606,21 +4255,21 @@
     },
     "th": {
       "forestArea": 38.69,
-      "co2Mt": 257.86,
+      "co2Mt": 283.81,
       "renewableEnergy": 19,
       "pm25": 31.01,
       "protectedAreas": 13.4,
-      "population": 71702435,
-      "gdp": 515906283940.93,
-      "co2PerCapita": 3.6,
+      "population": 71668011,
+      "gdp": 526517658841.68,
+      "co2PerCapita": 3.96,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -3664,19 +4313,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 263.08
+            "value": 281.47
           },
           {
             "year": 2016,
-            "value": 260.72
+            "value": 277.76
           },
           {
             "year": 2017,
-            "value": 260.66
+            "value": 281.08
           },
           {
             "year": 2018,
-            "value": 257.86
+            "value": 276.65
+          },
+          {
+            "year": 2019,
+            "value": 286.47
+          },
+          {
+            "year": 2020,
+            "value": 275.63
+          },
+          {
+            "year": 2021,
+            "value": 268.58
+          },
+          {
+            "year": 2022,
+            "value": 284.31
+          },
+          {
+            "year": 2023,
+            "value": 275.03
+          },
+          {
+            "year": 2024,
+            "value": 283.81
           }
         ],
         "renewableEnergy": [
@@ -3739,21 +4412,21 @@
     },
     "nl": {
       "forestArea": 11.06,
-      "co2Mt": 151.17,
+      "co2Mt": 118.79,
       "renewableEnergy": 12.2,
       "pm25": 10.89,
-      "protectedAreas": 25.3,
-      "population": 17877117,
-      "gdp": 1135475867551,
-      "co2PerCapita": 8.46,
+      "protectedAreas": 29.8,
+      "population": 17993485,
+      "gdp": 1214927698572.66,
+      "co2PerCapita": 6.6,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -3797,19 +4470,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 158.11
+            "value": 169.35
           },
           {
             "year": 2016,
-            "value": 158.27
+            "value": 170.79
           },
           {
             "year": 2017,
-            "value": 155.91
+            "value": 168.18
           },
           {
             "year": 2018,
-            "value": 151.17
+            "value": 163.1
+          },
+          {
+            "year": 2019,
+            "value": 157.97
+          },
+          {
+            "year": 2020,
+            "value": 142.16
+          },
+          {
+            "year": 2021,
+            "value": 145.89
+          },
+          {
+            "year": 2022,
+            "value": 133.11
+          },
+          {
+            "year": 2023,
+            "value": 122.92
+          },
+          {
+            "year": 2024,
+            "value": 118.79
           }
         ],
         "renewableEnergy": [
@@ -3872,21 +4569,21 @@
     },
     "tr": {
       "forestArea": 29.48,
-      "co2Mt": 412.97,
+      "co2Mt": 460.03,
       "renewableEnergy": 12,
       "pm25": 21.61,
       "protectedAreas": 5.7,
-      "population": 85325965,
-      "gdp": 1141242864657.45,
-      "co2PerCapita": 4.84,
+      "population": 85518661,
+      "gdp": 1359123768774.12,
+      "co2PerCapita": 5.38,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -3930,19 +4627,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 351.59
+            "value": 367.84
           },
           {
             "year": 2016,
-            "value": 374.59
+            "value": 391.26
           },
           {
             "year": 2017,
-            "value": 415.9
+            "value": 433.22
           },
           {
             "year": 2018,
-            "value": 412.97
+            "value": 429.34
+          },
+          {
+            "year": 2019,
+            "value": 414.48
+          },
+          {
+            "year": 2020,
+            "value": 423.09
+          },
+          {
+            "year": 2021,
+            "value": 460.71
+          },
+          {
+            "year": 2022,
+            "value": 444.41
+          },
+          {
+            "year": 2023,
+            "value": 446.44
+          },
+          {
+            "year": 2024,
+            "value": 460.03
           }
         ],
         "renewableEnergy": [
@@ -4005,21 +4726,21 @@
     },
     "dk": {
       "forestArea": 15.78,
-      "co2Mt": 33.38,
+      "co2Mt": 25.57,
       "renewableEnergy": 39.5,
       "pm25": 9.07,
-      "protectedAreas": 17.9,
-      "population": 5946952,
-      "gdp": 404651706117.56,
-      "co2PerCapita": 5.61,
+      "protectedAreas": 17.7,
+      "population": 5976992,
+      "gdp": 424524722037.05,
+      "co2PerCapita": 4.28,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -4063,19 +4784,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 33.6
+            "value": 34.07
           },
           {
             "year": 2016,
-            "value": 35.38
+            "value": 35.68
           },
           {
             "year": 2017,
-            "value": 33.33
+            "value": 33.55
           },
           {
             "year": 2018,
-            "value": 33.38
+            "value": 33.54
+          },
+          {
+            "year": 2019,
+            "value": 30.08
+          },
+          {
+            "year": 2020,
+            "value": 27.79
+          },
+          {
+            "year": 2021,
+            "value": 29.56
+          },
+          {
+            "year": 2022,
+            "value": 28.49
+          },
+          {
+            "year": 2023,
+            "value": 26.21
+          },
+          {
+            "year": 2024,
+            "value": 25.57
           }
         ],
         "renewableEnergy": [
@@ -4138,21 +4883,21 @@
     },
     "fi": {
       "forestArea": 73.72,
-      "co2Mt": 44.36,
+      "co2Mt": 31.11,
       "renewableEnergy": 50.2,
       "pm25": 4.9,
-      "protectedAreas": 13.1,
-      "population": 5583911,
-      "gdp": 295021982462.75,
-      "co2PerCapita": 7.94,
+      "protectedAreas": 13.3,
+      "population": 5619911,
+      "gdp": 298696961297.66,
+      "co2PerCapita": 5.54,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -4196,19 +4941,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 42.82
+            "value": 45.98
           },
           {
             "year": 2016,
-            "value": 45.71
+            "value": 48.81
           },
           {
             "year": 2017,
-            "value": 43.01
+            "value": 46.08
           },
           {
             "year": 2018,
-            "value": 44.36
+            "value": 47.44
+          },
+          {
+            "year": 2019,
+            "value": 44.14
+          },
+          {
+            "year": 2020,
+            "value": 39.47
+          },
+          {
+            "year": 2021,
+            "value": 39.31
+          },
+          {
+            "year": 2022,
+            "value": 37.12
+          },
+          {
+            "year": 2023,
+            "value": 32.89
+          },
+          {
+            "year": 2024,
+            "value": 31.11
           }
         ],
         "renewableEnergy": [
@@ -4271,21 +5040,21 @@
     },
     "ch": {
       "forestArea": 32.38,
-      "co2Mt": 37.48,
+      "co2Mt": 33.73,
       "renewableEnergy": 27.7,
       "pm25": 9.06,
-      "protectedAreas": 12.1,
-      "population": 8888822,
-      "gdp": 894424821645.21,
-      "co2PerCapita": 4.22,
+      "protectedAreas": 12.5,
+      "population": 9005582,
+      "gdp": 936564198048.52,
+      "co2PerCapita": 3.75,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -4329,19 +5098,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 39.03
+            "value": 40.22
           },
           {
             "year": 2016,
-            "value": 39.61
+            "value": 40.79
           },
           {
             "year": 2017,
-            "value": 38.62
+            "value": 39.82
           },
           {
             "year": 2018,
-            "value": 37.48
+            "value": 38.52
+          },
+          {
+            "year": 2019,
+            "value": 38.4
+          },
+          {
+            "year": 2020,
+            "value": 35.94
+          },
+          {
+            "year": 2021,
+            "value": 37.63
+          },
+          {
+            "year": 2022,
+            "value": 34.48
+          },
+          {
+            "year": 2023,
+            "value": 33.67
+          },
+          {
+            "year": 2024,
+            "value": 33.73
           }
         ],
         "renewableEnergy": [
@@ -4404,21 +5197,21 @@
     },
     "at": {
       "forestArea": 47.24,
-      "co2Mt": 63.18,
+      "co2Mt": 58.03,
       "renewableEnergy": 36,
       "pm25": 10.93,
-      "protectedAreas": 29.5,
-      "population": 9131761,
-      "gdp": 516670509628.88,
-      "co2PerCapita": 6.92,
+      "protectedAreas": 29.6,
+      "population": 9177982,
+      "gdp": 534790720466.82,
+      "co2PerCapita": 6.32,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -4462,19 +5255,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 63.15
+            "value": 67.36
           },
           {
             "year": 2016,
-            "value": 63.39
+            "value": 67.77
           },
           {
             "year": 2017,
-            "value": 65.83
+            "value": 70.09
           },
           {
             "year": 2018,
-            "value": 63.18
+            "value": 67.25
+          },
+          {
+            "year": 2019,
+            "value": 68.78
+          },
+          {
+            "year": 2020,
+            "value": 62.92
+          },
+          {
+            "year": 2021,
+            "value": 66.2
+          },
+          {
+            "year": 2022,
+            "value": 62.65
+          },
+          {
+            "year": 2023,
+            "value": 58.48
+          },
+          {
+            "year": 2024,
+            "value": 58.03
           }
         ],
         "renewableEnergy": [
@@ -4537,21 +5354,21 @@
     },
     "pt": {
       "forestArea": 36.15,
-      "co2Mt": 49.78,
+      "co2Mt": 35.56,
       "renewableEnergy": 32.3,
       "pm25": 8.45,
-      "protectedAreas": 17.2,
-      "population": 10578174,
-      "gdp": 292323800948.84,
-      "co2PerCapita": 4.71,
+      "protectedAreas": 17.1,
+      "population": 10694681,
+      "gdp": 313271185085.1,
+      "co2PerCapita": 3.32,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -4595,19 +5412,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 49.85
+            "value": 51.72
           },
           {
             "year": 2016,
-            "value": 48.76
+            "value": 50.52
           },
           {
             "year": 2017,
-            "value": 53.33
+            "value": 55.14
           },
           {
             "year": 2018,
-            "value": 49.78
+            "value": 51.11
+          },
+          {
+            "year": 2019,
+            "value": 46.43
+          },
+          {
+            "year": 2020,
+            "value": 40.64
+          },
+          {
+            "year": 2021,
+            "value": 38.96
+          },
+          {
+            "year": 2022,
+            "value": 39.67
+          },
+          {
+            "year": 2023,
+            "value": 37.41
+          },
+          {
+            "year": 2024,
+            "value": 35.56
           }
         ],
         "renewableEnergy": [
@@ -4670,21 +5511,21 @@
     },
     "il": {
       "forestArea": 6.47,
-      "co2Mt": 61.97,
+      "co2Mt": 57.67,
       "renewableEnergy": 6.2,
       "pm25": 18.6,
-      "protectedAreas": 10.5,
-      "population": 9849000,
-      "gdp": 512184638998.97,
-      "co2PerCapita": 6.29,
+      "protectedAreas": 12.2,
+      "population": 9974400,
+      "gdp": 540379921261.68,
+      "co2PerCapita": 5.78,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -4728,19 +5569,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 66.14
+            "value": 67.99
           },
           {
             "year": 2016,
-            "value": 65.26
+            "value": 67.55
           },
           {
             "year": 2017,
-            "value": 66.04
+            "value": 67.82
           },
           {
             "year": 2018,
-            "value": 61.97
+            "value": 63.5
+          },
+          {
+            "year": 2019,
+            "value": 65.31
+          },
+          {
+            "year": 2020,
+            "value": 61.39
+          },
+          {
+            "year": 2021,
+            "value": 60.97
+          },
+          {
+            "year": 2022,
+            "value": 63.64
+          },
+          {
+            "year": 2023,
+            "value": 60.48
+          },
+          {
+            "year": 2024,
+            "value": 57.67
           }
         ],
         "renewableEnergy": [
@@ -4803,21 +5668,21 @@
     },
     "ae": {
       "forestArea": 4.47,
-      "co2Mt": 200.3,
+      "co2Mt": 200.56,
       "renewableEnergy": 1,
       "pm25": 36.31,
-      "protectedAreas": 15.9,
-      "population": 10483751,
-      "gdp": 522622191967.33,
-      "co2PerCapita": 19.11,
+      "protectedAreas": 16.1,
+      "population": 10986400,
+      "gdp": 552324846834.58,
+      "co2PerCapita": 18.26,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -4861,19 +5726,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 194.04
+            "value": 206.85
           },
           {
             "year": 2016,
-            "value": 199.46
+            "value": 212.43
           },
           {
             "year": 2017,
-            "value": 208.25
+            "value": 204.42
           },
           {
             "year": 2018,
-            "value": 200.3
+            "value": 187.29
+          },
+          {
+            "year": 2019,
+            "value": 197.85
+          },
+          {
+            "year": 2020,
+            "value": 195.67
+          },
+          {
+            "year": 2021,
+            "value": 199.42
+          },
+          {
+            "year": 2022,
+            "value": 195.18
+          },
+          {
+            "year": 2023,
+            "value": 192.7
+          },
+          {
+            "year": 2024,
+            "value": 200.56
           }
         ],
         "renewableEnergy": [
@@ -4936,21 +5825,21 @@
     },
     "my": {
       "forestArea": 57.72,
-      "co2Mt": 239.62,
+      "co2Mt": 295.95,
       "renewableEnergy": 7.5,
       "pm25": 16.19,
-      "protectedAreas": 8.8,
-      "population": 35126298,
-      "gdp": 399949418752.66,
-      "co2PerCapita": 6.82,
+      "protectedAreas": 8.4,
+      "population": 35557673,
+      "gdp": 422227005428.69,
+      "co2PerCapita": 8.32,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -4994,19 +5883,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 232.55
+            "value": 252.86
           },
           {
             "year": 2016,
-            "value": 228.64
+            "value": 247.48
           },
           {
             "year": 2017,
-            "value": 222.89
+            "value": 237.83
           },
           {
             "year": 2018,
-            "value": 239.62
+            "value": 254.28
+          },
+          {
+            "year": 2019,
+            "value": 255.17
+          },
+          {
+            "year": 2020,
+            "value": 253.08
+          },
+          {
+            "year": 2021,
+            "value": 257.92
+          },
+          {
+            "year": 2022,
+            "value": 276.98
+          },
+          {
+            "year": 2023,
+            "value": 282.38
+          },
+          {
+            "year": 2024,
+            "value": 295.95
           }
         ],
         "renewableEnergy": [
@@ -5069,21 +5982,21 @@
     },
     "vn": {
       "forestArea": 47.45,
-      "co2Mt": 257.86,
+      "co2Mt": 430.82,
       "renewableEnergy": 24.2,
       "pm25": 20.8,
       "protectedAreas": 2.9,
-      "population": 100352192,
-      "gdp": 433857681378.29,
-      "co2PerCapita": 2.57,
+      "population": 100987686,
+      "gdp": 476388230307.18,
+      "co2PerCapita": 4.27,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -5127,19 +6040,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 209.2
+            "value": 200.82
           },
           {
             "year": 2016,
-            "value": 223.87
+            "value": 223.81
           },
           {
             "year": 2017,
-            "value": 222.13
+            "value": 229.25
           },
           {
             "year": 2018,
-            "value": 257.86
+            "value": 282.1
+          },
+          {
+            "year": 2019,
+            "value": 336.53
+          },
+          {
+            "year": 2020,
+            "value": 348.33
+          },
+          {
+            "year": 2021,
+            "value": 336.17
+          },
+          {
+            "year": 2022,
+            "value": 344
+          },
+          {
+            "year": 2023,
+            "value": 390.73
+          },
+          {
+            "year": 2024,
+            "value": 430.82
           }
         ],
         "renewableEnergy": [
@@ -5202,21 +6139,21 @@
     },
     "ph": {
       "forestArea": 24.46,
-      "co2Mt": 142.24,
+      "co2Mt": 174.11,
       "renewableEnergy": 28,
       "pm25": 20.29,
-      "protectedAreas": 3.7,
-      "population": 114891199,
-      "gdp": 437055627244.42,
-      "co2PerCapita": 1.24,
+      "protectedAreas": 3.6,
+      "population": 115843670,
+      "gdp": 461617509782.36,
+      "co2PerCapita": 1.5,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -5260,19 +6197,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 113.67
+            "value": 113.19
           },
           {
             "year": 2016,
-            "value": 124.92
+            "value": 121.3
           },
           {
             "year": 2017,
-            "value": 136.59
+            "value": 135.65
           },
           {
             "year": 2018,
-            "value": 142.24
+            "value": 141.34
+          },
+          {
+            "year": 2019,
+            "value": 147.92
+          },
+          {
+            "year": 2020,
+            "value": 136.38
+          },
+          {
+            "year": 2021,
+            "value": 145.61
+          },
+          {
+            "year": 2022,
+            "value": 151.7
+          },
+          {
+            "year": 2023,
+            "value": 162.45
+          },
+          {
+            "year": 2024,
+            "value": 174.11
           }
         ],
         "renewableEnergy": [
@@ -5335,21 +6296,21 @@
     },
     "cl": {
       "forestArea": 25.01,
-      "co2Mt": 86.62,
+      "co2Mt": 77.82,
       "renewableEnergy": 24.2,
       "pm25": 23.28,
       "protectedAreas": 37.9,
-      "population": 19658835,
-      "gdp": 335518054097.64,
-      "co2PerCapita": 4.41,
+      "population": 19764771,
+      "gdp": 330267137371.59,
+      "co2PerCapita": 3.94,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -5393,19 +6354,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 81.97
+            "value": 84.38
           },
           {
             "year": 2016,
-            "value": 86.16
+            "value": 88.87
           },
           {
             "year": 2017,
-            "value": 87.04
+            "value": 89.75
           },
           {
             "year": 2018,
-            "value": 86.62
+            "value": 89.82
+          },
+          {
+            "year": 2019,
+            "value": 95.25
+          },
+          {
+            "year": 2020,
+            "value": 87.51
+          },
+          {
+            "year": 2021,
+            "value": 89.11
+          },
+          {
+            "year": 2022,
+            "value": 90.43
+          },
+          {
+            "year": 2023,
+            "value": 77.01
+          },
+          {
+            "year": 2024,
+            "value": 77.82
           }
         ],
         "renewableEnergy": [
@@ -5468,21 +6453,21 @@
     },
     "pe": {
       "forestArea": 56.1,
-      "co2Mt": 54.28,
+      "co2Mt": 69.27,
       "renewableEnergy": 30.6,
       "pm25": 27.04,
       "protectedAreas": 16.8,
-      "population": 33845617,
-      "gdp": 266958720837.99,
-      "co2PerCapita": 1.6,
+      "population": 34217848,
+      "gdp": 289221969062.94,
+      "co2PerCapita": 2.02,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -5526,19 +6511,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 53.82
+            "value": 54.9
           },
           {
             "year": 2016,
-            "value": 56.53
+            "value": 57.5
           },
           {
             "year": 2017,
-            "value": 53.99
+            "value": 55.22
           },
           {
             "year": 2018,
-            "value": 54.28
+            "value": 55.35
+          },
+          {
+            "year": 2019,
+            "value": 58.17
+          },
+          {
+            "year": 2020,
+            "value": 47.53
+          },
+          {
+            "year": 2021,
+            "value": 59.63
+          },
+          {
+            "year": 2022,
+            "value": 63.74
+          },
+          {
+            "year": 2023,
+            "value": 65.08
+          },
+          {
+            "year": 2024,
+            "value": 69.27
           }
         ],
         "renewableEnergy": [
@@ -5601,21 +6610,21 @@
     },
     "ma": {
       "forestArea": 12.94,
-      "co2Mt": 66.68,
+      "co2Mt": 70.04,
       "renewableEnergy": 10.9,
       "pm25": 21.32,
-      "protectedAreas": 1.6,
-      "population": 37712505,
-      "gdp": 146036093666.76,
-      "co2PerCapita": 1.77,
+      "protectedAreas": 1.4,
+      "population": 38081173,
+      "gdp": 160610994054.73,
+      "co2PerCapita": 1.84,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -5659,19 +6668,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 63.15
+            "value": 61.15
           },
           {
             "year": 2016,
-            "value": 63.08
+            "value": 61.01
           },
           {
             "year": 2017,
-            "value": 65.93
+            "value": 63.86
           },
           {
             "year": 2018,
-            "value": 66.68
+            "value": 65.2
+          },
+          {
+            "year": 2019,
+            "value": 71.87
+          },
+          {
+            "year": 2020,
+            "value": 67.59
+          },
+          {
+            "year": 2021,
+            "value": 73.13
+          },
+          {
+            "year": 2022,
+            "value": 72.33
+          },
+          {
+            "year": 2023,
+            "value": 70.05
+          },
+          {
+            "year": 2024,
+            "value": 70.04
           }
         ],
         "renewableEnergy": [
@@ -5734,21 +6767,21 @@
     },
     "gh": {
       "forestArea": 35.19,
-      "co2Mt": 16.11,
+      "co2Mt": 24.17,
       "renewableEnergy": 39,
       "pm25": 54.24,
       "protectedAreas": 7.7,
-      "population": 33787914,
-      "gdp": 80547146878.38,
-      "co2PerCapita": 0.48,
+      "population": 34427414,
+      "gdp": 82308110386.46,
+      "co2PerCapita": 0.7,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -5792,19 +6825,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 15.13
+            "value": 15.61
           },
           {
             "year": 2016,
-            "value": 14.11
+            "value": 16.04
           },
           {
             "year": 2017,
-            "value": 14.78
+            "value": 17.37
           },
           {
             "year": 2018,
-            "value": 16.11
+            "value": 19.06
+          },
+          {
+            "year": 2019,
+            "value": 20.28
+          },
+          {
+            "year": 2020,
+            "value": 22.95
+          },
+          {
+            "year": 2021,
+            "value": 24.49
+          },
+          {
+            "year": 2022,
+            "value": 23.79
+          },
+          {
+            "year": 2023,
+            "value": 23.22
+          },
+          {
+            "year": 2024,
+            "value": 24.17
           }
         ],
         "renewableEnergy": [
@@ -5867,21 +6924,21 @@
     },
     "cr": {
       "forestArea": 60.4,
-      "co2Mt": 8.26,
+      "co2Mt": 8.38,
       "renewableEnergy": 34.2,
       "pm25": 14.31,
-      "protectedAreas": 28.8,
-      "population": 5105525,
-      "gdp": 86497941439.02,
-      "co2PerCapita": 1.62,
+      "protectedAreas": 28.2,
+      "population": 5129910,
+      "gdp": 95350423176.6,
+      "co2PerCapita": 1.63,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -5925,19 +6982,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 7.54
+            "value": 7.76
           },
           {
             "year": 2016,
-            "value": 8.08
+            "value": 8.23
           },
           {
             "year": 2017,
-            "value": 8.18
+            "value": 8.4
           },
           {
             "year": 2018,
-            "value": 8.26
+            "value": 8.44
+          },
+          {
+            "year": 2019,
+            "value": 8.19
+          },
+          {
+            "year": 2020,
+            "value": 7.18
+          },
+          {
+            "year": 2021,
+            "value": 8.05
+          },
+          {
+            "year": 2022,
+            "value": 8.2
+          },
+          {
+            "year": 2023,
+            "value": 8.1
+          },
+          {
+            "year": 2024,
+            "value": 8.38
           }
         ],
         "renewableEnergy": [
@@ -6000,21 +7081,21 @@
     },
     "pl": {
       "forestArea": 31.08,
-      "co2Mt": 312.74,
+      "co2Mt": 276.06,
       "renewableEnergy": 15.2,
       "pm25": 17.96,
-      "protectedAreas": 38,
-      "population": 36687353,
-      "gdp": 812451193396.14,
-      "co2PerCapita": 8.52,
+      "protectedAreas": 38.2,
+      "population": 36559233,
+      "gdp": 917767106146.76,
+      "co2PerCapita": 7.55,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -6058,19 +7139,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 289.05
+            "value": 305.79
           },
           {
             "year": 2016,
-            "value": 299.74
+            "value": 316.73
           },
           {
             "year": 2017,
-            "value": 312.82
+            "value": 330.22
           },
           {
             "year": 2018,
-            "value": 312.74
+            "value": 329.63
+          },
+          {
+            "year": 2019,
+            "value": 312.07
+          },
+          {
+            "year": 2020,
+            "value": 296.88
+          },
+          {
+            "year": 2021,
+            "value": 324.01
+          },
+          {
+            "year": 2022,
+            "value": 307.96
+          },
+          {
+            "year": 2023,
+            "value": 280.65
+          },
+          {
+            "year": 2024,
+            "value": 276.06
           }
         ],
         "renewableEnergy": [
@@ -6133,21 +7238,21 @@
     },
     "fj": {
       "forestArea": 63.5,
-      "co2Mt": 1.9,
+      "co2Mt": 1.51,
       "renewableEnergy": 28.4,
       "pm25": 12.42,
       "protectedAreas": 1,
-      "population": 924145,
-      "gdp": 5476673518.14,
-      "co2PerCapita": 2.06,
+      "population": 928784,
+      "gdp": 5968125909.27,
+      "co2PerCapita": 1.62,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2022,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -6191,19 +7296,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 1.51
+            "value": 1.62
           },
           {
             "year": 2016,
-            "value": 1.74
+            "value": 1.59
           },
           {
             "year": 2017,
-            "value": 1.81
+            "value": 1.54
           },
           {
             "year": 2018,
-            "value": 1.9
+            "value": 1.65
+          },
+          {
+            "year": 2019,
+            "value": 1.62
+          },
+          {
+            "year": 2020,
+            "value": 1.07
+          },
+          {
+            "year": 2021,
+            "value": 1.34
+          },
+          {
+            "year": 2022,
+            "value": 1.43
+          },
+          {
+            "year": 2023,
+            "value": 1.44
+          },
+          {
+            "year": 2024,
+            "value": 1.51
           }
         ],
         "renewableEnergy": [
@@ -6270,21 +7399,21 @@
     },
     "et": {
       "forestArea": 14.93,
-      "co2Mt": 16.28,
+      "co2Mt": 19.36,
       "renewableEnergy": 90.6,
       "pm25": 27.31,
       "protectedAreas": 17,
-      "population": 128691692,
-      "gdp": 135874093202.49,
-      "co2PerCapita": 0.13,
+      "population": 132059767,
+      "gdp": 149740297952.99,
+      "co2PerCapita": 0.15,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -6328,19 +7457,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 12.88
+            "value": 13.51
           },
           {
             "year": 2016,
-            "value": 14.95
+            "value": 16.03
           },
           {
             "year": 2017,
-            "value": 15.46
+            "value": 15.87
           },
           {
             "year": 2018,
-            "value": 16.28
+            "value": 17.47
+          },
+          {
+            "year": 2019,
+            "value": 18.48
+          },
+          {
+            "year": 2020,
+            "value": 18.02
+          },
+          {
+            "year": 2021,
+            "value": 19.09
+          },
+          {
+            "year": 2022,
+            "value": 18.33
+          },
+          {
+            "year": 2023,
+            "value": 19.02
+          },
+          {
+            "year": 2024,
+            "value": 19.36
           }
         ],
         "renewableEnergy": [
@@ -6403,21 +7556,21 @@
     },
     "pk": {
       "forestArea": 4.67,
-      "co2Mt": 208.37,
+      "co2Mt": 203.99,
       "renewableEnergy": 41.6,
       "pm25": 43,
-      "protectedAreas": 9.8,
-      "population": 247504495,
-      "gdp": 336686348609.27,
-      "co2PerCapita": 0.84,
+      "protectedAreas": 15.3,
+      "population": 251269164,
+      "gdp": 371570000121.27,
+      "co2PerCapita": 0.81,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -6461,19 +7614,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 163.59
+            "value": 178.28
           },
           {
             "year": 2016,
-            "value": 180.57
+            "value": 196.8
           },
           {
             "year": 2017,
-            "value": 197.7
+            "value": 213.3
           },
           {
             "year": 2018,
-            "value": 208.37
+            "value": 202.31
+          },
+          {
+            "year": 2019,
+            "value": 198.84
+          },
+          {
+            "year": 2020,
+            "value": 222.6
+          },
+          {
+            "year": 2021,
+            "value": 229.14
+          },
+          {
+            "year": 2022,
+            "value": 235.37
+          },
+          {
+            "year": 2023,
+            "value": 208.89
+          },
+          {
+            "year": 2024,
+            "value": 203.99
           }
         ],
         "renewableEnergy": [
@@ -6536,21 +7713,21 @@
     },
     "bd": {
       "forestArea": 14.49,
-      "co2Mt": 82.76,
+      "co2Mt": 124.19,
       "renewableEnergy": 25,
       "pm25": 42.38,
-      "protectedAreas": 5.9,
-      "population": 171466990,
-      "gdp": 437415333018.29,
-      "co2PerCapita": 0.48,
+      "protectedAreas": 5.6,
+      "population": 173562364,
+      "gdp": 450119432068.85,
+      "co2PerCapita": 0.72,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -6594,19 +7771,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 71.69
+            "value": 85.45
           },
           {
             "year": 2016,
-            "value": 73.74
+            "value": 93.99
           },
           {
             "year": 2017,
-            "value": 78.71
+            "value": 101.04
           },
           {
             "year": 2018,
-            "value": 82.76
+            "value": 105.18
+          },
+          {
+            "year": 2019,
+            "value": 109.32
+          },
+          {
+            "year": 2020,
+            "value": 104.12
+          },
+          {
+            "year": 2021,
+            "value": 117.77
+          },
+          {
+            "year": 2022,
+            "value": 120.87
+          },
+          {
+            "year": 2023,
+            "value": 118.99
+          },
+          {
+            "year": 2024,
+            "value": 124.19
           }
         ],
         "renewableEnergy": [
@@ -6669,21 +7870,21 @@
     },
     "iq": {
       "forestArea": 1.9,
-      "co2Mt": 188.14,
+      "co2Mt": 238.67,
       "renewableEnergy": 1.1,
       "pm25": 38.18,
       "protectedAreas": 1.5,
-      "population": 45074049,
-      "gdp": 268881051643.55,
-      "co2PerCapita": 4.17,
+      "population": 46042015,
+      "gdp": 279641257615.39,
+      "co2PerCapita": 5.18,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -6727,19 +7928,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 162.19
+            "value": 137.9
           },
           {
             "year": 2016,
-            "value": 172.35
+            "value": 155.04
           },
           {
             "year": 2017,
-            "value": 174.29
+            "value": 167.35
           },
           {
             "year": 2018,
-            "value": 188.14
+            "value": 180.94
+          },
+          {
+            "year": 2019,
+            "value": 193.65
+          },
+          {
+            "year": 2020,
+            "value": 183.87
+          },
+          {
+            "year": 2021,
+            "value": 199.71
+          },
+          {
+            "year": 2022,
+            "value": 222.28
+          },
+          {
+            "year": 2023,
+            "value": 232.98
+          },
+          {
+            "year": 2024,
+            "value": 238.67
           }
         ],
         "renewableEnergy": [
@@ -6802,21 +8027,21 @@
     },
     "ir": {
       "forestArea": 6.65,
-      "co2Mt": 629.29,
+      "co2Mt": 828.99,
       "renewableEnergy": 0.9,
       "pm25": 32.29,
       "protectedAreas": 7.7,
-      "population": 90608707,
-      "gdp": 457510482317.48,
-      "co2PerCapita": 6.95,
+      "population": 91567738,
+      "gdp": 475252089215.42,
+      "co2PerCapita": 9.05,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -6860,19 +8085,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 602.23
+            "value": 629.49
           },
           {
             "year": 2016,
-            "value": 605.76
+            "value": 642.31
           },
           {
             "year": 2017,
-            "value": 620.78
+            "value": 666.38
           },
           {
             "year": 2018,
-            "value": 629.29
+            "value": 661.45
+          },
+          {
+            "year": 2019,
+            "value": 712.58
+          },
+          {
+            "year": 2020,
+            "value": 735.87
+          },
+          {
+            "year": 2021,
+            "value": 784.26
+          },
+          {
+            "year": 2022,
+            "value": 792.06
+          },
+          {
+            "year": 2023,
+            "value": 816.13
+          },
+          {
+            "year": 2024,
+            "value": 828.99
           }
         ],
         "renewableEnergy": [
@@ -6935,21 +8184,21 @@
     },
     "kz": {
       "forestArea": 1.31,
-      "co2Mt": 220.45,
+      "co2Mt": 258.8,
       "renewableEnergy": 2,
       "pm25": 20.03,
-      "protectedAreas": 11.7,
-      "population": 20330104,
-      "gdp": 261840101059.92,
-      "co2PerCapita": 10.84,
+      "protectedAreas": 11.9,
+      "population": 20592571,
+      "gdp": 291480274648.83,
+      "co2PerCapita": 12.57,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -6993,19 +8242,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 206.64
+            "value": 202.75
           },
           {
             "year": 2016,
-            "value": 223.02
+            "value": 216.12
           },
           {
             "year": 2017,
-            "value": 225.56
+            "value": 226.45
           },
           {
             "year": 2018,
-            "value": 220.45
+            "value": 229.38
+          },
+          {
+            "year": 2019,
+            "value": 218.81
+          },
+          {
+            "year": 2020,
+            "value": 225.5
+          },
+          {
+            "year": 2021,
+            "value": 241.91
+          },
+          {
+            "year": 2022,
+            "value": 246.53
+          },
+          {
+            "year": 2023,
+            "value": 255.43
+          },
+          {
+            "year": 2024,
+            "value": 258.8
           }
         ],
         "renewableEnergy": [
@@ -7068,21 +8341,21 @@
     },
     "ua": {
       "forestArea": 16.76,
-      "co2Mt": 185.37,
+      "co2Mt": 118.48,
       "renewableEnergy": 8.9,
       "pm25": 14.9,
-      "protectedAreas": 12.3,
-      "population": 37732836,
-      "gdp": 181221517868.74,
-      "co2PerCapita": 4.91,
+      "protectedAreas": 17.7,
+      "population": 37860221,
+      "gdp": 190741262414.71,
+      "co2PerCapita": 3.13,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -7126,19 +8399,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 190.87
+            "value": 226.11
           },
           {
             "year": 2016,
-            "value": 201.25
+            "value": 227.25
           },
           {
             "year": 2017,
-            "value": 174.84
+            "value": 205.58
           },
           {
             "year": 2018,
-            "value": 185.37
+            "value": 218.3
+          },
+          {
+            "year": 2019,
+            "value": 207.91
+          },
+          {
+            "year": 2020,
+            "value": 198.9
+          },
+          {
+            "year": 2021,
+            "value": 194.14
+          },
+          {
+            "year": 2022,
+            "value": 119.35
+          },
+          {
+            "year": 2023,
+            "value": 121.7
+          },
+          {
+            "year": 2024,
+            "value": 118.48
           }
         ],
         "renewableEnergy": [
@@ -7201,21 +8498,21 @@
     },
     "gr": {
       "forestArea": 30.27,
-      "co2Mt": 65.29,
+      "co2Mt": 52.51,
       "renewableEnergy": 21.5,
       "pm25": 14.41,
-      "protectedAreas": 11,
-      "population": 10407351,
-      "gdp": 242946187738.27,
-      "co2PerCapita": 6.27,
+      "protectedAreas": 11.2,
+      "population": 10405134,
+      "gdp": 256238371778.12,
+      "co2PerCapita": 5.05,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -7259,19 +8556,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 68.01
+            "value": 69.45
           },
           {
             "year": 2016,
-            "value": 66.85
+            "value": 68.16
           },
           {
             "year": 2017,
-            "value": 66.8
+            "value": 68.38
           },
           {
             "year": 2018,
-            "value": 65.29
+            "value": 66.54
+          },
+          {
+            "year": 2019,
+            "value": 61.49
+          },
+          {
+            "year": 2020,
+            "value": 52.36
+          },
+          {
+            "year": 2021,
+            "value": 53.72
+          },
+          {
+            "year": 2022,
+            "value": 55.12
+          },
+          {
+            "year": 2023,
+            "value": 51.24
+          },
+          {
+            "year": 2024,
+            "value": 52.51
           }
         ],
         "renewableEnergy": [
@@ -7334,21 +8655,21 @@
     },
     "ie": {
       "forestArea": 11.53,
-      "co2Mt": 37.11,
+      "co2Mt": 32.57,
       "renewableEnergy": 12.7,
       "pm25": 8.17,
-      "protectedAreas": 4,
-      "population": 5311538,
-      "gdp": 567372737459.12,
-      "co2PerCapita": 6.99,
+      "protectedAreas": 4.1,
+      "population": 5395790,
+      "gdp": 609157459747.2,
+      "co2PerCapita": 6.04,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -7392,19 +8713,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 36.99
+            "value": 37.65
           },
           {
             "year": 2016,
-            "value": 38.71
+            "value": 39.51
           },
           {
             "year": 2017,
-            "value": 37.53
+            "value": 38.26
           },
           {
             "year": 2018,
-            "value": 37.11
+            "value": 38.03
+          },
+          {
+            "year": 2019,
+            "value": 36.37
+          },
+          {
+            "year": 2020,
+            "value": 34.29
+          },
+          {
+            "year": 2021,
+            "value": 36.38
+          },
+          {
+            "year": 2022,
+            "value": 35.69
+          },
+          {
+            "year": 2023,
+            "value": 32.86
+          },
+          {
+            "year": 2024,
+            "value": 32.57
           }
         ],
         "renewableEnergy": [
@@ -7467,21 +8812,21 @@
     },
     "ro": {
       "forestArea": 30.12,
-      "co2Mt": 74.88,
+      "co2Mt": 70.88,
       "renewableEnergy": 23.6,
       "pm25": 14.85,
-      "protectedAreas": 24.4,
-      "population": 19061062,
-      "gdp": 347757995758.91,
-      "co2PerCapita": 3.93,
+      "protectedAreas": 24.3,
+      "population": 19051804,
+      "gdp": 382564217988.87,
+      "co2PerCapita": 3.72,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -7525,19 +8870,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 72.9
+            "value": 80.3
           },
           {
             "year": 2016,
-            "value": 71.14
+            "value": 78.71
           },
           {
             "year": 2017,
-            "value": 74.1
+            "value": 81.8
           },
           {
             "year": 2018,
-            "value": 74.88
+            "value": 83
+          },
+          {
+            "year": 2019,
+            "value": 81.15
+          },
+          {
+            "year": 2020,
+            "value": 75.7
+          },
+          {
+            "year": 2021,
+            "value": 80.75
+          },
+          {
+            "year": 2022,
+            "value": 75.68
+          },
+          {
+            "year": 2023,
+            "value": 70.25
+          },
+          {
+            "year": 2024,
+            "value": 70.88
           }
         ],
         "renewableEnergy": [
@@ -7600,21 +8969,21 @@
     },
     "cz": {
       "forestArea": 34.76,
-      "co2Mt": 102.48,
+      "co2Mt": 77.75,
       "renewableEnergy": 17.2,
       "pm25": 14.11,
-      "protectedAreas": 22.2,
-      "population": 10864042,
-      "gdp": 345059295659.91,
-      "co2PerCapita": 9.43,
+      "protectedAreas": 21.9,
+      "population": 10905028,
+      "gdp": 347034062928.48,
+      "co2PerCapita": 7.13,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -7658,19 +9027,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 100.98
+            "value": 108.29
           },
           {
             "year": 2016,
-            "value": 102.86
+            "value": 109.81
           },
           {
             "year": 2017,
-            "value": 103.42
+            "value": 110.38
           },
           {
             "year": 2018,
-            "value": 102.48
+            "value": 109.34
+          },
+          {
+            "year": 2019,
+            "value": 103.78
+          },
+          {
+            "year": 2020,
+            "value": 94.86
+          },
+          {
+            "year": 2021,
+            "value": 99.52
+          },
+          {
+            "year": 2022,
+            "value": 97.69
+          },
+          {
+            "year": 2023,
+            "value": 85.61
+          },
+          {
+            "year": 2024,
+            "value": 77.75
           }
         ],
         "renewableEnergy": [
@@ -7733,21 +9126,21 @@
     },
     "be": {
       "forestArea": 22.6,
-      "co2Mt": 93.47,
+      "co2Mt": 86.65,
       "renewableEnergy": 11.7,
       "pm25": 11.22,
-      "protectedAreas": 17.8,
-      "population": 11779946,
-      "gdp": 651330595110.01,
-      "co2PerCapita": 7.93,
+      "protectedAreas": 18.5,
+      "population": 11858610,
+      "gdp": 671370081636.41,
+      "co2PerCapita": 7.31,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -7791,19 +9184,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 95.2
+            "value": 102.42
           },
           {
             "year": 2016,
-            "value": 94.32
+            "value": 101.35
           },
           {
             "year": 2017,
-            "value": 92.77
+            "value": 99.77
           },
           {
             "year": 2018,
-            "value": 93.47
+            "value": 100.46
+          },
+          {
+            "year": 2019,
+            "value": 100.31
+          },
+          {
+            "year": 2020,
+            "value": 91.93
+          },
+          {
+            "year": 2021,
+            "value": 96.02
+          },
+          {
+            "year": 2022,
+            "value": 89.68
+          },
+          {
+            "year": 2023,
+            "value": 85.73
+          },
+          {
+            "year": 2024,
+            "value": 86.65
           }
         ],
         "renewableEnergy": [
@@ -7866,21 +9283,21 @@
     },
     "hu": {
       "forestArea": 22.45,
-      "co2Mt": 46.39,
+      "co2Mt": 42.63,
       "renewableEnergy": 15.3,
       "pm25": 14.14,
       "protectedAreas": 22.6,
-      "population": 9592186,
-      "gdp": 213240316634.65,
-      "co2PerCapita": 4.84,
+      "population": 9562065,
+      "gdp": 222722738925.64,
+      "co2PerCapita": 4.46,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -7924,19 +9341,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 43.38
+            "value": 47.54
           },
           {
             "year": 2016,
-            "value": 44.48
+            "value": 48.27
           },
           {
             "year": 2017,
-            "value": 46.55
+            "value": 51.13
           },
           {
             "year": 2018,
-            "value": 46.39
+            "value": 51.26
+          },
+          {
+            "year": 2019,
+            "value": 51.5
+          },
+          {
+            "year": 2020,
+            "value": 49.65
+          },
+          {
+            "year": 2021,
+            "value": 50.99
+          },
+          {
+            "year": 2022,
+            "value": 47.57
+          },
+          {
+            "year": 2023,
+            "value": 42.98
+          },
+          {
+            "year": 2024,
+            "value": 42.63
           }
         ],
         "renewableEnergy": [
@@ -7999,21 +9440,21 @@
     },
     "tz": {
       "forestArea": 50.05,
-      "co2Mt": 11.58,
+      "co2Mt": 21.34,
       "renewableEnergy": 78.3,
       "pm25": 25.08,
-      "protectedAreas": 32.4,
-      "population": 66617606,
-      "gdp": 79030935627.08,
-      "co2PerCapita": 0.17,
+      "protectedAreas": 32.3,
+      "population": 68560157,
+      "gdp": 78844405385.22,
+      "co2PerCapita": 0.31,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -8057,19 +9498,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 11.69
+            "value": 13.2
           },
           {
             "year": 2016,
-            "value": 10.92
+            "value": 14.14
           },
           {
             "year": 2017,
-            "value": 11.36
+            "value": 14.2
           },
           {
             "year": 2018,
-            "value": 11.58
+            "value": 14.92
+          },
+          {
+            "year": 2019,
+            "value": 17
+          },
+          {
+            "year": 2020,
+            "value": 16.68
+          },
+          {
+            "year": 2021,
+            "value": 18.94
+          },
+          {
+            "year": 2022,
+            "value": 20.91
+          },
+          {
+            "year": 2023,
+            "value": 21.57
+          },
+          {
+            "year": 2024,
+            "value": 21.34
           }
         ],
         "renewableEnergy": [
@@ -8132,21 +9597,21 @@
     },
     "dz": {
       "forestArea": 0.83,
-      "co2Mt": 151.67,
+      "co2Mt": 186.36,
       "renewableEnergy": 0.1,
       "pm25": 25.55,
       "protectedAreas": 4.4,
-      "population": 46164219,
-      "gdp": 247923887214.66,
-      "co2PerCapita": 3.29,
+      "population": 46814308,
+      "gdp": 269322281664.77,
+      "co2PerCapita": 3.98,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -8190,19 +9655,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 145.97
+            "value": 164.58
           },
           {
             "year": 2016,
-            "value": 143.35
+            "value": 160.75
           },
           {
             "year": 2017,
-            "value": 145.1
+            "value": 166.32
           },
           {
             "year": 2018,
-            "value": 151.67
+            "value": 174.81
+          },
+          {
+            "year": 2019,
+            "value": 181.69
+          },
+          {
+            "year": 2020,
+            "value": 171.95
+          },
+          {
+            "year": 2021,
+            "value": 181.32
+          },
+          {
+            "year": 2022,
+            "value": 189.19
+          },
+          {
+            "year": 2023,
+            "value": 190.58
+          },
+          {
+            "year": 2024,
+            "value": 186.36
           }
         ],
         "renewableEnergy": [
@@ -8265,21 +9754,21 @@
     },
     "sn": {
       "forestArea": 41.28,
-      "co2Mt": 9.86,
+      "co2Mt": 14.2,
       "renewableEnergy": 35.4,
       "pm25": 63.74,
-      "protectedAreas": 15.5,
-      "population": 18077573,
-      "gdp": 30696331295.78,
-      "co2PerCapita": 0.55,
+      "protectedAreas": 15.6,
+      "population": 18501984,
+      "gdp": 32808056600.94,
+      "co2PerCapita": 0.77,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -8323,19 +9812,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 9.28
+            "value": 9.22
           },
           {
             "year": 2016,
-            "value": 9.92
+            "value": 10.3
           },
           {
             "year": 2017,
-            "value": 9.57
+            "value": 10.2
           },
           {
             "year": 2018,
-            "value": 9.86
+            "value": 10.74
+          },
+          {
+            "year": 2019,
+            "value": 11.03
+          },
+          {
+            "year": 2020,
+            "value": 10.81
+          },
+          {
+            "year": 2021,
+            "value": 13.12
+          },
+          {
+            "year": 2022,
+            "value": 14.54
+          },
+          {
+            "year": 2023,
+            "value": 13.72
+          },
+          {
+            "year": 2024,
+            "value": 14.2
           }
         ],
         "renewableEnergy": [
@@ -8398,21 +9911,21 @@
     },
     "cd": {
       "forestArea": 54.19,
-      "co2Mt": 2.2,
+      "co2Mt": 6.21,
       "renewableEnergy": 96.3,
       "pm25": 26.65,
-      "protectedAreas": 13.8,
-      "population": 105789731,
-      "gdp": 69843655425.29,
-      "co2PerCapita": 0.02,
+      "protectedAreas": 14.9,
+      "population": 109276265,
+      "gdp": 70962185790.71,
+      "co2PerCapita": 0.06,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -8456,19 +9969,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 2.89
+            "value": 3.59
           },
           {
             "year": 2016,
-            "value": 2.06
+            "value": 2.99
           },
           {
             "year": 2017,
-            "value": 2.28
+            "value": 3.25
           },
           {
             "year": 2018,
-            "value": 2.2
+            "value": 4.16
+          },
+          {
+            "year": 2019,
+            "value": 4.45
+          },
+          {
+            "year": 2020,
+            "value": 4.63
+          },
+          {
+            "year": 2021,
+            "value": 4.63
+          },
+          {
+            "year": 2022,
+            "value": 6.25
+          },
+          {
+            "year": 2023,
+            "value": 6.14
+          },
+          {
+            "year": 2024,
+            "value": 6.21
           }
         ],
         "renewableEnergy": [
@@ -8531,21 +10068,21 @@
     },
     "ec": {
       "forestArea": 49.55,
-      "co2Mt": 39.53,
+      "co2Mt": 47.96,
       "renewableEnergy": 18.9,
       "pm25": 16.66,
-      "protectedAreas": 20,
-      "population": 17980083,
-      "gdp": 121147057000,
-      "co2PerCapita": 2.2,
+      "protectedAreas": 20.1,
+      "population": 18135478,
+      "gdp": 124676074700,
+      "co2PerCapita": 2.64,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -8589,19 +10126,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 40.72
+            "value": 43.28
           },
           {
             "year": 2016,
-            "value": 39.01
+            "value": 42.07
           },
           {
             "year": 2017,
-            "value": 37.76
+            "value": 41.06
           },
           {
             "year": 2018,
-            "value": 39.53
+            "value": 42.21
+          },
+          {
+            "year": 2019,
+            "value": 41.93
+          },
+          {
+            "year": 2020,
+            "value": 36.6
+          },
+          {
+            "year": 2021,
+            "value": 41.16
+          },
+          {
+            "year": 2022,
+            "value": 44.17
+          },
+          {
+            "year": 2023,
+            "value": 46.79
+          },
+          {
+            "year": 2024,
+            "value": 47.96
           }
         ],
         "renewableEnergy": [
@@ -8664,21 +10225,21 @@
     },
     "uy": {
       "forestArea": 11.96,
-      "co2Mt": 6.52,
+      "co2Mt": 8.7,
       "renewableEnergy": 57.8,
       "pm25": 10.57,
       "protectedAreas": 2.4,
-      "population": 3388081,
-      "gdp": 77991666837.74,
-      "co2PerCapita": 1.92,
+      "population": 3386588,
+      "gdp": 80961511073.58,
+      "co2PerCapita": 2.57,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -8722,19 +10283,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 6.59
+            "value": 6.9
           },
           {
             "year": 2016,
-            "value": 6.53
+            "value": 6.83
           },
           {
             "year": 2017,
-            "value": 6.08
+            "value": 6.41
           },
           {
             "year": 2018,
-            "value": 6.52
+            "value": 6.87
+          },
+          {
+            "year": 2019,
+            "value": 7.16
+          },
+          {
+            "year": 2020,
+            "value": 6.91
+          },
+          {
+            "year": 2021,
+            "value": 8.55
+          },
+          {
+            "year": 2022,
+            "value": 8.09
+          },
+          {
+            "year": 2023,
+            "value": 8.19
+          },
+          {
+            "year": 2024,
+            "value": 8.7
           }
         ],
         "renewableEnergy": [
@@ -8797,21 +10382,21 @@
     },
     "jm": {
       "forestArea": 56.19,
-      "co2Mt": 8.51,
+      "co2Mt": 8.07,
       "renewableEnergy": 10.5,
       "pm25": 17.41,
       "protectedAreas": 1.6,
-      "population": 2839786,
-      "gdp": 21418804319.64,
-      "co2PerCapita": 3,
+      "population": 2839175,
+      "gdp": 22014397089.77,
+      "co2PerCapita": 2.84,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -8855,19 +10440,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 7.29
+            "value": 7.11
           },
           {
             "year": 2016,
-            "value": 7.75
+            "value": 7.63
           },
           {
             "year": 2017,
-            "value": 7.19
+            "value": 7.31
           },
           {
             "year": 2018,
-            "value": 8.51
+            "value": 8.69
+          },
+          {
+            "year": 2019,
+            "value": 8.44
+          },
+          {
+            "year": 2020,
+            "value": 5.92
+          },
+          {
+            "year": 2021,
+            "value": 6.47
+          },
+          {
+            "year": 2022,
+            "value": 7.52
+          },
+          {
+            "year": 2023,
+            "value": 7.7
+          },
+          {
+            "year": 2024,
+            "value": 8.07
           }
         ],
         "renewableEnergy": [
@@ -8930,21 +10539,21 @@
     },
     "pg": {
       "forestArea": 78.95,
-      "co2Mt": 7.46,
+      "co2Mt": 5.47,
       "renewableEnergy": 54.6,
       "pm25": 17.31,
       "protectedAreas": 0.7,
-      "population": 10389635,
-      "gdp": 30816367066.96,
-      "co2PerCapita": 0.72,
+      "population": 10576502,
+      "gdp": 31800428265.52,
+      "co2PerCapita": 0.52,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2022,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -8988,19 +10597,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 6.43
+            "value": 5.97
           },
           {
             "year": 2016,
-            "value": 7.63
+            "value": 6.62
           },
           {
             "year": 2017,
-            "value": 7.7
+            "value": 5.78
           },
           {
             "year": 2018,
-            "value": 7.46
+            "value": 4.9
+          },
+          {
+            "year": 2019,
+            "value": 5.04
+          },
+          {
+            "year": 2020,
+            "value": 5.47
+          },
+          {
+            "year": 2021,
+            "value": 5.39
+          },
+          {
+            "year": 2022,
+            "value": 5.53
+          },
+          {
+            "year": 2023,
+            "value": 5.5
+          },
+          {
+            "year": 2024,
+            "value": 5.47
           }
         ],
         "renewableEnergy": [
@@ -9067,21 +10700,21 @@
     },
     "lk": {
       "forestArea": 34,
-      "co2Mt": 21.63,
+      "co2Mt": 23.33,
       "renewableEnergy": 48.8,
       "pm25": 19.96,
       "protectedAreas": 3.4,
-      "population": 22037000,
-      "gdp": 83716142582.19,
-      "co2PerCapita": 0.98,
+      "population": 21916000,
+      "gdp": 98963185509.65,
+      "co2PerCapita": 1.06,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -9125,19 +10758,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 20.36
+            "value": 19.71
           },
           {
             "year": 2016,
-            "value": 21.93
+            "value": 23.49
           },
           {
             "year": 2017,
-            "value": 23.31
+            "value": 23.41
           },
           {
             "year": 2018,
-            "value": 21.63
+            "value": 21.98
+          },
+          {
+            "year": 2019,
+            "value": 23.97
+          },
+          {
+            "year": 2020,
+            "value": 22.61
+          },
+          {
+            "year": 2021,
+            "value": 22.82
+          },
+          {
+            "year": 2022,
+            "value": 20.8
+          },
+          {
+            "year": 2023,
+            "value": 21.58
+          },
+          {
+            "year": 2024,
+            "value": 23.33
           }
         ],
         "renewableEnergy": [
@@ -9200,21 +10857,21 @@
     },
     "np": {
       "forestArea": 41.59,
-      "co2Mt": 12.03,
+      "co2Mt": 15.89,
       "renewableEnergy": 73.7,
       "pm25": 45.72,
       "protectedAreas": 23.6,
-      "population": 29694614,
-      "gdp": 41047772331.1,
-      "co2PerCapita": 0.41,
+      "population": 29651054,
+      "gdp": 42914268286.71,
+      "co2PerCapita": 0.54,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -9258,19 +10915,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 6.46
+            "value": 7.32
           },
           {
             "year": 2016,
-            "value": 9.34
+            "value": 10.76
           },
           {
             "year": 2017,
-            "value": 11.03
+            "value": 13.2
           },
           {
             "year": 2018,
-            "value": 12.03
+            "value": 14.93
+          },
+          {
+            "year": 2019,
+            "value": 13.46
+          },
+          {
+            "year": 2020,
+            "value": 16.46
+          },
+          {
+            "year": 2021,
+            "value": 17.38
+          },
+          {
+            "year": 2022,
+            "value": 15.05
+          },
+          {
+            "year": 2023,
+            "value": 15.43
+          },
+          {
+            "year": 2024,
+            "value": 15.89
           }
         ],
         "renewableEnergy": [
@@ -9333,21 +11014,21 @@
     },
     "mm": {
       "forestArea": 42.4,
-      "co2Mt": 32.52,
+      "co2Mt": 31.36,
       "renewableEnergy": 62.9,
       "pm25": 32.32,
-      "protectedAreas": 3.9,
-      "population": 54133798,
-      "gdp": 66757619000,
-      "co2PerCapita": 0.6,
+      "protectedAreas": 4,
+      "population": 54500091,
+      "gdp": 74068349523.81,
+      "co2PerCapita": 0.58,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -9391,19 +11072,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 19.01
+            "value": 19.74
           },
           {
             "year": 2016,
-            "value": 21.89
+            "value": 22.98
           },
           {
             "year": 2017,
-            "value": 31.4
+            "value": 33.75
           },
           {
             "year": 2018,
-            "value": 32.52
+            "value": 33.52
+          },
+          {
+            "year": 2019,
+            "value": 34.39
+          },
+          {
+            "year": 2020,
+            "value": 34.72
+          },
+          {
+            "year": 2021,
+            "value": 31.84
+          },
+          {
+            "year": 2022,
+            "value": 31.03
+          },
+          {
+            "year": 2023,
+            "value": 31.24
+          },
+          {
+            "year": 2024,
+            "value": 31.36
           }
         ],
         "renewableEnergy": [
@@ -9466,21 +11171,21 @@
     },
     "kh": {
       "forestArea": 43.06,
-      "co2Mt": 11.16,
+      "co2Mt": 19.44,
       "renewableEnergy": 52.4,
       "pm25": 24.14,
       "protectedAreas": 31.8,
-      "population": 17423880,
-      "gdp": 42335646895.8,
-      "co2PerCapita": 0.64,
+      "population": 17638801,
+      "gdp": 46352647037.24,
+      "co2PerCapita": 1.1,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -9524,19 +11229,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 8.58
+            "value": 8.52
           },
           {
             "year": 2016,
-            "value": 9.9
+            "value": 10.6
           },
           {
             "year": 2017,
-            "value": 11.37
+            "value": 11.83
           },
           {
             "year": 2018,
-            "value": 11.16
+            "value": 12.31
+          },
+          {
+            "year": 2019,
+            "value": 15.71
+          },
+          {
+            "year": 2020,
+            "value": 18.63
+          },
+          {
+            "year": 2021,
+            "value": 18.48
+          },
+          {
+            "year": 2022,
+            "value": 18.38
+          },
+          {
+            "year": 2023,
+            "value": 18.92
+          },
+          {
+            "year": 2024,
+            "value": 19.44
           }
         ],
         "renewableEnergy": [
@@ -9599,21 +11328,21 @@
     },
     "mn": {
       "forestArea": 9.09,
-      "co2Mt": 21.32,
+      "co2Mt": 27.66,
       "renewableEnergy": 3,
       "pm25": 29.65,
       "protectedAreas": 19.8,
-      "population": 3481145,
-      "gdp": 20325121393.91,
-      "co2PerCapita": 6.12,
+      "population": 3524788,
+      "gdp": 23794540024.51,
+      "co2PerCapita": 7.85,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -9657,19 +11386,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 17.3
+            "value": 18.03
           },
           {
             "year": 2016,
-            "value": 18.17
+            "value": 19.12
           },
           {
             "year": 2017,
-            "value": 19.47
+            "value": 21.08
           },
           {
             "year": 2018,
-            "value": 21.32
+            "value": 22.96
+          },
+          {
+            "year": 2019,
+            "value": 25.34
+          },
+          {
+            "year": 2020,
+            "value": 22.52
+          },
+          {
+            "year": 2021,
+            "value": 24.89
+          },
+          {
+            "year": 2022,
+            "value": 24.96
+          },
+          {
+            "year": 2023,
+            "value": 27.15
+          },
+          {
+            "year": 2024,
+            "value": 27.66
           }
         ],
         "renewableEnergy": [
@@ -9732,21 +11485,21 @@
     },
     "uz": {
       "forestArea": 8.55,
-      "co2Mt": 112.09,
+      "co2Mt": 148.54,
       "renewableEnergy": 1,
       "pm25": 31.96,
       "protectedAreas": 9.5,
-      "population": 35652307,
-      "gdp": 102641879248.76,
-      "co2PerCapita": 3.14,
+      "population": 36361859,
+      "gdp": 114965293466.61,
+      "co2PerCapita": 4.09,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -9790,19 +11543,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 101.53
+            "value": 107.55
           },
           {
             "year": 2016,
-            "value": 107.35
+            "value": 114.01
           },
           {
             "year": 2017,
-            "value": 111.38
+            "value": 118.27
           },
           {
             "year": 2018,
-            "value": 112.09
+            "value": 112.79
+          },
+          {
+            "year": 2019,
+            "value": 115.12
+          },
+          {
+            "year": 2020,
+            "value": 123.95
+          },
+          {
+            "year": 2021,
+            "value": 134.36
+          },
+          {
+            "year": 2022,
+            "value": 128.91
+          },
+          {
+            "year": 2023,
+            "value": 132.63
+          },
+          {
+            "year": 2024,
+            "value": 148.54
           }
         ],
         "renewableEnergy": [
@@ -9865,21 +11642,21 @@
     },
     "ao": {
       "forestArea": 52.09,
-      "co2Mt": 27.34,
+      "co2Mt": 28.1,
       "renewableEnergy": 52.9,
       "pm25": 25.15,
       "protectedAreas": 7.7,
-      "population": 36749906,
-      "gdp": 107167747140.13,
+      "population": 37885849,
+      "gdp": 100998916781.08,
       "co2PerCapita": 0.74,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -9923,19 +11700,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 35.16
+            "value": 33.09
           },
           {
             "year": 2016,
-            "value": 35.41
+            "value": 31.27
           },
           {
             "year": 2017,
-            "value": 30.84
+            "value": 28
           },
           {
             "year": 2018,
+            "value": 25.81
+          },
+          {
+            "year": 2019,
+            "value": 27
+          },
+          {
+            "year": 2020,
+            "value": 20.54
+          },
+          {
+            "year": 2021,
+            "value": 25.56
+          },
+          {
+            "year": 2022,
+            "value": 26.68
+          },
+          {
+            "year": 2023,
             "value": 27.34
+          },
+          {
+            "year": 2024,
+            "value": 28.1
           }
         ],
         "renewableEnergy": [
@@ -9998,21 +11799,21 @@
     },
     "mz": {
       "forestArea": 45.81,
-      "co2Mt": 6.64,
+      "co2Mt": 10.11,
       "renewableEnergy": 76.9,
       "pm25": 20.08,
       "protectedAreas": 18,
-      "population": 33635160,
-      "gdp": 20921079532.61,
-      "co2PerCapita": 0.2,
+      "population": 34631766,
+      "gdp": 22745341305.06,
+      "co2PerCapita": 0.29,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -10056,19 +11857,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 5.64
+            "value": 6.46
           },
           {
             "year": 2016,
-            "value": 5.79
+            "value": 8.33
           },
           {
             "year": 2017,
-            "value": 6.02
+            "value": 8.31
           },
           {
             "year": 2018,
-            "value": 6.64
+            "value": 8.06
+          },
+          {
+            "year": 2019,
+            "value": 8.63
+          },
+          {
+            "year": 2020,
+            "value": 7.95
+          },
+          {
+            "year": 2021,
+            "value": 9.14
+          },
+          {
+            "year": 2022,
+            "value": 10.9
+          },
+          {
+            "year": 2023,
+            "value": 10.72
+          },
+          {
+            "year": 2024,
+            "value": 10.11
           }
         ],
         "renewableEnergy": [
@@ -10131,21 +11956,21 @@
     },
     "ve": {
       "forestArea": 52.23,
-      "co2Mt": 138.16,
+      "co2Mt": 96.41,
       "renewableEnergy": 33.7,
       "pm25": 15.26,
       "protectedAreas": 39,
-      "population": 28300854,
-      "gdp": 102376526555.95,
-      "co2PerCapita": 4.88,
+      "population": 28405543,
+      "gdp": 119802963257.78,
+      "co2PerCapita": 3.39,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -10189,19 +12014,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 173.88
+            "value": 175.93
           },
           {
             "year": 2016,
-            "value": 162.06
+            "value": 162.94
           },
           {
             "year": 2017,
-            "value": 148.74
+            "value": 151.96
           },
           {
             "year": 2018,
-            "value": 138.16
+            "value": 137.79
+          },
+          {
+            "year": 2019,
+            "value": 120.37
+          },
+          {
+            "year": 2020,
+            "value": 76.67
+          },
+          {
+            "year": 2021,
+            "value": 75.87
+          },
+          {
+            "year": 2022,
+            "value": 92
+          },
+          {
+            "year": 2023,
+            "value": 96.39
+          },
+          {
+            "year": 2024,
+            "value": 96.41
           }
         ],
         "renewableEnergy": [
@@ -10264,21 +12113,21 @@
     },
     "bo": {
       "forestArea": 46.35,
-      "co2Mt": 22.71,
+      "co2Mt": 28.44,
       "renewableEnergy": 12.8,
       "pm25": 22.88,
       "protectedAreas": 30.9,
-      "population": 12244159,
-      "gdp": 52340206946.45,
-      "co2PerCapita": 1.85,
+      "population": 12413315,
+      "gdp": 54881327452.97,
+      "co2PerCapita": 2.29,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -10322,19 +12171,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 20.41
+            "value": 19.95
           },
           {
             "year": 2016,
-            "value": 21.61
+            "value": 21.36
           },
           {
             "year": 2017,
-            "value": 22.25
+            "value": 21.78
           },
           {
             "year": 2018,
-            "value": 22.71
+            "value": 21.97
+          },
+          {
+            "year": 2019,
+            "value": 22
+          },
+          {
+            "year": 2020,
+            "value": 18.57
+          },
+          {
+            "year": 2021,
+            "value": 21.87
+          },
+          {
+            "year": 2022,
+            "value": 23.38
+          },
+          {
+            "year": 2023,
+            "value": 24.42
+          },
+          {
+            "year": 2024,
+            "value": 28.44
           }
         ],
         "renewableEnergy": [
@@ -10397,20 +12270,20 @@
     },
     "cu": {
       "forestArea": 31.23,
-      "co2Mt": 24.97,
+      "co2Mt": 21,
       "renewableEnergy": 20.9,
       "pm25": 21.24,
-      "protectedAreas": 6.7,
-      "population": 11019931,
+      "protectedAreas": 6.9,
+      "population": 10979783,
       "gdp": 107352000000,
-      "co2PerCapita": 2.27,
+      "co2PerCapita": 1.91,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
+        "protectedAreas": 2024,
+        "population": 2024,
         "gdp": 2020
       },
       "history": {
@@ -10455,19 +12328,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 27.49
+            "value": 29.44
           },
           {
             "year": 2016,
-            "value": 28.45
+            "value": 27.3
           },
           {
             "year": 2017,
-            "value": 25.65
+            "value": 26.51
           },
           {
             "year": 2018,
-            "value": 24.97
+            "value": 26.78
+          },
+          {
+            "year": 2019,
+            "value": 22.29
+          },
+          {
+            "year": 2020,
+            "value": 18.48
+          },
+          {
+            "year": 2021,
+            "value": 21.76
+          },
+          {
+            "year": 2022,
+            "value": 19.76
+          },
+          {
+            "year": 2023,
+            "value": 20.03
+          },
+          {
+            "year": 2024,
+            "value": 21
           }
         ],
         "renewableEnergy": [
@@ -10530,21 +12427,21 @@
     },
     "do": {
       "forestArea": 44.99,
-      "co2Mt": 25.12,
+      "co2Mt": 34.22,
       "renewableEnergy": 14.8,
       "pm25": 19.83,
-      "protectedAreas": 18.7,
-      "population": 11331265,
-      "gdp": 120456239153.74,
-      "co2PerCapita": 2.22,
+      "protectedAreas": 15.3,
+      "population": 11427557,
+      "gdp": 124282245638.57,
+      "co2PerCapita": 2.99,
       "dataYear": {
         "forestArea": 2023,
-        "co2Mt": 2018,
+        "co2Mt": 2024,
         "renewableEnergy": 2021,
         "pm25": 2020,
-        "protectedAreas": 2023,
-        "population": 2023,
-        "gdp": 2023
+        "protectedAreas": 2024,
+        "population": 2024,
+        "gdp": 2024
       },
       "history": {
         "forestArea": [
@@ -10588,19 +12485,43 @@
         "co2Mt": [
           {
             "year": 2015,
-            "value": 23.45
+            "value": 23.87
           },
           {
             "year": 2016,
-            "value": 24.46
+            "value": 24.87
           },
           {
             "year": 2017,
-            "value": 23.39
+            "value": 23.79
           },
           {
             "year": 2018,
-            "value": 25.12
+            "value": 25.63
+          },
+          {
+            "year": 2019,
+            "value": 28.46
+          },
+          {
+            "year": 2020,
+            "value": 26.93
+          },
+          {
+            "year": 2021,
+            "value": 29.67
+          },
+          {
+            "year": 2022,
+            "value": 32.11
+          },
+          {
+            "year": 2023,
+            "value": 32.79
+          },
+          {
+            "year": 2024,
+            "value": 34.22
           }
         ],
         "renewableEnergy": [

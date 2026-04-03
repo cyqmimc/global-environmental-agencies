@@ -15,7 +15,8 @@ const ROOT = resolve(__dirname, "..");
 
 const INDICATORS = {
   forestArea: "AG.LND.FRST.ZS",
-  co2Mt: "CC.CO2.EMSE.EL",             // CO2 total excl. LUCF (Mt CO2 eq)
+  co2Mt: "EN.GHG.CO2.MT.CE.AR5",       // CO2 total excl. LULUCF (Mt CO2e) — EDGAR/AR5, data to 2024
+  co2PerCapitaDirect: "EN.GHG.CO2.PC.CE.AR5", // CO2 per capita (t CO2e) — direct from WB, data to 2024
   renewableEnergy: "EG.FEC.RNEW.ZS",
   pm25: "EN.ATM.PM25.MC.M3",
   protectedAreas: "ER.PTD.TOTL.ZS",
@@ -23,8 +24,8 @@ const INDICATORS = {
   gdp: "NY.GDP.MKTP.CD",
 };
 
-// CO2 data lags more, use wider range
-const DATE_RANGE = "2015:2023";
+// Wider range to capture latest available year per indicator
+const DATE_RANGE = "2015:2025";
 const BASE_URL = "https://api.worldbank.org/v2";
 
 async function fetchAllPages(url) {
@@ -164,14 +165,17 @@ async function main() {
       }
     }
 
-    // Compute per-capita CO2 from co2Mt and population
-    if (countryData.co2Mt != null && countryData.population != null && countryData.population > 0) {
-      // co2Mt is in Mt, population is total persons
-      // per capita = (Mt * 1e6) / population = tonnes per person
+    // Use direct WB per-capita indicator (preferred), fallback to computed
+    if (countryData.co2PerCapitaDirect != null) {
+      countryData.co2PerCapita = countryData.co2PerCapitaDirect;
+    } else if (countryData.co2Mt != null && countryData.population != null && countryData.population > 0) {
       countryData.co2PerCapita = Math.round((countryData.co2Mt * 1e6 / countryData.population) * 100) / 100;
     } else {
       countryData.co2PerCapita = null;
     }
+    // Remove helper fields from output
+    delete countryData.co2PerCapitaDirect;
+    delete dataYear.co2PerCapitaDirect;
 
     // Collect history only for trend-chart indicators (keep payload small)
     const HISTORY_KEYS = ["forestArea", "co2Mt", "renewableEnergy", "pm25"];
