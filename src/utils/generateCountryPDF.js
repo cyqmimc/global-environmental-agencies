@@ -183,7 +183,8 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
     import("svg2pdf.js"),
   ]);
 
-  const t = (zh, en) => language === "zh" ? zh : en;
+  // PDF always uses English labels (jsPDF built-in fonts don't support CJK)
+  const t = (_zh, en) => en;
   const doc = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
   const W = 210, H = 297;
   const ML = 15, MR = 15, MT = 15;
@@ -508,7 +509,7 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
       doc.setFont("helvetica", "bold");
       doc.text(`${law.year}`, ML, y + 3);
       doc.setFont("helvetica", "normal");
-      const lawName = language === "zh" ? (law.nameZh || law.nameEn || law.name) : (law.nameEn || law.name);
+      const lawName = law.nameEn || law.name || law.nameZh || "";
       const lines = doc.splitTextToSize(lawName, CW - 15);
       doc.text(lines, ML + 14, y + 3);
       y += lines.length * 3.5 + 2;
@@ -530,7 +531,7 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
       doc.setFontSize(7);
       doc.setTextColor(...DARK);
       doc.setFont("helvetica", "normal");
-      const name = language === "zh" ? (TREATY_LABELS[treaty] || treaty) : treaty;
+      const name = treaty;
       doc.text("• " + name, ML + col * tw, y + 3);
     });
     y += 8;
@@ -555,7 +556,7 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
       doc.setFontSize(7);
       doc.setTextColor(...GRAY);
       doc.setFont("helvetica", "italic");
-      const target = language === "zh" ? country.parisAgreement.ndcTargetZh : country.parisAgreement.ndcTargetEn;
+      const target = country.parisAgreement.ndcTargetEn || country.parisAgreement.ndcTargetZh || "";
       const lines = doc.splitTextToSize(t("目标: ", "Target: ") + target, CW);
       doc.text(lines, ML, y + 3);
       y += lines.length * 3 + 3;
