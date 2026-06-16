@@ -67,11 +67,11 @@ export default function useCountryData() {
    */
   const loadAllDetails = useCallback(async () => {
     if (!detailCache) await fetchDetail();
-    if (!detailCache) return;
-    setCountries((prev) =>
-      prev.map((c) => (c._detail ? c : { ...c, ...(detailCache[c.isoCode] || {}), _detail: true }))
-    );
-  }, []);
+    if (!detailCache) return countries;
+    const enriched = countries.map((c) => (c._detail ? c : { ...c, ...(detailCache[c.isoCode] || {}), _detail: true }));
+    setCountries(enriched);
+    return enriched;
+  }, [countries]);
 
   const globalAvg = useMemo(() => {
     if (countries.length === 0) return {};

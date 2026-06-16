@@ -56,9 +56,10 @@ export default function GlobalEnvironmentalAgencies() {
   const [showAbout, setShowAbout] = useState(false);
   const [viewMode, setViewMode] = useState(urlParams.view || "cards");
   const [copied, setCopied] = useState(false);
+  const [regionalPdfLoading, setRegionalPdfLoading] = useState(false);
 
   const { theme, toggle: toggleTheme } = useDarkMode();
-  const { countries, wbMeta, globalAvg, loadDetail } = useCountryData();
+  const { countries, wbMeta, globalAvg, loadDetail, loadAllDetails } = useCountryData();
   const { favorites, toggle: toggleFav, isFav } = useFavorites();
   // Note: useCountryData prefetches the detail bundle on idle so rankings
   // export and other bulk consumers get full rows without each user click.
@@ -140,6 +141,39 @@ export default function GlobalEnvironmentalAgencies() {
   const openCountryDetail = useCallback((country) => {
     setOpenCountryIso(country.isoCode);
   }, []);
+
+  const handleRegionalPDF = async () => {
+    if (filters.filteredCountries.length === 0 || regionalPdfLoading) return;
+    setRegionalPdfLoading(true);
+    try {
+      const selectedIds = new Set(filters.filteredCountries.map((c) => c.isoCode));
+      const enrichedCountries = await loadAllDetails();
+      const exportItems = (enrichedCountries || countries).filter((c) => selectedIds.has(c.isoCode));
+      const regionLabel = REGIONS.find((r) => r.value === filters.regionFilter);
+      const scopeName = filters.regionFilter
+        ? regionLabel?.labelEn || filters.regionFilter
+        : "Filtered Countries";
+      const activeFilters = [
+        filters.regionFilter ? `Region: ${regionLabel?.labelEn || filters.regionFilter}` : null,
+        filters.search ? `Search: ${filters.search}` : null,
+        filters.complianceFilter ? `Compliance: ${filters.complianceFilter}` : null,
+        filters.tagFilter ? `Focus: ${filters.tagFilter}` : null,
+        filters.favOnly ? "Favorites only" : null,
+      ].filter(Boolean);
+      const { generateRegionalPDF } = await import("./utils/generateRegionalPDF");
+      await generateRegionalPDF(exportItems, {
+        regionName: scopeName,
+        filterSummary: activeFilters.length
+          ? `${exportItems.length} countries | ${activeFilters.join(" | ")}`
+          : `${exportItems.length} countries`,
+        globalAvg,
+      });
+    } catch (e) {
+      console.error("Regional PDF generation failed:", e);
+    } finally {
+      setRegionalPdfLoading(false);
+    }
+  };
 
   const activeCount = activeFilterCount({
     search: filters.search,
@@ -374,12 +408,25 @@ export default function GlobalEnvironmentalAgencies() {
               {t(`共 ${filters.filteredCountries.length} 个结果`, `${filters.filteredCountries.length} results found`)}
             </p>
             {filters.filteredCountries.length > 0 && (
-              <button
-                onClick={() => exportCSV(filters.filteredCountries, language)}
-                className="text-sm text-green-700 dark:text-green-400 hover:text-green-800 font-medium flex items-center gap-1 cursor-pointer"
-              >
-                <span>📥</span> {t("导出 CSV", "Export CSV")}
-              </button>
+              <div className="flex flex-wrap items-center justify-end gap-3">
+                <button
+                  onClick={handleRegionalPDF}
+                  disabled={regionalPdfLoading}
+                  className="text-sm text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 font-medium flex items-center gap-1 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  title={t("导出当前筛选结果的区域汇总 PDF", "Export current filtered results as a regional PDF")}
+                >
+                  <span>{regionalPdfLoading ? "⏳" : "📄"}</span>
+                  {filters.regionFilter
+                    ? t("导出区域 PDF", "Export Region PDF")
+                    : t("导出当前结果 PDF", "Export Results PDF")}
+                </button>
+                <button
+                  onClick={() => exportCSV(filters.filteredCountries, language)}
+                  className="text-sm text-green-700 dark:text-green-400 hover:text-green-800 font-medium flex items-center gap-1 cursor-pointer"
+                >
+                  <span>📥</span> {t("导出 CSV", "Export CSV")}
+                </button>
+              </div>
             )}
           </div>
         </div>
