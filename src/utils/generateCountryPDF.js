@@ -472,7 +472,7 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
       sectionTitle(t("历史趋势", "Historical Trends"));
 
       const trendW = (CW - 6) / 2;
-      trendMetrics.forEach((m, i) => {
+      for (const [i, m] of trendMetrics.entries()) {
         const col = i % 2;
         if (i > 0 && col === 0) y += 42;
         const tx = ML + col * (trendW + 6);
@@ -489,10 +489,13 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
           document.body.appendChild(tsvg);
           tsvg.style.position = "absolute";
           tsvg.style.left = "-9999px";
-          svg2pdf(tsvg, doc, { x: tx, y: y + 4, width: trendW, height: 32 });
-          document.body.removeChild(tsvg);
+          try {
+            await svg2pdf(tsvg, doc, { x: tx, y: y + 4, width: trendW, height: 32 });
+          } finally {
+            document.body.removeChild(tsvg);
+          }
         }
-      });
+      }
       y += 42;
     }
   }
