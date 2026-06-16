@@ -49,8 +49,8 @@ export default function TrendLineChart({ datasets, yLabel, yUnit = "" }) {
           const y = yScale(val);
           return (
             <g key={i}>
-              <line x1={padLeft} y1={y} x2={chartW - padRight} y2={y} stroke="#e5e7eb" strokeWidth="1" />
-              <text x={padLeft - 6} y={y} textAnchor="end" dominantBaseline="central" fontSize="9" className="fill-gray-400">
+              <line x1={padLeft} y1={y} x2={chartW - padRight} y2={y} className="stroke-gray-200 dark:stroke-gray-700" strokeWidth="1" />
+              <text x={padLeft - 6} y={y} textAnchor="end" dominantBaseline="central" fontSize="9" className="fill-gray-400 dark:fill-gray-500">
                 {fmtY(val)}{yUnit}
               </text>
             </g>
@@ -65,7 +65,7 @@ export default function TrendLineChart({ datasets, yLabel, yUnit = "" }) {
             textAnchor="middle"
             dominantBaseline="central"
             fontSize="9"
-            className="fill-gray-400"
+            className="fill-gray-400 dark:fill-gray-500"
             transform={`rotate(-90, 12, ${padTop + plotH / 2})`}
           >
             {yLabel}
@@ -80,7 +80,7 @@ export default function TrendLineChart({ datasets, yLabel, yUnit = "" }) {
             y={padTop + plotH + 16}
             textAnchor="middle"
             fontSize="9"
-            className="fill-gray-400"
+            className="fill-gray-400 dark:fill-gray-500"
           >
             {year}
           </text>
@@ -131,7 +131,7 @@ export default function TrendLineChart({ datasets, yLabel, yUnit = "" }) {
       {datasets.length > 1 && (
         <div className="flex flex-wrap gap-4 justify-center mt-1">
           {datasets.map((ds, i) => (
-            <div key={i} className="flex items-center gap-1.5 text-xs text-gray-600">
+            <div key={i} className="flex items-center gap-1.5 text-xs text-gray-600 dark:text-gray-300">
               <span
                 className="inline-block w-3 h-3 rounded-sm"
                 style={{ backgroundColor: ds.color }}

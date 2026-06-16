@@ -1,6 +1,14 @@
 import BarChart from "./charts/BarChart";
 import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG } from "../constants";
 import useDialogA11y from "../hooks/useDialogA11y";
+import {
+  carbonIntensity,
+  gdpPerCapita,
+  formatPopulation,
+  formatGdp,
+  formatGdpPerCapita,
+  formatCarbonIntensity,
+} from "../utils/derived";
 
 const COMPARE_COLORS = ["#22c55e", "#3b82f6", "#f59e0b"];
 
@@ -64,8 +72,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("机构名称", "Agency")}
                   </td>
                   {compareList.map((c) => (
@@ -77,8 +85,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                     </td>
                   ))}
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("成立年份", "Established")}
                   </td>
                   {compareList.map((c) => (
@@ -90,8 +98,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                     </td>
                   ))}
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("特色领域", "Focus Areas")}
                   </td>
                   {compareList.map((c) => (
@@ -114,8 +122,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                     </td>
                   ))}
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("森林覆盖率", "Forest Coverage")}
                   </td>
                   {compareList.map((c) => (
@@ -127,8 +135,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                     </td>
                   ))}
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("碳排放", "Carbon Emission")}
                   </td>
                   {compareList.map((c) => (
@@ -140,8 +148,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                     </td>
                   ))}
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("EPI 环境绩效", "EPI Score")}
                   </td>
                   {compareList.map((c) => (
@@ -153,8 +161,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                     </td>
                   ))}
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("碳中和目标", "Net Zero Target")}
                   </td>
                   {compareList.map((c) => (
@@ -166,8 +174,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                     </td>
                   ))}
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("可再生能源", "Renewable Energy")}
                   </td>
                   {compareList.map((c) => (
@@ -176,8 +184,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                     </td>
                   ))}
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     PM2.5 (µg/m³)
                   </td>
                   {compareList.map((c) => (
@@ -186,8 +194,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                     </td>
                   ))}
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("人均CO₂ (吨)", "CO₂/Capita (t)")}
                   </td>
                   {compareList.map((c) => (
@@ -196,8 +204,59 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                     </td>
                   ))}
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
+                    {t("人口", "Population")}
+                  </td>
+                  {compareList.map((c) => (
+                    <td key={c.countryEn} className="py-3 px-2 text-center font-bold text-slate-700 dark:text-slate-200">
+                      {formatPopulation(c.wb?.population)}
+                    </td>
+                  ))}
+                </tr>
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">GDP</td>
+                  {compareList.map((c) => (
+                    <td key={c.countryEn} className="py-3 px-2 text-center font-bold text-slate-700 dark:text-slate-200">
+                      {formatGdp(c.wb?.gdp)}
+                    </td>
+                  ))}
+                </tr>
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
+                    {t("人均 GDP", "GDP/Capita")}
+                  </td>
+                  {compareList.map((c) => (
+                    <td key={c.countryEn} className="py-3 px-2 text-center font-bold text-slate-700 dark:text-slate-200">
+                      {formatGdpPerCapita(gdpPerCapita(c))}
+                    </td>
+                  ))}
+                </tr>
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td
+                    className="py-3 px-2 text-gray-500 dark:text-gray-400"
+                    title={t("每美元 GDP 排放 CO₂ 克数 · 越低越好", "g CO₂ per USD GDP · lower is better")}
+                  >
+                    {t("碳强度", "C. Intensity")}
+                  </td>
+                  {compareList.map((c) => {
+                    const v = carbonIntensity(c);
+                    const cls = v == null
+                      ? "text-gray-400"
+                      : v <= 0.05 ? "text-green-600"
+                      : v <= 0.15 ? "text-lime-600"
+                      : v <= 0.30 ? "text-yellow-600"
+                      : v <= 0.60 ? "text-orange-500"
+                      : "text-red-500";
+                    return (
+                      <td key={c.countryEn} className={`py-3 px-2 text-center font-bold ${cls}`}>
+                        {formatCarbonIntensity(v)}
+                      </td>
+                    );
+                  })}
+                </tr>
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("保护区面积", "Protected Areas")}
                   </td>
                   {compareList.map((c) => (
@@ -206,8 +265,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                     </td>
                   ))}
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("30×30 进度", "30×30 Progress")}
                   </td>
                   {compareList.map((c) => {
@@ -231,8 +290,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                     );
                   })}
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("NDC 评级", "NDC Rating")}
                   </td>
                   {compareList.map((c) => {
@@ -248,8 +307,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                     );
                   })}
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("碳价", "Carbon Price")}
                   </td>
                   {compareList.map((c) => (
@@ -262,8 +321,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                     </td>
                   ))}
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     BTR {t("报告", "Report")}
                   </td>
                   {compareList.map((c) => (
@@ -274,8 +333,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                     </td>
                   ))}
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="py-3 px-2 text-gray-500">
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("NDC 承诺", "NDC Target")}
                   </td>
                   {compareList.map((c) => (
@@ -290,7 +349,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   ))}
                 </tr>
                 <tr>
-                  <td className="py-3 px-2 text-gray-500">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("国际公约", "Treaties")}
                   </td>
                   {compareList.map((c) => (
@@ -316,8 +375,8 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
           </div>
 
           {/* Comparison chart */}
-          <div className="bg-gray-50 rounded-xl p-4">
-            <h4 className="text-sm font-semibold text-gray-500 mb-3">
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4">
+            <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3">
               {t("数据对比", "Data Comparison")}
             </h4>
             <BarChart
@@ -338,7 +397,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
           <div className="flex gap-3 mt-6">
             <button
               onClick={onClear}
-              className="flex-1 py-2.5 rounded-lg border border-gray-200 text-sm font-medium hover:bg-gray-50 transition-colors cursor-pointer"
+              className="flex-1 py-2.5 rounded-lg border border-gray-200 dark:border-gray-700 dark:text-gray-200 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
             >
               {t("清除对比", "Clear & Close")}
             </button>

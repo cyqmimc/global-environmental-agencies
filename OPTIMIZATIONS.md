@@ -135,3 +135,43 @@ npm run update-all  # 已自动包含 validate 前置检查
 ✓ vite build 252 modules 238ms
 ```
 
+---
+
+# Round 3 — 补齐遗漏 + 新指标二级接入
+
+自主扫描发现前两轮的 6 处疏漏，本轮一并补齐。
+
+## 修复点
+
+1. **4 个 SVG 图表组件全部缺暗色** — BarChart / RadarChart / ScatterChart / TrendLineChart
+   网格线和文字之前硬编码 `#e5e7eb` / `fill-gray-400`，暗模式几乎不可见。
+   改为 `className="stroke-gray-200 dark:stroke-gray-700"` 等响应式样式。
+
+2. **ClimateEquityView 缺暗色** — 容器和说明文字补 `dark:` 变体。
+
+3. **CompareDialog 缺暗色 + 缺新字段行** — 对比页是上一轮唯一漏掉新数据的视图：
+   - 表格行底色、标签色全部加 `dark:` 变体
+   - 新增 4 行：**人口 / GDP / 人均 GDP / 碳强度**（与 Rankings、Map、Detail 一致的样式与阈值）
+
+4. **validate-schema.js 扩展至 wb-data.json** — 新增段落校验：
+   - 8 个必需 WB 字段（forest/co2Mt/renewable/pm25/protected/pop/gdp/co2pc）
+   - 数值类型与 finite 检查
+   - pop/gdp 必须 > 0
+   - **交叉校验**：`co2PerCapita ≈ co2Mt × 1e6 / population` 偏差超 2× 报警
+   - 已纳入 `npm run update-all`
+
+5. **globalAvg 新增 `carbonIntensity` 均值** — `useCountryData.js`
+   过滤 null 后取 4 位小数；驱动新 Stats 徽标。
+
+6. **Stats Bar 新增 "均值碳强度" tile** — `App.jsx`，悬浮 title 展示完整释义。
+
+## 校验
+
+```
+✓ countries.json validated · 80 countries · 0 warnings
+✓ wb-data.json validated · 80 entries · 0 warnings
+✔ 23/23 tests pass
+✓ vite build 252 modules 223ms
+```
+
+

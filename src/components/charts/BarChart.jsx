@@ -31,8 +31,8 @@ export default function BarChart({ labels, datasets }) {
           const y = padTop + plotH - (val / niceMax) * plotH;
           return (
             <g key={val}>
-              <line x1={padLeft} y1={y} x2={chartW} y2={y} stroke="#e5e7eb" strokeWidth="1" />
-              <text x={padLeft - 6} y={y} textAnchor="end" dominantBaseline="central" fontSize="10" className="fill-gray-400">
+              <line x1={padLeft} y1={y} x2={chartW} y2={y} className="stroke-gray-200 dark:stroke-gray-700" strokeWidth="1" />
+              <text x={padLeft - 6} y={y} textAnchor="end" dominantBaseline="central" fontSize="10" className="fill-gray-400 dark:fill-gray-500">
                 {Math.round(val)}
               </text>
             </g>
@@ -65,7 +65,7 @@ export default function BarChart({ labels, datasets }) {
                         y={y - 4}
                         textAnchor="middle"
                         fontSize="9"
-                        className="fill-gray-500"
+                        className="fill-gray-500 dark:fill-gray-400"
                       >
                         {val >= 100 ? Math.round(val) : val.toFixed(1)}
                       </text>
@@ -79,7 +79,7 @@ export default function BarChart({ labels, datasets }) {
                 y={padTop + plotH + 14}
                 textAnchor="middle"
                 fontSize="10"
-                className="fill-gray-500"
+                className="fill-gray-500 dark:fill-gray-400"
               >
                 {label.length > 12 ? label.slice(0, 12) + "…" : label}
               </text>
@@ -90,7 +90,7 @@ export default function BarChart({ labels, datasets }) {
       {/* Legend */}
       <div className="flex flex-wrap gap-4 justify-center mt-2">
         {datasets.map((ds, i) => (
-          <div key={i} className="flex items-center gap-1.5 text-xs text-gray-600">
+          <div key={i} className="flex items-center gap-1.5 text-xs text-gray-600 dark:text-gray-300">
             <span
               className="inline-block w-3 h-3 rounded-sm"
               style={{ backgroundColor: ds.color }}

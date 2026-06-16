@@ -81,8 +81,8 @@ export default function ScatterChart({
           const y = scaleY(val);
           return (
             <g key={`y-${val}`}>
-              <line x1={padLeft} y1={y} x2={chartW - padRight} y2={y} stroke="#f3f4f6" strokeWidth="1" />
-              <text x={padLeft - 8} y={y} textAnchor="end" dominantBaseline="central" fontSize="10" className="fill-gray-400">
+              <line x1={padLeft} y1={y} x2={chartW - padRight} y2={y} className="stroke-gray-100 dark:stroke-gray-800" strokeWidth="1" />
+              <text x={padLeft - 8} y={y} textAnchor="end" dominantBaseline="central" fontSize="10" className="fill-gray-400 dark:fill-gray-500">
                 {Math.round(val)}
               </text>
             </g>
@@ -93,8 +93,8 @@ export default function ScatterChart({
           if (x < padLeft || x > chartW - padRight) return null;
           return (
             <g key={`x-${val}`}>
-              <line x1={x} y1={padTop} x2={x} y2={padTop + plotH} stroke="#f3f4f6" strokeWidth="1" />
-              <text x={x} y={padTop + plotH + 14} textAnchor="middle" fontSize="10" className="fill-gray-400">
+              <line x1={x} y1={padTop} x2={x} y2={padTop + plotH} className="stroke-gray-100 dark:stroke-gray-800" strokeWidth="1" />
+              <text x={x} y={padTop + plotH + 14} textAnchor="middle" fontSize="10" className="fill-gray-400 dark:fill-gray-500">
                 {val >= 1 ? Math.round(val) : val}
               </text>
             </g>
@@ -103,7 +103,7 @@ export default function ScatterChart({
 
         {/* Axis labels */}
         {xLabel && (
-          <text x={padLeft + plotW / 2} y={height - 4} textAnchor="middle" fontSize="11" className="fill-gray-500">
+          <text x={padLeft + plotW / 2} y={height - 4} textAnchor="middle" fontSize="11" className="fill-gray-500 dark:fill-gray-400">
             {xLabel}
           </text>
         )}
@@ -113,7 +113,7 @@ export default function ScatterChart({
             y={padTop + plotH / 2}
             textAnchor="middle"
             fontSize="11"
-            className="fill-gray-500"
+            className="fill-gray-500 dark:fill-gray-400"
             transform={`rotate(-90 12 ${padTop + plotH / 2})`}
           >
             {yLabel}
@@ -168,7 +168,7 @@ export default function ScatterChart({
       {/* Legend */}
       <div className="flex flex-wrap gap-3 justify-center mt-2">
         {datasets.map((ds, i) => (
-          <div key={i} className="flex items-center gap-1.5 text-xs text-gray-600">
+          <div key={i} className="flex items-center gap-1.5 text-xs text-gray-600 dark:text-gray-300">
             <span
               className="inline-block w-2.5 h-2.5 rounded-full"
               style={{ backgroundColor: ds.borderColor }}

@@ -40,7 +40,7 @@ export default function RadarChart({ labels, datasets, size = 280, legendPositio
               .map((p) => `${cx + p.cos * r * (s / maxVal)},${cy + p.sin * r * (s / maxVal)}`)
               .join(" ")}
             fill="none"
-            stroke="#e5e7eb"
+            className="stroke-gray-200 dark:stroke-gray-700"
             strokeWidth="1"
           />
         ))}
@@ -52,7 +52,7 @@ export default function RadarChart({ labels, datasets, size = 280, legendPositio
             y1={cy}
             x2={cx + p.cos * r}
             y2={cy + p.sin * r}
-            stroke="#e5e7eb"
+            className="stroke-gray-200 dark:stroke-gray-700"
             strokeWidth="1"
           />
         ))}
@@ -96,7 +96,7 @@ export default function RadarChart({ labels, datasets, size = 280, legendPositio
               y={y}
               textAnchor={anchor}
               dominantBaseline="central"
-              className="fill-gray-500"
+              className="fill-gray-500 dark:fill-gray-400"
               fontSize="11"
             >
               {label}
@@ -108,7 +108,7 @@ export default function RadarChart({ labels, datasets, size = 280, legendPositio
       {legendPosition === "bottom" && (
         <div className="flex flex-wrap gap-4 justify-center mt-2">
           {datasets.map((ds, i) => (
-            <div key={i} className="flex items-center gap-1.5 text-xs text-gray-600">
+            <div key={i} className="flex items-center gap-1.5 text-xs text-gray-600 dark:text-gray-300">
               <span
                 className="inline-block w-3 h-3 rounded-sm"
                 style={{ backgroundColor: ds.color }}

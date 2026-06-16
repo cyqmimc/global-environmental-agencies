@@ -75,9 +75,9 @@ export default function useCountryData() {
 
   const globalAvg = useMemo(() => {
     if (countries.length === 0) return {};
-    const avg = (fn) => {
-      const vals = countries.map(fn).filter((v) => v != null);
-      return vals.length ? +(vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(2) : null;
+    const avg = (fn, digits = 2) => {
+      const vals = countries.map(fn).filter((v) => v != null && Number.isFinite(v));
+      return vals.length ? +(vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(digits) : null;
     };
     return {
       forestCoverage: avg((c) => c.data.forestCoverage),
@@ -86,6 +86,11 @@ export default function useCountryData() {
       renewableEnergy: avg((c) => c.wb?.renewableEnergy),
       pm25: avg((c) => c.wb?.pm25),
       protectedAreas: avg((c) => c.wb?.protectedAreas),
+      // New: derived carbon intensity (kg CO₂/USD GDP) averaged across countries with both fields.
+      carbonIntensity: avg(
+        (c) => (c.wb?.co2Mt != null && c.wb?.gdp > 0 ? (c.wb.co2Mt * 1e9) / c.wb.gdp : null),
+        4
+      ),
     };
   }, [countries]);
 

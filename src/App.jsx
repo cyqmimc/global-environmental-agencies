@@ -11,6 +11,7 @@ import {
   exportCSV,
   activeFilterCount,
 } from "./constants";
+import { formatCarbonIntensity } from "./utils/derived";
 import CountryCard from "./components/CountryCard";
 import CompareBar from "./components/CompareBar";
 import Pagination from "./components/Pagination";
@@ -223,6 +224,12 @@ export default function GlobalEnvironmentalAgencies() {
               }).length}
             </p>
             <p className="text-xs text-gray-500 dark:text-gray-400">{t("NDC 不足", "NDC Weak")}</p>
+          </div>
+          <div className="text-center" title={t("均值碳强度 (g CO₂/USD GDP)", "Avg carbon intensity (g CO₂/USD GDP)")}>
+            <p className="text-xl font-bold text-slate-600 dark:text-slate-300">
+              {globalAvg.carbonIntensity != null ? formatCarbonIntensity(globalAvg.carbonIntensity) : "—"}
+            </p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">{t("均值碳强度", "Avg C.Intensity")}</p>
           </div>
           {favorites.length > 0 && (
             <div className="text-center">

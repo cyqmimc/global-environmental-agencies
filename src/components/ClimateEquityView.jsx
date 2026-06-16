@@ -49,13 +49,13 @@ export default function ClimateEquityView({ countries, language, t, onCountryCli
   ];
 
   return (
-    <div className="bg-white rounded-xl shadow-sm p-4 mb-6">
+    <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm p-4 mb-6 border border-transparent dark:border-gray-800">
       <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
         <div>
-          <h3 className="text-sm font-semibold text-gray-700">
+          <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200">
             {t("气候公平矩阵", "Climate Equity Matrix")}
           </h3>
-          <p className="text-xs text-gray-400 mt-0.5">
+          <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
             {t(
               "气泡大小 = 累计排放量 · 点击气泡查看国家详情",
               "Bubble size = cumulative emissions · Click to view country details"
@@ -90,7 +90,7 @@ export default function ClimateEquityView({ countries, language, t, onCountryCli
       />
 
       {/* Data source */}
-      <p className="text-xs text-gray-400 mt-2 text-center">
+      <p className="text-xs text-gray-400 dark:text-gray-500 mt-2 text-center">
         {t(
           "数据来源：ND-GAIN 气候脆弱性指数 (2022) · Global Carbon Project 累计排放 (1850-2022)",
           "Sources: ND-GAIN Climate Vulnerability Index (2022) · Global Carbon Project Cumulative Emissions (1850-2022)"
