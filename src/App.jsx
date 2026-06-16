@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, lazy, Suspense, useMemo } from "react";
+import { useState, useEffect, useCallback, lazy, Suspense } from "react";
 import WorldMap from "./WorldMap";
 import useCountryData from "./hooks/useCountryData";
 import useFilters from "./hooks/useFilters";
@@ -56,6 +56,8 @@ export default function GlobalEnvironmentalAgencies() {
   const { theme, toggle: toggleTheme } = useDarkMode();
   const { countries, wbMeta, globalAvg, loadDetail } = useCountryData();
   const { favorites, toggle: toggleFav, isFav } = useFavorites();
+  // Note: useCountryData prefetches the detail bundle on idle so rankings
+  // export and other bulk consumers get full rows without each user click.
   const filters = useFilters(countries, urlParams, favorites);
 
   const t = useCallback(
@@ -142,9 +144,6 @@ export default function GlobalEnvironmentalAgencies() {
     compliance: filters.complianceFilter,
     favOnly: filters.favOnly,
   });
-
-  // Siblings list used by prev/next nav inside the detail dialog.
-  const detailSiblings = useMemo(() => filters.filteredCountries, [filters.filteredCountries]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-900 dark:to-gray-950 text-gray-900 dark:text-gray-100 transition-colors">
@@ -468,7 +467,7 @@ export default function GlobalEnvironmentalAgencies() {
             copied={copied}
             onCopy={handleCopy}
             allCountries={countries}
-            siblings={detailSiblings}
+            siblings={filters.filteredCountries}
             onNavigate={(c) => setOpenCountryIso(c.isoCode)}
           />
         )}

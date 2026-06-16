@@ -1,12 +1,24 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 
 let detailCache = null;
+let detailFetchPromise = null;
+
+function fetchDetail() {
+  if (!detailFetchPromise) {
+    detailFetchPromise = fetch("/countries-detail.json")
+      .then((r) => r.json())
+      .then((d) => {
+        detailCache = d;
+        return d;
+      });
+  }
+  return detailFetchPromise;
+}
 
 export default function useCountryData() {
   const [countries, setCountries] = useState([]);
   const [wbMeta, setWbMeta] = useState(null);
-  const [dataYears, setDataYears] = useState({}); // isoCode → { metric: year }
-  const detailFetchRef = useRef(null);
+  const fetchedRef = useRef(false);
 
   useEffect(() => {
     Promise.all([
@@ -14,43 +26,51 @@ export default function useCountryData() {
       fetch("/wb-data.json").then((r) => r.json()).catch(() => ({ countries: {}, meta: null })),
     ]).then(([countriesData, wbData]) => {
       if (wbData.meta) setWbMeta(wbData.meta);
-      const years = {};
       const merged = countriesData.map((c) => {
         const code = c.isoCode || c.flagUrl?.match(/flagcdn\.com\/(\w{2})\.svg/)?.[1];
         const wb = code ? wbData.countries?.[code] || null : null;
-        if (code && wb?.dataYear) years[code] = wb.dataYear;
         return { ...c, wb };
       });
-      setDataYears(years);
       setCountries(merged);
+
+      // Eager background prefetch of the detail bundle once the core list is up.
+      // Keeps the lazy contract (loadDetail still returns the same shape), but
+      // ensures RankingsView CSV export and other bulk operations don't drop
+      // keyLaws/treaties just because the user never opened a detail dialog.
+      if (!fetchedRef.current) {
+        fetchedRef.current = true;
+        const kick = () => fetchDetail().catch(() => {});
+        if (typeof requestIdleCallback === "function") requestIdleCallback(kick, { timeout: 2000 });
+        else setTimeout(kick, 1000);
+      }
     });
   }, []);
 
-  // Lazy-load detail data and merge into country object
+  // Lazy-load detail data and merge into one country object.
   const loadDetail = useCallback(async (country) => {
     if (country._detail) return country;
-
-    if (!detailCache) {
-      if (!detailFetchRef.current) {
-        detailFetchRef.current = fetch("/countries-detail.json").then((r) => r.json());
-      }
-      detailCache = await detailFetchRef.current;
-    }
-
-    const d = detailCache[country.isoCode];
+    if (!detailCache) await fetchDetail();
+    const d = detailCache?.[country.isoCode];
     if (!d) return country;
 
-    const enriched = {
-      ...country,
-      ...d,
-      _detail: true,
-    };
-
+    const enriched = { ...country, ...d, _detail: true };
     setCountries((prev) =>
       prev.map((c) => (c.isoCode === country.isoCode ? enriched : c))
     );
-
     return enriched;
+  }, []);
+
+  /**
+   * Merge detail into every country currently in state. Resolves when done.
+   * Used by export flows that need the full row shape regardless of whether
+   * each country's detail dialog has been opened.
+   */
+  const loadAllDetails = useCallback(async () => {
+    if (!detailCache) await fetchDetail();
+    if (!detailCache) return;
+    setCountries((prev) =>
+      prev.map((c) => (c._detail ? c : { ...c, ...(detailCache[c.isoCode] || {}), _detail: true }))
+    );
   }, []);
 
   const globalAvg = useMemo(() => {
@@ -69,5 +89,5 @@ export default function useCountryData() {
     };
   }, [countries]);
 
-  return { countries, wbMeta, dataYears, globalAvg, loadDetail };
+  return { countries, wbMeta, globalAvg, loadDetail, loadAllDetails };
 }

@@ -112,7 +112,6 @@ export default function useFilters(countries, initialParams, favorites = []) {
 
   return {
     search, updateSearch,
-    debouncedSearch,
     page, setPage, resetPage, pageCount,
     regionFilter, setRegionFilter,
     tagFilter, setTagFilter,

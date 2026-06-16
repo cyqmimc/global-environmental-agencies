@@ -91,6 +91,10 @@ export function shareCountryLink(isoCode, language) {
   url.search = "";
   if (isoCode) url.searchParams.set("country", isoCode);
   if (language && language !== "zh") url.searchParams.set("lang", language);
+  // navigator.clipboard is undefined in insecure contexts (http://, some iframes).
+  // Guard explicitly — without this, accessing .writeText throws synchronously
+  // before any .catch() can run.
+  if (!navigator.clipboard?.writeText) return Promise.resolve(false);
   return navigator.clipboard
     .writeText(url.toString())
     .then(() => true)

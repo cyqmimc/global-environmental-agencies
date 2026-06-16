@@ -1,8 +1,9 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 
 const KEY = "gegt:favorites";
 
 function read() {
+  if (typeof window === "undefined") return [];
   try {
     const raw = localStorage.getItem(KEY);
     if (!raw) return [];
@@ -14,11 +15,10 @@ function read() {
 }
 
 export default function useFavorites() {
-  const [favorites, setFavorites] = useState([]);
-
-  useEffect(() => {
-    setFavorites(read());
-  }, []);
+  // Lazy init so the very first render already reflects the persisted list —
+  // otherwise filteredCountries computes once with favorites=[] and a URL
+  // ?favOnly=1 shows "no results" for one frame before correcting.
+  const [favorites, setFavorites] = useState(read);
 
   const toggle = useCallback((isoCode) => {
     if (!isoCode) return;
@@ -26,9 +26,7 @@ export default function useFavorites() {
       const next = prev.includes(isoCode)
         ? prev.filter((x) => x !== isoCode)
         : [...prev, isoCode];
-      try {
-        localStorage.setItem(KEY, JSON.stringify(next));
-      } catch {}
+      try { localStorage.setItem(KEY, JSON.stringify(next)); } catch {}
       return next;
     });
   }, []);
@@ -38,12 +36,5 @@ export default function useFavorites() {
     [favorites]
   );
 
-  const clear = useCallback(() => {
-    try {
-      localStorage.removeItem(KEY);
-    } catch {}
-    setFavorites([]);
-  }, []);
-
-  return { favorites, toggle, isFav, clear };
+  return { favorites, toggle, isFav };
 }

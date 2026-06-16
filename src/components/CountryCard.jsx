@@ -118,24 +118,23 @@ export default function CountryCard({
           PM {country.wb?.pm25?.toFixed(0) ?? "—"}
         </span>
       </div>
-      {co2History && co2History.length >= 2 && (
-        <div className="mt-2 flex items-center gap-1.5" title={t("CO₂ 排放趋势 (2015–)", "CO₂ emissions trend (2015–)")}>
-          <span className="text-[10px] text-gray-400 dark:text-gray-500">CO₂</span>
-          <Sparkline
-            data={co2History}
-            color={
-              co2History[co2History.length - 1].value > co2History[0].value
-                ? "#dc2626"
-                : "#16a34a"
-            }
-            fill={
-              co2History[co2History.length - 1].value > co2History[0].value
-                ? "rgba(220,38,38,0.15)"
-                : "rgba(22,163,74,0.15)"
-            }
-          />
-        </div>
-      )}
+      {co2History && co2History.length >= 2 && (() => {
+        // Pick first/last non-null endpoints so missing tail data doesn't
+        // flip the color silently (null > number is always false in JS).
+        const valid = co2History.filter((d) => d && d.value != null);
+        if (valid.length < 2) return null;
+        const rising = valid[valid.length - 1].value > valid[0].value;
+        return (
+          <div className="mt-2 flex items-center gap-1.5" title={t("CO₂ 排放趋势 (2015–)", "CO₂ emissions trend (2015–)")}>
+            <span className="text-[10px] text-gray-400 dark:text-gray-500">CO₂</span>
+            <Sparkline
+              data={co2History}
+              color={rising ? "#dc2626" : "#16a34a"}
+              fill={rising ? "rgba(220,38,38,0.15)" : "rgba(22,163,74,0.15)"}
+            />
+          </div>
+        );
+      })()}
       <a
         href={country.website}
         target="_blank"

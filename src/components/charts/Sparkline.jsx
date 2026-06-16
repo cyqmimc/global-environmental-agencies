@@ -10,19 +10,21 @@ export default function Sparkline({
   fill = "rgba(22, 163, 74, 0.15)",
 }) {
   if (!data || data.length < 2) return null;
-  const vals = data.map((d) => d.value).filter((v) => v != null);
-  if (vals.length < 2) return null;
+  // Skip null/undefined points entirely so NaN never enters path coordinates.
+  const clean = data.filter((d) => d && d.value != null);
+  if (clean.length < 2) return null;
+  const vals = clean.map((d) => d.value);
   const min = Math.min(...vals);
   const max = Math.max(...vals);
   const range = max - min || 1;
-  const n = data.length;
-  const points = data.map((d, i) => {
+  const n = clean.length;
+  const points = clean.map((d, i) => {
     const x = (i / (n - 1)) * width;
     const y = height - ((d.value - min) / range) * (height - 2) - 1;
     return [x, y];
   });
   const line = points.map(([x, y], i) => `${i === 0 ? "M" : "L"}${x.toFixed(1)},${y.toFixed(1)}`).join(" ");
-  const area = `${line} L${width},${height} L0,${height} Z`;
+  const area = `${line} L${width.toFixed(1)},${height} L0,${height} Z`;
 
   return (
     <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} aria-hidden="true">

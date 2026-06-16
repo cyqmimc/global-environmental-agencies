@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 
 const KEY = "gegt:theme";
 
@@ -20,20 +20,15 @@ function apply(theme) {
 }
 
 export default function useDarkMode() {
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    const t = getInitial();
-    setTheme(t);
-    apply(t);
-  }, []);
+  // Lazy init so first React render agrees with the pre-paint script in
+  // main.jsx — otherwise the toggle icon (☾/☀) flickers for one frame on
+  // dark-mode users.
+  const [theme, setTheme] = useState(getInitial);
 
   const toggle = useCallback(() => {
     setTheme((prev) => {
       const next = prev === "dark" ? "light" : "dark";
-      try {
-        localStorage.setItem(KEY, next);
-      } catch {}
+      try { localStorage.setItem(KEY, next); } catch {}
       apply(next);
       return next;
     });

@@ -1,16 +1,16 @@
 /**
- * Minimal service worker — cache the app shell + data files for offline use.
- * Strategy: stale-while-revalidate for data, cache-first for app shell.
+ * Minimal service worker.
+ *
+ * - Navigation requests (HTML) → network-first with cache fallback.
+ *   index.html points to hashed asset URLs, so we can never serve a stale
+ *   shell or returning users will load the previous deploy's bundle forever.
+ * - JSON data files → stale-while-revalidate (fast offline, refreshes in bg).
+ * - Static map SVG → cache-first.
  */
-const VERSION = "v1";
+const VERSION = "v2";
 const SHELL_CACHE = `gegt-shell-${VERSION}`;
 const DATA_CACHE = `gegt-data-${VERSION}`;
-const SHELL_URLS = [
-  "/",
-  "/index.html",
-  "/manifest.webmanifest",
-  "/world-map.svg",
-];
+const STATIC_ASSETS = ["/world-map.svg", "/manifest.webmanifest"];
 const DATA_URLS = [
   "/countries-core.json",
   "/countries-detail.json",
@@ -21,7 +21,7 @@ const DATA_URLS = [
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(SHELL_CACHE).then((cache) =>
-      cache.addAll(SHELL_URLS).catch(() => {})
+      cache.addAll(STATIC_ASSETS).catch(() => {})
     )
   );
   self.skipWaiting();
@@ -46,7 +46,22 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
 
-  // Stale-while-revalidate for JSON data.
+  // Navigation / HTML → network first, fallback to cache. Prevents pinning
+  // /index.html to an old hashed-bundle deploy.
+  if (request.mode === "navigate" || request.destination === "document") {
+    event.respondWith(
+      fetch(request)
+        .then((resp) => {
+          const copy = resp.clone();
+          caches.open(SHELL_CACHE).then((c) => c.put(request, copy));
+          return resp;
+        })
+        .catch(() => caches.match(request).then((c) => c || caches.match("/")))
+    );
+    return;
+  }
+
+  // JSON data → stale-while-revalidate.
   if (DATA_URLS.some((path) => url.pathname.endsWith(path))) {
     event.respondWith(
       caches.open(DATA_CACHE).then(async (cache) => {
@@ -63,8 +78,8 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Cache-first for app shell.
-  if (SHELL_URLS.some((p) => url.pathname === p || url.pathname.endsWith(p))) {
+  // Static SVG / manifest → cache-first.
+  if (STATIC_ASSETS.some((p) => url.pathname.endsWith(p))) {
     event.respondWith(
       caches.match(request).then((cached) => cached || fetch(request))
     );

@@ -2,12 +2,25 @@ import { useEffect, useRef } from "react";
 
 /**
  * Esc 关闭 + Focus trap + body scroll lock for modal dialogs.
+ *
+ * IMPORTANT: callers typically pass an inline arrow as onClose, which gives
+ * the effect a fresh identity on every parent render. We keep `onClose` in a
+ * ref so the effect only runs once per `open` transition — otherwise
+ * `lastFocusedRef` would be overwritten with whatever element happened to be
+ * focused at the time of the latest parent render, and focus restoration on
+ * dialog close would land on a stale (often unmounted) inner element.
+ *
  * @param {boolean} open
  * @param {() => void} onClose
  */
 export default function useDialogA11y(open, onClose) {
   const containerRef = useRef(null);
   const lastFocusedRef = useRef(null);
+  const onCloseRef = useRef(onClose);
+
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  }, [onClose]);
 
   useEffect(() => {
     if (!open) return;
@@ -27,8 +40,9 @@ export default function useDialogA11y(open, onClose) {
 
     const handleKey = (e) => {
       if (e.key === "Escape") {
-        e.stopPropagation();
-        onClose?.();
+        // stopImmediatePropagation ensures stacked dialogs (if any) don't all close.
+        e.stopImmediatePropagation();
+        onCloseRef.current?.();
         return;
       }
       if (e.key === "Tab") {
@@ -61,7 +75,9 @@ export default function useDialogA11y(open, onClose) {
         lastFocusedRef.current.focus();
       }
     };
-  }, [open, onClose]);
+    // Intentionally exclude onClose — see ref pattern above.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
 
   return containerRef;
 }
