@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import RadarChart from "./charts/RadarChart";
 import TrendLineChart from "./charts/TrendLineChart";
-import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG } from "../constants";
+import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG, shareCountryLink } from "../constants";
 import Scorecard from "./Scorecard";
+import useDialogA11y from "../hooks/useDialogA11y";
 
 const TABS = [
   { key: "overview", zh: "概览", en: "Overview" },
@@ -10,9 +11,37 @@ const TABS = [
   { key: "data", zh: "数据", en: "Data" },
 ];
 
-export default function DetailDialog({ selectedCountry, language, t, globalAvg, onClose, copied, onCopy, allCountries }) {
+export default function DetailDialog({ selectedCountry, language, t, globalAvg, onClose, copied, onCopy, allCountries, siblings, onNavigate }) {
   const [tab, setTab] = useState("overview");
   const [pdfLoading, setPdfLoading] = useState(false);
+  const [shared, setShared] = useState(false);
+  const dialogRef = useDialogA11y(true, onClose);
+
+  // Compute prev/next within the current filtered list (siblings) by isoCode.
+  const navigable = Array.isArray(siblings) ? siblings : [];
+  const idx = navigable.findIndex((c) => c.isoCode === selectedCountry.isoCode);
+  const prev = idx > 0 ? navigable[idx - 1] : null;
+  const next = idx >= 0 && idx < navigable.length - 1 ? navigable[idx + 1] : null;
+
+  const goPrev = useCallback(() => { if (prev) onNavigate?.(prev); }, [prev, onNavigate]);
+  const goNext = useCallback(() => { if (next) onNavigate?.(next); }, [next, onNavigate]);
+
+  // Reset tab when navigating between countries so user lands on Overview.
+  useEffect(() => {
+    setTab("overview");
+    setShared(false);
+  }, [selectedCountry.isoCode]);
+
+  // Arrow-key navigation.
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.target && /input|textarea|select/i.test(e.target.tagName)) return;
+      if (e.key === "ArrowLeft") goPrev();
+      else if (e.key === "ArrowRight") goNext();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [goPrev, goNext]);
 
   const handlePDF = async () => {
     setPdfLoading(true);
@@ -26,23 +55,56 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
     }
   };
 
+  const handleShare = async () => {
+    const ok = await shareCountryLink(selectedCountry.isoCode, language);
+    if (ok) {
+      setShared(true);
+      setTimeout(() => setShared(false), 2000);
+    }
+  };
+
   return (
     <div
       className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label={language === "zh" ? selectedCountry.countryZh : selectedCountry.countryEn}
     >
       <div
-        className="bg-white rounded-2xl shadow-2xl w-full sm:max-w-2xl max-h-[90vh] sm:max-h-[90vh] h-full sm:h-auto overflow-y-auto"
+        ref={dialogRef}
+        className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full sm:max-w-2xl max-h-[90vh] sm:max-h-[90vh] h-full sm:h-auto overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="bg-gradient-to-r from-green-600 to-emerald-500 p-6 rounded-t-2xl text-white relative">
-          <button
-            onClick={onClose}
-            className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors cursor-pointer"
-          >
-            ✕
-          </button>
+          <div className="absolute top-4 right-4 flex items-center gap-2">
+            <button
+              onClick={goPrev}
+              disabled={!prev}
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 disabled:opacity-30 disabled:cursor-not-allowed text-white transition-colors cursor-pointer"
+              aria-label={t("上一个国家", "Previous country")}
+              title={prev ? (language === "zh" ? prev.countryZh : prev.countryEn) : ""}
+            >
+              ←
+            </button>
+            <button
+              onClick={goNext}
+              disabled={!next}
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 disabled:opacity-30 disabled:cursor-not-allowed text-white transition-colors cursor-pointer"
+              aria-label={t("下一个国家", "Next country")}
+              title={next ? (language === "zh" ? next.countryZh : next.countryEn) : ""}
+            >
+              →
+            </button>
+            <button
+              onClick={onClose}
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors cursor-pointer"
+              aria-label={t("关闭", "Close")}
+            >
+              ✕
+            </button>
+          </div>
           <div className="flex items-center gap-4">
             <img
               src={selectedCountry.flagUrl}
@@ -176,10 +238,18 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                 <button
                   onClick={handlePDF}
                   disabled={pdfLoading}
-                  className="px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium hover:bg-gray-50 transition-colors cursor-pointer disabled:opacity-50"
+                  className="px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 dark:text-gray-200 transition-colors cursor-pointer disabled:opacity-50"
                   title={t("下载PDF报告", "Download PDF Report")}
                 >
                   {pdfLoading ? "⏳" : "PDF"}
+                </button>
+                <button
+                  onClick={handleShare}
+                  className="px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 dark:text-gray-200 transition-colors cursor-pointer"
+                  title={t("复制分享链接", "Copy share link")}
+                  aria-label={t("复制分享链接", "Copy share link")}
+                >
+                  {shared ? "✓" : "🔗"}
                 </button>
                 {selectedCountry.contact?.email && (
                   <a

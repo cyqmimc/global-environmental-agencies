@@ -1,22 +1,29 @@
 import BarChart from "./charts/BarChart";
 import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG } from "../constants";
+import useDialogA11y from "../hooks/useDialogA11y";
 
 const COMPARE_COLORS = ["#22c55e", "#3b82f6", "#f59e0b"];
 
 export default function CompareDialog({ compareList, language, t, globalAvg, onClose, onClear }) {
+  const dialogRef = useDialogA11y(true, onClose);
   return (
     <div
       className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label={t("国家对比", "Country Comparison")}
     >
       <div
-        className="bg-white rounded-2xl shadow-2xl w-full sm:max-w-4xl max-h-[90vh] sm:max-h-[90vh] h-full sm:h-auto overflow-y-auto"
+        ref={dialogRef}
+        className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full sm:max-w-4xl max-h-[90vh] sm:max-h-[90vh] h-full sm:h-auto overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="bg-gradient-to-r from-blue-600 to-indigo-500 p-6 rounded-t-2xl text-white relative">
           <button
             onClick={onClose}
             className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors cursor-pointer"
+            aria-label={t("关闭", "Close")}
           >
             ✕
           </button>

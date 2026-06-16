@@ -5,6 +5,7 @@ let detailCache = null;
 export default function useCountryData() {
   const [countries, setCountries] = useState([]);
   const [wbMeta, setWbMeta] = useState(null);
+  const [dataYears, setDataYears] = useState({}); // isoCode → { metric: year }
   const detailFetchRef = useRef(null);
 
   useEffect(() => {
@@ -13,18 +14,21 @@ export default function useCountryData() {
       fetch("/wb-data.json").then((r) => r.json()).catch(() => ({ countries: {}, meta: null })),
     ]).then(([countriesData, wbData]) => {
       if (wbData.meta) setWbMeta(wbData.meta);
+      const years = {};
       const merged = countriesData.map((c) => {
         const code = c.isoCode || c.flagUrl?.match(/flagcdn\.com\/(\w{2})\.svg/)?.[1];
         const wb = code ? wbData.countries?.[code] || null : null;
+        if (code && wb?.dataYear) years[code] = wb.dataYear;
         return { ...c, wb };
       });
+      setDataYears(years);
       setCountries(merged);
     });
   }, []);
 
   // Lazy-load detail data and merge into country object
   const loadDetail = useCallback(async (country) => {
-    if (country._detail) return country; // already loaded
+    if (country._detail) return country;
 
     if (!detailCache) {
       if (!detailFetchRef.current) {
@@ -42,7 +46,6 @@ export default function useCountryData() {
       _detail: true,
     };
 
-    // Update in countries array
     setCountries((prev) =>
       prev.map((c) => (c.isoCode === country.isoCode ? enriched : c))
     );
@@ -66,5 +69,5 @@ export default function useCountryData() {
     };
   }, [countries]);
 
-  return { countries, wbMeta, globalAvg, loadDetail };
+  return { countries, wbMeta, dataYears, globalAvg, loadDetail };
 }

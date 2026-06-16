@@ -1,19 +1,27 @@
+import useDialogA11y from "../hooks/useDialogA11y";
+
 export default function AboutPage({ language, onClose }) {
   const t = (zh, en) => (language === "zh" ? zh : en);
+  const dialogRef = useDialogA11y(true, onClose);
 
   return (
     <div
       className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label={t("关于本项目", "About This Project")}
     >
       <div
-        className="bg-white rounded-2xl shadow-2xl w-full sm:max-w-3xl max-h-[90vh] h-full sm:h-auto overflow-y-auto"
+        ref={dialogRef}
+        className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full sm:max-w-3xl max-h-[90vh] h-full sm:h-auto overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="bg-gradient-to-r from-green-700 to-emerald-600 p-6 rounded-t-2xl text-white relative">
           <button
             onClick={onClose}
             className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors cursor-pointer"
+            aria-label={t("关闭", "Close")}
           >
             ✕
           </button>

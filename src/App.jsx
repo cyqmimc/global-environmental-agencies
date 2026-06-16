@@ -1,13 +1,19 @@
-import { useState, useEffect, useCallback, lazy, Suspense } from "react";
+import { useState, useEffect, useCallback, lazy, Suspense, useMemo } from "react";
 import WorldMap from "./WorldMap";
 import useCountryData from "./hooks/useCountryData";
 import useFilters from "./hooks/useFilters";
+import useFavorites from "./hooks/useFavorites";
+import useDarkMode from "./hooks/useDarkMode";
 import {
   RESPONSIBILITY_LABELS,
   getUrlParams,
   setUrlParams,
   exportCSV,
+  activeFilterCount,
 } from "./constants";
+import CountryCard from "./components/CountryCard";
+import CompareBar from "./components/CompareBar";
+import Pagination from "./components/Pagination";
 
 const DetailDialog = lazy(() => import("./components/DetailDialog"));
 const CompareDialog = lazy(() => import("./components/CompareDialog"));
@@ -41,18 +47,26 @@ export default function GlobalEnvironmentalAgencies() {
   const urlParams = getUrlParams();
   const [language, setLanguage] = useState(urlParams.lang);
   const [openCountryIso, setOpenCountryIso] = useState(urlParams.country || null);
-  const [copied, setCopied] = useState(false);
   const [compareList, setCompareList] = useState([]);
   const [showCompare, setShowCompare] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
-  const [viewMode, setViewMode] = useState("cards");
+  const [viewMode, setViewMode] = useState(urlParams.view || "cards");
+  const [copied, setCopied] = useState(false);
 
+  const { theme, toggle: toggleTheme } = useDarkMode();
   const { countries, wbMeta, globalAvg, loadDetail } = useCountryData();
-  const filters = useFilters(countries, urlParams);
+  const { favorites, toggle: toggleFav, isFav } = useFavorites();
+  const filters = useFilters(countries, urlParams, favorites);
 
   const t = useCallback(
     (zh, en) => (language === "zh" ? zh : en),
     [language]
+  );
+
+  // year label helper for data-year tooltips on small numbers
+  const yearLabel = useCallback(
+    (year) => (year ? t(`数据年份 ${year}`, `Data year ${year}`) : ""),
+    [t]
   );
 
   // Sync state to URL
@@ -61,12 +75,19 @@ export default function GlobalEnvironmentalAgencies() {
       search: filters.search,
       region: filters.regionFilter,
       tag: filters.tagFilter,
+      compliance: filters.complianceFilter,
       sort: filters.sortOrder,
       page: filters.page,
       lang: language,
       country: openCountryIso || "",
+      favOnly: filters.favOnly,
+      view: viewMode,
     });
-  }, [filters.search, filters.regionFilter, filters.tagFilter, filters.sortOrder, filters.page, language, openCountryIso]);
+  }, [
+    filters.search, filters.regionFilter, filters.tagFilter,
+    filters.complianceFilter, filters.sortOrder, filters.page,
+    filters.favOnly, language, openCountryIso, viewMode,
+  ]);
 
   // Resolve selected country from ISO code
   const selectedCountryRaw = openCountryIso
@@ -80,7 +101,6 @@ export default function GlobalEnvironmentalAgencies() {
     }
   }, [selectedCountryRaw, loadDetail]);
 
-  // Use the enriched version from countries array if available
   const selectedCountry = selectedCountryRaw
     ? countries.find((c) => c.isoCode === selectedCountryRaw.isoCode && c._detail) || selectedCountryRaw
     : null;
@@ -115,10 +135,21 @@ export default function GlobalEnvironmentalAgencies() {
     setOpenCountryIso(country.isoCode);
   }, []);
 
+  const activeCount = activeFilterCount({
+    search: filters.search,
+    region: filters.regionFilter,
+    tag: filters.tagFilter,
+    compliance: filters.complianceFilter,
+    favOnly: filters.favOnly,
+  });
+
+  // Siblings list used by prev/next nav inside the detail dialog.
+  const detailSiblings = useMemo(() => filters.filteredCountries, [filters.filteredCountries]);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-900 dark:to-gray-950 text-gray-900 dark:text-gray-100 transition-colors">
       {/* Header */}
-      <header className="bg-gradient-to-r from-green-700 to-emerald-600 text-white shadow-lg">
+      <header className="bg-gradient-to-r from-green-700 to-emerald-600 dark:from-green-900 dark:to-emerald-900 text-white shadow-lg">
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="flex items-center justify-between">
             <div>
@@ -134,9 +165,18 @@ export default function GlobalEnvironmentalAgencies() {
             </div>
             <div className="flex items-center gap-2">
               <button
+                onClick={toggleTheme}
+                className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-lg px-3 py-2 transition-colors font-medium cursor-pointer text-lg"
+                title={t("切换主题", "Toggle theme")}
+                aria-label={t("切换主题", "Toggle theme")}
+              >
+                {theme === "dark" ? "☀" : "☾"}
+              </button>
+              <button
                 onClick={() => setShowAbout(true)}
                 className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-lg px-3 py-2 transition-colors font-medium cursor-pointer text-lg"
                 title={t("关于", "About")}
+                aria-label={t("关于", "About")}
               >
                 ?
               </button>
@@ -153,28 +193,28 @@ export default function GlobalEnvironmentalAgencies() {
 
       {/* Stats Bar */}
       <div className="max-w-7xl mx-auto px-6 -mt-4">
-        <div className="bg-white rounded-xl shadow-md px-4 py-3 flex flex-wrap gap-4 sm:gap-8 justify-center">
+        <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md px-4 py-3 flex flex-wrap gap-4 sm:gap-8 justify-center border border-transparent dark:border-gray-800">
           <div className="text-center">
-            <p className="text-xl font-bold text-green-700">{countries.length}</p>
-            <p className="text-xs text-gray-500">{t("收录国家", "Countries")}</p>
+            <p className="text-xl font-bold text-green-700 dark:text-green-400">{countries.length}</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">{t("收录国家", "Countries")}</p>
           </div>
           <div className="text-center">
-            <p className="text-xl font-bold text-blue-600">
+            <p className="text-xl font-bold text-blue-600 dark:text-blue-400">
               {globalAvg.pm25 ?? "—"}
             </p>
-            <p className="text-xs text-gray-500">{t("均值PM2.5", "Avg PM2.5")}</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">{t("均值PM2.5", "Avg PM2.5")}</p>
           </div>
           <div className="text-center">
-            <p className="text-xl font-bold text-amber-600">
+            <p className="text-xl font-bold text-amber-600 dark:text-amber-400">
               {countries.filter((c) => c.carbonPricing?.priceUSD != null).length}
             </p>
-            <p className="text-xs text-gray-500">{t("已碳定价", "Carbon Priced")}</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">{t("已碳定价", "Carbon Priced")}</p>
           </div>
           <div className="text-center">
-            <p className="text-xl font-bold text-emerald-600">
+            <p className="text-xl font-bold text-emerald-600 dark:text-emerald-400">
               {countries.filter((c) => c.reportingStatus?.btrSubmitted).length}
             </p>
-            <p className="text-xs text-gray-500">{t("BTR 已交", "BTR Filed")}</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">{t("BTR 已交", "BTR Filed")}</p>
           </div>
           <div className="text-center">
             <p className="text-xl font-bold text-red-500">
@@ -183,8 +223,14 @@ export default function GlobalEnvironmentalAgencies() {
                 return r === "highly_insufficient" || r === "critically_insufficient";
               }).length}
             </p>
-            <p className="text-xs text-gray-500">{t("NDC 不足", "NDC Weak")}</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">{t("NDC 不足", "NDC Weak")}</p>
           </div>
+          {favorites.length > 0 && (
+            <div className="text-center">
+              <p className="text-xl font-bold text-yellow-500">★ {favorites.length}</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">{t("关注", "Favorites")}</p>
+            </div>
+          )}
         </div>
       </div>
 
@@ -199,7 +245,7 @@ export default function GlobalEnvironmentalAgencies() {
         )}
 
         {/* Filters */}
-        <div className="bg-white rounded-xl shadow-sm p-4 mb-6">
+        <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm p-4 mb-6 border border-transparent dark:border-gray-800">
           <div className="flex flex-wrap gap-3 items-center">
             <div className="relative flex-1 min-w-[200px]">
               <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">🔍</span>
@@ -208,13 +254,15 @@ export default function GlobalEnvironmentalAgencies() {
                 placeholder={t("搜索国家或环境部门...", "Search by country or agency...")}
                 value={filters.search}
                 onChange={(e) => { filters.updateSearch(e.target.value); filters.resetPage(); }}
-                className="w-full border border-gray-200 pl-10 pr-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition"
+                className="w-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-gray-100 pl-10 pr-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition"
+                aria-label={t("搜索", "Search")}
               />
             </div>
             <select
               value={filters.regionFilter}
               onChange={(e) => { filters.setRegionFilter(e.target.value); filters.resetPage(); }}
-              className="border border-gray-200 px-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white min-w-[140px]"
+              className="border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-gray-100 px-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 min-w-[140px]"
+              aria-label={t("地区筛选", "Region filter")}
             >
               {REGIONS.map((r) => (
                 <option key={r.value} value={r.value}>
@@ -225,7 +273,8 @@ export default function GlobalEnvironmentalAgencies() {
             <select
               value={filters.sortOrder}
               onChange={(e) => filters.setSortOrder(e.target.value)}
-              className="border border-gray-200 px-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white min-w-[180px]"
+              className="border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-gray-100 px-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 min-w-[180px]"
+              aria-label={t("排序", "Sort")}
             >
               <option value="none">{t("默认排序", "Default Sorting")}</option>
               <option value="forestAsc">{t("森林覆盖率 ↑", "Forest Coverage ↑")}</option>
@@ -238,6 +287,28 @@ export default function GlobalEnvironmentalAgencies() {
               <option value="pm25Asc">{t("空气质量 最优", "Best Air Quality")}</option>
               <option value="co2pcAsc">{t("人均碳排 最低", "Lowest CO₂/Capita")}</option>
             </select>
+            <button
+              onClick={() => { filters.setFavOnly(!filters.favOnly); filters.resetPage(); }}
+              disabled={favorites.length === 0 && !filters.favOnly}
+              className={`px-3 py-2.5 rounded-lg text-sm font-medium transition-colors cursor-pointer border ${
+                filters.favOnly
+                  ? "bg-yellow-100 dark:bg-yellow-900/40 border-yellow-400 text-yellow-700 dark:text-yellow-300"
+                  : "bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-40 disabled:cursor-not-allowed"
+              }`}
+              title={t("仅显示关注国家", "Show favorites only")}
+              aria-pressed={filters.favOnly}
+            >
+              ★ {favorites.length > 0 && <span className="text-xs">{favorites.length}</span>}
+            </button>
+            {activeCount > 0 && (
+              <button
+                onClick={() => filters.clearAll()}
+                className="px-3 py-2.5 rounded-lg text-sm font-medium border border-red-200 dark:border-red-900/50 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 cursor-pointer transition-colors"
+                title={t("清除所有筛选", "Clear all filters")}
+              >
+                ✕ {t("清除筛选", "Clear")} ({activeCount})
+              </button>
+            )}
           </div>
 
           {/* Compliance Filter */}
@@ -248,7 +319,7 @@ export default function GlobalEnvironmentalAgencies() {
                 key={f.key}
                 onClick={() => { filters.setComplianceFilter(filters.complianceFilter === f.key ? "" : f.key); filters.resetPage(); }}
                 className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer ${
-                  filters.complianceFilter === f.key ? f.active : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  filters.complianceFilter === f.key ? f.active : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
                 }`}
               >
                 {language === "zh" ? f.zh : f.en}
@@ -265,7 +336,9 @@ export default function GlobalEnvironmentalAgencies() {
                 key={key}
                 onClick={() => { filters.setTagFilter(filters.tagFilter === key ? "" : key); filters.resetPage(); }}
                 className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer ${
-                  filters.tagFilter === key ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  filters.tagFilter === key
+                    ? "bg-blue-600 text-white"
+                    : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
                 }`}
               >
                 {language === "zh" ? label.zh : label.en}
@@ -276,13 +349,13 @@ export default function GlobalEnvironmentalAgencies() {
 
           {/* Results count + Export */}
           <div className="flex items-center justify-between mt-3">
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-gray-400 dark:text-gray-500">
               {t(`共 ${filters.filteredCountries.length} 个结果`, `${filters.filteredCountries.length} results found`)}
             </p>
             {filters.filteredCountries.length > 0 && (
               <button
                 onClick={() => exportCSV(filters.filteredCountries, language)}
-                className="text-sm text-green-700 hover:text-green-800 font-medium flex items-center gap-1 cursor-pointer"
+                className="text-sm text-green-700 dark:text-green-400 hover:text-green-800 font-medium flex items-center gap-1 cursor-pointer"
               >
                 <span>📥</span> {t("导出 CSV", "Export CSV")}
               </button>
@@ -303,7 +376,7 @@ export default function GlobalEnvironmentalAgencies() {
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
                 viewMode === v.key
                   ? "bg-green-600 text-white shadow-sm"
-                  : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50"
+                  : "bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
               }`}
             >
               {t(v.zh, v.en)}
@@ -335,127 +408,43 @@ export default function GlobalEnvironmentalAgencies() {
                 </div>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-                  {filters.paginatedCountries.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className={`bg-white border rounded-2xl p-5 flex flex-col items-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer relative ${
-                        isInCompare(item) ? "border-green-500 ring-2 ring-green-200" : "border-gray-100"
-                      }`}
-                      onClick={() => setOpenCountryIso(item.isoCode)}
-                    >
-                      <button
-                        onClick={(e) => toggleCompare(item, e)}
-                        className={`absolute top-3 right-3 w-6 h-6 rounded-md border-2 flex items-center justify-center text-xs transition-colors cursor-pointer ${
-                          isInCompare(item)
-                            ? "bg-green-600 border-green-600 text-white"
-                            : "border-gray-300 hover:border-green-400 text-transparent hover:text-green-400"
-                        }`}
-                        title={t("加入对比", "Add to compare")}
-                      >
-                        ✓
-                      </button>
-                      <img src={item.flagUrl} alt={item.countryEn} loading="lazy" className="w-16 h-11 object-cover rounded shadow-sm mb-3" />
-                      <h2 className="text-lg font-bold text-gray-800 text-center">
-                        {language === "zh" ? item.countryZh : item.countryEn}
-                      </h2>
-                      <p className="text-sm text-gray-500 text-center mt-1 line-clamp-2">
-                        {language === "zh" ? item.agencyZh : item.agencyEn}
-                      </p>
-                      <span className="mt-2 inline-block bg-green-50 text-green-700 text-xs font-medium px-2.5 py-1 rounded-full">
-                        {item.region}
-                      </span>
-                      <div className="flex flex-wrap gap-1 mt-2 justify-center">
-                        {item.responsibilities.map((r) => (
-                          <span key={r} className="bg-blue-50 text-blue-600 text-xs px-2 py-0.5 rounded-full">
-                            {RESPONSIBILITY_LABELS[r] ? RESPONSIBILITY_LABELS[r][language] : r}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs text-gray-400 justify-center">
-                        <span className="text-amber-600 font-medium">EPI {item.epiScore}</span>
-                        <span>⚡ {item.wb?.renewableEnergy?.toFixed(0) ?? "—"}%</span>
-                        <span className={item.wb?.pm25 > 25 ? "text-red-500" : item.wb?.pm25 > 10 ? "text-amber-500" : "text-green-600"}>
-                          PM {item.wb?.pm25?.toFixed(0) ?? "—"}
-                        </span>
-                      </div>
-                      <a
-                        href={item.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="mt-3 w-full text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
-                      >
-                        {t("访问官网", "Visit Website")}
-                      </a>
-                    </div>
+                  {filters.paginatedCountries.map((item) => (
+                    <CountryCard
+                      key={item.isoCode || item.countryEn}
+                      country={item}
+                      language={language}
+                      t={t}
+                      onOpen={() => setOpenCountryIso(item.isoCode)}
+                      onToggleCompare={(e) => toggleCompare(item, e)}
+                      isInCompare={isInCompare(item)}
+                      isFav={isFav(item.isoCode)}
+                      onToggleFav={() => toggleFav(item.isoCode)}
+                      yearLabel={yearLabel}
+                    />
                   ))}
                 </div>
               )}
 
-              {/* Pagination */}
-              {filters.pageCount > 1 && (
-                <div className="flex items-center justify-center gap-2 mt-8">
-                  <button
-                    onClick={() => filters.setPage((p) => Math.max(1, p - 1))}
-                    disabled={filters.page === 1}
-                    className="px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors cursor-pointer"
-                  >
-                    {t("上一页", "Prev")}
-                  </button>
-                  {Array.from({ length: filters.pageCount }, (_, i) => i + 1).map((p) => (
-                    <button
-                      key={p}
-                      onClick={() => filters.setPage(p)}
-                      className={`w-10 h-10 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
-                        p === filters.page ? "bg-green-600 text-white shadow-sm" : "border border-gray-200 hover:bg-gray-50"
-                      }`}
-                    >
-                      {p}
-                    </button>
-                  ))}
-                  <button
-                    onClick={() => filters.setPage((p) => Math.min(filters.pageCount, p + 1))}
-                    disabled={filters.page === filters.pageCount}
-                    className="px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors cursor-pointer"
-                  >
-                    {t("下一页", "Next")}
-                  </button>
-                </div>
-              )}
+              <Pagination
+                page={filters.page}
+                pageCount={filters.pageCount}
+                onChange={(p) => filters.setPage(p)}
+                t={t}
+              />
             </>
           )}
         </Suspense>
       </main>
 
       {/* Compare floating bar */}
-      {compareList.length > 0 && !showCompare && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-2xl border border-gray-200 px-5 py-3 flex flex-col sm:flex-row items-center gap-4 z-40 w-[calc(100%-2rem)] sm:w-auto">
-          <div className="flex items-center gap-2">
-            {compareList.map((c, i) => (
-              <div key={c.countryEn} className="flex items-center gap-1">
-                <img src={c.flagUrl} alt={c.countryEn} className="w-8 h-5 object-cover rounded" />
-                <span className="text-sm font-medium text-gray-700">
-                  {language === "zh" ? c.countryZh : c.countryEn}
-                </span>
-                <button
-                  onClick={() => setCompareList(compareList.filter((x) => x.countryEn !== c.countryEn))}
-                  className="text-gray-400 hover:text-red-500 text-xs cursor-pointer ml-0.5"
-                >
-                  ✕
-                </button>
-                {i < compareList.length - 1 && <span className="text-gray-300 mx-1">vs</span>}
-              </div>
-            ))}
-          </div>
-          <span className="text-xs text-gray-400">{compareList.length}/3</span>
-          <button
-            onClick={() => setShowCompare(true)}
-            disabled={compareList.length < 2}
-            className="bg-green-600 hover:bg-green-700 disabled:opacity-40 disabled:cursor-not-allowed text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors cursor-pointer w-full sm:w-auto"
-          >
-            {t("开始对比", "Compare")}
-          </button>
-        </div>
+      {!showCompare && (
+        <CompareBar
+          compareList={compareList}
+          language={language}
+          t={t}
+          onRemove={(c) => setCompareList(compareList.filter((x) => x.countryEn !== c.countryEn))}
+          onOpen={() => setShowCompare(true)}
+        />
       )}
 
       <Suspense fallback={null}>
@@ -479,6 +468,8 @@ export default function GlobalEnvironmentalAgencies() {
             copied={copied}
             onCopy={handleCopy}
             allCountries={countries}
+            siblings={detailSiblings}
+            onNavigate={(c) => setOpenCountryIso(c.isoCode)}
           />
         )}
         {showAbout && (
@@ -487,7 +478,7 @@ export default function GlobalEnvironmentalAgencies() {
       </Suspense>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-gray-400 mt-12">
+      <footer className="bg-gray-800 dark:bg-gray-950 text-gray-400 mt-12">
         <div className="max-w-7xl mx-auto px-6 py-8 text-center text-sm space-y-2">
           <p>
             {t(
@@ -497,8 +488,8 @@ export default function GlobalEnvironmentalAgencies() {
           </p>
           <p className="text-gray-500">
             {t(
-              "环境数据来源：世界银行公开数据 (World Bank Open Data) · 各指标数据年份因国家和指标而异 (2018-2023)",
-              "Environmental data: World Bank Open Data · Data years vary by country and indicator (2018-2023)"
+              "环境数据来源：世界银行公开数据 (World Bank Open Data) · 各指标数据年份因国家和指标而异 (2018-2025)",
+              "Environmental data: World Bank Open Data · Data years vary by country and indicator (2018-2025)"
             )}
             {wbMeta?.fetchedAt && (
               <span>

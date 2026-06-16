@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+/* Enable class-based dark mode (Tailwind v4 uses @custom-variant for this). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Smooth color transitions when toggling theme. */
+html {
+  color-scheme: light dark;
+}
+body {
+  background-color: rgb(255 255 255);
+}
+.dark body {
+  background-color: rgb(15 23 42); /* slate-900 */
+}

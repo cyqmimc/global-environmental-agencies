@@ -47,10 +47,13 @@ export function getUrlParams() {
     search: p.get("q") || "",
     region: p.get("region") || "",
     tag: p.get("tag") || "",
+    compliance: p.get("comp") || "",
     sort: p.get("sort") || "none",
     page: parseInt(p.get("page"), 10) || 1,
     lang: p.get("lang") || "zh",
     country: p.get("country") || "",
+    favOnly: p.get("favOnly") === "1",
+    view: p.get("view") || "cards",
   };
 }
 
@@ -59,17 +62,49 @@ export function setUrlParams(params) {
   if (params.search) p.set("q", params.search);
   if (params.region) p.set("region", params.region);
   if (params.tag) p.set("tag", params.tag);
+  if (params.compliance) p.set("comp", params.compliance);
   if (params.sort && params.sort !== "none") p.set("sort", params.sort);
   if (params.page > 1) p.set("page", params.page);
-  if (params.lang !== "zh") p.set("lang", params.lang);
+  if (params.lang && params.lang !== "zh") p.set("lang", params.lang);
   if (params.country) p.set("country", params.country);
+  if (params.favOnly) p.set("favOnly", "1");
+  if (params.view && params.view !== "cards") p.set("view", params.view);
   const qs = p.toString();
   const url = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
   window.history.replaceState(null, "", url);
 }
 
+/** Count of currently-applied user filters (search, region, tag, compliance, favOnly). */
+export function activeFilterCount({ search, region, tag, compliance, favOnly }) {
+  let n = 0;
+  if (search) n++;
+  if (region) n++;
+  if (tag) n++;
+  if (compliance) n++;
+  if (favOnly) n++;
+  return n;
+}
+
+/** Copy a deep link to the clipboard. Returns a Promise<boolean>. */
+export function shareCountryLink(isoCode, language) {
+  const url = new URL(window.location.href);
+  url.search = "";
+  if (isoCode) url.searchParams.set("country", isoCode);
+  if (language && language !== "zh") url.searchParams.set("lang", language);
+  return navigator.clipboard
+    .writeText(url.toString())
+    .then(() => true)
+    .catch(() => false);
+}
+
+/** CSV-safe quoting that doubles internal quotes. */
+export function csvQuote(v) {
+  const s = v == null ? "" : String(v);
+  return `"${s.replace(/"/g, '""')}"`;
+}
+
 // --- CSV export ---
-export function exportCSV(items, language) {
+export function exportCSV(items, language, filename) {
   const t = (zh, en) => (language === "zh" ? zh : en);
   const header = [
     t("国家", "Country"),
@@ -110,17 +145,17 @@ export function exportCSV(items, language) {
     c.parisAgreement?.ndcRating ?? "",
     c.carbonPricing?.priceUSD ?? "",
     (c.keyLaws || []).map((l) => (language === "zh" ? l.nameZh : l.nameEn) + "(" + l.year + ")").join(" / "),
-    c.treaties.map((tr) => language === "zh" ? (TREATY_LABELS[tr] || tr) : tr).join(" / "),
+    c.treaties ? c.treaties.map((tr) => language === "zh" ? (TREATY_LABELS[tr] || tr) : tr).join(" / ") : "",
     c.website,
   ]);
-  const BOM = "\uFEFF";
+  const BOM = "﻿";
   const csv =
     BOM +
-    [header, ...rows].map((r) => r.map((v) => `"${v}"`).join(",")).join("\n");
+    [header, ...rows].map((r) => r.map(csvQuote).join(",")).join("\n");
   const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
   const link = document.createElement("a");
   link.href = URL.createObjectURL(blob);
-  link.download = `environmental-agencies-${new Date().toISOString().slice(0, 10)}.csv`;
+  link.download = filename || `environmental-agencies-${new Date().toISOString().slice(0, 10)}.csv`;
   link.click();
   URL.revokeObjectURL(link.href);
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 
 const METRIC_CONFIG = {
   epiScore: {
@@ -67,6 +67,7 @@ const LEGEND_STOPS = [
 
 export default function WorldMap({ countries, language, onCountryClick }) {
   const [svgContent, setSvgContent] = useState("");
+  const [loading, setLoading] = useState(true);
   const [metric, setMetric] = useState("epiScore");
   const [tooltip, setTooltip] = useState(null);
   const [collapsed, setCollapsed] = useState(false);
@@ -79,14 +80,35 @@ export default function WorldMap({ countries, language, onCountryClick }) {
     fetch("/world-map.svg")
       .then((r) => r.text())
       .then((text) => setSvgContent(text))
-      .catch(() => {});
+      .catch(() => {})
+      .finally(() => setLoading(false));
   }, []);
 
-  // Build country lookup by isoCode
-  const countryMap = {};
-  countries.forEach((c) => {
-    if (c.isoCode) countryMap[c.isoCode] = c;
-  });
+  // Memo the country lookup so repeated tooltip renders don't rebuild it.
+  const countryMap = useMemo(() => {
+    const m = {};
+    countries.forEach((c) => {
+      if (c.isoCode) m[c.isoCode] = c;
+    });
+    return m;
+  }, [countries]);
+
+  // Memo the colored SVG — the regex replace on ~200KB of SVG was the dominant
+  // hot path on every tooltip mousemove before. Only re-run when the underlying
+  // data or metric changes.
+  const coloredSvg = useMemo(() => {
+    if (!svgContent) return "";
+    return svgContent.replace(
+      /(<(?:path|g)\s+id="([a-z]{2})")/g,
+      (match, tag, id) => {
+        const country = countryMap[id];
+        if (!country) return `${tag} fill="#e5e7eb" opacity="0.5"`;
+        const val = cfg.getValue(country);
+        const color = cfg.getColor(val);
+        return `${tag} fill="${color}" class="country-path" style="cursor:pointer;transition:opacity 0.2s"`;
+      }
+    );
+  }, [svgContent, countryMap, cfg]);
 
   const handleMouseMove = (e) => {
     const el = e.target.closest("path[id], g[id]");
@@ -118,31 +140,35 @@ export default function WorldMap({ countries, language, onCountryClick }) {
 
   const handleMouseLeave = () => setTooltip(null);
 
-  // Inject colors into SVG
-  const coloredSvg = svgContent.replace(
-    /(<(?:path|g)\s+id="([a-z]{2})")/g,
-    (match, tag, id) => {
-      const country = countryMap[id];
-      if (!country) return `${tag} fill="#e5e7eb" opacity="0.5"`;
-      const val = cfg.getValue(country);
-      const color = cfg.getColor(val);
-      return `${tag} fill="${color}" class="country-path" style="cursor:pointer;transition:opacity 0.2s"`;
-    }
-  );
+  // Skeleton while the 200KB SVG is in-flight — prevents layout shift.
+  if (loading && !svgContent) {
+    return (
+      <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm p-3 mb-4 border border-transparent dark:border-gray-800">
+        <div className="flex items-center justify-between mb-2">
+          <div className="h-4 w-24 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+          <div className="h-4 w-48 bg-gray-100 dark:bg-gray-800 rounded animate-pulse" />
+        </div>
+        <div
+          className="w-full bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-lg animate-pulse"
+          style={{ aspectRatio: "2 / 1" }}
+        />
+      </div>
+    );
+  }
 
   if (!svgContent) return null;
 
   return (
-    <div className="bg-white rounded-xl shadow-sm p-3 mb-4">
-      {/* Header with metric selector + collapse toggle */}
+    <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm p-3 mb-4 border border-transparent dark:border-gray-800">
       <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
         <div className="flex items-center gap-2">
-          <h3 className="text-sm font-semibold text-gray-700">
+          <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200">
             {t("全球地图", "World Map")}
           </h3>
           <button
             onClick={() => setCollapsed(!collapsed)}
-            className="text-xs text-gray-400 hover:text-gray-600 cursor-pointer"
+            className="text-xs text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 cursor-pointer"
+            aria-label={t("折叠地图", "Collapse map")}
           >
             {collapsed ? "▼" : "▲"}
           </button>
@@ -156,7 +182,7 @@ export default function WorldMap({ countries, language, onCountryClick }) {
                 className={`text-xs px-2.5 py-1 rounded-full transition-colors cursor-pointer whitespace-nowrap ${
                   metric === key
                     ? "bg-green-600 text-white"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                    : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
                 }`}
               >
                 {language === "zh" ? c.zh : c.en}
@@ -166,7 +192,6 @@ export default function WorldMap({ countries, language, onCountryClick }) {
         )}
       </div>
 
-      {/* Map - collapsible, max height limited */}
       {!collapsed && (
         <>
           <div
@@ -181,33 +206,31 @@ export default function WorldMap({ countries, language, onCountryClick }) {
               dangerouslySetInnerHTML={{ __html: coloredSvg }}
             />
 
-        {/* Tooltip */}
-        {tooltip && (
-          <div
-            className="absolute pointer-events-none bg-gray-900 text-white text-xs rounded-lg px-3 py-2 shadow-lg z-10"
-            style={{
-              left: tooltip.x + 12,
-              top: tooltip.y - 40,
-              transform: tooltip.x > (containerRef.current?.clientWidth || 600) * 0.7 ? "translateX(-110%)" : "none",
-            }}
-          >
-            <p className="font-bold">{tooltip.name}</p>
-            <p className="text-gray-300">{tooltip.metricLabel}: {tooltip.value}</p>
-          </div>
-        )}
+            {tooltip && (
+              <div
+                className="absolute pointer-events-none bg-gray-900 text-white text-xs rounded-lg px-3 py-2 shadow-lg z-10"
+                style={{
+                  left: tooltip.x + 12,
+                  top: tooltip.y - 40,
+                  transform: tooltip.x > (containerRef.current?.clientWidth || 600) * 0.7 ? "translateX(-110%)" : "none",
+                }}
+              >
+                <p className="font-bold">{tooltip.name}</p>
+                <p className="text-gray-300">{tooltip.metricLabel}: {tooltip.value}</p>
+              </div>
+            )}
           </div>
 
-          {/* Legend */}
           <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
             {LEGEND_STOPS.map((s, i) => (
               <div key={i} className="flex items-center gap-1">
                 <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: s.color }} />
-                <span className="text-xs text-gray-500">{language === "zh" ? s.label.zh : s.label.en}</span>
+                <span className="text-xs text-gray-500 dark:text-gray-400">{language === "zh" ? s.label.zh : s.label.en}</span>
               </div>
             ))}
             <div className="flex items-center gap-1">
-              <div className="w-3 h-3 rounded-sm bg-gray-200" />
-              <span className="text-xs text-gray-500">{t("无数据", "No data")}</span>
+              <div className="w-3 h-3 rounded-sm bg-gray-200 dark:bg-gray-700" />
+              <span className="text-xs text-gray-500 dark:text-gray-400">{t("无数据", "No data")}</span>
             </div>
           </div>
         </>
