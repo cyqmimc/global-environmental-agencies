@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { NDC_RATING_CONFIG, exportCSV } from "../constants";
+import { carbonIntensity, formatCarbonIntensity } from "../utils/derived";
 
 export function computeCompositeScore(country) {
   const epi = (country.epiScore ?? 0) * 0.25;
@@ -35,6 +36,7 @@ const COLUMNS = [
   { key: "pm25", zhLabel: "PM2.5", enLabel: "PM2.5", sortable: true, hideMobile: true },
   { key: "co2", zhLabel: "CO₂/人", enLabel: "CO₂/Cap", sortable: true, hideMobile: true },
   { key: "carbonPrice", zhLabel: "碳价", enLabel: "C.Price", sortable: true, hideMobile: true },
+  { key: "intensity", zhLabel: "碳强度", enLabel: "C.Intensity", sortable: true, hideMobile: true },
   { key: "ndc", zhLabel: "NDC", enLabel: "NDC", sortable: false, hideMobile: false },
   { key: "btr", zhLabel: "BTR", enLabel: "BTR", sortable: false, hideMobile: true },
 ];
@@ -47,6 +49,7 @@ function getSortValue(country, key, compositeScores) {
     case "pm25": return country.wb?.pm25 ?? 999;
     case "co2": return country.wb?.co2PerCapita ?? 999;
     case "carbonPrice": return country.carbonPricing?.priceUSD ?? -1;
+    case "intensity": return carbonIntensity(country) ?? Infinity; // null sinks
     default: return 0;
   }
 }
@@ -85,7 +88,7 @@ export default function RankingsView({ countries, language, t, onCountryClick })
       setSortAsc(!sortAsc);
     } else {
       setSortKey(key);
-      setSortAsc(key === "co2" || key === "pm25");
+      setSortAsc(key === "co2" || key === "pm25" || key === "intensity");
     }
     setPage(1);
   };
@@ -192,6 +195,14 @@ export default function RankingsView({ countries, language, t, onCountryClick })
                     {country.carbonPricing?.priceUSD != null
                       ? `$${country.carbonPricing.priceUSD}`
                       : "—"}
+                  </td>
+                  <td className="px-3 py-2.5 text-gray-600 dark:text-gray-300 hidden md:table-cell whitespace-nowrap">
+                    {(() => {
+                      const v = carbonIntensity(country);
+                      if (v == null) return "—";
+                      const cls = v <= 0.05 ? "text-green-600" : v <= 0.15 ? "text-lime-600" : v <= 0.30 ? "text-yellow-600" : v <= 0.60 ? "text-orange-500" : "text-red-500";
+                      return <span className={cls}>{formatCarbonIntensity(v)}</span>;
+                    })()}
                   </td>
                   <td className="px-3 py-2.5">
                     {ndcCfg ? (

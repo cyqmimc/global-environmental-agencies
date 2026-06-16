@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from "react";
+import { carbonIntensity, formatCarbonIntensity } from "./utils/derived";
 
 const METRIC_CONFIG = {
   epiScore: {
@@ -54,6 +55,15 @@ const METRIC_CONFIG = {
     getColor: (v) =>
       v == null ? "#d1d5db" : v >= 30 ? "#16a34a" : v >= 20 ? "#65a30d" : v >= 10 ? "#eab308" : v >= 5 ? "#f97316" : "#dc2626",
     format: (v) => (v != null ? `${v.toFixed(1)}%` : "—"),
+  },
+  carbonIntensity: {
+    zh: "碳强度 (CO₂/GDP)",
+    en: "Carbon Intensity (CO₂/GDP)",
+    getValue: (c) => carbonIntensity(c),
+    // Lower is better. Thresholds in kg/USD.
+    getColor: (v) =>
+      v == null ? "#d1d5db" : v <= 0.05 ? "#16a34a" : v <= 0.15 ? "#65a30d" : v <= 0.30 ? "#eab308" : v <= 0.60 ? "#f97316" : "#dc2626",
+    format: (v) => formatCarbonIntensity(v),
   },
 };
 

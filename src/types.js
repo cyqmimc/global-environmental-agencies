@@ -27,11 +27,11 @@
  * @property {number=} renewableEnergy
  * @property {number=} pm25
  * @property {number=} protectedAreas
- * @property {number=} population
- * @property {number=} gdp
- * @property {number=} co2PerCapita
- * @property {Object<string, number>=} dataYear
- * @property {Object<string, WorldBankHistoryPoint[]>=} history
+ * @property {number=} population   - Total population (WB SP.POP.TOTL)
+ * @property {number=} gdp          - GDP in current USD (WB NY.GDP.MKTP.CD)
+ * @property {number=} co2PerCapita - Derived: co2Mt × 1e6 / population
+ * @property {Object<string, number>=} dataYear  - per-metric year of source value
+ * @property {Object<string, WorldBankHistoryPoint[]>=} history  - 2015→ time series
  */
 
 /**

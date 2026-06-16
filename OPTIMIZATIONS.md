@@ -97,3 +97,41 @@ npm run update-all  # 已自动包含 validate 前置检查
 ```
 ✓ countries.json validated · 80 countries · 0 warnings
 ```
+
+---
+
+# Round 2 — 新数据扩展（基于刷新后的 WB 数据）
+
+本轮 `npm run update-all` 之后，`public/wb-data.json` 新带入了所有 80 国的
+**`population`** 与 **`gdp`** 字段（之前已 fetch 但 UI 未消费）。围绕这两个
+新字段衍生 2 个新指标并接入 4 处 UI。
+
+## 新衍生指标
+
+新建 `src/utils/derived.js`（9 个单测，零依赖）：
+
+| 指标 | 公式 | 用途 |
+|------|------|------|
+| `carbonIntensity(c)` | `co2Mt × 1e9 / gdp` (kg CO₂ / USD) | 经济碳强度，衡量"每美元 GDP 排放多少 CO₂"，反映绿色经济效率 |
+| `gdpPerCapita(c)` | `gdp / population` | 财富水平（横向对比环境压力的背景）|
+| `formatPopulation` | `340.1M / 1.40B` | 紧凑显示 |
+| `formatGdp` | `$28.75T / $1.4B` | 紧凑显示 |
+| `formatCarbonIntensity` | `161 g/$` 等 | 自适应精度 |
+
+## UI 接入
+
+1. **WorldMap 新增 "碳强度" 地图指标** — `src/WorldMap.jsx`
+   阈值：≤0.05 优 / ≤0.15 良 / ≤0.30 中 / ≤0.60 差 / >0.60 劣 (kg/USD)。
+2. **Rankings 新增 "碳强度" 可排序列** — `src/components/RankingsView.jsx`
+   默认升序（低 = 优）；移动端隐藏；null 沉底。
+3. **DetailDialog Data 标签新增 "国情概览" 4 格** — Population / GDP / GDP/Cap / C.Intensity。
+4. **CSV 导出补充 4 列** — `src/constants.js`：人口、GDP、人均 GDP、碳强度。
+
+## 校验
+
+```
+✔ 23/23 tests pass (新增 9 个 derived 测试)
+✓ countries.json validated · 80 countries · 0 warnings
+✓ vite build 252 modules 238ms
+```
+

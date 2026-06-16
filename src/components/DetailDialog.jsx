@@ -4,6 +4,14 @@ import TrendLineChart from "./charts/TrendLineChart";
 import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG, shareCountryLink } from "../constants";
 import Scorecard from "./Scorecard";
 import useDialogA11y from "../hooks/useDialogA11y";
+import {
+  carbonIntensity,
+  gdpPerCapita,
+  formatPopulation,
+  formatGdp,
+  formatGdpPerCapita,
+  formatCarbonIntensity,
+} from "../utils/derived";
 
 const TABS = [
   { key: "overview", zh: "概览", en: "Overview" },
@@ -555,6 +563,40 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
           {/* ===== Data Tab ===== */}
           {tab === "data" && (
             <>
+              {/* Country profile (population, GDP, derived intensity) — uses new WB fields */}
+              {selectedCountry.wb && (selectedCountry.wb.population || selectedCountry.wb.gdp) && (
+                <div className="mb-4 bg-gradient-to-br from-slate-50 to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-xl p-3 border border-gray-200 dark:border-gray-700">
+                  <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
+                    {t("国情概览", "Country Profile")}
+                  </h4>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    <div>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">{t("人口", "Population")}</p>
+                      <p className="text-sm font-bold text-gray-800 dark:text-gray-100">
+                        {formatPopulation(selectedCountry.wb.population)}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">GDP</p>
+                      <p className="text-sm font-bold text-gray-800 dark:text-gray-100">
+                        {formatGdp(selectedCountry.wb.gdp)}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">{t("人均 GDP", "GDP/Capita")}</p>
+                      <p className="text-sm font-bold text-gray-800 dark:text-gray-100">
+                        {formatGdpPerCapita(gdpPerCapita(selectedCountry))}
+                      </p>
+                    </div>
+                    <div title={t("每美元 GDP 排放 CO₂ 的克数 · 越低越好", "g CO₂ per USD of GDP · lower is better")}>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">{t("碳强度", "C. Intensity")}</p>
+                      <p className="text-sm font-bold text-gray-800 dark:text-gray-100">
+                        {formatCarbonIntensity(carbonIntensity(selectedCountry))}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
               {(() => {
                 const dy = selectedCountry.wb?.dataYear || {};
                 return (

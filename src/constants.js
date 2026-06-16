@@ -124,34 +124,48 @@ export function exportCSV(items, language, filename) {
     "PM2.5 (µg/m³)",
     t("人均CO₂(吨)", "CO₂/Capita(t)"),
     t("保护区面积(%)", "Protected Areas(%)"),
+    t("人口", "Population"),
+    "GDP (USD)",
+    t("人均GDP(USD)", "GDP/Capita(USD)"),
+    t("碳强度(kg/USD)", "C.Intensity(kg/USD)"),
     t("NDC评级", "NDC Rating"),
     t("碳价(USD/t)", "Carbon Price(USD/t)"),
     t("核心法律", "Key Laws"),
     t("国际公约", "Treaties"),
     t("官网", "Website"),
   ];
-  const rows = items.map((c) => [
-    language === "zh" ? c.countryZh : c.countryEn,
-    language === "zh" ? c.agencyZh : c.agencyEn,
-    c.region,
-    c.responsibilities
-      .map((r) => (RESPONSIBILITY_LABELS[r] ? RESPONSIBILITY_LABELS[r][language] : r))
-      .join(" / "),
-    c.established,
-    c.data.forestCoverage,
-    c.data.carbonEmission,
-    c.epiScore,
-    c.netZeroTarget,
-    c.wb?.renewableEnergy?.toFixed(1) ?? "",
-    c.wb?.pm25?.toFixed(1) ?? "",
-    c.wb?.co2PerCapita?.toFixed(2) ?? "",
-    c.wb?.protectedAreas?.toFixed(1) ?? "",
-    c.parisAgreement?.ndcRating ?? "",
-    c.carbonPricing?.priceUSD ?? "",
-    (c.keyLaws || []).map((l) => (language === "zh" ? l.nameZh : l.nameEn) + "(" + l.year + ")").join(" / "),
-    c.treaties ? c.treaties.map((tr) => language === "zh" ? (TREATY_LABELS[tr] || tr) : tr).join(" / ") : "",
-    c.website,
-  ]);
+  const rows = items.map((c) => {
+    const pop = c.wb?.population;
+    const gdp = c.wb?.gdp;
+    const gdpPerCap = pop > 0 && gdp != null ? gdp / pop : null;
+    const intensity = c.wb?.co2Mt != null && gdp > 0 ? (c.wb.co2Mt * 1e9) / gdp : null;
+    return [
+      language === "zh" ? c.countryZh : c.countryEn,
+      language === "zh" ? c.agencyZh : c.agencyEn,
+      c.region,
+      c.responsibilities
+        .map((r) => (RESPONSIBILITY_LABELS[r] ? RESPONSIBILITY_LABELS[r][language] : r))
+        .join(" / "),
+      c.established,
+      c.data.forestCoverage,
+      c.data.carbonEmission,
+      c.epiScore,
+      c.netZeroTarget,
+      c.wb?.renewableEnergy?.toFixed(1) ?? "",
+      c.wb?.pm25?.toFixed(1) ?? "",
+      c.wb?.co2PerCapita?.toFixed(2) ?? "",
+      c.wb?.protectedAreas?.toFixed(1) ?? "",
+      pop ?? "",
+      gdp != null ? gdp.toFixed(0) : "",
+      gdpPerCap != null ? gdpPerCap.toFixed(0) : "",
+      intensity != null ? intensity.toFixed(4) : "",
+      c.parisAgreement?.ndcRating ?? "",
+      c.carbonPricing?.priceUSD ?? "",
+      (c.keyLaws || []).map((l) => (language === "zh" ? l.nameZh : l.nameEn) + "(" + l.year + ")").join(" / "),
+      c.treaties ? c.treaties.map((tr) => language === "zh" ? (TREATY_LABELS[tr] || tr) : tr).join(" / ") : "",
+      c.website,
+    ];
+  });
   const BOM = "﻿";
   const csv =
     BOM +
