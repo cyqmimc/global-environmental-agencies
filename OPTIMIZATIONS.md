@@ -174,4 +174,76 @@ npm run update-all  # 已自动包含 validate 前置检查
 ✓ vite build 252 modules 223ms
 ```
 
+---
+
+# Round 4 — 履约公约扩展：UNCCD（荒漠化）+ NDC 3.0（COP30/31 周期）
+
+把履约维度从 4 个（Paris/Montreal/CBD/Carbon Price）扩展到 6 个。所有数据来自官方权威源，每条都带可追溯 URL。
+
+## 数据源（官方）
+
+| 数据 | 主要来源 |
+|------|---------|
+| UNCCD 缔约状态、Annex 划分 | https://www.unccd.int/convention/regional-implementation-annexes |
+| LDN（Land Degradation Neutrality）目标 | https://www.unccd.int/our-work/ldn-target-setting-programme |
+| 国家行动方案 (NAP) | https://www.unccd.int/our-work/country-profile |
+| PRAIS 报告系统 | https://prais.unccd.int |
+| NDC 3.0（第三轮 NDC，COP30 前后） | https://unfccc.int/NDCREG |
+
+## 数据组织
+
+两份**可独立审计**的源数据文件，避免混入 countries.json 巨型文件：
+
+```
+scripts/data/desertification.json   # 80 国 UNCCD 状态 + 来源
+scripts/data/ndc3.json              # 80 国 NDC 3.0 提交 + 来源
+scripts/merge-treaty-extensions.js  # 幂等合并器
+```
+
+每条数据都保留 `source` URL；`_meta` 块记录主源、字段含义、采集日期、合并者。
+
+## 数据覆盖
+
+- **UNCCD 缔约**：80/80 国已批准（最早 1995，最晚 2010 伊拉克）
+- **受影响国（Affected Party）**：65/80（按 UNCCD Annex I–V 标准划分）
+  - Annex I 非洲：13 国
+  - Annex II 亚洲：26 国（含 Fiji/PNG 太平洋岛国）
+  - Annex III LAC：14 国
+  - Annex IV 北地中海：8 国
+  - Annex V 中东欧：5 国
+- **LDN 目标已设定**：60/80（通过 UNCCD TSP 自愿承诺）
+- **NDC 3.0 已提交**：32/80（截至 2026-01；含 EU 27 国联合提交 +
+  US/UK/Brazil/Canada/China/Japan/Korea/Australia 等主要经济体）
+
+## UI 接入
+
+**5 处**接入新数据，与现有公约一致的展示规则：
+
+1. **DetailDialog 履约 Tab**：
+   - 巴黎协定 Section 内嵌 **NDC 3.0 状态** 子块（提交日期/目标/Registry 链接）
+   - 新增 **UNCCD 手风琴**（Annex 标签/LDN 状态/NAP 年份/中英承诺/双源链接）
+2. **Compliance 筛选条** 3 个新 chip：「NDC 3.0 已交 / 未交」「LDN 已设定」
+3. **WorldMap 2 个新地图指标**：「NDC 3.0 提交」「UNCCD · LDN 目标」
+4. **CompareDialog**：新增 NDC 3.0 + UNCCD/LDN 两行
+5. **Stats Bar**：「NDC 3.0 已交」「LDN 已设定」两个 tile（计数 + 暗色变体）
+
+## 校验扩展
+
+`scripts/validate-schema.js` 新增 8 条规则：
+- `desertification.affectedParty/ldnTargetSet` 必须 boolean
+- `desertification.annex` 必须 ∈ {I,II,III,IV,V} 或 null
+- `desertification.ldnYear` 必须 ∈ [2015, 2050]
+- `desertification.commitmentZh/En` + `sources.ldn` 必填
+- `parisAgreement.ndc3Submitted=true` 时 `ndc3Date` 必须 `YYYY-MM-DD` + `ndc3Source` 必填
+
+## 校验
+
+```
+✓ countries.json validated · 80 countries · 0 warnings（新规则全过）
+✓ wb-data.json validated · 80 entries · 0 warnings
+✔ 23/23 tests pass
+✓ vite build 252 modules 231ms
+```
+
+
 

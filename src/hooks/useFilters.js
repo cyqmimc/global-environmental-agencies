@@ -47,6 +47,12 @@ function applyCompliance(item, complianceFilter) {
       return item.montrealProtocol?.kigaliAmendment === false;
     case "30x30_met":
       return (item.wb?.protectedAreas ?? 0) >= 30;
+    case "ldn_set":
+      return item.desertification?.ldnTargetSet === true;
+    case "ndc3_submitted":
+      return item.parisAgreement?.ndc3Submitted === true;
+    case "ndc3_pending":
+      return item.parisAgreement?.ndc3Submitted === false;
     default:
       return true;
   }

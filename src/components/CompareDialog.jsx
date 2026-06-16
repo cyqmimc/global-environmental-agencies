@@ -335,6 +335,44 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                 </tr>
                 <tr className="border-b border-gray-100 dark:border-gray-800">
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
+                    NDC 3.0
+                  </td>
+                  {compareList.map((c) => (
+                    <td key={c.countryEn} className="py-3 px-2 text-center">
+                      <span className={`text-xs px-2 py-0.5 rounded-full text-white ${c.parisAgreement?.ndc3Submitted ? "bg-indigo-600" : "bg-rose-500"}`}>
+                        {c.parisAgreement?.ndc3Submitted ? t("已交", "Filed") : t("未交", "Pending")}
+                      </span>
+                    </td>
+                  ))}
+                </tr>
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
+                    {t("UNCCD · LDN", "UNCCD · LDN")}
+                  </td>
+                  {compareList.map((c) => {
+                    const d = c.desertification;
+                    if (!d) return <td key={c.countryEn} className="py-3 px-2 text-center text-gray-400">—</td>;
+                    return (
+                      <td key={c.countryEn} className="py-3 px-2 text-center">
+                        {d.ldnTargetSet ? (
+                          <span className="bg-green-600 text-white text-xs px-2 py-0.5 rounded-full">
+                            LDN ✓
+                          </span>
+                        ) : d.affectedParty ? (
+                          <span className="bg-amber-500 text-white text-xs px-2 py-0.5 rounded-full">
+                            {t("受影响", "Affected")}
+                          </span>
+                        ) : (
+                          <span className="bg-gray-400 text-white text-xs px-2 py-0.5 rounded-full">
+                            {t("非受影响", "Non-affected")}
+                          </span>
+                        )}
+                      </td>
+                    );
+                  })}
+                </tr>
+                <tr className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("NDC 承诺", "NDC Target")}
                   </td>
                   {compareList.map((c) => (

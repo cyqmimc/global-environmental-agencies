@@ -40,6 +40,37 @@ countries.json (源文件, 手动编辑)
 | `reportingStatus` | UNFCCC Reporting Status | https://unfccc.int/BR |
 | `parisAgreement.ndcHistory` | UNFCCC NDC Registry | https://unfccc.int/NDCREG |
 | `parisAgreement.ndcRating` | Climate Action Tracker | https://climateactiontracker.org/countries/ |
+| `parisAgreement.ndc3*` (NDC 3.0 第三轮) | UNFCCC NDC Registry | https://unfccc.int/NDCREG |
+| `desertification` (UNCCD/LDN) | UNCCD LDN TSP + 国家档案 | https://www.unccd.int/our-work/ldn-target-setting-programme |
+
+### 公约履约扩展（UNCCD 与 NDC 3.0）
+
+两份独立的源数据文件保证数据可追溯：
+
+```
+scripts/data/desertification.json  # 80 国 UNCCD 状态（Annex / 受影响 / LDN / NAP / 中英文承诺 / 源URL）
+scripts/data/ndc3.json             # 80 国 NDC 3.0 提交（日期 / 目标 / UNFCCC Registry URL）
+```
+
+合并到 `countries.json` 一键命令：
+
+```bash
+node scripts/merge-treaty-extensions.js   # 幂等：每次运行覆盖已有字段
+```
+
+**权威来源（官方）**：
+- UNCCD LDN Target Setting Programme — https://www.unccd.int/our-work/ldn-target-setting-programme
+- UNCCD 国家档案 — https://www.unccd.int/our-work/country-profile
+- UNCCD 区域实施附件（Annex I–V）— https://www.unccd.int/convention/regional-implementation-annexes
+- UNCCD PRAIS 报告系统 — https://prais.unccd.int
+- UNFCCC NDC Registry（NDC 3.0 第三轮）— https://unfccc.int/NDCREG
+
+更新流程：
+
+1. 在 `scripts/data/desertification.json` 或 `scripts/data/ndc3.json` 编辑对应国家条目（**每条数据都必须保留 `source` URL**）
+2. 运行 `node scripts/merge-treaty-extensions.js`
+3. 运行 `node scripts/split-countries.js` 重生成 core/detail
+4. 运行 `node scripts/validate-schema.js` 验证字段类型 + 日期格式 + 源 URL 存在
 
 ### 中频更新（每1-2年）
 

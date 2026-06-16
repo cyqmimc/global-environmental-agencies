@@ -24,7 +24,17 @@ const core = data.map((c) => ({
   netZeroTarget: c.netZeroTarget,
   isoCode: c.isoCode,
   parisAgreement: c.parisAgreement
-    ? { ndcRating: c.parisAgreement.ndcRating }
+    ? {
+        ndcRating: c.parisAgreement.ndcRating,
+        ndc3Submitted: !!c.parisAgreement.ndc3Submitted,
+      }
+    : null,
+  desertification: c.desertification
+    ? {
+        affectedParty: !!c.desertification.affectedParty,
+        ldnTargetSet: !!c.desertification.ldnTargetSet,
+        annex: c.desertification.annex || null,
+      }
     : null,
   montrealProtocol: c.montrealProtocol
     ? { kigaliAmendment: c.montrealProtocol.kigaliAmendment }

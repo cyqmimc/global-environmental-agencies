@@ -66,7 +66,12 @@
           "year": 2024
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2024-12-19",
+      "ndc3Target": "61-66% reduction by 2035 vs. 2005",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "Submitted under Biden administration; United States announced withdrawal from the Paris Agreement again on 2025-01-20 (Trump executive order), with the withdrawal effective 2026-01."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -100,6 +105,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.36,
       "cumulativeCO2Gt": 422
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "2000-11-17",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响国；USAID 与 USDA 国际项目支持非洲与中亚 LDN。",
+      "commitmentEn": "Non-affected; USAID and USDA international programmes support African and Central Asian LDN.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/us",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -170,7 +192,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-09-24",
+      "ndc3Target": "Peaking before 2030; ~7-10% absolute net GHG cut by 2035 vs. peak",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "Announced at UNGA High-level Climate Event; formal submission filed Sep 2025."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -204,6 +231,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.42,
       "cumulativeCO2Gt": 284
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-02-18",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 1996,
+      "commitmentZh": "三北防护林、库布齐治沙模式为国际样板；2030 LDN 目标已纳入'十四五'生态规划。",
+      "commitmentEn": "Three-North Shelterbelt and Kubuqi model are global benchmarks; 2030 LDN integrated into the 14th Five-Year ecological plan.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/cn",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -274,7 +318,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "EU joint submission."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -308,6 +357,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.34,
       "cumulativeCO2Gt": 92
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1996-07-10",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响国；通过 BMZ、GIZ 在 Sahel/AU Great Green Wall 提供大额资金支持。",
+      "commitmentEn": "Non-affected; major bilateral funder of Sahel/AU Great Green Wall via BMZ and GIZ.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/de",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -378,7 +444,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-18",
+      "ndc3Target": "60% reduction by 2035 vs. FY2013",
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -412,6 +482,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.37,
       "cumulativeCO2Gt": 65
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1998-09-11",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响国；JICA 是亚洲与非洲土地恢复主要双边捐助方。",
+      "commitmentEn": "Non-affected; JICA is a leading bilateral funder of land restoration in Asia and Africa.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/jp",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -482,7 +569,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "EU joint submission."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -516,6 +608,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.33,
       "cumulativeCO2Gt": 37
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-06-12",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "本土非受影响；通过 AFD 是 Great Green Wall 主要捐助国之一。",
+      "commitmentEn": "Mainland non-affected; AFD is among the lead donors to the Great Green Wall.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/fr",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -582,7 +691,11 @@
           "year": 2022
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -616,6 +729,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.52,
       "cumulativeCO2Gt": 55
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1996-12-17",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2001,
+      "commitmentZh": "目标到 2030 修复 2600 万公顷退化土地；2019 COP14 主办国。",
+      "commitmentEn": "Target to restore 26M hectares of degraded land by 2030; hosted COP14 (2019).",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/in",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -690,7 +820,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-13",
+      "ndc3Target": "81% reduction by 2035 vs. 1990",
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -724,6 +858,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.31,
       "cumulativeCO2Gt": 78
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1996-06-12",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响国；FCDO 通过气候基金支持非洲与南亚土地恢复。",
+      "commitmentEn": "Non-affected; FCDO supports African and South Asian land restoration via climate finance.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/gb",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -794,7 +945,12 @@
           "year": 2024
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2024-11-12",
+      "ndc3Target": "59-67% reduction by 2035 vs. 2005",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "Submitted as COP30 host."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -828,6 +984,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.43,
       "cumulativeCO2Gt": 15
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-06-25",
+      "annex": "III",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2004,
+      "commitmentZh": "东北部 Caatinga 半干旱区是国家行动重点；2024 年更新 LDN 目标。",
+      "commitmentEn": "Northeast Caatinga semi-arid region is the priority; LDN targets updated 2024.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/br",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -898,7 +1071,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-09-18",
+      "ndc3Target": "62-70% reduction by 2035 vs. 2005",
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -932,6 +1109,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.34,
       "cumulativeCO2Gt": 18
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "2000-05-15",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响发达国家；国内通过《国家干旱协议》和 Future Drought Fund 应对旱地退化。",
+      "commitmentEn": "Non-affected developed country; addresses dryland degradation domestically via National Drought Agreement and Future Drought Fund.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/au",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -1002,7 +1196,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1036,6 +1234,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.47,
       "cumulativeCO2Gt": 17
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-09-30",
+      "annex": "I",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2004,
+      "commitmentZh": "Karoo、Northern Cape 干旱区为重点；LDN 与水土保持立法挂钩。",
+      "commitmentEn": "Karoo and Northern Cape drylands prioritized; LDN tied to soil & water conservation legislation.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/za",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -1106,7 +1321,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-12",
+      "ndc3Target": "45-50% reduction by 2035 vs. 2005",
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1140,6 +1359,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.33,
       "cumulativeCO2Gt": 33
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1995-12-01",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响发达国家；通过 IDRC、Global Affairs Canada 支持发展中国家土地恢复。",
+      "commitmentEn": "Non-affected developed country; supports developing-country land restoration via IDRC and Global Affairs Canada.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ca",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -1210,7 +1446,11 @@
           "year": 2026
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-11-05",
+      "ndc3Target": "Update announced at COP30; quantitative target pending publication",
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1244,6 +1484,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.44,
       "cumulativeCO2Gt": 18
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1995-04-03",
+      "annex": "III",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 1995,
+      "commitmentZh": "北部沙漠扩张、Yucatán 半岛干燥化为重点；LDN 与 Sembrando Vida 协同。",
+      "commitmentEn": "Northern desert expansion and Yucatán drying prioritized; LDN aligned with Sembrando Vida.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/mx",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -1308,7 +1565,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1342,6 +1603,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.41,
       "cumulativeCO2Gt": 15
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-06-25",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2002,
+      "commitmentZh": "Saudi Green Initiative 计划种植 100 亿棵树；2024 主办 UNCCD COP16（利雅得）。",
+      "commitmentEn": "Saudi Green Initiative plans 10B trees; hosted UNCCD COP16 (Riyadh, 2024).",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/sa",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -1416,7 +1694,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1450,6 +1732,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.48,
       "cumulativeCO2Gt": 14
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1998-08-31",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2002,
+      "commitmentZh": "东努沙登加拉、西帝汶旱地与采矿迹地恢复为重点；LDN 与 FOLU Net Sink 2030 衔接。",
+      "commitmentEn": "East Nusa Tenggara drylands and mine-area restoration prioritized; LDN tied to FOLU Net Sink 2030.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/id",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -1520,7 +1819,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "EU joint submission."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1554,6 +1858,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.34,
       "cumulativeCO2Gt": 24
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-06-23",
+      "annex": "IV",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 1999,
+      "commitmentZh": "西西里、撒丁、巴西利卡塔南部为重点；2024 更新 NAP。",
+      "commitmentEn": "Sicily, Sardinia and southern Basilicata prioritized; NAP updated 2024.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/it",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -1624,7 +1945,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "EU joint submission."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1658,6 +1984,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.36,
       "cumulativeCO2Gt": 16
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1996-01-30",
+      "annex": "IV",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2008,
+      "commitmentZh": "西班牙 75% 国土面临荒漠化风险；2024 更新 NAP，重点在 Almería、Murcia 与 Castilla–La Mancha。",
+      "commitmentEn": "75% of territory at desertification risk; NAP updated 2024 focusing on Almería, Murcia and Castilla-La Mancha.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/es",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -1728,7 +2071,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1762,6 +2109,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.39,
       "cumulativeCO2Gt": 115
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "2003-05-29",
+      "annex": "V",
+      "affectedParty": true,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": true,
+      "napYear": 2003,
+      "commitmentZh": "Kalmykia、Astrakhan 与外贝加尔为重点；未通过 TSP 设定正式 LDN 目标。",
+      "commitmentEn": "Kalmykia, Astrakhan and Trans-Baikal prioritized; has not set formal LDN targets via TSP.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ru",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -1826,9 +2190,17 @@
         {
           "version": "Updated NDC",
           "year": 2022
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-10",
+      "ndc3Target": "45 MtCO₂e absolute cap by 2035 (with view to net zero by 2050)",
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1862,6 +2234,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.3,
       "cumulativeCO2Gt": 1.2
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1999-04-26",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "缔约国但非受影响（城邦无农牧业退化）；通过财政与技术合作支持。",
+      "commitmentEn": "Party but non-affected (city-state with no agricultural land degradation); supports via finance and technical cooperation.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/sg",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -1928,7 +2317,11 @@
           "year": 2022
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -1962,6 +2355,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.48,
       "cumulativeCO2Gt": 5.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1995-06-07",
+      "annex": "I",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2005,
+      "commitmentZh": "尼罗河三角洲盐碱化、绿色尼罗河走廊为优先；2024 主办 COP15 邻邦协调会。",
+      "commitmentEn": "Nile Delta salinization and Green Nile Corridor prioritized; hosted regional coordination at COP15.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/eg",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -2032,7 +2442,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-09-29",
+      "ndc3Target": "53-61% reduction by 2035 vs. 2018",
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2066,6 +2480,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.36,
       "cumulativeCO2Gt": 19
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1999-08-17",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响国；2011 COP10 主办国；通过 KOICA 支持蒙古、东非 LDN。",
+      "commitmentEn": "Non-affected; hosted COP10 (2011); supports Mongolia and East Africa LDN via KOICA.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/kr",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -2136,7 +2567,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "EU joint submission."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2170,6 +2606,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.29,
       "cumulativeCO2Gt": 5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1995-12-12",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响国；Sida 资助 Sahel 与 Horn of Africa 长期项目。",
+      "commitmentEn": "Non-affected; Sida funds long-term Sahel and Horn of Africa programmes.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/se",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -2244,7 +2697,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-04",
+      "ndc3Target": "70-75% reduction by 2035 vs. 1990",
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2278,6 +2735,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.28,
       "cumulativeCO2Gt": 2.8
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1996-08-30",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响国；NORAD 通过气候与林业基金支持土地恢复。",
+      "commitmentEn": "Non-affected; NORAD funds land restoration via climate and forest initiatives.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/no",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -2348,7 +2822,11 @@
           "year": 2023
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-01-31",
+      "ndc3Target": "51-55% reduction by 2035 vs. 2005 (gross-net basis)",
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2367,7 +2845,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": false,
-      "priceUSD": 32.0,
+      "priceUSD": 32,
       "coveragePercent": 49,
       "noteZh": "新西兰碳排放交易体系(NZ ETS)，覆盖林业、能源、工业",
       "noteEn": "NZ ETS covering forestry, energy, and industrial sectors"
@@ -2382,6 +2860,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.32,
       "cumulativeCO2Gt": 1.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "2000-09-07",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响国；通过 MFAT 支持太平洋岛国 LDN 项目。",
+      "commitmentEn": "Non-affected; MFAT supports Pacific Island LDN programmes.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/nz",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -2452,7 +2947,11 @@
           "year": 2026
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2486,6 +2985,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.55,
       "cumulativeCO2Gt": 0.4
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-06-24",
+      "annex": "I",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2002,
+      "commitmentZh": "目标到 2032 实现 10% 树覆盖；LDN 与旱地畜牧业转型挂钩。",
+      "commitmentEn": "Target 10% tree cover by 2032; LDN linked to dryland livestock transition.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ke",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -2556,7 +3072,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2590,6 +3110,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.56,
       "cumulativeCO2Gt": 3
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-07-08",
+      "annex": "I",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2000,
+      "commitmentZh": "北部 11 州的萨赫勒边缘为最严重；Great Green Wall 旗手国之一。",
+      "commitmentEn": "11 northern Sahelian states most affected; flagship Great Green Wall country.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ng",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -2656,7 +3193,11 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2690,6 +3231,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.4,
       "cumulativeCO2Gt": 9.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-01-06",
+      "annex": "III",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 1999,
+      "commitmentZh": "已设定 LDN 目标；巴塔哥尼亚干旱半干旱地区受影响。",
+      "commitmentEn": "LDN targets set; Patagonia drylands designated as priority.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ar",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -2760,7 +3318,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2794,6 +3356,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.47,
       "cumulativeCO2Gt": 3.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1999-06-08",
+      "annex": "III",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2005,
+      "commitmentZh": "Guajira、Caribbean 干旱区为重点；LDN 与森林保护结合。",
+      "commitmentEn": "Guajira and Caribbean drylands prioritized; LDN integrated with forest protection.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/co",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -2864,7 +3443,11 @@
           "year": 2022
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2898,6 +3481,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.46,
       "cumulativeCO2Gt": 10
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "2001-03-07",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2005,
+      "commitmentZh": "东北 Isaan 高原盐土与森林退化为重点；'King's Initiative' 旱地恢复为旗舰。",
+      "commitmentEn": "Isaan plateau saline soils and deforestation prioritized; 'King's Initiative' dryland restoration is the flagship.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/th",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -2968,7 +3568,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "EU joint submission."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3002,6 +3607,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.3,
       "cumulativeCO2Gt": 11
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1995-06-27",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响国；通过 DGIS 支持 Sahel 与 Horn of Africa。",
+      "commitmentEn": "Non-affected; DGIS supports Sahel and Horn of Africa programmes.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/nl",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -3072,7 +3694,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3106,6 +3732,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.42,
       "cumulativeCO2Gt": 15
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1998-03-31",
+      "annex": "IV",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2004,
+      "commitmentZh": "国土 60% 受荒漠化影响；Konya 盆地、东南安纳托利亚为重点；2024 NAP 更新。",
+      "commitmentEn": "60% of land affected; Konya basin and southeast Anatolia prioritized; NAP updated 2024.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/tr",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -3176,7 +3819,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "EU joint submission."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3210,6 +3858,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.28,
       "cumulativeCO2Gt": 3.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1995-12-22",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响国；Danida 支持 Sahel 与 Horn of Africa 土地恢复。",
+      "commitmentEn": "Non-affected; Danida funds Sahel and Horn of Africa land restoration.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/dk",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -3280,7 +3945,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "EU joint submission."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3314,6 +3984,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.28,
       "cumulativeCO2Gt": 2.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1995-09-20",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响国；通过 MFA Finland 在东非与 Central Asia 支持土地治理。",
+      "commitmentEn": "Non-affected; MFA Finland supports land governance in East Africa and Central Asia.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/fi",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -3384,7 +4071,11 @@
           "year": 2024
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-12",
+      "ndc3Target": "65% reduction by 2035 vs. 1990",
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3403,7 +4094,7 @@
     "carbonPricing": {
       "hasETS": true,
       "hasCarbonTax": true,
-      "priceUSD": 136.0,
+      "priceUSD": 136,
       "coveragePercent": 35,
       "noteZh": "瑞士碳排放交易体系与EU ETS链接；碳税120瑞郎/吨覆盖供暖燃料",
       "noteEn": "Swiss ETS linked to EU ETS; carbon levy CHF120/t on heating fuels"
@@ -3418,6 +4109,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.28,
       "cumulativeCO2Gt": 2.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1996-01-19",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响国；通过 SDC 资助 Sahel、Central Asia 防荒漠化项目。",
+      "commitmentEn": "Non-affected; SDC funds anti-desertification programmes in the Sahel and Central Asia.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ch",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -3488,7 +4196,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "Submitted as part of the EU joint NDC."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3522,6 +4235,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.3,
       "cumulativeCO2Gt": 4.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-06-03",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "缔约国但非受影响国，主要以财政方式支持发展中国家防治荒漠化。",
+      "commitmentEn": "Party but non-affected; supports developing countries via finance and technical cooperation.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/at",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -3592,7 +4322,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "EU joint submission."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3626,6 +4361,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.35,
       "cumulativeCO2Gt": 3
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1996-04-01",
+      "annex": "IV",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 1999,
+      "commitmentZh": "Alentejo、Algarve 为重点；2024 NAP 更新强调火后恢复。",
+      "commitmentEn": "Alentejo and Algarve prioritized; 2024 NAP update emphasizes post-fire recovery.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/pt",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -3692,7 +4444,11 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3726,6 +4482,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.37,
       "cumulativeCO2Gt": 2.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1996-03-26",
+      "annex": "IV",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2006,
+      "commitmentZh": "Negev 沙漠绿化与滴灌为国际范例；LDN 已纳入国家长期规划。",
+      "commitmentEn": "Negev greening and drip irrigation are global benchmarks; LDN built into long-term national planning.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/il",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -3796,7 +4569,11 @@
           "year": 2023
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2024-11-13",
+      "ndc3Target": "47% reduction by 2035 vs. BAU",
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3830,6 +4607,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.36,
       "cumulativeCO2Gt": 5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1998-10-21",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2014,
+      "commitmentZh": "已设定 LDN 目标，国家行动方案聚焦土壤盐碱化与防风林。",
+      "commitmentEn": "LDN targets set; NAP focuses on soil salinization and shelterbelt forests.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ae",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -3896,7 +4690,11 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -3930,6 +4728,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.42,
       "cumulativeCO2Gt": 6.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-06-25",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2005,
+      "commitmentZh": "受土壤酸化、油棕扩张引起的退化为重点。",
+      "commitmentEn": "Soil acidification and oil-palm expansion-driven degradation prioritized.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/my",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -3996,7 +4811,11 @@
           "year": 2022
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4030,6 +4849,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.5,
       "cumulativeCO2Gt": 4.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1998-08-25",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2002,
+      "commitmentZh": "中部沿海、湄公河三角洲盐碱化为重点。",
+      "commitmentEn": "Central coast and Mekong Delta salinization prioritized.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/vn",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -4096,7 +4932,11 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4130,6 +4970,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.55,
       "cumulativeCO2Gt": 3
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "2000-02-10",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2004,
+      "commitmentZh": "Cordillera 山区与 Mindanao 干旱区为重点；LDN 与国家绿化计划衔接。",
+      "commitmentEn": "Cordillera highlands and Mindanao drylands prioritized; LDN linked to National Greening Programme.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ph",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -4200,7 +5057,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4219,7 +5080,7 @@
     "carbonPricing": {
       "hasETS": false,
       "hasCarbonTax": true,
-      "priceUSD": 5.0,
+      "priceUSD": 5,
       "coveragePercent": 39,
       "noteZh": "碳税$5/吨CO₂覆盖大型排放源；绿色税收改革推进中",
       "noteEn": "Carbon tax $5/tCO₂ on large emitters; green tax reform in progress"
@@ -4234,6 +5095,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.39,
       "cumulativeCO2Gt": 4
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-11-13",
+      "annex": "III",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 1997,
+      "commitmentZh": "Atacama、Coquimbo 旱地是核心；LDN 与林业治理结合。",
+      "commitmentEn": "Atacama and Coquimbo drylands are core; LDN linked to forestry governance.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/cl",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -4304,7 +5182,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4338,6 +5220,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.48,
       "cumulativeCO2Gt": 2.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1995-11-09",
+      "annex": "III",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 1998,
+      "commitmentZh": "沿海沙漠与 Sierra 高地为重点；LDN 整合到 Plan Bicentenario。",
+      "commitmentEn": "Coastal desert and Sierra highlands prioritized; LDN integrated into Plan Bicentenario.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/pe",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -4404,7 +5303,11 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4438,6 +5341,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.44,
       "cumulativeCO2Gt": 2
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1996-11-12",
+      "annex": "I",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2001,
+      "commitmentZh": "Great Green Wall 北线牵头；阿特拉斯南麓为重点。",
+      "commitmentEn": "Co-leader of Great Green Wall North line; south Atlas foothills prioritized.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ma",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -4504,7 +5424,11 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4538,6 +5462,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.53,
       "cumulativeCO2Gt": 0.6
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1996-12-27",
+      "annex": "I",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2003,
+      "commitmentZh": "北部 Savannah 区为重点；LDN 与森林造林计划 (FIP) 协同。",
+      "commitmentEn": "Northern Savannah zone prioritized; LDN aligned with Forest Investment Programme.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/gh",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -4604,7 +5545,11 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4638,6 +5583,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.4,
       "cumulativeCO2Gt": 0.3
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1998-03-05",
+      "annex": "III",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2004,
+      "commitmentZh": "Guanacaste 太平洋沿岸干燥森林为重点；2024 年 LDN 进度报告已提交。",
+      "commitmentEn": "Guanacaste dry Pacific forests prioritized; 2024 LDN progress report submitted.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/cr",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -4708,7 +5670,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "EU joint submission."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4742,6 +5709,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.35,
       "cumulativeCO2Gt": 25
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "2001-11-14",
+      "annex": "V",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2004,
+      "commitmentZh": "Wielkopolska 中部农业干旱为重点；LDN 与国家森林计划协同。",
+      "commitmentEn": "Central Wielkopolska agricultural drought prioritized; LDN aligned with National Forest Programme.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/pl",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -4808,7 +5792,11 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4842,6 +5830,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.52,
       "cumulativeCO2Gt": 0.03
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1998-08-26",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2007,
+      "commitmentZh": "小岛屿发展中国家；甘蔗地土壤退化与海岸侵蚀为重点。",
+      "commitmentEn": "Small Island Developing State; sugarcane soil degradation and coastal erosion prioritized.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/fj",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -4912,7 +5917,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -4946,6 +5955,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.6,
       "cumulativeCO2Gt": 0.4
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-06-27",
+      "annex": "I",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 1998,
+      "commitmentZh": "绿色遗产倡议 (Green Legacy) 累计种植 320 亿株树；LDN 与气候韧性整合。",
+      "commitmentEn": "Green Legacy Initiative planted 32B+ seedlings; LDN integrated with climate resilience.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/et",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -5001,7 +6027,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5045,6 +6075,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.55,
       "cumulativeCO2Gt": 5.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-02-24",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2002,
+      "commitmentZh": "俾路支、辛德 Tharparkar 为重点；2024 Living Indus 倡议把 LDN 纳入流域治理。",
+      "commitmentEn": "Balochistan and Sindh's Tharparkar prioritized; 2024 Living Indus integrates LDN with basin governance.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/pk",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -5100,7 +6147,11 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5144,6 +6195,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.58,
       "cumulativeCO2Gt": 1.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1996-01-26",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2005,
+      "commitmentZh": "西北部 Barind 区域为重点；LDN 目标涵盖造林与可持续农业。",
+      "commitmentEn": "Northwest Barind tract prioritized; LDN spans afforestation and sustainable agriculture.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/bd",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -5186,7 +6254,11 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5229,6 +6301,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.52,
       "cumulativeCO2Gt": 10
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "2010-04-28",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2015,
+      "commitmentZh": "美索不达米亚平原盐碱化与南部沙尘暴为最大挑战；LDN 与水资源恢复挂钩。",
+      "commitmentEn": "Mesopotamian salinization and southern sand-storms are top challenges; LDN linked to water restoration.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/iq",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -5271,7 +6360,11 @@
           "year": 2015
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5315,6 +6408,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.45,
       "cumulativeCO2Gt": 20
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-04-29",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2004,
+      "commitmentZh": "国土 80% 为旱地；LDN 与 Urmia 湖恢复、沙尘源治理结合。",
+      "commitmentEn": "80% of land is dryland; LDN tied to Lake Urmia recovery and sand-storm source control.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ir",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -5366,7 +6476,11 @@
           "year": 2023
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5410,6 +6524,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.4,
       "cumulativeCO2Gt": 12
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-07-09",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2005,
+      "commitmentZh": "Aral Sea 干涸区为重点；LDN 与 Saxaul 林修复挂钩。",
+      "commitmentEn": "Aral Sea seabed prioritized; LDN linked to Saxaul forest restoration.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/kz",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -5459,9 +6590,17 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-09-22",
+      "ndc3Target": "65% reduction by 2035 vs. 1990 (pending 2035 detailed update)",
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5505,6 +6644,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.43,
       "cumulativeCO2Gt": 30
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "2002-07-27",
+      "annex": "V",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2002,
+      "commitmentZh": "南部草原与战争破坏土壤为重点；2024 重启 LDN 监测。",
+      "commitmentEn": "Southern steppe and war-damaged soils prioritized; LDN monitoring restarted in 2024.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ua",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -5560,7 +6716,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "EU joint submission."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5604,6 +6765,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.36,
       "cumulativeCO2Gt": 5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-05-05",
+      "annex": "IV",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2001,
+      "commitmentZh": "克里特、东爱琴海与色萨利平原为重点；2023 大火后 LDN 再评估。",
+      "commitmentEn": "Crete, East Aegean and Thessaly plain prioritized; LDN reassessed after 2023 wildfires.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/gr",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -5654,7 +6832,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "EU joint submission."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5698,6 +6881,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.29,
       "cumulativeCO2Gt": 3.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-07-31",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响国；通过 Irish Aid 支持东非土地治理。",
+      "commitmentEn": "Non-affected; Irish Aid supports East African land governance.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ie",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -5753,7 +6953,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "EU joint submission."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5797,6 +7002,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.39,
       "cumulativeCO2Gt": 8
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1998-08-19",
+      "annex": "V",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2000,
+      "commitmentZh": "Dobrogea、Oltenia 南部为重点；2024 启动'国家防风林'。",
+      "commitmentEn": "Dobrogea and southern Oltenia prioritized; 2024 'National Shelterbelt' launched.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ro",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -5852,7 +7074,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "EU joint submission."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5896,6 +7123,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.33,
       "cumulativeCO2Gt": 13
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "2000-01-25",
+      "annex": "V",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "南摩拉维亚旱化加剧，已设 LDN 目标但未单独提交 NAP（按欧盟联合实施）。",
+      "commitmentEn": "Southern Moravia drying intensified; LDN targets set, NAP implemented via EU joint action.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/cz",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -5946,7 +7190,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "Submitted as part of the EU joint NDC."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -5990,6 +7239,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.3,
       "cumulativeCO2Gt": 8.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-06-30",
+      "annex": null,
+      "affectedParty": false,
+      "ldnTargetSet": false,
+      "ldnYear": null,
+      "napSubmitted": false,
+      "napYear": null,
+      "commitmentZh": "非受影响国，作为欧盟成员通过欧盟联合 NAP 履行。",
+      "commitmentEn": "Non-affected; participates via EU joint implementation under the UNCCD.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/be",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -6040,7 +7306,12 @@
           "year": 2025
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-26",
+      "ndc3Target": "EU joint 2035 NDC",
+      "ndc3Source": "https://unfccc.int/NDCREG",
+      "ndc3Note": "EU joint submission."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6084,6 +7355,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.36,
       "cumulativeCO2Gt": 5.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1999-07-13",
+      "annex": "V",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 1999,
+      "commitmentZh": "大平原中部受荒漠化威胁；LDN 与匈牙利气候适应战略对接。",
+      "commitmentEn": "Central Great Plain at risk; LDN aligned with Hungary's climate adaptation strategy.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/hu",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -6130,7 +7418,11 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6174,6 +7466,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.56,
       "cumulativeCO2Gt": 0.3
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-04-19",
+      "annex": "I",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 1999,
+      "commitmentZh": "Dodoma、Singida 中央干旱区为重点；与 AFR100 倡议结合。",
+      "commitmentEn": "Dodoma and Singida central drylands prioritized; aligned with AFR100.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/tz",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -6220,7 +7529,11 @@
           "year": 2022
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6264,6 +7577,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.46,
       "cumulativeCO2Gt": 6
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1996-05-22",
+      "annex": "I",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2004,
+      "commitmentZh": "撒哈拉绿色长城非洲段牵头国之一；LDN 与造林计划深度绑定。",
+      "commitmentEn": "Co-leader of the Sahara/Sahel Great Green Wall; LDN deeply tied to afforestation.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/dz",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -6310,7 +7640,11 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6354,6 +7688,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.55,
       "cumulativeCO2Gt": 0.3
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1995-07-26",
+      "annex": "I",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 1998,
+      "commitmentZh": "Great Green Wall 西线核心；Ferlo 牧区为重点。",
+      "commitmentEn": "Core of Great Green Wall West axis; Ferlo pastoral zone prioritized.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/sn",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -6405,7 +7756,11 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6449,6 +7804,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.62,
       "cumulativeCO2Gt": 0.2
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-09-12",
+      "annex": "I",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2007,
+      "commitmentZh": "盆地森林退化、加丹加省土壤侵蚀是 NAP 优先领域。",
+      "commitmentEn": "Forest degradation and Katanga soil erosion are NAP priorities.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/cd",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -6500,7 +7872,11 @@
           "year": 2019
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6544,6 +7920,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.46,
       "cumulativeCO2Gt": 1.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1995-09-06",
+      "annex": "III",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2004,
+      "commitmentZh": "Manabí、Loja 干旱区与 Galápagos 干燥灌丛为重点。",
+      "commitmentEn": "Manabí, Loja drylands and Galápagos dry scrub prioritized.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ec",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -6590,7 +7983,11 @@
           "year": 2022
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6634,6 +8031,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.36,
       "cumulativeCO2Gt": 0.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1999-03-25",
+      "annex": "III",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2008,
+      "commitmentZh": "北部 Cuchilla 干燥草原与牧场为重点。",
+      "commitmentEn": "Northern Cuchilla dry grasslands and pastures prioritized.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/uy",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -6680,7 +8094,11 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6724,6 +8142,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.47,
       "cumulativeCO2Gt": 0.4
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-11-12",
+      "annex": "III",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2005,
+      "commitmentZh": "Hellshire、St. Catherine 南部干旱海岸为重点。",
+      "commitmentEn": "Hellshire and southern St. Catherine arid coast prioritized.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/jm",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -6775,7 +8210,11 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6819,6 +8258,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.57,
       "cumulativeCO2Gt": 0.2
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "2000-12-06",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2014,
+      "commitmentZh": "采矿迹地恢复与海岸侵蚀为重点；与 Pacific Islands Forum 协调。",
+      "commitmentEn": "Mine-area restoration and coastal erosion prioritized; coordinated through Pacific Islands Forum.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/pg",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -6865,7 +8321,11 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6909,6 +8369,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.48,
       "cumulativeCO2Gt": 1
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1998-12-09",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2002,
+      "commitmentZh": "北部 Mannar、东部 Trincomalee 干燥区为重点。",
+      "commitmentEn": "Northern Mannar and eastern Trincomalee dry zones prioritized.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/lk",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -6955,7 +8432,11 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -6999,6 +8480,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.53,
       "cumulativeCO2Gt": 0.3
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1996-10-15",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2004,
+      "commitmentZh": "Terai 平原与中山区水土流失为重点；社区林业为标志性手段。",
+      "commitmentEn": "Terai plain and middle-hill soil erosion prioritized; community forestry is the signature tool.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/np",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -7041,7 +8539,11 @@
           "year": 2015
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7084,6 +8586,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.55,
       "cumulativeCO2Gt": 1
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-01-02",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2005,
+      "commitmentZh": "Dry Zone（曼德勒、马圭、实皆）为重点。",
+      "commitmentEn": "Central Dry Zone (Mandalay, Magway, Sagaing) prioritized.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/mm",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -7130,7 +8649,11 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7174,6 +8697,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.54,
       "cumulativeCO2Gt": 0.2
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-08-18",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2006,
+      "commitmentZh": "Tonle Sap 流域与东北部为重点；LDN 与森林监测系统衔接。",
+      "commitmentEn": "Tonle Sap basin and northeast prioritized; LDN linked to national forest monitoring.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/kh",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -7220,7 +8760,11 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7264,6 +8808,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.44,
       "cumulativeCO2Gt": 0.6
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1996-09-03",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2003,
+      "commitmentZh": "国土 76% 受荒漠化影响；'十亿棵树'计划 (2021–2030) 与 LDN 同步。",
+      "commitmentEn": "76% of land affected; Billion Trees programme (2021-2030) aligned with LDN.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/mn",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -7310,7 +8871,11 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7353,6 +8918,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.44,
       "cumulativeCO2Gt": 5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1995-10-31",
+      "annex": "II",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 1999,
+      "commitmentZh": "Aral 海盆地、Karakalpakstan 为最严重；2018 设立 Aralkum 沙漠造林基金。",
+      "commitmentEn": "Aral Sea basin and Karakalpakstan most affected; Aralkum afforestation fund established 2018.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/uz",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -7395,7 +8977,11 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7438,6 +9024,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.55,
       "cumulativeCO2Gt": 1
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-06-30",
+      "annex": "I",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2014,
+      "commitmentZh": "通过 TSP 设定 LDN 目标；NAP 覆盖南部干旱省份。",
+      "commitmentEn": "LDN targets via TSP; NAP covers southern arid provinces.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ao",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -7484,7 +9087,11 @@
           "year": 2021
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7528,6 +9135,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.58,
       "cumulativeCO2Gt": 0.3
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-03-13",
+      "annex": "I",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2009,
+      "commitmentZh": "Gaza、Inhambane 南部干旱区为重点。",
+      "commitmentEn": "Southern Gaza and Inhambane drylands prioritized.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/mz",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -7570,7 +9194,11 @@
           "year": 2017
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7614,6 +9242,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.48,
       "cumulativeCO2Gt": 8
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1998-06-29",
+      "annex": "III",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2004,
+      "commitmentZh": "Falcón、Lara 西北部为重点。",
+      "commitmentEn": "Northwest Falcón and Lara prioritized.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/ve",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -7656,7 +9301,11 @@
           "year": 2015
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7700,6 +9349,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.49,
       "cumulativeCO2Gt": 1
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1996-08-01",
+      "annex": "III",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2007,
+      "commitmentZh": "Altiplano 高原与 Chaco 干旱区为重点；LDN 与气候适应规划协同。",
+      "commitmentEn": "Altiplano and Chaco drylands prioritized; LDN integrated with climate adaptation.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/bo",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -7747,7 +9413,11 @@
           "year": 2017
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7791,6 +9461,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.42,
       "cumulativeCO2Gt": 2.5
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-03-13",
+      "annex": "III",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2002,
+      "commitmentZh": "东部干旱省份为重点；LDN 与有机农业转型衔接。",
+      "commitmentEn": "Eastern arid provinces prioritized; LDN aligned with organic agriculture transition.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/cu",
+        "registry": "https://prais.unccd.int"
+      }
     }
   },
   {
@@ -7837,7 +9524,11 @@
           "year": 2020
         }
       ],
-      "nextNdcDeadline": 2030
+      "nextNdcDeadline": 2030,
+      "ndc3Submitted": false,
+      "ndc3Date": null,
+      "ndc3Target": null,
+      "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -7880,6 +9571,23 @@
     "climateEquity": {
       "vulnerabilityIndex": 0.45,
       "cumulativeCO2Gt": 1
+    },
+    "desertification": {
+      "status": "ratified",
+      "ratifiedDate": "1997-06-26",
+      "annex": "III",
+      "affectedParty": true,
+      "ldnTargetSet": true,
+      "ldnYear": 2030,
+      "napSubmitted": true,
+      "napYear": 2002,
+      "commitmentZh": "西部边境干旱区为重点；LDN 与森林恢复挂钩。",
+      "commitmentEn": "Western border drylands prioritized; LDN linked to forest restoration.",
+      "sources": {
+        "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+        "country": "https://www.unccd.int/our-work/country-profile/do",
+        "registry": "https://prais.unccd.int"
+      }
     }
   }
 ]

@@ -65,6 +65,35 @@ const METRIC_CONFIG = {
       v == null ? "#d1d5db" : v <= 0.05 ? "#16a34a" : v <= 0.15 ? "#65a30d" : v <= 0.30 ? "#eab308" : v <= 0.60 ? "#f97316" : "#dc2626",
     format: (v) => formatCarbonIntensity(v),
   },
+  ndc3: {
+    zh: "NDC 3.0 提交",
+    en: "NDC 3.0 Submission",
+    getValue: (c) => c.parisAgreement?.ndc3Submitted == null
+      ? null
+      : c.parisAgreement.ndc3Submitted ? 1 : 0,
+    getColor: (v) =>
+      v == null ? "#d1d5db" : v === 1 ? "#4f46e5" : "#9ca3af",
+    format: (v) => (v == null ? "—" : v === 1 ? "✓" : "—"),
+  },
+  ldn: {
+    zh: "UNCCD · LDN 目标",
+    en: "UNCCD · LDN Target",
+    getValue: (c) => {
+      const d = c.desertification;
+      if (!d) return null;
+      if (d.ldnTargetSet) return 2;
+      if (d.affectedParty) return 1;
+      return 0;
+    },
+    getColor: (v) =>
+      v == null ? "#d1d5db" : v === 2 ? "#16a34a" : v === 1 ? "#eab308" : "#9ca3af",
+    format: (v, c) => {
+      if (v == null) return "—";
+      if (v === 2) return "LDN ✓";
+      if (v === 1) return "Affected · LDN ✗";
+      return "Non-affected";
+    },
+  },
 };
 
 const LEGEND_STOPS = [

@@ -74,6 +74,29 @@ data.forEach((c, i) => {
 
   warn(typeof c.epiScore === "number", "epiScore missing", ctx);
   warn(c.netZeroTarget != null, "netZeroTarget missing", ctx);
+
+  // UNCCD desertification block (new)
+  warn(c.desertification != null, "desertification block missing", ctx);
+  if (c.desertification) {
+    const d = c.desertification;
+    check(typeof d.affectedParty === "boolean", "desertification.affectedParty must be boolean", ctx);
+    check(typeof d.ldnTargetSet === "boolean", "desertification.ldnTargetSet must be boolean", ctx);
+    if (d.annex !== null) check(["I", "II", "III", "IV", "V"].includes(d.annex), `desertification.annex invalid: "${d.annex}"`, ctx);
+    if (d.ldnYear != null) check(Number.isInteger(d.ldnYear) && d.ldnYear >= 2015 && d.ldnYear <= 2050, `desertification.ldnYear out of range: ${d.ldnYear}`, ctx);
+    check(typeof d.commitmentZh === "string", "desertification.commitmentZh missing", ctx);
+    check(typeof d.commitmentEn === "string", "desertification.commitmentEn missing", ctx);
+    check(d.sources && typeof d.sources.ldn === "string", "desertification.sources.ldn missing", ctx);
+  }
+
+  // NDC 3.0 (Third NDC) block (new on parisAgreement)
+  if (c.parisAgreement) {
+    warn(typeof c.parisAgreement.ndc3Submitted === "boolean", "parisAgreement.ndc3Submitted missing", ctx);
+    if (c.parisAgreement.ndc3Submitted === true) {
+      check(typeof c.parisAgreement.ndc3Date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(c.parisAgreement.ndc3Date), "parisAgreement.ndc3Date required when ndc3Submitted=true (YYYY-MM-DD)", ctx);
+      warn(typeof c.parisAgreement.ndc3Target === "string", "parisAgreement.ndc3Target missing", ctx);
+      check(typeof c.parisAgreement.ndc3Source === "string", "parisAgreement.ndc3Source required for traceability", ctx);
+    }
+  }
 });
 
 if (warnings.length) {

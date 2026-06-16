@@ -385,6 +385,50 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                           ? selectedCountry.parisAgreement.ndcTargetZh
                           : selectedCountry.parisAgreement.ndcTargetEn}
                       </p>
+                      {/* NDC 3.0 status — new for COP30/31 cycle */}
+                      {selectedCountry.parisAgreement.ndc3Submitted != null && (
+                        <div className="border-t border-blue-100 dark:border-blue-900 pt-2 mb-3">
+                          <div className="flex items-center flex-wrap gap-2 mb-1.5">
+                            <p className="text-xs font-medium text-blue-600 dark:text-blue-300">
+                              {t("NDC 3.0（2025 周期）", "NDC 3.0 (2025 cycle)")}
+                            </p>
+                            {selectedCountry.parisAgreement.ndc3Submitted ? (
+                              <span className="bg-indigo-600 text-white text-xs px-2 py-0.5 rounded-full">
+                                {t("已提交", "Submitted")}
+                              </span>
+                            ) : (
+                              <span className="bg-rose-500 text-white text-xs px-2 py-0.5 rounded-full">
+                                {t("未提交", "Pending")}
+                              </span>
+                            )}
+                            {selectedCountry.parisAgreement.ndc3Date && (
+                              <span className="text-xs text-blue-500 dark:text-blue-400">
+                                {selectedCountry.parisAgreement.ndc3Date}
+                              </span>
+                            )}
+                          </div>
+                          {selectedCountry.parisAgreement.ndc3Target && (
+                            <p className="text-xs text-blue-800 dark:text-blue-200 leading-relaxed">
+                              {selectedCountry.parisAgreement.ndc3Target}
+                            </p>
+                          )}
+                          {selectedCountry.parisAgreement.ndc3Note && (
+                            <p className="text-xs text-blue-500 dark:text-blue-400 italic mt-1">
+                              {selectedCountry.parisAgreement.ndc3Note}
+                            </p>
+                          )}
+                          {selectedCountry.parisAgreement.ndc3Source && (
+                            <a
+                              href={selectedCountry.parisAgreement.ndc3Source}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-xs text-blue-500 dark:text-blue-400 hover:underline mt-1 inline-block"
+                            >
+                              {t("查看 UNFCCC NDC 登记处 →", "View UNFCCC NDC Registry →")}
+                            </a>
+                          )}
+                        </div>
+                      )}
                       {selectedCountry.parisAgreement.ndcHistory && (
                         <div className="border-t border-blue-100 pt-2">
                           <p className="text-xs font-medium text-blue-600 mb-1.5">{t("NDC 提交时间线", "NDC Submission Timeline")}</p>
@@ -494,6 +538,78 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                           ? selectedCountry.cbd.commitmentZh
                           : selectedCountry.cbd.commitmentEn}
                       </p>
+                    </div>
+                  </details>
+                )}
+
+                {/* UNCCD desertification */}
+                {selectedCountry.desertification && (
+                  <details className="group bg-orange-50 dark:bg-orange-950/30 rounded-xl border border-orange-100 dark:border-orange-900">
+                    <summary className="flex items-center justify-between p-4 cursor-pointer list-none">
+                      <div className="flex items-center flex-wrap gap-2">
+                        <h4 className="text-sm font-semibold text-orange-800 dark:text-orange-300">
+                          {t("联合国防治荒漠化公约 · LDN", "UNCCD · LDN")}
+                        </h4>
+                        {selectedCountry.desertification.affectedParty ? (
+                          <span className="bg-orange-600 text-white text-xs px-2 py-0.5 rounded-full">
+                            {t("受影响国", "Affected Party")}
+                            {selectedCountry.desertification.annex && ` · Annex ${selectedCountry.desertification.annex}`}
+                          </span>
+                        ) : (
+                          <span className="bg-gray-400 text-white text-xs px-2 py-0.5 rounded-full">
+                            {t("非受影响国", "Non-affected")}
+                          </span>
+                        )}
+                        {selectedCountry.desertification.ldnTargetSet ? (
+                          <span className="bg-green-600 text-white text-xs px-2 py-0.5 rounded-full">
+                            {t("LDN ✓", "LDN ✓")}
+                            {selectedCountry.desertification.ldnYear && ` ${selectedCountry.desertification.ldnYear}`}
+                          </span>
+                        ) : selectedCountry.desertification.affectedParty ? (
+                          <span className="bg-rose-500 text-white text-xs px-2 py-0.5 rounded-full">
+                            {t("LDN 未设定", "LDN not set")}
+                          </span>
+                        ) : null}
+                        {selectedCountry.desertification.napSubmitted && (
+                          <span className="bg-amber-500 text-white text-xs px-2 py-0.5 rounded-full">
+                            {t("NAP", "NAP")}
+                            {selectedCountry.desertification.napYear && ` ${selectedCountry.desertification.napYear}`}
+                          </span>
+                        )}
+                      </div>
+                      <span className="text-orange-400 group-open:rotate-180 transition-transform text-xs">▼</span>
+                    </summary>
+                    <div className="px-4 pb-4 pt-0">
+                      {selectedCountry.desertification.ratifiedDate && (
+                        <p className="text-xs text-orange-500 dark:text-orange-400 mb-2">
+                          {t("UNCCD 批准日期", "UNCCD ratified")} {selectedCountry.desertification.ratifiedDate}
+                        </p>
+                      )}
+                      <p className="text-sm text-orange-900 dark:text-orange-200 leading-relaxed">
+                        {language === "zh"
+                          ? selectedCountry.desertification.commitmentZh
+                          : selectedCountry.desertification.commitmentEn}
+                      </p>
+                      {selectedCountry.desertification.sources && (
+                        <div className="mt-2 flex flex-wrap gap-3 text-xs">
+                          <a
+                            href={selectedCountry.desertification.sources.ldn}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-orange-600 dark:text-orange-400 hover:underline"
+                          >
+                            {t("UNCCD · LDN TSP 来源 →", "UNCCD LDN TSP source →")}
+                          </a>
+                          <a
+                            href={selectedCountry.desertification.sources.country}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-orange-600 dark:text-orange-400 hover:underline"
+                          >
+                            {t("国家档案 →", "Country profile →")}
+                          </a>
+                        </div>
+                      )}
                     </div>
                   </details>
                 )}

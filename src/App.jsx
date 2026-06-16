@@ -42,6 +42,9 @@ const COMPLIANCE_FILTERS = [
   { key: "btr_pending", zh: "BTR 未交", en: "BTR Pending", active: "bg-red-600 text-white" },
   { key: "kigali_yes", zh: "基加利 ✓", en: "Kigali ✓", active: "bg-cyan-600 text-white" },
   { key: "30x30_met", zh: "30×30 达标", en: "30×30 Met", active: "bg-emerald-600 text-white" },
+  { key: "ndc3_submitted", zh: "NDC 3.0 已交", en: "NDC 3.0 Filed", active: "bg-indigo-600 text-white" },
+  { key: "ndc3_pending", zh: "NDC 3.0 未交", en: "NDC 3.0 Pending", active: "bg-rose-600 text-white" },
+  { key: "ldn_set", zh: "LDN 已设定", en: "LDN Set", active: "bg-orange-600 text-white" },
 ];
 
 export default function GlobalEnvironmentalAgencies() {
@@ -224,6 +227,18 @@ export default function GlobalEnvironmentalAgencies() {
               }).length}
             </p>
             <p className="text-xs text-gray-500 dark:text-gray-400">{t("NDC 不足", "NDC Weak")}</p>
+          </div>
+          <div className="text-center">
+            <p className="text-xl font-bold text-indigo-600 dark:text-indigo-400">
+              {countries.filter((c) => c.parisAgreement?.ndc3Submitted).length}
+            </p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">{t("NDC 3.0 已交", "NDC 3.0 Filed")}</p>
+          </div>
+          <div className="text-center">
+            <p className="text-xl font-bold text-orange-600 dark:text-orange-400">
+              {countries.filter((c) => c.desertification?.ldnTargetSet).length}
+            </p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">{t("LDN 已设定", "LDN Set")}</p>
           </div>
           <div className="text-center" title={t("均值碳强度 (g CO₂/USD GDP)", "Avg carbon intensity (g CO₂/USD GDP)")}>
             <p className="text-xl font-bold text-slate-600 dark:text-slate-300">
