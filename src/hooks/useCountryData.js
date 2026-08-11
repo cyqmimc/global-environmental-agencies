@@ -80,8 +80,8 @@ export default function useCountryData() {
       return vals.length ? +(vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(digits) : null;
     };
     return {
-      forestCoverage: avg((c) => c.data.forestCoverage),
-      carbonEmission: avg((c) => c.data.carbonEmission),
+      forestCoverage: avg((c) => c.wb?.forestArea),
+      carbonEmission: avg((c) => c.wb?.co2Mt),
       co2PerCapita: avg((c) => c.wb?.co2PerCapita),
       renewableEnergy: avg((c) => c.wb?.renewableEnergy),
       pm25: avg((c) => c.wb?.pm25),

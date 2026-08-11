@@ -10,6 +10,7 @@
     "update-all": "node scripts/validate-schema.js && node scripts/fetch-world-bank-data.js && node scripts/split-countries.js && node scripts/check-updates.js",
     "check-updates": "node scripts/check-updates.js",
     "validate": "node scripts/validate-schema.js",
+    "audit-drift": "node scripts/audit-data-drift.js",
     "test": "node --test --experimental-vm-modules src/__tests__/*.test.js"
   },
   "dependencies": {

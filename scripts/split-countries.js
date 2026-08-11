@@ -16,7 +16,6 @@ const core = data.map((c) => ({
   agencyZh: c.agencyZh,
   website: c.website,
   flagUrl: c.flagUrl,
-  data: c.data,
   region: c.region,
   established: c.established,
   responsibilities: c.responsibilities,

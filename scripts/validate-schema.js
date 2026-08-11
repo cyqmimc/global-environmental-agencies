@@ -61,8 +61,8 @@ data.forEach((c, i) => {
     );
   }
 
-  check(c.data && typeof c.data.forestCoverage === "number", "data.forestCoverage missing", ctx);
-  check(c.data && typeof c.data.carbonEmission === "number", "data.carbonEmission missing", ctx);
+  check(c.legacyData && typeof c.legacyData.forestCoverage === "number", "legacyData.forestCoverage missing", ctx);
+  check(c.legacyData && typeof c.legacyData.carbonEmission === "number", "legacyData.carbonEmission missing", ctx);
 
   if (c.parisAgreement?.ndcRating != null) {
     check(
@@ -140,6 +140,7 @@ const REQUIRED_WB_FIELDS = [
 ];
 
 const isoSet = new Set(data.map((c) => c.isoCode).filter(Boolean));
+const byIso = new Map(data.map((c) => [c.isoCode, c]));
 
 for (const iso of isoSet) {
   const row = wb.countries[iso];
@@ -166,6 +167,24 @@ for (const iso of isoSet) {
     const ratio = derived / row.co2PerCapita;
     if (ratio < 0.5 || ratio > 2.0) {
       wbWarnings.push(`${iso}: co2PerCapita ${row.co2PerCapita.toFixed(2)} disagrees with co2Mt/pop ${derived.toFixed(2)}`);
+    }
+  }
+
+  // legacyData is deprecated display data; warn loudly if it drifts far from the
+  // authoritative WB numbers so nobody mistakes it for a still-maintained source.
+  const legacy = byIso.get(iso)?.legacyData;
+  if (legacy) {
+    if (typeof legacy.forestCoverage === "number" && row.forestArea != null) {
+      const diffPP = Math.abs(legacy.forestCoverage - row.forestArea);
+      if (diffPP > row.forestArea * 0.1) {
+        wbWarnings.push(`${iso}: legacyData.forestCoverage ${legacy.forestCoverage} drifts >10% from wb.forestArea ${row.forestArea.toFixed(2)}`);
+      }
+    }
+    if (typeof legacy.carbonEmission === "number" && row.co2Mt != null) {
+      const diffPct = Math.abs(legacy.carbonEmission - row.co2Mt) / row.co2Mt;
+      if (diffPct > 0.1) {
+        wbWarnings.push(`${iso}: legacyData.carbonEmission ${legacy.carbonEmission} drifts >10% from wb.co2Mt ${row.co2Mt.toFixed(2)}`);
+      }
     }
   }
 }

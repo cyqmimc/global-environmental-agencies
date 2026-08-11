@@ -719,7 +719,7 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-5">
                     <div className="bg-green-50 rounded-xl p-3 text-center">
                       <p className="text-2xl font-bold text-green-700">
-                        {selectedCountry.wb?.forestArea?.toFixed(1) ?? selectedCountry.data.forestCoverage}%
+                        {selectedCountry.wb?.forestArea?.toFixed(1) ?? "—"}%
                       </p>
                       <p className="text-xs text-green-600 mt-1">{t("森林覆盖率", "Forest Area")}</p>
                       <p className="text-xs text-gray-400">{t("均值", "Avg")} {globalAvg.forestCoverage}%</p>

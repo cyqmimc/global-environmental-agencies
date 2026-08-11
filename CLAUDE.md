@@ -11,6 +11,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run split-data` — re-split `countries.json` → `countries-core.json` + `countries-detail.json` (must run after editing countries.json)
 - `npm run update-all` — run fetch-data + split-data + check-updates in sequence (recommended for routine updates)
 - `npm run check-updates` — scan all data sources, report what may need updating
+- `npm run audit-drift` — compare deprecated `legacyData` numbers against authoritative `wb-data.json` values, exits non-zero if any country drifts beyond threshold
 
 No test runner or linter is configured. See `DATA-MAINTENANCE.md` for data update sources and procedures.
 
@@ -24,10 +25,12 @@ Single-page React app: 80 countries, environmental agencies, World Bank data, tr
 - `src/constants.js` contains shared label maps and helpers used across many components: `TREATY_LABELS`, `RESPONSIBILITY_LABELS`, `NDC_RATING_CONFIG`, URL state sync, CSV export
 
 **Two-tier data loading:**
-1. Initial load fetches `countries-core.json` (53KB, slim fields for cards/filters/map) + `wb-data.json` (~240KB, latest values + historical time series for 4 indicators) in parallel, merges by `isoCode` into `country.wb` namespace (including `wb.history`)
-2. When a detail dialog opens, `countries-detail.json` (137KB, descriptions/treaties/laws/full treaty objects, keyed by isoCode) is fetched once and cached in memory
-3. `countries.json` (228KB) is the source of truth — the split files are generated from it via `scripts/split-countries.js`
+1. Initial load fetches `countries-core.json` (slim fields for cards/filters/map) + `wb-data.json` (latest values + historical time series for 4 indicators) in parallel, merges by `isoCode` into `country.wb` namespace (including `wb.history`)
+2. When a detail dialog opens, `countries-detail.json` (descriptions/treaties/laws/full treaty objects, keyed by isoCode) is fetched once and cached in memory
+3. `countries.json` is the source of truth — the split files are generated from it via `scripts/split-countries.js`
 4. `wb-data.json` stores per-country `history` with yearly data for `forestArea`, `co2Mt`, `renewableEnergy`, `pm25` (2015-2023), used by TrendLineChart in DetailDialog
+
+**Single source of truth for forest/carbon numbers:** all display, sorting (`forestAsc`/`forestDesc`/`carbonAsc`/`carbonDesc` in `useFilters.js`), CSV export, and averaging read `wb.forestArea` / `wb.co2Mt` (World Bank, authoritative). `countries.json` still carries a `legacyData: {forestCoverage, carbonEmission, _deprecated: true}` field per country — these were hand-typed placeholder numbers that drifted from the WB values by >5% for 71/80 countries and are kept only for historical reference and the `scripts/audit-data-drift.js` / `validate-schema.js` drift checks. Never read `legacyData` in UI code.
 
 **WorldMap SVG coloring:** `src/WorldMap.jsx` injects `fill` colors into the raw SVG via regex matching `<path id="xx">` or `<g id="xx">` where `xx` is a 2-letter ISO code. 6 switchable map indicators: EPI Score, NDC Rating, Carbon Price, Renewable Energy, Air Quality (PM2.5), Protected Areas. **Critical:** if compressing `world-map.svg` with SVGO, you must disable `cleanupIds` or the map will render all black.
 

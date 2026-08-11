@@ -131,7 +131,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                       key={c.countryEn}
                       className="py-3 px-2 text-center font-bold text-green-700"
                     >
-                      {c.data.forestCoverage}%
+                      {c.wb?.forestArea?.toFixed(1) ?? "—"}%
                     </td>
                   ))}
                 </tr>
@@ -144,7 +144,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                       key={c.countryEn}
                       className="py-3 px-2 text-center font-bold text-red-600"
                     >
-                      {c.data.carbonEmission} Mt
+                      {c.wb?.co2Mt?.toFixed(1) ?? "—"} Mt
                     </td>
                   ))}
                 </tr>
@@ -425,7 +425,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
               ]}
               datasets={compareList.map((c, i) => ({
                 label: language === "zh" ? c.countryZh : c.countryEn,
-                data: [c.data.forestCoverage, c.data.carbonEmission, c.epiScore],
+                data: [c.wb?.forestArea ?? 0, c.wb?.co2Mt ?? 0, c.epiScore],
                 color: COMPARE_COLORS[i],
               }))}
             />

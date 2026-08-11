@@ -76,7 +76,10 @@
  * @property {Responsibility[]} responsibilities
  * @property {number=} epiScore
  * @property {string|number=} netZeroTarget
- * @property {{forestCoverage:number,carbonEmission:number}} data
+ * @property {{forestCoverage:number,carbonEmission:number,_deprecated:true}=} legacyData
+ *   - Hand-written display data, superseded by `wb.forestArea` / `wb.co2Mt`. Not used
+ *     for rendering, sorting, or scoring — kept only for historical reference and the
+ *     validate-schema.js drift check. Do not read from this in UI code.
  * @property {ParisAgreement|null=} parisAgreement
  * @property {{kigaliAmendment?: boolean}|null=} montrealProtocol
  * @property {CarbonPricing|null=} carbonPricing

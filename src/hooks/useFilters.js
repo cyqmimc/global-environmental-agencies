@@ -13,10 +13,10 @@ function cmp(va, vb, asc) {
 }
 
 const SORTERS = {
-  forestAsc: (a, b) => cmp(a.data?.forestCoverage, b.data?.forestCoverage, true),
-  forestDesc: (a, b) => cmp(a.data?.forestCoverage, b.data?.forestCoverage, false),
-  carbonAsc: (a, b) => cmp(a.data?.carbonEmission, b.data?.carbonEmission, true),
-  carbonDesc: (a, b) => cmp(a.data?.carbonEmission, b.data?.carbonEmission, false),
+  forestAsc: (a, b) => cmp(a.wb?.forestArea, b.wb?.forestArea, true),
+  forestDesc: (a, b) => cmp(a.wb?.forestArea, b.wb?.forestArea, false),
+  carbonAsc: (a, b) => cmp(a.wb?.co2Mt, b.wb?.co2Mt, true),
+  carbonDesc: (a, b) => cmp(a.wb?.co2Mt, b.wb?.co2Mt, false),
   epiAsc: (a, b) => cmp(a.epiScore, b.epiScore, true),
   epiDesc: (a, b) => cmp(a.epiScore, b.epiScore, false),
   renewAsc: (a, b) => cmp(a.wb?.renewableEnergy, b.wb?.renewableEnergy, true),

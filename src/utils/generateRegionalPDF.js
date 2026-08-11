@@ -105,7 +105,7 @@ export async function generateRegionalPDF(countries, options = {}) {
     composite: avg(items, computeCompositeScore),
     epi: avg(items, (c) => c.epiScore),
     renewable: avg(items, (c) => c.wb?.renewableEnergy),
-    forest: avg(items, (c) => c.wb?.forestArea ?? c.data?.forestCoverage),
+    forest: avg(items, (c) => c.wb?.forestArea),
     protected: avg(items, (c) => c.wb?.protectedAreas),
     pm25: avg(items, (c) => c.wb?.pm25),
     co2pc: avg(items, (c) => c.wb?.co2PerCapita),

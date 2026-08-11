@@ -8,10 +8,6 @@
     "flagUrl": "https://flagcdn.com/us.svg",
     "descriptionZh": "美国环保署负责制定环境保护法规，管理空气、水和土地污染等问题，是世界上最具影响力的环保机构之一。",
     "descriptionEn": "The EPA is responsible for creating and enforcing environmental regulations, managing air, water and land pollution. It is one of the most influential environmental agencies in the world.",
-    "data": {
-      "forestCoverage": 33,
-      "carbonEmission": 5000
-    },
     "region": "North America",
     "established": 1970,
     "responsibilities": [
@@ -122,6 +118,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/us",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 33,
+      "carbonEmission": 5000,
+      "_deprecated": true
     }
   },
   {
@@ -133,10 +134,6 @@
     "flagUrl": "https://flagcdn.com/cn.svg",
     "descriptionZh": "中国生态环境部负责全国生态环境保护与污染防治的政策制定与实施，推动碳达峰碳中和目标。",
     "descriptionEn": "China's MEE is responsible for national ecological and environmental protection policies, pollution prevention, and driving carbon peak and neutrality goals.",
-    "data": {
-      "forestCoverage": 23,
-      "carbonEmission": 10000
-    },
     "region": "Asia",
     "established": 2018,
     "responsibilities": [
@@ -248,6 +245,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/cn",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 23,
+      "carbonEmission": 10000,
+      "_deprecated": true
     }
   },
   {
@@ -259,10 +261,6 @@
     "flagUrl": "https://flagcdn.com/de.svg",
     "descriptionZh": "德国联邦环境部负责制定环境、自然保护和核安全的政策，是欧洲绿色转型的先驱。",
     "descriptionEn": "Germany's BMUV is responsible for environmental policy, nature conservation, and nuclear safety. Germany is a pioneer in Europe's green transition.",
-    "data": {
-      "forestCoverage": 32,
-      "carbonEmission": 800
-    },
     "region": "Europe",
     "established": 1986,
     "responsibilities": [
@@ -374,6 +372,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/de",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 32,
+      "carbonEmission": 800,
+      "_deprecated": true
     }
   },
   {
@@ -385,10 +388,6 @@
     "flagUrl": "https://flagcdn.com/jp.svg",
     "descriptionZh": "日本环境省负责环境保护、气候变化对策及自然保护，推动循环经济和零碳社会建设。",
     "descriptionEn": "Japan's MOE oversees environmental protection, climate change countermeasures, and nature conservation, promoting a circular economy and carbon-neutral society.",
-    "data": {
-      "forestCoverage": 68,
-      "carbonEmission": 1200
-    },
     "region": "Asia",
     "established": 2001,
     "responsibilities": [
@@ -499,6 +498,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/jp",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 68,
+      "carbonEmission": 1200,
+      "_deprecated": true
     }
   },
   {
@@ -510,10 +514,6 @@
     "flagUrl": "https://flagcdn.com/fr.svg",
     "descriptionZh": "法国生态转型部负责生态、能源和可持续发展的政策制定，积极推动核能与可再生能源结合。",
     "descriptionEn": "France's Ministry for the Ecological Transition handles ecology, energy, and sustainable development policy, actively combining nuclear and renewable energy.",
-    "data": {
-      "forestCoverage": 31,
-      "carbonEmission": 600
-    },
     "region": "Europe",
     "established": 1971,
     "responsibilities": [
@@ -625,6 +625,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/fr",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 31,
+      "carbonEmission": 600,
+      "_deprecated": true
     }
   },
   {
@@ -636,10 +641,6 @@
     "flagUrl": "https://flagcdn.com/in.svg",
     "descriptionZh": "印度环境部负责生态保护和气候政策，管理广袤的森林资源和生物多样性。",
     "descriptionEn": "India's MoEFCC is responsible for ecological protection and climate policy, managing vast forest resources and biodiversity.",
-    "data": {
-      "forestCoverage": 24,
-      "carbonEmission": 2600
-    },
     "region": "Asia",
     "established": 1985,
     "responsibilities": [
@@ -746,6 +747,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/in",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 24,
+      "carbonEmission": 2600,
+      "_deprecated": true
     }
   },
   {
@@ -757,10 +763,6 @@
     "flagUrl": "https://flagcdn.com/gb.svg",
     "descriptionZh": "英国DEFRA负责环境保护、农业、渔业及乡村事务，推动净零排放目标。",
     "descriptionEn": "DEFRA is responsible for environmental protection, agriculture, fisheries, and rural affairs, driving the UK's net-zero emissions target.",
-    "data": {
-      "forestCoverage": 13,
-      "carbonEmission": 400
-    },
     "region": "Europe",
     "established": 2001,
     "responsibilities": [
@@ -875,6 +877,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/gb",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 13,
+      "carbonEmission": 400,
+      "_deprecated": true
     }
   },
   {
@@ -886,10 +893,6 @@
     "flagUrl": "https://flagcdn.com/br.svg",
     "descriptionZh": "巴西环境部负责保护亚马逊森林及应对气候变化，管理全球最大的热带雨林。",
     "descriptionEn": "Brazil's MMA is responsible for protecting the Amazon rainforest and addressing climate change, managing the world's largest tropical rainforest.",
-    "data": {
-      "forestCoverage": 60,
-      "carbonEmission": 500
-    },
     "region": "South America",
     "established": 1992,
     "responsibilities": [
@@ -1001,6 +1004,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/br",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 60,
+      "carbonEmission": 500,
+      "_deprecated": true
     }
   },
   {
@@ -1012,10 +1020,6 @@
     "flagUrl": "https://flagcdn.com/au.svg",
     "descriptionZh": "澳大利亚环境部负责气候、能源及生态保护事务，应对干旱和珊瑚礁退化挑战。",
     "descriptionEn": "Australia's DCCEEW handles climate, energy, and ecological protection, addressing challenges from drought and coral reef degradation.",
-    "data": {
-      "forestCoverage": 17,
-      "carbonEmission": 400
-    },
     "region": "Oceania",
     "established": 2022,
     "responsibilities": [
@@ -1126,6 +1130,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/au",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 17,
+      "carbonEmission": 400,
+      "_deprecated": true
     }
   },
   {
@@ -1137,10 +1146,6 @@
     "flagUrl": "https://flagcdn.com/za.svg",
     "descriptionZh": "南非DFFE负责自然资源管理与环境保护，保护丰富的野生动物资源。",
     "descriptionEn": "South Africa's DFFE manages natural resources and environmental protection, safeguarding rich wildlife resources.",
-    "data": {
-      "forestCoverage": 7,
-      "carbonEmission": 400
-    },
     "region": "Africa",
     "established": 2009,
     "responsibilities": [
@@ -1251,6 +1256,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/za",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 7,
+      "carbonEmission": 400,
+      "_deprecated": true
     }
   },
   {
@@ -1262,10 +1272,6 @@
     "flagUrl": "https://flagcdn.com/ca.svg",
     "descriptionZh": "加拿大环境部负责生态保护与气候政策应对，管理广袤的北方森林和淡水资源。",
     "descriptionEn": "ECCC handles ecological protection and climate policy, managing vast boreal forests and freshwater resources.",
-    "data": {
-      "forestCoverage": 38,
-      "carbonEmission": 700
-    },
     "region": "North America",
     "established": 1971,
     "responsibilities": [
@@ -1376,6 +1382,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ca",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 38,
+      "carbonEmission": 700,
+      "_deprecated": true
     }
   },
   {
@@ -1387,10 +1398,6 @@
     "flagUrl": "https://flagcdn.com/mx.svg",
     "descriptionZh": "墨西哥环境部负责保护自然资源及应对气候变化，守护丰富的生物多样性。",
     "descriptionEn": "SEMARNAT protects natural resources and addresses climate change, safeguarding Mexico's rich biodiversity.",
-    "data": {
-      "forestCoverage": 33,
-      "carbonEmission": 450
-    },
     "region": "North America",
     "established": 1994,
     "responsibilities": [
@@ -1501,6 +1508,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/mx",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 33,
+      "carbonEmission": 450,
+      "_deprecated": true
     }
   },
   {
@@ -1512,10 +1524,6 @@
     "flagUrl": "https://flagcdn.com/sa.svg",
     "descriptionZh": "沙特环境部主管水资源管理及生态保护事务，推动沙漠绿化和可持续农业。",
     "descriptionEn": "Saudi Arabia's ministry manages water resources and ecological protection, promoting desert greening and sustainable agriculture.",
-    "data": {
-      "forestCoverage": 0.5,
-      "carbonEmission": 600
-    },
     "region": "Asia",
     "established": 2003,
     "responsibilities": [
@@ -1620,6 +1628,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/sa",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 0.5,
+      "carbonEmission": 600,
+      "_deprecated": true
     }
   },
   {
@@ -1631,10 +1644,6 @@
     "flagUrl": "https://flagcdn.com/id.svg",
     "descriptionZh": "印尼环境与林业部于2024年拆分为环境部和林业部。环境部（环境控制局）负责污染防治和气候变化应对，管理全球第三大热带雨林的生态保护。",
     "descriptionEn": "Indonesia's Ministry of Environment and Forestry was split in 2024 into separate environment and forestry ministries. The environmental agency handles pollution control and climate response, protecting the world's third-largest tropical rainforest.",
-    "data": {
-      "forestCoverage": 50,
-      "carbonEmission": 1200
-    },
     "region": "Asia",
     "established": 2014,
     "responsibilities": [
@@ -1749,6 +1758,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/id",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 50,
+      "carbonEmission": 1200,
+      "_deprecated": true
     }
   },
   {
@@ -1760,10 +1774,6 @@
     "flagUrl": "https://flagcdn.com/it.svg",
     "descriptionZh": "意大利环境部致力于可再生能源及生态保护政策，保护地中海沿岸生态系统。",
     "descriptionEn": "Italy's ministry focuses on renewable energy and ecological protection, safeguarding Mediterranean coastal ecosystems.",
-    "data": {
-      "forestCoverage": 36,
-      "carbonEmission": 450
-    },
     "region": "Europe",
     "established": 1986,
     "responsibilities": [
@@ -1875,6 +1885,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/it",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 36,
+      "carbonEmission": 450,
+      "_deprecated": true
     }
   },
   {
@@ -1886,10 +1901,6 @@
     "flagUrl": "https://flagcdn.com/es.svg",
     "descriptionZh": "西班牙生态转型部主管环境保护与能源政策，大力发展太阳能和风能。",
     "descriptionEn": "Spain's ministry oversees environmental protection and energy policy, with a strong focus on solar and wind energy development.",
-    "data": {
-      "forestCoverage": 37,
-      "carbonEmission": 320
-    },
     "region": "Europe",
     "established": 2018,
     "responsibilities": [
@@ -2001,6 +2012,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/es",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 37,
+      "carbonEmission": 320,
+      "_deprecated": true
     }
   },
   {
@@ -2012,10 +2028,6 @@
     "flagUrl": "https://flagcdn.com/ru.svg",
     "descriptionZh": "俄罗斯自然资源部主管环境资源开发与保护，管理全球最大面积的森林。",
     "descriptionEn": "Russia's ministry manages natural resource development and environmental protection, overseeing the world's largest forest area.",
-    "data": {
-      "forestCoverage": 49,
-      "carbonEmission": 1500
-    },
     "region": "Europe",
     "established": 2008,
     "responsibilities": [
@@ -2126,6 +2138,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ru",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 49,
+      "carbonEmission": 1500,
+      "_deprecated": true
     }
   },
   {
@@ -2137,10 +2154,6 @@
     "flagUrl": "https://flagcdn.com/sg.svg",
     "descriptionZh": "新加坡环境部推行绿色经济和气候应对政策，打造花园城市和零废弃目标。",
     "descriptionEn": "Singapore's ministry promotes green economy and climate response policies, building a Garden City with zero-waste goals.",
-    "data": {
-      "forestCoverage": 23,
-      "carbonEmission": 60
-    },
     "region": "Asia",
     "established": 2020,
     "responsibilities": [
@@ -2251,6 +2264,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/sg",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 23,
+      "carbonEmission": 60,
+      "_deprecated": true
     }
   },
   {
@@ -2262,10 +2280,6 @@
     "flagUrl": "https://flagcdn.com/eg.svg",
     "descriptionZh": "埃及环境部负责应对沙漠化和水资源保护事务，保护尼罗河流域生态。",
     "descriptionEn": "Egypt's Ministry of Environment addresses desertification and water resource protection, safeguarding the Nile basin ecosystem.",
-    "data": {
-      "forestCoverage": 0.1,
-      "carbonEmission": 250
-    },
     "region": "Africa",
     "established": 1997,
     "responsibilities": [
@@ -2372,6 +2386,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/eg",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 0.1,
+      "carbonEmission": 250,
+      "_deprecated": true
     }
   },
   {
@@ -2383,10 +2402,6 @@
     "flagUrl": "https://flagcdn.com/kr.svg",
     "descriptionZh": "韩国环境部主管空气质量、水资源及气候变化政策，推动绿色新政和碳中和。",
     "descriptionEn": "South Korea's MOE manages air quality, water resources, and climate change policy, driving the Green New Deal and carbon neutrality.",
-    "data": {
-      "forestCoverage": 64,
-      "carbonEmission": 700
-    },
     "region": "Asia",
     "established": 1990,
     "responsibilities": [
@@ -2497,6 +2512,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/kr",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 64,
+      "carbonEmission": 700,
+      "_deprecated": true
     }
   },
   {
@@ -2508,10 +2528,6 @@
     "flagUrl": "https://flagcdn.com/se.svg",
     "descriptionZh": "瑞典气候部致力于推动清洁能源和可持续发展，是全球环保领域的先驱国家。",
     "descriptionEn": "Sweden's ministry promotes clean energy and sustainable development, making Sweden a global pioneer in environmental protection.",
-    "data": {
-      "forestCoverage": 69,
-      "carbonEmission": 50
-    },
     "region": "Europe",
     "established": 1987,
     "responsibilities": [
@@ -2623,6 +2639,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/se",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 69,
+      "carbonEmission": 50,
+      "_deprecated": true
     }
   },
   {
@@ -2634,10 +2655,6 @@
     "flagUrl": "https://flagcdn.com/no.svg",
     "descriptionZh": "挪威气候与环境部推动低碳经济，是全球电动汽车普及率最高的国家之一。",
     "descriptionEn": "Norway's ministry promotes a low-carbon economy and leads globally in electric vehicle adoption.",
-    "data": {
-      "forestCoverage": 33,
-      "carbonEmission": 50
-    },
     "region": "Europe",
     "established": 1972,
     "responsibilities": [
@@ -2752,6 +2769,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/no",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 33,
+      "carbonEmission": 50,
+      "_deprecated": true
     }
   },
   {
@@ -2763,10 +2785,6 @@
     "flagUrl": "https://flagcdn.com/nz.svg",
     "descriptionZh": "新西兰环境部致力于保护独特的自然遗产和生物多样性，推动零碳法案实施。",
     "descriptionEn": "New Zealand's Ministry for the Environment protects unique natural heritage and biodiversity, advancing the Zero Carbon Act.",
-    "data": {
-      "forestCoverage": 38,
-      "carbonEmission": 80
-    },
     "region": "Oceania",
     "established": 1986,
     "responsibilities": [
@@ -2877,6 +2895,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/nz",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 38,
+      "carbonEmission": 80,
+      "_deprecated": true
     }
   },
   {
@@ -2888,10 +2911,6 @@
     "flagUrl": "https://flagcdn.com/ke.svg",
     "descriptionZh": "肯尼亚环境部管理野生动物保护区和应对气候变化，是联合国环境规划署总部所在地。",
     "descriptionEn": "Kenya's ministry manages wildlife reserves and climate response. Nairobi hosts the UNEP headquarters.",
-    "data": {
-      "forestCoverage": 8,
-      "carbonEmission": 20
-    },
     "region": "Africa",
     "established": 1999,
     "responsibilities": [
@@ -3002,6 +3021,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ke",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 8,
+      "carbonEmission": 20,
+      "_deprecated": true
     }
   },
   {
@@ -3013,10 +3037,6 @@
     "flagUrl": "https://flagcdn.com/ng.svg",
     "descriptionZh": "尼日利亚环境部负责管理石油开发对环境的影响，保护西非生态系统。",
     "descriptionEn": "Nigeria's ministry manages the environmental impact of oil development and protects West African ecosystems.",
-    "data": {
-      "forestCoverage": 7,
-      "carbonEmission": 120
-    },
     "region": "Africa",
     "established": 1999,
     "responsibilities": [
@@ -3127,6 +3147,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ng",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 7,
+      "carbonEmission": 120,
+      "_deprecated": true
     }
   },
   {
@@ -3138,10 +3163,6 @@
     "flagUrl": "https://flagcdn.com/ar.svg",
     "descriptionZh": "阿根廷环境部负责保护巴塔哥尼亚冰川和潘帕斯草原等独特生态系统。",
     "descriptionEn": "Argentina's ministry protects unique ecosystems including Patagonian glaciers and Pampas grasslands.",
-    "data": {
-      "forestCoverage": 10,
-      "carbonEmission": 200
-    },
     "region": "South America",
     "established": 2015,
     "responsibilities": [
@@ -3248,6 +3269,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ar",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 10,
+      "carbonEmission": 200,
+      "_deprecated": true
     }
   },
   {
@@ -3259,10 +3285,6 @@
     "flagUrl": "https://flagcdn.com/co.svg",
     "descriptionZh": "哥伦比亚环境部管理全球生物多样性第二丰富的国家的自然资源保护。",
     "descriptionEn": "Colombia's ministry manages natural resource protection for the world's second most biodiverse country.",
-    "data": {
-      "forestCoverage": 53,
-      "carbonEmission": 100
-    },
     "region": "South America",
     "established": 1993,
     "responsibilities": [
@@ -3373,6 +3395,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/co",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 53,
+      "carbonEmission": 100,
+      "_deprecated": true
     }
   },
   {
@@ -3384,10 +3411,6 @@
     "flagUrl": "https://flagcdn.com/th.svg",
     "descriptionZh": "泰国自然资源部负责保护热带雨林和海洋生态，推动绿色旅游发展。",
     "descriptionEn": "Thailand's ministry protects tropical rainforests and marine ecology, promoting green tourism development.",
-    "data": {
-      "forestCoverage": 38,
-      "carbonEmission": 300
-    },
     "region": "Asia",
     "established": 2002,
     "responsibilities": [
@@ -3498,6 +3521,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/th",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 38,
+      "carbonEmission": 300,
+      "_deprecated": true
     }
   },
   {
@@ -3509,10 +3537,6 @@
     "flagUrl": "https://flagcdn.com/nl.svg",
     "descriptionZh": "荷兰水管理部在水资源管理和防洪方面全球领先，推动循环经济发展。",
     "descriptionEn": "The Netherlands' ministry leads globally in water management and flood prevention, advancing the circular economy.",
-    "data": {
-      "forestCoverage": 11,
-      "carbonEmission": 180
-    },
     "region": "Europe",
     "established": 2010,
     "responsibilities": [
@@ -3624,6 +3648,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/nl",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 11,
+      "carbonEmission": 180,
+      "_deprecated": true
     }
   },
   {
@@ -3635,10 +3664,6 @@
     "flagUrl": "https://flagcdn.com/tr.svg",
     "descriptionZh": "土耳其环境部致力于城市可持续发展和应对气候变化，保护横跨欧亚的独特生态。",
     "descriptionEn": "Turkey's ministry focuses on sustainable urban development and climate change, protecting unique transcontinental ecosystems.",
-    "data": {
-      "forestCoverage": 28,
-      "carbonEmission": 500
-    },
     "region": "Asia",
     "established": 2003,
     "responsibilities": [
@@ -3749,6 +3774,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/tr",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 28,
+      "carbonEmission": 500,
+      "_deprecated": true
     }
   },
   {
@@ -3760,10 +3790,6 @@
     "flagUrl": "https://flagcdn.com/dk.svg",
     "descriptionZh": "丹麦环境部负责环境与自然保护政策，推动绿色能源转型，是全球风电发展的领导者。",
     "descriptionEn": "Denmark's Ministry of Environment manages environmental and nature protection policy, driving green energy transition as a global leader in wind power.",
-    "data": {
-      "forestCoverage": 14,
-      "carbonEmission": 33
-    },
     "region": "Europe",
     "established": 1971,
     "responsibilities": [
@@ -3875,6 +3901,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/dk",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 14,
+      "carbonEmission": 33,
+      "_deprecated": true
     }
   },
   {
@@ -3886,10 +3917,6 @@
     "flagUrl": "https://flagcdn.com/fi.svg",
     "descriptionZh": "芬兰环境部负责环境保护、住房建设和气候政策，是全球清洁技术的先驱国家。",
     "descriptionEn": "Finland's Ministry of the Environment handles environmental protection, housing, and climate policy. Finland is a global pioneer in clean technology.",
-    "data": {
-      "forestCoverage": 73,
-      "carbonEmission": 48
-    },
     "region": "Europe",
     "established": 1983,
     "responsibilities": [
@@ -4001,6 +4028,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/fi",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 73,
+      "carbonEmission": 48,
+      "_deprecated": true
     }
   },
   {
@@ -4012,10 +4044,6 @@
     "flagUrl": "https://flagcdn.com/ch.svg",
     "descriptionZh": "瑞士联邦环境办公室负责环境保护、自然灾害防治和资源管理，以高标准的环境治理著称。",
     "descriptionEn": "Switzerland's FOEN handles environmental protection, natural hazard prevention, and resource management, known for its high environmental governance standards.",
-    "data": {
-      "forestCoverage": 32,
-      "carbonEmission": 46
-    },
     "region": "Europe",
     "established": 1971,
     "responsibilities": [
@@ -4126,6 +4154,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ch",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 32,
+      "carbonEmission": 46,
+      "_deprecated": true
     }
   },
   {
@@ -4137,10 +4170,6 @@
     "flagUrl": "https://flagcdn.com/at.svg",
     "descriptionZh": "奥地利气候行动部统筹环境保护、能源转型与交通脱碳政策，推动阿尔卑斯生态保护。",
     "descriptionEn": "Austria's BMK coordinates environmental protection, energy transition and transport decarbonization, promoting Alpine ecological protection.",
-    "data": {
-      "forestCoverage": 47,
-      "carbonEmission": 77
-    },
     "region": "Europe",
     "established": 2020,
     "responsibilities": [
@@ -4252,6 +4281,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/at",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 47,
+      "carbonEmission": 77,
+      "_deprecated": true
     }
   },
   {
@@ -4263,10 +4297,6 @@
     "flagUrl": "https://flagcdn.com/pt.svg",
     "descriptionZh": "葡萄牙环境部推动可再生能源和碳中和战略，在太阳能和海洋能源领域表现突出。",
     "descriptionEn": "Portugal's ministry promotes renewable energy and carbon neutrality, excelling in solar and ocean energy development.",
-    "data": {
-      "forestCoverage": 36,
-      "carbonEmission": 50
-    },
     "region": "Europe",
     "established": 1990,
     "responsibilities": [
@@ -4378,6 +4408,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/pt",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 36,
+      "carbonEmission": 50,
+      "_deprecated": true
     }
   },
   {
@@ -4389,10 +4424,6 @@
     "flagUrl": "https://flagcdn.com/il.svg",
     "descriptionZh": "以色列环境保护部在水资源回收利用和沙漠农业技术方面全球领先，推动清洁技术创新。",
     "descriptionEn": "Israel's Ministry of Environmental Protection leads globally in water recycling and desert agriculture technology, driving clean-tech innovation.",
-    "data": {
-      "forestCoverage": 7,
-      "carbonEmission": 65
-    },
     "region": "Asia",
     "established": 1988,
     "responsibilities": [
@@ -4499,6 +4530,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/il",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 7,
+      "carbonEmission": 65,
+      "_deprecated": true
     }
   },
   {
@@ -4510,10 +4546,6 @@
     "flagUrl": "https://flagcdn.com/ae.svg",
     "descriptionZh": "阿联酋气候变化与环境部推动绿色经济多元化，是COP28的主办国，大力投资清洁能源。",
     "descriptionEn": "UAE's Ministry of Climate Change and Environment drives green economic diversification, hosted COP28, and invests heavily in clean energy.",
-    "data": {
-      "forestCoverage": 4,
-      "carbonEmission": 200
-    },
     "region": "Asia",
     "established": 2016,
     "responsibilities": [
@@ -4624,6 +4656,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ae",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 4,
+      "carbonEmission": 200,
+      "_deprecated": true
     }
   },
   {
@@ -4635,10 +4672,6 @@
     "flagUrl": "https://flagcdn.com/my.svg",
     "descriptionZh": "马来西亚自然资源部负责管理热带雨林和生物多样性资源，推动棕榈油产业的可持续发展。",
     "descriptionEn": "Malaysia's NRES manages tropical rainforests and biodiversity resources, promoting sustainable development in the palm oil industry.",
-    "data": {
-      "forestCoverage": 55,
-      "carbonEmission": 250
-    },
     "region": "Asia",
     "established": 2022,
     "responsibilities": [
@@ -4745,6 +4778,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/my",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 55,
+      "carbonEmission": 250,
+      "_deprecated": true
     }
   },
   {
@@ -4756,10 +4794,6 @@
     "flagUrl": "https://flagcdn.com/vn.svg",
     "descriptionZh": "越南自然资源与环境部负责土地、水资源和环境管理，应对湄公河三角洲气候脆弱性。",
     "descriptionEn": "Vietnam's MONRE manages land, water resources, and environmental protection, addressing climate vulnerability in the Mekong Delta.",
-    "data": {
-      "forestCoverage": 42,
-      "carbonEmission": 350
-    },
     "region": "Asia",
     "established": 2002,
     "responsibilities": [
@@ -4866,6 +4900,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/vn",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 42,
+      "carbonEmission": 350,
+      "_deprecated": true
     }
   },
   {
@@ -4877,10 +4916,6 @@
     "flagUrl": "https://flagcdn.com/ph.svg",
     "descriptionZh": "菲律宾环境部负责森林、矿产和海洋资源管理，是全球台风频发区的气候适应先行者。",
     "descriptionEn": "The Philippines' DENR manages forests, minerals, and marine resources, pioneering climate adaptation in a typhoon-prone region.",
-    "data": {
-      "forestCoverage": 24,
-      "carbonEmission": 170
-    },
     "region": "Asia",
     "established": 1987,
     "responsibilities": [
@@ -4987,6 +5022,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ph",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 24,
+      "carbonEmission": 170,
+      "_deprecated": true
     }
   },
   {
@@ -4998,10 +5038,6 @@
     "flagUrl": "https://flagcdn.com/cl.svg",
     "descriptionZh": "智利环境部负责保护安第斯山脉和巴塔哥尼亚生态系统，是拉美气候立法的先行者。",
     "descriptionEn": "Chile's Ministry of the Environment protects Andean and Patagonian ecosystems, pioneering climate legislation in Latin America.",
-    "data": {
-      "forestCoverage": 24,
-      "carbonEmission": 100
-    },
     "region": "South America",
     "established": 2010,
     "responsibilities": [
@@ -5112,6 +5148,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/cl",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 24,
+      "carbonEmission": 100,
+      "_deprecated": true
     }
   },
   {
@@ -5123,10 +5164,6 @@
     "flagUrl": "https://flagcdn.com/pe.svg",
     "descriptionZh": "秘鲁环境部负责保护亚马逊雨林和安第斯高原生态，管理全球生物多样性最丰富的地区之一。",
     "descriptionEn": "Peru's MINAM protects the Amazon rainforest and Andean highland ecology, managing one of the world's most biodiverse regions.",
-    "data": {
-      "forestCoverage": 58,
-      "carbonEmission": 55
-    },
     "region": "South America",
     "established": 2008,
     "responsibilities": [
@@ -5237,6 +5274,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/pe",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 58,
+      "carbonEmission": 55,
+      "_deprecated": true
     }
   },
   {
@@ -5248,10 +5290,6 @@
     "flagUrl": "https://flagcdn.com/ma.svg",
     "descriptionZh": "摩洛哥能源转型部推动非洲最大的太阳能项目，是非洲清洁能源转型的领导者。",
     "descriptionEn": "Morocco's ministry drives Africa's largest solar energy projects, leading clean energy transition on the continent.",
-    "data": {
-      "forestCoverage": 13,
-      "carbonEmission": 70
-    },
     "region": "Africa",
     "established": 2021,
     "responsibilities": [
@@ -5358,6 +5396,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ma",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 13,
+      "carbonEmission": 70,
+      "_deprecated": true
     }
   },
   {
@@ -5369,10 +5412,6 @@
     "flagUrl": "https://flagcdn.com/gh.svg",
     "descriptionZh": "加纳环境部推动西非绿色发展议程，在碳交易和可再生能源领域积极探索。",
     "descriptionEn": "Ghana's ministry promotes the West African green development agenda, actively exploring carbon trading and renewable energy.",
-    "data": {
-      "forestCoverage": 21,
-      "carbonEmission": 20
-    },
     "region": "Africa",
     "established": 1993,
     "responsibilities": [
@@ -5479,6 +5518,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/gh",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 21,
+      "carbonEmission": 20,
+      "_deprecated": true
     }
   },
   {
@@ -5490,10 +5534,6 @@
     "flagUrl": "https://flagcdn.com/cr.svg",
     "descriptionZh": "哥斯达黎加环境部以「生态支付」模式全球闻名，可再生能源发电占比超过98%，是碳中和先驱。",
     "descriptionEn": "Costa Rica's MINAE is globally renowned for its 'Payment for Ecosystem Services' model, with over 98% renewable electricity generation, pioneering carbon neutrality.",
-    "data": {
-      "forestCoverage": 54,
-      "carbonEmission": 10
-    },
     "region": "North America",
     "established": 1986,
     "responsibilities": [
@@ -5600,6 +5640,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/cr",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 54,
+      "carbonEmission": 10,
+      "_deprecated": true
     }
   },
   {
@@ -5611,10 +5656,6 @@
     "flagUrl": "https://flagcdn.com/pl.svg",
     "descriptionZh": "波兰气候与环境部推动煤炭经济向绿色经济转型，管理欧洲最大的原始森林之一。",
     "descriptionEn": "Poland's Ministry of Climate and Environment drives the transition from coal to green economy, managing one of Europe's largest primeval forests.",
-    "data": {
-      "forestCoverage": 31,
-      "carbonEmission": 380
-    },
     "region": "Europe",
     "established": 2019,
     "responsibilities": [
@@ -5726,6 +5767,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/pl",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 31,
+      "carbonEmission": 380,
+      "_deprecated": true
     }
   },
   {
@@ -5737,10 +5783,6 @@
     "flagUrl": "https://flagcdn.com/fj.svg",
     "descriptionZh": "斐济环境部积极推动太平洋岛国气候适应议程，是COP23主席国，海洋保护的全球倡导者。",
     "descriptionEn": "Fiji's ministry actively promotes the Pacific island climate adaptation agenda, presided over COP23, and is a global advocate for ocean protection.",
-    "data": {
-      "forestCoverage": 55,
-      "carbonEmission": 2
-    },
     "region": "Oceania",
     "established": 1999,
     "responsibilities": [
@@ -5847,6 +5889,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/fj",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 55,
+      "carbonEmission": 2,
+      "_deprecated": true
     }
   },
   {
@@ -5858,10 +5905,6 @@
     "flagUrl": "https://flagcdn.com/et.svg",
     "descriptionZh": "埃塞俄比亚环境委员会推动绿色遗产倡议，在全国范围内开展大规模植树造林运动。",
     "descriptionEn": "Ethiopia's commission drives the Green Legacy Initiative, conducting large-scale tree planting campaigns nationwide.",
-    "data": {
-      "forestCoverage": 15,
-      "carbonEmission": 25
-    },
     "region": "Africa",
     "established": 2018,
     "responsibilities": [
@@ -5972,6 +6015,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/et",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 15,
+      "carbonEmission": 25,
+      "_deprecated": true
     }
   },
   {
@@ -6003,10 +6051,6 @@
         "year": 2012
       }
     ],
-    "data": {
-      "forestCoverage": 5,
-      "carbonEmission": 235
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-11-10",
@@ -6092,6 +6136,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/pk",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 5,
+      "carbonEmission": 235,
+      "_deprecated": true
     }
   },
   {
@@ -6123,10 +6172,6 @@
         "year": 2010
       }
     ],
-    "data": {
-      "forestCoverage": 11,
-      "carbonEmission": 100
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
@@ -6212,6 +6257,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/bd",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 11,
+      "carbonEmission": 100,
+      "_deprecated": true
     }
   },
   {
@@ -6238,10 +6288,6 @@
         "year": 2009
       }
     ],
-    "data": {
-      "forestCoverage": 2,
-      "carbonEmission": 200
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2021-02-01",
@@ -6318,6 +6364,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/iq",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 2,
+      "carbonEmission": 200,
+      "_deprecated": true
     }
   },
   {
@@ -6344,10 +6395,6 @@
         "year": 1974
       }
     ],
-    "data": {
-      "forestCoverage": 7,
-      "carbonEmission": 750
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-11-22",
@@ -6425,6 +6472,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ir",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 7,
+      "carbonEmission": 750,
+      "_deprecated": true
     }
   },
   {
@@ -6456,10 +6508,6 @@
         "year": 2013
       }
     ],
-    "data": {
-      "forestCoverage": 1,
-      "carbonEmission": 300
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-12-06",
@@ -6541,6 +6589,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/kz",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 1,
+      "carbonEmission": 300,
+      "_deprecated": true
     }
   },
   {
@@ -6572,10 +6625,6 @@
         "year": 2017
       }
     ],
-    "data": {
-      "forestCoverage": 16,
-      "carbonEmission": 210
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-09-19",
@@ -6661,6 +6710,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ua",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 16,
+      "carbonEmission": 210,
+      "_deprecated": true
     }
   },
   {
@@ -6692,10 +6746,6 @@
         "year": 2006
       }
     ],
-    "data": {
-      "forestCoverage": 32,
-      "carbonEmission": 70
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
@@ -6782,6 +6832,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/gr",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 32,
+      "carbonEmission": 70,
+      "_deprecated": true
     }
   },
   {
@@ -6808,10 +6863,6 @@
         "year": 2021
       }
     ],
-    "data": {
-      "forestCoverage": 11,
-      "carbonEmission": 60
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
@@ -6898,6 +6949,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ie",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 11,
+      "carbonEmission": 60,
+      "_deprecated": true
     }
   },
   {
@@ -6929,10 +6985,6 @@
         "year": 2008
       }
     ],
-    "data": {
-      "forestCoverage": 30,
-      "carbonEmission": 80
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-06-01",
@@ -7019,6 +7071,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ro",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 30,
+      "carbonEmission": 80,
+      "_deprecated": true
     }
   },
   {
@@ -7050,10 +7107,6 @@
         "year": 2017
       }
     ],
-    "data": {
-      "forestCoverage": 34,
-      "carbonEmission": 110
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-10-05",
@@ -7140,6 +7193,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/cz",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 34,
+      "carbonEmission": 110,
+      "_deprecated": true
     }
   },
   {
@@ -7166,10 +7224,6 @@
         "year": 2023
       }
     ],
-    "data": {
-      "forestCoverage": 23,
-      "carbonEmission": 110
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-04-06",
@@ -7256,6 +7310,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/be",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 23,
+      "carbonEmission": 110,
+      "_deprecated": true
     }
   },
   {
@@ -7282,10 +7341,6 @@
         "year": 2020
       }
     ],
-    "data": {
-      "forestCoverage": 23,
-      "carbonEmission": 55
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
@@ -7372,6 +7427,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/hu",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 23,
+      "carbonEmission": 55,
+      "_deprecated": true
     }
   },
   {
@@ -7398,10 +7458,6 @@
         "year": 2004
       }
     ],
-    "data": {
-      "forestCoverage": 52,
-      "carbonEmission": 15
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2018-04-18",
@@ -7483,6 +7539,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/tz",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 52,
+      "carbonEmission": 15,
+      "_deprecated": true
     }
   },
   {
@@ -7509,10 +7570,6 @@
         "year": 2003
       }
     ],
-    "data": {
-      "forestCoverage": 1,
-      "carbonEmission": 180
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-20",
@@ -7594,6 +7651,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/dz",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 1,
+      "carbonEmission": 180,
+      "_deprecated": true
     }
   },
   {
@@ -7620,10 +7682,6 @@
         "year": 2001
       }
     ],
-    "data": {
-      "forestCoverage": 43,
-      "carbonEmission": 12
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
@@ -7705,6 +7763,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/sn",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 43,
+      "carbonEmission": 12,
+      "_deprecated": true
     }
   },
   {
@@ -7736,10 +7799,6 @@
         "year": 2002
       }
     ],
-    "data": {
-      "forestCoverage": 67,
-      "carbonEmission": 5
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-12-13",
@@ -7821,6 +7880,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/cd",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 67,
+      "carbonEmission": 5,
+      "_deprecated": true
     }
   },
   {
@@ -7852,10 +7916,6 @@
         "year": 2017
       }
     ],
-    "data": {
-      "forestCoverage": 50,
-      "carbonEmission": 45
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-03-29",
@@ -7937,6 +7997,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ec",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 50,
+      "carbonEmission": 45,
+      "_deprecated": true
     }
   },
   {
@@ -7963,10 +8028,6 @@
         "year": 2000
       }
     ],
-    "data": {
-      "forestCoverage": 11,
-      "carbonEmission": 10
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-19",
@@ -8048,6 +8109,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/uy",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 11,
+      "carbonEmission": 10,
+      "_deprecated": true
     }
   },
   {
@@ -8074,10 +8140,6 @@
         "year": 2015
       }
     ],
-    "data": {
-      "forestCoverage": 52,
-      "carbonEmission": 10
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-04-10",
@@ -8159,6 +8221,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/jm",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 52,
+      "carbonEmission": 10,
+      "_deprecated": true
     }
   },
   {
@@ -8190,10 +8257,6 @@
         "year": 2015
       }
     ],
-    "data": {
-      "forestCoverage": 74,
-      "carbonEmission": 7
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
@@ -8275,6 +8338,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/pg",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 74,
+      "carbonEmission": 7,
+      "_deprecated": true
     }
   },
   {
@@ -8301,10 +8369,6 @@
         "year": 1980
       }
     ],
-    "data": {
-      "forestCoverage": 29,
-      "carbonEmission": 25
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
@@ -8386,6 +8450,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/lk",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 29,
+      "carbonEmission": 25,
+      "_deprecated": true
     }
   },
   {
@@ -8412,10 +8481,6 @@
         "year": 2019
       }
     ],
-    "data": {
-      "forestCoverage": 25,
-      "carbonEmission": 12
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
@@ -8497,6 +8562,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/np",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 25,
+      "carbonEmission": 12,
+      "_deprecated": true
     }
   },
   {
@@ -8523,10 +8593,6 @@
         "year": 2012
       }
     ],
-    "data": {
-      "forestCoverage": 42,
-      "carbonEmission": 30
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-09-19",
@@ -8603,6 +8669,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/mm",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 42,
+      "carbonEmission": 30,
+      "_deprecated": true
     }
   },
   {
@@ -8629,10 +8700,6 @@
         "year": 1996
       }
     ],
-    "data": {
-      "forestCoverage": 46,
-      "carbonEmission": 15
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-02-06",
@@ -8714,6 +8781,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/kh",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 46,
+      "carbonEmission": 15,
+      "_deprecated": true
     }
   },
   {
@@ -8740,10 +8812,6 @@
         "year": 2012
       }
     ],
-    "data": {
-      "forestCoverage": 8,
-      "carbonEmission": 35
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-09-21",
@@ -8825,6 +8893,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/mn",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 8,
+      "carbonEmission": 35,
+      "_deprecated": true
     }
   },
   {
@@ -8851,10 +8924,6 @@
         "year": 1992
       }
     ],
-    "data": {
-      "forestCoverage": 8,
-      "carbonEmission": 120
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2018-11-09",
@@ -8935,6 +9004,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/uz",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 8,
+      "carbonEmission": 120,
+      "_deprecated": true
     }
   },
   {
@@ -8961,10 +9035,6 @@
         "year": 1998
       }
     ],
-    "data": {
-      "forestCoverage": 46,
-      "carbonEmission": 35
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2020-11-10",
@@ -9041,6 +9111,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ao",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 46,
+      "carbonEmission": 35,
+      "_deprecated": true
     }
   },
   {
@@ -9067,10 +9142,6 @@
         "year": 1997
       }
     ],
-    "data": {
-      "forestCoverage": 36,
-      "carbonEmission": 10
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2018-06-04",
@@ -9152,6 +9223,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/mz",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 36,
+      "carbonEmission": 10,
+      "_deprecated": true
     }
   },
   {
@@ -9178,10 +9254,6 @@
         "year": 2006
       }
     ],
-    "data": {
-      "forestCoverage": 52,
-      "carbonEmission": 120
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-07-21",
@@ -9259,6 +9331,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/ve",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 52,
+      "carbonEmission": 120,
+      "_deprecated": true
     }
   },
   {
@@ -9285,10 +9362,6 @@
         "year": 2010
       }
     ],
-    "data": {
-      "forestCoverage": 50,
-      "carbonEmission": 25
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2016-10-05",
@@ -9366,6 +9439,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/bo",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 50,
+      "carbonEmission": 25,
+      "_deprecated": true
     }
   },
   {
@@ -9397,10 +9475,6 @@
         "year": 2017
       }
     ],
-    "data": {
-      "forestCoverage": 32,
-      "carbonEmission": 30
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-01-28",
@@ -9478,6 +9552,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/cu",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 32,
+      "carbonEmission": 30,
+      "_deprecated": true
     }
   },
   {
@@ -9504,10 +9583,6 @@
         "year": 2000
       }
     ],
-    "data": {
-      "forestCoverage": 41,
-      "carbonEmission": 25
-    },
     "parisAgreement": {
       "status": "ratified",
       "ratifiedDate": "2017-09-21",
@@ -9588,6 +9663,11 @@
         "country": "https://www.unccd.int/our-work/country-profile/do",
         "registry": "https://prais.unccd.int"
       }
+    },
+    "legacyData": {
+      "forestCoverage": 41,
+      "carbonEmission": 25,
+      "_deprecated": true
     }
   }
 ]
