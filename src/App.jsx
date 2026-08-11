@@ -150,23 +150,27 @@ export default function GlobalEnvironmentalAgencies() {
       const enrichedCountries = await loadAllDetails();
       const exportItems = (enrichedCountries || countries).filter((c) => selectedIds.has(c.isoCode));
       const regionLabel = REGIONS.find((r) => r.value === filters.regionFilter);
+      const isZh = language === "zh";
       const scopeName = filters.regionFilter
-        ? regionLabel?.labelEn || filters.regionFilter
-        : "Filtered Countries";
+        ? (isZh ? regionLabel?.labelZh : regionLabel?.labelEn) || filters.regionFilter
+        : isZh ? "筛选结果" : "Filtered Countries";
       const activeFilters = [
-        filters.regionFilter ? `Region: ${regionLabel?.labelEn || filters.regionFilter}` : null,
-        filters.search ? `Search: ${filters.search}` : null,
-        filters.complianceFilter ? `Compliance: ${filters.complianceFilter}` : null,
-        filters.tagFilter ? `Focus: ${filters.tagFilter}` : null,
-        filters.favOnly ? "Favorites only" : null,
+        filters.regionFilter
+          ? `${isZh ? "地区" : "Region"}: ${(isZh ? regionLabel?.labelZh : regionLabel?.labelEn) || filters.regionFilter}`
+          : null,
+        filters.search ? `${isZh ? "搜索" : "Search"}: ${filters.search}` : null,
+        filters.complianceFilter ? `${isZh ? "合规" : "Compliance"}: ${filters.complianceFilter}` : null,
+        filters.tagFilter ? `${isZh ? "专项" : "Focus"}: ${filters.tagFilter}` : null,
+        filters.favOnly ? (isZh ? "仅收藏" : "Favorites only") : null,
       ].filter(Boolean);
       const { generateRegionalPDF } = await import("./utils/generateRegionalPDF");
       await generateRegionalPDF(exportItems, {
         regionName: scopeName,
         filterSummary: activeFilters.length
-          ? `${exportItems.length} countries | ${activeFilters.join(" | ")}`
-          : `${exportItems.length} countries`,
+          ? `${exportItems.length} ${isZh ? "个国家" : "countries"} | ${activeFilters.join(" | ")}`
+          : `${exportItems.length} ${isZh ? "个国家" : "countries"}`,
         globalAvg,
+        language,
       });
     } catch (e) {
       console.error("Regional PDF generation failed:", e);

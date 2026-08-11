@@ -1,9 +1,10 @@
 /**
  * Generate a professional country environmental report PDF.
- * Uses jsPDF + svg2pdf.js, lazy-loaded at click time.
+ * Uses jsPDF + svg2pdf.js for English; canvas-based CJK rendering for Chinese.
  */
 import { computeCompositeScore } from "../components/RankingsView";
 import { TREATY_LABELS, NDC_RATING_CONFIG } from "../constants";
+import { addZhText, countZhLines } from "./chineseTextToPDF";
 
 // --- PDF Chart Helpers (pure SVG DOM, no React) ---
 
@@ -34,16 +35,13 @@ function createRadarSVG(labels, datasets, size = 200) {
     xmlns: "http://www.w3.org/2000/svg",
   });
 
-  // Grid rings
   for (const s of [25, 50, 75, 100]) {
     const polyPts = pts.map(p => `${cx + p.cos * r * s / 100},${cy + p.sin * r * s / 100}`).join(" ");
     svg.appendChild(createSVGElement("polygon", { points: polyPts, fill: "none", stroke: "#e5e7eb", "stroke-width": "0.8" }));
   }
-  // Axis lines
   pts.forEach(p => svg.appendChild(createSVGElement("line", {
     x1: cx, y1: cy, x2: cx + p.cos * r, y2: cy + p.sin * r, stroke: "#e5e7eb", "stroke-width": "0.8"
   })));
-  // Data polygons
   datasets.forEach(ds => {
     const polyPts = ds.data.map((v, i) => {
       const ratio = Math.min(v, 100) / 100;
@@ -62,7 +60,6 @@ function createRadarSVG(labels, datasets, size = 200) {
       });
     }
   });
-  // Labels
   labels.forEach((label, i) => {
     const lr = r + 16;
     const x = cx + pts[i].cos * lr, y = cy + pts[i].sin * lr;
@@ -94,7 +91,6 @@ function createTrendSVG(datasets, yUnit = "", width = 240, height = 100) {
     xmlns: "http://www.w3.org/2000/svg",
   });
 
-  // Y grid
   const fmtY = v => Math.abs(v) >= 1000 ? Math.round(v).toLocaleString() : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(2);
   for (let i = 0; i <= 3; i++) {
     const v = yMin + ((yMax - yMin) / 3) * i;
@@ -102,16 +98,13 @@ function createTrendSVG(datasets, yUnit = "", width = 240, height = 100) {
     svg.appendChild(createSVGElement("line", { x1: padLeft, y1: y, x2: width - padRight, y2: y, stroke: "#e5e7eb", "stroke-width": "0.5" }));
     svg.appendChild(createSVGElement("text", { x: padLeft - 3, y, "text-anchor": "end", "dominant-baseline": "central", fill: "#9ca3af", "font-size": "7", "font-family": "Helvetica" }, [fmtY(v) + yUnit]));
   }
-  // X labels
   years.forEach(yr => svg.appendChild(createSVGElement("text", {
     x: xS(yr), y: padTop + plotH + 12, "text-anchor": "middle", fill: "#9ca3af", "font-size": "7", "font-family": "Helvetica"
   }, [String(yr)])));
 
-  // Lines + dots
   datasets.forEach(ds => {
     if (!ds.data?.length) return;
     const sorted = [...ds.data].sort((a, b) => a.year - b.year);
-    // Split into segments for gap handling
     const segs = [];
     let seg = [sorted[0]];
     for (let i = 1; i < sorted.length; i++) {
@@ -137,7 +130,7 @@ function createTrendSVG(datasets, yUnit = "", width = 240, height = 100) {
   return svg;
 }
 
-// --- Scorecard logic (replicated from Scorecard.jsx) ---
+// --- Scorecard logic ---
 
 function computePercentile(value, allValues) {
   if (!allValues.length) return 50;
@@ -166,13 +159,22 @@ function getDimValue(c, dim) {
   }
 }
 
-const DIMS = [
+const DIMS_EN = [
   { key: "epi", label: "EPI Score" },
   { key: "renewable", label: "Renewable Energy" },
   { key: "forest", label: "Forest Coverage" },
   { key: "protected", label: "Protected Areas" },
   { key: "air", label: "Air Quality" },
   { key: "co2", label: "CO₂ Efficiency" },
+];
+
+const DIMS_ZH = [
+  { key: "epi", label: "EPI 分数" },
+  { key: "renewable", label: "可再生能源" },
+  { key: "forest", label: "森林覆盖" },
+  { key: "protected", label: "自然保护区" },
+  { key: "air", label: "空气质量" },
+  { key: "co2", label: "碳排效率" },
 ];
 
 // --- Main PDF Generator ---
@@ -183,39 +185,73 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
     import("svg2pdf.js"),
   ]);
 
-  // PDF always uses English labels (jsPDF built-in fonts don't support CJK)
-  const t = (_zh, en) => en;
+  const isZh = language === "zh";
+  const t = (zh, en) => isZh ? zh : en;
+
   const doc = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
   const W = 210, H = 297;
   const ML = 15, MR = 15, MT = 15;
-  const CW = W - ML - MR; // content width
+  const CW = W - ML - MR;
   let y = MT;
 
-  // Colors
-  const GREEN = [22, 163, 74];   // green-600
-  const GRAY = [107, 114, 128];  // gray-500
-  const DARK = [31, 41, 55];     // gray-800
-  const LIGHT = [243, 244, 246]; // gray-100
+  const GREEN = [22, 163, 74];
+  const GRAY = [107, 114, 128];
+  const DARK = [31, 41, 55];
+  const LIGHT = [243, 244, 246];
+  const GREEN_HEX = "#16a34a";
+  const GRAY_HEX = "#6b7280";
+  const DARK_HEX = "#1f2937";
 
-  // --- Helper functions ---
+  // Helper: render text — uses canvas for Chinese strings, jsPDF for Latin
+  function txt(text, x, yPos, { fontSize = 10, color = DARK, bold = false, align = "left", maxWidthMm = 0 } = {}) {
+    if (!text) return { heightMm: 0, numLines: 0 };
+    if (isZh) {
+      return addZhText(doc, text, x, yPos, { fontSize, color, bold, align, maxWidthMm });
+    }
+    doc.setFontSize(fontSize);
+    doc.setFont("helvetica", bold ? "bold" : "normal");
+    doc.setTextColor(...(Array.isArray(color) ? color : [0, 0, 0]));
+    if (maxWidthMm > 0) {
+      const lines = doc.splitTextToSize(text, maxWidthMm);
+      doc.text(lines, x, yPos, { align });
+      return { heightMm: lines.length * fontSize * 0.352 * 1.2, numLines: lines.length };
+    }
+    doc.text(text, x, yPos, { align });
+    return { heightMm: fontSize * 0.352, numLines: 1 };
+  }
+
   function addPage() { doc.addPage(); y = MT; drawFooter(); }
-
   function checkPageBreak(needed) { if (y + needed > H - 20) addPage(); }
 
   function drawFooter() {
     doc.setFontSize(7);
     doc.setTextColor(...GRAY);
+    doc.setFont("helvetica", "normal");
     const date = new Date().toISOString().slice(0, 10);
-    doc.text(`Generated ${date} | Data: World Bank, Yale EPI, Climate Action Tracker, IQAir, UNFCCC`, ML, H - 8);
-    doc.text(`Global Environmental Governance Tracker`, W - MR, H - 8, { align: "right" });
+    const footerLeft = t(
+      `生成于 ${date} | 数据来源: 世界银行、耶鲁EPI、气候行动追踪、IQAir、UNFCCC`,
+      `Generated ${date} | Data: World Bank, Yale EPI, Climate Action Tracker, IQAir, UNFCCC`
+    );
+    const footerRight = t("全球环境治理追踪系统", "Global Environmental Governance Tracker");
+    if (isZh) {
+      addZhText(doc, footerLeft, ML, H - 8, { fontSize: 7, color: GRAY });
+      addZhText(doc, footerRight, W - MR, H - 8, { fontSize: 7, color: GRAY, align: "right" });
+    } else {
+      doc.text(footerLeft, ML, H - 8);
+      doc.text(footerRight, W - MR, H - 8, { align: "right" });
+    }
   }
 
   function sectionTitle(text) {
     checkPageBreak(12);
-    doc.setFontSize(11);
-    doc.setTextColor(...GREEN);
-    doc.setFont("helvetica", "bold");
-    doc.text(text, ML, y);
+    if (isZh) {
+      addZhText(doc, text, ML, y, { fontSize: 11, color: GREEN, bold: true });
+    } else {
+      doc.setFontSize(11);
+      doc.setTextColor(...GREEN);
+      doc.setFont("helvetica", "bold");
+      doc.text(text, ML, y);
+    }
     y += 2;
     doc.setDrawColor(...GREEN);
     doc.setLineWidth(0.5);
@@ -223,38 +259,32 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
     y += 5;
   }
 
-  function labelValue(label, value, x, width) {
-    doc.setFontSize(8);
-    doc.setTextColor(...GRAY);
-    doc.setFont("helvetica", "normal");
-    doc.text(label, x, y);
-    doc.setTextColor(...DARK);
-    doc.setFont("helvetica", "bold");
-    doc.text(String(value ?? "—"), x + width, y, { align: "right" });
-  }
-
-  // --- PAGE 1: Header + Overview ---
-  // Green header bar
+  // --- PAGE 1: Header ---
   doc.setFillColor(...GREEN);
   doc.rect(0, 0, W, 32, "F");
 
-  // Country name
   doc.setTextColor(255, 255, 255);
-  doc.setFontSize(20);
-  doc.setFont("helvetica", "bold");
-  doc.text(country.countryEn, ML, 14);
+  const countryName = t(country.countryZh, country.countryEn);
+  const agencyName = t(country.agencyZh, country.agencyEn);
 
-  doc.setFontSize(10);
-  doc.setFont("helvetica", "normal");
-  doc.text(country.agencyEn, ML, 21);
+  if (isZh) {
+    addZhText(doc, countryName, ML, 14, { fontSize: 20, color: "#ffffff", bold: true });
+    addZhText(doc, agencyName, ML, 21, { fontSize: 10, color: "#ffffff" });
+  } else {
+    doc.setFontSize(20);
+    doc.setFont("helvetica", "bold");
+    doc.text(country.countryEn, ML, 14);
+    doc.setFontSize(10);
+    doc.setFont("helvetica", "normal");
+    doc.text(country.agencyEn, ML, 21);
+  }
 
-  // Badges
   doc.setFontSize(8);
   const badges = [
     country.region,
-    `Est. ${country.established}`,
+    `${t("成立", "Est.")} ${country.established}`,
     `EPI ${country.epiScore}`,
-    country.netZeroTarget ? `Net Zero ${country.netZeroTarget}` : null,
+    country.netZeroTarget ? `${t("净零", "Net Zero")} ${country.netZeroTarget}` : null,
   ].filter(Boolean);
   let bx = ML;
   badges.forEach(badge => {
@@ -276,9 +306,9 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
   const myComposite = computeCompositeScore(country);
   const overallPct = computePercentile(myComposite, allComposite);
   const overallGrade = percentileToGrade(overallPct);
+  const gradeColor = GRADE_COLORS[overallGrade] || "#6b7280";
 
   // Grade circle
-  const gradeColor = GRADE_COLORS[overallGrade] || "#6b7280";
   doc.setFillColor(gradeColor);
   doc.circle(ML + 8, y + 5, 7, "F");
   doc.setTextColor(255, 255, 255);
@@ -286,16 +316,28 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
   doc.setFont("helvetica", "bold");
   doc.text(overallGrade, ML + 8, y + 6.5, { align: "center" });
 
-  doc.setTextColor(...DARK);
-  doc.setFontSize(10);
-  doc.text(`Composite Score: ${myComposite}/100`, ML + 20, y + 3);
-  doc.setFontSize(8);
-  doc.setTextColor(...GRAY);
-  doc.text(`Top ${Math.round(overallPct)}% of ${allCountries.length} countries`, ML + 20, y + 8);
+  const scoreLabel = t(`综合评分: ${myComposite}/100`, `Composite Score: ${myComposite}/100`);
+  const rankLabel = t(
+    `在 ${allCountries.length} 个国家中排名前 ${Math.round(100 - overallPct)}%`,
+    `Top ${Math.round(overallPct)}% of ${allCountries.length} countries`
+  );
+
+  if (isZh) {
+    addZhText(doc, scoreLabel, ML + 20, y + 3, { fontSize: 10, color: DARK, bold: true });
+    addZhText(doc, rankLabel, ML + 20, y + 8, { fontSize: 8, color: GRAY });
+  } else {
+    doc.setTextColor(...DARK);
+    doc.setFontSize(10);
+    doc.text(scoreLabel, ML + 20, y + 3);
+    doc.setFontSize(8);
+    doc.setTextColor(...GRAY);
+    doc.text(rankLabel, ML + 20, y + 8);
+  }
 
   y += 15;
 
   // Dimension bars
+  const DIMS = isZh ? DIMS_ZH : DIMS_EN;
   DIMS.forEach(dim => {
     const allVals = allCountries.map(c => getDimValue(c, dim.key));
     const myVal = getDimValue(country, dim.key);
@@ -303,12 +345,15 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
     const grade = percentileToGrade(pct);
     const gc = GRADE_COLORS[grade] || "#6b7280";
 
-    doc.setFontSize(7.5);
-    doc.setTextColor(...GRAY);
-    doc.setFont("helvetica", "normal");
-    doc.text(dim.label, ML, y + 3);
+    if (isZh) {
+      addZhText(doc, dim.label, ML, y + 3, { fontSize: 7.5, color: GRAY });
+    } else {
+      doc.setFontSize(7.5);
+      doc.setTextColor(...GRAY);
+      doc.setFont("helvetica", "normal");
+      doc.text(dim.label, ML, y + 3);
+    }
 
-    // Grade badge
     doc.setFillColor(gc);
     doc.roundedRect(ML + 35, y, 8, 4.5, 1, 1, "F");
     doc.setTextColor(255, 255, 255);
@@ -316,7 +361,6 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
     doc.setFont("helvetica", "bold");
     doc.text(grade, ML + 39, y + 3.2, { align: "center" });
 
-    // Bar
     const barX = ML + 46, barW = CW - 60;
     doc.setFillColor(...LIGHT);
     doc.roundedRect(barX, y + 0.5, barW, 3.5, 1, 1, "F");
@@ -325,7 +369,6 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
     doc.setFillColor(...barColor);
     doc.roundedRect(barX, y + 0.5, fillW, 3.5, 1, 1, "F");
 
-    // Percentile
     doc.setTextColor(...GRAY);
     doc.setFontSize(7);
     doc.setFont("helvetica", "normal");
@@ -341,7 +384,7 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
 
   const dy = country.wb?.dataYear || {};
   const metrics = [
-    { label: t("森林覆盖率", "Forest Area"), value: country.wb?.forestArea?.toFixed(1) + "%" ?? "—", avg: globalAvg.forestCoverage + "%", year: dy.forestArea },
+    { label: t("森林覆盖率", "Forest Area"), value: (country.wb?.forestArea?.toFixed(1) ?? "—") + "%", avg: globalAvg.forestCoverage + "%", year: dy.forestArea },
     { label: t("可再生能源", "Renewable Energy"), value: (country.wb?.renewableEnergy?.toFixed(1) ?? "—") + "%", avg: globalAvg.renewableEnergy + "%", year: dy.renewableEnergy },
     { label: t("自然保护区", "Protected Areas"), value: (country.wb?.protectedAreas?.toFixed(1) ?? "—") + "%", avg: globalAvg.protectedAreas + "%", year: dy.protectedAreas },
     { label: "PM2.5 (µg/m³)", value: country.wb?.pm25?.toFixed(1) ?? "—", avg: String(globalAvg.pm25), year: dy.pm25 },
@@ -363,11 +406,18 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
     doc.setFont("helvetica", "bold");
     doc.text(m.value, mx + (colW - 3) / 2, y + 5.5, { align: "center" });
 
-    doc.setTextColor(...GRAY);
-    doc.setFontSize(6.5);
-    doc.setFont("helvetica", "normal");
-    doc.text(m.label, mx + (colW - 3) / 2, y + 9.5, { align: "center" });
-    doc.text(`Avg ${m.avg}${m.year ? ` | ${m.year}` : ""}`, mx + (colW - 3) / 2, y + 12.5, { align: "center" });
+    const avgLabel = t(`均 ${m.avg}`, `Avg ${m.avg}`) + (m.year ? ` | ${m.year}` : "");
+
+    if (isZh) {
+      addZhText(doc, m.label, mx + (colW - 3) / 2, y + 9.5, { fontSize: 6.5, color: GRAY, align: "center" });
+      addZhText(doc, avgLabel, mx + (colW - 3) / 2, y + 12.5, { fontSize: 6, color: GRAY, align: "center" });
+    } else {
+      doc.setTextColor(...GRAY);
+      doc.setFontSize(6.5);
+      doc.setFont("helvetica", "normal");
+      doc.text(m.label, mx + (colW - 3) / 2, y + 9.5, { align: "center" });
+      doc.text(avgLabel, mx + (colW - 3) / 2, y + 12.5, { align: "center" });
+    }
   });
 
   y += 20;
@@ -377,26 +427,56 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
 
   const ndcCfg = NDC_RATING_CONFIG[country.parisAgreement?.ndcRating] || {};
   const compliance = [
-    { label: "NDC Rating", value: ndcCfg.en || "N/A", good: ["1.5C", "2C", "almost_sufficient"].includes(country.parisAgreement?.ndcRating) },
-    { label: "Carbon Price", value: country.carbonPricing?.priceUSD != null ? `$${country.carbonPricing.priceUSD}/t` : "None", good: country.carbonPricing?.priceUSD != null },
-    { label: "BTR Status", value: country.reportingStatus?.btrSubmitted ? `Submitted (${country.reportingStatus.btrYear})` : "Pending", good: country.reportingStatus?.btrSubmitted },
-    { label: "Kigali Amendment", value: country.montrealProtocol?.kigaliAmendment ? "Ratified" : "Not ratified", good: country.montrealProtocol?.kigaliAmendment },
-    { label: "CBD 30×30", value: (country.wb?.protectedAreas ?? 0) >= 30 ? `Met (${country.wb?.protectedAreas?.toFixed(1)}%)` : `${country.wb?.protectedAreas?.toFixed(1) ?? "—"}%`, good: (country.wb?.protectedAreas ?? 0) >= 30 },
+    {
+      label: t("NDC 评级", "NDC Rating"),
+      value: t(ndcCfg.zh, ndcCfg.en) || "N/A",
+      good: ["1.5C", "2C", "almost_sufficient"].includes(country.parisAgreement?.ndcRating),
+    },
+    {
+      label: t("碳价", "Carbon Price"),
+      value: country.carbonPricing?.priceUSD != null
+        ? `$${country.carbonPricing.priceUSD}/${t("吨", "t")}`
+        : t("无", "None"),
+      good: country.carbonPricing?.priceUSD != null,
+    },
+    {
+      label: t("BTR 状态", "BTR Status"),
+      value: country.reportingStatus?.btrSubmitted
+        ? t(`已提交 (${country.reportingStatus.btrYear || ""})`, `Submitted (${country.reportingStatus.btrYear || ""})`)
+        : t("待提交", "Pending"),
+      good: country.reportingStatus?.btrSubmitted,
+    },
+    {
+      label: t("基加利修正案", "Kigali Amendment"),
+      value: country.montrealProtocol?.kigaliAmendment ? t("已批准", "Ratified") : t("未批准", "Not ratified"),
+      good: country.montrealProtocol?.kigaliAmendment,
+    },
+    {
+      label: "CBD 30×30",
+      value: (country.wb?.protectedAreas ?? 0) >= 30
+        ? t(`达标 (${country.wb?.protectedAreas?.toFixed(1)}%)`, `Met (${country.wb?.protectedAreas?.toFixed(1)}%)`)
+        : `${country.wb?.protectedAreas?.toFixed(1) ?? "—"}%`,
+      good: (country.wb?.protectedAreas ?? 0) >= 30,
+    },
   ];
 
   compliance.forEach(c => {
-    doc.setFontSize(8);
-    doc.setFont("helvetica", "normal");
-    doc.setTextColor(...GRAY);
-    doc.text(c.label, ML, y + 3);
-
     const statusColor = c.good ? [22, 163, 74] : [220, 38, 38];
     doc.setFillColor(...statusColor);
     doc.circle(ML + 40, y + 2, 1.5, "F");
 
-    doc.setTextColor(...DARK);
-    doc.setFont("helvetica", "bold");
-    doc.text(c.value, ML + 44, y + 3);
+    if (isZh) {
+      addZhText(doc, c.label, ML, y + 3, { fontSize: 8, color: GRAY });
+      addZhText(doc, c.value, ML + 44, y + 3, { fontSize: 8, color: DARK, bold: true });
+    } else {
+      doc.setFontSize(8);
+      doc.setFont("helvetica", "normal");
+      doc.setTextColor(...GRAY);
+      doc.text(c.label, ML, y + 3);
+      doc.setTextColor(...DARK);
+      doc.setFont("helvetica", "bold");
+      doc.text(c.value, ML + 44, y + 3);
+    }
     y += 6;
   });
 
@@ -409,10 +489,13 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
   if (country.wb) {
     sectionTitle(t("环境综合画像", "Environmental Profile"));
 
-    const radarLabels = ["Forest", "Renewable", "Protected", "Air Quality", "CO₂ Eff.", "EPI"];
+    const radarLabels = isZh
+      ? ["森林", "可再生", "保护区", "空气", "碳效率", "EPI"]
+      : ["Forest", "Renewable", "Protected", "Air Quality", "CO₂ Eff.", "EPI"];
+
     const radarSVG = createRadarSVG(radarLabels, [
       {
-        label: country.countryEn,
+        label: t(country.countryZh, country.countryEn),
         data: [
           Math.min(country.wb.forestArea ?? 0, 100),
           Math.min(country.wb.renewableEnergy ?? 0, 100),
@@ -424,7 +507,7 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
         color: "#22c55e",
       },
       {
-        label: "Global Average",
+        label: t("全球平均", "Global Average"),
         data: [
           globalAvg.forestCoverage ?? 0,
           globalAvg.renewableEnergy ?? 0,
@@ -438,23 +521,30 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
       },
     ], 200);
 
-    // Embed SVG via svg2pdf.js
     document.body.appendChild(radarSVG);
     radarSVG.style.position = "absolute";
     radarSVG.style.left = "-9999px";
     await svg2pdf(radarSVG, doc, { x: ML + (CW - 60) / 2, y, width: 60, height: 60 });
     document.body.removeChild(radarSVG);
 
-    // Legend
     y += 62;
     doc.setFontSize(7);
     doc.setFillColor(34, 197, 94);
     doc.rect(ML + CW / 2 - 30, y, 3, 3, "F");
-    doc.setTextColor(...GRAY);
-    doc.text(country.countryEn, ML + CW / 2 - 25, y + 2.5);
-    doc.setFillColor(156, 163, 175);
-    doc.rect(ML + CW / 2 + 10, y, 3, 3, "F");
-    doc.text("Global Average", ML + CW / 2 + 15, y + 2.5);
+    const legendCountry = t(country.countryZh, country.countryEn);
+    const legendGlobal = t("全球平均", "Global Average");
+    if (isZh) {
+      addZhText(doc, legendCountry, ML + CW / 2 - 25, y + 2.5, { fontSize: 7, color: GRAY });
+      doc.setFillColor(156, 163, 175);
+      doc.rect(ML + CW / 2 + 20, y, 3, 3, "F");
+      addZhText(doc, legendGlobal, ML + CW / 2 + 25, y + 2.5, { fontSize: 7, color: GRAY });
+    } else {
+      doc.setTextColor(...GRAY);
+      doc.text(legendCountry, ML + CW / 2 - 25, y + 2.5);
+      doc.setFillColor(156, 163, 175);
+      doc.rect(ML + CW / 2 + 10, y, 3, 3, "F");
+      doc.text(legendGlobal, ML + CW / 2 + 15, y + 2.5);
+    }
     y += 8;
   }
 
@@ -477,9 +567,13 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
         if (i > 0 && col === 0) y += 42;
         const tx = ML + col * (trendW + 6);
 
-        doc.setFontSize(7);
-        doc.setTextColor(...GRAY);
-        doc.text(m.label, tx + trendW / 2, y + 3, { align: "center" });
+        if (isZh) {
+          addZhText(doc, m.label, tx + trendW / 2, y + 3, { fontSize: 7, color: GRAY, align: "center" });
+        } else {
+          doc.setFontSize(7);
+          doc.setTextColor(...GRAY);
+          doc.text(m.label, tx + trendW / 2, y + 3, { align: "center" });
+        }
 
         const tsvg = createTrendSVG(
           [{ data: country.wb.history[m.key], color: m.color }],
@@ -511,11 +605,21 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
       doc.setTextColor(...DARK);
       doc.setFont("helvetica", "bold");
       doc.text(`${law.year}`, ML, y + 3);
-      doc.setFont("helvetica", "normal");
-      const lawName = law.nameEn || law.name || law.nameZh || "";
-      const lines = doc.splitTextToSize(lawName, CW - 15);
-      doc.text(lines, ML + 14, y + 3);
-      y += lines.length * 3.5 + 2;
+
+      const lawName = isZh
+        ? (law.nameZh || law.nameEn || law.name || "")
+        : (law.nameEn || law.name || law.nameZh || "");
+
+      if (isZh && lawName) {
+        const numLines = countZhLines(lawName, CW - 15, 7.5);
+        addZhText(doc, lawName, ML + 14, y + 3, { fontSize: 7.5, color: DARK, maxWidthMm: CW - 15 });
+        y += numLines * 3.5 + 2;
+      } else {
+        doc.setFont("helvetica", "normal");
+        const lines = doc.splitTextToSize(lawName, CW - 15);
+        doc.text(lines, ML + 14, y + 3);
+        y += lines.length * 3.5 + 2;
+      }
     });
     y += 3;
   }
@@ -534,8 +638,7 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
       doc.setFontSize(7);
       doc.setTextColor(...DARK);
       doc.setFont("helvetica", "normal");
-      const name = treaty;
-      doc.text("• " + name, ML + col * tw, y + 3);
+      doc.text("• " + treaty, ML + col * tw, y + 3);
     });
     y += 8;
   }
@@ -548,25 +651,39 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
     country.parisAgreement.ndcHistory.forEach(h => {
       doc.setFontSize(7.5);
       doc.setTextColor(...GRAY);
+      doc.setFont("helvetica", "normal");
       doc.text(String(h.year), ML, y + 3);
       doc.setTextColor(...DARK);
       doc.text(h.version, ML + 14, y + 3);
       y += 5;
     });
 
-    if (country.parisAgreement.ndcTargetEn) {
+    const ndcTarget = isZh
+      ? (country.parisAgreement.ndcTargetZh || country.parisAgreement.ndcTargetEn || "")
+      : (country.parisAgreement.ndcTargetEn || country.parisAgreement.ndcTargetZh || "");
+
+    if (ndcTarget) {
       y += 2;
-      doc.setFontSize(7);
-      doc.setTextColor(...GRAY);
-      doc.setFont("helvetica", "italic");
-      const target = country.parisAgreement.ndcTargetEn || country.parisAgreement.ndcTargetZh || "";
-      const lines = doc.splitTextToSize(t("目标: ", "Target: ") + target, CW);
-      doc.text(lines, ML, y + 3);
-      y += lines.length * 3 + 3;
+      const targetFull = t("目标: ", "Target: ") + ndcTarget;
+      if (isZh) {
+        const numLines = countZhLines(targetFull, CW, 7);
+        addZhText(doc, targetFull, ML, y + 3, { fontSize: 7, color: GRAY, maxWidthMm: CW });
+        y += numLines * 3 + 3;
+      } else {
+        doc.setFontSize(7);
+        doc.setTextColor(...GRAY);
+        doc.setFont("helvetica", "italic");
+        const lines = doc.splitTextToSize(targetFull, CW);
+        doc.text(lines, ML, y + 3);
+        y += lines.length * 3 + 3;
+      }
     }
   }
 
   // Save
-  const filename = `${country.countryEn.replace(/\s+/g, "-")}-Environmental-Report-${new Date().toISOString().slice(0, 10)}.pdf`;
+  const nameForFile = (isZh ? country.countryZh : country.countryEn) || country.countryEn;
+  const filename = isZh
+    ? `${nameForFile}-环境报告-${new Date().toISOString().slice(0, 10)}.pdf`
+    : `${country.countryEn.replace(/\s+/g, "-")}-Environmental-Report-${new Date().toISOString().slice(0, 10)}.pdf`;
   doc.save(filename);
 }
