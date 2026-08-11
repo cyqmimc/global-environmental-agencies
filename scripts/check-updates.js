@@ -34,9 +34,9 @@ function main() {
   // --- 1. World Bank data ---
   let wbData;
   try {
-    wbData = JSON.parse(readFileSync(resolve(ROOT, "public/wb-data.json"), "utf-8"));
+    wbData = JSON.parse(readFileSync(resolve(ROOT, "public/wb-latest.json"), "utf-8"));
   } catch {
-    warn("wb-data.json not found! Run: npm run fetch-data");
+    warn("wb-latest.json not found! Run: npm run fetch-data");
   }
 
   if (wbData) {

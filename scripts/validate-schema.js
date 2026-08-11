@@ -144,14 +144,14 @@ if (errors.length) {
 console.log(`✓ countries.json validated · ${data.length} countries · ${warnings.length} warnings`);
 
 // ------------------------------------------------------------------
-// wb-data.json validation
+// wb-latest.json validation
 // ------------------------------------------------------------------
-const wbPath = path.join(__dirname, "..", "public", "wb-data.json");
+const wbPath = path.join(__dirname, "..", "public", "wb-latest.json");
 let wb;
 try {
   wb = JSON.parse(fs.readFileSync(wbPath, "utf8"));
 } catch (e) {
-  console.warn("⚠ wb-data.json not present, skipping WB schema check");
+  console.warn("⚠ wb-latest.json not present, skipping WB schema check");
   process.exit(0);
 }
 
@@ -159,7 +159,7 @@ const wbErrors = [];
 const wbWarnings = [];
 
 if (!wb.countries || typeof wb.countries !== "object") {
-  console.error("✗ wb-data.json: missing `countries` map");
+  console.error("✗ wb-latest.json: missing `countries` map");
   process.exit(1);
 }
 
@@ -220,15 +220,62 @@ for (const iso of isoSet) {
 }
 
 if (wbWarnings.length) {
-  console.warn(`⚠ wb-data.json: ${wbWarnings.length} warning(s)`);
+  console.warn(`⚠ wb-latest.json: ${wbWarnings.length} warning(s)`);
   wbWarnings.slice(0, 8).forEach((w) => console.warn("  -", w));
   if (wbWarnings.length > 8) console.warn(`  ...and ${wbWarnings.length - 8} more`);
 }
 
 if (wbErrors.length) {
-  console.error(`✗ wb-data.json: ${wbErrors.length} error(s)`);
+  console.error(`✗ wb-latest.json: ${wbErrors.length} error(s)`);
   wbErrors.forEach((e) => console.error("  -", e));
   process.exit(1);
 }
 
-console.log(`✓ wb-data.json validated · ${Object.keys(wb.countries).length} entries · ${wbWarnings.length} warnings`);
+console.log(`✓ wb-latest.json validated · ${Object.keys(wb.countries).length} entries · ${wbWarnings.length} warnings`);
+
+// ------------------------------------------------------------------
+// wb-history.json validation (structure only — trend-chart source)
+// ------------------------------------------------------------------
+const historyPath = path.join(__dirname, "..", "public", "wb-history.json");
+let wbHistory;
+try {
+  wbHistory = JSON.parse(fs.readFileSync(historyPath, "utf8"));
+} catch (e) {
+  console.warn("⚠ wb-history.json not present, skipping history schema check");
+  process.exit(0);
+}
+
+const historyErrors = [];
+const HISTORY_KEYS = new Set(["forestArea", "co2Mt", "renewableEnergy", "pm25"]);
+
+if (!wbHistory.countries || typeof wbHistory.countries !== "object") {
+  console.error("✗ wb-history.json: missing `countries` map");
+  process.exit(1);
+}
+
+for (const [iso, row] of Object.entries(wbHistory.countries)) {
+  for (const [key, points] of Object.entries(row)) {
+    if (!HISTORY_KEYS.has(key)) {
+      historyErrors.push(`${iso}: unexpected history key "${key}"`);
+      continue;
+    }
+    if (!Array.isArray(points)) {
+      historyErrors.push(`${iso}.${key}: expected an array of {year, value} points`);
+      continue;
+    }
+    for (const p of points) {
+      if (typeof p.year !== "number" || (p.value != null && typeof p.value !== "number")) {
+        historyErrors.push(`${iso}.${key}: malformed point ${JSON.stringify(p)}`);
+        break;
+      }
+    }
+  }
+}
+
+if (historyErrors.length) {
+  console.error(`✗ wb-history.json: ${historyErrors.length} error(s)`);
+  historyErrors.slice(0, 8).forEach((e) => console.error("  -", e));
+  process.exit(1);
+}
+
+console.log(`✓ wb-history.json validated · ${Object.keys(wbHistory.countries).length} entries`);

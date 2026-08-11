@@ -1,59 +1,89 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
+import { fetchJson } from "../utils/fetchWithRetry";
 
 let detailCache = null;
-let detailFetchPromise = null;
+let historyCache = null;
+let idlePrefetchPromise = null;
 
-function fetchDetail() {
-  if (!detailFetchPromise) {
-    detailFetchPromise = fetch("/countries-detail.json")
-      .then((r) => r.json())
-      .then((d) => {
-        detailCache = d;
-        return d;
-      });
+/**
+ * Fetches countries-detail.json + wb-history.json together (idle prefetch,
+ * or on first demand from loadDetail/loadAllDetails). Both are only needed
+ * once a detail dialog opens or a bulk export runs — never on first paint.
+ */
+function fetchIdleBundle() {
+  if (!idlePrefetchPromise) {
+    idlePrefetchPromise = Promise.all([
+      fetchJson("/countries-detail.json").catch(() => ({})),
+      fetchJson("/wb-history.json").catch(() => ({ countries: {} })),
+    ]).then(([detail, history]) => {
+      detailCache = detail;
+      historyCache = history.countries || {};
+      return { detail, history: historyCache };
+    });
   }
-  return detailFetchPromise;
+  return idlePrefetchPromise;
 }
 
 export default function useCountryData() {
   const [countries, setCountries] = useState([]);
   const [wbMeta, setWbMeta] = useState(null);
+  const [historyLoaded, setHistoryLoaded] = useState(false);
   const fetchedRef = useRef(false);
 
   useEffect(() => {
     Promise.all([
-      fetch("/countries-core.json").then((r) => r.json()),
-      fetch("/wb-data.json").then((r) => r.json()).catch(() => ({ countries: {}, meta: null })),
-    ]).then(([countriesData, wbData]) => {
-      if (wbData.meta) setWbMeta(wbData.meta);
-      const merged = countriesData.map((c) => {
-        const code = c.isoCode || c.flagUrl?.match(/flagcdn\.com\/(\w{2})\.svg/)?.[1];
-        const wb = code ? wbData.countries?.[code] || null : null;
-        return { ...c, wb };
-      });
-      setCountries(merged);
+      fetchJson("/countries-core.json"),
+      fetchJson("/wb-latest.json").catch(() => ({ countries: {}, meta: null })),
+    ])
+      .then(([countriesData, wbData]) => {
+        if (wbData.meta) setWbMeta(wbData.meta);
+        const merged = countriesData.map((c) => {
+          const code = c.isoCode || c.flagUrl?.match(/flagcdn\.com\/(\w{2})\.svg/)?.[1];
+          const wb = code ? wbData.countries?.[code] || null : null;
+          return { ...c, wb };
+        });
+        setCountries(merged);
 
-      // Eager background prefetch of the detail bundle once the core list is up.
-      // Keeps the lazy contract (loadDetail still returns the same shape), but
-      // ensures RankingsView CSV export and other bulk operations don't drop
-      // keyLaws/treaties just because the user never opened a detail dialog.
-      if (!fetchedRef.current) {
-        fetchedRef.current = true;
-        const kick = () => fetchDetail().catch(() => {});
-        if (typeof requestIdleCallback === "function") requestIdleCallback(kick, { timeout: 2000 });
-        else setTimeout(kick, 1000);
-      }
-    });
+        // Idle prefetch of detail + history bundles. Once resolved, merge
+        // history into wb.history for every country so Sparklines/TrendLineChart
+        // light up without needing a per-country fetch.
+        if (!fetchedRef.current) {
+          fetchedRef.current = true;
+          const kick = () =>
+            fetchIdleBundle()
+              .then(({ history }) => {
+                setCountries((prev) =>
+                  prev.map((c) =>
+                    c.wb && history[c.isoCode]
+                      ? { ...c, wb: { ...c.wb, history: history[c.isoCode] } }
+                      : c
+                  )
+                );
+              })
+              .catch(() => {})
+              .finally(() => setHistoryLoaded(true));
+          if (typeof requestIdleCallback === "function") requestIdleCallback(kick, { timeout: 2000 });
+          else setTimeout(kick, 1000);
+        }
+      })
+      .catch((err) => console.error("Failed to load country data:", err));
   }, []);
 
-  // Lazy-load detail data and merge into one country object.
+  // Lazy-load detail + history data and merge into one country object.
+  // Used when a DetailDialog opens before the idle prefetch has resolved.
   const loadDetail = useCallback(async (country) => {
     if (country._detail) return country;
-    if (!detailCache) await fetchDetail();
+    if (!detailCache) await fetchIdleBundle();
     const d = detailCache?.[country.isoCode];
-    if (!d) return country;
+    const h = historyCache?.[country.isoCode];
+    if (!d && !h) return country;
 
-    const enriched = { ...country, ...d, _detail: true };
+    const enriched = {
+      ...country,
+      ...d,
+      wb: h ? { ...country.wb, history: h } : country.wb,
+      _detail: true,
+    };
     setCountries((prev) =>
       prev.map((c) => (c.isoCode === country.isoCode ? enriched : c))
     );
@@ -66,9 +96,11 @@ export default function useCountryData() {
    * each country's detail dialog has been opened.
    */
   const loadAllDetails = useCallback(async () => {
-    if (!detailCache) await fetchDetail();
+    if (!detailCache) await fetchIdleBundle();
     if (!detailCache) return countries;
-    const enriched = countries.map((c) => (c._detail ? c : { ...c, ...(detailCache[c.isoCode] || {}), _detail: true }));
+    const enriched = countries.map((c) =>
+      c._detail ? c : { ...c, ...(detailCache[c.isoCode] || {}), _detail: true }
+    );
     setCountries(enriched);
     return enriched;
   }, [countries]);
@@ -94,5 +126,5 @@ export default function useCountryData() {
     };
   }, [countries]);
 
-  return { countries, wbMeta, globalAvg, loadDetail, loadAllDetails };
+  return { countries, wbMeta, globalAvg, loadDetail, loadAllDetails, historyLoaded };
 }

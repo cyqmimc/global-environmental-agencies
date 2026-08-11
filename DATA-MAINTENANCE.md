@@ -14,20 +14,21 @@ npm run update-all   # = fetch-data + split-data + check-updates
 countries.json (源文件, 手动编辑)
     ├── split-countries.js ──→ countries-core.json (首屏)
     │                      └─→ countries-detail.json (懒加载)
-    └── fetch-world-bank-data.js ──→ wb-data.json (WB + IQAir数据)
+    └── fetch-world-bank-data.js ──→ wb-latest.json (最新值, 首屏)
+                               └──→ wb-history.json (时间序列, 空闲预取)
 
-前端合并: country = { ...core数据, wb: wb-data数据 }
-详情弹窗: country = { ...country, ...detail数据 }
+前端合并: country = { ...core数据, wb: wb-latest数据 }
+空闲预取: country.wb.history = wb-history数据；country = { ...country, ...detail数据 }
 ```
 
-**重要**: `wb-data.json` 中 PM2.5 数据来自 IQAir 2024（优先于 WB 卫星数据），`fetch-data` 会自动保留 IQAir 覆盖值不被 WB 旧数据覆盖。
+**重要**: `wb-latest.json` 中 PM2.5 数据来自 IQAir 2024（优先于 WB 卫星数据），`fetch-data` 会自动保留 IQAir 覆盖值不被 WB 旧数据覆盖（同时同步到 `wb-history.json` 的 2024 数据点）。
 
 ## 自动化数据
 
 | 数据 | 命令 | 更新频率 | 说明 |
 |------|------|---------|------|
 | 世界银行环境指标 | `npm run fetch-data` | 每季度 | CO₂(AR5→2024)、森林、可再生能源、PM2.5、保护区、人口、GDP |
-| PM2.5 补充 | 手动更新 wb-data.json | 每年 | IQAir World Air Quality Report (地面监测, 优先于WB卫星数据) |
+| PM2.5 补充 | 手动更新 wb-latest.json | 每年 | IQAir World Air Quality Report (地面监测, 优先于WB卫星数据) |
 | 碳定价 | 手动更新 countries.json | 每年 | WB Carbon Pricing Dashboard Excel 下载 |
 
 ## 手动维护数据

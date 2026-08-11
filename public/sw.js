@@ -7,14 +7,15 @@
  * - JSON data files → stale-while-revalidate (fast offline, refreshes in bg).
  * - Static map SVG → cache-first.
  */
-const VERSION = "v2";
+const VERSION = "v3";
 const SHELL_CACHE = `gegt-shell-${VERSION}`;
 const DATA_CACHE = `gegt-data-${VERSION}`;
 const STATIC_ASSETS = ["/world-map.svg", "/manifest.webmanifest"];
 const DATA_URLS = [
   "/countries-core.json",
   "/countries-detail.json",
-  "/wb-data.json",
+  "/wb-latest.json",
+  "/wb-history.json",
   "/og-data.json",
 ];
 

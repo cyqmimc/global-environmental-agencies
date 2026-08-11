@@ -3,6 +3,7 @@ import { carbonIntensity, formatCarbonIntensity } from "./utils/derived";
 import { PROVENANCE } from "./constants";
 import DataYearBadge from "./components/DataYearBadge";
 import YearInconsistencyWarning from "./components/YearInconsistencyWarning";
+import { fetchText } from "./utils/fetchWithRetry";
 
 const METRIC_CONFIG = {
   epiScore: {
@@ -123,8 +124,7 @@ export default function WorldMap({ countries, language, onCountryClick }) {
   const cfg = METRIC_CONFIG[metric];
 
   useEffect(() => {
-    fetch("/world-map.svg")
-      .then((r) => r.text())
+    fetchText("/world-map.svg")
       .then((text) => setSvgContent(text))
       .catch(() => {})
       .finally(() => setLoading(false));

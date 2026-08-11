@@ -67,7 +67,7 @@ export default function GlobalEnvironmentalAgencies() {
   }, []);
 
   const { theme, toggle: toggleTheme } = useDarkMode();
-  const { countries, wbMeta, globalAvg, loadDetail, loadAllDetails } = useCountryData();
+  const { countries, wbMeta, globalAvg, loadDetail, loadAllDetails, historyLoaded } = useCountryData();
   const { favorites, toggle: toggleFav, isFav } = useFavorites();
   // Note: useCountryData prefetches the detail bundle on idle so rankings
   // export and other bulk consumers get full rows without each user click.
@@ -520,6 +520,7 @@ export default function GlobalEnvironmentalAgencies() {
                       isFav={isFav(item.isoCode)}
                       onToggleFav={() => toggleFav(item.isoCode)}
                       yearLabel={yearLabel}
+                      historyLoaded={historyLoaded}
                     />
                   ))}
                 </div>

@@ -31,7 +31,7 @@ export const RESPONSIBILITY_LABELS = {
 };
 
 /**
- * Provenance metadata for indicators that don't come from wb-data.json (which
+ * Provenance metadata for indicators that don't come from wb-latest.json (which
  * already carries its own per-country `dataYear`). Each entry was imported in
  * a single batch — see DATA-MAINTENANCE.md's "上次更新记录" table and
  * scripts/add-climate-equity.py's header comment — so year/source/retrievedAt

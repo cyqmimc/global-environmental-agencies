@@ -1,6 +1,7 @@
 /**
  * Fetch environmental indicators from World Bank Open Data API
- * and write to public/wb-data.json
+ * and write to public/wb-latest.json (current values) + public/wb-history.json
+ * (2015+ time series for the 4 trend-chart indicators)
  *
  * Usage: node scripts/fetch-world-bank-data.js
  * No API key required.
@@ -138,15 +139,21 @@ async function main() {
     await new Promise((r) => setTimeout(r, 500));
   }
 
-  // Step 3: Build output keyed by alpha-2 code
-  const output = {
-    meta: {
-      fetchedAt: new Date().toISOString(),
-      dateRange: DATE_RANGE,
-      indicators: { ...INDICATORS },
-    },
-    countries: {},
+  // Step 3: Build two outputs keyed by alpha-2 code.
+  //   wb-latest.json  — current values + dataYear only (~50KB), fetched on
+  //                     first screen alongside countries-core.json.
+  //   wb-history.json — 2015+ time series for the 4 trend-chart indicators,
+  //                     fetched lazily (idle prefetch / detail dialog open)
+  //                     since only TrendLineChart and card Sparklines use it.
+  const meta = {
+    fetchedAt: new Date().toISOString(),
+    dateRange: DATE_RANGE,
+    indicators: { ...INDICATORS },
   };
+  const latestOutput = { meta, countries: {} };
+  const historyOutput = { meta, countries: {} };
+
+  const HISTORY_KEYS = ["forestArea", "co2Mt", "renewableEnergy", "pm25"];
 
   for (const iso2 of isoCodes) {
     const countryData = {};
@@ -177,8 +184,11 @@ async function main() {
     delete countryData.co2PerCapitaDirect;
     delete dataYear.co2PerCapitaDirect;
 
+    if (hasAny) {
+      latestOutput.countries[iso2] = { ...countryData, dataYear };
+    }
+
     // Collect history only for trend-chart indicators (keep payload small)
-    const HISTORY_KEYS = ["forestArea", "co2Mt", "renewableEnergy", "pm25"];
     const history = {};
     for (const key of HISTORY_KEYS) {
       const entry = indicatorData[key]?.[iso2];
@@ -186,32 +196,36 @@ async function main() {
         history[key] = entry.history;
       }
     }
-
-    if (hasAny) {
-      output.countries[iso2] = { ...countryData, dataYear, history };
+    if (Object.keys(history).length) {
+      historyOutput.countries[iso2] = history;
     }
   }
 
   // Step 4: Preserve IQAir PM2.5 overrides (newer than WB satellite data)
-  const existingPath = resolve(ROOT, "public/wb-data.json");
+  const existingLatestPath = resolve(ROOT, "public/wb-latest.json");
+  const existingHistoryPath = resolve(ROOT, "public/wb-history.json");
   try {
-    const existing = JSON.parse(readFileSync(existingPath, "utf-8"));
-    if (existing.meta?.pm25Source?.includes("IQAir")) {
+    const existingLatest = JSON.parse(readFileSync(existingLatestPath, "utf-8"));
+    const existingHistory = JSON.parse(readFileSync(existingHistoryPath, "utf-8"));
+    if (existingLatest.meta?.pm25Source?.includes("IQAir")) {
       let preserved = 0;
-      for (const [iso2, ec] of Object.entries(existing.countries)) {
-        if (ec.dataYear?.pm25 === 2024 && output.countries[iso2]) {
-          const wbYear = output.countries[iso2].dataYear?.pm25;
+      for (const [iso2, ec] of Object.entries(existingLatest.countries)) {
+        if (ec.dataYear?.pm25 === 2024 && latestOutput.countries[iso2]) {
+          const wbYear = latestOutput.countries[iso2].dataYear?.pm25;
           // Only preserve IQAir data if WB data is older
           if (!wbYear || wbYear < 2024) {
-            output.countries[iso2].pm25 = ec.pm25;
-            output.countries[iso2].dataYear.pm25 = 2024;
+            latestOutput.countries[iso2].pm25 = ec.pm25;
+            latestOutput.countries[iso2].dataYear.pm25 = 2024;
             // Also preserve in history
-            if (ec.history?.pm25) {
-              const iqairPoint = ec.history.pm25.find(h => h.year === 2024);
-              if (iqairPoint && output.countries[iso2].history?.pm25) {
-                if (!output.countries[iso2].history.pm25.some(h => h.year === 2024)) {
-                  output.countries[iso2].history.pm25.push(iqairPoint);
-                  output.countries[iso2].history.pm25.sort((a, b) => a.year - b.year);
+            const existingPm25History = existingHistory.countries?.[iso2]?.pm25;
+            if (existingPm25History) {
+              const iqairPoint = existingPm25History.find(h => h.year === 2024);
+              const targetHistory = historyOutput.countries[iso2] || (historyOutput.countries[iso2] = {});
+              if (iqairPoint) {
+                targetHistory.pm25 = targetHistory.pm25 || [];
+                if (!targetHistory.pm25.some(h => h.year === 2024)) {
+                  targetHistory.pm25.push(iqairPoint);
+                  targetHistory.pm25.sort((a, b) => a.year - b.year);
                 }
               }
             }
@@ -220,26 +234,27 @@ async function main() {
         }
       }
       if (preserved > 0) {
-        output.meta.pm25Source = existing.meta.pm25Source;
+        latestOutput.meta.pm25Source = existingLatest.meta.pm25Source;
+        historyOutput.meta.pm25Source = existingLatest.meta.pm25Source;
         console.log(`\n  ✓ Preserved IQAir 2024 PM2.5 data for ${preserved} countries`);
       }
     }
   } catch {
-    // No existing file, skip preservation
+    // No existing files, skip preservation
   }
 
-  // Step 5: Write output
-  const outPath = resolve(ROOT, "public/wb-data.json");
-  writeFileSync(outPath, JSON.stringify(output, null, 2), "utf-8");
+  // Step 5: Write outputs
+  writeFileSync(resolve(ROOT, "public/wb-latest.json"), JSON.stringify(latestOutput, null, 2), "utf-8");
+  writeFileSync(resolve(ROOT, "public/wb-history.json"), JSON.stringify(historyOutput, null, 2), "utf-8");
 
-  const matched = Object.keys(output.countries).length;
+  const matched = Object.keys(latestOutput.countries).length;
   console.log(
-    `\n✅ Done! Wrote data for ${matched}/${isoCodes.size} countries to public/wb-data.json`
+    `\n✅ Done! Wrote data for ${matched}/${isoCodes.size} countries to public/wb-latest.json + public/wb-history.json`
   );
 
   // Report missing
   for (const iso2 of isoCodes) {
-    if (!output.countries[iso2]) {
+    if (!latestOutput.countries[iso2]) {
       console.log(`  ⚠ No data for: ${iso2}`);
     }
   }

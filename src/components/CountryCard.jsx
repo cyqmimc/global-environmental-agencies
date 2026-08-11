@@ -24,6 +24,7 @@ export default function CountryCard({
   isFav,
   onToggleFav,
   yearLabel,
+  historyLoaded = true,
 }) {
   const co2History = country.wb?.history?.co2Mt;
   const renewYear = country.wb?.dataYear?.renewableEnergy;
@@ -118,7 +119,15 @@ export default function CountryCard({
           PM {country.wb?.pm25?.toFixed(0) ?? "—"}
         </span>
       </div>
-      {co2History && co2History.length >= 2 && (() => {
+      {!historyLoaded ? (
+        // Reserve the same footprint as the loaded sparkline row so it
+        // doesn't pop in and shift the card's height (CLS) once history
+        // arrives from the idle-prefetched wb-history.json.
+        <div className="mt-2 flex items-center gap-1.5">
+          <span className="text-[10px] text-gray-400 dark:text-gray-500">CO₂</span>
+          <div className="w-14 h-4 rounded bg-gray-100 dark:bg-gray-800 animate-pulse" />
+        </div>
+      ) : co2History && co2History.length >= 2 && (() => {
         // Pick first/last non-null endpoints so missing tail data doesn't
         // flip the color silently (null > number is always false in JS).
         const valid = co2History.filter((d) => d && d.value != null);

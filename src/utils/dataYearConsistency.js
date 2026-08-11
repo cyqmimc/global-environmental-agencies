@@ -1,5 +1,5 @@
 /**
- * Groups countries by the data year recorded for a given wb-data.json field
+ * Groups countries by the data year recorded for a given wb-latest.json field
  * (see WorldBankData.dataYear in types.js). Used to detect and disclose when
  * an indicator mixes measurement years/methodologies across countries — e.g.
  * pm25 is 2020 World Bank ground-station data for 13 countries but 2024

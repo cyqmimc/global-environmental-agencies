@@ -2,7 +2,7 @@
 /**
  * Compares the hand-written legacy numbers in public/countries.json
  * (data.forestCoverage / data.carbonEmission) against the authoritative
- * World Bank values in public/wb-data.json (wb.forestArea / wb.co2Mt).
+ * World Bank values in public/wb-latest.json (wb.forestArea / wb.co2Mt).
  *
  * Flags:
  *   - forest coverage: absolute difference > 3 percentage points
@@ -21,7 +21,7 @@ const countries = JSON.parse(
   fs.readFileSync(path.join(__dirname, "..", "public", "countries.json"), "utf8")
 );
 const wb = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "..", "public", "wb-data.json"), "utf8")
+  fs.readFileSync(path.join(__dirname, "..", "public", "wb-latest.json"), "utf8")
 );
 
 const rows = [];

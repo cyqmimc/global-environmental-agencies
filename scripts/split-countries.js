@@ -71,7 +71,7 @@ fs.writeFileSync(path.join(outDir, "countries-detail.json"), JSON.stringify(deta
 // OG image data (minimal subset for Edge Function)
 let wbData = { countries: {} };
 try {
-  wbData = JSON.parse(fs.readFileSync(path.join(outDir, "wb-data.json"), "utf8"));
+  wbData = JSON.parse(fs.readFileSync(path.join(outDir, "wb-latest.json"), "utf8"));
 } catch {}
 
 const ogData = {};
