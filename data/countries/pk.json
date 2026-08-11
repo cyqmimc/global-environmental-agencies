@@ -1,0 +1,162 @@
+{
+  "isoCode": "pk",
+  "countryEn": "Pakistan",
+  "countryZh": "巴基斯坦",
+  "agencyEn": "Ministry of Climate Change and Environmental Coordination",
+  "agencyZh": "气候变化与环境协调部",
+  "website": "https://mocc.gov.pk/",
+  "flagUrl": "https://flagcdn.com/pk.svg",
+  "descriptionZh": "巴基斯坦气候部协调国家气候适应战略，应对洪水和冰川融化的极端脆弱性。",
+  "descriptionEn": "Pakistan's ministry coordinates national climate adaptation strategies, addressing extreme vulnerability to floods and glacial melt.",
+  "region": "Asia",
+  "established": 2012,
+  "responsibilities": [
+    "climate",
+    "water"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNCCD",
+    "Montreal Protocol"
+  ],
+  "epiScore": 24.6,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "气候变化法",
+      "nameEn": "Climate Change Act",
+      "year": 2017
+    },
+    {
+      "nameZh": "国家气候变化政策",
+      "nameEn": "National Climate Change Policy",
+      "year": 2012
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-11-10",
+    "ndcTargetZh": "已提交2035目标",
+    "ndcTargetEn": "2035 target submitted",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1992-12-18",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs；基加利修正案已批准",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-07-26",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳定价机制研究阶段",
+    "noteEn": "Carbon pricing under study"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 2,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.55,
+    "cumulativeCO2Gt": 5.5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-02-24",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2002,
+    "commitmentZh": "俾路支、辛德 Tharparkar 为重点；2024 Living Indus 倡议把 LDN 纳入流域治理。",
+    "commitmentEn": "Balochistan and Sindh's Tharparkar prioritized; 2024 Living Indus integrates LDN with basin governance.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/pk",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-11-10",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1992-12-18",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-07-26",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-02-24",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 5,
+    "carbonEmission": 235,
+    "_deprecated": true
+  }
+}

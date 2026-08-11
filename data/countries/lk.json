@@ -1,0 +1,155 @@
+{
+  "isoCode": "lk",
+  "countryEn": "Sri Lanka",
+  "countryZh": "斯里兰卡",
+  "agencyEn": "Ministry of Environment",
+  "agencyZh": "环境部",
+  "website": "https://www.env.gov.lk/",
+  "flagUrl": "https://flagcdn.com/lk.svg",
+  "descriptionZh": "斯里兰卡环境部管理生物多样性热点保护和岛屿国家的气候适应。",
+  "descriptionEn": "Sri Lanka's ministry manages biodiversity hotspot protection and climate adaptation for this island nation.",
+  "region": "Asia",
+  "established": 1990,
+  "responsibilities": [
+    "biodiversity",
+    "water"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 29.5,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "国家环境法",
+      "nameEn": "National Environmental Act",
+      "year": 1980
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-09-21",
+    "ndcTargetZh": "2030年排放比基准情景减少14.5%（无条件）",
+    "ndcTargetEn": "Reduce GHG 14.5% below BAU by 2030 (unconditional)",
+    "ndcRating": "2C",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1989-12-15",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-03-23",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳定价研究阶段",
+    "noteEn": "Carbon pricing under study"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.48,
+    "cumulativeCO2Gt": 1
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1998-12-09",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2002,
+    "commitmentZh": "北部 Mannar、东部 Trincomalee 干燥区为重点。",
+    "commitmentEn": "Northern Mannar and eastern Trincomalee dry zones prioritized.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/lk",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-09-21",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1989-12-15",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-03-23",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1998-12-09",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 29,
+    "carbonEmission": 25,
+    "_deprecated": true
+  }
+}

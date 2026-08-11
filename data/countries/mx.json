@@ -1,0 +1,169 @@
+{
+  "isoCode": "mx",
+  "countryEn": "Mexico",
+  "countryZh": "墨西哥",
+  "agencyEn": "Secretariat of Environment and Natural Resources (SEMARNAT)",
+  "agencyZh": "环境与自然资源部",
+  "website": "https://www.gob.mx/semarnat",
+  "flagUrl": "https://flagcdn.com/mx.svg",
+  "descriptionZh": "墨西哥环境部负责保护自然资源及应对气候变化，守护丰富的生物多样性。",
+  "descriptionEn": "SEMARNAT protects natural resources and addresses climate change, safeguarding Mexico's rich biodiversity.",
+  "region": "North America",
+  "established": 1994,
+  "responsibilities": [
+    "biodiversity",
+    "forest"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Basel Convention"
+  ],
+  "epiScore": 31.5,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "气候变化总法",
+      "nameEn": "General Law on Climate Change",
+      "year": 2012
+    },
+    {
+      "nameZh": "生态平衡与环境保护总法",
+      "nameEn": "General Law of Ecological Balance and Environmental Protection",
+      "year": 1988
+    },
+    {
+      "nameZh": "可持续林业发展总法",
+      "nameEn": "General Law for Sustainable Forest Development",
+      "year": 2003
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-09-21",
+    "ndcTargetZh": "已提交2035目标",
+    "ndcTargetEn": "2035 target submitted",
+    "ndcRating": "highly_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2022
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2026
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-11-05",
+    "ndc3Target": "Update announced at COP30; quantitative target pending publication",
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1988-03-31",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 80%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 80% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1993-03-11",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；全球生物多样性第五大国",
+    "commitmentEn": "Committed to 30x30; fifth most biodiverse country globally"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": true,
+    "priceUSD": 3.9,
+    "coveragePercent": 40,
+    "noteZh": "碳税约55比索/吨CO₂；碳排放交易试点运行中",
+    "noteEn": "Carbon tax ~MXN55/tCO₂; pilot ETS operational"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 6,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.44,
+    "cumulativeCO2Gt": 18
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1995-04-03",
+    "annex": "III",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 1995,
+    "commitmentZh": "北部沙漠扩张、Yucatán 半岛干燥化为重点；LDN 与 Sembrando Vida 协同。",
+    "commitmentEn": "Northern desert expansion and Yucatán drying prioritized; LDN aligned with Sembrando Vida.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/mx",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-09-21",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1988-03-31",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1993-03-11",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1995-04-03",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 33,
+    "carbonEmission": 450,
+    "_deprecated": true
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "isoCode": "sa",
+  "countryEn": "Saudi Arabia",
+  "countryZh": "沙特阿拉伯",
+  "agencyEn": "Ministry of Environment, Water and Agriculture",
+  "agencyZh": "环境、水利与农业部",
+  "website": "https://www.mewa.gov.sa/",
+  "flagUrl": "https://flagcdn.com/sa.svg",
+  "descriptionZh": "沙特环境部主管水资源管理及生态保护事务，推动沙漠绿化和可持续农业。",
+  "descriptionEn": "Saudi Arabia's ministry manages water resources and ecological protection, promoting desert greening and sustainable agriculture.",
+  "region": "Asia",
+  "established": 2003,
+  "responsibilities": [
+    "water",
+    "energy"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "UNCCD",
+    "CBD"
+  ],
+  "epiScore": 30.7,
+  "netZeroTarget": 2060,
+  "keyLaws": [
+    {
+      "nameZh": "环境总规章",
+      "nameEn": "General Environmental Regulations",
+      "year": 2001
+    },
+    {
+      "nameZh": "沙特绿色倡议",
+      "nameEn": "Saudi Green Initiative",
+      "year": 2021
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-11-03",
+    "ndcTargetZh": "已提交2035目标（详细评估待定）",
+    "ndcTargetEn": "2035 target submitted (details pending full assessment)",
+    "ndcRating": "critically_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1993-03-01",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2047年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 85% HFC reduction by 2047"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "2001-10-03",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；推动红海珊瑚礁保护",
+    "commitmentEn": "Committed to 30x30; advancing Red Sea coral reef conservation"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "目前无碳定价机制；通过沙特绿色倡议推动减排",
+    "noteEn": "No carbon pricing; pursuing emission reductions through Saudi Green Initiative"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.41,
+    "cumulativeCO2Gt": 15
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-06-25",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2002,
+    "commitmentZh": "Saudi Green Initiative 计划种植 100 亿棵树；2024 主办 UNCCD COP16（利雅得）。",
+    "commitmentEn": "Saudi Green Initiative plans 10B trees; hosted UNCCD COP16 (Riyadh, 2024).",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/sa",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-11-03",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1993-03-01",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "2001-10-03",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-06-25",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 0.5,
+    "carbonEmission": 600,
+    "_deprecated": true
+  }
+}

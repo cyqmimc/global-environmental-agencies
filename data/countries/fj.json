@@ -1,0 +1,163 @@
+{
+  "isoCode": "fj",
+  "countryEn": "Fiji",
+  "countryZh": "斐济",
+  "agencyEn": "Ministry of Environment and Climate Change",
+  "agencyZh": "环境与气候变化部",
+  "website": "https://www.environment.gov.fj/",
+  "flagUrl": "https://flagcdn.com/fj.svg",
+  "descriptionZh": "斐济环境部积极推动太平洋岛国气候适应议程，是COP23主席国，海洋保护的全球倡导者。",
+  "descriptionEn": "Fiji's ministry actively promotes the Pacific island climate adaptation agenda, presided over COP23, and is a global advocate for ocean protection.",
+  "region": "Oceania",
+  "established": 1999,
+  "responsibilities": [
+    "climate",
+    "water"
+  ],
+  "contact": {
+    "email": "info@environment.gov.fj"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNCCD",
+    "Pacific Islands Forum"
+  ],
+  "epiScore": 34.5,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "气候变化法",
+      "nameEn": "Climate Change Act",
+      "year": 2021
+    },
+    {
+      "nameZh": "环境管理法",
+      "nameEn": "Environment Management Act",
+      "year": 2005
+    },
+    {
+      "nameZh": "国家海洋政策",
+      "nameEn": "National Ocean Policy",
+      "year": 2020
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-04-22",
+    "ndcTargetZh": "2030年能源部门CO₂排放比基准情景减少30%",
+    "ndcTargetEn": "Reduce energy sector CO₂ 30% below BAU by 2030",
+    "ndcRating": "almost_sufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1989-10-23",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 85% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1993-02-25",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；推动太平洋岛国海洋保护",
+    "commitmentEn": "Committed to 30x30; advancing Pacific island marine conservation"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "作为小岛国推动国际碳定价倡议",
+    "noteEn": "As a SIDS, advocates for international carbon pricing initiatives"
+  },
+  "reportingStatus": {
+    "btrSubmitted": false,
+    "btrYear": null,
+    "nationalComm": 2,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.52,
+    "cumulativeCO2Gt": 0.03
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1998-08-26",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2007,
+    "commitmentZh": "小岛屿发展中国家；甘蔗地土壤退化与海岸侵蚀为重点。",
+    "commitmentEn": "Small Island Developing State; sugarcane soil degradation and coastal erosion prioritized.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/fj",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-04-22",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1989-10-23",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1993-02-25",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1998-08-26",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 55,
+    "carbonEmission": 2,
+    "_deprecated": true
+  }
+}

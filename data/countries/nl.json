@@ -1,0 +1,169 @@
+{
+  "isoCode": "nl",
+  "countryEn": "Netherlands",
+  "countryZh": "荷兰",
+  "agencyEn": "Ministry of Infrastructure and Water Management",
+  "agencyZh": "基础设施与水管理部",
+  "website": "https://www.government.nl/ministries/ministry-of-infrastructure-and-water-management",
+  "flagUrl": "https://flagcdn.com/nl.svg",
+  "descriptionZh": "荷兰水管理部在水资源管理和防洪方面全球领先，推动循环经济发展。",
+  "descriptionEn": "The Netherlands' ministry leads globally in water management and flood prevention, advancing the circular economy.",
+  "region": "Europe",
+  "established": 2010,
+  "responsibilities": [
+    "water",
+    "waste"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "OSPAR Convention",
+    "Basel Convention"
+  ],
+  "epiScore": 62.6,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "气候法",
+      "nameEn": "Climate Act",
+      "year": 2019
+    },
+    {
+      "nameZh": "环境与规划法",
+      "nameEn": "Environment and Planning Act",
+      "year": 2024
+    },
+    {
+      "nameZh": "水法",
+      "nameEn": "Water Act",
+      "year": 2009
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-10-05",
+    "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+    "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "EU NDC",
+        "year": 2015
+      },
+      {
+        "version": "EU Updated NDC",
+        "year": 2020
+      },
+      {
+        "version": "EU NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-02-26",
+    "ndc3Target": "EU joint 2035 NDC",
+    "ndc3Source": "https://unfccc.int/NDCREG",
+    "ndc3Note": "EU joint submission."
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1988-12-16",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准，2036年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified, 85% HFC reduction by 2036"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-07-12",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；推动北海海洋保护",
+    "commitmentEn": "Committed to 30x30; advancing North Sea marine conservation"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": true,
+    "priceUSD": 94.8,
+    "coveragePercent": 50,
+    "noteZh": "EU ETS + 国内最低碳价机制，确保碳价不低于一定水平",
+    "noteEn": "EU ETS + domestic minimum carbon price floor mechanism"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 8,
+    "statusZh": "已提交BTR1（通过EU联合提交）",
+    "statusEn": "BTR1 submitted (via EU joint submission)"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.3,
+    "cumulativeCO2Gt": 11
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1995-06-27",
+    "annex": null,
+    "affectedParty": false,
+    "ldnTargetSet": false,
+    "ldnYear": null,
+    "napSubmitted": false,
+    "napYear": null,
+    "commitmentZh": "非受影响国；通过 DGIS 支持 Sahel 与 Horn of Africa。",
+    "commitmentEn": "Non-affected; DGIS supports Sahel and Horn of Africa programmes.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/nl",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-10-05",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1988-12-16",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-07-12",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1995-06-27",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 11,
+    "carbonEmission": 180,
+    "_deprecated": true
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "isoCode": "pg",
+  "countryEn": "Papua New Guinea",
+  "countryZh": "巴布亚新几内亚",
+  "agencyEn": "Conservation and Environment Protection Authority (CEPA)",
+  "agencyZh": "自然保护与环境保护局",
+  "website": "https://www.cepa.gov.pg/",
+  "flagUrl": "https://flagcdn.com/pg.svg",
+  "descriptionZh": "巴新环保局管理全球第三大热带雨林和丰富的特有生物多样性。",
+  "descriptionEn": "PNG's CEPA manages the world's third-largest tropical rainforest and extraordinary endemic biodiversity.",
+  "region": "Oceania",
+  "established": 2014,
+  "responsibilities": [
+    "forest",
+    "biodiversity"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 26.4,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境法",
+      "nameEn": "Environment Act",
+      "year": 2000
+    },
+    {
+      "nameZh": "气候变化管理法",
+      "nameEn": "Climate Change (Management) Act",
+      "year": 2015
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-09-21",
+    "ndcTargetZh": "2030年排放比基准情景减少50%（有条件）",
+    "ndcTargetEn": "Reduce GHG 50% below BAU by 2030 (conditional)",
+    "ndcRating": "almost_sufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2020
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1992-10-27",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1993-03-16",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "通过REDD+获取碳信用",
+    "noteEn": "Accessing carbon credits through REDD+"
+  },
+  "reportingStatus": {
+    "btrSubmitted": false,
+    "btrYear": null,
+    "nationalComm": 2,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.57,
+    "cumulativeCO2Gt": 0.2
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "2000-12-06",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2014,
+    "commitmentZh": "采矿迹地恢复与海岸侵蚀为重点；与 Pacific Islands Forum 协调。",
+    "commitmentEn": "Mine-area restoration and coastal erosion prioritized; coordinated through Pacific Islands Forum.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/pg",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-09-21",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1992-10-27",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1993-03-16",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "2000-12-06",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 74,
+    "carbonEmission": 7,
+    "_deprecated": true
+  }
+}

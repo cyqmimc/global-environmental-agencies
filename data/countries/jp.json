@@ -1,0 +1,169 @@
+{
+  "isoCode": "jp",
+  "countryEn": "Japan",
+  "countryZh": "日本",
+  "agencyEn": "Ministry of the Environment (MOE)",
+  "agencyZh": "环境省",
+  "website": "https://www.env.go.jp/en/",
+  "flagUrl": "https://flagcdn.com/jp.svg",
+  "descriptionZh": "日本环境省负责环境保护、气候变化对策及自然保护，推动循环经济和零碳社会建设。",
+  "descriptionEn": "Japan's MOE oversees environmental protection, climate change countermeasures, and nature conservation, promoting a circular economy and carbon-neutral society.",
+  "region": "Asia",
+  "established": 2001,
+  "responsibilities": [
+    "waste",
+    "chemicals"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "Minamata Convention",
+    "Basel Convention"
+  ],
+  "epiScore": 57.2,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境基本法",
+      "nameEn": "Basic Environment Law",
+      "year": 1993
+    },
+    {
+      "nameZh": "循环型社会形成推进基本法",
+      "nameEn": "Basic Act for Establishing a Sound Material-Cycle Society",
+      "year": 2000
+    },
+    {
+      "nameZh": "地球温暖化对策推进法",
+      "nameEn": "Act on Promotion of Global Warming Countermeasures",
+      "year": 1998
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-11-08",
+    "ndcTargetZh": "2035年较2013年减排60%",
+    "ndcTargetEn": "60% reduction below 2013 levels by 2035",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-02-18",
+    "ndc3Target": "60% reduction by 2035 vs. FY2013",
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1988-09-30",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准，2036年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified, 85% HFC reduction by 2036"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1993-05-28",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；推动30x30高雄心联盟",
+    "commitmentEn": "Committed to 30x30 target; promotes High Ambition Coalition for 30x30"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": true,
+    "priceUSD": 1.9,
+    "coveragePercent": 70,
+    "noteZh": "碳税289日元/吨CO₂；2023年启动GX-ETS碳交易",
+    "noteEn": "Carbon tax ¥289/tCO₂; GX-ETS launched 2023"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 8,
+    "statusZh": "已提交BTR1",
+    "statusEn": "BTR1 submitted"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.37,
+    "cumulativeCO2Gt": 65
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1998-09-11",
+    "annex": null,
+    "affectedParty": false,
+    "ldnTargetSet": false,
+    "ldnYear": null,
+    "napSubmitted": false,
+    "napYear": null,
+    "commitmentZh": "非受影响国；JICA 是亚洲与非洲土地恢复主要双边捐助方。",
+    "commitmentEn": "Non-affected; JICA is a leading bilateral funder of land restoration in Asia and Africa.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/jp",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-11-08",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1988-09-30",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1993-05-28",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1998-09-11",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 68,
+    "carbonEmission": 1200,
+    "_deprecated": true
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "isoCode": "uy",
+  "countryEn": "Uruguay",
+  "countryZh": "乌拉圭",
+  "agencyEn": "Ministry of the Environment",
+  "agencyZh": "环境部",
+  "website": "https://www.gub.uy/ministerio-ambiente/",
+  "flagUrl": "https://flagcdn.com/uy.svg",
+  "descriptionZh": "乌拉圭环境部引领南美清洁能源转型，可再生电力占比98%，环境治理水平领先。",
+  "descriptionEn": "Uruguay's ministry leads South American clean energy transition with 98% renewable electricity and strong environmental governance.",
+  "region": "South America",
+  "established": 2020,
+  "responsibilities": [
+    "energy",
+    "water"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "Ramsar Convention",
+    "Escazú Agreement"
+  ],
+  "epiScore": 45.2,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护总法",
+      "nameEn": "General Environmental Protection Law",
+      "year": 2000
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-10-19",
+    "ndcTargetZh": "到2025年CO₂排放强度比1990年降低24%",
+    "ndcTargetEn": "Reduce CO₂ intensity 24% below 1990 by 2025",
+    "ndcRating": "almost_sufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2022
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1991-02-08",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1993-11-05",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": true,
+    "priceUSD": 158.8,
+    "coveragePercent": 20,
+    "noteZh": "碳税覆盖部分化石燃料",
+    "noteEn": "Carbon tax covering part of fossil fuels"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 4,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.36,
+    "cumulativeCO2Gt": 0.5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1999-03-25",
+    "annex": "III",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2008,
+    "commitmentZh": "北部 Cuchilla 干燥草原与牧场为重点。",
+    "commitmentEn": "Northern Cuchilla dry grasslands and pastures prioritized.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/uy",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-10-19",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1991-02-08",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1993-11-05",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1999-03-25",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 11,
+    "carbonEmission": 10,
+    "_deprecated": true
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "isoCode": "ph",
+  "countryEn": "Philippines",
+  "countryZh": "菲律宾",
+  "agencyEn": "Department of Environment and Natural Resources (DENR)",
+  "agencyZh": "环境与自然资源部",
+  "website": "https://www.denr.gov.ph/",
+  "flagUrl": "https://flagcdn.com/ph.svg",
+  "descriptionZh": "菲律宾环境部负责森林、矿产和海洋资源管理，是全球台风频发区的气候适应先行者。",
+  "descriptionEn": "The Philippines' DENR manages forests, minerals, and marine resources, pioneering climate adaptation in a typhoon-prone region.",
+  "region": "Asia",
+  "established": 1987,
+  "responsibilities": [
+    "biodiversity",
+    "forest"
+  ],
+  "contact": {
+    "email": "osec@denr.gov.ph"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 28.9,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "清洁空气法",
+      "nameEn": "Philippine Clean Air Act",
+      "year": 1999
+    },
+    {
+      "nameZh": "生态固体废弃物管理法",
+      "nameEn": "Ecological Solid Waste Management Act",
+      "year": 2000
+    },
+    {
+      "nameZh": "气候变化法",
+      "nameEn": "Climate Change Act",
+      "year": 2009
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-03-23",
+    "ndcTargetZh": "2030年温室气体排放比基准情景减少75%（有条件，含72.29%国际支持）",
+    "ndcTargetEn": "Reduce GHG 75% below BAU by 2030 (conditional, 72.29% with international support)",
+    "ndcRating": "2C",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1991-07-17",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 80%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 80% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1993-10-08",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；全球海洋生物多样性热点",
+    "commitmentEn": "Committed to 30x30; global marine biodiversity hotspot"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳定价机制研究阶段",
+    "noteEn": "Carbon pricing mechanism under study"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 2,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.55,
+    "cumulativeCO2Gt": 3
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "2000-02-10",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2004,
+    "commitmentZh": "Cordillera 山区与 Mindanao 干旱区为重点；LDN 与国家绿化计划衔接。",
+    "commitmentEn": "Cordillera highlands and Mindanao drylands prioritized; LDN linked to National Greening Programme.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/ph",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-03-23",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1991-07-17",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1993-10-08",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "2000-02-10",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 24,
+    "carbonEmission": 170,
+    "_deprecated": true
+  }
+}

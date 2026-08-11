@@ -1,0 +1,154 @@
+{
+  "isoCode": "sn",
+  "countryEn": "Senegal",
+  "countryZh": "塞内加尔",
+  "agencyEn": "Ministry of the Environment, Ecological Transition and Sustainable Development",
+  "agencyZh": "环境、生态转型与可持续发展部",
+  "website": "https://www.environnement.gouv.sn/",
+  "flagUrl": "https://flagcdn.com/sn.svg",
+  "descriptionZh": "塞内加尔环境部引领西非气候适应，推动绿色长城计划对抗萨赫勒沙漠化。",
+  "descriptionEn": "Senegal's ministry leads West African climate adaptation and promotes the Great Green Wall initiative against Sahel desertification.",
+  "region": "Africa",
+  "established": 2003,
+  "responsibilities": [
+    "climate",
+    "forest"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNCCD",
+    "Ramsar Convention"
+  ],
+  "epiScore": 29,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境法典",
+      "nameEn": "Environmental Code",
+      "year": 2001
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-09-21",
+    "ndcTargetZh": "2030年排放比基准情景减少30%（有条件）",
+    "ndcTargetEn": "Reduce GHG 30% below BAU by 2030 (conditional)",
+    "ndcRating": "almost_sufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2020
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1993-03-19",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-10-17",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；推动绿色长城计划",
+    "commitmentEn": "Committed to 30x30; advancing Great Green Wall initiative"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳市场机制研究阶段",
+    "noteEn": "Carbon market under study"
+  },
+  "reportingStatus": {
+    "btrSubmitted": false,
+    "btrYear": null,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.55,
+    "cumulativeCO2Gt": 0.3
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1995-07-26",
+    "annex": "I",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 1998,
+    "commitmentZh": "Great Green Wall 西线核心；Ferlo 牧区为重点。",
+    "commitmentEn": "Core of Great Green Wall West axis; Ferlo pastoral zone prioritized.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/sn",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-09-21",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1993-03-19",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-10-17",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1995-07-26",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 43,
+    "carbonEmission": 12,
+    "_deprecated": true
+  }
+}

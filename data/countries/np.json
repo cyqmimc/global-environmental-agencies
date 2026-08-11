@@ -1,0 +1,155 @@
+{
+  "isoCode": "np",
+  "countryEn": "Nepal",
+  "countryZh": "尼泊尔",
+  "agencyEn": "Ministry of Forests and Environment",
+  "agencyZh": "森林与环境部",
+  "website": "https://mofe.gov.np/",
+  "flagUrl": "https://flagcdn.com/np.svg",
+  "descriptionZh": "尼泊尔森林与环境部管理喜马拉雅生态保护和冰湖溃决洪水风险。",
+  "descriptionEn": "Nepal's ministry manages Himalayan ecosystem conservation and glacial lake outburst flood risks.",
+  "region": "Asia",
+  "established": 2018,
+  "responsibilities": [
+    "forest",
+    "climate"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 25.8,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护法",
+      "nameEn": "Environment Protection Act",
+      "year": 2019
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-10-05",
+    "ndcTargetZh": "2030年排放比基准情景减少23.7%（有条件）",
+    "ndcTargetEn": "Reduce GHG 23.7% below BAU by 2030 (conditional)",
+    "ndcRating": "1.5C",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2020
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1994-07-06",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1993-11-23",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护珠峰地区生态",
+    "commitmentEn": "Committed to 30x30; protecting Everest region ecosystems"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳市场研究阶段",
+    "noteEn": "Carbon market under study"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 2,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.53,
+    "cumulativeCO2Gt": 0.3
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1996-10-15",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2004,
+    "commitmentZh": "Terai 平原与中山区水土流失为重点；社区林业为标志性手段。",
+    "commitmentEn": "Terai plain and middle-hill soil erosion prioritized; community forestry is the signature tool.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/np",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-10-05",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1994-07-06",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1993-11-23",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1996-10-15",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 25,
+    "carbonEmission": 12,
+    "_deprecated": true
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "isoCode": "at",
+  "countryEn": "Austria",
+  "countryZh": "奥地利",
+  "agencyEn": "Federal Ministry for Climate Action, Environment, Energy, Mobility, Innovation and Technology (BMK)",
+  "agencyZh": "联邦气候行动、环境、能源、交通、创新与技术部",
+  "website": "https://www.bmk.gv.at/en.html",
+  "flagUrl": "https://flagcdn.com/at.svg",
+  "descriptionZh": "奥地利气候行动部统筹环境保护、能源转型与交通脱碳政策，推动阿尔卑斯生态保护。",
+  "descriptionEn": "Austria's BMK coordinates environmental protection, energy transition and transport decarbonization, promoting Alpine ecological protection.",
+  "region": "Europe",
+  "established": 2020,
+  "responsibilities": [
+    "energy",
+    "climate"
+  ],
+  "contact": {
+    "email": "servicebuero@bmk.gv.at"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "Alpine Convention",
+    "Ramsar Convention"
+  ],
+  "epiScore": 62.4,
+  "netZeroTarget": 2040,
+  "keyLaws": [
+    {
+      "nameZh": "气候保护法",
+      "nameEn": "Climate Protection Act",
+      "year": 2011
+    },
+    {
+      "nameZh": "可再生能源扩展法",
+      "nameEn": "Renewable Energy Expansion Act (EAG)",
+      "year": 2021
+    },
+    {
+      "nameZh": "环境影响评估法",
+      "nameEn": "Environmental Impact Assessment Act",
+      "year": 2000
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-10-05",
+    "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+    "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "EU NDC",
+        "year": 2015
+      },
+      {
+        "version": "EU Updated NDC",
+        "year": 2020
+      },
+      {
+        "version": "EU NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-02-26",
+    "ndc3Target": "EU joint 2035 NDC",
+    "ndc3Source": "https://unfccc.int/NDCREG",
+    "ndc3Note": "Submitted as part of the EU joint NDC."
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1989-05-03",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准，2036年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified, 85% HFC reduction by 2036"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-08-18",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护阿尔卑斯和多瑙河流域生态",
+    "commitmentEn": "Committed to 30x30; protecting Alpine and Danube basin ecosystems"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": true,
+    "priceUSD": 70.4,
+    "coveragePercent": 45,
+    "noteZh": "EU ETS + 2022年启动国内碳排放交易(交通建筑)，起步价30欧元/吨",
+    "noteEn": "EU ETS + national ETS for transport/buildings since 2022, starting at €30/t"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 8,
+    "statusZh": "已提交BTR1（通过EU联合提交）",
+    "statusEn": "BTR1 submitted (via EU joint submission)"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.3,
+    "cumulativeCO2Gt": 4.5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-06-03",
+    "annex": null,
+    "affectedParty": false,
+    "ldnTargetSet": false,
+    "ldnYear": null,
+    "napSubmitted": false,
+    "napYear": null,
+    "commitmentZh": "缔约国但非受影响国，主要以财政方式支持发展中国家防治荒漠化。",
+    "commitmentEn": "Party but non-affected; supports developing countries via finance and technical cooperation.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/at",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-10-05",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1989-05-03",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-08-18",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-06-03",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 47,
+    "carbonEmission": 77,
+    "_deprecated": true
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "isoCode": "mm",
+  "countryEn": "Myanmar",
+  "countryZh": "缅甸",
+  "agencyEn": "Ministry of Natural Resources and Environmental Conservation",
+  "agencyZh": "自然资源与环境保护部",
+  "website": "https://www.monrec.gov.mm/",
+  "flagUrl": "https://flagcdn.com/mm.svg",
+  "descriptionZh": "缅甸自然资源部管理丰富的柚木森林和印度-缅甸生物多样性热点。",
+  "descriptionEn": "Myanmar's ministry manages rich teak forests and biodiversity along the Indo-Burma hotspot.",
+  "region": "Asia",
+  "established": 2016,
+  "responsibilities": [
+    "forest",
+    "biodiversity"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES"
+  ],
+  "epiScore": 24,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护法",
+      "nameEn": "Environmental Conservation Law",
+      "year": 2012
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-09-19",
+    "ndcTargetZh": "减少林业部门碳排放，提高可再生能源至37%",
+    "ndcTargetEn": "Reduce forestry emissions; increase renewable energy to 37%",
+    "ndcRating": "critically_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1993-11-24",
+    "kigaliAmendment": false,
+    "commitmentZh": "已淘汰CFCs；基加利修正案尚未批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment not yet ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-11-25",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "无碳定价机制",
+    "noteEn": "No carbon pricing"
+  },
+  "reportingStatus": {
+    "btrSubmitted": false,
+    "btrYear": null,
+    "nationalComm": 1,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.55,
+    "cumulativeCO2Gt": 1
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-01-02",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2005,
+    "commitmentZh": "Dry Zone（曼德勒、马圭、实皆）为重点。",
+    "commitmentEn": "Central Dry Zone (Mandalay, Magway, Sagaing) prioritized.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/mm",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-09-19",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1993-11-24",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "not_party",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol/amendments/kigali-amendment-2016"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-11-25",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-01-02",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 42,
+    "carbonEmission": 30,
+    "_deprecated": true
+  }
+}

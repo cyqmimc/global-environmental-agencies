@@ -1,0 +1,163 @@
+{
+  "isoCode": "bd",
+  "countryEn": "Bangladesh",
+  "countryZh": "孟加拉国",
+  "agencyEn": "Ministry of Environment, Forest and Climate Change",
+  "agencyZh": "环境、森林与气候变化部",
+  "website": "https://moef.gov.bd/",
+  "flagUrl": "https://flagcdn.com/bd.svg",
+  "descriptionZh": "孟加拉国环境部应对极端气候脆弱性，是全球最易受洪灾影响的国家之一。",
+  "descriptionEn": "Bangladesh's ministry addresses extreme climate vulnerability as one of the world's most flood-prone nations.",
+  "region": "Asia",
+  "established": 1989,
+  "responsibilities": [
+    "climate",
+    "water"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNCCD",
+    "Ramsar Convention"
+  ],
+  "epiScore": 23.1,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护法",
+      "nameEn": "Environment Conservation Act",
+      "year": 1995
+    },
+    {
+      "nameZh": "气候变化信托基金法",
+      "nameEn": "Climate Change Trust Fund Act",
+      "year": 2010
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-09-21",
+    "ndcTargetZh": "已提交2035目标",
+    "ndcTargetEn": "2035 target submitted",
+    "ndcRating": "2C",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1990-08-02",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs；基加利修正案已批准",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-05-03",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护孙德尔本斯红树林",
+    "commitmentEn": "Committed to 30x30; protecting Sundarbans mangroves"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳市场研究阶段",
+    "noteEn": "Carbon market under study"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.58,
+    "cumulativeCO2Gt": 1.5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1996-01-26",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2005,
+    "commitmentZh": "西北部 Barind 区域为重点；LDN 目标涵盖造林与可持续农业。",
+    "commitmentEn": "Northwest Barind tract prioritized; LDN spans afforestation and sustainable agriculture.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/bd",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-09-21",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1990-08-02",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-05-03",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1996-01-26",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 11,
+    "carbonEmission": 100,
+    "_deprecated": true
+  }
+}

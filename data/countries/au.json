@@ -1,0 +1,169 @@
+{
+  "isoCode": "au",
+  "countryEn": "Australia",
+  "countryZh": "澳大利亚",
+  "agencyEn": "Department of Climate Change, Energy, the Environment and Water",
+  "agencyZh": "气候变化、能源、环境与水资源部",
+  "website": "https://www.dcceew.gov.au/",
+  "flagUrl": "https://flagcdn.com/au.svg",
+  "descriptionZh": "澳大利亚环境部负责气候、能源及生态保护事务，应对干旱和珊瑚礁退化挑战。",
+  "descriptionEn": "Australia's DCCEEW handles climate, energy, and ecological protection, addressing challenges from drought and coral reef degradation.",
+  "region": "Oceania",
+  "established": 2022,
+  "responsibilities": [
+    "energy",
+    "water"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 60.1,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护与生物多样性保护法",
+      "nameEn": "Environment Protection and Biodiversity Conservation Act (EPBC)",
+      "year": 1999
+    },
+    {
+      "nameZh": "气候变化法",
+      "nameEn": "Climate Change Act",
+      "year": 2022
+    },
+    {
+      "nameZh": "可再生能源目标法",
+      "nameEn": "Renewable Energy Target Act",
+      "year": 2000
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-11-09",
+    "ndcTargetZh": "2035年较2005年减排62-70%",
+    "ndcTargetEn": "62-70% reduction below 2005 levels by 2035",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2022
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-09-18",
+    "ndc3Target": "62-70% reduction by 2035 vs. 2005",
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1989-05-19",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准，2036年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified, 85% HFC reduction by 2036"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1993-06-18",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；重点保护大堡礁等世界遗产",
+    "commitmentEn": "Committed to 30x30; focusing on Great Barrier Reef and World Heritage protection"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": false,
+    "priceUSD": 21.8,
+    "coveragePercent": 28,
+    "noteZh": "减排基金保障机制(Safeguard Mechanism)，覆盖大型排放设施",
+    "noteEn": "Safeguard Mechanism covering large emitting facilities"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 8,
+    "statusZh": "已提交BTR1",
+    "statusEn": "BTR1 submitted"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.34,
+    "cumulativeCO2Gt": 18
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "2000-05-15",
+    "annex": null,
+    "affectedParty": false,
+    "ldnTargetSet": false,
+    "ldnYear": null,
+    "napSubmitted": false,
+    "napYear": null,
+    "commitmentZh": "非受影响发达国家；国内通过《国家干旱协议》和 Future Drought Fund 应对旱地退化。",
+    "commitmentEn": "Non-affected developed country; addresses dryland degradation domestically via National Drought Agreement and Future Drought Fund.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/au",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-11-09",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1989-05-19",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1993-06-18",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "2000-05-15",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 17,
+    "carbonEmission": 400,
+    "_deprecated": true
+  }
+}

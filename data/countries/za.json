@@ -1,0 +1,168 @@
+{
+  "isoCode": "za",
+  "countryEn": "South Africa",
+  "countryZh": "南非",
+  "agencyEn": "Department of Forestry, Fisheries and the Environment (DFFE)",
+  "agencyZh": "林业、渔业与环境部",
+  "website": "https://www.dffe.gov.za/",
+  "flagUrl": "https://flagcdn.com/za.svg",
+  "descriptionZh": "南非DFFE负责自然资源管理与环境保护，保护丰富的野生动物资源。",
+  "descriptionEn": "South Africa's DFFE manages natural resources and environmental protection, safeguarding rich wildlife resources.",
+  "region": "Africa",
+  "established": 2009,
+  "responsibilities": [
+    "biodiversity",
+    "forest"
+  ],
+  "contact": {
+    "email": "callcentre@dffe.gov.za"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "UNCCD"
+  ],
+  "epiScore": 29.8,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "国家环境管理法",
+      "nameEn": "National Environmental Management Act (NEMA)",
+      "year": 1998
+    },
+    {
+      "nameZh": "碳税法",
+      "nameEn": "Carbon Tax Act",
+      "year": 2019
+    },
+    {
+      "nameZh": "国家水法",
+      "nameEn": "National Water Act",
+      "year": 1998
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-11-01",
+    "ndcTargetZh": "2035年排放320-380百万吨CO2当量（含土地利用）",
+    "ndcTargetEn": "320-380 MtCO2e by 2035 (incl. LULUCF)",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1990-01-15",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 85% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1995-11-02",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；是全球生物多样性热点地区",
+    "commitmentEn": "Committed to 30x30; one of the global biodiversity hotspots"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": true,
+    "priceUSD": 12.8,
+    "coveragePercent": 80,
+    "noteZh": "2019年实施碳税，约159兰特/吨CO₂当量",
+    "noteEn": "Carbon tax since 2019, ~R159/tCO₂eq"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 4,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.47,
+    "cumulativeCO2Gt": 17
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-09-30",
+    "annex": "I",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2004,
+    "commitmentZh": "Karoo、Northern Cape 干旱区为重点；LDN 与水土保持立法挂钩。",
+    "commitmentEn": "Karoo and Northern Cape drylands prioritized; LDN tied to soil & water conservation legislation.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/za",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-11-01",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1990-01-15",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1995-11-02",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-09-30",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 7,
+    "carbonEmission": 400,
+    "_deprecated": true
+  }
+}

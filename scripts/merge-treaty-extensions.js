@@ -1,37 +1,43 @@
 #!/usr/bin/env node
 /**
- * Merge UNCCD desertification + NDC 3.0 data into public/countries.json.
+ * Merge UNCCD desertification + NDC 3.0 data into data/countries/<iso>.json.
  *
  * Source files:
  *   scripts/data/desertification.json   — per-country UNCCD status
  *   scripts/data/ndc3.json              — per-country Third NDC submission
  *
- * Idempotent: re-running over an already-merged countries.json updates the
- * fields in place without duplicating other content.
+ * Idempotent: re-running over already-merged files updates the fields in
+ * place without duplicating other content.
  *
  * Both source files carry `_meta.primarySource(s)` and per-country `source`
  * URLs so every value is traceable back to UNCCD / UNFCCC official pages.
  *
+ * Patches data/countries/<iso>.json directly — NOT public/countries.json,
+ * which is now a generated file (run `npm run build-data` afterward to
+ * regenerate it, same as after any data/countries/ edit).
+ *
  *   Run: node scripts/merge-treaty-extensions.js
  */
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import { listIsoCodes, readCountryFile, writeCountryFile } from "./build-countries.js";
 
-const COUNTRIES = path.join(__dirname, "..", "public", "countries.json");
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 const D_DATA = path.join(__dirname, "data", "desertification.json");
 const N_DATA = path.join(__dirname, "data", "ndc3.json");
 
-const countries = JSON.parse(fs.readFileSync(COUNTRIES, "utf8"));
 const desertData = JSON.parse(fs.readFileSync(D_DATA, "utf8"));
 const ndcData = JSON.parse(fs.readFileSync(N_DATA, "utf8"));
 
 let added = 0, updated = 0, missing = [];
 
-countries.forEach((c) => {
-  const iso = c.isoCode;
-  if (!iso) return;
+listIsoCodes().forEach((iso) => {
+  const c = readCountryFile(iso);
   const d = desertData[iso];
   const n = ndcData[iso];
+  let changed = false;
 
   if (d) {
     const before = JSON.stringify(c.desertification || null);
@@ -54,6 +60,7 @@ countries.forEach((c) => {
     };
     if (before !== JSON.stringify(c.desertification)) {
       if (before === "null") added++; else updated++;
+      changed = true;
     }
   } else {
     missing.push(`desertification: ${iso}`);
@@ -81,14 +88,15 @@ countries.forEach((c) => {
         c.parisAgreement.ndcHistory.sort((a, b) => (a.year || 0) - (b.year || 0));
       }
     }
+    changed = true;
   } else {
     missing.push(`ndc3: ${iso}`);
   }
+
+  if (changed) writeCountryFile(c);
 });
 
-fs.writeFileSync(COUNTRIES, JSON.stringify(countries, null, 2) + "\n");
-
-console.log(`✓ Merged into countries.json`);
+console.log(`✓ Merged into data/countries/<iso>.json`);
 console.log(`  · desertification entries: ${Object.keys(desertData).length - 1}/80`);
 console.log(`  · ndc3 entries: ${Object.keys(ndcData).length - 1}/80`);
 const ldnCount = Object.values(desertData).filter((x) => x && x.ldnTargetSet).length;
@@ -99,3 +107,4 @@ if (missing.length) {
   console.warn(`⚠ Missing source data for ${missing.length} entries:`);
   missing.slice(0, 5).forEach((m) => console.warn(`    ${m}`));
 }
+console.log(`\nRun \`npm run build-data\` to regenerate public/countries.json.`);

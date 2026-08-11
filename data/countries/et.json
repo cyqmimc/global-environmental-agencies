@@ -1,0 +1,168 @@
+{
+  "isoCode": "et",
+  "countryEn": "Ethiopia",
+  "countryZh": "埃塞俄比亚",
+  "agencyEn": "Environment, Forest and Climate Change Commission",
+  "agencyZh": "环境、森林与气候变化委员会",
+  "website": "https://www.efccc.gov.et/",
+  "flagUrl": "https://flagcdn.com/et.svg",
+  "descriptionZh": "埃塞俄比亚环境委员会推动绿色遗产倡议，在全国范围内开展大规模植树造林运动。",
+  "descriptionEn": "Ethiopia's commission drives the Green Legacy Initiative, conducting large-scale tree planting campaigns nationwide.",
+  "region": "Africa",
+  "established": 2018,
+  "responsibilities": [
+    "forest",
+    "climate"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNCCD",
+    "Ramsar Convention"
+  ],
+  "epiScore": 22.7,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境影响评估公告",
+      "nameEn": "Environmental Impact Assessment Proclamation",
+      "year": 2002
+    },
+    {
+      "nameZh": "气候韧性绿色经济战略",
+      "nameEn": "Climate-Resilient Green Economy Strategy",
+      "year": 2011
+    },
+    {
+      "nameZh": "森林发展与利用公告",
+      "nameEn": "Forest Development and Utilization Proclamation",
+      "year": 2018
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-03-09",
+    "ndcTargetZh": "已提交2035目标",
+    "ndcTargetEn": "2035 target submitted",
+    "ndcRating": "1.5C",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1994-10-11",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 85% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-04-05",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护东非大裂谷生态系统",
+    "commitmentEn": "Committed to 30x30; protecting East African Rift Valley ecosystems"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳市场机制研究阶段",
+    "noteEn": "Carbon market mechanism under study"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 2,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.6,
+    "cumulativeCO2Gt": 0.4
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-06-27",
+    "annex": "I",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 1998,
+    "commitmentZh": "绿色遗产倡议 (Green Legacy) 累计种植 320 亿株树；LDN 与气候韧性整合。",
+    "commitmentEn": "Green Legacy Initiative planted 32B+ seedlings; LDN integrated with climate resilience.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/et",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-03-09",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1994-10-11",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-04-05",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-06-27",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 15,
+    "carbonEmission": 25,
+    "_deprecated": true
+  }
+}

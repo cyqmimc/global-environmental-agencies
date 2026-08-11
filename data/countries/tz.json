@@ -1,0 +1,155 @@
+{
+  "isoCode": "tz",
+  "countryEn": "Tanzania",
+  "countryZh": "坦桑尼亚",
+  "agencyEn": "Vice President's Office - Environment",
+  "agencyZh": "副总统办公室-环境部门",
+  "website": "https://www.vpo.go.tz/",
+  "flagUrl": "https://flagcdn.com/tz.svg",
+  "descriptionZh": "坦桑尼亚环境部门管理塞伦盖蒂和乞力马扎罗山保护，同时应对气候适应。",
+  "descriptionEn": "Tanzania's environmental division manages Serengeti and Kilimanjaro conservation while addressing climate adaptation.",
+  "region": "Africa",
+  "established": 2005,
+  "responsibilities": [
+    "biodiversity",
+    "forest"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 26.7,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境管理法",
+      "nameEn": "Environmental Management Act",
+      "year": 2004
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2018-04-18",
+    "ndcTargetZh": "2030年排放比基准情景减少30-35%",
+    "ndcTargetEn": "Reduce GHG 30-35% below BAU by 2030",
+    "ndcRating": "2C",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1993-04-16",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰CFCs等受控物质；基加利修正案已批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1996-03-08",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护塞伦盖蒂生态",
+    "commitmentEn": "Committed to 30x30; protecting Serengeti ecosystem"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳市场机制研究阶段",
+    "noteEn": "Carbon market under study"
+  },
+  "reportingStatus": {
+    "btrSubmitted": false,
+    "btrYear": null,
+    "nationalComm": 2,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.56,
+    "cumulativeCO2Gt": 0.3
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-04-19",
+    "annex": "I",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 1999,
+    "commitmentZh": "Dodoma、Singida 中央干旱区为重点；与 AFR100 倡议结合。",
+    "commitmentEn": "Dodoma and Singida central drylands prioritized; aligned with AFR100.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/tz",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2018-04-18",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1993-04-16",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1996-03-08",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-04-19",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 52,
+    "carbonEmission": 15,
+    "_deprecated": true
+  }
+}

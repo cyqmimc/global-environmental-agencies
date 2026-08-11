@@ -1,0 +1,173 @@
+{
+  "isoCode": "id",
+  "countryEn": "Indonesia",
+  "countryZh": "印度尼西亚",
+  "agencyEn": "Ministry of Environment / Environmental Control Agency",
+  "agencyZh": "环境部 / 环境控制局",
+  "website": "https://kemenlh.go.id/",
+  "flagUrl": "https://flagcdn.com/id.svg",
+  "descriptionZh": "印尼环境与林业部于2024年拆分为环境部和林业部。环境部（环境控制局）负责污染防治和气候变化应对，管理全球第三大热带雨林的生态保护。",
+  "descriptionEn": "Indonesia's Ministry of Environment and Forestry was split in 2024 into separate environment and forestry ministries. The environmental agency handles pollution control and climate response, protecting the world's third-largest tropical rainforest.",
+  "region": "Asia",
+  "established": 2014,
+  "responsibilities": [
+    "forest",
+    "biodiversity"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 28.2,
+  "netZeroTarget": 2060,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护与管理法",
+      "nameEn": "Environmental Protection and Management Law",
+      "year": 2009
+    },
+    {
+      "nameZh": "林业法",
+      "nameEn": "Forestry Law",
+      "year": 1999
+    },
+    {
+      "nameZh": "综合创造就业法（环境章节）",
+      "nameEn": "Omnibus Job Creation Law (Environmental Chapter)",
+      "year": 2020
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-10-31",
+    "ndcTargetZh": "无条件：较2019年增幅不超56%；有条件：增幅10-30%",
+    "ndcTargetEn": "Unconditional: limit increase to 56% above 2019; conditional: 10-30% increase",
+    "ndcRating": "critically_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      },
+      {
+        "version": "Enhanced NDC",
+        "year": 2022
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1992-06-26",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 80%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 80% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-08-23",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；拥有全球最丰富的海洋生物多样性",
+    "commitmentEn": "Committed to 30x30; richest marine biodiversity globally"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": false,
+    "priceUSD": 0.7,
+    "coveragePercent": 25,
+    "noteZh": "2023年启动碳交易所，覆盖电力行业",
+    "noteEn": "Carbon exchange launched 2023, covering power sector"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.48,
+    "cumulativeCO2Gt": 14
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1998-08-31",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2002,
+    "commitmentZh": "东努沙登加拉、西帝汶旱地与采矿迹地恢复为重点；LDN 与 FOLU Net Sink 2030 衔接。",
+    "commitmentEn": "East Nusa Tenggara drylands and mine-area restoration prioritized; LDN tied to FOLU Net Sink 2030.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/id",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-10-31",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1992-06-26",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-08-23",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1998-08-31",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 50,
+    "carbonEmission": 1200,
+    "_deprecated": true
+  }
+}

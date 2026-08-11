@@ -1,0 +1,169 @@
+{
+  "isoCode": "nz",
+  "countryEn": "New Zealand",
+  "countryZh": "新西兰",
+  "agencyEn": "Ministry for the Environment",
+  "agencyZh": "环境部",
+  "website": "https://environment.govt.nz/",
+  "flagUrl": "https://flagcdn.com/nz.svg",
+  "descriptionZh": "新西兰环境部致力于保护独特的自然遗产和生物多样性，推动零碳法案实施。",
+  "descriptionEn": "New Zealand's Ministry for the Environment protects unique natural heritage and biodiversity, advancing the Zero Carbon Act.",
+  "region": "Oceania",
+  "established": 1986,
+  "responsibilities": [
+    "biodiversity",
+    "climate"
+  ],
+  "contact": {
+    "email": "info@mfe.govt.nz"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 56.7,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "零碳修正法",
+      "nameEn": "Climate Change Response (Zero Carbon) Amendment Act",
+      "year": 2019
+    },
+    {
+      "nameZh": "资源管理法",
+      "nameEn": "Resource Management Act",
+      "year": 1991
+    },
+    {
+      "nameZh": "排放交易法",
+      "nameEn": "NZ Emissions Trading Scheme",
+      "year": 2008
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-10-04",
+    "ndcTargetZh": "已提交2035目标",
+    "ndcTargetEn": "2035 target submitted",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2023
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-01-31",
+    "ndc3Target": "51-55% reduction by 2035 vs. 2005 (gross-net basis)",
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1988-06-21",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准，2036年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified, 85% HFC reduction by 2036"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1993-09-16",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护独特的本土物种",
+    "commitmentEn": "Committed to 30x30; protecting unique endemic species"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": false,
+    "priceUSD": 32,
+    "coveragePercent": 49,
+    "noteZh": "新西兰碳排放交易体系(NZ ETS)，覆盖林业、能源、工业",
+    "noteEn": "NZ ETS covering forestry, energy, and industrial sectors"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 8,
+    "statusZh": "已提交BTR1",
+    "statusEn": "BTR1 submitted"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.32,
+    "cumulativeCO2Gt": 1.5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "2000-09-07",
+    "annex": null,
+    "affectedParty": false,
+    "ldnTargetSet": false,
+    "ldnYear": null,
+    "napSubmitted": false,
+    "napYear": null,
+    "commitmentZh": "非受影响国；通过 MFAT 支持太平洋岛国 LDN 项目。",
+    "commitmentEn": "Non-affected; MFAT supports Pacific Island LDN programmes.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/nz",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-10-04",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1988-06-21",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1993-09-16",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "2000-09-07",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 38,
+    "carbonEmission": 80,
+    "_deprecated": true
+  }
+}

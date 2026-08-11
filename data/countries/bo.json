@@ -1,0 +1,151 @@
+{
+  "isoCode": "bo",
+  "countryEn": "Bolivia",
+  "countryZh": "玻利维亚",
+  "agencyEn": "Ministry of the Environment and Water",
+  "agencyZh": "环境与水资源部",
+  "website": "https://www.mmaya.gob.bo/",
+  "flagUrl": "https://flagcdn.com/bo.svg",
+  "descriptionZh": "玻利维亚环境部管理安第斯和亚马逊生态系统，拥有独特的「地球母亲」法律框架。",
+  "descriptionEn": "Bolivia's ministry manages Andean and Amazon ecosystems with a unique 'Mother Earth' legal framework.",
+  "region": "South America",
+  "established": 2009,
+  "responsibilities": [
+    "water",
+    "biodiversity"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 32.5,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "地球母亲权利法",
+      "nameEn": "Law of the Rights of Mother Earth",
+      "year": 2010
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-10-05",
+    "ndcTargetZh": "2030年前保持森林碳汇并增加可再生能源",
+    "ndcTargetEn": "Maintain forest carbon sinks and increase renewable energy by 2030",
+    "ndcRating": "highly_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1994-10-03",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-10-03",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "无碳定价机制",
+    "noteEn": "No carbon pricing"
+  },
+  "reportingStatus": {
+    "btrSubmitted": false,
+    "btrYear": null,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.49,
+    "cumulativeCO2Gt": 1
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1996-08-01",
+    "annex": "III",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2007,
+    "commitmentZh": "Altiplano 高原与 Chaco 干旱区为重点；LDN 与气候适应规划协同。",
+    "commitmentEn": "Altiplano and Chaco drylands prioritized; LDN integrated with climate adaptation.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/bo",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-10-05",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1994-10-03",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-10-03",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1996-08-01",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 50,
+    "carbonEmission": 25,
+    "_deprecated": true
+  }
+}

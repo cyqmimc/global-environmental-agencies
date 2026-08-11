@@ -1,0 +1,168 @@
+{
+  "isoCode": "ke",
+  "countryEn": "Kenya",
+  "countryZh": "肯尼亚",
+  "agencyEn": "Ministry of Environment, Climate Change and Forestry",
+  "agencyZh": "环境、气候变化与林业部",
+  "website": "https://www.environment.go.ke/",
+  "flagUrl": "https://flagcdn.com/ke.svg",
+  "descriptionZh": "肯尼亚环境部管理野生动物保护区和应对气候变化，是联合国环境规划署总部所在地。",
+  "descriptionEn": "Kenya's ministry manages wildlife reserves and climate response. Nairobi hosts the UNEP headquarters.",
+  "region": "Africa",
+  "established": 1999,
+  "responsibilities": [
+    "biodiversity",
+    "forest"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "UNCCD"
+  ],
+  "epiScore": 30.8,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境管理与协调法",
+      "nameEn": "Environmental Management and Co-ordination Act (EMCA)",
+      "year": 1999
+    },
+    {
+      "nameZh": "气候变化法",
+      "nameEn": "Climate Change Act",
+      "year": 2016
+    },
+    {
+      "nameZh": "野生动物保护与管理法",
+      "nameEn": "Wildlife Conservation and Management Act",
+      "year": 2013
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-12-28",
+    "ndcTargetZh": "已提交2035目标",
+    "ndcTargetEn": "2035 target submitted",
+    "ndcRating": "1.5C",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2020
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2026
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1988-11-09",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 85% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-07-26",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；联合国环境规划署总部所在地",
+    "commitmentEn": "Committed to 30x30; hosts UNEP headquarters"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "目前无碳定价机制；碳市场研究阶段",
+    "noteEn": "No carbon pricing; carbon market under study"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.55,
+    "cumulativeCO2Gt": 0.4
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-06-24",
+    "annex": "I",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2002,
+    "commitmentZh": "目标到 2032 实现 10% 树覆盖；LDN 与旱地畜牧业转型挂钩。",
+    "commitmentEn": "Target 10% tree cover by 2032; LDN linked to dryland livestock transition.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/ke",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-12-28",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1988-11-09",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-07-26",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-06-24",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 8,
+    "carbonEmission": 20,
+    "_deprecated": true
+  }
+}

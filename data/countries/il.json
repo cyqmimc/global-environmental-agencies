@@ -1,0 +1,164 @@
+{
+  "isoCode": "il",
+  "countryEn": "Israel",
+  "countryZh": "以色列",
+  "agencyEn": "Ministry of Environmental Protection",
+  "agencyZh": "环境保护部",
+  "website": "https://www.gov.il/en/departments/ministry_of_environmental_protection",
+  "flagUrl": "https://flagcdn.com/il.svg",
+  "descriptionZh": "以色列环境保护部在水资源回收利用和沙漠农业技术方面全球领先，推动清洁技术创新。",
+  "descriptionEn": "Israel's Ministry of Environmental Protection leads globally in water recycling and desert agriculture technology, driving clean-tech innovation.",
+  "region": "Asia",
+  "established": 1988,
+  "responsibilities": [
+    "water",
+    "air"
+  ],
+  "contact": {
+    "email": "info@sviva.gov.il"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "Basel Convention",
+    "UNCCD"
+  ],
+  "epiScore": 53.5,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "清洁空气法",
+      "nameEn": "Clean Air Act",
+      "year": 2008
+    },
+    {
+      "nameZh": "气候法",
+      "nameEn": "Climate Law",
+      "year": 2022
+    },
+    {
+      "nameZh": "水法",
+      "nameEn": "Water Law",
+      "year": 1959
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-11-22",
+    "ndcTargetZh": "2030年人均温室气体排放降至7.7吨CO₂当量",
+    "ndcTargetEn": "Reduce per capita GHG to 7.7t CO₂eq by 2030",
+    "ndcRating": "not_assessed",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1992-06-30",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准，2036年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified, 85% HFC reduction by 2036"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1995-08-07",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护地中海和内盖夫沙漠生态",
+    "commitmentEn": "Committed to 30x30; protecting Mediterranean coast and Negev desert ecosystems"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": true,
+    "priceUSD": 1.5,
+    "coveragePercent": 0,
+    "noteZh": "碳交易体系和碳税方案评估中",
+    "noteEn": "ETS and carbon tax options under evaluation"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.37,
+    "cumulativeCO2Gt": 2.5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1996-03-26",
+    "annex": "IV",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2006,
+    "commitmentZh": "Negev 沙漠绿化与滴灌为国际范例；LDN 已纳入国家长期规划。",
+    "commitmentEn": "Negev greening and drip irrigation are global benchmarks; LDN built into long-term national planning.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/il",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-11-22",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1992-06-30",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1995-08-07",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1996-03-26",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 7,
+    "carbonEmission": 65,
+    "_deprecated": true
+  }
+}

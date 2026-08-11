@@ -1,0 +1,159 @@
+{
+  "isoCode": "ec",
+  "countryEn": "Ecuador",
+  "countryZh": "厄瓜多尔",
+  "agencyEn": "Ministry of the Environment, Water and Ecological Transition",
+  "agencyZh": "环境、水利与生态转型部",
+  "website": "https://www.ambiente.gob.ec/",
+  "flagUrl": "https://flagcdn.com/ec.svg",
+  "descriptionZh": "厄瓜多尔环境部管理加拉帕戈斯群岛保护，2008年在全球率先将自然权利写入宪法。",
+  "descriptionEn": "Ecuador's ministry manages Galapagos conservation and pioneered constitutional rights of nature in 2008.",
+  "region": "South America",
+  "established": 1996,
+  "responsibilities": [
+    "biodiversity",
+    "water"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Escazú Agreement"
+  ],
+  "epiScore": 36.8,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "宪法自然权利条款",
+      "nameEn": "Constitutional Rights of Nature",
+      "year": 2008
+    },
+    {
+      "nameZh": "环境法典",
+      "nameEn": "Environmental Organic Code",
+      "year": 2017
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-03-29",
+    "ndcTargetZh": "2025年排放比基准情景减少20.9-25%",
+    "ndcTargetEn": "Reduce GHG 20.9-25% below BAU by 2025",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2019
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1990-04-30",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1993-02-23",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护加拉帕戈斯",
+    "commitmentEn": "Committed to 30x30; protecting Galapagos Islands"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳市场机制研究阶段",
+    "noteEn": "Carbon market under study"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.46,
+    "cumulativeCO2Gt": 1.5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1995-09-06",
+    "annex": "III",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2004,
+    "commitmentZh": "Manabí、Loja 干旱区与 Galápagos 干燥灌丛为重点。",
+    "commitmentEn": "Manabí, Loja drylands and Galápagos dry scrub prioritized.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/ec",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-03-29",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1990-04-30",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1993-02-23",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1995-09-06",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 50,
+    "carbonEmission": 45,
+    "_deprecated": true
+  }
+}

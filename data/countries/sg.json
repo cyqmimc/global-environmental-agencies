@@ -1,0 +1,168 @@
+{
+  "isoCode": "sg",
+  "countryEn": "Singapore",
+  "countryZh": "新加坡",
+  "agencyEn": "Ministry of Sustainability and the Environment",
+  "agencyZh": "可持续发展与环境部",
+  "website": "https://www.mse.gov.sg/",
+  "flagUrl": "https://flagcdn.com/sg.svg",
+  "descriptionZh": "新加坡环境部推行绿色经济和气候应对政策，打造花园城市和零废弃目标。",
+  "descriptionEn": "Singapore's ministry promotes green economy and climate response policies, building a Garden City with zero-waste goals.",
+  "region": "Asia",
+  "established": 2020,
+  "responsibilities": [
+    "waste",
+    "air"
+  ],
+  "contact": {
+    "email": "MSE_Feedback@mse.gov.sg"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "Basel Convention",
+    "Montreal Protocol"
+  ],
+  "epiScore": 50.9,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护与管理法",
+      "nameEn": "Environmental Protection and Management Act",
+      "year": 1999
+    },
+    {
+      "nameZh": "碳定价法",
+      "nameEn": "Carbon Pricing Act",
+      "year": 2018
+    },
+    {
+      "nameZh": "资源可持续性法",
+      "nameEn": "Resource Sustainability Act",
+      "year": 2019
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-09-21",
+    "ndcTargetZh": "2030年排放强度比2005年降低36%；绝对排放峰值6500万吨",
+    "ndcTargetEn": "Reduce emission intensity 36% vs 2005 by 2030; peak at 65 Mt",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2022
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-02-10",
+    "ndc3Target": "45 MtCO₂e absolute cap by 2035 (with view to net zero by 2050)",
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1989-01-05",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准，2036年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified, 85% HFC reduction by 2036"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1995-12-21",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；推动城市生物多样性保护",
+    "commitmentEn": "Committed to 30x30; promotes urban biodiversity conservation"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": true,
+    "priceUSD": 18.6,
+    "coveragePercent": 80,
+    "noteZh": "碳税25新元/吨(2024)，2030年前升至50-80新元/吨",
+    "noteEn": "Carbon tax S$25/t (2024), rising to S$50-80/t by 2030"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 4,
+    "statusZh": "已提交BTR1",
+    "statusEn": "BTR1 submitted"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.3,
+    "cumulativeCO2Gt": 1.2
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1999-04-26",
+    "annex": null,
+    "affectedParty": false,
+    "ldnTargetSet": false,
+    "ldnYear": null,
+    "napSubmitted": false,
+    "napYear": null,
+    "commitmentZh": "缔约国但非受影响（城邦无农牧业退化）；通过财政与技术合作支持。",
+    "commitmentEn": "Party but non-affected (city-state with no agricultural land degradation); supports via finance and technical cooperation.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/sg",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-09-21",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1989-01-05",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1995-12-21",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1999-04-26",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 23,
+    "carbonEmission": 60,
+    "_deprecated": true
+  }
+}

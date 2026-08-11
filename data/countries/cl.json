@@ -1,0 +1,168 @@
+{
+  "isoCode": "cl",
+  "countryEn": "Chile",
+  "countryZh": "智利",
+  "agencyEn": "Ministry of the Environment",
+  "agencyZh": "环境部",
+  "website": "https://mma.gob.cl/",
+  "flagUrl": "https://flagcdn.com/cl.svg",
+  "descriptionZh": "智利环境部负责保护安第斯山脉和巴塔哥尼亚生态系统，是拉美气候立法的先行者。",
+  "descriptionEn": "Chile's Ministry of the Environment protects Andean and Patagonian ecosystems, pioneering climate legislation in Latin America.",
+  "region": "South America",
+  "established": 2010,
+  "responsibilities": [
+    "climate",
+    "biodiversity"
+  ],
+  "contact": {
+    "email": "consultaciudadana@mma.gob.cl"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Escazú Agreement"
+  ],
+  "epiScore": 44.3,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "气候变化框架法",
+      "nameEn": "Framework Law on Climate Change",
+      "year": 2022
+    },
+    {
+      "nameZh": "环境基本法",
+      "nameEn": "General Environmental Law",
+      "year": 1994
+    },
+    {
+      "nameZh": "生物多样性与自然保护区法",
+      "nameEn": "Biodiversity and Protected Areas Act",
+      "year": 2023
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-02-10",
+    "ndcTargetZh": "已提交2035目标",
+    "ndcTargetEn": "2035 target submitted",
+    "ndcRating": "almost_sufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2020
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1990-03-26",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 80%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 80% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-09-09",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护安第斯和太平洋沿岸生态",
+    "commitmentEn": "Committed to 30x30; protecting Andean and Pacific coast ecosystems"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": true,
+    "priceUSD": 5,
+    "coveragePercent": 39,
+    "noteZh": "碳税$5/吨CO₂覆盖大型排放源；绿色税收改革推进中",
+    "noteEn": "Carbon tax $5/tCO₂ on large emitters; green tax reform in progress"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 4,
+    "statusZh": "已提交BTR1",
+    "statusEn": "BTR1 submitted"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.39,
+    "cumulativeCO2Gt": 4
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-11-13",
+    "annex": "III",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 1997,
+    "commitmentZh": "Atacama、Coquimbo 旱地是核心；LDN 与林业治理结合。",
+    "commitmentEn": "Atacama and Coquimbo drylands are core; LDN linked to forestry governance.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/cl",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-02-10",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1990-03-26",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-09-09",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-11-13",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 24,
+    "carbonEmission": 100,
+    "_deprecated": true
+  }
+}

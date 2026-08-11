@@ -1,0 +1,169 @@
+{
+  "isoCode": "it",
+  "countryEn": "Italy",
+  "countryZh": "意大利",
+  "agencyEn": "Ministry of Environment and Energy Security",
+  "agencyZh": "环境与能源安全部",
+  "website": "https://www.mase.gov.it/",
+  "flagUrl": "https://flagcdn.com/it.svg",
+  "descriptionZh": "意大利环境部致力于可再生能源及生态保护政策，保护地中海沿岸生态系统。",
+  "descriptionEn": "Italy's ministry focuses on renewable energy and ecological protection, safeguarding Mediterranean coastal ecosystems.",
+  "region": "Europe",
+  "established": 1986,
+  "responsibilities": [
+    "energy",
+    "water"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "Barcelona Convention",
+    "Basel Convention"
+  ],
+  "epiScore": 57.7,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境法典",
+      "nameEn": "Environmental Code (D.Lgs. 152/2006)",
+      "year": 2006
+    },
+    {
+      "nameZh": "宪法环境条款修正案",
+      "nameEn": "Constitutional Amendment on Environmental Protection",
+      "year": 2022
+    },
+    {
+      "nameZh": "国家气候与能源计划",
+      "nameEn": "National Energy and Climate Plan (NECP)",
+      "year": 2019
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-10-05",
+    "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+    "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "EU NDC",
+        "year": 2015
+      },
+      {
+        "version": "EU Updated NDC",
+        "year": 2020
+      },
+      {
+        "version": "EU NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-02-26",
+    "ndc3Target": "EU joint 2035 NDC",
+    "ndc3Source": "https://unfccc.int/NDCREG",
+    "ndc3Note": "EU joint submission."
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1988-12-16",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准，2036年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified, 85% HFC reduction by 2036"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-04-15",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；推动地中海海洋保护",
+    "commitmentEn": "Committed to 30x30; advancing Mediterranean marine conservation"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": false,
+    "priceUSD": 70.4,
+    "coveragePercent": 40,
+    "noteZh": "参与EU ETS，覆盖电力、工业和航空部门",
+    "noteEn": "Participates in EU ETS covering power, industry and aviation"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 8,
+    "statusZh": "已提交BTR1（通过EU联合提交）",
+    "statusEn": "BTR1 submitted (via EU joint submission)"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.34,
+    "cumulativeCO2Gt": 24
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-06-23",
+    "annex": "IV",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 1999,
+    "commitmentZh": "西西里、撒丁、巴西利卡塔南部为重点；2024 更新 NAP。",
+    "commitmentEn": "Sicily, Sardinia and southern Basilicata prioritized; NAP updated 2024.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/it",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-10-05",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1988-12-16",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-04-15",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-06-23",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 36,
+    "carbonEmission": 450,
+    "_deprecated": true
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "isoCode": "br",
+  "countryEn": "Brazil",
+  "countryZh": "巴西",
+  "agencyEn": "Ministry of the Environment and Climate Change (MMA)",
+  "agencyZh": "环境与气候变化部",
+  "website": "https://www.gov.br/mma/pt-br",
+  "flagUrl": "https://flagcdn.com/br.svg",
+  "descriptionZh": "巴西环境部负责保护亚马逊森林及应对气候变化，管理全球最大的热带雨林。",
+  "descriptionEn": "Brazil's MMA is responsible for protecting the Amazon rainforest and addressing climate change, managing the world's largest tropical rainforest.",
+  "region": "South America",
+  "established": 1992,
+  "responsibilities": [
+    "forest",
+    "biodiversity"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Amazon Cooperation Treaty"
+  ],
+  "epiScore": 36.7,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "森林法典",
+      "nameEn": "Forest Code",
+      "year": 2012
+    },
+    {
+      "nameZh": "国家环境政策法",
+      "nameEn": "National Environmental Policy Act",
+      "year": 1981
+    },
+    {
+      "nameZh": "大西洋森林法",
+      "nameEn": "Atlantic Forest Law",
+      "year": 2006
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-09-21",
+    "ndcTargetZh": "2035年较2005年净减排59-67%（含土地利用）",
+    "ndcTargetEn": "59-67% reduction below 2005 levels by 2035 (incl. LULUCF)",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2022
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2024
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2024-11-12",
+    "ndc3Target": "59-67% reduction by 2035 vs. 2005",
+    "ndc3Source": "https://unfccc.int/NDCREG",
+    "ndc3Note": "Submitted as COP30 host."
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1990-03-19",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 80%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 80% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-02-28",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；管理全球最大的生物多样性资源",
+    "commitmentEn": "Committed to 30x30; stewards the largest biodiversity resources globally"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳市场法案2024年通过，预计2025年启动",
+    "noteEn": "Carbon market bill passed 2024, expected launch 2025"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 4,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.43,
+    "cumulativeCO2Gt": 15
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-06-25",
+    "annex": "III",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2004,
+    "commitmentZh": "东北部 Caatinga 半干旱区是国家行动重点；2024 年更新 LDN 目标。",
+    "commitmentEn": "Northeast Caatinga semi-arid region is the priority; LDN targets updated 2024.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/br",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-09-21",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1990-03-19",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-02-28",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-06-25",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 60,
+    "carbonEmission": 500,
+    "_deprecated": true
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "isoCode": "gh",
+  "countryEn": "Ghana",
+  "countryZh": "加纳",
+  "agencyEn": "Ministry of Environment, Science, Technology and Innovation",
+  "agencyZh": "环境、科学、技术与创新部",
+  "website": "https://www.mesti.gov.gh/",
+  "flagUrl": "https://flagcdn.com/gh.svg",
+  "descriptionZh": "加纳环境部推动西非绿色发展议程，在碳交易和可再生能源领域积极探索。",
+  "descriptionEn": "Ghana's ministry promotes the West African green development agenda, actively exploring carbon trading and renewable energy.",
+  "region": "Africa",
+  "established": 1993,
+  "responsibilities": [
+    "forest",
+    "waste"
+  ],
+  "contact": {
+    "email": "info@mesti.gov.gh"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNCCD",
+    "Basel Convention"
+  ],
+  "epiScore": 30.2,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护局法",
+      "nameEn": "Environmental Protection Agency Act",
+      "year": 1994
+    },
+    {
+      "nameZh": "可再生能源法",
+      "nameEn": "Renewable Energy Act",
+      "year": 2011
+    },
+    {
+      "nameZh": "危害废弃物控制与管理法",
+      "nameEn": "Hazardous and Electronic Waste Control and Management Act",
+      "year": 2016
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-09-21",
+    "ndcTargetZh": "2030年温室气体排放比基准情景减少15%（无条件）或45%（有条件）",
+    "ndcTargetEn": "Reduce GHG 15% (unconditional) or 45% (conditional) below BAU by 2030",
+    "ndcRating": "2C",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1989-07-24",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 85% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-08-29",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护几内亚湾沿岸生态",
+    "commitmentEn": "Committed to 30x30; protecting Gulf of Guinea coastal ecosystems"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳定价机制评估阶段；参与自愿碳市场",
+    "noteEn": "Carbon pricing under evaluation; participates in voluntary carbon market"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.53,
+    "cumulativeCO2Gt": 0.6
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1996-12-27",
+    "annex": "I",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2003,
+    "commitmentZh": "北部 Savannah 区为重点；LDN 与森林造林计划 (FIP) 协同。",
+    "commitmentEn": "Northern Savannah zone prioritized; LDN aligned with Forest Investment Programme.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/gh",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-09-21",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1989-07-24",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-08-29",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1996-12-27",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 21,
+    "carbonEmission": 20,
+    "_deprecated": true
+  }
+}

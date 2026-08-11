@@ -1,0 +1,151 @@
+{
+  "isoCode": "ve",
+  "countryEn": "Venezuela",
+  "countryZh": "委内瑞拉",
+  "agencyEn": "Ministry of Ecosocialism",
+  "agencyZh": "生态社会主义部",
+  "website": "https://www.minec.gob.ve/",
+  "flagUrl": "https://flagcdn.com/ve.svg",
+  "descriptionZh": "委内瑞拉生态部管理丰富的生物多样性，包括亚马逊、奥里诺科三角洲和台地生态系统。",
+  "descriptionEn": "Venezuela's ministry manages rich biodiversity including the Amazon, Orinoco Delta, and tepui ecosystems.",
+  "region": "South America",
+  "established": 2014,
+  "responsibilities": [
+    "biodiversity",
+    "forest"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 31.5,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境基本法",
+      "nameEn": "Organic Environmental Law",
+      "year": 2006
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-07-21",
+    "ndcTargetZh": "2030年排放比基准情景减少20%",
+    "ndcTargetEn": "Reduce GHG 20% below BAU by 2030",
+    "ndcRating": "highly_insufficient",
+    "ndcHistory": [
+      {
+        "version": "NDC",
+        "year": 2017
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1989-02-06",
+    "kigaliAmendment": false,
+    "commitmentZh": "已淘汰CFCs；基加利修正案尚未批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment not yet ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-09-13",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "无碳定价机制",
+    "noteEn": "No carbon pricing"
+  },
+  "reportingStatus": {
+    "btrSubmitted": false,
+    "btrYear": null,
+    "nationalComm": 2,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.48,
+    "cumulativeCO2Gt": 8
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1998-06-29",
+    "annex": "III",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2004,
+    "commitmentZh": "Falcón、Lara 西北部为重点。",
+    "commitmentEn": "Northwest Falcón and Lara prioritized.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/ve",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-07-21",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1989-02-06",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "not_party",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol/amendments/kigali-amendment-2016"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-09-13",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1998-06-29",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 52,
+    "carbonEmission": 120,
+    "_deprecated": true
+  }
+}

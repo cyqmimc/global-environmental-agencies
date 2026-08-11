@@ -1,0 +1,168 @@
+{
+  "isoCode": "ca",
+  "countryEn": "Canada",
+  "countryZh": "加拿大",
+  "agencyEn": "Environment and Climate Change Canada (ECCC)",
+  "agencyZh": "环境与气候变化部",
+  "website": "https://www.canada.ca/en/environment-climate-change.html",
+  "flagUrl": "https://flagcdn.com/ca.svg",
+  "descriptionZh": "加拿大环境部负责生态保护与气候政策应对，管理广袤的北方森林和淡水资源。",
+  "descriptionEn": "ECCC handles ecological protection and climate policy, managing vast boreal forests and freshwater resources.",
+  "region": "North America",
+  "established": 1971,
+  "responsibilities": [
+    "water",
+    "air"
+  ],
+  "contact": {
+    "email": "ec.enviroinfo.ec@canada.ca"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Montreal Protocol"
+  ],
+  "epiScore": 49.9,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "加拿大环境保护法",
+      "nameEn": "Canadian Environmental Protection Act (CEPA)",
+      "year": 1999
+    },
+    {
+      "nameZh": "净零排放问责法",
+      "nameEn": "Net-Zero Emissions Accountability Act",
+      "year": 2021
+    },
+    {
+      "nameZh": "影响评估法",
+      "nameEn": "Impact Assessment Act",
+      "year": 2019
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-10-05",
+    "ndcTargetZh": "2035年较2005年减排45-50%（不含林业）",
+    "ndcTargetEn": "45-50% reduction below 2005 levels by 2035 (excl. forestry)",
+    "ndcRating": "highly_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-02-12",
+    "ndc3Target": "45-50% reduction by 2035 vs. 2005",
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1988-06-30",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准，2036年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified, 85% HFC reduction by 2036"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1992-12-04",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；目前已保护约13%陆地和14%海洋",
+    "commitmentEn": "Committed to 30x30; currently around 13% land and 14% marine protected"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": true,
+    "priceUSD": 66.2,
+    "coveragePercent": 80,
+    "noteZh": "联邦碳定价基准：80加元/吨(2024)，逐年递增至170加元(2030)",
+    "noteEn": "Federal carbon price: C$80/t (2024), rising to C$170/t by 2030"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 8,
+    "statusZh": "已提交BTR1",
+    "statusEn": "BTR1 submitted"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.33,
+    "cumulativeCO2Gt": 33
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1995-12-01",
+    "annex": null,
+    "affectedParty": false,
+    "ldnTargetSet": false,
+    "ldnYear": null,
+    "napSubmitted": false,
+    "napYear": null,
+    "commitmentZh": "非受影响发达国家；通过 IDRC、Global Affairs Canada 支持发展中国家土地恢复。",
+    "commitmentEn": "Non-affected developed country; supports developing-country land restoration via IDRC and Global Affairs Canada.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/ca",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-10-05",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1988-06-30",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1992-12-04",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1995-12-01",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 38,
+    "carbonEmission": 700,
+    "_deprecated": true
+  }
+}

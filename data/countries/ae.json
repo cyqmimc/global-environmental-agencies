@@ -1,0 +1,167 @@
+{
+  "isoCode": "ae",
+  "countryEn": "UAE",
+  "countryZh": "阿联酋",
+  "agencyEn": "Ministry of Climate Change and Environment",
+  "agencyZh": "气候变化与环境部",
+  "website": "https://www.moccae.gov.ae/",
+  "flagUrl": "https://flagcdn.com/ae.svg",
+  "descriptionZh": "阿联酋气候变化与环境部推动绿色经济多元化，是COP28的主办国，大力投资清洁能源。",
+  "descriptionEn": "UAE's Ministry of Climate Change and Environment drives green economic diversification, hosted COP28, and invests heavily in clean energy.",
+  "region": "Asia",
+  "established": 2016,
+  "responsibilities": [
+    "climate",
+    "energy"
+  ],
+  "contact": {
+    "email": "info@moccae.gov.ae"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNCCD",
+    "Montreal Protocol"
+  ],
+  "epiScore": 38.4,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "联邦气候变化法",
+      "nameEn": "Federal Climate Change Law",
+      "year": 2023
+    },
+    {
+      "nameZh": "环境保护与发展法",
+      "nameEn": "Environmental Protection and Development Law",
+      "year": 1999
+    },
+    {
+      "nameZh": "净零2050战略",
+      "nameEn": "Net Zero 2050 Strategic Initiative",
+      "year": 2021
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-09-21",
+    "ndcTargetZh": "2030年温室气体排放比基准情景减少31%",
+    "ndcTargetEn": "Reduce GHG 31% below BAU by 2030",
+    "ndcRating": "highly_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2022
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2023
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2024-11-13",
+    "ndc3Target": "47% reduction by 2035 vs. BAU",
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1989-12-22",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2047年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 85% HFC reduction by 2047"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "2000-02-10",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；推动海湾地区海洋保护",
+    "commitmentEn": "Committed to 30x30; advancing Gulf region marine conservation"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳信用抵消框架建立中；Abu Dhabi碳交易所筹备",
+    "noteEn": "Carbon offset framework under development; Abu Dhabi carbon exchange planned"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 4,
+    "statusZh": "已提交BTR1",
+    "statusEn": "BTR1 submitted"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.36,
+    "cumulativeCO2Gt": 5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1998-10-21",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2014,
+    "commitmentZh": "已设定 LDN 目标，国家行动方案聚焦土壤盐碱化与防风林。",
+    "commitmentEn": "LDN targets set; NAP focuses on soil salinization and shelterbelt forests.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/ae",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-09-21",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1989-12-22",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "2000-02-10",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1998-10-21",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 4,
+    "carbonEmission": 200,
+    "_deprecated": true
+  }
+}

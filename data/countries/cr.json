@@ -1,0 +1,165 @@
+{
+  "isoCode": "cr",
+  "countryEn": "Costa Rica",
+  "countryZh": "哥斯达黎加",
+  "agencyEn": "Ministry of Environment and Energy (MINAE)",
+  "agencyZh": "环境与能源部",
+  "website": "https://www.minae.go.cr/",
+  "flagUrl": "https://flagcdn.com/cr.svg",
+  "descriptionZh": "哥斯达黎加环境部以「生态支付」模式全球闻名，可再生能源发电占比超过98%，是碳中和先驱。",
+  "descriptionEn": "Costa Rica's MINAE is globally renowned for its 'Payment for Ecosystem Services' model, with over 98% renewable electricity generation, pioneering carbon neutrality.",
+  "region": "North America",
+  "established": 1986,
+  "responsibilities": [
+    "biodiversity",
+    "energy"
+  ],
+  "contact": {
+    "email": "contactenos@minae.go.cr"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 52.5,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "生物多样性法",
+      "nameEn": "Biodiversity Law",
+      "year": 1998
+    },
+    {
+      "nameZh": "森林法",
+      "nameEn": "Forestry Law",
+      "year": 1996
+    },
+    {
+      "nameZh": "国家脱碳计划",
+      "nameEn": "National Decarbonization Plan",
+      "year": 2019
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-10-13",
+    "ndcTargetZh": "2030年绝对排放上限989.5万吨CO₂当量；2050年净零排放",
+    "ndcTargetEn": "Cap absolute emissions at 9.895 Mt CO₂eq by 2030; net zero by 2050",
+    "ndcRating": "1.5C",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2020
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1991-07-30",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 80%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 80% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-08-26",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；全球单位面积生物多样性最高的国家之一",
+    "commitmentEn": "Committed to 30x30; among the highest biodiversity per unit area globally"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": true,
+    "priceUSD": 10,
+    "coveragePercent": 30,
+    "noteZh": "燃料碳税约3.5%；国家脱碳计划配套碳定价",
+    "noteEn": "Fuel carbon tax ~3.5%; carbon pricing aligned with national decarbonization plan"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 4,
+    "statusZh": "已提交BTR1",
+    "statusEn": "BTR1 submitted"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.4,
+    "cumulativeCO2Gt": 0.3
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1998-03-05",
+    "annex": "III",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2004,
+    "commitmentZh": "Guanacaste 太平洋沿岸干燥森林为重点；2024 年 LDN 进度报告已提交。",
+    "commitmentEn": "Guanacaste dry Pacific forests prioritized; 2024 LDN progress report submitted.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/cr",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-10-13",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1991-07-30",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-08-26",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1998-03-05",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 54,
+    "carbonEmission": 10,
+    "_deprecated": true
+  }
+}

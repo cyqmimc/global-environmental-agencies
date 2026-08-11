@@ -1,0 +1,153 @@
+{
+  "isoCode": "dz",
+  "countryEn": "Algeria",
+  "countryZh": "阿尔及利亚",
+  "agencyEn": "Ministry of the Environment and Renewable Energies",
+  "agencyZh": "环境与可再生能源部",
+  "website": "https://www.me.gov.dz/",
+  "flagUrl": "https://flagcdn.com/dz.svg",
+  "descriptionZh": "阿尔及利亚环境部管理非洲最大国家的环境挑战，包括撒哈拉沙漠化。",
+  "descriptionEn": "Algeria's ministry manages the largest country in Africa's environmental challenges including Saharan desertification.",
+  "region": "Africa",
+  "established": 2001,
+  "responsibilities": [
+    "energy",
+    "water"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNCCD",
+    "Barcelona Convention"
+  ],
+  "epiScore": 30.1,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护法",
+      "nameEn": "Environmental Protection Law",
+      "year": 2003
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-10-20",
+    "ndcTargetZh": "2030年排放比基准情景减少7-22%",
+    "ndcTargetEn": "Reduce GHG 7-22% below BAU by 2030",
+    "ndcRating": "highly_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2022
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1992-09-20",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1995-08-14",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "无碳定价机制",
+    "noteEn": "No carbon pricing mechanism"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.46,
+    "cumulativeCO2Gt": 6
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1996-05-22",
+    "annex": "I",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2004,
+    "commitmentZh": "撒哈拉绿色长城非洲段牵头国之一；LDN 与造林计划深度绑定。",
+    "commitmentEn": "Co-leader of the Sahara/Sahel Great Green Wall; LDN deeply tied to afforestation.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/dz",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-10-20",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1992-09-20",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1995-08-14",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1996-05-22",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 1,
+    "carbonEmission": 180,
+    "_deprecated": true
+  }
+}

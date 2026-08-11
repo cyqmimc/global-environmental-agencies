@@ -1,0 +1,168 @@
+{
+  "isoCode": "es",
+  "countryEn": "Spain",
+  "countryZh": "西班牙",
+  "agencyEn": "Ministry for the Ecological Transition and the Demographic Challenge",
+  "agencyZh": "生态转型与人口挑战部",
+  "website": "https://www.miteco.gob.es/",
+  "flagUrl": "https://flagcdn.com/es.svg",
+  "descriptionZh": "西班牙生态转型部主管环境保护与能源政策，大力发展太阳能和风能。",
+  "descriptionEn": "Spain's ministry oversees environmental protection and energy policy, with a strong focus on solar and wind energy development.",
+  "region": "Europe",
+  "established": 2018,
+  "responsibilities": [
+    "energy",
+    "climate"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "Barcelona Convention",
+    "UNCCD"
+  ],
+  "epiScore": 55.6,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "气候变化与能源转型法",
+      "nameEn": "Climate Change and Energy Transition Law",
+      "year": 2021
+    },
+    {
+      "nameZh": "国家气候与能源综合计划",
+      "nameEn": "National Integrated Energy and Climate Plan (PNIEC)",
+      "year": 2020
+    },
+    {
+      "nameZh": "环境影响评估法",
+      "nameEn": "Environmental Impact Assessment Law",
+      "year": 2013
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-01-12",
+    "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+    "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "EU NDC",
+        "year": 2015
+      },
+      {
+        "version": "EU Updated NDC",
+        "year": 2020
+      },
+      {
+        "version": "EU NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-02-26",
+    "ndc3Target": "EU joint 2035 NDC",
+    "ndc3Source": "https://unfccc.int/NDCREG",
+    "ndc3Note": "EU joint submission."
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1988-12-16",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准，2036年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified, 85% HFC reduction by 2036"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1993-12-21",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；欧洲生物多样性最丰富的国家之一",
+    "commitmentEn": "Committed to 30x30; one of Europe's most biodiverse nations"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": true,
+    "priceUSD": 70.4,
+    "coveragePercent": 40,
+    "noteZh": "参与EU ETS，覆盖电力、工业和航空部门",
+    "noteEn": "Participates in EU ETS covering power, industry and aviation"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 8,
+    "statusZh": "已提交BTR1（通过EU联合提交）",
+    "statusEn": "BTR1 submitted (via EU joint submission)"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.36,
+    "cumulativeCO2Gt": 16
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1996-01-30",
+    "annex": "IV",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2008,
+    "commitmentZh": "西班牙 75% 国土面临荒漠化风险；2024 更新 NAP，重点在 Almería、Murcia 与 Castilla–La Mancha。",
+    "commitmentEn": "75% of territory at desertification risk; NAP updated 2024 focusing on Almería, Murcia and Castilla-La Mancha.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/es",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-01-12",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1988-12-16",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1993-12-21",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1996-01-30",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 37,
+    "carbonEmission": 320,
+    "_deprecated": true
+  }
+}

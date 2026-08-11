@@ -1,0 +1,173 @@
+{
+  "isoCode": "gb",
+  "countryEn": "United Kingdom",
+  "countryZh": "英国",
+  "agencyEn": "Department for Environment, Food and Rural Affairs (DEFRA)",
+  "agencyZh": "环境、食品与乡村事务部",
+  "website": "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs",
+  "flagUrl": "https://flagcdn.com/gb.svg",
+  "descriptionZh": "英国DEFRA负责环境保护、农业、渔业及乡村事务，推动净零排放目标。",
+  "descriptionEn": "DEFRA is responsible for environmental protection, agriculture, fisheries, and rural affairs, driving the UK's net-zero emissions target.",
+  "region": "Europe",
+  "established": 2001,
+  "responsibilities": [
+    "climate",
+    "waste"
+  ],
+  "contact": {
+    "email": "defra.helpline@defra.gov.uk"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 63,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "气候变化法",
+      "nameEn": "Climate Change Act",
+      "year": 2008
+    },
+    {
+      "nameZh": "环境法",
+      "nameEn": "Environment Act",
+      "year": 2021
+    },
+    {
+      "nameZh": "清洁空气法",
+      "nameEn": "Clean Air Act",
+      "year": 1993
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-11-18",
+    "ndcTargetZh": "2035年较1990年减排81%",
+    "ndcTargetEn": "81% reduction below 1990 levels by 2035",
+    "ndcRating": "1.5C",
+    "ndcHistory": [
+      {
+        "version": "EU NDC",
+        "year": 2015
+      },
+      {
+        "version": "NDC",
+        "year": 2020
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2022
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-02-13",
+    "ndc3Target": "81% reduction by 2035 vs. 1990",
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1988-05-20",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准，2036年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified, 85% HFC reduction by 2036"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-06-03",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；推动全球海洋保护联盟",
+    "commitmentEn": "Committed to 30x30; champions Global Ocean Alliance for marine protection"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": true,
+    "priceUSD": 57.2,
+    "coveragePercent": 30,
+    "noteZh": "英国碳排放交易体系(UK ETS)，脱欧后独立运营；碳底价机制",
+    "noteEn": "UK ETS operating independently post-Brexit; carbon price floor mechanism"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 8,
+    "statusZh": "已提交BTR1",
+    "statusEn": "BTR1 submitted"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.31,
+    "cumulativeCO2Gt": 78
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1996-06-12",
+    "annex": null,
+    "affectedParty": false,
+    "ldnTargetSet": false,
+    "ldnYear": null,
+    "napSubmitted": false,
+    "napYear": null,
+    "commitmentZh": "非受影响国；FCDO 通过气候基金支持非洲与南亚土地恢复。",
+    "commitmentEn": "Non-affected; FCDO supports African and South Asian land restoration via climate finance.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/gb",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-11-18",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1988-05-20",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-06-03",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1996-06-12",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 13,
+    "carbonEmission": 400,
+    "_deprecated": true
+  }
+}

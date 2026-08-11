@@ -1,0 +1,169 @@
+{
+  "isoCode": "cn",
+  "countryEn": "China",
+  "countryZh": "中国",
+  "agencyEn": "Ministry of Ecology and Environment (MEE)",
+  "agencyZh": "生态环境部",
+  "website": "https://www.mee.gov.cn/",
+  "flagUrl": "https://flagcdn.com/cn.svg",
+  "descriptionZh": "中国生态环境部负责全国生态环境保护与污染防治的政策制定与实施，推动碳达峰碳中和目标。",
+  "descriptionEn": "China's MEE is responsible for national ecological and environmental protection policies, pollution prevention, and driving carbon peak and neutrality goals.",
+  "region": "Asia",
+  "established": 2018,
+  "responsibilities": [
+    "climate",
+    "air"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "Montreal Protocol",
+    "Basel Convention"
+  ],
+  "epiScore": 28.4,
+  "netZeroTarget": 2060,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护法",
+      "nameEn": "Environmental Protection Law",
+      "year": 2014
+    },
+    {
+      "nameZh": "大气污染防治法",
+      "nameEn": "Air Pollution Prevention and Control Law",
+      "year": 2015
+    },
+    {
+      "nameZh": "长江保护法",
+      "nameEn": "Yangtze River Protection Law",
+      "year": 2021
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-09-03",
+    "ndcTargetZh": "2035年温室气体净排放较峰值降7-10%；非化石能源占比超30%；风光装机3600GW",
+    "ndcTargetEn": "Reduce net GHG emissions 7-10% from peak; non-fossil energy >30%; wind/solar 3,600GW by 2035",
+    "ndcRating": "highly_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-09-24",
+    "ndc3Target": "Peaking before 2030; ~7-10% absolute net GHG cut by 2035 vs. peak",
+    "ndc3Source": "https://unfccc.int/NDCREG",
+    "ndc3Note": "Announced at UNGA High-level Climate Event; formal submission filed Sep 2025."
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1991-06-14",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；2021年批准基加利修正案，2045年前削减HFCs 80%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified 2021, 80% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1993-01-05",
+    "target30x30": 30,
+    "commitmentZh": "作为COP15主席国推动通过昆明-蒙特利尔框架；承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Presided over COP15 adopting Kunming-Montreal Framework; committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": false,
+    "priceUSD": 11.8,
+    "coveragePercent": 40,
+    "noteZh": "2021年启动全国碳排放交易体系，覆盖电力行业",
+    "noteEn": "National ETS launched 2021, covering power sector"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 4,
+    "statusZh": "已提交BTR1",
+    "statusEn": "BTR1 submitted"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.42,
+    "cumulativeCO2Gt": 284
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-02-18",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 1996,
+    "commitmentZh": "三北防护林、库布齐治沙模式为国际样板；2030 LDN 目标已纳入'十四五'生态规划。",
+    "commitmentEn": "Three-North Shelterbelt and Kubuqi model are global benchmarks; 2030 LDN integrated into the 14th Five-Year ecological plan.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/cn",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-09-03",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1991-06-14",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1993-01-05",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-02-18",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 23,
+    "carbonEmission": 10000,
+    "_deprecated": true
+  }
+}

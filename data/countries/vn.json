@@ -1,0 +1,164 @@
+{
+  "isoCode": "vn",
+  "countryEn": "Vietnam",
+  "countryZh": "越南",
+  "agencyEn": "Ministry of Natural Resources and Environment (MONRE)",
+  "agencyZh": "自然资源与环境部",
+  "website": "https://www.monre.gov.vn/",
+  "flagUrl": "https://flagcdn.com/vn.svg",
+  "descriptionZh": "越南自然资源与环境部负责土地、水资源和环境管理，应对湄公河三角洲气候脆弱性。",
+  "descriptionEn": "Vietnam's MONRE manages land, water resources, and environmental protection, addressing climate vulnerability in the Mekong Delta.",
+  "region": "Asia",
+  "established": 2002,
+  "responsibilities": [
+    "water",
+    "climate"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "Ramsar Convention",
+    "UNCCD"
+  ],
+  "epiScore": 29.6,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护法",
+      "nameEn": "Law on Environmental Protection",
+      "year": 2020
+    },
+    {
+      "nameZh": "林业法",
+      "nameEn": "Law on Forestry",
+      "year": 2017
+    },
+    {
+      "nameZh": "水资源法",
+      "nameEn": "Law on Water Resources",
+      "year": 2023
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-11-03",
+    "ndcTargetZh": "2030年温室气体排放比基准情景减少15.8%（无条件）或43.5%（有条件）",
+    "ndcTargetEn": "Reduce GHG 15.8% (unconditional) or 43.5% (conditional) below BAU by 2030",
+    "ndcRating": "critically_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2022
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1994-01-26",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 80%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 80% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-11-16",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护湄公河三角洲生态",
+    "commitmentEn": "Committed to 30x30; protecting Mekong Delta ecosystems"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳交易试点2025年启动，2028年全面运行",
+    "noteEn": "ETS pilot launching 2025, fully operational by 2028"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.5,
+    "cumulativeCO2Gt": 4.5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1998-08-25",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2002,
+    "commitmentZh": "中部沿海、湄公河三角洲盐碱化为重点。",
+    "commitmentEn": "Central coast and Mekong Delta salinization prioritized.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/vn",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-11-03",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1994-01-26",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-11-16",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1998-08-25",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 42,
+    "carbonEmission": 350,
+    "_deprecated": true
+  }
+}

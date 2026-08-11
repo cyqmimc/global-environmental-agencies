@@ -1,0 +1,163 @@
+{
+  "isoCode": "ma",
+  "countryEn": "Morocco",
+  "countryZh": "摩洛哥",
+  "agencyEn": "Ministry of Energy Transition and Sustainable Development",
+  "agencyZh": "能源转型与可持续发展部",
+  "website": "https://www.mem.gov.ma/",
+  "flagUrl": "https://flagcdn.com/ma.svg",
+  "descriptionZh": "摩洛哥能源转型部推动非洲最大的太阳能项目，是非洲清洁能源转型的领导者。",
+  "descriptionEn": "Morocco's ministry drives Africa's largest solar energy projects, leading clean energy transition on the continent.",
+  "region": "Africa",
+  "established": 2021,
+  "responsibilities": [
+    "energy",
+    "climate"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNCCD",
+    "Barcelona Convention"
+  ],
+  "epiScore": 36.3,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "可再生能源法",
+      "nameEn": "Renewable Energy Law",
+      "year": 2010
+    },
+    {
+      "nameZh": "环境保护与可持续发展法",
+      "nameEn": "Environmental Protection and Sustainable Development Law",
+      "year": 2003
+    },
+    {
+      "nameZh": "国家可持续发展战略",
+      "nameEn": "National Strategy for Sustainable Development",
+      "year": 2017
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-09-21",
+    "ndcTargetZh": "2030年温室气体排放比基准情景减少45.5%（有条件）",
+    "ndcTargetEn": "Reduce GHG 45.5% below BAU by 2030 (conditional)",
+    "ndcRating": "almost_sufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1995-01-28",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 85% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1995-08-21",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护阿特拉斯山脉和撒哈拉边缘生态",
+    "commitmentEn": "Committed to 30x30; protecting Atlas Mountains and Sahara fringe ecosystems"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳市场研究阶段；参与Article 6合作框架",
+    "noteEn": "Carbon market under study; participates in Article 6 cooperation"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.44,
+    "cumulativeCO2Gt": 2
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1996-11-12",
+    "annex": "I",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2001,
+    "commitmentZh": "Great Green Wall 北线牵头；阿特拉斯南麓为重点。",
+    "commitmentEn": "Co-leader of Great Green Wall North line; south Atlas foothills prioritized.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/ma",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-09-21",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1995-01-28",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1995-08-21",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1996-11-12",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 13,
+    "carbonEmission": 70,
+    "_deprecated": true
+  }
+}

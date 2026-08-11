@@ -1,0 +1,168 @@
+{
+  "isoCode": "kr",
+  "countryEn": "South Korea",
+  "countryZh": "韩国",
+  "agencyEn": "Ministry of Environment",
+  "agencyZh": "环境部",
+  "website": "https://eng.me.go.kr/eng/web/main.do",
+  "flagUrl": "https://flagcdn.com/kr.svg",
+  "descriptionZh": "韩国环境部主管空气质量、水资源及气候变化政策，推动绿色新政和碳中和。",
+  "descriptionEn": "South Korea's MOE manages air quality, water resources, and climate change policy, driving the Green New Deal and carbon neutrality.",
+  "region": "Asia",
+  "established": 1990,
+  "responsibilities": [
+    "air",
+    "climate"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "Montreal Protocol",
+    "Basel Convention"
+  ],
+  "epiScore": 57.8,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "碳中和与绿色增长基本法",
+      "nameEn": "Framework Act on Carbon Neutrality and Green Growth",
+      "year": 2021
+    },
+    {
+      "nameZh": "环境政策基本法",
+      "nameEn": "Framework Act on Environmental Policy",
+      "year": 1990
+    },
+    {
+      "nameZh": "清洁空气保护法",
+      "nameEn": "Clean Air Conservation Act",
+      "year": 1990
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-11-03",
+    "ndcTargetZh": "2035年较2018年减排53-61%（含土地利用）",
+    "ndcTargetEn": "53-61% reduction below 2018 levels by 2035 (incl. LULUCF)",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-09-29",
+    "ndc3Target": "53-61% reduction by 2035 vs. 2018",
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1992-02-27",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准，2036年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified, 85% HFC reduction by 2036"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-10-03",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；推动DMZ生态走廊保护",
+    "commitmentEn": "Committed to 30x30; promoting DMZ ecological corridor conservation"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": false,
+    "priceUSD": 6.5,
+    "coveragePercent": 73,
+    "noteZh": "韩国碳排放交易体系(K-ETS)，亚洲最大碳市场之一",
+    "noteEn": "Korea ETS (K-ETS), one of the largest carbon markets in Asia"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 4,
+    "statusZh": "已提交BTR1",
+    "statusEn": "BTR1 submitted"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.36,
+    "cumulativeCO2Gt": 19
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1999-08-17",
+    "annex": null,
+    "affectedParty": false,
+    "ldnTargetSet": false,
+    "ldnYear": null,
+    "napSubmitted": false,
+    "napYear": null,
+    "commitmentZh": "非受影响国；2011 COP10 主办国；通过 KOICA 支持蒙古、东非 LDN。",
+    "commitmentEn": "Non-affected; hosted COP10 (2011); supports Mongolia and East Africa LDN via KOICA.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/kr",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-11-03",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1992-02-27",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-10-03",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1999-08-17",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 64,
+    "carbonEmission": 700,
+    "_deprecated": true
+  }
+}

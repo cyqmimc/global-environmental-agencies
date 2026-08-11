@@ -1,0 +1,164 @@
+{
+  "isoCode": "cz",
+  "countryEn": "Czech Republic",
+  "countryZh": "捷克",
+  "agencyEn": "Ministry of the Environment",
+  "agencyZh": "环境部",
+  "website": "https://www.mzp.cz/en",
+  "flagUrl": "https://flagcdn.com/cz.svg",
+  "descriptionZh": "捷克环境部管理从煤炭依赖转型，同时保护波西米亚森林生态系统。",
+  "descriptionEn": "Czech Republic's ministry manages transition from coal dependency while protecting Bohemian forest ecosystems.",
+  "region": "Europe",
+  "established": 1990,
+  "responsibilities": [
+    "energy",
+    "air"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNFCCC",
+    "Basel Convention"
+  ],
+  "epiScore": 52,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护法",
+      "nameEn": "Environmental Protection Act",
+      "year": 1992
+    },
+    {
+      "nameZh": "气候保护政策",
+      "nameEn": "Climate Protection Policy",
+      "year": 2017
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-10-05",
+    "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+    "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "EU NDC",
+        "year": 2015
+      },
+      {
+        "version": "EU Updated NDC",
+        "year": 2020
+      },
+      {
+        "version": "EU NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-02-26",
+    "ndc3Target": "EU joint 2035 NDC",
+    "ndc3Source": "https://unfccc.int/NDCREG",
+    "ndc3Note": "EU joint submission."
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1993-01-01",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰所有受控物质；基加利修正案已批准",
+    "commitmentEn": "Phased out all ODS; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1993-12-03",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": false,
+    "priceUSD": 70.4,
+    "coveragePercent": 40,
+    "noteZh": "参与EU ETS",
+    "noteEn": "Participates in EU ETS"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 8,
+    "statusZh": "已提交BTR1（通过EU联合提交）",
+    "statusEn": "BTR1 submitted (via EU joint submission)"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.33,
+    "cumulativeCO2Gt": 13
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "2000-01-25",
+    "annex": "V",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": false,
+    "napYear": null,
+    "commitmentZh": "南摩拉维亚旱化加剧，已设 LDN 目标但未单独提交 NAP（按欧盟联合实施）。",
+    "commitmentEn": "Southern Moravia drying intensified; LDN targets set, NAP implemented via EU joint action.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/cz",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-10-05",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1993-01-01",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1993-12-03",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "2000-01-25",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 34,
+    "carbonEmission": 110,
+    "_deprecated": true
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "isoCode": "my",
+  "countryEn": "Malaysia",
+  "countryZh": "马来西亚",
+  "agencyEn": "Ministry of Natural Resources and Environmental Sustainability (NRES)",
+  "agencyZh": "自然资源与环境可持续性部",
+  "website": "https://www.nres.gov.my/",
+  "flagUrl": "https://flagcdn.com/my.svg",
+  "descriptionZh": "马来西亚自然资源部负责管理热带雨林和生物多样性资源，推动棕榈油产业的可持续发展。",
+  "descriptionEn": "Malaysia's NRES manages tropical rainforests and biodiversity resources, promoting sustainable development in the palm oil industry.",
+  "region": "Asia",
+  "established": 2022,
+  "responsibilities": [
+    "forest",
+    "biodiversity"
+  ],
+  "contact": {
+    "email": "pro@nres.gov.my"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 33.4,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境质量法",
+      "nameEn": "Environmental Quality Act",
+      "year": 1974
+    },
+    {
+      "nameZh": "国家林业法",
+      "nameEn": "National Forestry Act",
+      "year": 1984
+    },
+    {
+      "nameZh": "气候变化法（草案）",
+      "nameEn": "Climate Change Act (Draft)",
+      "year": 2024
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-11-16",
+    "ndcTargetZh": "2030年GDP碳强度比2005年降低45%（无条件）",
+    "ndcTargetEn": "Reduce GDP carbon intensity 45% vs 2005 by 2030 (unconditional)",
+    "ndcRating": "highly_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1989-08-29",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 80%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 80% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-06-24",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护婆罗洲热带雨林",
+    "commitmentEn": "Committed to 30x30; protecting Borneo tropical rainforest"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "自愿碳市场(BCX交易所)2022年启动；强制机制研究中",
+    "noteEn": "Voluntary carbon market (BCX exchange) launched 2022; mandatory mechanism under study"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.42,
+    "cumulativeCO2Gt": 6.5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-06-25",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2005,
+    "commitmentZh": "受土壤酸化、油棕扩张引起的退化为重点。",
+    "commitmentEn": "Soil acidification and oil-palm expansion-driven degradation prioritized.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/my",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-11-16",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1989-08-29",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-06-24",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-06-25",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 55,
+    "carbonEmission": 250,
+    "_deprecated": true
+  }
+}

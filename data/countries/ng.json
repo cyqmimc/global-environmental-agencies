@@ -1,0 +1,168 @@
+{
+  "isoCode": "ng",
+  "countryEn": "Nigeria",
+  "countryZh": "尼日利亚",
+  "agencyEn": "Federal Ministry of Environment",
+  "agencyZh": "联邦环境部",
+  "website": "https://environment.gov.ng/",
+  "flagUrl": "https://flagcdn.com/ng.svg",
+  "descriptionZh": "尼日利亚环境部负责管理石油开发对环境的影响，保护西非生态系统。",
+  "descriptionEn": "Nigeria's ministry manages the environmental impact of oil development and protects West African ecosystems.",
+  "region": "Africa",
+  "established": 1999,
+  "responsibilities": [
+    "waste",
+    "water"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "Basel Convention",
+    "UNCCD"
+  ],
+  "epiScore": 22.5,
+  "netZeroTarget": 2060,
+  "keyLaws": [
+    {
+      "nameZh": "国家环境标准与法规执行机构法",
+      "nameEn": "NESREA Act",
+      "year": 2007
+    },
+    {
+      "nameZh": "气候变化法",
+      "nameEn": "Climate Change Act",
+      "year": 2021
+    },
+    {
+      "nameZh": "环境影响评估法",
+      "nameEn": "Environmental Impact Assessment Act",
+      "year": 1992
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-05-16",
+    "ndcTargetZh": "2035年较2018年减排32%",
+    "ndcTargetEn": "32% GHG reduction below 2018 levels by 2035",
+    "ndcRating": "2C",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1988-10-31",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 85% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-08-29",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护西非热带雨林",
+    "commitmentEn": "Committed to 30x30; protecting West African tropical forests"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "目前无碳定价机制；碳市场法案讨论中",
+    "noteEn": "No carbon pricing; carbon market legislation under discussion"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.56,
+    "cumulativeCO2Gt": 3
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-07-08",
+    "annex": "I",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2000,
+    "commitmentZh": "北部 11 州的萨赫勒边缘为最严重；Great Green Wall 旗手国之一。",
+    "commitmentEn": "11 northern Sahelian states most affected; flagship Great Green Wall country.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/ng",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-05-16",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1988-10-31",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-08-29",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-07-08",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 7,
+    "carbonEmission": 120,
+    "_deprecated": true
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "isoCode": "cu",
+  "countryEn": "Cuba",
+  "countryZh": "古巴",
+  "agencyEn": "Ministry of Science, Technology and the Environment (CITMA)",
+  "agencyZh": "科学、技术与环境部",
+  "website": "https://www.citma.gob.cu/",
+  "flagUrl": "https://flagcdn.com/cu.svg",
+  "descriptionZh": "古巴科技环境部管理加勒比生物多样性保护和世界领先的灾害防备体系。",
+  "descriptionEn": "Cuba's CITMA manages Caribbean biodiversity conservation and climate adaptation with world-leading disaster preparedness.",
+  "region": "North America",
+  "established": 1994,
+  "responsibilities": [
+    "biodiversity",
+    "climate"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 37.4,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境法",
+      "nameEn": "Environmental Law",
+      "year": 1997
+    },
+    {
+      "nameZh": "气候变化应对计划",
+      "nameEn": "Plan for Climate Change (Tarea Vida)",
+      "year": 2017
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-01-28",
+    "ndcTargetZh": "提高可再生能源至24%并保护沿海生态",
+    "ndcTargetEn": "Increase renewable energy to 24% and protect coastal ecosystems",
+    "ndcRating": "not_assessed",
+    "ndcHistory": [
+      {
+        "version": "NDC",
+        "year": 2017
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1992-07-14",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-03-08",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "无碳定价机制",
+    "noteEn": "No carbon pricing"
+  },
+  "reportingStatus": {
+    "btrSubmitted": false,
+    "btrYear": null,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.42,
+    "cumulativeCO2Gt": 2.5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-03-13",
+    "annex": "III",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2002,
+    "commitmentZh": "东部干旱省份为重点；LDN 与有机农业转型衔接。",
+    "commitmentEn": "Eastern arid provinces prioritized; LDN aligned with organic agriculture transition.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/cu",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-01-28",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1992-07-14",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-03-08",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-03-13",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 32,
+    "carbonEmission": 30,
+    "_deprecated": true
+  }
+}

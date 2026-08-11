@@ -1,0 +1,169 @@
+{
+  "isoCode": "pe",
+  "countryEn": "Peru",
+  "countryZh": "秘鲁",
+  "agencyEn": "Ministry of the Environment (MINAM)",
+  "agencyZh": "环境部",
+  "website": "https://www.gob.pe/minam",
+  "flagUrl": "https://flagcdn.com/pe.svg",
+  "descriptionZh": "秘鲁环境部负责保护亚马逊雨林和安第斯高原生态，管理全球生物多样性最丰富的地区之一。",
+  "descriptionEn": "Peru's MINAM protects the Amazon rainforest and Andean highland ecology, managing one of the world's most biodiverse regions.",
+  "region": "South America",
+  "established": 2008,
+  "responsibilities": [
+    "biodiversity",
+    "forest"
+  ],
+  "contact": {
+    "email": "atencion@minam.gob.pe"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 35.2,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境总法",
+      "nameEn": "General Environmental Law",
+      "year": 2005
+    },
+    {
+      "nameZh": "气候变化框架法",
+      "nameEn": "Framework Law on Climate Change",
+      "year": 2018
+    },
+    {
+      "nameZh": "森林与野生动物法",
+      "nameEn": "Forestry and Wildlife Law",
+      "year": 2011
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-07-25",
+    "ndcTargetZh": "已提交2035目标",
+    "ndcTargetEn": "2035 target submitted",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2020
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1993-03-31",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 80%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 80% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1993-06-07",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；亚马逊流域生物多样性热点",
+    "commitmentEn": "Committed to 30x30; Amazon basin biodiversity hotspot"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳定价机制评估阶段",
+    "noteEn": "Carbon pricing under evaluation"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.48,
+    "cumulativeCO2Gt": 2.5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1995-11-09",
+    "annex": "III",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 1998,
+    "commitmentZh": "沿海沙漠与 Sierra 高地为重点；LDN 整合到 Plan Bicentenario。",
+    "commitmentEn": "Coastal desert and Sierra highlands prioritized; LDN integrated into Plan Bicentenario.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/pe",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-07-25",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1993-03-31",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1993-06-07",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1995-11-09",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 58,
+    "carbonEmission": 55,
+    "_deprecated": true
+  }
+}

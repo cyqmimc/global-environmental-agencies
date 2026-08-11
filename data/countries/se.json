@@ -1,0 +1,168 @@
+{
+  "isoCode": "se",
+  "countryEn": "Sweden",
+  "countryZh": "瑞典",
+  "agencyEn": "Ministry of Climate and Enterprise",
+  "agencyZh": "气候与企业部",
+  "website": "https://www.government.se/government-of-sweden/ministry-of-climate-and-enterprise/",
+  "flagUrl": "https://flagcdn.com/se.svg",
+  "descriptionZh": "瑞典气候部致力于推动清洁能源和可持续发展，是全球环保领域的先驱国家。",
+  "descriptionEn": "Sweden's ministry promotes clean energy and sustainable development, making Sweden a global pioneer in environmental protection.",
+  "region": "Europe",
+  "established": 1987,
+  "responsibilities": [
+    "climate",
+    "chemicals"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNFCCC",
+    "Montreal Protocol"
+  ],
+  "epiScore": 72.7,
+  "netZeroTarget": 2045,
+  "keyLaws": [
+    {
+      "nameZh": "气候政策框架",
+      "nameEn": "Climate Policy Framework",
+      "year": 2017
+    },
+    {
+      "nameZh": "环境法典",
+      "nameEn": "Environmental Code",
+      "year": 1999
+    },
+    {
+      "nameZh": "化学品政策法",
+      "nameEn": "Chemical Products Act",
+      "year": 1985
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-10-05",
+    "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+    "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
+    "ndcRating": "almost_sufficient",
+    "ndcHistory": [
+      {
+        "version": "EU NDC",
+        "year": 2015
+      },
+      {
+        "version": "EU Updated NDC",
+        "year": 2020
+      },
+      {
+        "version": "EU NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-02-26",
+    "ndc3Target": "EU joint 2035 NDC",
+    "ndc3Source": "https://unfccc.int/NDCREG",
+    "ndc3Note": "EU joint submission."
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1988-06-29",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准，2036年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified, 85% HFC reduction by 2036"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1993-12-16",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；北欧生态保护先驱",
+    "commitmentEn": "Committed to 30x30; Nordic pioneer in ecological conservation"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": true,
+    "priceUSD": 144.6,
+    "coveragePercent": 40,
+    "noteZh": "全球最高碳税约1330瑞典克朗/吨CO₂(约$130)；同时参与EU ETS",
+    "noteEn": "World's highest carbon tax ~SEK1330/tCO₂ (~$130); also in EU ETS"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 8,
+    "statusZh": "已提交BTR1（通过EU联合提交）",
+    "statusEn": "BTR1 submitted (via EU joint submission)"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.29,
+    "cumulativeCO2Gt": 5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1995-12-12",
+    "annex": null,
+    "affectedParty": false,
+    "ldnTargetSet": false,
+    "ldnYear": null,
+    "napSubmitted": false,
+    "napYear": null,
+    "commitmentZh": "非受影响国；Sida 资助 Sahel 与 Horn of Africa 长期项目。",
+    "commitmentEn": "Non-affected; Sida funds long-term Sahel and Horn of Africa programmes.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/se",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-10-05",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1988-06-29",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1993-12-16",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1995-12-12",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 69,
+    "carbonEmission": 50,
+    "_deprecated": true
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "isoCode": "ch",
+  "countryEn": "Switzerland",
+  "countryZh": "瑞士",
+  "agencyEn": "Federal Office for the Environment (FOEN)",
+  "agencyZh": "联邦环境办公室",
+  "website": "https://www.bafu.admin.ch/bafu/en/home.html",
+  "flagUrl": "https://flagcdn.com/ch.svg",
+  "descriptionZh": "瑞士联邦环境办公室负责环境保护、自然灾害防治和资源管理，以高标准的环境治理著称。",
+  "descriptionEn": "Switzerland's FOEN handles environmental protection, natural hazard prevention, and resource management, known for its high environmental governance standards.",
+  "region": "Europe",
+  "established": 1971,
+  "responsibilities": [
+    "air",
+    "biodiversity"
+  ],
+  "contact": {
+    "email": "info@bafu.admin.ch"
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "Basel Convention",
+    "Alpine Convention"
+  ],
+  "epiScore": 65.9,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护法",
+      "nameEn": "Environmental Protection Act",
+      "year": 1983
+    },
+    {
+      "nameZh": "CO₂法",
+      "nameEn": "CO₂ Act",
+      "year": 2011
+    },
+    {
+      "nameZh": "气候与创新法",
+      "nameEn": "Climate and Innovation Act",
+      "year": 2023
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-10-06",
+    "ndcTargetZh": "已提交2035目标",
+    "ndcTargetEn": "2035 target submitted",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2024
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-02-12",
+    "ndc3Target": "65% reduction by 2035 vs. 1990",
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1988-12-28",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰所有受控物质；基加利修正案已批准，2036年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out all ODS; Kigali Amendment ratified, 85% HFC reduction by 2036"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1995-11-21",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护阿尔卑斯高山生态",
+    "commitmentEn": "Committed to 30x30; protecting Alpine mountain ecosystems"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": true,
+    "priceUSD": 136,
+    "coveragePercent": 35,
+    "noteZh": "瑞士碳排放交易体系与EU ETS链接；碳税120瑞郎/吨覆盖供暖燃料",
+    "noteEn": "Swiss ETS linked to EU ETS; carbon levy CHF120/t on heating fuels"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 8,
+    "statusZh": "已提交BTR1",
+    "statusEn": "BTR1 submitted"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.28,
+    "cumulativeCO2Gt": 2.5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1996-01-19",
+    "annex": null,
+    "affectedParty": false,
+    "ldnTargetSet": false,
+    "ldnYear": null,
+    "napSubmitted": false,
+    "napYear": null,
+    "commitmentZh": "非受影响国；通过 SDC 资助 Sahel、Central Asia 防荒漠化项目。",
+    "commitmentEn": "Non-affected; SDC funds anti-desertification programmes in the Sahel and Central Asia.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/ch",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-10-06",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1988-12-28",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1995-11-21",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1996-01-19",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 32,
+    "carbonEmission": 46,
+    "_deprecated": true
+  }
+}

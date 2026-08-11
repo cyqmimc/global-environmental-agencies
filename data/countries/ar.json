@@ -1,0 +1,164 @@
+{
+  "isoCode": "ar",
+  "countryEn": "Argentina",
+  "countryZh": "阿根廷",
+  "agencyEn": "Ministry of Environment and Sustainable Development",
+  "agencyZh": "环境与可持续发展部",
+  "website": "https://www.argentina.gob.ar/ambiente",
+  "flagUrl": "https://flagcdn.com/ar.svg",
+  "descriptionZh": "阿根廷环境部负责保护巴塔哥尼亚冰川和潘帕斯草原等独特生态系统。",
+  "descriptionEn": "Argentina's ministry protects unique ecosystems including Patagonian glaciers and Pampas grasslands.",
+  "region": "South America",
+  "established": 2015,
+  "responsibilities": [
+    "climate",
+    "biodiversity"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Antarctic Treaty"
+  ],
+  "epiScore": 34.1,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境政策总法",
+      "nameEn": "General Environmental Law",
+      "year": 2002
+    },
+    {
+      "nameZh": "冰川保护法",
+      "nameEn": "Glacier Protection Law",
+      "year": 2010
+    },
+    {
+      "nameZh": "气候变化适应与减缓法",
+      "nameEn": "Climate Change Adaptation and Mitigation Law",
+      "year": 2019
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-09-21",
+    "ndcTargetZh": "2030年温室气体排放不超过3.49亿吨CO₂当量",
+    "ndcTargetEn": "Limit GHG to 349 Mt CO₂eq by 2030",
+    "ndcRating": "highly_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2020
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1990-09-18",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 80%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 80% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-11-22",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护巴塔哥尼亚和南极周边生态",
+    "commitmentEn": "Committed to 30x30; protecting Patagonian and sub-Antarctic ecosystems"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": true,
+    "priceUSD": 5.3,
+    "coveragePercent": 20,
+    "noteZh": "液体燃料碳税（内部碳税），覆盖部分化石燃料",
+    "noteEn": "Carbon tax on liquid fuels, covering part of fossil fuel consumption"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 4,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.4,
+    "cumulativeCO2Gt": 9.5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-01-06",
+    "annex": "III",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 1999,
+    "commitmentZh": "已设定 LDN 目标；巴塔哥尼亚干旱半干旱地区受影响。",
+    "commitmentEn": "LDN targets set; Patagonia drylands designated as priority.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/ar",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-09-21",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1990-09-18",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-11-22",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-01-06",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 10,
+    "carbonEmission": 200,
+    "_deprecated": true
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "isoCode": "eg",
+  "countryEn": "Egypt",
+  "countryZh": "埃及",
+  "agencyEn": "Ministry of Environment",
+  "agencyZh": "环境部",
+  "website": "http://www.eeaa.gov.eg/",
+  "flagUrl": "https://flagcdn.com/eg.svg",
+  "descriptionZh": "埃及环境部负责应对沙漠化和水资源保护事务，保护尼罗河流域生态。",
+  "descriptionEn": "Egypt's Ministry of Environment addresses desertification and water resource protection, safeguarding the Nile basin ecosystem.",
+  "region": "Africa",
+  "established": 1997,
+  "responsibilities": [
+    "water",
+    "waste"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNCCD",
+    "Ramsar Convention"
+  ],
+  "epiScore": 30.4,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境法",
+      "nameEn": "Environment Law No. 4",
+      "year": 1994
+    },
+    {
+      "nameZh": "可再生能源法",
+      "nameEn": "Renewable Energy Law",
+      "year": 2014
+    },
+    {
+      "nameZh": "废弃物管理法",
+      "nameEn": "Waste Management Law",
+      "year": 2020
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-06-29",
+    "ndcTargetZh": "到2030年可再生能源装机达42%；减少电力部门排放33%",
+    "ndcTargetEn": "42% renewable energy capacity by 2030; reduce power sector emissions 33%",
+    "ndcRating": "2C",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2022
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1988-08-09",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 85%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 85% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-06-02",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护尼罗河流域和红海生态系统",
+    "commitmentEn": "Committed to 30x30; protecting Nile basin and Red Sea ecosystems"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "目前无碳定价机制；自愿碳市场发展中",
+    "noteEn": "No carbon pricing; voluntary carbon market under development"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.48,
+    "cumulativeCO2Gt": 5.5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1995-06-07",
+    "annex": "I",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2005,
+    "commitmentZh": "尼罗河三角洲盐碱化、绿色尼罗河走廊为优先；2024 主办 COP15 邻邦协调会。",
+    "commitmentEn": "Nile Delta salinization and Green Nile Corridor prioritized; hosted regional coordination at COP15.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/eg",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-06-29",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1988-08-09",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-06-02",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1995-06-07",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 0.1,
+    "carbonEmission": 250,
+    "_deprecated": true
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "isoCode": "iq",
+  "countryEn": "Iraq",
+  "countryZh": "伊拉克",
+  "agencyEn": "Ministry of Environment",
+  "agencyZh": "环境部",
+  "website": "https://moen.gov.iq/",
+  "flagUrl": "https://flagcdn.com/iq.svg",
+  "descriptionZh": "伊拉克环境部应对荒漠化、水资源短缺和石油污染等环境挑战。",
+  "descriptionEn": "Iraq's Ministry of Environment manages environmental challenges including desertification, water scarcity, and oil-related pollution.",
+  "region": "Asia",
+  "established": 2003,
+  "responsibilities": [
+    "water",
+    "waste"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNCCD"
+  ],
+  "epiScore": 21.2,
+  "netZeroTarget": 2060,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护与改善法",
+      "nameEn": "Environment Protection and Improvement Law",
+      "year": 2009
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2021-02-01",
+    "ndcTargetZh": "2030年排放比基准情景减少15%",
+    "ndcTargetEn": "Reduce GHG 15% below BAU by 2030",
+    "ndcRating": "not_assessed",
+    "ndcHistory": [
+      {
+        "version": "NDC",
+        "year": 2021
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "2008-07-25",
+    "kigaliAmendment": false,
+    "commitmentZh": "已淘汰主要受控物质；基加利修正案尚未批准",
+    "commitmentEn": "Phased out main ODS; Kigali Amendment not yet ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "2009-07-28",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "无碳定价机制",
+    "noteEn": "No carbon pricing mechanism"
+  },
+  "reportingStatus": {
+    "btrSubmitted": false,
+    "btrYear": null,
+    "nationalComm": 1,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.52,
+    "cumulativeCO2Gt": 10
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "2010-04-28",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2015,
+    "commitmentZh": "美索不达米亚平原盐碱化与南部沙尘暴为最大挑战；LDN 与水资源恢复挂钩。",
+    "commitmentEn": "Mesopotamian salinization and southern sand-storms are top challenges; LDN linked to water restoration.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/iq",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2021-02-01",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "2008-07-25",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "not_party",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol/amendments/kigali-amendment-2016"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "2009-07-28",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "2010-04-28",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 2,
+    "carbonEmission": 200,
+    "_deprecated": true
+  }
+}

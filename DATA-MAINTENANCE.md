@@ -11,15 +11,21 @@ npm run update-all   # = fetch-data + split-data + check-updates
 ## 数据流架构
 
 ```
-countries.json (源文件, 手动编辑)
-    ├── split-countries.js ──→ countries-core.json (首屏)
-    │                      └─→ countries-detail.json (懒加载)
-    └── fetch-world-bank-data.js ──→ wb-latest.json (最新值, 首屏)
-                               └──→ wb-history.json (时间序列, 空闲预取)
+data/countries/<iso>.json (源文件, 80 个文件, 手动编辑 —— 详见 CONTRIBUTING.md)
+    └── build-countries.js ──→ countries.json (生成文件, 入库但不手动编辑)
+                                    ├── split-countries.js ──→ countries-core.json (首屏)
+                                    │                      └─→ countries-detail.json (懒加载)
+                                    └── fetch-world-bank-data.js ──→ wb-latest.json (最新值, 首屏)
+                                                               └──→ wb-history.json (时间序列, 空闲预取)
 
 前端合并: country = { ...core数据, wb: wb-latest数据 }
 空闲预取: country.wb.history = wb-history数据；country = { ...country, ...detail数据 }
 ```
+
+**`countries.json` / `countries-core.json` / `countries-detail.json` 是生成文件，不要手动编辑** ——
+编辑 `data/countries/<iso>.json`，然后跑 `npm run build-data`。CI 会用
+`npm run verify-data` 校验生成文件与源文件逐字节一致，直接改生成文件会在 CI 里被拦下。
+完整的字段说明、必填项与数据来源要求见 `CONTRIBUTING.md`。
 
 **重要**: `wb-latest.json` 中 PM2.5 数据来自 IQAir 2024（优先于 WB 卫星数据），`fetch-data` 会自动保留 IQAir 覆盖值不被 WB 旧数据覆盖（同时同步到 `wb-history.json` 的 2024 数据点）。
 
@@ -69,8 +75,8 @@ node scripts/merge-treaty-extensions.js   # 幂等：每次运行覆盖已有字
 更新流程：
 
 1. 在 `scripts/data/desertification.json` 或 `scripts/data/ndc3.json` 编辑对应国家条目（**每条数据都必须保留 `source` URL**）
-2. 运行 `node scripts/merge-treaty-extensions.js`
-3. 运行 `node scripts/split-countries.js` 重生成 core/detail
+2. 运行 `node scripts/merge-treaty-extensions.js`（写入 `data/countries/<iso>.json`，不是 `public/countries.json`）
+3. 运行 `npm run build-data` 重生成 `countries.json` + core/detail
 4. 运行 `node scripts/validate-schema.js` 验证字段类型 + 日期格式 + 源 URL 存在
 
 ### 中频更新（每1-2年）
@@ -95,11 +101,14 @@ node scripts/merge-treaty-extensions.js   # 幂等：每次运行覆盖已有字
 
 ## 新增国家流程
 
-1. 在 `countries.json` 中添加完整条目（参考现有国家的字段结构）
-2. 确保 `isoCode` 与 `flagUrl` 中的国家代码一致
-3. 运行 `npm run fetch-data` 自动拉取该国 WB 数据
-4. 运行 `npm run check-updates` 验证无缺失字段
-5. 运行 `npm run build` 确认构建通过
+完整流程（字段含义、必填项、数据来源要求）见 `CONTRIBUTING.md`。简述：
+
+1. 新建 `data/countries/<iso>.json`（参考现有同类国家的字段结构）
+2. 确保 `isoCode` 与 `flagUrl` 中的国家代码、文件名三者一致
+3. 运行 `npm run build-data` 生成 `countries.json` + core/detail
+4. 运行 `npm run fetch-data` 自动拉取该国 WB 数据
+5. 运行 `npm run validate` 与 `npm run check-updates` 验证无缺失字段
+6. 运行 `npm run build` 确认构建通过
 
 ## 数据质量检查
 

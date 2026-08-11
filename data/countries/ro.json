@@ -1,0 +1,165 @@
+{
+  "isoCode": "ro",
+  "countryEn": "Romania",
+  "countryZh": "罗马尼亚",
+  "agencyEn": "Ministry of the Environment, Water and Forests",
+  "agencyZh": "环境、水利与森林部",
+  "website": "https://www.mmediu.ro/",
+  "flagUrl": "https://flagcdn.com/ro.svg",
+  "descriptionZh": "罗马尼亚环境部保护多瑙河三角洲生物圈，管理欧洲最大的原始森林之一。",
+  "descriptionEn": "Romania's ministry protects the Danube Delta biosphere and manages one of Europe's largest remaining old-growth forests.",
+  "region": "Europe",
+  "established": 1990,
+  "responsibilities": [
+    "forest",
+    "water"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "Ramsar Convention",
+    "Basel Convention"
+  ],
+  "epiScore": 43.7,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护法",
+      "nameEn": "Environmental Protection Law",
+      "year": 1995
+    },
+    {
+      "nameZh": "林业法典",
+      "nameEn": "Forestry Code",
+      "year": 2008
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-06-01",
+    "ndcTargetZh": "EU目标：2035年较1990年减排66.25-72.5%（含土地利用）",
+    "ndcTargetEn": "EU target: 66.25-72.5% reduction below 1990 levels by 2035 (incl. LULUCF)",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "EU NDC",
+        "year": 2015
+      },
+      {
+        "version": "EU Updated NDC",
+        "year": 2020
+      },
+      {
+        "version": "EU NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-02-26",
+    "ndc3Target": "EU joint 2035 NDC",
+    "ndc3Source": "https://unfccc.int/NDCREG",
+    "ndc3Note": "EU joint submission."
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1993-01-27",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰所有受控物质；基加利修正案已批准",
+    "commitmentEn": "Phased out all ODS; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-08-17",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护多瑙河三角洲",
+    "commitmentEn": "Committed to 30x30; protecting Danube Delta biosphere"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": false,
+    "priceUSD": 70.4,
+    "coveragePercent": 40,
+    "noteZh": "参与EU ETS",
+    "noteEn": "Participates in EU ETS"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2024,
+    "nationalComm": 8,
+    "statusZh": "已提交BTR1（通过EU联合提交）",
+    "statusEn": "BTR1 submitted (via EU joint submission)"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.39,
+    "cumulativeCO2Gt": 8
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1998-08-19",
+    "annex": "V",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2000,
+    "commitmentZh": "Dobrogea、Oltenia 南部为重点；2024 启动'国家防风林'。",
+    "commitmentEn": "Dobrogea and southern Oltenia prioritized; 2024 'National Shelterbelt' launched.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/ro",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-06-01",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1993-01-27",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-08-17",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1998-08-19",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 30,
+    "carbonEmission": 80,
+    "_deprecated": true
+  }
+}

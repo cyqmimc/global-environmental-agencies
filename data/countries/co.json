@@ -1,0 +1,169 @@
+{
+  "isoCode": "co",
+  "countryEn": "Colombia",
+  "countryZh": "哥伦比亚",
+  "agencyEn": "Ministry of Environment and Sustainable Development",
+  "agencyZh": "环境与可持续发展部",
+  "website": "https://www.minambiente.gov.co/",
+  "flagUrl": "https://flagcdn.com/co.svg",
+  "descriptionZh": "哥伦比亚环境部管理全球生物多样性第二丰富的国家的自然资源保护。",
+  "descriptionEn": "Colombia's ministry manages natural resource protection for the world's second most biodiverse country.",
+  "region": "South America",
+  "established": 1993,
+  "responsibilities": [
+    "biodiversity",
+    "forest"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 35.4,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "国家自然资源法典",
+      "nameEn": "National Code of Natural Resources",
+      "year": 1974
+    },
+    {
+      "nameZh": "气候变化法",
+      "nameEn": "Climate Change Law",
+      "year": 2018
+    },
+    {
+      "nameZh": "环境许可证法",
+      "nameEn": "Environmental Licensing Decree",
+      "year": 2014
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2018-07-12",
+    "ndcTargetZh": "已提交2035目标",
+    "ndcTargetEn": "2035 target submitted",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2020
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1994-07-06",
+    "kigaliAmendment": true,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案已批准，2045年前削减HFCs 80%",
+    "commitmentEn": "Fully phased out CFCs; Kigali Amendment ratified, 80% HFC reduction by 2045"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-11-28",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；全球生物多样性第二大国",
+    "commitmentEn": "Committed to 30x30; second most biodiverse country globally"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": true,
+    "priceUSD": 6.5,
+    "coveragePercent": 24,
+    "noteZh": "碳税约25,000比索/吨CO₂(约$5)，覆盖化石燃料",
+    "noteEn": "Carbon tax ~COP25,000/tCO₂ (~$5), covering fossil fuels"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.47,
+    "cumulativeCO2Gt": 3.5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1999-06-08",
+    "annex": "III",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2005,
+    "commitmentZh": "Guajira、Caribbean 干旱区为重点；LDN 与森林保护结合。",
+    "commitmentEn": "Guajira and Caribbean drylands prioritized; LDN integrated with forest protection.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/co",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2018-07-12",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1994-07-06",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-11-28",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1999-06-08",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 53,
+    "carbonEmission": 100,
+    "_deprecated": true
+  }
+}

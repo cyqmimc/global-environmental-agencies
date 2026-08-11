@@ -1,0 +1,155 @@
+{
+  "isoCode": "kh",
+  "countryEn": "Cambodia",
+  "countryZh": "柬埔寨",
+  "agencyEn": "Ministry of Environment",
+  "agencyZh": "环境部",
+  "website": "https://www.moe.gov.kh/",
+  "flagUrl": "https://flagcdn.com/kh.svg",
+  "descriptionZh": "柬埔寨环境部管理洞里萨湖和湄公河保护，重点防治森林砍伐。",
+  "descriptionEn": "Cambodia's ministry manages Tonle Sap Lake and Mekong River conservation with focus on deforestation prevention.",
+  "region": "Asia",
+  "established": 1993,
+  "responsibilities": [
+    "forest",
+    "water"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 26.3,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护与自然资源管理法",
+      "nameEn": "Environmental Protection and Natural Resources Management Law",
+      "year": 1996
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-02-06",
+    "ndcTargetZh": "2030年排放比基准情景减少42%（有条件）",
+    "ndcTargetEn": "Reduce GHG 42% below BAU by 2030 (conditional)",
+    "ndcRating": "almost_sufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2020
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "2001-06-27",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1995-02-09",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳信用市场发展中",
+    "noteEn": "Carbon credit market developing"
+  },
+  "reportingStatus": {
+    "btrSubmitted": false,
+    "btrYear": null,
+    "nationalComm": 2,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.54,
+    "cumulativeCO2Gt": 0.2
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-08-18",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2006,
+    "commitmentZh": "Tonle Sap 流域与东北部为重点；LDN 与森林监测系统衔接。",
+    "commitmentEn": "Tonle Sap basin and northeast prioritized; LDN linked to national forest monitoring.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/kh",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-02-06",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "2001-06-27",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1995-02-09",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-08-18",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 46,
+    "carbonEmission": 15,
+    "_deprecated": true
+  }
+}

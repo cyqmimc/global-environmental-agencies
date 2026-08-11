@@ -1,0 +1,152 @@
+{
+  "isoCode": "uz",
+  "countryEn": "Uzbekistan",
+  "countryZh": "乌兹别克斯坦",
+  "agencyEn": "Ministry of Ecology, Environmental Protection and Climate Change",
+  "agencyZh": "生态、环境保护与气候变化部",
+  "website": "https://eco.gov.uz/",
+  "flagUrl": "https://flagcdn.com/uz.svg",
+  "descriptionZh": "乌兹别克斯坦生态部管理咸海环境灾难恢复和中亚缺水地区的气候适应。",
+  "descriptionEn": "Uzbekistan's ministry manages the Aral Sea environmental disaster recovery and water-scarce Central Asian climate adaptation.",
+  "region": "Asia",
+  "established": 2017,
+  "responsibilities": [
+    "water",
+    "climate"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNCCD"
+  ],
+  "epiScore": 31.2,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护法",
+      "nameEn": "Environmental Protection Law",
+      "year": 1992
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2018-11-09",
+    "ndcTargetZh": "2030年人均排放比2010年降低35%",
+    "ndcTargetEn": "Reduce per capita GHG 35% below 2010 by 2030",
+    "ndcRating": "not_assessed",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2017
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1993-05-18",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1995-10-19",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳市场机制研究阶段",
+    "noteEn": "Carbon market under study"
+  },
+  "reportingStatus": {
+    "btrSubmitted": false,
+    "btrYear": null,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.44,
+    "cumulativeCO2Gt": 5
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1995-10-31",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 1999,
+    "commitmentZh": "Aral 海盆地、Karakalpakstan 为最严重；2018 设立 Aralkum 沙漠造林基金。",
+    "commitmentEn": "Aral Sea basin and Karakalpakstan most affected; Aralkum afforestation fund established 2018.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/uz",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2018-11-09",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1993-05-18",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1995-10-19",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1995-10-31",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 8,
+    "carbonEmission": 120,
+    "_deprecated": true
+  }
+}

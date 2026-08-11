@@ -1,0 +1,159 @@
+{
+  "isoCode": "cd",
+  "countryEn": "DR Congo",
+  "countryZh": "刚果民主共和国",
+  "agencyEn": "Ministry of the Environment and Sustainable Development",
+  "agencyZh": "环境与可持续发展部",
+  "website": "https://www.medd.gouv.cd/",
+  "flagUrl": "https://flagcdn.com/cd.svg",
+  "descriptionZh": "刚果民主共和国环境部保护刚果盆地，全球第二大热带雨林和关键碳汇。",
+  "descriptionEn": "DR Congo's ministry protects the Congo Basin, the world's second-largest tropical rainforest and a critical global carbon sink.",
+  "region": "Africa",
+  "established": 1975,
+  "responsibilities": [
+    "forest",
+    "biodiversity"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "UNCCD"
+  ],
+  "epiScore": 20.5,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护法",
+      "nameEn": "Environmental Protection Law",
+      "year": 2011
+    },
+    {
+      "nameZh": "森林法典",
+      "nameEn": "Forest Code",
+      "year": 2002
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-12-13",
+    "ndcTargetZh": "2030年排放比基准情景减少21%",
+    "ndcTargetEn": "Reduce GHG 21% below BAU by 2030",
+    "ndcRating": "almost_sufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2021
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1994-11-30",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-12-15",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护刚果盆地雨林",
+    "commitmentEn": "Committed to 30x30; protecting Congo Basin rainforest"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "通过REDD+框架获取碳信用",
+    "noteEn": "Accessing carbon credits through REDD+ framework"
+  },
+  "reportingStatus": {
+    "btrSubmitted": false,
+    "btrYear": null,
+    "nationalComm": 2,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.62,
+    "cumulativeCO2Gt": 0.2
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-09-12",
+    "annex": "I",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2007,
+    "commitmentZh": "盆地森林退化、加丹加省土壤侵蚀是 NAP 优先领域。",
+    "commitmentEn": "Forest degradation and Katanga soil erosion are NAP priorities.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/cd",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-12-13",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1994-11-30",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-12-15",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-09-12",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 67,
+    "carbonEmission": 5,
+    "_deprecated": true
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "isoCode": "ir",
+  "countryEn": "Iran",
+  "countryZh": "伊朗",
+  "agencyEn": "Department of Environment",
+  "agencyZh": "环境局",
+  "website": "https://www.doe.ir/",
+  "flagUrl": "https://flagcdn.com/ir.svg",
+  "descriptionZh": "伊朗环境局管理生物多样性保护，应对严峻的荒漠化和水资源危机。",
+  "descriptionEn": "Iran's Department of Environment manages biodiversity conservation and combats severe desertification and water crisis.",
+  "region": "Asia",
+  "established": 1971,
+  "responsibilities": [
+    "water",
+    "biodiversity"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNCCD",
+    "Ramsar Convention"
+  ],
+  "epiScore": 32.4,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护与促进法",
+      "nameEn": "Environmental Protection and Enhancement Act",
+      "year": 1974
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-11-22",
+    "ndcTargetZh": "2030年排放比基准情景减少12%（无条件）",
+    "ndcTargetEn": "Reduce GHG 12% below BAU by 2030 (unconditional)",
+    "ndcRating": "critically_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1990-10-03",
+    "kigaliAmendment": false,
+    "commitmentZh": "已淘汰主要受控物质；基加利修正案尚未批准",
+    "commitmentEn": "Phased out main ODS; Kigali Amendment not yet ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1996-08-06",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "无碳定价机制",
+    "noteEn": "No carbon pricing mechanism"
+  },
+  "reportingStatus": {
+    "btrSubmitted": false,
+    "btrYear": null,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.45,
+    "cumulativeCO2Gt": 20
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-04-29",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2004,
+    "commitmentZh": "国土 80% 为旱地；LDN 与 Urmia 湖恢复、沙尘源治理结合。",
+    "commitmentEn": "80% of land is dryland; LDN tied to Lake Urmia recovery and sand-storm source control.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/ir",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-11-22",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1990-10-03",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "not_party",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol/amendments/kigali-amendment-2016"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1996-08-06",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-04-29",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 7,
+    "carbonEmission": 750,
+    "_deprecated": true
+  }
+}

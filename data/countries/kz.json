@@ -1,0 +1,159 @@
+{
+  "isoCode": "kz",
+  "countryEn": "Kazakhstan",
+  "countryZh": "哈萨克斯坦",
+  "agencyEn": "Ministry of Ecology and Natural Resources",
+  "agencyZh": "生态与自然资源部",
+  "website": "https://www.gov.kz/memleket/entities/ecogeo",
+  "flagUrl": "https://flagcdn.com/kz.svg",
+  "descriptionZh": "哈萨克斯坦生态部管理咸海危机应对和从化石燃料依赖向绿色经济转型。",
+  "descriptionEn": "Kazakhstan's ministry manages the Aral Sea crisis response and green economy transition from fossil fuel dependence.",
+  "region": "Asia",
+  "established": 2019,
+  "responsibilities": [
+    "water",
+    "energy"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "UNCCD",
+    "Basel Convention"
+  ],
+  "epiScore": 37.8,
+  "netZeroTarget": 2060,
+  "keyLaws": [
+    {
+      "nameZh": "生态法典",
+      "nameEn": "Ecological Code",
+      "year": 2021
+    },
+    {
+      "nameZh": "绿色经济转型构想",
+      "nameEn": "Green Economy Transition Concept",
+      "year": 2013
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2016-12-06",
+    "ndcTargetZh": "2030年排放比1990年减少15%（无条件）",
+    "ndcTargetEn": "Reduce GHG 15% below 1990 by 2030 (unconditional)",
+    "ndcRating": "critically_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2023
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1998-04-26",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰CFCs等受控物质；基加利修正案已批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1994-09-06",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": true,
+    "hasCarbonTax": false,
+    "priceUSD": 0.9,
+    "coveragePercent": 46,
+    "noteZh": "2013年启动碳排放交易，中亚首个ETS",
+    "noteEn": "ETS launched 2013, first in Central Asia"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 4,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.4,
+    "cumulativeCO2Gt": 12
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-07-09",
+    "annex": "II",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2005,
+    "commitmentZh": "Aral Sea 干涸区为重点；LDN 与 Saxaul 林修复挂钩。",
+    "commitmentEn": "Aral Sea seabed prioritized; LDN linked to Saxaul forest restoration.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/kz",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2016-12-06",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1998-04-26",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1994-09-06",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-07-09",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 1,
+    "carbonEmission": 300,
+    "_deprecated": true
+  }
+}

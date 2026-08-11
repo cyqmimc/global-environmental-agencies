@@ -1,0 +1,153 @@
+{
+  "isoCode": "do",
+  "countryEn": "Dominican Republic",
+  "countryZh": "多米尼加",
+  "agencyEn": "Ministry of the Environment and Natural Resources",
+  "agencyZh": "环境与自然资源部",
+  "website": "https://ambiente.gob.do/",
+  "flagUrl": "https://flagcdn.com/do.svg",
+  "descriptionZh": "多米尼加环境部管理加勒比岛屿生物多样性和珊瑚礁保护。",
+  "descriptionEn": "Dominican Republic's ministry manages Caribbean island biodiversity and coral reef conservation.",
+  "region": "North America",
+  "established": 2000,
+  "responsibilities": [
+    "biodiversity",
+    "water"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES"
+  ],
+  "epiScore": 32.8,
+  "netZeroTarget": 2050,
+  "keyLaws": [
+    {
+      "nameZh": "环境与自然资源总法",
+      "nameEn": "General Law on the Environment and Natural Resources",
+      "year": 2000
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2017-09-21",
+    "ndcTargetZh": "2030年排放比基准情景减少27%",
+    "ndcTargetEn": "Reduce GHG 27% below BAU by 2030",
+    "ndcRating": "insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2020
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1993-03-18",
+    "kigaliAmendment": true,
+    "commitmentZh": "已淘汰CFCs；基加利修正案已批准",
+    "commitmentEn": "Phased out CFCs; Kigali Amendment ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1996-11-25",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋",
+    "commitmentEn": "Committed to 30x30 target"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳市场研究阶段",
+    "noteEn": "Carbon market under study"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 3,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.45,
+    "cumulativeCO2Gt": 1
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1997-06-26",
+    "annex": "III",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2002,
+    "commitmentZh": "西部边境干旱区为重点；LDN 与森林恢复挂钩。",
+    "commitmentEn": "Western border drylands prioritized; LDN linked to forest restoration.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/do",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2017-09-21",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1993-03-18",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "unknown",
+      "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1996-11-25",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1997-06-26",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 41,
+    "carbonEmission": 25,
+    "_deprecated": true
+  }
+}

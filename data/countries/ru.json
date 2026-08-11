@@ -1,0 +1,169 @@
+{
+  "isoCode": "ru",
+  "countryEn": "Russia",
+  "countryZh": "俄罗斯",
+  "agencyEn": "Ministry of Natural Resources and Environment",
+  "agencyZh": "自然资源与环境部",
+  "website": "https://www.mnr.gov.ru/",
+  "flagUrl": "https://flagcdn.com/ru.svg",
+  "descriptionZh": "俄罗斯自然资源部主管环境资源开发与保护，管理全球最大面积的森林。",
+  "descriptionEn": "Russia's ministry manages natural resource development and environmental protection, overseeing the world's largest forest area.",
+  "region": "Europe",
+  "established": 2008,
+  "responsibilities": [
+    "forest",
+    "water"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "CITES",
+    "Ramsar Convention"
+  ],
+  "epiScore": 37.5,
+  "netZeroTarget": 2060,
+  "keyLaws": [
+    {
+      "nameZh": "环境保护法",
+      "nameEn": "Federal Law on Environmental Protection",
+      "year": 2002
+    },
+    {
+      "nameZh": "森林法典",
+      "nameEn": "Forest Code",
+      "year": 2006
+    },
+    {
+      "nameZh": "温室气体排放限制法",
+      "nameEn": "Law on Limiting Greenhouse Gas Emissions",
+      "year": 2021
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2019-09-23",
+    "ndcTargetZh": "2035年温室气体排放控制在1990年水平的65-67%（含森林吸收）",
+    "ndcTargetEn": "Limit GHG to 65-67% of 1990 levels by 2035 (incl. forests)",
+    "ndcRating": "critically_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "Updated NDC",
+        "year": 2020
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1988-11-10",
+    "kigaliAmendment": false,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案尚未批准",
+    "commitmentEn": "Fully phased out CFCs and other ODS; Kigali Amendment not yet ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1995-04-05",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；管理全球最大面积的自然保护区",
+    "commitmentEn": "Committed to 30x30; manages largest network of nature reserves globally"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "萨哈林地区碳交易试点；联邦层面无碳定价",
+    "noteEn": "Sakhalin regional ETS pilot; no federal carbon pricing"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 8,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.39,
+    "cumulativeCO2Gt": 115
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "2003-05-29",
+    "annex": "V",
+    "affectedParty": true,
+    "ldnTargetSet": false,
+    "ldnYear": null,
+    "napSubmitted": true,
+    "napYear": 2003,
+    "commitmentZh": "Kalmykia、Astrakhan 与外贝加尔为重点；未通过 TSP 设定正式 LDN 目标。",
+    "commitmentEn": "Kalmykia, Astrakhan and Trans-Baikal prioritized; has not set formal LDN targets via TSP.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/ru",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2019-09-23",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1988-11-10",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "not_party",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol/amendments/kigali-amendment-2016"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1995-04-05",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "2003-05-29",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 49,
+    "carbonEmission": 1500,
+    "_deprecated": true
+  }
+}

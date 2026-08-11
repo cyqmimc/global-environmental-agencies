@@ -1,0 +1,168 @@
+{
+  "isoCode": "tr",
+  "countryEn": "Turkey",
+  "countryZh": "土耳其",
+  "agencyEn": "Ministry of Environment, Urbanization and Climate Change",
+  "agencyZh": "环境、城市化与气候变化部",
+  "website": "https://csb.gov.tr/",
+  "flagUrl": "https://flagcdn.com/tr.svg",
+  "descriptionZh": "土耳其环境部致力于城市可持续发展和应对气候变化，保护横跨欧亚的独特生态。",
+  "descriptionEn": "Turkey's ministry focuses on sustainable urban development and climate change, protecting unique transcontinental ecosystems.",
+  "region": "Asia",
+  "established": 2003,
+  "responsibilities": [
+    "climate",
+    "waste"
+  ],
+  "contact": {
+    "email": ""
+  },
+  "treaties": [
+    "Paris Agreement",
+    "CBD",
+    "Barcelona Convention",
+    "Ramsar Convention"
+  ],
+  "epiScore": 36.4,
+  "netZeroTarget": 2053,
+  "keyLaws": [
+    {
+      "nameZh": "环境法",
+      "nameEn": "Environment Law",
+      "year": 1983
+    },
+    {
+      "nameZh": "气候变化行动计划",
+      "nameEn": "Climate Change Action Plan",
+      "year": 2011
+    },
+    {
+      "nameZh": "零废弃法规",
+      "nameEn": "Zero Waste Regulation",
+      "year": 2019
+    }
+  ],
+  "parisAgreement": {
+    "status": "ratified",
+    "ratifiedDate": "2021-10-07",
+    "ndcTargetZh": "已提交2035目标",
+    "ndcTargetEn": "2035 target submitted",
+    "ndcRating": "critically_insufficient",
+    "ndcHistory": [
+      {
+        "version": "INDC",
+        "year": 2015
+      },
+      {
+        "version": "NDC",
+        "year": 2023
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
+      }
+    ],
+    "nextNdcDeadline": 2030,
+    "ndc3Submitted": false,
+    "ndc3Date": null,
+    "ndc3Target": null,
+    "ndc3Source": "https://unfccc.int/NDCREG"
+  },
+  "montrealProtocol": {
+    "status": "ratified",
+    "ratifiedDate": "1991-09-20",
+    "kigaliAmendment": false,
+    "commitmentZh": "已完全淘汰CFCs等受控物质；基加利修正案尚未批准",
+    "commitmentEn": "Fully phased out CFCs and other ODS; Kigali Amendment not yet ratified"
+  },
+  "cbd": {
+    "status": "ratified",
+    "ratifiedDate": "1997-02-14",
+    "target30x30": 30,
+    "commitmentZh": "承诺2030年保护30%陆地和海洋；保护横跨欧亚的独特生态系统",
+    "commitmentEn": "Committed to 30x30; protecting unique transcontinental ecosystems"
+  },
+  "carbonPricing": {
+    "hasETS": false,
+    "hasCarbonTax": false,
+    "priceUSD": null,
+    "coveragePercent": 0,
+    "noteZh": "碳排放交易体系筹备中，预计与EU ETS对接",
+    "noteEn": "ETS under preparation, expected to link with EU ETS"
+  },
+  "reportingStatus": {
+    "btrSubmitted": true,
+    "btrYear": 2025,
+    "nationalComm": 7,
+    "statusZh": "BTR1待提交",
+    "statusEn": "BTR1 pending"
+  },
+  "climateEquity": {
+    "vulnerabilityIndex": 0.42,
+    "cumulativeCO2Gt": 15
+  },
+  "desertification": {
+    "status": "ratified",
+    "ratifiedDate": "1998-03-31",
+    "annex": "IV",
+    "affectedParty": true,
+    "ldnTargetSet": true,
+    "ldnYear": 2030,
+    "napSubmitted": true,
+    "napYear": 2004,
+    "commitmentZh": "国土 60% 受荒漠化影响；Konya 盆地、东南安纳托利亚为重点；2024 NAP 更新。",
+    "commitmentEn": "60% of land affected; Konya basin and southeast Anatolia prioritized; NAP updated 2024.",
+    "sources": {
+      "ldn": "https://www.unccd.int/our-work/ldn-target-setting-programme",
+      "country": "https://www.unccd.int/our-work/country-profile/tr",
+      "registry": "https://prais.unccd.int"
+    }
+  },
+  "treatyRatification": {
+    "unfccc": {
+      "status": "unknown"
+    },
+    "paris_agreement": {
+      "status": "ratified",
+      "date": "2021-10-07",
+      "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+    },
+    "montreal_protocol": {
+      "status": "ratified",
+      "date": "1991-09-20",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol"
+    },
+    "kigali_amendment": {
+      "status": "not_party",
+      "source": "https://ozone.unep.org/treaties/montreal-protocol/amendments/kigali-amendment-2016"
+    },
+    "cbd": {
+      "status": "ratified",
+      "date": "1997-02-14",
+      "source": "https://www.cbd.int/information/parties.shtml"
+    },
+    "unccd": {
+      "status": "ratified",
+      "date": "1998-03-31",
+      "source": "https://prais.unccd.int"
+    },
+    "cites": {
+      "status": "unknown"
+    },
+    "basel_convention": {
+      "status": "unknown"
+    },
+    "ramsar_convention": {
+      "status": "unknown",
+      "note": "listed in legacy treaties[] sample array; date unverified"
+    },
+    "minamata_convention": {
+      "status": "unknown"
+    }
+  },
+  "legacyData": {
+    "forestCoverage": 28,
+    "carbonEmission": 500,
+    "_deprecated": true
+  }
+}
