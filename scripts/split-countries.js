@@ -54,6 +54,7 @@ data.forEach((c) => {
     descriptionEn: c.descriptionEn,
     contact: c.contact,
     treaties: c.treaties,
+    treatyRatification: c.treatyRatification,
     keyLaws: c.keyLaws,
     parisAgreement: c.parisAgreement,
     montrealProtocol: c.montrealProtocol,

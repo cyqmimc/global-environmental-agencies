@@ -389,7 +389,15 @@ export default function GlobalEnvironmentalAgencies() {
 
           {/* Responsibility Filter */}
           <div className="flex flex-wrap gap-1.5 mt-2">
-            <span className="text-xs text-gray-400 leading-6 mr-1">{t("职能", "Focus")}</span>
+            <span
+              className="text-xs text-gray-400 leading-6 mr-1 cursor-help"
+              title={t(
+                "数据为节选，非完整职能清单；未显示某标签不代表该国无相关职能",
+                "Data is a selection, not a complete list of functions; the absence of a tag does not mean the country lacks that function"
+              )}
+            >
+              {t("职能（节选）", "Focus (selected)")} ⓘ
+            </span>
             {Object.entries(RESPONSIBILITY_LABELS).map(([key, label]) => (
               <button
                 key={key}

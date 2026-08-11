@@ -123,6 +123,47 @@
       "forestCoverage": 33,
       "carbonEmission": 5000,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-03",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-04-21",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "not_party",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol/amendments/kigali-amendment-2016"
+      },
+      "cbd": {
+        "status": "signed",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "2000-11-17",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -250,6 +291,48 @@
       "forestCoverage": 23,
       "carbonEmission": 10000,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-03",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1991-06-14",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-01-05",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-02-18",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -377,6 +460,48 @@
       "forestCoverage": 32,
       "carbonEmission": 800,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-12-16",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-12-21",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1996-07-10",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -503,6 +628,49 @@
       "forestCoverage": 68,
       "carbonEmission": 1200,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-11-08",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-09-30",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-05-28",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1998-09-11",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      }
     }
   },
   {
@@ -630,6 +798,48 @@
       "forestCoverage": 31,
       "carbonEmission": 600,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-11-28",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-07-01",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-06-12",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -752,6 +962,48 @@
       "forestCoverage": 24,
       "carbonEmission": 2600,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-02",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1992-06-19",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-02-18",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1996-12-17",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -882,6 +1134,49 @@
       "forestCoverage": 13,
       "carbonEmission": 400,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-11-18",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-05-20",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-06-03",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1996-06-12",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -1009,6 +1304,48 @@
       "forestCoverage": 60,
       "carbonEmission": 500,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-21",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1990-03-19",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-02-28",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-06-25",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -1135,6 +1472,49 @@
       "forestCoverage": 17,
       "carbonEmission": 400,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-11-09",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1989-05-19",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-06-18",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "2000-05-15",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -1261,6 +1641,48 @@
       "forestCoverage": 7,
       "carbonEmission": 400,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-11-01",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1990-01-15",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1995-11-02",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-09-30",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -1387,6 +1809,48 @@
       "forestCoverage": 38,
       "carbonEmission": 700,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-06-30",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1992-12-04",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1995-12-01",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -1513,6 +1977,49 @@
       "forestCoverage": 33,
       "carbonEmission": 450,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-21",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-03-31",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-03-11",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1995-04-03",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -1633,6 +2140,47 @@
       "forestCoverage": 0.5,
       "carbonEmission": 600,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-11-03",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1993-03-01",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "2001-10-03",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-06-25",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -1763,6 +2311,49 @@
       "forestCoverage": 50,
       "carbonEmission": 1200,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-31",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1992-06-26",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-08-23",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1998-08-31",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -1890,6 +2481,48 @@
       "forestCoverage": 36,
       "carbonEmission": 450,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-12-16",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-04-15",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-06-23",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -2017,6 +2650,47 @@
       "forestCoverage": 37,
       "carbonEmission": 320,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-01-12",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-12-16",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-12-21",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1996-01-30",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -2143,6 +2817,49 @@
       "forestCoverage": 49,
       "carbonEmission": 1500,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2019-09-23",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-11-10",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "not_party",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol/amendments/kigali-amendment-2016"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1995-04-05",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "2003-05-29",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -2269,6 +2986,48 @@
       "forestCoverage": 23,
       "carbonEmission": 60,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-21",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1989-01-05",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1995-12-21",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1999-04-26",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -2391,6 +3150,48 @@
       "forestCoverage": 0.1,
       "carbonEmission": 250,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-06-29",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-08-09",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-06-02",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1995-06-07",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -2517,6 +3318,48 @@
       "forestCoverage": 64,
       "carbonEmission": 700,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-11-03",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1992-02-27",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-10-03",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1999-08-17",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -2644,6 +3487,47 @@
       "forestCoverage": 69,
       "carbonEmission": 50,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-06-29",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-12-16",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1995-12-12",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -2774,6 +3658,48 @@
       "forestCoverage": 33,
       "carbonEmission": 50,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-06-20",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-06-24",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-07-09",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1996-08-30",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -2900,6 +3826,49 @@
       "forestCoverage": 38,
       "carbonEmission": 80,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-04",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-06-21",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-09-16",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "2000-09-07",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -3026,6 +3995,48 @@
       "forestCoverage": 8,
       "carbonEmission": 20,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-12-28",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-11-09",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-07-26",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-06-24",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -3152,6 +4163,48 @@
       "forestCoverage": 7,
       "carbonEmission": 120,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-05-16",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-10-31",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-08-29",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-07-08",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -3274,6 +4327,48 @@
       "forestCoverage": 10,
       "carbonEmission": 200,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-21",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1990-09-18",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-11-22",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-01-06",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -3400,6 +4495,49 @@
       "forestCoverage": 53,
       "carbonEmission": 100,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2018-07-12",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1994-07-06",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-11-28",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1999-06-08",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -3526,6 +4664,49 @@
       "forestCoverage": 38,
       "carbonEmission": 300,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-21",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1989-07-07",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "2004-01-29",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "2001-03-07",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -3653,6 +4834,48 @@
       "forestCoverage": 11,
       "carbonEmission": 180,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-12-16",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-07-12",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1995-06-27",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -3779,6 +5002,48 @@
       "forestCoverage": 28,
       "carbonEmission": 500,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2021-10-07",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1991-09-20",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "not_party",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol/amendments/kigali-amendment-2016"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1997-02-14",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1998-03-31",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -3906,6 +5171,48 @@
       "forestCoverage": 14,
       "carbonEmission": 33,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-12-16",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-12-21",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1995-12-22",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -4033,6 +5340,47 @@
       "forestCoverage": 73,
       "carbonEmission": 48,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-11-14",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-12-16",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-07-27",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1995-09-20",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -4159,6 +5507,48 @@
       "forestCoverage": 32,
       "carbonEmission": 46,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-10-06",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-12-28",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1995-11-21",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1996-01-19",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -4286,6 +5676,48 @@
       "forestCoverage": 47,
       "carbonEmission": 77,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1989-05-03",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-08-18",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-06-03",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -4413,6 +5845,47 @@
       "forestCoverage": 36,
       "carbonEmission": 50,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-10-17",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-12-21",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1996-04-01",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -4535,6 +6008,48 @@
       "forestCoverage": 7,
       "carbonEmission": 65,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-11-22",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1992-06-30",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1995-08-07",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1996-03-26",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -4661,6 +6176,47 @@
       "forestCoverage": 4,
       "carbonEmission": 200,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-21",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1989-12-22",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "2000-02-10",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1998-10-21",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -4783,6 +6339,49 @@
       "forestCoverage": 55,
       "carbonEmission": 250,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-11-16",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1989-08-29",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-06-24",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-06-25",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -4905,6 +6504,48 @@
       "forestCoverage": 42,
       "carbonEmission": 350,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-11-03",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1994-01-26",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-11-16",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1998-08-25",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -5027,6 +6668,49 @@
       "forestCoverage": 24,
       "carbonEmission": 170,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-03-23",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1991-07-17",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-10-08",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "2000-02-10",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -5153,6 +6837,48 @@
       "forestCoverage": 24,
       "carbonEmission": 100,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-02-10",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1990-03-26",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-09-09",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-11-13",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -5279,6 +7005,49 @@
       "forestCoverage": 58,
       "carbonEmission": 55,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-07-25",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1993-03-31",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-06-07",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1995-11-09",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -5401,6 +7170,47 @@
       "forestCoverage": 13,
       "carbonEmission": 70,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-21",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1995-01-28",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1995-08-21",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1996-11-12",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -5523,6 +7333,48 @@
       "forestCoverage": 21,
       "carbonEmission": 20,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-21",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1989-07-24",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-08-29",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1996-12-27",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -5645,6 +7497,49 @@
       "forestCoverage": 54,
       "carbonEmission": 10,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-13",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1991-07-30",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-08-26",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1998-03-05",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -5772,6 +7667,48 @@
       "forestCoverage": 31,
       "carbonEmission": 380,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1990-07-13",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1996-01-18",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "2001-11-14",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -5894,6 +7831,47 @@
       "forestCoverage": 55,
       "carbonEmission": 2,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-04-22",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1989-10-23",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-02-25",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1998-08-26",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -6020,6 +7998,48 @@
       "forestCoverage": 15,
       "carbonEmission": 25,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-03-09",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1994-10-11",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-04-05",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-06-27",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -6141,6 +8161,47 @@
       "forestCoverage": 5,
       "carbonEmission": 235,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-11-10",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1992-12-18",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-07-26",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-02-24",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -6262,6 +8323,48 @@
       "forestCoverage": 11,
       "carbonEmission": 100,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-21",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1990-08-02",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-05-03",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1996-01-26",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -6369,6 +8472,47 @@
       "forestCoverage": 2,
       "carbonEmission": 200,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2021-02-01",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "2008-07-25",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "not_party",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol/amendments/kigali-amendment-2016"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "2009-07-28",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "2010-04-28",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -6477,6 +8621,48 @@
       "forestCoverage": 7,
       "carbonEmission": 750,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-11-22",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1990-10-03",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "not_party",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol/amendments/kigali-amendment-2016"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1996-08-06",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-04-29",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -6594,6 +8780,48 @@
       "forestCoverage": 1,
       "carbonEmission": 300,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-12-06",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1998-04-26",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-09-06",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-07-09",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -6715,6 +8943,48 @@
       "forestCoverage": 16,
       "carbonEmission": 210,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-19",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-09-20",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1995-02-07",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "2002-07-27",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -6837,6 +9107,48 @@
       "forestCoverage": 32,
       "carbonEmission": 70,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-12-16",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-08-04",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-05-05",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -6954,6 +9266,48 @@
       "forestCoverage": 11,
       "carbonEmission": 60,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-12-16",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1996-03-22",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-07-31",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -7076,6 +9430,49 @@
       "forestCoverage": 30,
       "carbonEmission": 80,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-06-01",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1993-01-27",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-08-17",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1998-08-19",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -7198,6 +9595,48 @@
       "forestCoverage": 34,
       "carbonEmission": 110,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1993-01-01",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-12-03",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "2000-01-25",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -7315,6 +9754,48 @@
       "forestCoverage": 23,
       "carbonEmission": 110,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-04-06",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1988-12-16",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1996-11-22",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-06-30",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -7432,6 +9913,49 @@
       "forestCoverage": 23,
       "carbonEmission": 55,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1989-04-20",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-02-24",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1999-07-13",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -7544,6 +10068,49 @@
       "forestCoverage": 52,
       "carbonEmission": 15,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2018-04-18",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1993-04-16",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1996-03-08",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-04-19",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -7656,6 +10223,47 @@
       "forestCoverage": 1,
       "carbonEmission": 180,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-20",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1992-09-20",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1995-08-14",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1996-05-22",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -7768,6 +10376,48 @@
       "forestCoverage": 43,
       "carbonEmission": 12,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-21",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1993-03-19",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-10-17",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1995-07-26",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -7885,6 +10535,48 @@
       "forestCoverage": 67,
       "carbonEmission": 5,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-12-13",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1994-11-30",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-12-15",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-09-12",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -8002,6 +10694,48 @@
       "forestCoverage": 50,
       "carbonEmission": 45,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-03-29",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1990-04-30",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-02-23",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1995-09-06",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -8114,6 +10848,48 @@
       "forestCoverage": 11,
       "carbonEmission": 10,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-19",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1991-02-08",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-11-05",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1999-03-25",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -8226,6 +11002,49 @@
       "forestCoverage": 52,
       "carbonEmission": 10,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-04-10",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1993-03-31",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1995-01-06",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-11-12",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -8343,6 +11162,49 @@
       "forestCoverage": 74,
       "carbonEmission": 7,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-21",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1992-10-27",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-03-16",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "2000-12-06",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -8455,6 +11317,49 @@
       "forestCoverage": 29,
       "carbonEmission": 25,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-21",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1989-12-15",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-03-23",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1998-12-09",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -8567,6 +11472,49 @@
       "forestCoverage": 25,
       "carbonEmission": 12,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1994-07-06",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-11-23",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1996-10-15",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -8674,6 +11622,48 @@
       "forestCoverage": 42,
       "carbonEmission": 30,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-09-19",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1993-11-24",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "not_party",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol/amendments/kigali-amendment-2016"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-11-25",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-01-02",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -8786,6 +11776,49 @@
       "forestCoverage": 46,
       "carbonEmission": 15,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-02-06",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "2001-06-27",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1995-02-09",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-08-18",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -8898,6 +11931,48 @@
       "forestCoverage": 8,
       "carbonEmission": 35,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-09-21",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1996-03-07",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1993-09-30",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1996-09-03",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -9009,6 +12084,47 @@
       "forestCoverage": 8,
       "carbonEmission": 120,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2018-11-09",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1993-05-18",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1995-10-19",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1995-10-31",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -9116,6 +12232,47 @@
       "forestCoverage": 46,
       "carbonEmission": 35,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2020-11-10",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "2000-03-17",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1998-04-01",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-06-30",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -9228,6 +12385,48 @@
       "forestCoverage": 36,
       "carbonEmission": 10,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2018-06-04",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1994-09-09",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1995-08-25",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-03-13",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -9336,6 +12535,49 @@
       "forestCoverage": 52,
       "carbonEmission": 120,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-07-21",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1989-02-06",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "not_party",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol/amendments/kigali-amendment-2016"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-09-13",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1998-06-29",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -9444,6 +12686,49 @@
       "forestCoverage": 50,
       "carbonEmission": 25,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2016-10-05",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1994-10-03",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-10-03",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1996-08-01",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -9557,6 +12842,49 @@
       "forestCoverage": 32,
       "carbonEmission": 30,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-01-28",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1992-07-14",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1994-03-08",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-03-13",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   },
   {
@@ -9668,6 +12996,48 @@
       "forestCoverage": 41,
       "carbonEmission": 25,
       "_deprecated": true
+    },
+    "treatyRatification": {
+      "unfccc": {
+        "status": "unknown"
+      },
+      "paris_agreement": {
+        "status": "ratified",
+        "date": "2017-09-21",
+        "source": "https://unfccc.int/process/the-paris-agreement/status-of-ratification"
+      },
+      "montreal_protocol": {
+        "status": "ratified",
+        "date": "1993-03-18",
+        "source": "https://ozone.unep.org/treaties/montreal-protocol"
+      },
+      "kigali_amendment": {
+        "status": "unknown",
+        "note": "legacy montrealProtocol.kigaliAmendment=true but no verified ratification date on file"
+      },
+      "cbd": {
+        "status": "ratified",
+        "date": "1996-11-25",
+        "source": "https://www.cbd.int/information/parties.shtml"
+      },
+      "unccd": {
+        "status": "ratified",
+        "date": "1997-06-26",
+        "source": "https://prais.unccd.int"
+      },
+      "cites": {
+        "status": "unknown",
+        "note": "listed in legacy treaties[] sample array; date unverified"
+      },
+      "basel_convention": {
+        "status": "unknown"
+      },
+      "ramsar_convention": {
+        "status": "unknown"
+      },
+      "minamata_convention": {
+        "status": "unknown"
+      }
     }
   }
 ]

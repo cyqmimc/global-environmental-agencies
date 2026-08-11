@@ -19,6 +19,11 @@ const VALID_NDC_RATINGS = new Set([
   "highly_insufficient", "critically_insufficient", "not_assessed",
 ]);
 
+const VALID_RATIFICATION_STATUSES = new Set([
+  "ratified", "acceded", "signed", "not_party", "unknown",
+]);
+const STATUSES_REQUIRING_DATE_AND_SOURCE = new Set(["ratified", "acceded"]);
+
 const errors = [];
 const warnings = [];
 
@@ -86,6 +91,31 @@ data.forEach((c, i) => {
     check(typeof d.commitmentZh === "string", "desertification.commitmentZh missing", ctx);
     check(typeof d.commitmentEn === "string", "desertification.commitmentEn missing", ctx);
     check(d.sources && typeof d.sources.ldn === "string", "desertification.sources.ldn missing", ctx);
+  }
+
+  // Treaty ratification records (scripts/data/treaty-ratification.json, merged
+  // via scripts/merge-treaty-ratification.js)
+  warn(c.treatyRatification != null, "treatyRatification block missing", ctx);
+  if (c.treatyRatification) {
+    Object.entries(c.treatyRatification).forEach(([treatyKey, r]) => {
+      check(
+        VALID_RATIFICATION_STATUSES.has(r?.status),
+        `treatyRatification.${treatyKey}.status invalid "${r?.status}"`,
+        ctx
+      );
+      if (STATUSES_REQUIRING_DATE_AND_SOURCE.has(r?.status)) {
+        check(
+          typeof r.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(r.date),
+          `treatyRatification.${treatyKey} status="${r.status}" requires a YYYY-MM-DD date`,
+          ctx
+        );
+        check(
+          typeof r.source === "string" && /^https?:\/\//.test(r.source),
+          `treatyRatification.${treatyKey} status="${r.status}" requires a source URL`,
+          ctx
+        );
+      }
+    });
   }
 
   // NDC 3.0 (Third NDC) block (new on parisAgreement)

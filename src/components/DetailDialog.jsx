@@ -188,8 +188,14 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
               </p>
 
               <div className="mb-4">
-                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
-                  {t("特色领域", "Focus Areas")}
+                <h4
+                  className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2 cursor-help"
+                  title={t(
+                    "数据为节选，非完整职能清单；未显示某标签不代表该国无相关职能",
+                    "Data is a selection, not a complete list of functions; the absence of a tag does not mean the country lacks that function"
+                  )}
+                >
+                  {t("主要职能（节选）", "Key Focus Areas (selected)")} ⓘ
                 </h4>
                 <div className="flex flex-wrap gap-1.5">
                   {selectedCountry.responsibilities.map((r) => (
@@ -658,8 +664,14 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                 </div>
 
                 <div>
-                  <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
-                    {t("其他国际公约", "Other International Treaties")}
+                  <h4
+                    className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2 cursor-help"
+                    title={t(
+                      "重点公约节选，非完整批准清单；未列出的公约不代表该国未加入",
+                      "Selected treaties, not a complete ratification record; a treaty not listed does not mean the country hasn't joined it"
+                    )}
+                  >
+                    {t("重点公约（节选）", "Selected Treaties")} ⓘ
                   </h4>
                   <div className="flex flex-wrap gap-1.5">
                     {selectedCountry.treaties.map((tr) => (

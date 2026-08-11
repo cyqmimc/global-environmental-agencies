@@ -217,6 +217,17 @@ export default function AboutPage({ language, onClose }) {
                   )}
                 </p>
               </div>
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
+                <p className="font-medium text-amber-800">
+                  {t("重点公约与主要职能：非完整清单", "Selected Treaties & Key Focus Areas: not exhaustive lists")}
+                </p>
+                <p className="leading-relaxed text-amber-800">
+                  {t(
+                    "每个国家页面展示的「重点公约（节选）」与「主要职能（节选）」是编者手工挑选的代表性条目，并非该国批准的全部国际公约或环保机构承担的全部职能范围。例如某国页面未列出《蒙特利尔议定书》，不代表该国未加入——这些公约（巴黎协定、UNFCCC、蒙特利尔议定书、CITES、巴塞尔公约等）在全球已接近普遍批准。完整、逐国核实的批准状态数据库正在建设中；在此之前，请勿将「未列出」解读为「未加入」或「无相关职能」。",
+                    "The \"Selected Treaties\" and \"Key Focus Areas\" shown on each country page are editor-picked representative entries, not the complete set of international treaties a country has ratified or the full scope of its environmental agency's mandate. For example, a country page not listing the Montreal Protocol does not mean that country hasn't joined it — treaties like the Paris Agreement, UNFCCC, Montreal Protocol, CITES, and the Basel Convention are near-universally ratified globally. A complete, country-by-country verified ratification database is under construction; until then, please do not read \"not listed\" as \"not a party\" or \"no such function\"."
+                  )}
+                </p>
+              </div>
             </div>
           </section>
 

@@ -627,7 +627,7 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
   // Treaties
   if (country.treaties?.length) {
     checkPageBreak(20);
-    sectionTitle(t("国际公约", "International Treaties"));
+    sectionTitle(t("重点公约（节选）", "Selected Treaties"));
 
     const cols = 3;
     const tw = CW / cols;

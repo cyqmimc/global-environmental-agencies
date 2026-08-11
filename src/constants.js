@@ -114,7 +114,7 @@ export function exportCSV(items, language, filename) {
     t("国家", "Country"),
     t("机构名称", "Agency"),
     t("地区", "Region"),
-    t("特色领域", "Focus Areas"),
+    t("主要职能(节选)", "Focus Areas (selected)"),
     t("成立年份", "Established"),
     t("森林覆盖率(%)", "Forest Coverage(%)"),
     t("森林数据年份", "Forest Data Year"),
@@ -133,7 +133,7 @@ export function exportCSV(items, language, filename) {
     t("NDC评级", "NDC Rating"),
     t("碳价(USD/t)", "Carbon Price(USD/t)"),
     t("核心法律", "Key Laws"),
-    t("国际公约", "Treaties"),
+    t("重点公约(节选)", "Selected Treaties"),
     t("官网", "Website"),
   ];
   const rows = items.map((c) => {
