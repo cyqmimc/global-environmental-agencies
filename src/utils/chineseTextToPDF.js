@@ -9,7 +9,6 @@
 const SCALE = 3;                         // render at 3× for sharpness
 const PX_PER_MM = 96 / 25.4;            // pixels per mm at 96 DPI
 const CJK_FONT = "'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif";
-const PT_TO_MM = 25.4 / 72;             // 1pt → mm
 
 function pxToMm(px) {
   return px / (SCALE * PX_PER_MM);

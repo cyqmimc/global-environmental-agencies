@@ -76,7 +76,6 @@ export default function useDialogA11y(open, onClose) {
       }
     };
     // Intentionally exclude onClose — see ref pattern above.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   return containerRef;

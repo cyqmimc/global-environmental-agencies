@@ -1,6 +1,15 @@
 {
   "name": "global-environmental-agencies",
   "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyqmimc/global-environmental-agencies.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/prerender.js",
@@ -9,9 +18,14 @@
     "split-data": "node scripts/split-countries.js",
     "update-all": "node scripts/validate-schema.js && node scripts/fetch-world-bank-data.js && node scripts/split-countries.js && node scripts/check-updates.js",
     "check-updates": "node scripts/check-updates.js",
+    "check-links": "node scripts/check-links.js",
     "validate": "node scripts/validate-schema.js",
     "audit-drift": "node scripts/audit-data-drift.js",
-    "test": "node --test --experimental-vm-modules src/__tests__/*.test.js"
+    "test": "node --test --experimental-vm-modules src/__tests__/*.test.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
@@ -23,7 +37,13 @@
     "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^10.8.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.9.0",
+    "prettier": "^3.9.6",
     "vite": "^8.0.3"
   }
 }

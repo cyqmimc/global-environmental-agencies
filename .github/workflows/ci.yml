@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20, 22]
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - run: npm ci
+
+      - run: npm run validate
+
+      # Fails if public/countries.json (or countries-core/detail.json) was
+      # hand-edited instead of editing data/countries/<iso>.json and running
+      # `npm run build-data` — see scripts/verify-generated-data.js.
+      - run: npm run verify-data
+
+      - run: npm test
+
+      - run: npm run build

@@ -1,0 +1,63 @@
+name: Monthly Link Check
+
+# Checks all 80 agency websites + the standing data-source URLs (see
+# scripts/check-links.js) once a month and opens/updates a GitHub issue with
+# whatever's broken. Deliberately opens an issue, not a PR — a link being
+# unreachable needs a human to verify (see the false-positive caveat in
+# scripts/check-links.js) and pick the replacement URL, not an automated edit.
+
+on:
+  schedule:
+    # 03:00 UTC on the 1st of every month
+    - cron: "0 3 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Run link check
+        id: check
+        run: npm run check-links
+        continue-on-error: true
+
+      - name: Find existing open link-check issue
+        if: steps.check.outcome == 'failure'
+        id: existing
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          number=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --label link-check --json number --jq '.[0].number // empty')
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+
+      - name: Open new issue
+        if: steps.check.outcome == 'failure' && steps.existing.outputs.number == ''
+        uses: peter-evans/create-issue-from-file@v6
+        with:
+          title: "🔗 Monthly link check found broken URLs"
+          content-filepath: ./link-check-report.md
+          labels: |
+            link-check
+            automated
+
+      - name: Update existing issue
+        if: steps.check.outcome == 'failure' && steps.existing.outputs.number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment "${{ steps.existing.outputs.number }}" \
+            --repo "$GITHUB_REPOSITORY" \
+            --body-file ./link-check-report.md

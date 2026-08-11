@@ -14,7 +14,6 @@ const ROOT = resolve(__dirname, "..");
 
 const NOW = new Date();
 const YEAR = NOW.getFullYear();
-const MONTH = NOW.getMonth() + 1;
 
 const warnings = [];
 const ok = [];

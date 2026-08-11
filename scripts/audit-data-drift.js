@@ -11,8 +11,11 @@
  * Run: node scripts/audit-data-drift.js
  * Exit code is non-zero when any country is flagged, so this can gate CI.
  */
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const FOREST_THRESHOLD_PP = 3;
 const CARBON_THRESHOLD_PCT = 5;

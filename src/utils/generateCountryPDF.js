@@ -14,7 +14,7 @@ import {
   DEFAULT_GOVERNANCE_WEIGHTS,
 } from "./score";
 import { formatCarbonIntensity } from "./derived";
-import { TREATY_LABELS, NDC_RATING_CONFIG } from "../constants";
+import { NDC_RATING_CONFIG } from "../constants";
 import { addZhText, countZhLines } from "./chineseTextToPDF";
 
 // --- PDF Chart Helpers (pure SVG DOM, no React) ---
@@ -196,27 +196,6 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
   const GRAY = [107, 114, 128];
   const DARK = [31, 41, 55];
   const LIGHT = [243, 244, 246];
-  const GREEN_HEX = "#16a34a";
-  const GRAY_HEX = "#6b7280";
-  const DARK_HEX = "#1f2937";
-
-  // Helper: render text — uses canvas for Chinese strings, jsPDF for Latin
-  function txt(text, x, yPos, { fontSize = 10, color = DARK, bold = false, align = "left", maxWidthMm = 0 } = {}) {
-    if (!text) return { heightMm: 0, numLines: 0 };
-    if (isZh) {
-      return addZhText(doc, text, x, yPos, { fontSize, color, bold, align, maxWidthMm });
-    }
-    doc.setFontSize(fontSize);
-    doc.setFont("helvetica", bold ? "bold" : "normal");
-    doc.setTextColor(...(Array.isArray(color) ? color : [0, 0, 0]));
-    if (maxWidthMm > 0) {
-      const lines = doc.splitTextToSize(text, maxWidthMm);
-      doc.text(lines, x, yPos, { align });
-      return { heightMm: lines.length * fontSize * 0.352 * 1.2, numLines: lines.length };
-    }
-    doc.text(text, x, yPos, { align });
-    return { heightMm: fontSize * 0.352, numLines: 1 };
-  }
 
   function addPage() { doc.addPage(); y = MT; drawFooter(); }
   function checkPageBreak(needed) { if (y + needed > H - 20) addPage(); }

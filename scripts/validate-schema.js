@@ -6,8 +6,11 @@
  * Run: node scripts/validate-schema.js
  * Exits non-zero on the first error so CI catches drift before split.
  */
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const VALID_RESPONSIBILITIES = new Set([
   "climate", "water", "biodiversity", "forest",
@@ -150,7 +153,7 @@ const wbPath = path.join(__dirname, "..", "public", "wb-latest.json");
 let wb;
 try {
   wb = JSON.parse(fs.readFileSync(wbPath, "utf8"));
-} catch (e) {
+} catch {
   console.warn("⚠ wb-latest.json not present, skipping WB schema check");
   process.exit(0);
 }
@@ -240,7 +243,7 @@ const historyPath = path.join(__dirname, "..", "public", "wb-history.json");
 let wbHistory;
 try {
   wbHistory = JSON.parse(fs.readFileSync(historyPath, "utf8"));
-} catch (e) {
+} catch {
   console.warn("⚠ wb-history.json not present, skipping history schema check");
   process.exit(0);
 }
