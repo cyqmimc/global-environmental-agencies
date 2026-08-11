@@ -76,13 +76,13 @@ function IndexBlock({ title, grade, score, percentile, validCount, totalDims, di
             <p className="text-xs text-gray-500 dark:text-gray-400">
               {score}/100
               {percentile != null && (
-                <span className="ml-1 text-gray-400 dark:text-gray-500">
+                <span className="ml-1 text-gray-500 dark:text-gray-400">
                   ({t("超过", "Top")} {Math.round(percentile)}%)
                 </span>
               )}
             </p>
           ) : (
-            <p className="text-xs text-gray-400 dark:text-gray-500" title={t(`有效维度 ${validCount}/${totalDims}，不足 4 个`, `${validCount}/${totalDims} valid dimensions — fewer than 4`)}>
+            <p className="text-xs text-gray-500 dark:text-gray-400" title={t(`有效维度 ${validCount}/${totalDims}，不足 4 个`, `${validCount}/${totalDims} valid dimensions — fewer than 4`)}>
               {t("数据不足", "Insufficient data")}
             </p>
           )}

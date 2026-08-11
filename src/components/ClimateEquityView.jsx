@@ -57,7 +57,7 @@ export default function ClimateEquityView({ countries, language, t, onCountryCli
           <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200">
             {t("气候公平矩阵", "Climate Equity Matrix")}
           </h3>
-          <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
             {t(
               "气泡大小 = 累计排放量 · 点击气泡查看国家详情",
               "Bubble size = cumulative emissions · Click to view country details"
@@ -93,11 +93,11 @@ export default function ClimateEquityView({ countries, language, t, onCountryCli
 
       {/* Data source */}
       <div className="flex items-center justify-center gap-3 mt-2">
-        <span className="text-xs text-gray-400 dark:text-gray-500">
+        <span className="text-xs text-gray-500 dark:text-gray-400">
           {t("脆弱性数据", "Vulnerability data")}
         </span>
         <DataYearBadge meta={PROVENANCE.climateEquityVulnerability} language={language} t={t} />
-        <span className="text-xs text-gray-400 dark:text-gray-500">
+        <span className="text-xs text-gray-500 dark:text-gray-400">
           {t("累计排放数据", "Cumulative emissions data")}
         </span>
         <DataYearBadge meta={PROVENANCE.climateEquityCumulativeCO2} language={language} t={t} />

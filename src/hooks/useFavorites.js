@@ -26,7 +26,7 @@ export default function useFavorites() {
       const next = prev.includes(isoCode)
         ? prev.filter((x) => x !== isoCode)
         : [...prev, isoCode];
-      try { localStorage.setItem(KEY, JSON.stringify(next)); } catch {}
+      try { localStorage.setItem(KEY, JSON.stringify(next)); } catch { /* localStorage unavailable */ }
       return next;
     });
   }, []);

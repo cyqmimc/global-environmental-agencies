@@ -24,18 +24,18 @@ export default function CompareBar({
             </span>
             <button
               onClick={() => onRemove(c)}
-              className="text-gray-400 hover:text-red-500 text-xs cursor-pointer ml-0.5"
+              className="text-gray-500 dark:text-gray-400 hover:text-red-500 text-xs cursor-pointer ml-0.5"
               aria-label={t("移除", "Remove")}
             >
               ✕
             </button>
             {i < compareList.length - 1 && (
-              <span className="text-gray-300 dark:text-gray-600 mx-1">vs</span>
+              <span className="text-gray-500 dark:text-gray-300 mx-1">vs</span>
             )}
           </div>
         ))}
       </div>
-      <span className="text-xs text-gray-400">{compareList.length}/3</span>
+      <span className="text-xs text-gray-500 dark:text-gray-400">{compareList.length}/3</span>
       <button
         onClick={onOpen}
         disabled={compareList.length < 2}

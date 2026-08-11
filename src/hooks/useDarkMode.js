@@ -7,7 +7,9 @@ function getInitial() {
   try {
     const saved = localStorage.getItem(KEY);
     if (saved === "dark" || saved === "light") return saved;
-  } catch {}
+  } catch {
+    // localStorage unavailable (private browsing, quota) — fall through.
+  }
   return window.matchMedia?.("(prefers-color-scheme: dark)").matches
     ? "dark"
     : "light";
@@ -28,7 +30,7 @@ export default function useDarkMode() {
   const toggle = useCallback(() => {
     setTheme((prev) => {
       const next = prev === "dark" ? "light" : "dark";
-      try { localStorage.setItem(KEY, next); } catch {}
+      try { localStorage.setItem(KEY, next); } catch { /* localStorage unavailable */ }
       apply(next);
       return next;
     });

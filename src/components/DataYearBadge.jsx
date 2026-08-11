@@ -26,7 +26,7 @@ export default function DataYearBadge({ meta, language, t, className = "" }) {
     </>
   );
 
-  const baseClass = `text-[10px] text-gray-400 dark:text-gray-500 whitespace-nowrap cursor-help ${className}`;
+  const baseClass = `text-[10px] text-gray-500 dark:text-gray-400 whitespace-nowrap cursor-help ${className}`;
 
   if (sourceUrl) {
     return (

@@ -252,7 +252,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   {compareList.map((c) => {
                     const v = carbonIntensity(c);
                     const cls = v == null
-                      ? "text-gray-400"
+                      ? "text-gray-500 dark:text-gray-400"
                       : v <= 0.05 ? "text-green-600"
                       : v <= 0.15 ? "text-lime-600"
                       : v <= 0.30 ? "text-yellow-600"
@@ -329,7 +329,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                       {c.carbonPricing?.priceUSD != null ? (
                         <span className="font-bold text-amber-700">${c.carbonPricing.priceUSD}/t</span>
                       ) : (
-                        <span className="text-gray-400">{t("无", "None")}</span>
+                        <span className="text-gray-500 dark:text-gray-400">{t("无", "None")}</span>
                       )}
                     </td>
                   ))}
@@ -364,7 +364,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   </td>
                   {compareList.map((c) => {
                     const d = c.desertification;
-                    if (!d) return <td key={c.countryEn} className="py-3 px-2 text-center text-gray-400">—</td>;
+                    if (!d) return <td key={c.countryEn} className="py-3 px-2 text-center text-gray-500 dark:text-gray-400">—</td>;
                     return (
                       <td key={c.countryEn} className="py-3 px-2 text-center">
                         {d.ldnTargetSet ? (
@@ -425,7 +425,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                             </span>
                           ))
                         ) : (
-                          <span className="text-gray-400 text-xs">—</span>
+                          <span className="text-gray-500 dark:text-gray-400 text-xs">—</span>
                         )}
                       </div>
                     </td>

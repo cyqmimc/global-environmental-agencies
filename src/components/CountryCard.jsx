@@ -1,5 +1,6 @@
 import { RESPONSIBILITY_LABELS, shareCountryLink } from "../constants";
 import Sparkline from "./charts/Sparkline";
+import { getTrendColors } from "../utils/colorPalette";
 
 /**
  * One country card in the grid view.
@@ -25,6 +26,8 @@ export default function CountryCard({
   onToggleFav,
   yearLabel,
   historyLoaded = true,
+  colorScheme = "cvd",
+  isDark = false,
 }) {
   const co2History = country.wb?.history?.co2Mt;
   const renewYear = country.wb?.dataYear?.renewableEnergy;
@@ -42,7 +45,7 @@ export default function CountryCard({
 
   return (
     <div
-      className={`bg-white dark:bg-gray-900 border rounded-2xl p-5 flex flex-col items-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer relative ${
+      className={`bg-white dark:bg-gray-900 border rounded-2xl p-5 flex flex-col items-center hover:shadow-xl transition-all duration-300 transform motion-safe:hover:-translate-y-1 cursor-pointer relative ${
         isInCompare
           ? "border-green-500 ring-2 ring-green-200 dark:ring-green-900"
           : "border-gray-100 dark:border-gray-800"
@@ -53,7 +56,7 @@ export default function CountryCard({
         <button
           onClick={handleFav}
           className={`w-6 h-6 rounded-md flex items-center justify-center text-sm transition-colors cursor-pointer ${
-            isFav ? "text-amber-500" : "text-gray-300 hover:text-amber-400"
+            isFav ? "text-amber-500" : "text-gray-500 dark:text-gray-300 hover:text-amber-400"
           }`}
           title={isFav ? t("取消关注", "Unfavorite") : t("加入关注", "Favorite")}
           aria-label={isFav ? t("取消关注", "Unfavorite") : t("加入关注", "Favorite")}
@@ -62,7 +65,7 @@ export default function CountryCard({
         </button>
         <button
           onClick={handleShare}
-          className="w-6 h-6 rounded-md flex items-center justify-center text-gray-300 hover:text-blue-500 text-sm transition-colors cursor-pointer"
+          className="w-6 h-6 rounded-md flex items-center justify-center text-gray-500 dark:text-gray-300 hover:text-blue-500 text-sm transition-colors cursor-pointer"
           title={t("复制分享链接", "Copy share link")}
           aria-label={t("复制分享链接", "Copy share link")}
         >
@@ -107,7 +110,7 @@ export default function CountryCard({
           </span>
         ))}
       </div>
-      <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs text-gray-400 dark:text-gray-500 justify-center items-center">
+      <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs text-gray-500 dark:text-gray-400 justify-center items-center">
         <span className="text-amber-600 font-medium">EPI {country.epiScore}</span>
         <span title={yearLabel?.(renewYear)}>
           ⚡ {country.wb?.renewableEnergy?.toFixed(0) ?? "—"}%
@@ -124,7 +127,7 @@ export default function CountryCard({
         // doesn't pop in and shift the card's height (CLS) once history
         // arrives from the idle-prefetched wb-history.json.
         <div className="mt-2 flex items-center gap-1.5">
-          <span className="text-[10px] text-gray-400 dark:text-gray-500">CO₂</span>
+          <span className="text-[10px] text-gray-500 dark:text-gray-400">CO₂</span>
           <div className="w-14 h-4 rounded bg-gray-100 dark:bg-gray-800 animate-pulse" />
         </div>
       ) : co2History && co2History.length >= 2 && (() => {
@@ -133,13 +136,18 @@ export default function CountryCard({
         const valid = co2History.filter((d) => d && d.value != null);
         if (valid.length < 2) return null;
         const rising = valid[valid.length - 1].value > valid[0].value;
+        const trend = getTrendColors(colorScheme, isDark);
+        const color = rising ? trend.up : trend.down;
         return (
           <div className="mt-2 flex items-center gap-1.5" title={t("CO₂ 排放趋势 (2015–)", "CO₂ emissions trend (2015–)")}>
-            <span className="text-[10px] text-gray-400 dark:text-gray-500">CO₂</span>
+            <span className="text-[10px] text-gray-500 dark:text-gray-400">CO₂</span>
+            <span className="text-[10px] font-bold" style={{ color }} aria-hidden="true">
+              {rising ? "↑" : "↓"}
+            </span>
             <Sparkline
               data={co2History}
-              color={rising ? "#dc2626" : "#16a34a"}
-              fill={rising ? "rgba(220,38,38,0.15)" : "rgba(22,163,74,0.15)"}
+              color={color}
+              fill={rising ? "rgba(157,32,11,0.15)" : "rgba(0,106,190,0.15)"}
             />
           </div>
         );

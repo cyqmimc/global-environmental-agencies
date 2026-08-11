@@ -22,9 +22,11 @@ function scoreColor(score) {
 }
 
 function rankMedal(rank) {
-  if (rank === 1) return <span className="text-yellow-500 font-bold">🥇</span>;
-  if (rank === 2) return <span className="text-gray-400 font-bold">🥈</span>;
-  if (rank === 3) return <span className="text-amber-700 font-bold">🥉</span>;
+  // Medal emoji replace the digit visually for 1-3; keep the numeric rank
+  // for screen readers via sr-only text (color/emoji alone would drop it).
+  if (rank === 1) return <span className="text-yellow-500 font-bold" aria-hidden="true">🥇<span className="sr-only">#1</span></span>;
+  if (rank === 2) return <span className="text-gray-400 font-bold" aria-hidden="true">🥈<span className="sr-only">#2</span></span>;
+  if (rank === 3) return <span className="text-amber-700 font-bold" aria-hidden="true">🥉<span className="sr-only">#3</span></span>;
   return <span className="text-gray-500 font-medium">{rank}</span>;
 }
 
@@ -170,7 +172,7 @@ export default function RankingsView({
           >
             <span>⚙️</span> {t("调整权重", "Adjust Weights")}
             {!weightsAreDefault && <span className="w-1.5 h-1.5 rounded-full bg-green-500" />}
-            <span className="text-gray-400">{showWeights ? "▲" : "▼"}</span>
+            <span className="text-gray-500 dark:text-gray-400">{showWeights ? "▲" : "▼"}</span>
           </button>
           <button
             onClick={handleExport}
@@ -202,7 +204,7 @@ export default function RankingsView({
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
             <div>
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1.5">
+              <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1.5">
                 {t("状态指数（禀赋）", "State Index (Endowment)")}
               </p>
               <div className="space-y-1.5">
@@ -212,7 +214,7 @@ export default function RankingsView({
               </div>
             </div>
             <div>
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1.5">
+              <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1.5">
                 {t("治理指数（绩效）", "Governance Index (Performance)")}
               </p>
               <div className="space-y-1.5">
@@ -336,7 +338,7 @@ export default function RankingsView({
                         {language === "zh" ? ndcCfg.zh : ndcCfg.en}
                       </span>
                     ) : (
-                      <span className="text-gray-400 text-xs">—</span>
+                      <span className="text-gray-500 dark:text-gray-400 text-xs">—</span>
                     )}
                   </td>
                   <td className="px-3 py-2.5 text-center hidden md:table-cell">
@@ -354,7 +356,7 @@ export default function RankingsView({
       </div>
 
       {sorted.length === 0 && (
-        <div className="text-center py-12 text-gray-400">
+        <div className="text-center py-12 text-gray-500 dark:text-gray-400">
           {t("没有找到匹配的结果", "No results found")}
         </div>
       )}
@@ -398,7 +400,7 @@ function IndexCell({ result, t }) {
   if (!result || result.score == null) {
     return (
       <span
-        className="text-xs text-gray-400 dark:text-gray-500 italic"
+        className="text-xs text-gray-500 dark:text-gray-400 italic"
         title={t("有效维度不足 4 个，暂不给出综合分", "Fewer than 4 valid dimensions — no score given")}
       >
         {t("数据不足", "Insufficient data")}
