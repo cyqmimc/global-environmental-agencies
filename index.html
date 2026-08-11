@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>全球环境治理观察 | Global Environmental Governance Tracker</title>
     <meta name="description" content="80个国家环保机构、环境数据与公约履约追踪。涵盖巴黎协定NDC评级、碳定价、蒙特利尔议定书、CBD 30×30目标进度。Track environmental agencies, data and treaty compliance for 80 countries." />
     <meta name="keywords" content="environmental governance, climate change, Paris Agreement, NDC, carbon pricing, Montreal Protocol, CBD, 30x30, environmental agencies, 环境治理, 巴黎协定, 碳定价" />
+    <!-- rel=canonical / alternate hreflang are injected into dist/index.html
+         by scripts/prerender.js (bare href="/" here trips Vite's build-time
+         asset-URL resolution — EISDIR trying to read the project root as a file). -->
 
     <!-- Open Graph -->
     <meta property="og:title" content="全球环境治理观察 | Global Environmental Governance Tracker" />
     <meta property="og:description" content="80国环保机构·环境数据·公约履约追踪 | Environmental agencies, data & treaty compliance for 80 countries" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
     <meta property="og:image" content="/api/og" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="zh_CN" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -27,6 +32,18 @@
     <meta name="theme-color" content="#15803d" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "全球环境治理观察 | Global Environmental Governance Tracker",
+        "alternateName": "Global Environmental Governance Tracker",
+        "description": "80个国家环保机构、环境数据与公约履约追踪。涵盖巴黎协定NDC评级、碳定价、蒙特利尔议定书、CBD 30×30目标进度。",
+        "url": "/",
+        "inLanguage": ["zh-CN", "en"]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

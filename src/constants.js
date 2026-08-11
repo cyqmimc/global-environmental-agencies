@@ -86,8 +86,16 @@ export const NDC_RATING_CONFIG = {
 };
 
 // --- URL state helpers ---
+// Matches the prerendered SEO page paths: /country/xx/ (zh, default) and
+// /en/country/xx/ (en) — see scripts/prerender.js. Trailing slash optional
+// since both the prerendered files and client-side navigation may omit it.
+const COUNTRY_PATH_RE = /^\/(en\/)?country\/([a-z]{2})\/?$/i;
+
 export function getUrlParams() {
   const p = new URLSearchParams(window.location.search);
+  const pathMatch = window.location.pathname.match(COUNTRY_PATH_RE);
+  const pathLang = pathMatch ? (pathMatch[1] ? "en" : "zh") : null;
+  const pathCountry = pathMatch ? pathMatch[2].toLowerCase() : null;
   return {
     search: p.get("q") || "",
     region: p.get("region") || "",
@@ -95,8 +103,8 @@ export function getUrlParams() {
     compliance: p.get("comp") || "",
     sort: p.get("sort") || "none",
     page: parseInt(p.get("page"), 10) || 1,
-    lang: p.get("lang") || "zh",
-    country: p.get("country") || "",
+    lang: pathLang || p.get("lang") || "zh",
+    country: pathCountry || p.get("country") || "",
     favOnly: p.get("favOnly") === "1",
     view: p.get("view") || "cards",
     w: p.get("w") || "",
@@ -111,13 +119,24 @@ export function setUrlParams(params) {
   if (params.compliance) p.set("comp", params.compliance);
   if (params.sort && params.sort !== "none") p.set("sort", params.sort);
   if (params.page > 1) p.set("page", params.page);
-  if (params.lang && params.lang !== "zh") p.set("lang", params.lang);
-  if (params.country) p.set("country", params.country);
   if (params.favOnly) p.set("favOnly", "1");
   if (params.view && params.view !== "cards") p.set("view", params.view);
   if (params.w) p.set("w", params.w);
+
+  // A country is open: use the canonical /country/xx or /en/country/xx path
+  // (matches the prerendered pages + sitemap) instead of a query param, and
+  // fold language into the path rather than a separate ?lang=.
+  // No country open: fall back to the existing / (+ ?lang=en) scheme.
+  let pathname;
+  if (params.country) {
+    pathname = params.lang === "en" ? `/en/country/${params.country}/` : `/country/${params.country}/`;
+  } else {
+    pathname = "/";
+    if (params.lang && params.lang !== "zh") p.set("lang", params.lang);
+  }
+
   const qs = p.toString();
-  const url = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
+  const url = qs ? `${pathname}?${qs}` : pathname;
   window.history.replaceState(null, "", url);
 }
 
@@ -134,10 +153,12 @@ export function activeFilterCount({ search, region, tag, compliance, favOnly }) 
 
 /** Copy a deep link to the clipboard. Returns a Promise<boolean>. */
 export function shareCountryLink(isoCode, language) {
-  const url = new URL(window.location.href);
-  url.search = "";
-  if (isoCode) url.searchParams.set("country", isoCode);
-  if (language && language !== "zh") url.searchParams.set("lang", language);
+  const url = new URL(window.location.origin);
+  // Canonical path form — matches the prerendered SEO page for this country,
+  // so a shared link resolves to the same URL search engines index.
+  url.pathname = isoCode
+    ? language === "en" ? `/en/country/${isoCode}/` : `/country/${isoCode}/`
+    : "/";
   // navigator.clipboard is undefined in insecure contexts (http://, some iframes).
   // Guard explicitly — without this, accessing .writeText throws synchronously
   // before any .catch() can run.

@@ -111,6 +111,24 @@ export default function GlobalEnvironmentalAgencies() {
     stateWeights, governanceWeights, weightsAreDefault,
   ]);
 
+  // Keep <link rel="canonical"> in sync with client-side navigation so a
+  // JS-rendering crawler sees the same canonical URL whether it lands
+  // directly on a prerendered /country/xx/ page or reaches one by clicking
+  // around the already-booted SPA.
+  useEffect(() => {
+    const path = openCountryIso
+      ? (language === "en" ? `/en/country/${openCountryIso}/` : `/country/${openCountryIso}/`)
+      : "/";
+    const href = `${window.location.origin}${path}`;
+    let link = document.querySelector('link[rel="canonical"]');
+    if (!link) {
+      link = document.createElement("link");
+      link.setAttribute("rel", "canonical");
+      document.head.appendChild(link);
+    }
+    link.setAttribute("href", href);
+  }, [openCountryIso, language]);
+
   // Resolve selected country from ISO code
   const selectedCountryRaw = openCountryIso
     ? countries.find((c) => c.isoCode === openCountryIso) || null

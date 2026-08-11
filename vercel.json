@@ -10,6 +10,25 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        { "type": "query", "key": "country", "value": "(?<country>[a-z]{2})" },
+        { "type": "query", "key": "lang", "value": "en" }
+      ],
+      "destination": "/en/country/:country/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        { "type": "query", "key": "country", "value": "(?<country>[a-z]{2})" }
+      ],
+      "destination": "/country/:country/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
