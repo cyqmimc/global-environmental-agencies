@@ -151,6 +151,32 @@ export function activeFilterCount({ search, region, tag, compliance, favOnly }) 
   return n;
 }
 
+/**
+ * The <iframe> + resize-listener snippet for embedding a country's
+ * read-only card (see src/components/EmbedCountryCard.jsx) on a third-party
+ * page. The listener script is what makes the iframe auto-height: the embed
+ * page posts { type: "gegt:embed-resize", iso, height } on every content
+ * size change, and this snippet resizes the specific iframe it belongs to
+ * (matched by id, so multiple embeds on one host page don't clobber
+ * each other).
+ */
+export function embedCodeForCountry(isoCode, language, theme = "light") {
+  const src = `${window.location.origin}/embed/country/${isoCode}?lang=${language}&theme=${theme}`;
+  const id = `gegt-embed-${isoCode}`;
+  return `<iframe src="${src}" id="${id}" title="Environmental data — ${isoCode.toUpperCase()}" style="width:100%;max-width:420px;border:0;display:block;" height="220" loading="lazy"></iframe>
+<script>window.addEventListener("message",function(e){if(e.data&&e.data.type==="gegt:embed-resize"&&e.data.iso==="${isoCode}"){var el=document.getElementById("${id}");if(el)el.style.height=e.data.height+"px";}});</script>`;
+}
+
+/** Copy the embed <iframe> snippet to the clipboard. Returns a Promise<boolean>. */
+export function copyEmbedCode(isoCode, language, theme = "light") {
+  const code = embedCodeForCountry(isoCode, language, theme);
+  if (!navigator.clipboard?.writeText) return Promise.resolve(false);
+  return navigator.clipboard
+    .writeText(code)
+    .then(() => true)
+    .catch(() => false);
+}
+
 /** Copy a deep link to the clipboard. Returns a Promise<boolean>. */
 export function shareCountryLink(isoCode, language) {
   const url = new URL(window.location.origin);

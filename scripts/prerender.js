@@ -21,19 +21,11 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
 import { resolve, dirname, join } from "path";
 import { fileURLToPath } from "url";
 import { NDC_RATING_CONFIG } from "../src/constants.js";
+import { BASE_URL, SITE_NAME_ZH, SITE_NAME_EN } from "./site-config.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const DIST = resolve(ROOT, "dist");
-
-// TODO: replace with the real production domain before deploying — every
-// canonical URL, hreflang tag, sitemap entry, and JSON-LD id below is built
-// from this constant. Getting it wrong is worse than leaving it out, so it's
-// deliberately an obvious placeholder rather than a guess.
-const BASE_URL = "https://REPLACE_WITH_PRODUCTION_DOMAIN.example";
-
-const SITE_NAME_ZH = "全球环境治理观察";
-const SITE_NAME_EN = "Global Environmental Governance Tracker";
 
 function escapeHtml(s) {
   return String(s ?? "").replace(/[&<>"']/g, (c) => ({

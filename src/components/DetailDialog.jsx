@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import RadarChart from "./charts/RadarChart";
 import TrendLineChart from "./charts/TrendLineChart";
-import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG, PROVENANCE, shareCountryLink } from "../constants";
+import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG, PROVENANCE, shareCountryLink, copyEmbedCode } from "../constants";
 import Scorecard from "./Scorecard";
 import DataYearBadge from "./DataYearBadge";
 import useDialogA11y from "../hooks/useDialogA11y";
@@ -20,11 +20,12 @@ const TABS = [
   { key: "data", zh: "数据", en: "Data" },
 ];
 
-export default function DetailDialog({ selectedCountry, language, t, globalAvg, onClose, copied, onCopy, allCountries, siblings, onNavigate, stateWeights, governanceWeights }) {
+export default function DetailDialog({ selectedCountry, language, t, isDark, globalAvg, onClose, copied, onCopy, allCountries, siblings, onNavigate, stateWeights, governanceWeights }) {
   const [tab, setTab] = useState("overview");
   const [pdfLoading, setPdfLoading] = useState(false);
   const [pdfError, setPdfError] = useState(false);
   const [shared, setShared] = useState(false);
+  const [embedCopied, setEmbedCopied] = useState(false);
   const dialogRef = useDialogA11y(true, onClose);
 
   // Compute prev/next within the current filtered list (siblings) by isoCode.
@@ -73,6 +74,14 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
     if (ok) {
       setShared(true);
       setTimeout(() => setShared(false), 2000);
+    }
+  };
+
+  const handleEmbed = async () => {
+    const ok = await copyEmbedCode(selectedCountry.isoCode, language, isDark ? "dark" : "light");
+    if (ok) {
+      setEmbedCopied(true);
+      setTimeout(() => setEmbedCopied(false), 2500);
     }
   };
 
@@ -196,7 +205,7 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
 
               <div className="mb-4">
                 <h4
-                  className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2 cursor-help"
+                  className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2 cursor-help"
                   title={t(
                     "数据为节选，非完整职能清单；未显示某标签不代表该国无相关职能",
                     "Data is a selection, not a complete list of functions; the absence of a tag does not mean the country lacks that function"
@@ -220,7 +229,7 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
 
               {selectedCountry.keyLaws && selectedCountry.keyLaws.length > 0 && (
                 <div className="mb-4">
-                  <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
+                  <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">
                     {t("核心环保法律", "Key Environmental Laws")}
                   </h4>
                   <div className="space-y-1">
@@ -232,7 +241,7 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                         <span className="text-xs text-gray-700">
                           {language === "zh" ? law.nameZh : law.nameEn}
                         </span>
-                        <span className="text-xs text-gray-400 ml-2 shrink-0">
+                        <span className="text-xs text-gray-500 dark:text-gray-400 ml-2 shrink-0">
                           {law.year}
                         </span>
                       </div>
@@ -276,10 +285,20 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                 >
                   {shared ? "✓" : "🔗"}
                 </button>
+                <button
+                  onClick={handleEmbed}
+                  className="px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 dark:text-gray-200 transition-colors cursor-pointer"
+                  title={embedCopied ? t("已复制嵌入代码", "Embed code copied") : t("复制嵌入代码（iframe）", "Copy embed code (iframe)")}
+                  aria-label={embedCopied ? t("已复制嵌入代码", "Embed code copied") : t("复制嵌入代码（iframe）", "Copy embed code (iframe)")}
+                >
+                  {embedCopied ? "✓" : t("嵌入", "Embed")}
+                </button>
                 {selectedCountry.contact?.email && (
                   <a
                     href={`mailto:${selectedCountry.contact.email}`}
                     className="px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium hover:bg-gray-50 transition-colors text-blue-600"
+                    title={t("发送邮件", "Send email")}
+                    aria-label={t("发送邮件", "Send email")}
                   >
                     ✉
                   </a>
@@ -310,7 +329,7 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
 
                 return (
                   <div className="mb-5 bg-gray-50 rounded-xl p-4 border border-gray-200">
-                    <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
+                    <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
                       {t("履约合规全景", "Compliance Overview")}
                     </h4>
                     <div className="space-y-2.5">
@@ -330,7 +349,7 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                           <div className={`h-3 rounded-full ${hasPrice ? (cp.priceUSD >= 50 ? "bg-green-500" : cp.priceUSD >= 20 ? "bg-lime-400" : "bg-yellow-400") : "bg-gray-300"}`}
                             style={{ width: hasPrice ? `${Math.min(100, cp.priceUSD / 1.3)}%` : "3%" }} />
                         </div>
-                        <span className={`text-xs font-medium w-24 text-right ${hasPrice ? "text-green-700" : "text-gray-400"}`}>
+                        <span className={`text-xs font-medium w-24 text-right ${hasPrice ? "text-green-700" : "text-gray-500 dark:text-gray-400"}`}>
                           {hasPrice ? `$${cp.priceUSD}/t` : t("无", "None")}
                         </span>
                       </div>
@@ -684,7 +703,7 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
 
                 <div>
                   <h4
-                    className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2 cursor-help"
+                    className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2 cursor-help"
                     title={t(
                       "重点公约节选，非完整批准清单；未列出的公约不代表该国未加入",
                       "Selected treaties, not a complete ratification record; a treaty not listed does not mean the country hasn't joined it"
@@ -713,7 +732,7 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
               {/* Country profile (population, GDP, derived intensity) — uses new WB fields */}
               {selectedCountry.wb && (selectedCountry.wb.population || selectedCountry.wb.gdp) && (
                 <div className="mb-4 bg-gradient-to-br from-slate-50 to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-xl p-3 border border-gray-200 dark:border-gray-700">
-                  <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
+                  <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">
                     {t("国情概览", "Country Profile")}
                   </h4>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -753,47 +772,47 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                         {selectedCountry.wb?.forestArea?.toFixed(1) ?? "—"}%
                       </p>
                       <p className="text-xs text-green-600 mt-1">{t("森林覆盖率", "Forest Area")}</p>
-                      <p className="text-xs text-gray-400">{t("均值", "Avg")} {globalAvg.forestCoverage}%</p>
-                      {dy.forestArea && <p className="text-xs text-gray-300 mt-0.5">{dy.forestArea}</p>}
+                      <p className="text-xs text-gray-500 dark:text-gray-400">{t("均值", "Avg")} {globalAvg.forestCoverage}%</p>
+                      {dy.forestArea && <p className="text-xs text-gray-500 dark:text-gray-300 mt-0.5">{dy.forestArea}</p>}
                     </div>
                     <div className="bg-emerald-50 rounded-xl p-3 text-center">
                       <p className="text-2xl font-bold text-emerald-700">
                         {selectedCountry.wb?.renewableEnergy?.toFixed(1) ?? "—"}%
                       </p>
                       <p className="text-xs text-emerald-600 mt-1">{t("可再生能源", "Renewable Energy")}</p>
-                      <p className="text-xs text-gray-400">{t("均值", "Avg")} {globalAvg.renewableEnergy}%</p>
-                      {dy.renewableEnergy && <p className="text-xs text-gray-300 mt-0.5">{dy.renewableEnergy}</p>}
+                      <p className="text-xs text-gray-500 dark:text-gray-400">{t("均值", "Avg")} {globalAvg.renewableEnergy}%</p>
+                      {dy.renewableEnergy && <p className="text-xs text-gray-500 dark:text-gray-300 mt-0.5">{dy.renewableEnergy}</p>}
                     </div>
                     <div className="bg-teal-50 rounded-xl p-3 text-center">
                       <p className="text-2xl font-bold text-teal-700">
                         {selectedCountry.wb?.protectedAreas?.toFixed(1) ?? "—"}%
                       </p>
                       <p className="text-xs text-teal-600 mt-1">{t("自然保护区", "Protected Areas")}</p>
-                      <p className="text-xs text-gray-400">{t("均值", "Avg")} {globalAvg.protectedAreas}%</p>
-                      {dy.protectedAreas && <p className="text-xs text-gray-300 mt-0.5">{dy.protectedAreas}</p>}
+                      <p className="text-xs text-gray-500 dark:text-gray-400">{t("均值", "Avg")} {globalAvg.protectedAreas}%</p>
+                      {dy.protectedAreas && <p className="text-xs text-gray-500 dark:text-gray-300 mt-0.5">{dy.protectedAreas}</p>}
                     </div>
                     <div className="bg-amber-50 rounded-xl p-3 text-center">
                       <p className="text-2xl font-bold text-amber-700">
                         {selectedCountry.wb?.pm25?.toFixed(1) ?? "—"}
                       </p>
                       <p className="text-xs text-amber-600 mt-1">PM2.5 (µg/m³)</p>
-                      <p className="text-xs text-gray-400">{t("均值", "Avg")} {globalAvg.pm25}</p>
-                      {dy.pm25 && <p className="text-xs text-gray-300 mt-0.5">{dy.pm25}</p>}
+                      <p className="text-xs text-gray-500 dark:text-gray-400">{t("均值", "Avg")} {globalAvg.pm25}</p>
+                      {dy.pm25 && <p className="text-xs text-gray-500 dark:text-gray-300 mt-0.5">{dy.pm25}</p>}
                     </div>
                     <div className="bg-red-50 rounded-xl p-3 text-center">
                       <p className="text-2xl font-bold text-red-600">
                         {selectedCountry.wb?.co2PerCapita?.toFixed(1) ?? "—"}
                       </p>
                       <p className="text-xs text-red-500 mt-1">{t("人均CO₂ (吨)", "CO₂/Capita (t)")}</p>
-                      <p className="text-xs text-gray-400">{t("均值", "Avg")} {globalAvg.co2PerCapita}</p>
-                      {dy.co2Mt && <p className="text-xs text-gray-300 mt-0.5">{dy.co2Mt}</p>}
+                      <p className="text-xs text-gray-500 dark:text-gray-400">{t("均值", "Avg")} {globalAvg.co2PerCapita}</p>
+                      {dy.co2Mt && <p className="text-xs text-gray-500 dark:text-gray-300 mt-0.5">{dy.co2Mt}</p>}
                     </div>
                     <div className="bg-orange-50 rounded-xl p-3 text-center">
                       <p className="text-2xl font-bold text-orange-600">
                         {selectedCountry.epiScore}
                       </p>
                       <p className="text-xs text-orange-500 mt-1">EPI {t("评分", "Score")}</p>
-                      <p className="text-xs text-gray-400">{t("满分 100", "Max 100")}</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">{t("满分 100", "Max 100")}</p>
                       <DataYearBadge meta={PROVENANCE.epiScore} language={language} t={t} className="justify-center mt-0.5 inline-flex" />
                     </div>
                   </div>
@@ -803,7 +822,7 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
               {/* Trend Charts */}
               {selectedCountry.wb?.history && (
                 <div className="bg-gray-50 rounded-xl p-4 mb-5">
-                  <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
+                  <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
                     {t("历史趋势", "Historical Trends")}
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -835,7 +854,7 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
 
               {selectedCountry.wb && (
                 <div className="bg-gray-50 rounded-xl p-4">
-                  <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
+                  <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
                     {t("环境综合画像", "Environmental Profile")}
                   </h4>
                   <RadarChart

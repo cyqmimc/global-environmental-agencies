@@ -4,6 +4,7 @@ import useCountryData from "./hooks/useCountryData";
 import useFilters from "./hooks/useFilters";
 import useFavorites from "./hooks/useFavorites";
 import useDarkMode from "./hooks/useDarkMode";
+import useColorScheme from "./hooks/useColorScheme";
 import {
   RESPONSIBILITY_LABELS,
   getUrlParams,
@@ -69,6 +70,8 @@ export default function GlobalEnvironmentalAgencies() {
   }, []);
 
   const { theme, toggle: toggleTheme } = useDarkMode();
+  const { scheme: colorScheme, toggle: toggleColorScheme, isClassic } = useColorScheme();
+  const isDark = theme === "dark";
   const { countries, wbMeta, globalAvg, loadDetail, loadAllDetails, historyLoaded, status, error, retry } = useCountryData();
   const { favorites, toggle: toggleFav, isFav } = useFavorites();
   // Note: useCountryData prefetches the detail bundle on idle so rankings
@@ -246,6 +249,15 @@ export default function GlobalEnvironmentalAgencies() {
           </div>
           <div className="flex items-center gap-2">
             <button
+              onClick={toggleColorScheme}
+              className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-lg px-3 py-2 transition-colors font-medium cursor-pointer text-lg"
+              title={isClassic ? t("配色：经典红绿（点击改用色觉友好配色）", "Color scheme: classic red-green (click for CVD-safe)") : t("配色：色觉友好（点击改用经典红绿）", "Color scheme: CVD-safe (click for classic red-green)")}
+              aria-label={isClassic ? t("配色：经典红绿（点击改用色觉友好配色）", "Color scheme: classic red-green (click for CVD-safe)") : t("配色：色觉友好（点击改用经典红绿）", "Color scheme: CVD-safe (click for classic red-green)")}
+              aria-pressed={isClassic}
+            >
+              🎨
+            </button>
+            <button
               onClick={toggleTheme}
               className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-lg px-3 py-2 transition-colors font-medium cursor-pointer text-lg"
               title={t("切换主题", "Toggle theme")}
@@ -281,7 +293,7 @@ export default function GlobalEnvironmentalAgencies() {
             )}
           </p>
           {error?.message && (
-            <p className="text-xs text-gray-400 dark:text-gray-500 mb-6 font-mono">{error.message}</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-6 font-mono">{error.message}</p>
           )}
           <button
             onClick={retry}
@@ -347,6 +359,15 @@ export default function GlobalEnvironmentalAgencies() {
               </p>
             </div>
             <div className="flex items-center gap-2">
+              <button
+                onClick={toggleColorScheme}
+                className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-lg px-3 py-2 transition-colors font-medium cursor-pointer text-lg"
+                title={isClassic ? t("配色：经典红绿（点击改用色觉友好配色）", "Color scheme: classic red-green (click for CVD-safe)") : t("配色：色觉友好（点击改用经典红绿）", "Color scheme: CVD-safe (click for classic red-green)")}
+                aria-label={isClassic ? t("配色：经典红绿（点击改用色觉友好配色）", "Color scheme: classic red-green (click for CVD-safe)") : t("配色：色觉友好（点击改用经典红绿）", "Color scheme: CVD-safe (click for classic red-green)")}
+                aria-pressed={isClassic}
+              >
+                🎨
+              </button>
               <button
                 onClick={toggleTheme}
                 className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-lg px-3 py-2 transition-colors font-medium cursor-pointer text-lg"
@@ -442,6 +463,8 @@ export default function GlobalEnvironmentalAgencies() {
             countries={countries}
             language={language}
             onCountryClick={openCountryDetail}
+            colorScheme={colorScheme}
+            isDark={isDark}
           />
         )}
 
@@ -449,7 +472,7 @@ export default function GlobalEnvironmentalAgencies() {
         <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm p-4 mb-6 border border-transparent dark:border-gray-800">
           <div className="flex flex-wrap gap-3 items-center">
             <div className="relative flex-1 min-w-[200px]">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">🔍</span>
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400">🔍</span>
               <input
                 type="text"
                 placeholder={t("搜索国家或环境部门...", "Search by country or agency...")}
@@ -497,6 +520,7 @@ export default function GlobalEnvironmentalAgencies() {
                   : "bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-40 disabled:cursor-not-allowed"
               }`}
               title={t("仅显示关注国家", "Show favorites only")}
+              aria-label={t("仅显示关注国家", "Show favorites only")}
               aria-pressed={filters.favOnly}
             >
               ★ {favorites.length > 0 && <span className="text-xs">{favorites.length}</span>}
@@ -514,7 +538,7 @@ export default function GlobalEnvironmentalAgencies() {
 
           {/* Compliance Filter */}
           <div className="flex flex-wrap gap-1.5 mt-3">
-            <span className="text-xs text-gray-400 leading-6 mr-1">{t("履约", "Compliance")}</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 leading-6 mr-1">{t("履约", "Compliance")}</span>
             {COMPLIANCE_FILTERS.map((f) => (
               <button
                 key={f.key}
@@ -532,7 +556,7 @@ export default function GlobalEnvironmentalAgencies() {
           {/* Responsibility Filter */}
           <div className="flex flex-wrap gap-1.5 mt-2">
             <span
-              className="text-xs text-gray-400 leading-6 mr-1 cursor-help"
+              className="text-xs text-gray-500 dark:text-gray-400 leading-6 mr-1 cursor-help"
               title={t(
                 "数据为节选，非完整职能清单；未显示某标签不代表该国无相关职能",
                 "Data is a selection, not a complete list of functions; the absence of a tag does not mean the country lacks that function"
@@ -558,7 +582,7 @@ export default function GlobalEnvironmentalAgencies() {
 
           {/* Results count + Export */}
           <div className="flex items-center justify-between mt-3">
-            <p className="text-sm text-gray-400 dark:text-gray-500">
+            <p className="text-sm text-gray-600 dark:text-gray-400" aria-live="polite">
               {t(`共 ${filters.filteredCountries.length} 个结果`, `${filters.filteredCountries.length} results found`)}
             </p>
             {filters.filteredCountries.length > 0 && (
@@ -616,7 +640,7 @@ export default function GlobalEnvironmentalAgencies() {
           ))}
         </div>
 
-        <Suspense fallback={<div className="text-center py-20 text-gray-400">Loading...</div>}>
+        <Suspense fallback={<div className="text-center py-20 text-gray-500 dark:text-gray-400">Loading...</div>}>
         <ErrorBoundary language={language} onReset={() => setViewMode("cards")}>
           {viewMode === "equity" ? (
             <ClimateEquityView
@@ -639,7 +663,7 @@ export default function GlobalEnvironmentalAgencies() {
           ) : (
             <>
               {filters.paginatedCountries.length === 0 ? (
-                <div className="text-center py-20 text-gray-400">
+                <div className="text-center py-20 text-gray-500 dark:text-gray-400">
                   <p className="text-5xl mb-4">🔍</p>
                   <p className="text-lg">{t("没有找到匹配的结果", "No results found")}</p>
                 </div>
@@ -658,6 +682,8 @@ export default function GlobalEnvironmentalAgencies() {
                       onToggleFav={() => toggleFav(item.isoCode)}
                       yearLabel={yearLabel}
                       historyLoaded={historyLoaded}
+                      colorScheme={colorScheme}
+                      isDark={isDark}
                     />
                   ))}
                 </div>
@@ -709,6 +735,7 @@ export default function GlobalEnvironmentalAgencies() {
               selectedCountry={selectedCountry}
               language={language}
               t={t}
+              isDark={isDark}
               globalAvg={globalAvg}
               onClose={() => { setOpenCountryIso(null); setCopied(false); }}
               copied={copied}

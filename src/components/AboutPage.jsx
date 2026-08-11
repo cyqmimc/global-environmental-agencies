@@ -116,6 +116,41 @@ export default function AboutPage({ language, onClose }) {
             </div>
           </section>
 
+          {/* Public API & Embed */}
+          <section>
+            <h4 className="text-lg font-semibold text-gray-800 mb-2">
+              {t("公共 API 与嵌入式卡片", "Public API & Embeds")}
+            </h4>
+            <p className="text-sm text-gray-600 leading-relaxed mb-2">
+              {t(
+                "本项目的数据可通过静态 JSON API 引用，零后端、无需申请密钥：",
+                "This project's data is available through a static JSON API — no backend, no key required:"
+              )}
+            </p>
+            <ul className="text-sm text-gray-600 leading-relaxed mb-3 list-disc pl-5 space-y-1 font-mono">
+              <li>GET /api/v1/countries.json</li>
+              <li>GET /api/v1/country/&lt;iso&gt;.json</li>
+              <li>GET /api/v1/rankings.json</li>
+            </ul>
+            <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-3">
+              <p className="text-sm text-amber-900 font-medium mb-1">
+                ⚠️ {t("许可证不是单一的", "Licensing is not one-size-fits-all")}
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                {t(
+                  "每条 API 响应的 _meta.license.fields 精确列出每个字段对应的来源与许可：本项目自行计算/策展的字段为 CC BY 4.0；epiScore 来自 Yale EPI，为 CC BY-NC-SA 4.0（仅限非商业用途，需以相同许可再分发）；ndcRating 来自 Climate Action Tracker，未开放许可，批量转载或商业使用前建议先联系对方；世界银行各项指标为 CC BY 4.0。批量引用前请先看清楚具体字段的许可证，不要整体当作同一许可对待。",
+                  "Every API response's _meta.license.fields lists exactly which source and license applies to each field: this project's own computed/curated fields are CC BY 4.0; epiScore is Yale EPI data under CC BY-NC-SA 4.0 (non-commercial only, share-alike); ndcRating is a Climate Action Tracker assessment with no open license — contact them before bulk reuse; World Bank indicators are CC BY 4.0. Check the field-level license before bulk-reusing anything — don't assume one blanket license covers the whole response."
+                )}
+              </p>
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed mb-2">
+              {t(
+                "每个国家详情页的「嵌入」按钮会复制一段无外框、自适应高度的只读卡片 iframe 代码（含数据来源与许可证提示），可直接粘贴到第三方网页；支持 ?lang= 与 ?theme= 参数。",
+                "Each country's detail page has an \"Embed\" button that copies a frameless, auto-height, read-only <iframe> snippet (with a data-source/license notice built in) ready to paste into a third-party page; supports ?lang= and ?theme= params."
+              )}
+            </p>
+          </section>
+
           {/* Scoring Methodology */}
           <section>
             <h4 className="text-lg font-semibold text-gray-800 mb-2">
