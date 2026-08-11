@@ -12,6 +12,7 @@ import {
   activeFilterCount,
 } from "./constants";
 import { formatCarbonIntensity } from "./utils/derived";
+import { decodeWeights, encodeWeights, DEFAULT_STATE_WEIGHTS, DEFAULT_GOVERNANCE_WEIGHTS } from "./utils/score";
 import CountryCard from "./components/CountryCard";
 import CompareBar from "./components/CompareBar";
 import Pagination from "./components/Pagination";
@@ -57,6 +58,13 @@ export default function GlobalEnvironmentalAgencies() {
   const [viewMode, setViewMode] = useState(urlParams.view || "cards");
   const [copied, setCopied] = useState(false);
   const [regionalPdfLoading, setRegionalPdfLoading] = useState(false);
+  const initialWeights = decodeWeights(urlParams.w);
+  const [stateWeights, setStateWeights] = useState(initialWeights.stateWeights);
+  const [governanceWeights, setGovernanceWeights] = useState(initialWeights.governanceWeights);
+  const handleWeightsChange = useCallback((newState, newGovernance) => {
+    setStateWeights(newState);
+    setGovernanceWeights(newGovernance);
+  }, []);
 
   const { theme, toggle: toggleTheme } = useDarkMode();
   const { countries, wbMeta, globalAvg, loadDetail, loadAllDetails } = useCountryData();
@@ -77,6 +85,9 @@ export default function GlobalEnvironmentalAgencies() {
   );
 
   // Sync state to URL
+  const weightsAreDefault =
+    JSON.stringify(stateWeights) === JSON.stringify(DEFAULT_STATE_WEIGHTS) &&
+    JSON.stringify(governanceWeights) === JSON.stringify(DEFAULT_GOVERNANCE_WEIGHTS);
   useEffect(() => {
     setUrlParams({
       search: filters.search,
@@ -89,11 +100,13 @@ export default function GlobalEnvironmentalAgencies() {
       country: openCountryIso || "",
       favOnly: filters.favOnly,
       view: viewMode,
+      w: weightsAreDefault ? "" : encodeWeights(stateWeights, governanceWeights),
     });
   }, [
     filters.search, filters.regionFilter, filters.tagFilter,
     filters.complianceFilter, filters.sortOrder, filters.page,
     filters.favOnly, language, openCountryIso, viewMode,
+    stateWeights, governanceWeights, weightsAreDefault,
   ]);
 
   // Resolve selected country from ISO code
@@ -171,6 +184,9 @@ export default function GlobalEnvironmentalAgencies() {
           : `${exportItems.length} ${isZh ? "个国家" : "countries"}`,
         globalAvg,
         language,
+        allCountries: enrichedCountries || countries,
+        stateWeights,
+        governanceWeights,
       });
     } catch (e) {
       console.error("Regional PDF generation failed:", e);
@@ -479,6 +495,9 @@ export default function GlobalEnvironmentalAgencies() {
               language={language}
               t={t}
               onCountryClick={openCountryDetail}
+              stateWeights={stateWeights}
+              governanceWeights={governanceWeights}
+              onWeightsChange={handleWeightsChange}
             />
           ) : (
             <>
@@ -555,6 +574,8 @@ export default function GlobalEnvironmentalAgencies() {
             allCountries={countries}
             siblings={filters.filteredCountries}
             onNavigate={(c) => setOpenCountryIso(c.isoCode)}
+            stateWeights={stateWeights}
+            governanceWeights={governanceWeights}
           />
         )}
         {showAbout && (

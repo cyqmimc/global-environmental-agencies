@@ -2,7 +2,18 @@
  * Generate a professional country environmental report PDF.
  * Uses jsPDF + svg2pdf.js for English; canvas-based CJK rendering for Chinese.
  */
-import { computeCompositeScore } from "../components/RankingsView";
+import {
+  computeStateIndices,
+  computeGovernanceIndices,
+  computePercentile,
+  percentileToGrade,
+  GRADE_COLORS_HEX,
+  STATE_DIMENSIONS,
+  GOVERNANCE_DIMENSIONS,
+  DEFAULT_STATE_WEIGHTS,
+  DEFAULT_GOVERNANCE_WEIGHTS,
+} from "./score";
+import { formatCarbonIntensity } from "./derived";
 import { TREATY_LABELS, NDC_RATING_CONFIG } from "../constants";
 import { addZhText, countZhLines } from "./chineseTextToPDF";
 
@@ -131,55 +142,42 @@ function createTrendSVG(datasets, yUnit = "", width = 240, height = 100) {
 }
 
 // --- Scorecard logic ---
+// Percentile/grade math and the State/Governance index computation itself
+// live in ./score.js (shared with Scorecard.jsx and RankingsView.jsx). Only
+// PDF-specific display formatting stays here.
 
-function computePercentile(value, allValues) {
-  if (!allValues.length) return 50;
-  return (allValues.filter(v => v < value).length / allValues.length) * 100;
+function formatStateRaw(key, country) {
+  const dim = STATE_DIMENSIONS.find((d) => d.key === key);
+  const value = dim.getRaw(country);
+  if (value == null) return "—";
+  if (key === "epi") return `${value}`;
+  if (key === "air") return `${value.toFixed(1)} µg/m³`;
+  return `${value.toFixed(1)}%`;
 }
 
-function percentileToGrade(p) {
-  if (p >= 95) return "A+"; if (p >= 85) return "A"; if (p >= 70) return "B+";
-  if (p >= 50) return "B"; if (p >= 30) return "C"; if (p >= 15) return "D"; return "F";
-}
-
-const GRADE_COLORS = {
-  "A+": "#166534", A: "#16a34a", "B+": "#84cc16", B: "#eab308",
-  C: "#f97316", D: "#dc2626", F: "#7f1d1d"
-};
-
-function getDimValue(c, dim) {
-  switch (dim) {
-    case "forest": return Math.min(c.wb?.forestArea ?? 0, 100);
-    case "renewable": return Math.min(c.wb?.renewableEnergy ?? 0, 100);
-    case "protected": return Math.min(c.wb?.protectedAreas ?? 0, 100);
-    case "air": return 100 - Math.min(c.wb?.pm25 ?? 100, 100);
-    case "co2": return 100 - Math.min((c.wb?.co2PerCapita ?? 0) * 5, 100);
-    case "epi": return c.epiScore ?? 0;
-    default: return 0;
+function formatGovernanceRaw(key, country) {
+  switch (key) {
+    case "ndcRating": return country.parisAgreement?.ndcRating ?? "—";
+    case "carbonPricing":
+      return country.carbonPricing?.priceUSD != null
+        ? `$${country.carbonPricing.priceUSD}x${country.carbonPricing.coveragePercent ?? 0}%`
+        : "—";
+    case "btr": return country.reportingStatus?.btrSubmitted == null ? "—" : country.reportingStatus.btrSubmitted ? "Y" : "N";
+    case "kigali": return country.montrealProtocol?.kigaliAmendment == null ? "—" : country.montrealProtocol.kigaliAmendment ? "Y" : "N";
+    case "ndc3": return country.parisAgreement?.ndc3Submitted == null ? "—" : country.parisAgreement.ndc3Submitted ? "Y" : "N";
+    case "ldn": return country.desertification?.ldnTargetSet == null ? "—" : country.desertification.ldnTargetSet ? "Y" : "N";
+    case "renewable": return country.wb?.renewableEnergy != null ? `${country.wb.renewableEnergy.toFixed(1)}%` : "—";
+    case "carbonIntensity": {
+      const dim = GOVERNANCE_DIMENSIONS.find((d) => d.key === "carbonIntensity");
+      return formatCarbonIntensity(dim.getRaw(country));
+    }
+    default: return "—";
   }
 }
 
-const DIMS_EN = [
-  { key: "epi", label: "EPI Score" },
-  { key: "renewable", label: "Renewable Energy" },
-  { key: "forest", label: "Forest Coverage" },
-  { key: "protected", label: "Protected Areas" },
-  { key: "air", label: "Air Quality" },
-  { key: "co2", label: "CO₂ Efficiency" },
-];
-
-const DIMS_ZH = [
-  { key: "epi", label: "EPI 分数" },
-  { key: "renewable", label: "可再生能源" },
-  { key: "forest", label: "森林覆盖" },
-  { key: "protected", label: "自然保护区" },
-  { key: "air", label: "空气质量" },
-  { key: "co2", label: "碳排效率" },
-];
-
 // --- Main PDF Generator ---
 
-export async function generateCountryPDF(country, language, globalAvg, allCountries) {
+export async function generateCountryPDF(country, language, globalAvg, allCountries, stateWeights = DEFAULT_STATE_WEIGHTS, governanceWeights = DEFAULT_GOVERNANCE_WEIGHTS) {
   const [{ jsPDF }, { svg2pdf }] = await Promise.all([
     import("jspdf"),
     import("svg2pdf.js"),
@@ -299,85 +297,83 @@ export async function generateCountryPDF(country, language, globalAvg, allCountr
   y = 40;
   drawFooter();
 
-  // --- Scorecard ---
+  // --- Scorecard: two independent indices (State = endowment, Governance =
+  // policy performance) — see src/utils/score.js for why these are kept
+  // separate rather than blended into one number.
   sectionTitle(t("环境成绩单", "Environmental Scorecard"));
 
-  const allComposite = allCountries.map(c => computeCompositeScore(c));
-  const myComposite = computeCompositeScore(country);
-  const overallPct = computePercentile(myComposite, allComposite);
-  const overallGrade = percentileToGrade(overallPct);
-  const gradeColor = GRADE_COLORS[overallGrade] || "#6b7280";
+  const stateResults = computeStateIndices(allCountries, stateWeights);
+  const governanceResults = computeGovernanceIndices(allCountries, governanceWeights);
 
-  // Grade circle
-  doc.setFillColor(gradeColor);
-  doc.circle(ML + 8, y + 5, 7, "F");
-  doc.setTextColor(255, 255, 255);
-  doc.setFontSize(14);
-  doc.setFont("helvetica", "bold");
-  doc.text(overallGrade, ML + 8, y + 6.5, { align: "center" });
-
-  const scoreLabel = t(`综合评分: ${myComposite}/100`, `Composite Score: ${myComposite}/100`);
-  const rankLabel = t(
-    `在 ${allCountries.length} 个国家中排名前 ${Math.round(100 - overallPct)}%`,
-    `Top ${Math.round(overallPct)}% of ${allCountries.length} countries`
-  );
-
-  if (isZh) {
-    addZhText(doc, scoreLabel, ML + 20, y + 3, { fontSize: 10, color: DARK, bold: true });
-    addZhText(doc, rankLabel, ML + 20, y + 8, { fontSize: 8, color: GRAY });
-  } else {
-    doc.setTextColor(...DARK);
-    doc.setFontSize(10);
-    doc.text(scoreLabel, ML + 20, y + 3);
-    doc.setFontSize(8);
-    doc.setTextColor(...GRAY);
-    doc.text(rankLabel, ML + 20, y + 8);
-  }
-
-  y += 15;
-
-  // Dimension bars
-  const DIMS = isZh ? DIMS_ZH : DIMS_EN;
-  DIMS.forEach(dim => {
-    const allVals = allCountries.map(c => getDimValue(c, dim.key));
-    const myVal = getDimValue(country, dim.key);
-    const pct = computePercentile(myVal, allVals);
+  function drawIndexBlock(title, results, dimensions, formatRaw) {
+    checkPageBreak(15 + dimensions.length * 6 + 6);
+    const myResult = results.get(country);
+    const allScores = allCountries.map(c => results.get(c)?.score).filter(v => v != null);
+    const pct = myResult?.score != null ? computePercentile(myResult.score, allScores) : null;
     const grade = percentileToGrade(pct);
-    const gc = GRADE_COLORS[grade] || "#6b7280";
+    const gradeColor = grade ? (GRADE_COLORS_HEX[grade] || "#6b7280") : "#9ca3af";
+
+    if (isZh) addZhText(doc, title, ML, y, { fontSize: 9, color: GREEN, bold: true });
+    else { doc.setFontSize(9); doc.setTextColor(...GREEN); doc.setFont("helvetica", "bold"); doc.text(title, ML, y); }
+    y += 6;
+
+    doc.setFillColor(gradeColor);
+    doc.circle(ML + 8, y + 5, 7, "F");
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(14);
+    doc.setFont("helvetica", "bold");
+    doc.text(grade ?? "—", ML + 8, y + 6.5, { align: "center" });
+
+    const scoreLabel = myResult?.score != null
+      ? t(`评分: ${myResult.score}/100`, `Score: ${myResult.score}/100`)
+      : t("数据不足（有效维度 <4）", "Insufficient data (<4 valid dimensions)");
+    const rankLabel = pct != null
+      ? t(`在 ${allScores.length} 个有效国家中排名前 ${Math.round(100 - pct)}%`, `Top ${Math.round(pct)}% of ${allScores.length} scored countries`)
+      : "";
 
     if (isZh) {
-      addZhText(doc, dim.label, ML, y + 3, { fontSize: 7.5, color: GRAY });
+      addZhText(doc, scoreLabel, ML + 20, y + 3, { fontSize: 10, color: DARK, bold: true });
+      if (rankLabel) addZhText(doc, rankLabel, ML + 20, y + 8, { fontSize: 8, color: GRAY });
     } else {
-      doc.setFontSize(7.5);
-      doc.setTextColor(...GRAY);
-      doc.setFont("helvetica", "normal");
-      doc.text(dim.label, ML, y + 3);
+      doc.setTextColor(...DARK);
+      doc.setFontSize(10);
+      doc.text(scoreLabel, ML + 20, y + 3);
+      if (rankLabel) { doc.setFontSize(8); doc.setTextColor(...GRAY); doc.text(rankLabel, ML + 20, y + 8); }
     }
 
-    doc.setFillColor(gc);
-    doc.roundedRect(ML + 35, y, 8, 4.5, 1, 1, "F");
-    doc.setTextColor(255, 255, 255);
-    doc.setFontSize(6.5);
-    doc.setFont("helvetica", "bold");
-    doc.text(grade, ML + 39, y + 3.2, { align: "center" });
+    y += 15;
 
-    const barX = ML + 46, barW = CW - 60;
-    doc.setFillColor(...LIGHT);
-    doc.roundedRect(barX, y + 0.5, barW, 3.5, 1, 1, "F");
-    const fillW = Math.max(1, barW * pct / 100);
-    const barColor = pct >= 70 ? [34, 197, 94] : pct >= 40 ? [234, 179, 8] : [239, 68, 68];
-    doc.setFillColor(...barColor);
-    doc.roundedRect(barX, y + 0.5, fillW, 3.5, 1, 1, "F");
+    dimensions.forEach(dim => {
+      const dimScore = myResult?.dimScores?.[dim.key];
+      const dimGrade = dimScore != null ? percentileToGrade(dimScore) : null;
+      const gc = dimGrade ? (GRADE_COLORS_HEX[dimGrade] || "#6b7280") : "#d1d5db";
+      const label = isZh ? dim.zh : dim.en;
 
-    doc.setTextColor(...GRAY);
-    doc.setFontSize(7);
-    doc.setFont("helvetica", "normal");
-    doc.text(`${Math.round(pct)}%`, ML + CW, y + 3, { align: "right" });
+      if (isZh) addZhText(doc, label, ML, y + 3, { fontSize: 7.5, color: GRAY });
+      else { doc.setFontSize(7.5); doc.setTextColor(...GRAY); doc.setFont("helvetica", "normal"); doc.text(label, ML, y + 3); }
 
-    y += 6;
-  });
+      const barX = ML + 35, barW = CW - 55;
+      doc.setFillColor(...LIGHT);
+      doc.roundedRect(barX, y + 0.5, barW, 3.5, 1, 1, "F");
+      if (dimScore != null) {
+        const fillW = Math.max(1, barW * dimScore / 100);
+        doc.setFillColor(gc);
+        doc.roundedRect(barX, y + 0.5, fillW, 3.5, 1, 1, "F");
+      }
 
-  y += 4;
+      doc.setTextColor(...GRAY);
+      doc.setFontSize(7);
+      doc.setFont("helvetica", "normal");
+      doc.text(formatRaw(dim.key, country), ML + CW, y + 3, { align: "right" });
+
+      y += 6;
+    });
+
+    y += 4;
+  }
+
+  drawIndexBlock(t("状态指数（禀赋）", "State Index (Endowment)"), stateResults, STATE_DIMENSIONS, formatStateRaw);
+  drawIndexBlock(t("治理指数（绩效）", "Governance Index (Performance)"), governanceResults, GOVERNANCE_DIMENSIONS, (key) => formatGovernanceRaw(key, country));
 
   // --- Key Metrics Grid ---
   sectionTitle(t("关键指标", "Key Indicators"));

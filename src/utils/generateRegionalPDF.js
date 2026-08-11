@@ -3,7 +3,12 @@
  * Supports both English and Chinese output based on options.language.
  * Chinese text is rendered via canvas (system CJK fonts) to avoid font embedding.
  */
-import { computeCompositeScore } from "../components/RankingsView";
+import {
+  computeStateIndices,
+  computeGovernanceIndices,
+  DEFAULT_STATE_WEIGHTS,
+  DEFAULT_GOVERNANCE_WEIGHTS,
+} from "./score";
 import { NDC_RATING_CONFIG } from "../constants";
 import { addZhText } from "./chineseTextToPDF";
 
@@ -100,9 +105,31 @@ export async function generateRegionalPDF(countries, options = {}) {
   const scopeName = options.regionName || t("筛选结果", "Filtered Countries");
   const subtitle = options.filterSummary || `${items.length} ${t("个国家", "countries")}`;
   const date = new Date().toISOString().slice(0, 10);
-  const sorted = [...items].sort((a, b) => computeCompositeScore(b) - computeCompositeScore(a));
+
+  // Normalization must be relative to the full dataset (not just the
+  // filtered/exported subset), so scores stay comparable across reports —
+  // see src/utils/score.js.
+  const normalizationSet = options.allCountries || items;
+  const stateWeights = options.stateWeights || DEFAULT_STATE_WEIGHTS;
+  const governanceWeights = options.governanceWeights || DEFAULT_GOVERNANCE_WEIGHTS;
+  const stateResults = computeStateIndices(normalizationSet, stateWeights);
+  const governanceResults = computeGovernanceIndices(normalizationSet, governanceWeights);
+  const stateScore = (c) => stateResults.get(c)?.score ?? null;
+  const govScore = (c) => governanceResults.get(c)?.score ?? null;
+
+  // Governance is the project's headline differentiator (who is *doing*
+  // something, not who was born with a rainforest), so it drives the
+  // default ranking; null (insufficient-data) scores sink to the bottom.
+  const sorted = [...items].sort((a, b) => {
+    const va = govScore(a), vb = govScore(b);
+    if (va == null && vb == null) return 0;
+    if (va == null) return 1;
+    if (vb == null) return -1;
+    return vb - va;
+  });
   const regionalAvg = {
-    composite: avg(items, computeCompositeScore),
+    state: avg(items, stateScore),
+    governance: avg(items, govScore),
     epi: avg(items, (c) => c.epiScore),
     renewable: avg(items, (c) => c.wb?.renewableEnergy),
     forest: avg(items, (c) => c.wb?.forestArea),
@@ -166,7 +193,11 @@ export async function generateRegionalPDF(countries, options = {}) {
     doc.setTextColor(...DARK);
     let x = ML;
     headers.forEach((h, i) => {
-      doc.text(h, x + 1.5, y + 4.5);
+      if (isZh && /[一-鿿]/.test(String(h))) {
+        addZhText(doc, String(h), x + 1.5, y + 4.5, { fontSize: 7, color: DARK, bold: true });
+      } else {
+        doc.text(h, x + 1.5, y + 4.5);
+      }
       x += widths[i];
     });
     y += rowH;
@@ -182,8 +213,8 @@ export async function generateRegionalPDF(countries, options = {}) {
       doc.setTextColor(...DARK);
       x = ML;
       row.forEach((cell, i) => {
-        // Country name column (index 1) may need Chinese rendering
-        if (isZh && i === 1 && /[一-鿿]/.test(String(cell))) {
+        // Any column may contain Chinese text (country names, NDC labels, "N/A")
+        if (isZh && /[一-鿿]/.test(String(cell))) {
           addZhText(doc, String(cell), x + 1.5, y + 4.5, { fontSize: 7, color: DARK });
         } else {
           const lines = splitText(doc, cell, widths[i] - 3);
@@ -223,7 +254,7 @@ export async function generateRegionalPDF(countries, options = {}) {
 
   y = 105;
   metricCard(t("国家数量", "Countries"), items.length, ML, y, 40);
-  metricCard(t("平均综合分", "Avg Composite"), fmt(regionalAvg.composite, 1), ML + 47, y, 40);
+  metricCard(t("平均治理分", "Avg Governance"), fmt(regionalAvg.governance, 1), ML + 47, y, 40);
   metricCard(t("平均EPI", "Avg EPI"), fmt(regionalAvg.epi, 1), ML + 94, y, 40);
   metricCard("Avg PM2.5", fmt(regionalAvg.pm25, 1), ML + 141, y, 39);
   y += 32;
@@ -297,20 +328,20 @@ export async function generateRegionalPDF(countries, options = {}) {
   });
   y += 4;
 
-  sectionTitle(t("国家排名", "Country Ranking"));
+  sectionTitle(t("国家排名（按治理指数）", "Country Ranking (by Governance)"));
   const rankRows = sorted.slice(0, 25).map((c, idx) => [
     String(idx + 1),
     countryName(c),
-    fmt(computeCompositeScore(c), 1),
+    stateScore(c) != null ? fmt(stateScore(c), 1) : t("不足", "N/A"),
+    govScore(c) != null ? fmt(govScore(c), 1) : t("不足", "N/A"),
     fmt(c.epiScore, 1),
-    fmt(c.wb?.renewableEnergy, 1, "%"),
     fmt(c.wb?.pm25, 1),
     ndcLabel(c, isZh),
   ]);
   smallTable(
-    ["#", t("国家", "Country"), t("评分", "Score"), "EPI", t("可再生", "Renew"), "PM2.5", "NDC"],
+    ["#", t("国家", "Country"), t("状态", "State"), t("治理", "Gov"), "EPI", "PM2.5", "NDC"],
     rankRows,
-    [10, 45, 20, 18, 22, 20, 45]
+    [8, 40, 18, 18, 16, 18, 42]
   );
 
   sectionTitle(t("政策与公约概况", "Policy And Treaty Summary"));
@@ -345,7 +376,8 @@ export async function generateRegionalPDF(countries, options = {}) {
   sectionTitle(t("国家档案", "Country Profiles"));
   sorted.forEach((c) => {
     checkPageBreak(31);
-    const score = computeCompositeScore(c);
+    const sState = stateScore(c);
+    const sGov = govScore(c);
     doc.setFillColor(255, 255, 255);
     doc.setDrawColor(...BORDER);
     doc.roundedRect(ML, y, CW, 25, 2, 2, "D");
@@ -370,10 +402,24 @@ export async function generateRegionalPDF(countries, options = {}) {
     doc.setFont("helvetica", "normal");
     doc.setFontSize(7);
     doc.setTextColor(...DARK);
-    doc.text(`${t("评分", "Score")} ${fmt(score, 1)}`, ML + 82, y + 5);
-    drawBar(doc, ML + 102, y + 2.5, 38, score, barColor(score));
+    const stateLine = `${t("状态", "State")} ${sState != null ? fmt(sState, 1) : t("不足", "N/A")}`;
+    const govLine = `${t("治理", "Gov")} ${sGov != null ? fmt(sGov, 1) : t("不足", "N/A")}`;
+    if (isZh) {
+      addZhText(doc, stateLine, ML + 82, y + 4, { fontSize: 7, color: DARK });
+    } else {
+      doc.text(stateLine, ML + 82, y + 4);
+    }
+    if (sState != null) drawBar(doc, ML + 102, y + 1.7, 38, sState, barColor(sState));
+    if (isZh) {
+      addZhText(doc, govLine, ML + 82, y + 8.5, { fontSize: 7, color: DARK });
+    } else {
+      doc.text(govLine, ML + 82, y + 8.5);
+    }
+    if (sGov != null) drawBar(doc, ML + 102, y + 6.2, 38, sGov, barColor(sGov));
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(7);
     doc.setTextColor(...GRAY);
-    doc.text(`EPI ${fmt(c.epiScore, 1)} | ${t("可再生", "Renew")} ${fmt(c.wb?.renewableEnergy, 1, "%")} | PM2.5 ${fmt(c.wb?.pm25, 1)} | CO₂/cap ${fmt(c.wb?.co2PerCapita, 1)}`, ML + 82, y + 11);
+    doc.text(`EPI ${fmt(c.epiScore, 1)} | ${t("可再生", "Renew")} ${fmt(c.wb?.renewableEnergy, 1, "%")} | PM2.5 ${fmt(c.wb?.pm25, 1)} | CO₂/cap ${fmt(c.wb?.co2PerCapita, 1)}`, ML + 82, y + 13);
     const ndcStr = ndcLabel(c, isZh);
     const priceStr = c.carbonPricing?.priceUSD != null ? `$${c.carbonPricing.priceUSD}/${t("吨","t")}` : t("无","None");
     if (isZh) {

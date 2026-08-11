@@ -55,8 +55,8 @@ export default function AboutPage({ language, onClose }) {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
               {[
                 { icon: "🗺️", zh: "80 国交互式世界地图（4 种指标着色）", en: "Interactive world map for 80 countries (4 metric views)" },
-                { icon: "📊", zh: "排行榜：6 维加权综合评分排名", en: "Rankings: 6-dimension weighted composite scoring" },
-                { icon: "🏆", zh: "国家成绩单：A+ 到 F 等级评分", en: "Country Scorecard: A+ to F grade ratings" },
+                { icon: "📊", zh: "排行榜：状态指数（禀赋）与治理指数（绩效）双榜，权重可调", en: "Rankings: separate State (endowment) and Governance (performance) indices, adjustable weights" },
+                { icon: "🏆", zh: "国家成绩单：两项指数各自的 A+ 到 F 等级评分", en: "Country Scorecard: A+ to F grades for each index" },
                 { icon: "📋", zh: "五行合规仪表盘：一眼全览履约状况", en: "5-row compliance dashboard at a glance" },
                 { icon: "🌡️", zh: "巴黎协定 NDC 评级 + 提交时间线", en: "Paris Agreement NDC ratings + submission timeline" },
                 { icon: "💰", zh: "碳定价机制追踪（ETS/碳税/碳价）", en: "Carbon pricing mechanism tracking (ETS/tax/price)" },
@@ -121,29 +121,49 @@ export default function AboutPage({ language, onClose }) {
             <h4 className="text-lg font-semibold text-gray-800 mb-2">
               {t("综合评分方法论", "Composite Scoring Methodology")}
             </h4>
-            <p className="text-sm text-gray-600 leading-relaxed mb-3">
+            <p className="text-sm text-gray-600 leading-relaxed mb-2">
               {t(
-                "排行榜和国家成绩单使用 6 维加权综合评分（0-100 分）。每个维度归一化到 0-100 后按权重加总。成绩单等级基于 80 国数据集的百分位排名。",
-                "The Rankings and Scorecard use a 6-dimension weighted composite score (0-100). Each dimension is normalized to 0-100 and combined by weight. Scorecard grades are based on percentile ranking within the 80-country dataset."
+                "早期版本用一个 6 维加权数字给所有国家打分，把森林覆盖、保护区这类自然禀赋和 NDC 评级、碳定价这类治理绩效混在一起相加——结果是森林多的国家（如芬兰、刚果）天然获得高分，新加坡这类国土狭小的国家天然分数垫底，跟这些国家的政策努力程度关系不大。现在排行榜和成绩单改为两个独立指数：",
+                "The earlier version blended everything into one 6-dimension weighted number — natural endowment (forest cover, protected areas) added directly to governance performance (NDC ambition, carbon pricing). The result: forest-rich countries (Finland, DR Congo) scored high regardless of policy, and small-territory countries (Singapore) scored low regardless of policy. Rankings and Scorecard now use two independent indices instead:"
               )}
             </p>
-            <div className="overflow-x-auto">
+            <ul className="text-sm text-gray-600 leading-relaxed mb-3 list-disc pl-5 space-y-1">
+              <li>
+                <strong>{t("状态指数（禀赋）", "State Index (Endowment)")}</strong> —
+                {t(
+                  " 森林覆盖、自然保护区、空气质量（PM2.5）、EPI 评分。反映一国的自然条件与既有环境状况，不完全是政策的结果。",
+                  " forest cover, protected areas, air quality (PM2.5), EPI score. Reflects natural conditions and existing environmental state, not purely policy outcomes."
+                )}
+              </li>
+              <li>
+                <strong>{t("治理指数（绩效）", "Governance Index (Performance)")}</strong> —
+                {t(
+                  " NDC 雄心评级、碳定价强度（价格×覆盖率）、BTR 报告提交、基加利修正案、NDC 3.0 提交、LDN 目标设定、可再生能源占比、碳强度。这是本项目真正想衡量的——一国在做什么，而非天生条件如何。",
+                  " NDC ambition rating, carbon pricing strength (price × coverage), BTR submission, Kigali Amendment, NDC 3.0 submission, LDN target-setting, renewable energy share, carbon intensity. This is what the project actually wants to measure — what a country is doing, not what it was born with."
+                )}
+              </li>
+            </ul>
+            <p className="text-sm text-gray-600 leading-relaxed mb-3">
+              {t(
+                "两个指数刻意不合并成一个数字——合并会重新制造被修复的问题。排行榜可在两者间切换排序，成绩单并列展示两个等级。每个维度先归一化到 0-100 再按权重加总；权重可在排行榜「调整权重」面板中自定义，并写入分享链接。",
+                "The two indices are deliberately not merged into one number — merging them would recreate the exact problem being fixed. Rankings can sort by either; Scorecard shows both grades side by side. Each dimension is normalized to 0-100 before being combined by weight; weights can be customized in the Rankings \"Adjust Weights\" panel and are saved to the share link."
+              )}
+            </p>
+            <div className="overflow-x-auto mb-3">
               <table className="w-full text-sm border-collapse">
                 <thead>
                   <tr className="bg-gray-50">
-                    <th className="text-left py-2 px-3 border-b border-gray-200 font-medium text-gray-600">{t("维度", "Dimension")}</th>
-                    <th className="text-center py-2 px-3 border-b border-gray-200 font-medium text-gray-600">{t("权重", "Weight")}</th>
-                    <th className="text-left py-2 px-3 border-b border-gray-200 font-medium text-gray-600">{t("计算方式", "Calculation")}</th>
+                    <th className="text-left py-2 px-3 border-b border-gray-200 font-medium text-gray-600">{t("状态指数维度", "State Dimension")}</th>
+                    <th className="text-center py-2 px-3 border-b border-gray-200 font-medium text-gray-600">{t("默认权重", "Default Weight")}</th>
+                    <th className="text-left py-2 px-3 border-b border-gray-200 font-medium text-gray-600">{t("归一化方式", "Normalization")}</th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
-                    { dim: { zh: "EPI 评分", en: "EPI Score" }, weight: "25%", calc: { zh: "直接使用 Yale EPI 评分（0-100）", en: "Direct Yale EPI score (0-100)" } },
-                    { dim: { zh: "可再生能源", en: "Renewable Energy" }, weight: "20%", calc: { zh: "占总能源消费比例，上限 100%", en: "Share of total energy consumption, capped at 100%" } },
-                    { dim: { zh: "森林覆盖", en: "Forest Coverage" }, weight: "15%", calc: { zh: "占国土面积比例，上限 100%", en: "Share of land area, capped at 100%" } },
-                    { dim: { zh: "自然保护区", en: "Protected Areas" }, weight: "15%", calc: { zh: "占国土面积比例，上限 100%", en: "Share of land area, capped at 100%" } },
-                    { dim: { zh: "空气质量", en: "Air Quality" }, weight: "15%", calc: { zh: "100 - PM2.5（反向，越低越好）", en: "100 - PM2.5 (inverted, lower is better)" } },
-                    { dim: { zh: "碳效率", en: "CO₂ Efficiency" }, weight: "10%", calc: { zh: "100 - 人均CO₂×5（反向，越低越好）", en: "100 - per capita CO₂×5 (inverted, lower is better)" } },
+                    { dim: { zh: "森林覆盖", en: "Forest Coverage" }, weight: "25%", calc: { zh: "数据集内 winsorized min-max（5–95 分位裁剪后缩放至 0-100）", en: "Dataset-relative winsorized min-max (clip to 5th–95th pct, scale to 0-100)" } },
+                    { dim: { zh: "自然保护区", en: "Protected Areas" }, weight: "25%", calc: { zh: "同上", en: "Same as above" } },
+                    { dim: { zh: "空气质量（PM2.5）", en: "Air Quality (PM2.5)" }, weight: "25%", calc: { zh: "同上，反向（越低越好）", en: "Same as above, inverted (lower is better)" } },
+                    { dim: { zh: "EPI 评分", en: "EPI Score" }, weight: "25%", calc: { zh: "同上", en: "Same as above" } },
                   ].map((row, i) => (
                     <tr key={i} className="border-b border-gray-100">
                       <td className="py-2 px-3 font-medium text-gray-700">{language === "zh" ? row.dim.zh : row.dim.en}</td>
@@ -154,8 +174,70 @@ export default function AboutPage({ language, onClose }) {
                 </tbody>
               </table>
             </div>
-            <div className="mt-3 bg-amber-50 rounded-lg p-3">
-              <p className="text-xs font-medium text-amber-800 mb-1">{t("成绩单等级标准", "Scorecard Grading Scale")}</p>
+            <div className="overflow-x-auto mb-3">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="bg-gray-50">
+                    <th className="text-left py-2 px-3 border-b border-gray-200 font-medium text-gray-600">{t("治理指数维度", "Governance Dimension")}</th>
+                    <th className="text-center py-2 px-3 border-b border-gray-200 font-medium text-gray-600">{t("默认权重", "Default Weight")}</th>
+                    <th className="text-left py-2 px-3 border-b border-gray-200 font-medium text-gray-600">{t("归一化方式", "Normalization")}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { dim: { zh: "NDC 雄心评级", en: "NDC Ambition Rating" }, weight: "20%", calc: { zh: "CAT 7 级顺序映射至 0-100（已是有界量表，不再数据集归一化）", en: "CAT's 7-level scale mapped to 0-100 (already bounded, not dataset-normalized)" } },
+                    { dim: { zh: "碳定价强度", en: "Carbon Pricing Strength" }, weight: "15%", calc: { zh: "价格(USD/t)×覆盖率；无碳定价机制记为真实的 0（非缺失值），再数据集归一化", en: "price(USD/t) × coverage share; no pricing mechanism = a real 0 (not missing), then dataset-normalized" } },
+                    { dim: { zh: "BTR 报告提交 / 基加利修正案 / NDC 3.0 提交 / LDN 目标设定", en: "BTR Submitted / Kigali Amendment / NDC 3.0 Submitted / LDN Target Set" }, weight: t("各 10-15%", "10-15% each"), calc: { zh: "布尔值直接映射 0 或 100（不数据集归一化，避免全员同值时退化为中性 50 分）", en: "Boolean mapped directly to 0 or 100 (not dataset-normalized, to avoid collapsing to a neutral 50 when everyone shares the same value)" } },
+                    { dim: { zh: "可再生能源占比", en: "Renewable Energy Share" }, weight: "10%", calc: { zh: "数据集内 winsorized min-max", en: "Dataset-relative winsorized min-max" } },
+                    { dim: { zh: "碳强度", en: "Carbon Intensity" }, weight: "10%", calc: { zh: "同上，反向（越低越好）", en: "Same as above, inverted (lower is better)" } },
+                  ].map((row, i) => (
+                    <tr key={i} className="border-b border-gray-100">
+                      <td className="py-2 px-3 font-medium text-gray-700">{language === "zh" ? row.dim.zh : row.dim.en}</td>
+                      <td className="py-2 px-3 text-center font-bold text-green-700">{row.weight}</td>
+                      <td className="py-2 px-3 text-gray-600">{language === "zh" ? row.calc.zh : row.calc.en}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="bg-blue-50 rounded-lg p-3 mb-3">
+              <p className="text-xs font-medium text-blue-800 mb-1">{t("缺失值政策", "Missing-Value Policy")}</p>
+              <p className="text-xs text-blue-800 leading-relaxed">
+                {t(
+                  "某维度数据缺失时，该维度不计入该国得分，剩余维度的权重按比例重新归一化——缺失不再被当作最差值（0 分），避免用不存在的数据惩罚国家。若一国某指数的有效维度少于 4 个（状态指数共 4 维，因此缺一即不足；治理指数共 8 维），该指数不给出分数，显示「数据不足」，在排行榜中单独分组置底，且不参与成绩单 A–F 评级。",
+                  "When a dimension's data is missing for a country, that dimension is excluded and the remaining weights are renormalized proportionally — missing is no longer treated as the worst possible value (0), which would unfairly penalize a country for data that simply doesn't exist. If fewer than 4 valid dimensions remain for an index (State has only 4 total, so any single gap triggers this; Governance has 8), no score is given — the UI shows \"Insufficient data\", the country is grouped separately at the bottom of that index's ranking, and it's excluded from that index's A–F grading."
+                )}
+              </p>
+            </div>
+
+            <div className="bg-amber-50 rounded-lg p-3 mb-3">
+              <p className="text-xs font-medium text-amber-800 mb-1">{t("已知局限", "Known Limitations")}</p>
+              <ul className="text-xs text-amber-800 leading-relaxed list-disc pl-4 space-y-0.5">
+                <li>{t(
+                  "可再生能源占比被归入「治理」维度，但它部分反映水电/地热等自然资源禀赋，并非纯粹的政策选择——冰岛、挪威等国受益于此。",
+                  "Renewable energy share is bucketed under \"Governance\", but it partly reflects natural resource endowment (hydro/geothermal potential) rather than pure policy choice — countries like Iceland and Norway benefit from this."
+                )}</li>
+                <li>{t(
+                  "EPI 评分本身是 Yale 团队的复合指数，其内部方法论（含权重与覆盖范围）不受本项目控制，被纳入「状态」指数时按整体对待。",
+                  "The EPI score is itself a composite index built by the Yale team; its internal methodology (weights, coverage) is outside this project's control and is treated as a single input to the State index."
+                )}</li>
+                <li>{t(
+                  "Winsorized min-max 对样本量较小的子集（如按地区/集团筛选后）更容易受个别极值影响；当前归一化统一基于全部 80 国，不随筛选变化。",
+                  "Winsorized min-max is more sensitive to individual extremes on smaller subsets (e.g. after filtering by region/group); normalization is always computed against the full 80-country set, not the currently filtered view."
+                )}</li>
+                <li>{t(
+                  "默认权重为编者主观设定，非统计推导；这正是「调整权重」滑块存在的原因——不同立场的用户可以按自己的判断重新加权。",
+                  "Default weights are editorially chosen, not statistically derived — this is exactly why the \"Adjust Weights\" sliders exist, so users with different priorities can re-weight for themselves."
+                )}</li>
+              </ul>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-3">
+              <p className="text-xs font-medium text-gray-700 mb-1">{t("成绩单等级标准", "Scorecard Grading Scale")}</p>
+              <p className="text-xs text-gray-500 mb-2">
+                {t("基于该指数在全部有效评分国家中的百分位排名，两个指数各自独立计算。", "Based on percentile rank among all countries with a valid score for that index, computed independently per index.")}
+              </p>
               <div className="flex flex-wrap gap-2 text-xs">
                 {[
                   { grade: "A+", range: t("前 5%", "Top 5%"), color: "bg-green-700" },

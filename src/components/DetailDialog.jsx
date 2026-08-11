@@ -20,7 +20,7 @@ const TABS = [
   { key: "data", zh: "数据", en: "Data" },
 ];
 
-export default function DetailDialog({ selectedCountry, language, t, globalAvg, onClose, copied, onCopy, allCountries, siblings, onNavigate }) {
+export default function DetailDialog({ selectedCountry, language, t, globalAvg, onClose, copied, onCopy, allCountries, siblings, onNavigate, stateWeights, governanceWeights }) {
   const [tab, setTab] = useState("overview");
   const [pdfLoading, setPdfLoading] = useState(false);
   const [shared, setShared] = useState(false);
@@ -56,7 +56,7 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
     setPdfLoading(true);
     try {
       const { generateCountryPDF } = await import("../utils/generateCountryPDF");
-      await generateCountryPDF(selectedCountry, language, globalAvg, allCountries);
+      await generateCountryPDF(selectedCountry, language, globalAvg, allCountries, stateWeights, governanceWeights);
     } catch (e) {
       console.error("PDF generation failed:", e);
     } finally {
@@ -179,6 +179,8 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                   language={language}
                   t={t}
                   allCountries={allCountries}
+                  stateWeights={stateWeights}
+                  governanceWeights={governanceWeights}
                 />
               )}
 

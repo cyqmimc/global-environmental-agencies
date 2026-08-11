@@ -1,18 +1,17 @@
 import { useState, useMemo } from "react";
 import { NDC_RATING_CONFIG, PROVENANCE, exportCSV } from "../constants";
 import { carbonIntensity, formatCarbonIntensity } from "../utils/derived";
+import {
+  computeStateIndices,
+  computeGovernanceIndices,
+  STATE_DIMENSIONS,
+  GOVERNANCE_DIMENSIONS,
+  DEFAULT_STATE_WEIGHTS,
+  DEFAULT_GOVERNANCE_WEIGHTS,
+  isDefaultWeights,
+} from "../utils/score";
 import DataYearBadge from "./DataYearBadge";
 import YearInconsistencyWarning from "./YearInconsistencyWarning";
-
-export function computeCompositeScore(country) {
-  const epi = (country.epiScore ?? 0) * 0.25;
-  const renew = Math.min(country.wb?.renewableEnergy ?? 0, 100) * 0.20;
-  const forest = Math.min(country.wb?.forestArea ?? 0, 100) * 0.15;
-  const protect = Math.min(country.wb?.protectedAreas ?? 0, 100) * 0.15;
-  const air = (100 - Math.min(country.wb?.pm25 ?? 100, 100)) * 0.15;
-  const co2 = (100 - Math.min((country.wb?.co2PerCapita ?? 0) * 5, 100)) * 0.10;
-  return +(epi + renew + forest + protect + air + co2).toFixed(1);
-}
 
 function scoreColor(score) {
   if (score >= 70) return "bg-green-500";
@@ -32,8 +31,9 @@ function rankMedal(rank) {
 const COLUMNS = [
   { key: "rank", zhLabel: "#", enLabel: "#", sortable: false, hideMobile: false },
   { key: "country", zhLabel: "国家", enLabel: "Country", sortable: false, hideMobile: false },
-  { key: "composite", zhLabel: "综合评分", enLabel: "Composite", sortable: true, hideMobile: false },
-  { key: "epi", zhLabel: "EPI", enLabel: "EPI", sortable: true, hideMobile: false, provenance: "epiScore" },
+  { key: "state", zhLabel: "状态指数", enLabel: "State", sortable: true, hideMobile: false },
+  { key: "governance", zhLabel: "治理指数", enLabel: "Governance", sortable: true, hideMobile: false },
+  { key: "epi", zhLabel: "EPI", enLabel: "EPI", sortable: true, hideMobile: true, provenance: "epiScore" },
   { key: "renewable", zhLabel: "可再生%", enLabel: "Renew%", sortable: true, hideMobile: true, wbYearField: "renewableEnergy" },
   { key: "pm25", zhLabel: "PM2.5", enLabel: "PM2.5", sortable: true, hideMobile: true, wbYearField: "pm25" },
   { key: "co2", zhLabel: "CO₂/人", enLabel: "CO₂/Cap", sortable: true, hideMobile: true },
@@ -43,42 +43,89 @@ const COLUMNS = [
   { key: "btr", zhLabel: "BTR", enLabel: "BTR", sortable: false, hideMobile: true },
 ];
 
-function getSortValue(country, key, compositeScores) {
+/** Null (insufficient-data) scores always sink to the bottom regardless of sort direction. */
+function cmpNullsLast(va, vb, asc) {
+  const aNull = va == null;
+  const bNull = vb == null;
+  if (aNull && bNull) return 0;
+  if (aNull) return 1;
+  if (bNull) return -1;
+  return asc ? va - vb : vb - va;
+}
+
+function getSortValue(country, key, stateIndices, governanceIndices) {
   switch (key) {
-    case "composite": return compositeScores.get(country) ?? 0;
-    case "epi": return country.epiScore ?? 0;
-    case "renewable": return country.wb?.renewableEnergy ?? -1;
-    case "pm25": return country.wb?.pm25 ?? 999;
-    case "co2": return country.wb?.co2PerCapita ?? 999;
-    case "carbonPrice": return country.carbonPricing?.priceUSD ?? -1;
-    case "intensity": return carbonIntensity(country) ?? Infinity; // null sinks
-    default: return 0;
+    case "state": return stateIndices.get(country)?.score ?? null;
+    case "governance": return governanceIndices.get(country)?.score ?? null;
+    case "epi": return country.epiScore ?? null;
+    case "renewable": return country.wb?.renewableEnergy ?? null;
+    case "pm25": return country.wb?.pm25 ?? null;
+    case "co2": return country.wb?.co2PerCapita ?? null;
+    case "carbonPrice": return country.carbonPricing?.priceUSD ?? null;
+    case "intensity": return carbonIntensity(country);
+    default: return null;
   }
+}
+
+function WeightSlider({ dim, value, onChange, language }) {
+  return (
+    <div className="flex items-center gap-2">
+      <span className="text-xs text-gray-500 dark:text-gray-400 w-32 shrink-0 truncate" title={language === "zh" ? dim.zh : dim.en}>
+        {language === "zh" ? dim.zh : dim.en}
+      </span>
+      <input
+        type="range"
+        min="0"
+        max="40"
+        value={value}
+        onChange={(e) => onChange(dim.key, Number(e.target.value))}
+        className="flex-1 accent-green-600 cursor-pointer"
+      />
+      <span className="text-xs font-mono text-gray-600 dark:text-gray-300 w-9 text-right shrink-0">{value}</span>
+    </div>
+  );
 }
 
 const PAGE_SIZE = 25;
 
-export default function RankingsView({ countries, allCountries, language, t, onCountryClick }) {
-  const [sortKey, setSortKey] = useState("composite");
+export default function RankingsView({
+  countries,
+  allCountries,
+  language,
+  t,
+  onCountryClick,
+  stateWeights = DEFAULT_STATE_WEIGHTS,
+  governanceWeights = DEFAULT_GOVERNANCE_WEIGHTS,
+  onWeightsChange,
+}) {
+  const [sortKey, setSortKey] = useState("governance");
   const [sortAsc, setSortAsc] = useState(false);
   const [page, setPage] = useState(1);
+  const [showWeights, setShowWeights] = useState(false);
 
-  const compositeScores = useMemo(() => {
-    const map = new Map();
-    countries.forEach((c) => map.set(c, computeCompositeScore(c)));
-    return map;
-  }, [countries]);
+  const fullList = allCountries || countries;
+
+  // Normalization must be relative to the full, unfiltered dataset so scores
+  // stay stable as the user applies region/tag/compliance filters — only the
+  // set of *rows shown* should change, not what "100" means.
+  const stateIndices = useMemo(
+    () => computeStateIndices(fullList, stateWeights),
+    [fullList, stateWeights]
+  );
+  const governanceIndices = useMemo(
+    () => computeGovernanceIndices(fullList, governanceWeights),
+    [fullList, governanceWeights]
+  );
 
   const sorted = useMemo(() => {
     const arr = [...countries];
     arr.sort((a, b) => {
-      let va = getSortValue(a, sortKey, compositeScores);
-      let vb = getSortValue(b, sortKey, compositeScores);
-      const diff = sortAsc ? va - vb : vb - va;
-      return diff;
+      const va = getSortValue(a, sortKey, stateIndices, governanceIndices);
+      const vb = getSortValue(b, sortKey, stateIndices, governanceIndices);
+      return cmpNullsLast(va, vb, sortAsc);
     });
     return arr;
-  }, [countries, sortKey, sortAsc, compositeScores]);
+  }, [countries, sortKey, sortAsc, stateIndices, governanceIndices]);
 
   const totalPages = Math.max(1, Math.ceil(sorted.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
@@ -99,21 +146,85 @@ export default function RankingsView({ countries, allCountries, language, t, onC
     exportCSV(sorted, language, `rankings-${sortKey}-${new Date().toISOString().slice(0, 10)}.csv`);
   };
 
+  const updateStateWeight = (key, val) => {
+    onWeightsChange?.({ ...stateWeights, [key]: val }, governanceWeights);
+  };
+  const updateGovernanceWeight = (key, val) => {
+    onWeightsChange?.(stateWeights, { ...governanceWeights, [key]: val });
+  };
+  const resetWeights = () => {
+    onWeightsChange?.(DEFAULT_STATE_WEIGHTS, DEFAULT_GOVERNANCE_WEIGHTS);
+  };
+  const weightsAreDefault = isDefaultWeights(stateWeights, governanceWeights);
+
   return (
     <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
-      <div className="flex items-center justify-between px-4 py-2 border-b border-gray-100 dark:border-gray-800 bg-gray-50/60 dark:bg-gray-800/60">
+      <div className="flex items-center justify-between px-4 py-2 border-b border-gray-100 dark:border-gray-800 bg-gray-50/60 dark:bg-gray-800/60 flex-wrap gap-2">
         <p className="text-xs text-gray-500 dark:text-gray-400">
           {t(`共 ${sorted.length} 国 · 第 ${currentPage} / ${totalPages} 页`, `${sorted.length} countries · Page ${currentPage} / ${totalPages}`)}
         </p>
-        <button
-          onClick={handleExport}
-          disabled={sorted.length === 0}
-          className="text-xs text-green-700 dark:text-green-400 hover:text-green-800 font-medium flex items-center gap-1 cursor-pointer disabled:opacity-40"
-          title={t("按当前排序导出 CSV", "Export current ranking as CSV")}
-        >
-          <span>📥</span> {t("导出 CSV", "Export CSV")}
-        </button>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => setShowWeights((v) => !v)}
+            className="text-xs text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400 font-medium flex items-center gap-1 cursor-pointer"
+          >
+            <span>⚙️</span> {t("调整权重", "Adjust Weights")}
+            {!weightsAreDefault && <span className="w-1.5 h-1.5 rounded-full bg-green-500" />}
+            <span className="text-gray-400">{showWeights ? "▲" : "▼"}</span>
+          </button>
+          <button
+            onClick={handleExport}
+            disabled={sorted.length === 0}
+            className="text-xs text-green-700 dark:text-green-400 hover:text-green-800 font-medium flex items-center gap-1 cursor-pointer disabled:opacity-40"
+            title={t("按当前排序导出 CSV", "Export current ranking as CSV")}
+          >
+            <span>📥</span> {t("导出 CSV", "Export CSV")}
+          </button>
+        </div>
       </div>
+
+      {showWeights && (
+        <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800 bg-amber-50/50 dark:bg-amber-950/20">
+          <div className="flex items-center justify-between mb-2">
+            <p className="text-xs text-gray-500 dark:text-gray-400">
+              {t(
+                "拖动调整各维度相对权重（无需总和为 100，系统自动按比例归一化）；调整会影响下方两列的排序与分值，并写入分享链接。",
+                "Drag to adjust each dimension's relative weight (they don't need to sum to 100 — normalized automatically); changes affect the sort/scores below and are saved to the share link."
+              )}
+            </p>
+            <button
+              onClick={resetWeights}
+              disabled={weightsAreDefault}
+              className="text-xs text-gray-500 dark:text-gray-400 hover:text-green-700 dark:hover:text-green-400 font-medium shrink-0 ml-3 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              {t("恢复默认", "Reset to Default")}
+            </button>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+            <div>
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1.5">
+                {t("状态指数（禀赋）", "State Index (Endowment)")}
+              </p>
+              <div className="space-y-1.5">
+                {STATE_DIMENSIONS.map((dim) => (
+                  <WeightSlider key={dim.key} dim={dim} value={stateWeights[dim.key]} onChange={updateStateWeight} language={language} />
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1.5">
+                {t("治理指数（绩效）", "Governance Index (Performance)")}
+              </p>
+              <div className="space-y-1.5">
+                {GOVERNANCE_DIMENSIONS.map((dim) => (
+                  <WeightSlider key={dim.key} dim={dim} value={governanceWeights[dim.key]} onChange={updateGovernanceWeight} language={language} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
@@ -142,7 +253,7 @@ export default function RankingsView({ countries, allCountries, language, t, onC
                   )}
                   {col.wbYearField && (
                     <YearInconsistencyWarning
-                      countries={allCountries || countries}
+                      countries={fullList}
                       field={col.wbYearField}
                       language={language}
                       t={t}
@@ -155,7 +266,8 @@ export default function RankingsView({ countries, allCountries, language, t, onC
           </thead>
           <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
             {paginated.map((country, idx) => {
-              const score = compositeScores.get(country) ?? 0;
+              const stateResult = stateIndices.get(country);
+              const govResult = governanceIndices.get(country);
               const ndcCfg = country.parisAgreement?.ndcRating
                 ? NDC_RATING_CONFIG[country.parisAgreement.ndcRating]
                 : null;
@@ -182,17 +294,12 @@ export default function RankingsView({ countries, allCountries, language, t, onC
                     </div>
                   </td>
                   <td className="px-3 py-2.5">
-                    <div className="flex items-center gap-2">
-                      <div className="w-20 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                        <div
-                          className={`h-2.5 rounded-full ${scoreColor(score)}`}
-                          style={{ width: `${score}%` }}
-                        />
-                      </div>
-                      <span className="text-xs font-bold text-gray-700 dark:text-gray-200 w-8">{score}</span>
-                    </div>
+                    <IndexCell result={stateResult} t={t} />
                   </td>
-                  <td className="px-3 py-2.5 text-gray-700 dark:text-gray-200 font-medium">
+                  <td className="px-3 py-2.5">
+                    <IndexCell result={govResult} t={t} />
+                  </td>
+                  <td className="px-3 py-2.5 text-gray-700 dark:text-gray-200 font-medium hidden md:table-cell">
                     {country.epiScore ?? "—"}
                   </td>
                   <td className="px-3 py-2.5 text-gray-600 dark:text-gray-300 hidden md:table-cell">
@@ -283,6 +390,30 @@ export default function RankingsView({ countries, allCountries, language, t, onC
           </button>
         </div>
       )}
+    </div>
+  );
+}
+
+function IndexCell({ result, t }) {
+  if (!result || result.score == null) {
+    return (
+      <span
+        className="text-xs text-gray-400 dark:text-gray-500 italic"
+        title={t("有效维度不足 4 个，暂不给出综合分", "Fewer than 4 valid dimensions — no score given")}
+      >
+        {t("数据不足", "Insufficient data")}
+      </span>
+    );
+  }
+  return (
+    <div className="flex items-center gap-2">
+      <div className="w-16 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+        <div
+          className={`h-2.5 rounded-full ${scoreColor(result.score)}`}
+          style={{ width: `${result.score}%` }}
+        />
+      </div>
+      <span className="text-xs font-bold text-gray-700 dark:text-gray-200 w-8">{result.score}</span>
     </div>
   );
 }

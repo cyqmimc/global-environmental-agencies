@@ -99,6 +99,7 @@ export function getUrlParams() {
     country: p.get("country") || "",
     favOnly: p.get("favOnly") === "1",
     view: p.get("view") || "cards",
+    w: p.get("w") || "",
   };
 }
 
@@ -114,6 +115,7 @@ export function setUrlParams(params) {
   if (params.country) p.set("country", params.country);
   if (params.favOnly) p.set("favOnly", "1");
   if (params.view && params.view !== "cards") p.set("view", params.view);
+  if (params.w) p.set("w", params.w);
   const qs = p.toString();
   const url = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
   window.history.replaceState(null, "", url);

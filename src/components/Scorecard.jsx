@@ -1,5 +1,13 @@
 import { useMemo } from "react";
-import { computeCompositeScore } from "./RankingsView";
+import {
+  computeStateIndices,
+  computeGovernanceIndices,
+  computePercentile,
+  percentileToGrade,
+  STATE_DIMENSIONS,
+  GOVERNANCE_DIMENSIONS,
+} from "../utils/score";
+import { formatCarbonIntensity } from "../utils/derived";
 
 const GRADE_CONFIG = {
   "A+": { color: "bg-green-800 text-white", border: "border-green-800" },
@@ -10,132 +18,156 @@ const GRADE_CONFIG = {
   D:    { color: "bg-red-600 text-white",    border: "border-red-600" },
   F:    { color: "bg-red-900 text-white",    border: "border-red-900" },
 };
+const INSUFFICIENT_CONFIG = { color: "bg-gray-300 text-gray-600 dark:bg-gray-700 dark:text-gray-300" };
 
-function percentileToGrade(percentile) {
-  if (percentile >= 95) return "A+";
-  if (percentile >= 85) return "A";
-  if (percentile >= 70) return "B+";
-  if (percentile >= 50) return "B";
-  if (percentile >= 30) return "C";
-  if (percentile >= 15) return "D";
-  return "F";
-}
-
-function computePercentile(value, allValues) {
-  if (allValues.length === 0) return 50;
-  const below = allValues.filter((v) => v < value).length;
-  return (below / allValues.length) * 100;
-}
-
-function getDimensionValue(country, dim) {
-  switch (dim) {
-    case "forest": return Math.min(country.wb?.forestArea ?? 0, 100);
-    case "renewable": return Math.min(country.wb?.renewableEnergy ?? 0, 100);
-    case "protected": return Math.min(country.wb?.protectedAreas ?? 0, 100);
-    case "air": return 100 - Math.min(country.wb?.pm25 ?? 100, 100);
-    case "co2": return 100 - Math.min((country.wb?.co2PerCapita ?? 0) * 5, 100);
-    case "epi": return country.epiScore ?? 0;
-    default: return 0;
+function formatStateRaw(key, value) {
+  if (value == null) return "—";
+  switch (key) {
+    case "forest":
+    case "protected":
+      return `${value.toFixed(1)}%`;
+    case "air":
+      return `${value.toFixed(1)} µg/m³`;
+    case "epi":
+      return `${value}`;
+    default:
+      return `${value}`;
   }
 }
 
-function getRawDisplayValue(country, dim) {
-  switch (dim) {
-    case "forest": return country.wb?.forestArea != null ? `${country.wb.forestArea.toFixed(1)}%` : "—";
-    case "renewable": return country.wb?.renewableEnergy != null ? `${country.wb.renewableEnergy.toFixed(1)}%` : "—";
-    case "protected": return country.wb?.protectedAreas != null ? `${country.wb.protectedAreas.toFixed(1)}%` : "—";
-    case "air": return country.wb?.pm25 != null ? `${country.wb.pm25.toFixed(1)} µg/m³` : "—";
-    case "co2": return country.wb?.co2PerCapita != null ? `${country.wb.co2PerCapita.toFixed(1)} t` : "—";
-    case "epi": return `${country.epiScore ?? 0}`;
-    default: return "—";
+function formatGovernanceRaw(key, country) {
+  switch (key) {
+    case "ndcRating":
+      return country.parisAgreement?.ndcRating ?? "—";
+    case "carbonPricing":
+      return country.carbonPricing?.priceUSD != null
+        ? `$${country.carbonPricing.priceUSD}×${country.carbonPricing.coveragePercent ?? 0}%`
+        : "—";
+    case "btr":
+      return country.reportingStatus?.btrSubmitted == null ? "—" : country.reportingStatus.btrSubmitted ? "✓" : "✗";
+    case "kigali":
+      return country.montrealProtocol?.kigaliAmendment == null ? "—" : country.montrealProtocol.kigaliAmendment ? "✓" : "✗";
+    case "ndc3":
+      return country.parisAgreement?.ndc3Submitted == null ? "—" : country.parisAgreement.ndc3Submitted ? "✓" : "✗";
+    case "ldn":
+      return country.desertification?.ldnTargetSet == null ? "—" : country.desertification.ldnTargetSet ? "✓" : "✗";
+    case "renewable":
+      return country.wb?.renewableEnergy != null ? `${country.wb.renewableEnergy.toFixed(1)}%` : "—";
+    case "carbonIntensity": {
+      const v = GOVERNANCE_DIMENSIONS.find((d) => d.key === "carbonIntensity").getRaw(country);
+      return formatCarbonIntensity(v);
+    }
+    default:
+      return "—";
   }
 }
 
-const DIMENSIONS = [
-  { key: "epi", zhLabel: "EPI 评分", enLabel: "EPI Score" },
-  { key: "renewable", zhLabel: "可再生能源", enLabel: "Renewable Energy" },
-  { key: "forest", zhLabel: "森林覆盖", enLabel: "Forest Coverage" },
-  { key: "protected", zhLabel: "保护区", enLabel: "Protected Areas" },
-  { key: "air", zhLabel: "空气质量", enLabel: "Air Quality" },
-  { key: "co2", zhLabel: "CO₂ 效率", enLabel: "CO₂ Efficiency" },
-];
-
-export default function Scorecard({ country, language, t, allCountries }) {
-  const analysis = useMemo(() => {
-    // Compute all scores
-    const allComposite = allCountries.map((c) => computeCompositeScore(c));
-    const myComposite = computeCompositeScore(country);
-    const overallPercentile = computePercentile(myComposite, allComposite);
-    const overallGrade = percentileToGrade(overallPercentile);
-
-    // Dimension analysis
-    const dims = DIMENSIONS.map((dim) => {
-      const allVals = allCountries.map((c) => getDimensionValue(c, dim.key));
-      const myVal = getDimensionValue(country, dim.key);
-      const pct = computePercentile(myVal, allVals);
-      return {
-        ...dim,
-        value: myVal,
-        displayValue: getRawDisplayValue(country, dim.key),
-        percentile: pct,
-        grade: percentileToGrade(pct),
-      };
-    });
-
-    return { composite: myComposite, overallPercentile, overallGrade, dims };
-  }, [country, allCountries]);
-
-  const gradeCfg = GRADE_CONFIG[analysis.overallGrade];
-
+function IndexBlock({ title, grade, score, percentile, validCount, totalDims, dims, t }) {
+  const cfg = grade ? GRADE_CONFIG[grade] : INSUFFICIENT_CONFIG;
   return (
-    <div className="mb-4 bg-gradient-to-br from-gray-50 to-white rounded-xl p-4 border border-gray-200">
-      <div className="flex items-center gap-4 mb-3">
-        {/* Overall grade circle */}
-        <div className={`w-16 h-16 rounded-full flex items-center justify-center text-2xl font-black shrink-0 ${gradeCfg.color}`}>
-          {analysis.overallGrade}
+    <div className="flex-1 min-w-[220px]">
+      <div className="flex items-center gap-3 mb-2">
+        <div className={`w-14 h-14 rounded-full flex items-center justify-center text-xl font-black shrink-0 ${cfg.color}`}>
+          {grade ?? "—"}
         </div>
-        <div className="flex-1 min-w-0">
-          <h4 className="text-sm font-bold text-gray-800">
-            {t("环境成绩单", "Environmental Scorecard")}
-          </h4>
-          <p className="text-xs text-gray-500 mt-0.5">
-            {t("综合评分", "Composite Score")}: <span className="font-bold text-gray-700">{analysis.composite}</span>/100
-            <span className="ml-2 text-gray-400">
-              ({t("超过", "Top")} {Math.round(analysis.overallPercentile)}% {t("国家", "of countries")})
-            </span>
-          </p>
+        <div className="min-w-0">
+          <p className="text-xs font-bold text-gray-800 dark:text-gray-100 truncate">{title}</p>
+          {score != null ? (
+            <p className="text-xs text-gray-500 dark:text-gray-400">
+              {score}/100
+              {percentile != null && (
+                <span className="ml-1 text-gray-400 dark:text-gray-500">
+                  ({t("超过", "Top")} {Math.round(percentile)}%)
+                </span>
+              )}
+            </p>
+          ) : (
+            <p className="text-xs text-gray-400 dark:text-gray-500" title={t(`有效维度 ${validCount}/${totalDims}，不足 4 个`, `${validCount}/${totalDims} valid dimensions — fewer than 4`)}>
+              {t("数据不足", "Insufficient data")}
+            </p>
+          )}
         </div>
       </div>
-
-      {/* Dimensions */}
-      <div className="space-y-1.5">
-        {analysis.dims.map((dim) => {
-          const cfg = GRADE_CONFIG[dim.grade];
-          return (
-            <div key={dim.key} className="flex items-center gap-2">
-              <span className="text-xs text-gray-500 w-20 shrink-0 truncate">
-                {language === "zh" ? dim.zhLabel : dim.enLabel}
-              </span>
-              <span className={`text-xs font-bold w-7 text-center rounded px-1 py-0.5 ${cfg.color}`}>
-                {dim.grade}
-              </span>
-              <span className="text-xs text-gray-600 w-20 text-right shrink-0">
-                {dim.displayValue}
-              </span>
-              <div className="flex-1 bg-gray-200 rounded-full h-2">
+      <div className="space-y-1">
+        {dims.map((d) => (
+          <div key={d.key} className="flex items-center gap-2">
+            <span className="text-[11px] text-gray-500 dark:text-gray-400 w-24 shrink-0 truncate">{d.label}</span>
+            <span className="text-[11px] text-gray-600 dark:text-gray-300 w-16 text-right shrink-0">{d.display}</span>
+            <div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+              {d.dimScore != null && (
                 <div
-                  className={`h-2 rounded-full transition-all ${
-                    dim.percentile >= 70 ? "bg-green-500" : dim.percentile >= 40 ? "bg-yellow-500" : "bg-red-500"
+                  className={`h-1.5 rounded-full ${
+                    d.dimScore >= 70 ? "bg-green-500" : d.dimScore >= 40 ? "bg-yellow-500" : "bg-red-500"
                   }`}
-                  style={{ width: `${Math.max(2, dim.percentile)}%` }}
+                  style={{ width: `${Math.max(2, d.dimScore)}%` }}
                 />
-              </div>
-              <span className="text-xs text-gray-400 w-8 text-right shrink-0">
-                {Math.round(dim.percentile)}%
-              </span>
+              )}
             </div>
-          );
-        })}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function Scorecard({ country, language, t, allCountries, stateWeights, governanceWeights }) {
+  const analysis = useMemo(() => {
+    const stateResults = computeStateIndices(allCountries, stateWeights);
+    const govResults = computeGovernanceIndices(allCountries, governanceWeights);
+    const myState = stateResults.get(country);
+    const myGov = govResults.get(country);
+
+    const stateScores = allCountries.map((c) => stateResults.get(c)?.score).filter((v) => v != null);
+    const govScores = allCountries.map((c) => govResults.get(c)?.score).filter((v) => v != null);
+
+    const statePct = myState?.score != null ? computePercentile(myState.score, stateScores) : null;
+    const govPct = myGov?.score != null ? computePercentile(myGov.score, govScores) : null;
+
+    const stateDims = STATE_DIMENSIONS.map((d) => ({
+      key: d.key,
+      label: language === "zh" ? d.zh : d.en,
+      display: formatStateRaw(d.key, d.getRaw(country)),
+      dimScore: myState?.dimScores?.[d.key] ?? null,
+    }));
+    const govDims = GOVERNANCE_DIMENSIONS.map((d) => ({
+      key: d.key,
+      label: language === "zh" ? d.zh : d.en,
+      display: formatGovernanceRaw(d.key, country),
+      dimScore: myGov?.dimScores?.[d.key] ?? null,
+    }));
+
+    return {
+      state: { ...myState, percentile: statePct, grade: percentileToGrade(statePct), dims: stateDims },
+      governance: { ...myGov, percentile: govPct, grade: percentileToGrade(govPct), dims: govDims },
+    };
+  }, [country, allCountries, stateWeights, governanceWeights, language]);
+
+  return (
+    <div className="mb-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-xl p-4 border border-gray-200 dark:border-gray-700">
+      <h4 className="text-sm font-bold text-gray-800 dark:text-gray-100 mb-3">
+        {t("环境成绩单", "Environmental Scorecard")}
+      </h4>
+      <div className="flex flex-col sm:flex-row gap-5">
+        <IndexBlock
+          title={t("状态指数（禀赋）", "State Index (Endowment)")}
+          grade={analysis.state.grade}
+          score={analysis.state.score}
+          percentile={analysis.state.percentile}
+          validCount={analysis.state.validCount}
+          totalDims={analysis.state.totalDims}
+          dims={analysis.state.dims}
+          t={t}
+        />
+        <IndexBlock
+          title={t("治理指数（绩效）", "Governance Index (Performance)")}
+          grade={analysis.governance.grade}
+          score={analysis.governance.score}
+          percentile={analysis.governance.percentile}
+          validCount={analysis.governance.validCount}
+          totalDims={analysis.governance.totalDims}
+          dims={analysis.governance.dims}
+          t={t}
+        />
       </div>
     </div>
   );
