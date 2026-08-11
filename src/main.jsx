@@ -2,6 +2,7 @@ import './index.css';
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import GlobalEnvironmentalAgencies from './App'
+import ErrorBoundary from './components/ErrorBoundary'
 
 // Apply persisted theme before first paint to avoid a flash.
 (function applyInitialTheme() {
@@ -17,7 +18,9 @@ import GlobalEnvironmentalAgencies from './App'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <GlobalEnvironmentalAgencies />
+    <ErrorBoundary onReset={() => window.location.reload()}>
+      <GlobalEnvironmentalAgencies />
+    </ErrorBoundary>
   </React.StrictMode>,
 )
 

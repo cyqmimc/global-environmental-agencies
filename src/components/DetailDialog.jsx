@@ -23,6 +23,7 @@ const TABS = [
 export default function DetailDialog({ selectedCountry, language, t, globalAvg, onClose, copied, onCopy, allCountries, siblings, onNavigate, stateWeights, governanceWeights }) {
   const [tab, setTab] = useState("overview");
   const [pdfLoading, setPdfLoading] = useState(false);
+  const [pdfError, setPdfError] = useState(false);
   const [shared, setShared] = useState(false);
   const dialogRef = useDialogA11y(true, onClose);
 
@@ -54,11 +55,14 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
 
   const handlePDF = async () => {
     setPdfLoading(true);
+    setPdfError(false);
     try {
       const { generateCountryPDF } = await import("../utils/generateCountryPDF");
       await generateCountryPDF(selectedCountry, language, globalAvg, allCountries, stateWeights, governanceWeights);
     } catch (e) {
       console.error("PDF generation failed:", e);
+      setPdfError(true);
+      setTimeout(() => setPdfError(false), 5000);
     } finally {
       setPdfLoading(false);
     }
@@ -255,10 +259,14 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                 <button
                   onClick={handlePDF}
                   disabled={pdfLoading}
-                  className="px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 dark:text-gray-200 transition-colors cursor-pointer disabled:opacity-50"
-                  title={t("下载PDF报告", "Download PDF Report")}
+                  className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer disabled:opacity-50 ${
+                    pdfError
+                      ? "border-red-300 text-red-600 hover:bg-red-50 dark:border-red-800 dark:hover:bg-red-950"
+                      : "border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 dark:text-gray-200"
+                  }`}
+                  title={pdfError ? t("生成失败，点击重试", "Generation failed — click to retry") : t("下载PDF报告", "Download PDF Report")}
                 >
-                  {pdfLoading ? "⏳" : "PDF"}
+                  {pdfLoading ? "⏳" : pdfError ? "⚠️" : "PDF"}
                 </button>
                 <button
                   onClick={handleShare}
@@ -277,6 +285,11 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                   </a>
                 )}
               </div>
+              {pdfError && (
+                <p className="text-xs text-red-500 mt-2">
+                  {t("PDF 生成失败，请检查网络后重试。", "PDF generation failed — check your connection and try again.")}
+                </p>
+              )}
             </>
           )}
 

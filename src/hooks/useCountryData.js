@@ -28,14 +28,22 @@ export default function useCountryData() {
   const [countries, setCountries] = useState([]);
   const [wbMeta, setWbMeta] = useState(null);
   const [historyLoaded, setHistoryLoaded] = useState(false);
+  const [status, setStatus] = useState("loading");
+  const [error, setError] = useState(null);
+  const [loadAttempt, setLoadAttempt] = useState(0);
   const fetchedRef = useRef(false);
 
   useEffect(() => {
+    let cancelled = false;
+    setStatus("loading");
+    setError(null);
+
     Promise.all([
       fetchJson("/countries-core.json"),
       fetchJson("/wb-latest.json").catch(() => ({ countries: {}, meta: null })),
     ])
       .then(([countriesData, wbData]) => {
+        if (cancelled) return;
         if (wbData.meta) setWbMeta(wbData.meta);
         const merged = countriesData.map((c) => {
           const code = c.isoCode || c.flagUrl?.match(/flagcdn\.com\/(\w{2})\.svg/)?.[1];
@@ -43,6 +51,7 @@ export default function useCountryData() {
           return { ...c, wb };
         });
         setCountries(merged);
+        setStatus("ready");
 
         // Idle prefetch of detail + history bundles. Once resolved, merge
         // history into wb.history for every country so Sparklines/TrendLineChart
@@ -52,6 +61,7 @@ export default function useCountryData() {
           const kick = () =>
             fetchIdleBundle()
               .then(({ history }) => {
+                if (cancelled) return;
                 setCountries((prev) =>
                   prev.map((c) =>
                     c.wb && history[c.isoCode]
@@ -61,12 +71,24 @@ export default function useCountryData() {
                 );
               })
               .catch(() => {})
-              .finally(() => setHistoryLoaded(true));
+              .finally(() => { if (!cancelled) setHistoryLoaded(true); });
           if (typeof requestIdleCallback === "function") requestIdleCallback(kick, { timeout: 2000 });
           else setTimeout(kick, 1000);
         }
       })
-      .catch((err) => console.error("Failed to load country data:", err));
+      .catch((err) => {
+        if (cancelled) return;
+        console.error("Failed to load country data:", err);
+        setError(err);
+        setStatus("error");
+      });
+
+    return () => { cancelled = true; };
+  }, [loadAttempt]);
+
+  const retry = useCallback(() => {
+    fetchedRef.current = false;
+    setLoadAttempt((n) => n + 1);
   }, []);
 
   // Lazy-load detail + history data and merge into one country object.
@@ -126,5 +148,5 @@ export default function useCountryData() {
     };
   }, [countries]);
 
-  return { countries, wbMeta, globalAvg, loadDetail, loadAllDetails, historyLoaded };
+  return { countries, wbMeta, globalAvg, loadDetail, loadAllDetails, historyLoaded, status, error, retry };
 }

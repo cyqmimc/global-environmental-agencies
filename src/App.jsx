@@ -16,6 +16,7 @@ import { decodeWeights, encodeWeights, DEFAULT_STATE_WEIGHTS, DEFAULT_GOVERNANCE
 import CountryCard from "./components/CountryCard";
 import CompareBar from "./components/CompareBar";
 import Pagination from "./components/Pagination";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const DetailDialog = lazy(() => import("./components/DetailDialog"));
 const CompareDialog = lazy(() => import("./components/CompareDialog"));
@@ -58,6 +59,7 @@ export default function GlobalEnvironmentalAgencies() {
   const [viewMode, setViewMode] = useState(urlParams.view || "cards");
   const [copied, setCopied] = useState(false);
   const [regionalPdfLoading, setRegionalPdfLoading] = useState(false);
+  const [regionalPdfError, setRegionalPdfError] = useState(false);
   const initialWeights = decodeWeights(urlParams.w);
   const [stateWeights, setStateWeights] = useState(initialWeights.stateWeights);
   const [governanceWeights, setGovernanceWeights] = useState(initialWeights.governanceWeights);
@@ -67,7 +69,7 @@ export default function GlobalEnvironmentalAgencies() {
   }, []);
 
   const { theme, toggle: toggleTheme } = useDarkMode();
-  const { countries, wbMeta, globalAvg, loadDetail, loadAllDetails, historyLoaded } = useCountryData();
+  const { countries, wbMeta, globalAvg, loadDetail, loadAllDetails, historyLoaded, status, error, retry } = useCountryData();
   const { favorites, toggle: toggleFav, isFav } = useFavorites();
   // Note: useCountryData prefetches the detail bundle on idle so rankings
   // export and other bulk consumers get full rows without each user click.
@@ -158,6 +160,7 @@ export default function GlobalEnvironmentalAgencies() {
   const handleRegionalPDF = async () => {
     if (filters.filteredCountries.length === 0 || regionalPdfLoading) return;
     setRegionalPdfLoading(true);
+    setRegionalPdfError(false);
     try {
       const selectedIds = new Set(filters.filteredCountries.map((c) => c.isoCode));
       const enrichedCountries = await loadAllDetails();
@@ -190,6 +193,8 @@ export default function GlobalEnvironmentalAgencies() {
       });
     } catch (e) {
       console.error("Regional PDF generation failed:", e);
+      setRegionalPdfError(true);
+      setTimeout(() => setRegionalPdfError(false), 5000);
     } finally {
       setRegionalPdfLoading(false);
     }
@@ -202,6 +207,109 @@ export default function GlobalEnvironmentalAgencies() {
     compliance: filters.complianceFilter,
     favOnly: filters.favOnly,
   });
+
+  // Simplified header shared by the loading/error early-returns below —
+  // theme/language/about controls stay usable even when country data
+  // failed to load, since none of them depend on `countries`.
+  const minimalHeader = (
+    <header className="bg-gradient-to-r from-green-700 to-emerald-600 dark:from-green-900 dark:to-emerald-900 text-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight">
+              🌍 {t("全球环境治理观察", "Global Environmental Governance Tracker")}
+            </h1>
+            <p className="mt-2 text-green-100 text-lg">
+              {t(
+                "各国环保机构 · 环境数据 · 公约履约追踪",
+                "Environmental Agencies · Data · Treaty Compliance Tracking"
+              )}
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-lg px-3 py-2 transition-colors font-medium cursor-pointer text-lg"
+              title={t("切换主题", "Toggle theme")}
+              aria-label={t("切换主题", "Toggle theme")}
+            >
+              {theme === "dark" ? "☀" : "☾"}
+            </button>
+            <button
+              onClick={() => setLanguage(language === "zh" ? "en" : "zh")}
+              className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-lg px-4 py-2 transition-colors font-medium cursor-pointer"
+            >
+              {language === "zh" ? "EN" : "中文"}
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+
+  if (status === "error") {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-900 dark:to-gray-950 text-gray-900 dark:text-gray-100 transition-colors">
+        {minimalHeader}
+        <div className="max-w-2xl mx-auto px-6 py-20 text-center">
+          <p className="text-4xl mb-4">📡</p>
+          <p className="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-2">
+            {t("数据加载失败", "Failed to load data")}
+          </p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">
+            {t(
+              "可能是网络问题，或数据文件暂时无法访问。",
+              "This may be a network issue, or the data files are temporarily unavailable."
+            )}
+          </p>
+          {error?.message && (
+            <p className="text-xs text-gray-400 dark:text-gray-500 mb-6 font-mono">{error.message}</p>
+          )}
+          <button
+            onClick={retry}
+            className="bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-6 py-2.5 rounded-lg transition-colors cursor-pointer"
+          >
+            {t("重试", "Retry")}
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (status === "loading") {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-900 dark:to-gray-950 text-gray-900 dark:text-gray-100 transition-colors">
+        {minimalHeader}
+        <div className="max-w-7xl mx-auto px-6 -mt-4">
+          <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md px-4 py-3 flex flex-wrap gap-8 justify-center border border-transparent dark:border-gray-800">
+            {Array.from({ length: 4 }).map((_, i) => (
+              <div key={i} className="h-10 w-16 bg-gray-100 dark:bg-gray-800 rounded animate-pulse" />
+            ))}
+          </div>
+        </div>
+        <main className="max-w-7xl mx-auto px-6 pt-8 pb-6">
+          <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm p-3 mb-4 border border-transparent dark:border-gray-800">
+            <div className="flex items-center justify-between mb-2">
+              <div className="h-4 w-24 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+              <div className="h-4 w-48 bg-gray-100 dark:bg-gray-800 rounded animate-pulse" />
+            </div>
+            <div
+              className="w-full bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-lg animate-pulse"
+              style={{ aspectRatio: "2 / 1" }}
+            />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <div
+                key={i}
+                className="h-56 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl animate-pulse"
+              />
+            ))}
+          </div>
+        </main>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-900 dark:to-gray-950 text-gray-900 dark:text-gray-100 transition-colors">
@@ -440,11 +548,21 @@ export default function GlobalEnvironmentalAgencies() {
                 <button
                   onClick={handleRegionalPDF}
                   disabled={regionalPdfLoading}
-                  className="text-sm text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 font-medium flex items-center gap-1 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-                  title={t("导出当前筛选结果的区域汇总 PDF", "Export current filtered results as a regional PDF")}
+                  className={`text-sm font-medium flex items-center gap-1 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed ${
+                    regionalPdfError
+                      ? "text-red-600 dark:text-red-400 hover:text-red-700"
+                      : "text-emerald-700 dark:text-emerald-400 hover:text-emerald-800"
+                  }`}
+                  title={
+                    regionalPdfError
+                      ? t("生成失败，点击重试", "Generation failed — click to retry")
+                      : t("导出当前筛选结果的区域汇总 PDF", "Export current filtered results as a regional PDF")
+                  }
                 >
-                  <span>{regionalPdfLoading ? "⏳" : "📄"}</span>
-                  {filters.regionFilter
+                  <span>{regionalPdfLoading ? "⏳" : regionalPdfError ? "⚠️" : "📄"}</span>
+                  {regionalPdfError
+                    ? t("生成失败，重试", "Failed — retry")
+                    : filters.regionFilter
                     ? t("导出区域 PDF", "Export Region PDF")
                     : t("导出当前结果 PDF", "Export Results PDF")}
                 </button>
@@ -481,6 +599,7 @@ export default function GlobalEnvironmentalAgencies() {
         </div>
 
         <Suspense fallback={<div className="text-center py-20 text-gray-400">Loading...</div>}>
+        <ErrorBoundary language={language} onReset={() => setViewMode("cards")}>
           {viewMode === "equity" ? (
             <ClimateEquityView
               countries={filters.filteredCountries}
@@ -534,6 +653,7 @@ export default function GlobalEnvironmentalAgencies() {
               />
             </>
           )}
+        </ErrorBoundary>
         </Suspense>
       </main>
 
@@ -554,33 +674,39 @@ export default function GlobalEnvironmentalAgencies() {
 
       <Suspense fallback={null}>
         {showCompare && compareList.length >= 2 && (
-          <CompareDialog
-            compareList={compareList}
-            language={language}
-            t={t}
-            globalAvg={globalAvg}
-            onClose={() => setShowCompare(false)}
-            onClear={() => { setShowCompare(false); setCompareList([]); }}
-          />
+          <ErrorBoundary language={language} onReset={() => setShowCompare(false)}>
+            <CompareDialog
+              compareList={compareList}
+              language={language}
+              t={t}
+              globalAvg={globalAvg}
+              onClose={() => setShowCompare(false)}
+              onClear={() => { setShowCompare(false); setCompareList([]); }}
+            />
+          </ErrorBoundary>
         )}
         {selectedCountry && !showCompare && (
-          <DetailDialog
-            selectedCountry={selectedCountry}
-            language={language}
-            t={t}
-            globalAvg={globalAvg}
-            onClose={() => { setOpenCountryIso(null); setCopied(false); }}
-            copied={copied}
-            onCopy={handleCopy}
-            allCountries={countries}
-            siblings={filters.filteredCountries}
-            onNavigate={(c) => setOpenCountryIso(c.isoCode)}
-            stateWeights={stateWeights}
-            governanceWeights={governanceWeights}
-          />
+          <ErrorBoundary language={language} onReset={() => { setOpenCountryIso(null); setCopied(false); }}>
+            <DetailDialog
+              selectedCountry={selectedCountry}
+              language={language}
+              t={t}
+              globalAvg={globalAvg}
+              onClose={() => { setOpenCountryIso(null); setCopied(false); }}
+              copied={copied}
+              onCopy={handleCopy}
+              allCountries={countries}
+              siblings={filters.filteredCountries}
+              onNavigate={(c) => setOpenCountryIso(c.isoCode)}
+              stateWeights={stateWeights}
+              governanceWeights={governanceWeights}
+            />
+          </ErrorBoundary>
         )}
         {showAbout && (
-          <AboutPage language={language} onClose={() => setShowAbout(false)} />
+          <ErrorBoundary language={language} onReset={() => setShowAbout(false)}>
+            <AboutPage language={language} onClose={() => setShowAbout(false)} />
+          </ErrorBoundary>
         )}
       </Suspense>
 
