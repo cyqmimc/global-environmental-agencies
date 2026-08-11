@@ -1,5 +1,7 @@
 import { useMemo } from "react";
 import ScatterChart from "./charts/ScatterChart";
+import DataYearBadge from "./DataYearBadge";
+import { PROVENANCE } from "../constants";
 
 const REGION_COLORS = {
   Asia: { bg: "rgba(249, 115, 22, 0.6)", border: "#f97316" },
@@ -90,12 +92,16 @@ export default function ClimateEquityView({ countries, language, t, onCountryCli
       />
 
       {/* Data source */}
-      <p className="text-xs text-gray-400 dark:text-gray-500 mt-2 text-center">
-        {t(
-          "数据来源：ND-GAIN 气候脆弱性指数 (2022) · Global Carbon Project 累计排放 (1850-2022)",
-          "Sources: ND-GAIN Climate Vulnerability Index (2022) · Global Carbon Project Cumulative Emissions (1850-2022)"
-        )}
-      </p>
+      <div className="flex items-center justify-center gap-3 mt-2">
+        <span className="text-xs text-gray-400 dark:text-gray-500">
+          {t("脆弱性数据", "Vulnerability data")}
+        </span>
+        <DataYearBadge meta={PROVENANCE.climateEquityVulnerability} language={language} t={t} />
+        <span className="text-xs text-gray-400 dark:text-gray-500">
+          {t("累计排放数据", "Cumulative emissions data")}
+        </span>
+        <DataYearBadge meta={PROVENANCE.climateEquityCumulativeCO2} language={language} t={t} />
+      </div>
     </div>
   );
 }

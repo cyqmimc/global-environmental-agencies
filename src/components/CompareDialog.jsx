@@ -1,5 +1,6 @@
 import BarChart from "./charts/BarChart";
-import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG } from "../constants";
+import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG, PROVENANCE } from "../constants";
+import DataYearBadge from "./DataYearBadge";
 import useDialogA11y from "../hooks/useDialogA11y";
 import {
   carbonIntensity,
@@ -156,7 +157,10 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                 </tr>
                 <tr className="border-b border-gray-100 dark:border-gray-800">
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
-                    {t("EPI 环境绩效", "EPI Score")}
+                    <div className="flex items-center gap-1">
+                      {t("EPI 环境绩效", "EPI Score")}
+                      <DataYearBadge meta={PROVENANCE.epiScore} language={language} t={t} />
+                    </div>
                   </td>
                   {compareList.map((c) => (
                     <td
@@ -315,7 +319,10 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                 </tr>
                 <tr className="border-b border-gray-100 dark:border-gray-800">
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
-                    {t("碳价", "Carbon Price")}
+                    <div className="flex items-center gap-1">
+                      {t("碳价", "Carbon Price")}
+                      <DataYearBadge meta={PROVENANCE.carbonPricingPriceUSD} language={language} t={t} />
+                    </div>
                   </td>
                   {compareList.map((c) => (
                     <td key={c.countryEn} className="py-3 px-2 text-center">
@@ -408,14 +415,18 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                       className="py-3 px-2 text-center"
                     >
                       <div className="flex flex-wrap gap-1 justify-center">
-                        {c.treaties.map((tr) => (
-                          <span
-                            key={tr}
-                            className="bg-purple-50 text-purple-600 text-xs px-2 py-0.5 rounded-full"
-                          >
-                            {language === "zh" ? (TREATY_LABELS[tr] || tr) : tr}
-                          </span>
-                        ))}
+                        {c.treaties ? (
+                          c.treaties.map((tr) => (
+                            <span
+                              key={tr}
+                              className="bg-purple-50 text-purple-600 text-xs px-2 py-0.5 rounded-full"
+                            >
+                              {language === "zh" ? (TREATY_LABELS[tr] || tr) : tr}
+                            </span>
+                          ))
+                        ) : (
+                          <span className="text-gray-400 text-xs">—</span>
+                        )}
                       </div>
                     </td>
                   ))}

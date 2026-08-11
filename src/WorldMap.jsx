@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { carbonIntensity, formatCarbonIntensity } from "./utils/derived";
+import { PROVENANCE } from "./constants";
+import DataYearBadge from "./components/DataYearBadge";
+import YearInconsistencyWarning from "./components/YearInconsistencyWarning";
 
 const METRIC_CONFIG = {
   epiScore: {
@@ -9,6 +12,7 @@ const METRIC_CONFIG = {
     getColor: (v) =>
       v >= 60 ? "#16a34a" : v >= 45 ? "#65a30d" : v >= 30 ? "#eab308" : v >= 15 ? "#f97316" : "#dc2626",
     format: (v) => v?.toFixed(0),
+    provenance: "epiScore",
   },
   ndcRating: {
     zh: "NDC 评级",
@@ -31,6 +35,7 @@ const METRIC_CONFIG = {
     getColor: (v) =>
       v == null ? "#d1d5db" : v >= 80 ? "#16a34a" : v >= 40 ? "#65a30d" : v >= 15 ? "#eab308" : v >= 1 ? "#f97316" : "#d1d5db",
     format: (v) => (v != null ? `$${v}` : "—"),
+    provenance: "carbonPricingPriceUSD",
   },
   renewableEnergy: {
     zh: "可再生能源 %",
@@ -39,6 +44,7 @@ const METRIC_CONFIG = {
     getColor: (v) =>
       v == null ? "#d1d5db" : v >= 40 ? "#16a34a" : v >= 25 ? "#65a30d" : v >= 15 ? "#eab308" : v >= 5 ? "#f97316" : "#dc2626",
     format: (v) => (v != null ? `${v.toFixed(0)}%` : "—"),
+    wbYearField: "renewableEnergy",
   },
   pm25: {
     zh: "空气质量 PM2.5",
@@ -47,6 +53,7 @@ const METRIC_CONFIG = {
     getColor: (v) =>
       v == null ? "#d1d5db" : v <= 10 ? "#16a34a" : v <= 15 ? "#65a30d" : v <= 25 ? "#eab308" : v <= 35 ? "#f97316" : "#dc2626",
     format: (v) => (v != null ? `${v.toFixed(1)} µg/m³` : "—"),
+    wbYearField: "pm25",
   },
   protectedAreas: {
     zh: "自然保护区 %",
@@ -271,6 +278,12 @@ export default function WorldMap({ countries, language, onCountryClick }) {
               <div className="w-3 h-3 rounded-sm bg-gray-200 dark:bg-gray-700" />
               <span className="text-xs text-gray-500 dark:text-gray-400">{t("无数据", "No data")}</span>
             </div>
+            {cfg.provenance && (
+              <DataYearBadge meta={PROVENANCE[cfg.provenance]} language={language} t={t} />
+            )}
+            {cfg.wbYearField && (
+              <YearInconsistencyWarning countries={countries} field={cfg.wbYearField} language={language} t={t} />
+            )}
           </div>
         </>
       )}

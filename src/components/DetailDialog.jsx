@@ -1,8 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
 import RadarChart from "./charts/RadarChart";
 import TrendLineChart from "./charts/TrendLineChart";
-import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG, shareCountryLink } from "../constants";
+import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG, PROVENANCE, shareCountryLink } from "../constants";
 import Scorecard from "./Scorecard";
+import DataYearBadge from "./DataYearBadge";
 import useDialogA11y from "../hooks/useDialogA11y";
 import {
   carbonIntensity,
@@ -636,7 +637,10 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                         )}
                       </div>
                       {selectedCountry.carbonPricing.priceUSD != null && (
-                        <p className="text-2xl font-bold text-amber-700">${selectedCountry.carbonPricing.priceUSD}<span className="text-xs font-normal">/tCO₂</span></p>
+                        <div className="flex items-center gap-1.5">
+                          <p className="text-2xl font-bold text-amber-700">${selectedCountry.carbonPricing.priceUSD}<span className="text-xs font-normal">/tCO₂</span></p>
+                          <DataYearBadge meta={PROVENANCE.carbonPricingPriceUSD} language={language} t={t} />
+                        </div>
                       )}
                       {selectedCountry.carbonPricing.coveragePercent > 0 && (
                         <p className="text-xs text-amber-600 mt-1">{t("覆盖", "Coverage")} {selectedCountry.carbonPricing.coveragePercent}% {t("排放", "emissions")}</p>
@@ -775,6 +779,7 @@ export default function DetailDialog({ selectedCountry, language, t, globalAvg, 
                       </p>
                       <p className="text-xs text-orange-500 mt-1">EPI {t("评分", "Score")}</p>
                       <p className="text-xs text-gray-400">{t("满分 100", "Max 100")}</p>
+                      <DataYearBadge meta={PROVENANCE.epiScore} language={language} t={t} className="justify-center mt-0.5 inline-flex" />
                     </div>
                   </div>
                 );

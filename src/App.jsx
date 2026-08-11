@@ -475,6 +475,7 @@ export default function GlobalEnvironmentalAgencies() {
           ) : viewMode === "rankings" ? (
             <RankingsView
               countries={filters.filteredCountries}
+              allCountries={countries}
               language={language}
               t={t}
               onCountryClick={openCountryDetail}
@@ -523,7 +524,11 @@ export default function GlobalEnvironmentalAgencies() {
           language={language}
           t={t}
           onRemove={(c) => setCompareList(compareList.filter((x) => x.countryEn !== c.countryEn))}
-          onOpen={() => setShowCompare(true)}
+          onOpen={async () => {
+            const enriched = await Promise.all(compareList.map((c) => loadDetail(c)));
+            setCompareList(enriched);
+            setShowCompare(true);
+          }}
         />
       )}
 

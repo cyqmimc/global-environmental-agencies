@@ -64,6 +64,22 @@ function main() {
         warn(`WB 指标 ${indicator} 数据最新仅到 ${maxYear} 年，滞后 ${YEAR - maxYear} 年`);
       }
     }
+
+    // Cross-country year-consistency check: an indicator spanning ≥2 distinct
+    // data years usually means mixed sources/methodology (e.g. pm25 mixes
+    // World Bank 2020 ground-station data with IQAir 2024 data for most
+    // countries) — not directly comparable across the affected countries.
+    // See src/utils/dataYearConsistency.js for the same check applied in the UI.
+    for (const [indicator, years] of Object.entries(yearCounts)) {
+      const yearKeys = Object.keys(years);
+      if (yearKeys.length >= 2) {
+        const breakdown = yearKeys
+          .sort()
+          .map((y) => `${y}: ${years[y]}国`)
+          .join(", ");
+        warn(`WB 指标 ${indicator} 存在 ${yearKeys.length} 个不同数据年份 (${breakdown})，跨国横向对比需谨慎`);
+      }
+    }
   }
 
   // --- 2. Countries curated data ---

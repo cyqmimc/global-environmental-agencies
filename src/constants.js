@@ -30,6 +30,51 @@ export const RESPONSIBILITY_LABELS = {
   nuclear: { zh: "核安全", en: "Nuclear" },
 };
 
+/**
+ * Provenance metadata for indicators that don't come from wb-data.json (which
+ * already carries its own per-country `dataYear`). Each entry was imported in
+ * a single batch — see DATA-MAINTENANCE.md's "上次更新记录" table and
+ * scripts/add-climate-equity.py's header comment — so year/source/retrievedAt
+ * are the same for every country; only the value itself (read live off the
+ * country object) varies. Consumed by <DataYearBadge>.
+ *
+ * @type {Object<string, import('./types').Provenance>}
+ */
+export const PROVENANCE = {
+  epiScore: {
+    unit: "score (0-100)",
+    year: 2024,
+    source: "Yale Environmental Performance Index (EPI)",
+    sourceUrl: "https://epi.yale.edu/",
+    method: { zh: "2024 版 EPI，手动录入", en: "2024 EPI edition, hand-entered" },
+    retrievedAt: "2026-04-01",
+  },
+  climateEquityVulnerability: {
+    unit: "index (0-1, higher = more vulnerable)",
+    year: 2022,
+    source: "ND-GAIN Country Index",
+    sourceUrl: "https://gain.nd.edu/our-work/country-index/",
+    method: { zh: "ND-GAIN 脆弱性子指数，2022 版", en: "ND-GAIN vulnerability sub-index, 2022 edition" },
+    retrievedAt: "2026-04-02",
+  },
+  climateEquityCumulativeCO2: {
+    unit: "Gt CO₂ (cumulative, 1850–2022)",
+    year: 2022,
+    source: "Global Carbon Project / Our World in Data",
+    sourceUrl: "https://ourworldindata.org/co2-emissions",
+    method: { zh: "累计 CO₂ 排放，1850–2022", en: "Cumulative CO₂ emissions, 1850–2022" },
+    retrievedAt: "2026-04-02",
+  },
+  carbonPricingPriceUSD: {
+    unit: "USD / tCO₂e",
+    year: 2025,
+    source: "World Bank Carbon Pricing Dashboard",
+    sourceUrl: "https://carbonpricingdashboard.worldbank.org/",
+    method: { zh: "各国/地区碳定价机制价格快照，参照 ICAP ETS Map 核对", en: "National/subnational carbon price snapshot, cross-checked against ICAP ETS Map" },
+    retrievedAt: "2026-04-03",
+  },
+};
+
 export const NDC_RATING_CONFIG = {
   "1.5C": { zh: "1.5°C 兼容", en: "1.5°C Compatible", color: "bg-green-600", textColor: "text-green-700", barColor: "bg-green-500" },
   "2C": { zh: "2°C 兼容", en: "2°C Compatible", color: "bg-lime-500", textColor: "text-lime-700", barColor: "bg-lime-400" },
@@ -121,17 +166,23 @@ export function exportCSV(items, language, filename) {
     t("碳排放(Mt)", "Carbon Emission(Mt)"),
     t("碳排放数据年份", "Carbon Data Year"),
     "EPI",
+    t("EPI数据年份", "EPI Data Year"),
     t("碳中和目标年", "Net Zero Target"),
     t("可再生能源(%)", "Renewable Energy(%)"),
+    t("可再生能源数据年份", "Renewable Energy Data Year"),
     "PM2.5 (µg/m³)",
+    t("PM2.5数据年份", "PM2.5 Data Year"),
     t("人均CO₂(吨)", "CO₂/Capita(t)"),
+    t("CO₂数据年份", "CO₂ Data Year"),
     t("保护区面积(%)", "Protected Areas(%)"),
+    t("保护区数据年份", "Protected Areas Data Year"),
     t("人口", "Population"),
     "GDP (USD)",
     t("人均GDP(USD)", "GDP/Capita(USD)"),
     t("碳强度(kg/USD)", "C.Intensity(kg/USD)"),
     t("NDC评级", "NDC Rating"),
     t("碳价(USD/t)", "Carbon Price(USD/t)"),
+    t("碳价数据年份", "Carbon Price Data Year"),
     t("核心法律", "Key Laws"),
     t("重点公约(节选)", "Selected Treaties"),
     t("官网", "Website"),
@@ -154,17 +205,23 @@ export function exportCSV(items, language, filename) {
       c.wb?.co2Mt?.toFixed(1) ?? "",
       c.wb?.dataYear?.co2Mt ?? "",
       c.epiScore,
+      c.epiScore != null ? PROVENANCE.epiScore.year : "",
       c.netZeroTarget,
       c.wb?.renewableEnergy?.toFixed(1) ?? "",
+      c.wb?.dataYear?.renewableEnergy ?? "",
       c.wb?.pm25?.toFixed(1) ?? "",
+      c.wb?.dataYear?.pm25 ?? "",
       c.wb?.co2PerCapita?.toFixed(2) ?? "",
+      c.wb?.dataYear?.co2Mt ?? "",
       c.wb?.protectedAreas?.toFixed(1) ?? "",
+      c.wb?.dataYear?.protectedAreas ?? "",
       pop ?? "",
       gdp != null ? gdp.toFixed(0) : "",
       gdpPerCap != null ? gdpPerCap.toFixed(0) : "",
       intensity != null ? intensity.toFixed(4) : "",
       c.parisAgreement?.ndcRating ?? "",
       c.carbonPricing?.priceUSD ?? "",
+      c.carbonPricing?.priceUSD != null ? PROVENANCE.carbonPricingPriceUSD.year : "",
       (c.keyLaws || []).map((l) => (language === "zh" ? l.nameZh : l.nameEn) + "(" + l.year + ")").join(" / "),
       c.treaties ? c.treaties.map((tr) => language === "zh" ? (TREATY_LABELS[tr] || tr) : tr).join(" / ") : "",
       c.website,

@@ -95,6 +95,24 @@
  */
 
 /**
+ * @typedef {Object} Provenance
+ *   - Traceability record for a single indicator value: where it came from,
+ *     what year it reflects, and how it was computed. Static metadata lives
+ *     in `PROVENANCE` in `src/constants.js` (one entry per indicator, since
+ *     each was imported in a single batch and shares the same year/source
+ *     across all 80 countries); `value` is filled in at render time from the
+ *     live field on the country object rather than duplicated 80× in JSON.
+ *     Rendered via `<DataYearBadge>`.
+ * @property {number|string=} value
+ * @property {string=} unit
+ * @property {number|string} year  - Data vintage year, or "unknown" if unverified
+ * @property {string} source       - Human-readable source name
+ * @property {string=} sourceUrl
+ * @property {string=} method
+ * @property {string=} retrievedAt - YYYY-MM-DD when this repo last pulled the value, or "unknown"
+ */
+
+/**
  * @typedef {Object} Country
  * @property {string} countryEn
  * @property {string} countryZh
@@ -125,6 +143,7 @@
  *     UI labels this "Selected Treaties (节选)". Prefer `treatyRatification`
  *     once a given treaty's entry there is no longer "unknown".
  * @property {TreatyRatification=} treatyRatification
+ * @property {{vulnerabilityIndex?:number, cumulativeCO2Gt?:number}|null=} climateEquity
  * @property {WorldBankData|null=} wb
  * @property {string=} descriptionZh
  * @property {string=} descriptionEn

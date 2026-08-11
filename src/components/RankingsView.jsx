@@ -1,6 +1,8 @@
 import { useState, useMemo } from "react";
-import { NDC_RATING_CONFIG, exportCSV } from "../constants";
+import { NDC_RATING_CONFIG, PROVENANCE, exportCSV } from "../constants";
 import { carbonIntensity, formatCarbonIntensity } from "../utils/derived";
+import DataYearBadge from "./DataYearBadge";
+import YearInconsistencyWarning from "./YearInconsistencyWarning";
 
 export function computeCompositeScore(country) {
   const epi = (country.epiScore ?? 0) * 0.25;
@@ -31,11 +33,11 @@ const COLUMNS = [
   { key: "rank", zhLabel: "#", enLabel: "#", sortable: false, hideMobile: false },
   { key: "country", zhLabel: "国家", enLabel: "Country", sortable: false, hideMobile: false },
   { key: "composite", zhLabel: "综合评分", enLabel: "Composite", sortable: true, hideMobile: false },
-  { key: "epi", zhLabel: "EPI", enLabel: "EPI", sortable: true, hideMobile: false },
-  { key: "renewable", zhLabel: "可再生%", enLabel: "Renew%", sortable: true, hideMobile: true },
-  { key: "pm25", zhLabel: "PM2.5", enLabel: "PM2.5", sortable: true, hideMobile: true },
+  { key: "epi", zhLabel: "EPI", enLabel: "EPI", sortable: true, hideMobile: false, provenance: "epiScore" },
+  { key: "renewable", zhLabel: "可再生%", enLabel: "Renew%", sortable: true, hideMobile: true, wbYearField: "renewableEnergy" },
+  { key: "pm25", zhLabel: "PM2.5", enLabel: "PM2.5", sortable: true, hideMobile: true, wbYearField: "pm25" },
   { key: "co2", zhLabel: "CO₂/人", enLabel: "CO₂/Cap", sortable: true, hideMobile: true },
-  { key: "carbonPrice", zhLabel: "碳价", enLabel: "C.Price", sortable: true, hideMobile: true },
+  { key: "carbonPrice", zhLabel: "碳价", enLabel: "C.Price", sortable: true, hideMobile: true, provenance: "carbonPricingPriceUSD" },
   { key: "intensity", zhLabel: "碳强度", enLabel: "C.Intensity", sortable: true, hideMobile: true },
   { key: "ndc", zhLabel: "NDC", enLabel: "NDC", sortable: false, hideMobile: false },
   { key: "btr", zhLabel: "BTR", enLabel: "BTR", sortable: false, hideMobile: true },
@@ -56,7 +58,7 @@ function getSortValue(country, key, compositeScores) {
 
 const PAGE_SIZE = 25;
 
-export default function RankingsView({ countries, language, t, onCountryClick }) {
+export default function RankingsView({ countries, allCountries, language, t, onCountryClick }) {
   const [sortKey, setSortKey] = useState("composite");
   const [sortAsc, setSortAsc] = useState(false);
   const [page, setPage] = useState(1);
@@ -129,6 +131,23 @@ export default function RankingsView({ countries, language, t, onCountryClick })
                   {language === "zh" ? col.zhLabel : col.enLabel}
                   {col.sortable && sortKey === col.key && (
                     <span className="ml-1">{sortAsc ? "↑" : "↓"}</span>
+                  )}
+                  {col.provenance && (
+                    <DataYearBadge
+                      meta={PROVENANCE[col.provenance]}
+                      language={language}
+                      t={t}
+                      className="ml-1 normal-case tracking-normal font-normal"
+                    />
+                  )}
+                  {col.wbYearField && (
+                    <YearInconsistencyWarning
+                      countries={allCountries || countries}
+                      field={col.wbYearField}
+                      language={language}
+                      t={t}
+                      className="ml-1"
+                    />
                   )}
                 </th>
               ))}
