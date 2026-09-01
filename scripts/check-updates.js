@@ -81,7 +81,27 @@ function main() {
     }
   }
 
-  // --- 2. Countries curated data ---
+  // --- 2. UN Global SDG Indicators snapshot ---
+  try {
+    const sdgData = JSON.parse(readFileSync(resolve(ROOT, "public/sdg-latest.json"), "utf-8"));
+    const fetchedAt = sdgData.meta?.fetchedAt;
+    const months = monthsSince(fetchedAt);
+    if (months > 6) {
+      warn(`联合国 SDG 数据已 ${Math.round(months)} 个月未更新 (fetched: ${fetchedAt?.slice(0, 10)}). Run: npm run fetch-sdg-data`);
+    } else {
+      good(`联合国 SDG 环境快照较新 (${fetchedAt?.slice(0, 10)})`);
+    }
+    for (const definition of Object.values(sdgData.meta?.indicators || {})) {
+      good(`SDG ${definition.indicator} 覆盖 ${definition.coverage}/80 国（共同年份 ${definition.dataYear}）`);
+      if (YEAR - definition.dataYear >= 5) {
+        warn(`SDG ${definition.indicator} 最新共同年份为 ${definition.dataYear}，应关注官方系列更新`);
+      }
+    }
+  } catch {
+    warn("sdg-latest.json not found! Run: npm run fetch-sdg-data");
+  }
+
+  // --- 3. Countries curated data ---
   let countries;
   try {
     countries = JSON.parse(readFileSync(resolve(ROOT, "public/countries.json"), "utf-8"));
@@ -93,7 +113,7 @@ function main() {
 
   good(`收录 ${countries.length} 个国家`);
 
-  // --- 3. NDC deadline check ---
+  // --- 4. NDC deadline check ---
   const pastDeadline = countries.filter(c => {
     const deadline = c.parisAgreement?.nextNdcDeadline;
     return deadline && deadline <= YEAR;

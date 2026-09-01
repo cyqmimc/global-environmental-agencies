@@ -41,7 +41,12 @@ export function buildCore(data) {
       ? { kigaliAmendment: c.montrealProtocol.kigaliAmendment }
       : null,
     carbonPricing: c.carbonPricing
-      ? { priceUSD: c.carbonPricing.priceUSD, hasETS: c.carbonPricing.hasETS, hasCarbonTax: c.carbonPricing.hasCarbonTax }
+      ? {
+          priceUSD: c.carbonPricing.priceUSD,
+          coveragePercent: c.carbonPricing.coveragePercent,
+          hasETS: c.carbonPricing.hasETS,
+          hasCarbonTax: c.carbonPricing.hasCarbonTax,
+        }
       : null,
     reportingStatus: c.reportingStatus
       ? { btrSubmitted: c.reportingStatus.btrSubmitted }
@@ -63,6 +68,7 @@ export function buildDetail(data) {
       parisAgreement: c.parisAgreement,
       montrealProtocol: c.montrealProtocol,
       cbd: c.cbd,
+      desertification: c.desertification,
       carbonPricing: c.carbonPricing,
       reportingStatus: c.reportingStatus,
     };

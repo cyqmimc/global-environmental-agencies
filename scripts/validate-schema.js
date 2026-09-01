@@ -284,3 +284,69 @@ if (historyErrors.length) {
 }
 
 console.log(`✓ wb-history.json validated · ${Object.keys(wbHistory.countries).length} entries`);
+
+// ------------------------------------------------------------------
+// sdg-latest.json validation (official UN build-time snapshot)
+// ------------------------------------------------------------------
+const sdgPath = path.join(__dirname, "..", "public", "sdg-latest.json");
+let sdg;
+try {
+  sdg = JSON.parse(fs.readFileSync(sdgPath, "utf8"));
+} catch {
+  console.warn("⚠ sdg-latest.json not present, skipping SDG schema check");
+  process.exit(0);
+}
+
+const sdgErrors = [];
+const SDG_KEYS = ["waterStress", "materialConsumptionGdp", "marineKbaProtected", "degradedLand"];
+const SDG_STATUSES = new Set(["available", "missing", "not_applicable"]);
+
+if (!sdg.meta?.indicators || !sdg.countries || typeof sdg.countries !== "object") {
+  sdgErrors.push("missing meta.indicators or countries map");
+} else {
+  for (const key of SDG_KEYS) {
+    const definition = sdg.meta.indicators[key];
+    if (!definition) {
+      sdgErrors.push(`missing indicator definition ${key}`);
+      continue;
+    }
+    if (typeof definition.indicator !== "string" || typeof definition.series !== "string") {
+      sdgErrors.push(`${key}: missing indicator/series code`);
+    }
+    if (!Number.isInteger(definition.dataYear)) sdgErrors.push(`${key}: invalid dataYear`);
+  }
+
+  for (const iso of isoSet) {
+    const country = sdg.countries[iso];
+    if (!country) {
+      sdgErrors.push(`missing country ${iso}`);
+      continue;
+    }
+    for (const key of SDG_KEYS) {
+      const observation = country[key];
+      if (!observation || !SDG_STATUSES.has(observation.status)) {
+        sdgErrors.push(`${iso}.${key}: invalid or missing status`);
+        continue;
+      }
+      if (observation.status === "available") {
+        if (!Number.isFinite(observation.value)) sdgErrors.push(`${iso}.${key}: value must be finite`);
+        if (!Number.isInteger(observation.year)) sdgErrors.push(`${iso}.${key}: year must be an integer`);
+        if (observation.year !== sdg.meta.indicators[key].dataYear) {
+          sdgErrors.push(`${iso}.${key}: year differs from the series dataYear`);
+        }
+        if (typeof observation.unit !== "string") sdgErrors.push(`${iso}.${key}: unit missing`);
+      }
+      if (observation.status === "not_applicable" && key !== "marineKbaProtected") {
+        sdgErrors.push(`${iso}.${key}: not_applicable is only valid for the marine indicator`);
+      }
+    }
+  }
+}
+
+if (sdgErrors.length) {
+  console.error(`✗ sdg-latest.json: ${sdgErrors.length} error(s)`);
+  sdgErrors.slice(0, 12).forEach((e) => console.error("  -", e));
+  process.exit(1);
+}
+
+console.log(`✓ sdg-latest.json validated · ${Object.keys(sdg.countries).length} entries · ${SDG_KEYS.length} indicators`);

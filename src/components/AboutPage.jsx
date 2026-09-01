@@ -54,7 +54,8 @@ export default function AboutPage({ language, onClose }) {
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
               {[
-                { icon: "🗺️", zh: "80 国交互式世界地图（4 种指标着色）", en: "Interactive world map for 80 countries (4 metric views)" },
+                { icon: "🗺️", zh: "80 国交互式世界地图（9 种指标着色）", en: "Interactive world map for 80 countries (9 metric views)" },
+                { icon: "🎯", zh: "联合国官方 SDG 环境快照（4 项指标）", en: "Official UN SDG environmental snapshot (4 indicators)" },
                 { icon: "📊", zh: "排行榜：状态指数（禀赋）与治理指数（绩效）双榜，权重可调", en: "Rankings: separate State (endowment) and Governance (performance) indices, adjustable weights" },
                 { icon: "🏆", zh: "国家成绩单：两项指数各自的 A+ 到 F 等级评分", en: "Country Scorecard: A+ to F grades for each index" },
                 { icon: "📋", zh: "五行合规仪表盘：一眼全览履约状况", en: "5-row compliance dashboard at a glance" },
@@ -96,6 +97,7 @@ export default function AboutPage({ language, onClose }) {
                 <tbody>
                   {[
                     { source: "World Bank Open Data", zh: "森林覆盖率、可再生能源、PM2.5、CO₂排放、保护区面积、人口、GDP", en: "Forest coverage, renewable energy, PM2.5, CO₂ emissions, protected areas, population, GDP", freq: { zh: "年度（API自动拉取）", en: "Annual (auto-fetched via API)" } },
+                    { source: "UN Global SDG Indicators Database", zh: "水资源压力、材料效率、海洋 KBA 保护覆盖、土地退化", en: "Water stress, material efficiency, marine KBA protection, degraded land", freq: { zh: "季度（构建期自动拉取）", en: "Quarterly (auto-fetched at build time)" } },
                     { source: "Climate Action Tracker", zh: "NDC 雄心评级（7 级）", en: "NDC ambition ratings (7 levels)", freq: { zh: "半年度", en: "Semi-annual" } },
                     { source: "UNFCCC", zh: "巴黎协定批准状态、NDC提交记录与时间线、BTR报告提交状态", en: "Paris Agreement ratification, NDC submissions & timeline, BTR reporting status", freq: { zh: "实时", en: "Real-time" } },
                     { source: "Yale EPI", zh: "环境绩效指数（EPI）评分（0-100）", en: "Environmental Performance Index (EPI) scores (0-100)", freq: { zh: "两年一次", en: "Biennial" } },

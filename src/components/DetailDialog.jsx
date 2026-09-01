@@ -4,6 +4,7 @@ import TrendLineChart from "./charts/TrendLineChart";
 import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG, PROVENANCE, shareCountryLink, copyEmbedCode } from "../constants";
 import Scorecard from "./Scorecard";
 import DataYearBadge from "./DataYearBadge";
+import SdgSnapshot from "./SdgSnapshot";
 import useDialogA11y from "../hooks/useDialogA11y";
 import {
   carbonIntensity,
@@ -20,7 +21,7 @@ const TABS = [
   { key: "data", zh: "数据", en: "Data" },
 ];
 
-export default function DetailDialog({ selectedCountry, language, t, isDark, globalAvg, onClose, copied, onCopy, allCountries, siblings, onNavigate, stateWeights, governanceWeights }) {
+export default function DetailDialog({ selectedCountry, language, t, isDark, globalAvg, onClose, copied, onCopy, allCountries, siblings, onNavigate, stateWeights, governanceWeights, sdgMeta }) {
   const [tab, setTab] = useState("overview");
   const [pdfLoading, setPdfLoading] = useState(false);
   const [pdfError, setPdfError] = useState(false);
@@ -762,6 +763,14 @@ export default function DetailDialog({ selectedCountry, language, t, isDark, glo
                     </div>
                   </div>
                 </div>
+              )}
+              {selectedCountry.sdg && (
+                <SdgSnapshot
+                  snapshot={selectedCountry.sdg}
+                  meta={sdgMeta}
+                  language={language}
+                  t={t}
+                />
               )}
               {(() => {
                 const dy = selectedCountry.wb?.dataYear || {};

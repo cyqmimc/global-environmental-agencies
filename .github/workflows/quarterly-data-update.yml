@@ -26,13 +26,13 @@ jobs:
 
       - run: npm ci
 
-      - name: Fetch World Bank + split + check
+      - name: Fetch World Bank + UN SDG + split + check
         run: npm run update-all
 
       - name: Detect changes
         id: diff
         run: |
-          if git diff --quiet -- public/wb-data.json public/countries-core.json public/countries-detail.json public/og-data.json; then
+          if git diff --quiet -- public/wb-latest.json public/wb-history.json public/sdg-latest.json public/countries-core.json public/countries-detail.json public/og-data.json; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -44,14 +44,15 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: data-refresh/${{ github.run_id }}
-          title: "chore(data): quarterly refresh from World Bank"
-          commit-message: "chore(data): quarterly refresh from World Bank"
+          title: "chore(data): quarterly refresh from World Bank and UN SDG"
+          commit-message: "chore(data): quarterly refresh from World Bank and UN SDG"
           body: |
             Automated quarterly data refresh.
 
             - Ran `npm run update-all`
             - Review the diff for any unexpected jumps before merging
             - IQAir PM2.5 overrides should be preserved (fetch script handles this)
+            - UN SDG values use each series' latest common official data year
           labels: |
             data
             automated

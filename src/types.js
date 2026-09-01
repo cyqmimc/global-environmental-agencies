@@ -46,8 +46,27 @@
 /**
  * @typedef {Object} CarbonPricing
  * @property {number|null=} priceUSD
+ * @property {number=} coveragePercent
  * @property {boolean=} hasETS
  * @property {boolean=} hasCarbonTax
+ */
+
+/**
+ * @typedef {Object} SdgObservation
+ * @property {"available"|"missing"|"not_applicable"} status
+ * @property {number=} value
+ * @property {number=} year
+ * @property {string=} unit
+ * @property {string=} nature
+ * @property {string=} observationStatus
+ */
+
+/**
+ * @typedef {Object} SdgSnapshot
+ * @property {SdgObservation} waterStress
+ * @property {SdgObservation} materialConsumptionGdp
+ * @property {SdgObservation} marineKbaProtected
+ * @property {SdgObservation} degradedLand
  */
 
 /**
@@ -145,6 +164,7 @@
  * @property {TreatyRatification=} treatyRatification
  * @property {{vulnerabilityIndex?:number, cumulativeCO2Gt?:number}|null=} climateEquity
  * @property {WorldBankData|null=} wb
+ * @property {SdgSnapshot|null=} sdg
  * @property {string=} descriptionZh
  * @property {string=} descriptionEn
  * @property {boolean=} _detail

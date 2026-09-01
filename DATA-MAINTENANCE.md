@@ -5,7 +5,7 @@
 ## 快速更新（一键）
 
 ```bash
-npm run update-all   # = fetch-data + split-data + check-updates
+npm run update-all   # = build + WB + UN SDG + split + validate + check
 ```
 
 ## 数据流架构
@@ -20,6 +20,9 @@ data/countries/<iso>.json (源文件, 80 个文件, 手动编辑 —— 详见 C
 
 前端合并: country = { ...core数据, wb: wb-latest数据 }
 空闲预取: country.wb.history = wb-history数据；country = { ...country, ...detail数据 }
+
+UN SDG API ──→ fetch-un-sdg-data.js ──→ sdg-latest.json（4 个环境指标，构建期静态生成）
+前端合并: country.sdg = sdg-latest.countries[iso]
 ```
 
 **`countries.json` / `countries-core.json` / `countries-detail.json` 是生成文件，不要手动编辑** ——
@@ -34,6 +37,7 @@ data/countries/<iso>.json (源文件, 80 个文件, 手动编辑 —— 详见 C
 | 数据 | 命令 | 更新频率 | 说明 |
 |------|------|---------|------|
 | 世界银行环境指标 | `npm run fetch-data` | 每季度 | CO₂(AR5→2024)、森林、可再生能源、PM2.5、保护区、人口、GDP |
+| 联合国 SDG 环境指标 | `npm run fetch-sdg-data` | 每季度 | 6.4.2 水压力、12.2.2 材料效率、14.5.1 海洋 KBA、15.3.1 土地退化 |
 | PM2.5 补充 | 手动更新 wb-latest.json | 每年 | IQAir World Air Quality Report (地面监测, 优先于WB卫星数据) |
 | 碳定价 | 手动更新 countries.json | 每年 | WB Carbon Pricing Dashboard Excel 下载 |
 
@@ -138,3 +142,4 @@ node -e "JSON.parse(require('fs').readFileSync('public/countries.json','utf8'));
 | CBD 30×30 | 2026-04-01 | 手动录入 |
 | 机构信息 | 2026-04-01 | 手动录入 |
 | EPI 评分 | 2026-04-01 | 手动录入 (2024 EPI) |
+| 联合国 SDG 环境指标 | 2026-09-01 | UN Global SDG Indicators Database 2026.Q2.G.02；各系列采用最新共同年份 |

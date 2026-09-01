@@ -27,6 +27,7 @@ function fetchIdleBundle() {
 export default function useCountryData() {
   const [countries, setCountries] = useState([]);
   const [wbMeta, setWbMeta] = useState(null);
+  const [sdgMeta, setSdgMeta] = useState(null);
   const [historyLoaded, setHistoryLoaded] = useState(false);
   const [status, setStatus] = useState("loading");
   const [error, setError] = useState(null);
@@ -41,14 +42,17 @@ export default function useCountryData() {
     Promise.all([
       fetchJson("/countries-core.json"),
       fetchJson("/wb-latest.json").catch(() => ({ countries: {}, meta: null })),
+      fetchJson("/sdg-latest.json").catch(() => ({ countries: {}, meta: null })),
     ])
-      .then(([countriesData, wbData]) => {
+      .then(([countriesData, wbData, sdgData]) => {
         if (cancelled) return;
         if (wbData.meta) setWbMeta(wbData.meta);
+        if (sdgData.meta) setSdgMeta(sdgData.meta);
         const merged = countriesData.map((c) => {
           const code = c.isoCode || c.flagUrl?.match(/flagcdn\.com\/(\w{2})\.svg/)?.[1];
           const wb = code ? wbData.countries?.[code] || null : null;
-          return { ...c, wb };
+          const sdg = code ? sdgData.countries?.[code] || null : null;
+          return { ...c, wb, sdg };
         });
         setCountries(merged);
         setStatus("ready");
@@ -148,5 +152,5 @@ export default function useCountryData() {
     };
   }, [countries]);
 
-  return { countries, wbMeta, globalAvg, loadDetail, loadAllDetails, historyLoaded, status, error, retry };
+  return { countries, wbMeta, sdgMeta, globalAvg, loadDetail, loadAllDetails, historyLoaded, status, error, retry };
 }

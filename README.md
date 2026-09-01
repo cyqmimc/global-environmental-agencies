@@ -8,8 +8,9 @@ A one-stop platform to explore environmental agencies, data, and treaty complian
 
 ### 数据与可视化
 - **80 个国家** — 覆盖 G20 全部成员、主要排放国、6 大洲代表
-- **SVG 世界地图** — 按 EPI / NDC 评级 / 碳价 / 可再生能源 4 种指标着色，点击查看详情
+- **SVG 世界地图** — EPI、NDC、碳价、可再生能源、PM2.5、保护区、碳强度、NDC 3.0、LDN 共 9 种指标
 - **世界银行数据** — 森林面积、CO₂排放、可再生能源、PM2.5、自然保护区等 8 项指标
+- **联合国 SDG 环境快照** — 官方全球数据库中的水压力、材料效率、海洋 KBA 保护、土地退化 4 项指标
 - **6 维雷达图** — 森林 / 可再生能源 / 保护区 / 空气质量 / 碳效率 / EPI 环境画像
 
 ### 公约履约追踪
@@ -21,8 +22,8 @@ A one-stop platform to explore environmental agencies, data, and treaty complian
 - **五行合规仪表盘** — NDC 雄心 → 碳定价 → 透明度 → 蒙特利尔 → CBD 一眼全览
 
 ### 排行榜与评分
-- **综合排行榜** — 6 维加权综合评分，可按各指标排序
-- **国家成绩单** — A+ 到 F 等级评分卡，6 个维度各自评级 + 综合评分，适合截图分享
+- **双指数排行榜** — 状态指数 4 维 + 治理指数 8 维，保持自然禀赋与治理绩效分离
+- **国家成绩单** — A+ 到 F 等级评分卡，状态与治理分别评级，适合截图分享
 - **双行筛选** — 履约状态（NDC/碳价/BTR/基加利/30×30）+ 职能领域，可叠加
 
 ### 工具功能
@@ -54,6 +55,7 @@ npm run build        # 生产构建
 
 ```bash
 npm run fetch-data      # 拉取最新世界银行数据（建议每季度）
+npm run fetch-sdg-data  # 拉取 4 项联合国官方 SDG 环境指标
 npm run check-updates   # 检查哪些数据需要更新
 ```
 
@@ -76,6 +78,7 @@ public/
 ├── countries.json             # 80 国策展数据（手动维护）
 ├── wb-latest.json             # 世界银行最新指标值（脚本生成，首屏加载）
 ├── wb-history.json            # 世界银行历史时间序列（脚本生成，空闲预取）
+├── sdg-latest.json            # 联合国 SDG 环境指标最新共同年份快照
 └── world-map.svg              # SVG 世界地图
 scripts/
 ├── fetch-world-bank-data.js   # 世界银行 API 数据拉取
@@ -100,6 +103,7 @@ scripts/
 | 数据 | 来源 |
 |------|------|
 | 环境指标 | [World Bank Open Data](https://data.worldbank.org/) |
+| SDG 环境指标 | [UN Global SDG Indicators Database](https://unstats.un.org/sdgs/dataportal/database) |
 | NDC 评级 | [Climate Action Tracker](https://climateactiontracker.org/) |
 | EPI 评分 | [Yale EPI](https://epi.yale.edu/) |
 | NDC 承诺 | [UNFCCC NDC Registry](https://unfccc.int/NDCREG) |

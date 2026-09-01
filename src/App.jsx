@@ -73,7 +73,7 @@ export default function GlobalEnvironmentalAgencies() {
   const { theme, toggle: toggleTheme } = useDarkMode();
   const { scheme: colorScheme, toggle: toggleColorScheme, isClassic } = useColorScheme();
   const isDark = theme === "dark";
-  const { countries, wbMeta, globalAvg, loadDetail, loadAllDetails, historyLoaded, status, error, retry } = useCountryData();
+  const { countries, wbMeta, sdgMeta, globalAvg, loadDetail, loadAllDetails, historyLoaded, status, error, retry } = useCountryData();
   const { favorites, toggle: toggleFav, isFav } = useFavorites();
   // Note: useCountryData prefetches the detail bundle on idle so rankings
   // export and other bulk consumers get full rows without each user click.
@@ -755,6 +755,7 @@ export default function GlobalEnvironmentalAgencies() {
               onNavigate={(c) => setOpenCountryIso(c.isoCode)}
               stateWeights={stateWeights}
               governanceWeights={governanceWeights}
+              sdgMeta={sdgMeta}
             />
           </ErrorBoundary>
         )}
@@ -776,8 +777,8 @@ export default function GlobalEnvironmentalAgencies() {
           </p>
           <p className="text-gray-500">
             {t(
-              "环境数据来源：世界银行公开数据 (World Bank Open Data) · 各指标数据年份因国家和指标而异 (2018-2025)",
-              "Environmental data: World Bank Open Data · Data years vary by country and indicator (2018-2025)"
+              "环境数据来源：世界银行公开数据 + 联合国全球 SDG 指标数据库 · 各指标数据年份可能不同",
+              "Environmental data: World Bank Open Data + UN Global SDG Indicators Database · Data years may differ by indicator"
             )}
             {wbMeta?.fetchedAt && (
               <span>
