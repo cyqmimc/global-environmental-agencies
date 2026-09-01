@@ -7,6 +7,7 @@ export default function CompareBar({
   t,
   onRemove,
   onOpen,
+  isLoading = false,
 }) {
   if (compareList.length === 0) return null;
   return (
@@ -24,8 +25,9 @@ export default function CompareBar({
             </span>
             <button
               onClick={() => onRemove(c)}
+              disabled={isLoading}
               className="text-gray-500 dark:text-gray-400 hover:text-red-500 text-xs cursor-pointer ml-0.5"
-              aria-label={t("移除", "Remove")}
+              aria-label={`${t("移出对比", "Remove from comparison")}: ${language === "zh" ? c.countryZh : c.countryEn}`}
             >
               ✕
             </button>
@@ -38,10 +40,11 @@ export default function CompareBar({
       <span className="text-xs text-gray-500 dark:text-gray-400">{compareList.length}/3</span>
       <button
         onClick={onOpen}
-        disabled={compareList.length < 2}
+        disabled={compareList.length < 2 || isLoading}
+        aria-busy={isLoading}
         className="bg-green-600 hover:bg-green-700 disabled:opacity-40 disabled:cursor-not-allowed text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors cursor-pointer w-full sm:w-auto"
       >
-        {t("开始对比", "Compare")}
+        {isLoading ? t("正在加载…", "Loading…") : t("开始对比", "Compare")}
       </button>
     </div>
   );

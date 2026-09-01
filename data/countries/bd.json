@@ -58,8 +58,8 @@
       }
     ],
     "nextNdcDeadline": 2030,
-    "ndc3Submitted": false,
-    "ndc3Date": null,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-09-29",
     "ndc3Target": null,
     "ndc3Source": "https://unfccc.int/NDCREG"
   },
@@ -89,8 +89,8 @@
     "btrSubmitted": true,
     "btrYear": 2025,
     "nationalComm": 3,
-    "statusZh": "BTR1待提交",
-    "statusEn": "BTR1 pending"
+    "statusZh": "BTR1已提交",
+    "statusEn": "BTR1 submitted"
   },
   "climateEquity": {
     "vulnerabilityIndex": 0.58,

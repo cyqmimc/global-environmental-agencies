@@ -47,11 +47,15 @@
       {
         "version": "NDC",
         "year": 2017
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
       }
     ],
     "nextNdcDeadline": 2030,
-    "ndc3Submitted": false,
-    "ndc3Date": null,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-02-27",
     "ndc3Target": null,
     "ndc3Source": "https://unfccc.int/NDCREG"
   },
@@ -78,11 +82,11 @@
     "noteEn": "No carbon pricing"
   },
   "reportingStatus": {
-    "btrSubmitted": false,
-    "btrYear": null,
+    "btrSubmitted": true,
+    "btrYear": 2024,
     "nationalComm": 3,
-    "statusZh": "BTR1待提交",
-    "statusEn": "BTR1 pending"
+    "statusZh": "BTR1已提交",
+    "statusEn": "BTR1 submitted"
   },
   "climateEquity": {
     "vulnerabilityIndex": 0.42,

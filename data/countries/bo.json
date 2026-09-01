@@ -73,11 +73,11 @@
     "noteEn": "No carbon pricing"
   },
   "reportingStatus": {
-    "btrSubmitted": false,
-    "btrYear": null,
+    "btrSubmitted": true,
+    "btrYear": 2024,
     "nationalComm": 3,
-    "statusZh": "BTR1待提交",
-    "statusEn": "BTR1 pending"
+    "statusZh": "BTR1已提交",
+    "statusEn": "BTR1 submitted"
   },
   "climateEquity": {
     "vulnerabilityIndex": 0.49,

@@ -56,12 +56,16 @@
       {
         "version": "Updated NDC",
         "year": 2022
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2026
       }
     ],
     "nextNdcDeadline": 2030,
-    "ndc3Submitted": false,
-    "ndc3Date": null,
-    "ndc3Target": null,
+    "ndc3Submitted": true,
+    "ndc3Date": "2026-04-24",
+    "ndc3Target": "47% GDP emissions-intensity reduction by 2035 vs. 2005; ~60% non-fossil installed power capacity",
     "ndc3Source": "https://unfccc.int/NDCREG"
   },
   "montrealProtocol": {
@@ -90,8 +94,8 @@
     "btrSubmitted": true,
     "btrYear": 2025,
     "nationalComm": 3,
-    "statusZh": "BTR1待提交",
-    "statusEn": "BTR1 pending"
+    "statusZh": "BTR1已提交",
+    "statusEn": "BTR1 submitted"
   },
   "climateEquity": {
     "vulnerabilityIndex": 0.52,

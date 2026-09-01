@@ -79,8 +79,9 @@ export default function CountryCard({
             ? "bg-green-600 border-green-600 text-white"
             : "border-gray-300 dark:border-gray-600 hover:border-green-400 text-transparent hover:text-green-400"
         }`}
-        title={t("加入对比", "Add to compare")}
-        aria-label={t("加入对比", "Add to compare")}
+        title={isInCompare ? t("移出对比", "Remove from comparison") : t("加入对比", "Add to comparison")}
+        aria-label={`${isInCompare ? t("移出对比", "Remove from comparison") : t("加入对比", "Add to comparison")}: ${language === "zh" ? country.countryZh : country.countryEn}`}
+        aria-pressed={isInCompare}
       >
         ✓
       </button>

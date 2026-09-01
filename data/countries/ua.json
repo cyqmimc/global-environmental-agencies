@@ -59,8 +59,8 @@
     ],
     "nextNdcDeadline": 2030,
     "ndc3Submitted": true,
-    "ndc3Date": "2025-09-22",
-    "ndc3Target": "65% reduction by 2035 vs. 1990 (pending 2035 detailed update)",
+    "ndc3Date": "2025-11-11",
+    "ndc3Target": "65% reduction by 2035 vs. 1990",
     "ndc3Source": "https://unfccc.int/NDCREG"
   },
   "montrealProtocol": {
@@ -89,8 +89,8 @@
     "btrSubmitted": true,
     "btrYear": 2025,
     "nationalComm": 4,
-    "statusZh": "BTR1待提交",
-    "statusEn": "BTR1 pending"
+    "statusZh": "BTR1已提交",
+    "statusEn": "BTR1 submitted"
   },
   "climateEquity": {
     "vulnerabilityIndex": 0.43,

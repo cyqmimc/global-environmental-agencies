@@ -64,8 +64,8 @@
     ],
     "nextNdcDeadline": 2030,
     "ndc3Submitted": true,
-    "ndc3Date": "2025-11-05",
-    "ndc3Target": "Update announced at COP30; quantitative target pending publication",
+    "ndc3Date": "2025-11-17",
+    "ndc3Target": "Quantitative target pending structured extraction",
     "ndc3Source": "https://unfccc.int/NDCREG"
   },
   "montrealProtocol": {
@@ -94,8 +94,8 @@
     "btrSubmitted": true,
     "btrYear": 2025,
     "nationalComm": 6,
-    "statusZh": "BTR1待提交",
-    "statusEn": "BTR1 pending"
+    "statusZh": "BTR1已提交",
+    "statusEn": "BTR1 submitted"
   },
   "climateEquity": {
     "vulnerabilityIndex": 0.44,

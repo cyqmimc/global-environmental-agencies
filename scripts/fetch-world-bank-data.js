@@ -35,7 +35,9 @@ async function fetchAllPages(url) {
   while (true) {
     const pageUrl = `${url}&page=${page}&per_page=1000`;
     const res = await fetch(pageUrl);
-    if (!res.ok) return allData;
+    if (!res.ok) {
+      throw new Error(`World Bank API returned HTTP ${res.status}`);
+    }
     const json = await res.json();
     if (!json[1] || !Array.isArray(json[1])) break;
     allData = allData.concat(json[1]);
@@ -137,6 +139,19 @@ async function main() {
   for (const [key, code] of Object.entries(INDICATORS)) {
     indicatorData[key] = await fetchIndicator(code, key);
     await new Promise((r) => setTimeout(r, 500));
+  }
+
+  // Never replace a healthy cache with null/empty data after an upstream or
+  // network outage. The fetch command is an all-indicators refresh: if even
+  // one source failed completely, leave both existing output files intact so
+  // a later retry can also preserve manually curated IQAir overrides.
+  const failedIndicators = Object.entries(indicatorData)
+    .filter(([, data]) => Object.keys(data).length === 0)
+    .map(([key]) => key);
+  if (failedIndicators.length > 0) {
+    throw new Error(
+      `No data returned for: ${failedIndicators.join(", ")}. Existing World Bank files were left unchanged.`
+    );
   }
 
   // Step 3: Build two outputs keyed by alpha-2 code.

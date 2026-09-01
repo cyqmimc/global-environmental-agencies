@@ -2,6 +2,7 @@ import BarChart from "./charts/BarChart";
 import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG, PROVENANCE } from "../constants";
 import DataYearBadge from "./DataYearBadge";
 import useDialogA11y from "../hooks/useDialogA11y";
+import { normalizeComparisonCountries } from "../utils/comparison";
 import {
   carbonIntensity,
   gdpPerCapita,
@@ -13,8 +14,9 @@ import {
 
 const COMPARE_COLORS = ["#22c55e", "#3b82f6", "#f59e0b"];
 
-export default function CompareDialog({ compareList, language, t, globalAvg, onClose, onClear }) {
+export default function CompareDialog({ compareList, language, t, onClose, onClear }) {
   const dialogRef = useDialogA11y(true, onClose);
+  const countries = normalizeComparisonCountries(compareList);
   return (
     <div
       className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4"
@@ -40,7 +42,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
             {t("国家对比", "Country Comparison")}
           </h3>
           <p className="text-blue-100 mt-1">
-            {compareList
+            {countries
               .map((c) => (language === "zh" ? c.countryZh : c.countryEn))
               .join(" vs ")}
           </p>
@@ -53,7 +55,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
               <thead>
                 <tr className="border-b border-gray-200">
                   <th className="text-left py-3 px-2 text-gray-500 font-medium"></th>
-                  {compareList.map((c, i) => (
+                  {countries.map((c, i) => (
                     <th key={c.countryEn} className="text-center py-3 px-2">
                       <div className="flex flex-col items-center gap-1">
                         <img
@@ -77,7 +79,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("机构名称", "Agency")}
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td
                       key={c.countryEn}
                       className="py-3 px-2 text-center text-gray-700"
@@ -90,7 +92,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("成立年份", "Established")}
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td
                       key={c.countryEn}
                       className="py-3 px-2 text-center font-medium"
@@ -109,7 +111,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   >
                     {t("主要职能（节选）", "Focus Areas (selected)")} ⓘ
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td
                       key={c.countryEn}
                       className="py-3 px-2 text-center"
@@ -133,7 +135,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("森林覆盖率", "Forest Coverage")}
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td
                       key={c.countryEn}
                       className="py-3 px-2 text-center font-bold text-green-700"
@@ -146,7 +148,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("碳排放", "Carbon Emission")}
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td
                       key={c.countryEn}
                       className="py-3 px-2 text-center font-bold text-red-600"
@@ -162,7 +164,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                       <DataYearBadge meta={PROVENANCE.epiScore} language={language} t={t} />
                     </div>
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td
                       key={c.countryEn}
                       className="py-3 px-2 text-center font-bold text-amber-600"
@@ -175,7 +177,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("碳中和目标", "Net Zero Target")}
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td
                       key={c.countryEn}
                       className="py-3 px-2 text-center font-bold text-cyan-700"
@@ -188,7 +190,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("可再生能源", "Renewable Energy")}
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td key={c.countryEn} className="py-3 px-2 text-center font-bold text-emerald-600">
                       {c.wb?.renewableEnergy?.toFixed(1) ?? "—"}%
                     </td>
@@ -198,7 +200,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     PM2.5 (µg/m³)
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td key={c.countryEn} className="py-3 px-2 text-center font-bold text-amber-600">
                       {c.wb?.pm25?.toFixed(1) ?? "—"}
                     </td>
@@ -208,7 +210,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("人均CO₂ (吨)", "CO₂/Capita (t)")}
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td key={c.countryEn} className="py-3 px-2 text-center font-bold text-red-500">
                       {c.wb?.co2PerCapita?.toFixed(1) ?? "—"}
                     </td>
@@ -218,7 +220,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("人口", "Population")}
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td key={c.countryEn} className="py-3 px-2 text-center font-bold text-slate-700 dark:text-slate-200">
                       {formatPopulation(c.wb?.population)}
                     </td>
@@ -226,7 +228,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                 </tr>
                 <tr className="border-b border-gray-100 dark:border-gray-800">
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">GDP</td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td key={c.countryEn} className="py-3 px-2 text-center font-bold text-slate-700 dark:text-slate-200">
                       {formatGdp(c.wb?.gdp)}
                     </td>
@@ -236,7 +238,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("人均 GDP", "GDP/Capita")}
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td key={c.countryEn} className="py-3 px-2 text-center font-bold text-slate-700 dark:text-slate-200">
                       {formatGdpPerCapita(gdpPerCapita(c))}
                     </td>
@@ -249,7 +251,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   >
                     {t("碳强度", "C. Intensity")}
                   </td>
-                  {compareList.map((c) => {
+                  {countries.map((c) => {
                     const v = carbonIntensity(c);
                     const cls = v == null
                       ? "text-gray-500 dark:text-gray-400"
@@ -269,7 +271,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("保护区面积", "Protected Areas")}
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td key={c.countryEn} className="py-3 px-2 text-center font-bold text-teal-600">
                       {c.wb?.protectedAreas?.toFixed(1) ?? "—"}%
                     </td>
@@ -279,7 +281,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("30×30 进度", "30×30 Progress")}
                   </td>
-                  {compareList.map((c) => {
+                  {countries.map((c) => {
                     const pa = c.wb?.protectedAreas;
                     return (
                       <td key={c.countryEn} className="py-3 px-2 text-center">
@@ -304,7 +306,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("NDC 评级", "NDC Rating")}
                   </td>
-                  {compareList.map((c) => {
+                  {countries.map((c) => {
                     const cfg = NDC_RATING_CONFIG[c.parisAgreement?.ndcRating];
                     return (
                       <td key={c.countryEn} className="py-3 px-2 text-center">
@@ -324,7 +326,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                       <DataYearBadge meta={PROVENANCE.carbonPricingPriceUSD} language={language} t={t} />
                     </div>
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td key={c.countryEn} className="py-3 px-2 text-center">
                       {c.carbonPricing?.priceUSD != null ? (
                         <span className="font-bold text-amber-700">${c.carbonPricing.priceUSD}/t</span>
@@ -338,7 +340,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     BTR {t("报告", "Report")}
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td key={c.countryEn} className="py-3 px-2 text-center">
                       <span className={`text-xs px-2 py-0.5 rounded-full text-white ${c.reportingStatus?.btrSubmitted ? "bg-green-600" : "bg-red-500"}`}>
                         {c.reportingStatus?.btrSubmitted ? t("已提交", "Submitted") : t("待提交", "Pending")}
@@ -350,7 +352,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     NDC 3.0
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td key={c.countryEn} className="py-3 px-2 text-center">
                       <span className={`text-xs px-2 py-0.5 rounded-full text-white ${c.parisAgreement?.ndc3Submitted ? "bg-indigo-600" : "bg-rose-500"}`}>
                         {c.parisAgreement?.ndc3Submitted ? t("已交", "Filed") : t("未交", "Pending")}
@@ -362,7 +364,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("UNCCD · LDN", "UNCCD · LDN")}
                   </td>
-                  {compareList.map((c) => {
+                  {countries.map((c) => {
                     const d = c.desertification;
                     if (!d) return <td key={c.countryEn} className="py-3 px-2 text-center text-gray-500 dark:text-gray-400">—</td>;
                     return (
@@ -388,7 +390,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   <td className="py-3 px-2 text-gray-500 dark:text-gray-400">
                     {t("NDC 承诺", "NDC Target")}
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td
                       key={c.countryEn}
                       className="py-3 px-2 text-center text-xs text-blue-800 leading-relaxed"
@@ -409,13 +411,13 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                   >
                     {t("重点公约（节选）", "Selected Treaties")} ⓘ
                   </td>
-                  {compareList.map((c) => (
+                  {countries.map((c) => (
                     <td
                       key={c.countryEn}
                       className="py-3 px-2 text-center"
                     >
                       <div className="flex flex-wrap gap-1 justify-center">
-                        {c.treaties ? (
+                        {c.treaties.length > 0 ? (
                           c.treaties.map((tr) => (
                             <span
                               key={tr}
@@ -446,7 +448,7 @@ export default function CompareDialog({ compareList, language, t, globalAvg, onC
                 t("碳排放 (Mt)", "CO₂ (Mt)"),
                 t("EPI 评分", "EPI Score"),
               ]}
-              datasets={compareList.map((c, i) => ({
+              datasets={countries.map((c, i) => ({
                 label: language === "zh" ? c.countryZh : c.countryEn,
                 data: [c.wb?.forestArea ?? 0, c.wb?.co2Mt ?? 0, c.epiScore],
                 color: COMPARE_COLORS[i],

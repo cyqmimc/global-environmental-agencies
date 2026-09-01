@@ -56,6 +56,7 @@ export default function GlobalEnvironmentalAgencies() {
   const [openCountryIso, setOpenCountryIso] = useState(urlParams.country || null);
   const [compareList, setCompareList] = useState([]);
   const [showCompare, setShowCompare] = useState(false);
+  const [compareLoading, setCompareLoading] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
   const [viewMode, setViewMode] = useState(urlParams.view || "cards");
   const [copied, setCopied] = useState(false);
@@ -708,10 +709,20 @@ export default function GlobalEnvironmentalAgencies() {
           language={language}
           t={t}
           onRemove={(c) => setCompareList(compareList.filter((x) => x.countryEn !== c.countryEn))}
+          isLoading={compareLoading}
           onOpen={async () => {
-            const enriched = await Promise.all(compareList.map((c) => loadDetail(c)));
-            setCompareList(enriched);
-            setShowCompare(true);
+            if (compareLoading || compareList.length < 2) return;
+            setCompareLoading(true);
+            const selected = compareList;
+            try {
+              const results = await Promise.allSettled(selected.map((c) => loadDetail(c)));
+              setCompareList(results.map((result, index) =>
+                result.status === "fulfilled" && result.value ? result.value : selected[index]
+              ));
+              setShowCompare(true);
+            } finally {
+              setCompareLoading(false);
+            }
           }}
         />
       )}
@@ -723,7 +734,6 @@ export default function GlobalEnvironmentalAgencies() {
               compareList={compareList}
               language={language}
               t={t}
-              globalAvg={globalAvg}
               onClose={() => setShowCompare(false)}
               onClear={() => { setShowCompare(false); setCompareList([]); }}
             />

@@ -56,11 +56,15 @@
       {
         "version": "Updated NDC",
         "year": 2021
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
       }
     ],
     "nextNdcDeadline": 2030,
-    "ndc3Submitted": false,
-    "ndc3Date": null,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-11-06",
     "ndc3Target": null,
     "ndc3Source": "https://unfccc.int/NDCREG"
   },

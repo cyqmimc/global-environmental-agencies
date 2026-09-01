@@ -126,7 +126,9 @@ data.forEach((c, i) => {
     warn(typeof c.parisAgreement.ndc3Submitted === "boolean", "parisAgreement.ndc3Submitted missing", ctx);
     if (c.parisAgreement.ndc3Submitted === true) {
       check(typeof c.parisAgreement.ndc3Date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(c.parisAgreement.ndc3Date), "parisAgreement.ndc3Date required when ndc3Submitted=true (YYYY-MM-DD)", ctx);
-      warn(typeof c.parisAgreement.ndc3Target === "string", "parisAgreement.ndc3Target missing", ctx);
+      if (c.parisAgreement.ndc3Target != null) {
+        check(typeof c.parisAgreement.ndc3Target === "string", "parisAgreement.ndc3Target must be a string or null", ctx);
+      }
       check(typeof c.parisAgreement.ndc3Source === "string", "parisAgreement.ndc3Source required for traceability", ctx);
     }
   }

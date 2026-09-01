@@ -105,7 +105,15 @@ function main() {
     good("所有国家 NDC 截止日未到");
   }
 
-  // --- 4. BTR reporting check ---
+  // --- 4. NDC 3.0 submission check ---
+  const ndc3Pending = countries.filter(c => c.parisAgreement?.ndc3Submitted !== true);
+  good(`${countries.length - ndc3Pending.length} 个国家已提交 NDC 3.0`);
+  if (ndc3Pending.length > 0) {
+    warn(`${ndc3Pending.length} 个国家 NDC 3.0 待提交: ${ndc3Pending.map(c => c.isoCode).join(", ")}`);
+    warn("→ 建议定期核查 UNFCCC NDC Registry 更新提交状态");
+  }
+
+  // --- 5. BTR reporting check ---
   const btrPending = countries.filter(c => !c.reportingStatus?.btrSubmitted);
   if (btrPending.length > 0) {
     warn(`${btrPending.length} 个国家 BTR 待提交: ${btrPending.map(c => c.isoCode).join(", ")}`);
@@ -114,7 +122,7 @@ function main() {
   const btrDone = countries.length - btrPending.length;
   good(`${btrDone} 个国家已提交 BTR`);
 
-  // --- 5. Carbon pricing staleness ---
+  // --- 6. Carbon pricing staleness ---
   const noPricing = countries.filter(c => !c.carbonPricing);
   if (noPricing.length > 0) {
     warn(`${noPricing.length} 个国家缺少碳定价数据`);
@@ -135,14 +143,14 @@ function main() {
     warn("碳定价数据建议每年更新一次 (来源: World Bank Carbon Pricing Dashboard)");
   }
 
-  // --- 6. EPI score check ---
+  // --- 7. EPI score check ---
   // EPI is published every 2 years by Yale
   const epiScores = countries.map(c => c.epiScore).filter(Boolean);
   if (epiScores.length > 0) {
     good(`EPI 评分覆盖 ${epiScores.length}/${countries.length} 个国家 (Yale EPI 每2年更新)`);
   }
 
-  // --- 7. Agency website spot check ---
+  // --- 8. Agency website spot check ---
   const noWebsite = countries.filter(c => !c.website);
   if (noWebsite.length > 0) {
     warn(`${noWebsite.length} 个国家缺少官网链接`);
@@ -150,7 +158,7 @@ function main() {
     good("所有国家官网链接完整（建议半年核查一次链接有效性）");
   }
 
-  // --- 8. Key laws check ---
+  // --- 9. Key laws check ---
   const noLaws = countries.filter(c => !c.keyLaws || c.keyLaws.length === 0);
   if (noLaws.length > 0) {
     warn(`${noLaws.length} 个国家缺少核心法律数据`);
@@ -158,7 +166,7 @@ function main() {
     good(`所有国家均有核心环保法律数据`);
   }
 
-  // --- 9. Missing fields check ---
+  // --- 10. Missing fields check ---
   const requiredFields = ["parisAgreement", "montrealProtocol", "cbd", "carbonPricing", "reportingStatus", "epiScore", "netZeroTarget"];
   for (const field of requiredFields) {
     const missing = countries.filter(c => !c[field]);
@@ -167,7 +175,7 @@ function main() {
     }
   }
 
-  // --- 10. Country coverage ---
+  // --- 11. Country coverage ---
   const regionCounts = {};
   countries.forEach(c => { regionCounts[c.region] = (regionCounts[c.region] || 0) + 1; });
   const regionInfo = Object.entries(regionCounts).map(([r, n]) => `${r}: ${n}`).join(", ");

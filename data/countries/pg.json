@@ -82,11 +82,11 @@
     "noteEn": "Accessing carbon credits through REDD+"
   },
   "reportingStatus": {
-    "btrSubmitted": false,
-    "btrYear": null,
+    "btrSubmitted": true,
+    "btrYear": 2026,
     "nationalComm": 2,
-    "statusZh": "BTR1待提交",
-    "statusEn": "BTR1 pending"
+    "statusZh": "BTR1已提交",
+    "statusEn": "BTR1 submitted"
   },
   "climateEquity": {
     "vulnerabilityIndex": 0.57,

@@ -46,11 +46,15 @@
       {
         "version": "Updated NDC",
         "year": 2020
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2025
       }
     ],
     "nextNdcDeadline": 2030,
-    "ndc3Submitted": false,
-    "ndc3Date": null,
+    "ndc3Submitted": true,
+    "ndc3Date": "2025-05-19",
     "ndc3Target": null,
     "ndc3Source": "https://unfccc.int/NDCREG"
   },
@@ -80,8 +84,8 @@
     "btrSubmitted": true,
     "btrYear": 2025,
     "nationalComm": 2,
-    "statusZh": "BTR1待提交",
-    "statusEn": "BTR1 pending"
+    "statusZh": "BTR1已提交",
+    "statusEn": "BTR1 submitted"
   },
   "climateEquity": {
     "vulnerabilityIndex": 0.53,

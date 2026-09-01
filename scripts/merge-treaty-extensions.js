@@ -99,6 +99,7 @@ listIsoCodes().forEach((iso) => {
 console.log(`✓ Merged into data/countries/<iso>.json`);
 console.log(`  · desertification entries: ${Object.keys(desertData).length - 1}/80`);
 console.log(`  · ndc3 entries: ${Object.keys(ndcData).length - 1}/80`);
+console.log(`  · desertification records added: ${added}; updated: ${updated}`);
 const ldnCount = Object.values(desertData).filter((x) => x && x.ldnTargetSet).length;
 const ndc3Count = Object.values(ndcData).filter((x) => x && x.ndc3Submitted).length;
 console.log(`  · LDN targets set: ${ldnCount}/80`);

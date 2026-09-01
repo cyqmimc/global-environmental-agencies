@@ -209,11 +209,15 @@
         {
           "version": "NDC",
           "year": 2020
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-09-13",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -406,8 +410,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 4,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.4,
@@ -544,7 +548,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "Submitted as part of the EU joint NDC."
@@ -876,8 +880,8 @@
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-09-29",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -907,8 +911,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.58,
@@ -1035,7 +1039,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "Submitted as part of the EU joint NDC."
@@ -1213,11 +1217,11 @@
       "noteEn": "No carbon pricing"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2024,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.49,
@@ -1386,8 +1390,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 4,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.43,
@@ -2187,10 +2191,10 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-09-24",
+      "ndc3Date": "2025-11-03",
       "ndc3Target": "Peaking before 2030; ~7-10% absolute net GHG cut by 2035 vs. peak",
       "ndc3Source": "https://unfccc.int/NDCREG",
-      "ndc3Note": "Announced at UNGA High-level Climate Event; formal submission filed Sep 2025."
+      "ndc3Note": "Announced on 24 September 2025; formally submitted to the UNFCCC registry on 3 November 2025."
     },
     "montrealProtocol": {
       "status": "ratified",
@@ -2355,8 +2359,8 @@
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-12-19",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -2386,8 +2390,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.47,
@@ -2517,11 +2521,15 @@
         {
           "version": "Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-11-14",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -2673,11 +2681,15 @@
         {
           "version": "NDC",
           "year": 2017
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-02-27",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -2704,11 +2716,11 @@
       "noteEn": "No carbon pricing"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2024,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.42,
@@ -2841,7 +2853,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "EU joint submission."
@@ -3010,7 +3022,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "EU joint submission."
@@ -3179,7 +3191,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "EU joint submission."
@@ -3329,12 +3341,16 @@
         {
           "version": "Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2026
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
-      "ndc3Target": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2026-06-09",
+      "ndc3Target": "32% reduction by 2035 vs. BAU",
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
@@ -3363,8 +3379,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.45,
@@ -3483,12 +3499,16 @@
         {
           "version": "Updated NDC",
           "year": 2022
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2026
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
-      "ndc3Target": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2026-06-24",
+      "ndc3Target": "14% unconditional and 31% conditional reduction by 2035 vs. BAU",
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
@@ -3517,8 +3537,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.46,
@@ -3675,8 +3695,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.46,
@@ -3839,8 +3859,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.48,
@@ -3977,7 +3997,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "EU joint submission."
@@ -4144,8 +4164,8 @@
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-09-26",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -4175,8 +4195,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 2,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.6,
@@ -4313,7 +4333,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "EU joint submission."
@@ -4473,11 +4493,15 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-11-06",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -4644,7 +4668,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "EU joint submission."
@@ -5012,8 +5036,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.53,
@@ -5145,7 +5169,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "EU joint submission."
@@ -5304,7 +5328,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "EU joint submission."
@@ -5477,8 +5501,8 @@
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-10-27",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -5508,8 +5532,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.48,
@@ -5637,7 +5661,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "EU joint submission."
@@ -5832,8 +5856,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.37,
@@ -5962,12 +5986,16 @@
         {
           "version": "Updated NDC",
           "year": 2022
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2026
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
-      "ndc3Target": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2026-04-24",
+      "ndc3Target": "47% GDP emissions-intensity reduction by 2035 vs. 2005; ~60% non-fossil installed power capacity",
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
@@ -5996,8 +6024,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.52,
@@ -6111,11 +6139,15 @@
         {
           "version": "NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-11-13",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -6142,11 +6174,11 @@
       "noteEn": "No carbon pricing mechanism"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 1,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.52,
@@ -6432,7 +6464,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "EU joint submission."
@@ -6583,11 +6615,15 @@
         {
           "version": "Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-09-22",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -6924,8 +6960,8 @@
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-04-30",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -6955,8 +6991,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.55,
@@ -7075,11 +7111,15 @@
         {
           "version": "Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-08-08",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -7106,11 +7146,11 @@
       "noteEn": "Carbon credit market developing"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2024,
       "nationalComm": 2,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.54,
@@ -7248,7 +7288,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-09-29",
+      "ndc3Date": "2025-12-26",
       "ndc3Target": "53-61% reduction by 2035 vs. 2018",
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -7403,11 +7443,15 @@
         {
           "version": "Updated NDC",
           "year": 2023
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-11-26",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -7437,8 +7481,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 4,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.4,
@@ -7557,11 +7601,15 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-09-25",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -7591,8 +7639,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.48,
@@ -7756,8 +7804,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.44,
@@ -8024,11 +8072,15 @@
         {
           "version": "Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-09-24",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -8055,11 +8107,11 @@
       "noteEn": "Carbon market under study"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.44,
@@ -8196,8 +8248,8 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-11-05",
-      "ndc3Target": "Update announced at COP30; quantitative target pending publication",
+      "ndc3Date": "2025-11-17",
+      "ndc3Target": "Quantitative target pending structured extraction",
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
@@ -8226,8 +8278,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 6,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.44,
@@ -8357,11 +8409,15 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-10-24",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -8391,8 +8447,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.42,
@@ -8512,11 +8568,15 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-11-05",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -8683,9 +8743,9 @@
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
-      "ndc3Target": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-09-22",
+      "ndc3Target": "32.2% reduction by 2035 vs. 2018",
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
@@ -8714,8 +8774,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.56,
@@ -8852,7 +8912,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "EU joint submission."
@@ -9025,7 +9085,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-04",
+      "ndc3Date": "2025-06-26",
       "ndc3Target": "70-75% reduction by 2035 vs. 1990",
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -9175,11 +9235,15 @@
         {
           "version": "Updated NDC",
           "year": 2020
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-05-19",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -9209,8 +9273,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 2,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.53,
@@ -9516,8 +9580,8 @@
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-11-06",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -9547,8 +9611,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.48,
@@ -9704,11 +9768,11 @@
       "noteEn": "Accessing carbon credits through REDD+"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2026,
       "nationalComm": 2,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.57,
@@ -9872,8 +9936,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 2,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.55,
@@ -10005,8 +10069,8 @@
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-09-24",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -10036,8 +10100,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 2,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.55,
@@ -10173,7 +10237,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "EU joint submission."
@@ -10342,7 +10406,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "EU joint submission."
@@ -10505,7 +10569,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "EU joint submission."
@@ -10674,8 +10738,8 @@
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-09-29",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -10705,8 +10769,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 8,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.39,
@@ -10837,8 +10901,8 @@
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-12-31",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -10868,8 +10932,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.41,
@@ -11005,7 +11069,7 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-02-26",
+      "ndc3Date": "2025-11-05",
       "ndc3Target": "EU joint 2035 NDC",
       "ndc3Source": "https://unfccc.int/NDCREG",
       "ndc3Note": "EU joint submission."
@@ -11494,8 +11558,8 @@
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-11-04",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -11525,8 +11589,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.46,
@@ -11663,8 +11727,8 @@
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-11-09",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -11694,8 +11758,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 7,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.42,
@@ -11982,8 +12046,8 @@
       ],
       "nextNdcDeadline": 2030,
       "ndc3Submitted": true,
-      "ndc3Date": "2025-09-22",
-      "ndc3Target": "65% reduction by 2035 vs. 1990 (pending 2035 detailed update)",
+      "ndc3Date": "2025-11-11",
+      "ndc3Target": "65% reduction by 2035 vs. 1990",
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
     "montrealProtocol": {
@@ -12012,8 +12076,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 4,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.43,
@@ -12333,8 +12397,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 4,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.36,
@@ -12452,11 +12516,15 @@
         {
           "version": "Updated NDC",
           "year": 2021
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-11-06",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -12483,11 +12551,11 @@
       "noteEn": "Carbon market under study"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2024,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.44,
@@ -12601,11 +12669,15 @@
         {
           "version": "NDC",
           "year": 2017
+        },
+        {
+          "version": "NDC 3.0",
+          "year": 2025
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-10-28",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -12632,11 +12704,11 @@
       "noteEn": "No carbon pricing"
     },
     "reportingStatus": {
-      "btrSubmitted": false,
-      "btrYear": null,
+      "btrSubmitted": true,
+      "btrYear": 2025,
       "nationalComm": 2,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.48,
@@ -12800,8 +12872,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 3,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.5,
@@ -12937,8 +13009,8 @@
         }
       ],
       "nextNdcDeadline": 2030,
-      "ndc3Submitted": false,
-      "ndc3Date": null,
+      "ndc3Submitted": true,
+      "ndc3Date": "2025-10-24",
       "ndc3Target": null,
       "ndc3Source": "https://unfccc.int/NDCREG"
     },
@@ -12968,8 +13040,8 @@
       "btrSubmitted": true,
       "btrYear": 2025,
       "nationalComm": 4,
-      "statusZh": "BTR1待提交",
-      "statusEn": "BTR1 pending"
+      "statusZh": "BTR1已提交",
+      "statusEn": "BTR1 submitted"
     },
     "climateEquity": {
       "vulnerabilityIndex": 0.47,

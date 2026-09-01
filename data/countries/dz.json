@@ -46,12 +46,16 @@
       {
         "version": "Updated NDC",
         "year": 2022
+      },
+      {
+        "version": "NDC 3.0",
+        "year": 2026
       }
     ],
     "nextNdcDeadline": 2030,
-    "ndc3Submitted": false,
-    "ndc3Date": null,
-    "ndc3Target": null,
+    "ndc3Submitted": true,
+    "ndc3Date": "2026-06-24",
+    "ndc3Target": "14% unconditional and 31% conditional reduction by 2035 vs. BAU",
     "ndc3Source": "https://unfccc.int/NDCREG"
   },
   "montrealProtocol": {
@@ -80,8 +84,8 @@
     "btrSubmitted": true,
     "btrYear": 2025,
     "nationalComm": 3,
-    "statusZh": "BTR1待提交",
-    "statusEn": "BTR1 pending"
+    "statusZh": "BTR1已提交",
+    "statusEn": "BTR1 submitted"
   },
   "climateEquity": {
     "vulnerabilityIndex": 0.46,
