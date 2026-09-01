@@ -1,7 +1,5 @@
 import { ImageResponse } from "@vercel/og";
 
-export const config = { runtime: "edge" };
-
 const NDC_LABELS = {
   "1.5C": { text: "1.5°C", color: "#16a34a" },
   "2C": { text: "2°C", color: "#65a30d" },
