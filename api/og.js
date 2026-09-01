@@ -30,7 +30,7 @@ const NDC_LABELS = {
 		color: "#9ca3af"
 	}
 };
-export default async function handler(req) {
+export async function GET(req) {
 	const getHeader = (name) => req.headers?.get?.(name) ?? req.headers?.[name];
 	const host = getHeader("x-forwarded-host") ?? getHeader("host") ?? "global-env-tracker.vercel.app";
 	const protocol = getHeader("x-forwarded-proto") ?? "https";
@@ -242,6 +242,7 @@ export default async function handler(req) {
 		height: 630
 	});
 }
+export const HEAD = GET;
 function MetricCard({ label, value, color }) {
 	return /* @__PURE__ */ _jsxs("div", {
 		style: {
