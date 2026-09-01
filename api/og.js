@@ -31,7 +31,11 @@ const NDC_LABELS = {
 	}
 };
 export default async function handler(req) {
-	const { searchParams } = new URL(req.url);
+	const getHeader = (name) => req.headers?.get?.(name) ?? req.headers?.[name];
+	const host = getHeader("x-forwarded-host") ?? getHeader("host") ?? "global-env-tracker.vercel.app";
+	const protocol = getHeader("x-forwarded-proto") ?? "https";
+	const requestUrl = new URL(req.url, `${protocol}://${host}`);
+	const { searchParams } = requestUrl;
 	const iso = searchParams.get("country")?.toLowerCase();
 	if (!iso) {
 		return new ImageResponse(defaultImage(), {
@@ -40,7 +44,7 @@ export default async function handler(req) {
 		});
 	}
 	// Fetch country data
-	const baseUrl = new URL(req.url).origin;
+	const baseUrl = requestUrl.origin;
 	let data;
 	try {
 		const res = await fetch(`${baseUrl}/og-data.json`);
