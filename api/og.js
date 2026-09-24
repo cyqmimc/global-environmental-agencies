@@ -129,7 +129,7 @@ export async function GET(req) {
 								fontSize: 48,
 								fontWeight: 800
 							},
-							children: data.epi
+							children: data.epi == null ? "—" : String(data.epi)
 						}), /* @__PURE__ */ _jsx("div", {
 							style: {
 								fontSize: 14,
