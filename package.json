@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender.js",
+    "build": "vite build && node scripts/prerender.js && node scripts/generate-api.js",
     "preview": "vite preview",
     "fetch-data": "node scripts/fetch-world-bank-data.js",
     "fetch-sdg-data": "node scripts/fetch-un-sdg-data.js",

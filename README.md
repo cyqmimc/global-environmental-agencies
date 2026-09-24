@@ -51,6 +51,22 @@ npm run dev          # 启动开发服务器
 npm run build        # 生产构建
 ```
 
+## Netlify 部署
+
+正式站点：https://global-env-tracker.netlify.app/
+
+项目根目录的 `netlify.toml` 配置了 Node 22、构建命令、`dist` 发布目录、旧国家链接跳转、SPA 路由和公共 API 响应头。`netlify/functions/og.mts` 提供 `/api/og` 分享图片接口。
+
+连接 GitHub 仓库并选择 `main` 分支后，Netlify 可在推送时自动构建部署。首次本地发布：
+
+```bash
+npx netlify login
+npx netlify init
+npx netlify deploy --prod
+```
+
+构建期优先使用 `SITE_URL`，其次使用 Netlify 的 `URL` 环境变量生成 canonical、站点地图和 API 来源链接。绑定自定义域名时可设置 `SITE_URL`。
+
 ## 数据维护
 
 ```bash

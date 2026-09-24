@@ -3,7 +3,7 @@
 // API's _meta.project.url all derive from it), so it lives in one place
 // instead of two copies that could drift.
 //
-export const BASE_URL = "https://global-env-tracker.vercel.app";
+export const BASE_URL = (process.env.SITE_URL || process.env.URL || "https://global-env-tracker.vercel.app").replace(/\/$/, "");
 
 export const SITE_NAME_ZH = "全球环境治理观察";
 export const SITE_NAME_EN = "Global Environmental Governance Tracker";
