@@ -140,6 +140,7 @@ function flattenCountry(country, wbRow, scores) {
     forestAreaYear: dataYear.forestArea ?? null,
     co2Mt: wb.co2Mt ?? null,
     co2PerCapitaT: wb.co2PerCapita ?? null,
+    co2PerCapitaYear: dataYear.co2PerCapita ?? null,
     co2Year: dataYear.co2Mt ?? null,
     renewableEnergyPercent: wb.renewableEnergy ?? null,
     renewableEnergyYear: dataYear.renewableEnergy ?? null,

@@ -5,8 +5,10 @@
 ## 快速更新（一键）
 
 ```bash
-npm run update-all   # = build + WB + UN SDG + split + validate + check
+npm run update-all   # build + WB + UN SDG + split + validate + verify + check
 ```
+
+更新请求具有 30 秒超时和最多 2 次重试；分页异常或 SDG 任一指标零覆盖会中止。任一步骤报错时，一键更新恢复运行前的 7 份 JSON 快照。运行期间请勿并行更新或构建；强制终止进程不保证回滚。
 
 ## 数据流架构
 
@@ -39,7 +41,7 @@ UN SDG API ──→ fetch-un-sdg-data.js ──→ sdg-latest.json（4 个环�
 | 世界银行环境指标 | `npm run fetch-data` | 每季度 | CO₂(AR5→2024)、森林、可再生能源、PM2.5、保护区、人口、GDP |
 | 联合国 SDG 环境指标 | `npm run fetch-sdg-data` | 每季度 | 6.4.2 水压力、12.2.2 材料效率、14.5.1 海洋 KBA、15.3.1 土地退化 |
 | PM2.5 补充 | 手动更新 wb-latest.json | 每年 | IQAir World Air Quality Report (地面监测, 优先于WB卫星数据) |
-| 碳定价 | 手动更新 countries.json | 每年 | WB Carbon Pricing Dashboard Excel 下载 |
+| 碳定价 | 手动更新 data/countries/<iso>.json 后运行 build-data | 每年 | WB Carbon Pricing Dashboard Excel 下载 |
 
 ## 手动维护数据
 
@@ -131,7 +133,7 @@ node -e "JSON.parse(require('fs').readFileSync('public/countries.json','utf8'));
 
 | 数据类别 | 更新日期 | 操作人 |
 |---------|---------|--------|
-| 世界银行指标 | 2026-09-01 | 刷新至最新 WB 数据（人口/GDP 主要更新至2025年）；保留 IQAir 2024 PM2.5 覆盖值 |
+| 世界银行指标 | 2026-09-24 | 官方 API 复核，数值未变；保留 67 国 IQAir 2024 覆盖值，补齐人均 CO₂ 年份 |
 | 碳定价数据 | 2026-04-03 | WB Carbon Pricing Dashboard (2025-04-01数据) |
 | NDC 评级 | 2026-04-02 | 手动录入 |
 | NDC 3.0 (2035目标) | 2026-09-01 | 63/80 国已提交；按 UNFCCC NDC Registry 核对提交日期，明确目标保留官方数值 |
@@ -142,4 +144,4 @@ node -e "JSON.parse(require('fs').readFileSync('public/countries.json','utf8'));
 | CBD 30×30 | 2026-04-01 | 手动录入 |
 | 机构信息 | 2026-04-01 | 手动录入 |
 | EPI 评分 | 2026-04-01 | 手动录入 (2024 EPI) |
-| 联合国 SDG 环境指标 | 2026-09-01 | UN Global SDG Indicators Database 2026.Q2.G.02；各系列采用最新共同年份 |
+| 联合国 SDG 环境指标 | 2026-09-24 | UN Global SDG Indicators Database 2026.Q2.G.02；各系列采用最新共同年份 |

@@ -156,8 +156,8 @@ let wb;
 try {
   wb = JSON.parse(fs.readFileSync(wbPath, "utf8"));
 } catch {
-  console.warn("⚠ wb-latest.json not present, skipping WB schema check");
-  process.exit(0);
+  console.error("✗ wb-latest.json missing or invalid JSON; run the data update before validation");
+  process.exit(1);
 }
 
 const wbErrors = [];
@@ -246,8 +246,8 @@ let wbHistory;
 try {
   wbHistory = JSON.parse(fs.readFileSync(historyPath, "utf8"));
 } catch {
-  console.warn("⚠ wb-history.json not present, skipping history schema check");
-  process.exit(0);
+  console.error("✗ wb-history.json missing or invalid JSON; run the data update before validation");
+  process.exit(1);
 }
 
 const historyErrors = [];
@@ -293,8 +293,8 @@ let sdg;
 try {
   sdg = JSON.parse(fs.readFileSync(sdgPath, "utf8"));
 } catch {
-  console.warn("⚠ sdg-latest.json not present, skipping SDG schema check");
-  process.exit(0);
+  console.error("✗ sdg-latest.json missing or invalid JSON; run the data update before validation");
+  process.exit(1);
 }
 
 const sdgErrors = [];

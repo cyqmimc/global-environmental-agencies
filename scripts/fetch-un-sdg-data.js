@@ -9,6 +9,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { fetchJson as requestJson, validatePage } from "./update-utils.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -90,16 +91,13 @@ function normalizeName(value) {
 }
 
 async function fetchJson(url, options = {}) {
-  const response = await fetch(url, {
+  return requestJson(url, {
     headers: {
       Accept: "application/json",
       "User-Agent": "global-environmental-governance-tracker/1.0",
     },
-    signal: AbortSignal.timeout(120_000),
     ...options,
   });
-  if (!response.ok) throw new Error(`UN SDG API ${response.status}: ${url}`);
-  return response.json();
 }
 
 function dimensionsMatch(row, expected) {
@@ -111,7 +109,10 @@ export function pickLatestObservation(rows, config, geoAreaCode) {
     (row) =>
       String(row.geoAreaCode) === String(geoAreaCode) &&
       dimensionsMatch(row, config.dimensions) &&
-      Number.isFinite(Number(row.value)),
+      (typeof row.value === "number" || (typeof row.value === "string" && row.value.trim() !== "")) &&
+      Number.isFinite(Number(row.value)) &&
+      Number.isInteger(Number(row.timePeriodStart)) &&
+      Number(row.timePeriodStart) >= 2015,
   );
   if (!matches.length) return null;
   matches.sort((a, b) => Number(b.timePeriodStart) - Number(a.timePeriodStart));
@@ -156,8 +157,9 @@ async function fetchSeriesRows(config, release) {
     // behaviour (timePeriodStart/timePeriodEnd returns only the start year).
     params.append("timePeriod", String(dataYear));
     const payload = await fetchJson(`${API_BASE}/Series/Data?${params}`);
-    allRows.push(...(payload.data || []));
-    totalPages = payload.totalPages || 1;
+    validatePage(payload.data, payload.totalPages, page);
+    allRows.push(...payload.data);
+    totalPages = payload.totalPages;
     page += 1;
   } while (page <= totalPages);
   return { rows: allRows, dataYear };
@@ -247,6 +249,12 @@ async function main() {
       }
     }
     output.countries[country.isoCode] = snapshot;
+  }
+
+  for (const config of SERIES_CONFIG) {
+    if (output.meta.indicators[config.key].coverage === 0) {
+      throw new Error(`No matching observations for ${config.series}; existing snapshot left unchanged`);
+    }
   }
 
   const outputPath = path.join(ROOT, "public", "sdg-latest.json");

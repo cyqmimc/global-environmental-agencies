@@ -18,7 +18,7 @@
     "fetch-sdg-data": "node scripts/fetch-un-sdg-data.js",
     "split-data": "node scripts/split-countries.js",
     "build-data": "node scripts/build-countries.js && node scripts/split-countries.js",
-    "update-all": "node scripts/build-countries.js && node scripts/fetch-world-bank-data.js && node scripts/fetch-un-sdg-data.js && node scripts/split-countries.js && node scripts/validate-schema.js && node scripts/check-updates.js",
+    "update-all": "node scripts/update-all.js",
     "check-updates": "node scripts/check-updates.js",
     "check-links": "node scripts/check-links.js",
     "validate": "node scripts/validate-schema.js",

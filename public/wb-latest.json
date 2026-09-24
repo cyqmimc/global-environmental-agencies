@@ -1,7 +1,7 @@
 {
   "meta": {
-    "fetchedAt": "2026-09-01T02:48:12.640Z",
-    "dateRange": "2015:2025",
+    "fetchedAt": "2026-09-24T07:17:34.484Z",
+    "dateRange": "2015:2026",
     "indicators": {
       "forestArea": "AG.LND.FRST.ZS",
       "co2Mt": "EN.GHG.CO2.MT.CE.AR5",
@@ -15,690 +15,6 @@
     "pm25Source": "IQAir 2024 World Air Quality Report (ground-level monitoring, population-weighted)"
   },
   "countries": {
-    "us": {
-      "forestArea": 33.87,
-      "co2Mt": 4632.16,
-      "renewableEnergy": 10.9,
-      "pm25": 7.1,
-      "protectedAreas": 15.8,
-      "population": 341784857,
-      "gdp": 30769700000000,
-      "co2PerCapita": 13.62,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "cn": {
-      "forestArea": 24.03,
-      "co2Mt": 13124.73,
-      "renewableEnergy": 15.2,
-      "pm25": 31,
-      "protectedAreas": 14.7,
-      "population": 1406585000,
-      "gdp": 19498039388042.6,
-      "co2PerCapita": 9.32,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "de": {
-      "forestArea": 32.68,
-      "co2Mt": 579.94,
-      "renewableEnergy": 17.6,
-      "pm25": 9,
-      "protectedAreas": 40,
-      "population": 83491249,
-      "gdp": 5050922925047.05,
-      "co2PerCapita": 6.94,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "jp": {
-      "forestArea": 68.4,
-      "co2Mt": 972.27,
-      "renewableEnergy": 8.8,
-      "pm25": 8.6,
-      "protectedAreas": 15.1,
-      "population": 123366734,
-      "gdp": 4435162999976.94,
-      "co2PerCapita": 7.84,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "fr": {
-      "forestArea": 32.48,
-      "co2Mt": 274.45,
-      "renewableEnergy": 16.2,
-      "pm25": 8.1,
-      "protectedAreas": 36.7,
-      "population": 68720337,
-      "gdp": 3366315927447.33,
-      "co2PerCapita": 4,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "in": {
-      "forestArea": 24.54,
-      "co2Mt": 3153.83,
-      "renewableEnergy": 34.9,
-      "pm25": 50.6,
-      "protectedAreas": 4.5,
-      "population": 1463865525,
-      "gdp": 3956067115771.63,
-      "co2PerCapita": 2.17,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "gb": {
-      "forestArea": 13.29,
-      "co2Mt": 292.42,
-      "renewableEnergy": 12.2,
-      "pm25": 7.4,
-      "protectedAreas": 42.1,
-      "population": 69487000,
-      "gdp": 4002587541846.01,
-      "co2PerCapita": 4.22,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "br": {
-      "forestArea": 58.98,
-      "co2Mt": 491.47,
-      "renewableEnergy": 46.5,
-      "pm25": 13.38,
-      "protectedAreas": 29.4,
-      "population": 212812405,
-      "gdp": 2279920092492.13,
-      "co2PerCapita": 2.32,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2023,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "au": {
-      "forestArea": 17.42,
-      "co2Mt": 383.4,
-      "renewableEnergy": 12.3,
-      "pm25": 4.5,
-      "protectedAreas": 33.5,
-      "population": 27614411,
-      "gdp": 1798518933689.21,
-      "co2PerCapita": 14.1,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "za": {
-      "forestArea": 13.97,
-      "co2Mt": 440.17,
-      "renewableEnergy": 9.7,
-      "pm25": 18.8,
-      "protectedAreas": 12.9,
-      "population": 64747319,
-      "gdp": 427184325997.31,
-      "co2PerCapita": 6.88,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "ca": {
-      "forestArea": 39.46,
-      "co2Mt": 577.97,
-      "renewableEnergy": 23.8,
-      "pm25": 6.7,
-      "protectedAreas": 11.6,
-      "population": 41651653,
-      "gdp": 2319899772425.92,
-      "co2PerCapita": 14.01,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "mx": {
-      "forestArea": 33.6,
-      "co2Mt": 475.99,
-      "renewableEnergy": 13,
-      "pm25": 17.4,
-      "protectedAreas": 19.9,
-      "population": 131946900,
-      "gdp": 1832641364775.52,
-      "co2PerCapita": 3.64,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "sa": {
-      "forestArea": 0.45,
-      "co2Mt": 652.51,
-      "renewableEnergy": 0.1,
-      "pm25": 25.1,
-      "protectedAreas": 17,
-      "population": 36973555,
-      "gdp": 1276942933333.33,
-      "co2PerCapita": 18.48,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "id": {
-      "forestArea": 47.72,
-      "co2Mt": 812.2,
-      "renewableEnergy": 20.2,
-      "pm25": 35.5,
-      "protectedAreas": 5.2,
-      "population": 285721236,
-      "gdp": 1445642584163.81,
-      "co2PerCapita": 2.87,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "it": {
-      "forestArea": 32.89,
-      "co2Mt": 299.23,
-      "renewableEnergy": 17.5,
-      "pm25": 14.2,
-      "protectedAreas": 14.8,
-      "population": 58915656,
-      "gdp": 2551556954100.35,
-      "co2PerCapita": 5.08,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "es": {
-      "forestArea": 37.19,
-      "co2Mt": 220.08,
-      "renewableEnergy": 19,
-      "pm25": 8.7,
-      "protectedAreas": 22.1,
-      "population": 49355143,
-      "gdp": 1906453309985.88,
-      "co2PerCapita": 4.51,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "ru": {
-      "forestArea": 49.78,
-      "co2Mt": 2009.15,
-      "renewableEnergy": 3.5,
-      "pm25": 9.8,
-      "protectedAreas": 8.6,
-      "population": 143513328,
-      "gdp": 2561310169358.74,
-      "co2PerCapita": 13.98,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "sg": {
-      "forestArea": 20.93,
-      "co2Mt": 58.87,
-      "renewableEnergy": 1.1,
-      "pm25": 11.4,
-      "protectedAreas": 2.1,
-      "population": 6111175,
-      "gdp": 603869516998.74,
-      "co2PerCapita": 9.75,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "eg": {
-      "forestArea": 0.05,
-      "co2Mt": 291.64,
-      "renewableEnergy": 6.1,
-      "pm25": 39.8,
-      "protectedAreas": 11.6,
-      "population": 118365995,
-      "gdp": 365254630179.74,
-      "co2PerCapita": 2.5,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "kr": {
-      "forestArea": 64.11,
-      "co2Mt": 588.01,
-      "renewableEnergy": 3.6,
-      "pm25": 17,
-      "protectedAreas": 5.9,
-      "population": 51684564,
-      "gdp": 1872374961553.15,
-      "co2PerCapita": 11.36,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "se": {
-      "forestArea": 68.7,
-      "co2Mt": 37.77,
-      "renewableEnergy": 57.9,
-      "pm25": 5.3,
-      "protectedAreas": 15.9,
-      "population": 10596620,
-      "gdp": 668998664082.08,
-      "co2PerCapita": 3.57,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "no": {
-      "forestArea": 33.5,
-      "co2Mt": 40,
-      "renewableEnergy": 61.4,
-      "pm25": 6.6,
-      "protectedAreas": 5.4,
-      "population": 5610870,
-      "gdp": 530755719438.88,
-      "co2PerCapita": 7.18,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "nz": {
-      "forestArea": 37.79,
-      "co2Mt": 31.81,
-      "renewableEnergy": 28.9,
-      "pm25": 4.4,
-      "protectedAreas": 30.6,
-      "population": 5324700,
-      "gdp": 264057413739.97,
-      "co2PerCapita": 6.01,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "ke": {
-      "forestArea": 6.22,
-      "co2Mt": 21.64,
-      "renewableEnergy": 67.7,
-      "pm25": 14.3,
-      "protectedAreas": 11.8,
-      "population": 57532493,
-      "gdp": 135941278878.82,
-      "co2PerCapita": 0.38,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "ng": {
-      "forestArea": 23.21,
-      "co2Mt": 131.91,
-      "renewableEnergy": 80.3,
-      "pm25": 40.1,
-      "protectedAreas": 11.6,
-      "population": 237527782,
-      "gdp": 290794361542.11,
-      "co2PerCapita": 0.57,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "ar": {
-      "forestArea": 10.32,
-      "co2Mt": 183.27,
-      "renewableEnergy": 9.2,
-      "pm25": 8.7,
-      "protectedAreas": 9.7,
-      "population": 45851378,
-      "gdp": 683097891618.6,
-      "co2PerCapita": 4.01,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "co": {
-      "forestArea": 52.77,
-      "co2Mt": 95.08,
-      "renewableEnergy": 29.7,
-      "pm25": 13.8,
-      "protectedAreas": 26.5,
-      "population": 53425635,
-      "gdp": 457410034202.52,
-      "co2PerCapita": 1.8,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "th": {
-      "forestArea": 38.69,
-      "co2Mt": 283.81,
-      "renewableEnergy": 19,
-      "pm25": 19.8,
-      "protectedAreas": 13.4,
-      "population": 71619863,
-      "gdp": 577009981112.02,
-      "co2PerCapita": 3.96,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "nl": {
-      "forestArea": 11.06,
-      "co2Mt": 118.79,
-      "renewableEnergy": 12.2,
-      "pm25": 8.9,
-      "protectedAreas": 29.8,
-      "population": 18087633,
-      "gdp": 1332767651100.39,
-      "co2PerCapita": 6.6,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "tr": {
-      "forestArea": 29.48,
-      "co2Mt": 460.03,
-      "renewableEnergy": 12,
-      "pm25": 15.3,
-      "protectedAreas": 5.7,
-      "population": 85878556,
-      "gdp": 1597293229287,
-      "co2PerCapita": 5.38,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "dk": {
-      "forestArea": 15.78,
-      "co2Mt": 25.57,
-      "renewableEnergy": 39.5,
-      "pm25": 7.2,
-      "protectedAreas": 23.8,
-      "population": 6009169,
-      "gdp": 462526660468.39,
-      "co2PerCapita": 4.28,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "fi": {
-      "forestArea": 73.72,
-      "co2Mt": 31.11,
-      "renewableEnergy": 50.2,
-      "pm25": 5.2,
-      "protectedAreas": 13.5,
-      "population": 5646436,
-      "gdp": 317039368819.61,
-      "co2PerCapita": 5.54,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "ch": {
-      "forestArea": 32.38,
-      "co2Mt": 33.73,
-      "renewableEnergy": 27.7,
-      "pm25": 7.3,
-      "protectedAreas": 12.5,
-      "population": 9092436,
-      "gdp": 1043529899250.92,
-      "co2PerCapita": 3.75,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "at": {
-      "forestArea": 47.24,
-      "co2Mt": 58.03,
-      "renewableEnergy": 36,
-      "pm25": 10.2,
-      "protectedAreas": 29.6,
-      "population": 9208163,
-      "gdp": 579470021095.42,
-      "co2PerCapita": 6.32,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "pt": {
-      "forestArea": 36.15,
-      "co2Mt": 35.56,
-      "renewableEnergy": 32.3,
-      "pm25": 6.8,
-      "protectedAreas": 17.2,
-      "population": 10804871,
-      "gdp": 346639825141.82,
-      "co2PerCapita": 3.32,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "il": {
-      "forestArea": 6.47,
-      "co2Mt": 57.67,
-      "renewableEnergy": 6.2,
-      "pm25": 17.2,
-      "protectedAreas": 12.2,
-      "population": 10122800,
-      "gdp": 610777842873.6,
-      "co2PerCapita": 5.77,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
     "ae": {
       "forestArea": 4.47,
       "co2Mt": 200.56,
@@ -715,710 +31,8 @@
         "pm25": 2024,
         "protectedAreas": 2025,
         "population": 2025,
-        "gdp": 2024
-      }
-    },
-    "my": {
-      "forestArea": 57.72,
-      "co2Mt": 295.95,
-      "renewableEnergy": 7.5,
-      "pm25": 18.3,
-      "protectedAreas": 8.4,
-      "population": 35977838,
-      "gdp": 472193128644.6,
-      "co2PerCapita": 8.32,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "vn": {
-      "forestArea": 47.45,
-      "co2Mt": 430.82,
-      "renewableEnergy": 24.2,
-      "pm25": 28.7,
-      "protectedAreas": 2.9,
-      "population": 101598527,
-      "gdp": 514697215165.07,
-      "co2PerCapita": 4.27,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "ph": {
-      "forestArea": 24.46,
-      "co2Mt": 174.11,
-      "renewableEnergy": 28,
-      "pm25": 14.8,
-      "protectedAreas": 3.6,
-      "population": 116786962,
-      "gdp": 487086123720.42,
-      "co2PerCapita": 1.5,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "cl": {
-      "forestArea": 25.01,
-      "co2Mt": 77.82,
-      "renewableEnergy": 24.2,
-      "pm25": 23.1,
-      "protectedAreas": 37.9,
-      "population": 19859921,
-      "gdp": 357371159574.86,
-      "co2PerCapita": 3.94,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2023,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "pe": {
-      "forestArea": 56.1,
-      "co2Mt": 69.27,
-      "renewableEnergy": 30.6,
-      "pm25": 17.1,
-      "protectedAreas": 16.5,
-      "population": 34576665,
-      "gdp": 334854659181.89,
-      "co2PerCapita": 2.02,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "ma": {
-      "forestArea": 12.94,
-      "co2Mt": 70.04,
-      "renewableEnergy": 10.9,
-      "pm25": 18.72,
-      "protectedAreas": 1.4,
-      "population": 38430770,
-      "gdp": 182374250612.28,
-      "co2PerCapita": 1.84,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2023,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "gh": {
-      "forestArea": 35.19,
-      "co2Mt": 24.17,
-      "renewableEnergy": 39,
-      "pm25": 35.8,
-      "protectedAreas": 7.9,
-      "population": 35064272,
-      "gdp": 114209905278.72,
-      "co2PerCapita": 0.7,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "cr": {
-      "forestArea": 60.4,
-      "co2Mt": 8.38,
-      "renewableEnergy": 34.2,
-      "pm25": 7,
-      "protectedAreas": 28.2,
-      "population": 5152950,
-      "gdp": 102904921157.48,
-      "co2PerCapita": 1.63,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "pl": {
-      "forestArea": 31.08,
-      "co2Mt": 276.06,
-      "renewableEnergy": 15.2,
-      "pm25": 14.8,
-      "protectedAreas": 38.1,
-      "population": 36435861,
-      "gdp": 1035491784197.44,
-      "co2PerCapita": 7.55,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "fj": {
-      "forestArea": 63.5,
-      "co2Mt": 1.51,
-      "renewableEnergy": 28.4,
-      "pm25": 6.45,
-      "protectedAreas": 1,
-      "population": 933154,
-      "gdp": 6198013062.07,
-      "co2PerCapita": 1.62,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2022,
-        "pm25": 2023,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "et": {
-      "forestArea": 14.93,
-      "co2Mt": 19.36,
-      "renewableEnergy": 90.6,
-      "pm25": 22.2,
-      "protectedAreas": 17,
-      "population": 135472051,
-      "gdp": 126358758448.36,
-      "co2PerCapita": 0.15,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "pk": {
-      "forestArea": 4.67,
-      "co2Mt": 203.99,
-      "renewableEnergy": 41.6,
-      "pm25": 73.7,
-      "protectedAreas": 15.2,
-      "population": 255219554,
-      "gdp": 407307214476.22,
-      "co2PerCapita": 0.81,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "bd": {
-      "forestArea": 14.49,
-      "co2Mt": 124.19,
-      "renewableEnergy": 25,
-      "pm25": 78,
-      "protectedAreas": 5.9,
-      "population": 175686899,
-      "gdp": 456319229255.58,
-      "co2PerCapita": 0.72,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "iq": {
-      "forestArea": 1.9,
-      "co2Mt": 238.67,
-      "renewableEnergy": 1.1,
-      "pm25": 38.4,
-      "protectedAreas": 1.5,
-      "population": 47020774,
-      "gdp": 254367293538.46,
-      "co2PerCapita": 5.18,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "ir": {
-      "forestArea": 6.65,
-      "co2Mt": 828.99,
-      "renewableEnergy": 0.9,
-      "pm25": 40.25,
-      "protectedAreas": 7,
-      "population": 92417681,
-      "gdp": 362682115433.36,
-      "co2PerCapita": 9.05,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2023,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "kz": {
-      "forestArea": 1.31,
-      "co2Mt": 258.8,
-      "renewableEnergy": 2,
-      "pm25": 15.1,
-      "protectedAreas": 11.8,
-      "population": 20843754,
-      "gdp": 306239209650.02,
-      "co2PerCapita": 12.57,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "ua": {
-      "forestArea": 16.76,
-      "co2Mt": 118.48,
-      "renewableEnergy": 8.9,
-      "pm25": 9.2,
-      "protectedAreas": 17.9,
-      "population": 38980376,
-      "gdp": 214233312784.4,
-      "co2PerCapita": 3.13,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "gr": {
-      "forestArea": 30.27,
-      "co2Mt": 52.51,
-      "renewableEnergy": 21.5,
-      "pm25": 11.5,
-      "protectedAreas": 11.2,
-      "population": 10413962,
-      "gdp": 280635521324.44,
-      "co2PerCapita": 5.05,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "ie": {
-      "forestArea": 11.53,
-      "co2Mt": 32.57,
-      "renewableEnergy": 12.7,
-      "pm25": 6.5,
-      "protectedAreas": 4,
-      "population": 5484367,
-      "gdp": 721701359046.31,
-      "co2PerCapita": 6.04,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "ro": {
-      "forestArea": 30.12,
-      "co2Mt": 70.88,
-      "renewableEnergy": 23.6,
-      "pm25": 15.3,
-      "protectedAreas": 24.3,
-      "population": 19020271,
-      "gdp": 428677977854.83,
-      "co2PerCapita": 3.72,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "cz": {
-      "forestArea": 34.76,
-      "co2Mt": 77.75,
-      "renewableEnergy": 17.2,
-      "pm25": 12.7,
-      "protectedAreas": 21.9,
-      "population": 10886878,
-      "gdp": 391026962800.48,
-      "co2PerCapita": 7.13,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "be": {
-      "forestArea": 22.6,
-      "co2Mt": 86.65,
-      "renewableEnergy": 11.7,
-      "pm25": 8.9,
-      "protectedAreas": 18.6,
-      "population": 11941781,
-      "gdp": 725466462859.65,
-      "co2PerCapita": 7.31,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "hu": {
-      "forestArea": 22.45,
-      "co2Mt": 42.63,
-      "renewableEnergy": 15.3,
-      "pm25": 12.9,
-      "protectedAreas": 22.3,
-      "population": 9514251,
-      "gdp": 246490213513.05,
-      "co2PerCapita": 4.46,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "tz": {
-      "forestArea": 50.05,
-      "co2Mt": 21.34,
-      "renewableEnergy": 78.3,
-      "pm25": 20.17,
-      "protectedAreas": 32.3,
-      "population": 70545865,
-      "gdp": 90143496090.44,
-      "co2PerCapita": 0.31,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2023,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "dz": {
-      "forestArea": 0.83,
-      "co2Mt": 186.36,
-      "renewableEnergy": 0.1,
-      "pm25": 15.4,
-      "protectedAreas": 4.4,
-      "population": 47435312,
-      "gdp": 287031225987.74,
-      "co2PerCapita": 3.98,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "sn": {
-      "forestArea": 41.28,
-      "co2Mt": 14.2,
-      "renewableEnergy": 35.4,
-      "pm25": 22.3,
-      "protectedAreas": 16.6,
-      "population": 18931966,
-      "gdp": 37006536238.37,
-      "co2PerCapita": 0.77,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "cd": {
-      "forestArea": 54.19,
-      "co2Mt": 6.21,
-      "renewableEnergy": 96.3,
-      "pm25": 58.2,
-      "protectedAreas": 14.9,
-      "population": 112832473,
-      "gdp": 91030531316.99,
-      "co2PerCapita": 0.06,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "ec": {
-      "forestArea": 49.55,
-      "co2Mt": 47.96,
-      "renewableEnergy": 18.9,
-      "pm25": 9.7,
-      "protectedAreas": 20.2,
-      "population": 18289896,
-      "gdp": 130320560400,
-      "co2PerCapita": 2.64,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "uy": {
-      "forestArea": 11.96,
-      "co2Mt": 8.7,
-      "renewableEnergy": 57.8,
-      "pm25": 11.5,
-      "protectedAreas": 2.4,
-      "population": 3384688,
-      "gdp": 85347696277.69,
-      "co2PerCapita": 2.57,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "jm": {
-      "forestArea": 56.19,
-      "co2Mt": 8.07,
-      "renewableEnergy": 10.5,
-      "pm25": 21.65,
-      "protectedAreas": 1.6,
-      "population": 2837077,
-      "gdp": 22704903217.56,
-      "co2PerCapita": 2.84,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2023,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "pg": {
-      "forestArea": 78.95,
-      "co2Mt": 5.47,
-      "renewableEnergy": 54.6,
-      "pm25": 14.11,
-      "protectedAreas": 0.7,
-      "population": 10762817,
-      "gdp": 32498658653.84,
-      "co2PerCapita": 0.52,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2022,
-        "pm25": 2023,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "lk": {
-      "forestArea": 34,
-      "co2Mt": 23.33,
-      "renewableEnergy": 48.8,
-      "pm25": 17.9,
-      "protectedAreas": 3.7,
-      "population": 21756000,
-      "gdp": 108825231671.2,
-      "co2PerCapita": 1.06,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "np": {
-      "forestArea": 41.59,
-      "co2Mt": 15.89,
-      "renewableEnergy": 73.7,
-      "pm25": 42.8,
-      "protectedAreas": 23.6,
-      "population": 29618118,
-      "gdp": 45489810283.11,
-      "co2PerCapita": 0.54,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "mm": {
-      "forestArea": 42.4,
-      "co2Mt": 31.36,
-      "renewableEnergy": 62.9,
-      "pm25": 25.2,
-      "protectedAreas": 4.1,
-      "population": 54850648,
-      "gdp": 81665773809.52,
-      "co2PerCapita": 0.58,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "kh": {
-      "forestArea": 43.06,
-      "co2Mt": 19.44,
-      "renewableEnergy": 52.4,
-      "pm25": 21.9,
-      "protectedAreas": 31.8,
-      "population": 17847982,
-      "gdp": 51267065842.96,
-      "co2PerCapita": 1.1,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "mn": {
-      "forestArea": 9.09,
-      "co2Mt": 27.66,
-      "renewableEnergy": 3,
-      "pm25": 25.6,
-      "protectedAreas": 19.8,
-      "population": 3568978,
-      "gdp": 25369107325.45,
-      "co2PerCapita": 7.85,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
-      }
-    },
-    "uz": {
-      "forestArea": 8.55,
-      "co2Mt": 148.54,
-      "renewableEnergy": 1,
-      "pm25": 31.4,
-      "protectedAreas": 14.1,
-      "population": 37053428,
-      "gdp": 147038081129.41,
-      "co2PerCapita": 4.09,
-      "dataYear": {
-        "forestArea": 2023,
-        "co2Mt": 2024,
-        "renewableEnergy": 2021,
-        "pm25": 2024,
-        "protectedAreas": 2025,
-        "population": 2025,
-        "gdp": 2025
+        "gdp": 2024,
+        "co2PerCapita": 2024
       }
     },
     "ao": {
@@ -1437,45 +51,108 @@
         "pm25": 2023,
         "protectedAreas": 2025,
         "population": 2025,
-        "gdp": 2025
+        "gdp": 2025,
+        "co2PerCapita": 2024
       }
     },
-    "mz": {
-      "forestArea": 45.81,
-      "co2Mt": 10.11,
-      "renewableEnergy": 76.9,
-      "pm25": 13.72,
-      "protectedAreas": 18,
-      "population": 35631653,
-      "gdp": 22337997046.19,
-      "co2PerCapita": 0.29,
+    "ar": {
+      "forestArea": 10.32,
+      "co2Mt": 183.27,
+      "renewableEnergy": 9.2,
+      "pm25": 8.7,
+      "protectedAreas": 9.7,
+      "population": 45851378,
+      "gdp": 683097891618.6,
+      "co2PerCapita": 4.01,
       "dataYear": {
         "forestArea": 2023,
         "co2Mt": 2024,
         "renewableEnergy": 2021,
-        "pm25": 2023,
+        "pm25": 2024,
         "protectedAreas": 2025,
         "population": 2025,
-        "gdp": 2025
+        "gdp": 2025,
+        "co2PerCapita": 2024
       }
     },
-    "ve": {
-      "forestArea": 52.23,
-      "co2Mt": 96.41,
-      "renewableEnergy": 33.7,
-      "pm25": 19.2,
-      "protectedAreas": 39,
-      "population": 28516896,
-      "gdp": 99661244155.63,
-      "co2PerCapita": 3.39,
+    "at": {
+      "forestArea": 47.24,
+      "co2Mt": 58.03,
+      "renewableEnergy": 36,
+      "pm25": 10.2,
+      "protectedAreas": 29.6,
+      "population": 9208163,
+      "gdp": 579470021095.42,
+      "co2PerCapita": 6.32,
       "dataYear": {
         "forestArea": 2023,
         "co2Mt": 2024,
         "renewableEnergy": 2021,
-        "pm25": 2023,
+        "pm25": 2024,
         "protectedAreas": 2025,
         "population": 2025,
-        "gdp": 2025
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "au": {
+      "forestArea": 17.42,
+      "co2Mt": 383.4,
+      "renewableEnergy": 12.3,
+      "pm25": 4.5,
+      "protectedAreas": 33.5,
+      "population": 27614411,
+      "gdp": 1798518933689.21,
+      "co2PerCapita": 14.1,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "bd": {
+      "forestArea": 14.49,
+      "co2Mt": 124.19,
+      "renewableEnergy": 25,
+      "pm25": 78,
+      "protectedAreas": 5.9,
+      "population": 175686899,
+      "gdp": 456319229255.58,
+      "co2PerCapita": 0.72,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "be": {
+      "forestArea": 22.6,
+      "co2Mt": 86.65,
+      "renewableEnergy": 11.7,
+      "pm25": 8.9,
+      "protectedAreas": 18.6,
+      "population": 11941781,
+      "gdp": 725466462859.65,
+      "co2PerCapita": 7.31,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
       }
     },
     "bo": {
@@ -1494,7 +171,168 @@
         "pm25": 2024,
         "protectedAreas": 2025,
         "population": 2025,
-        "gdp": 2025
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "br": {
+      "forestArea": 58.98,
+      "co2Mt": 491.47,
+      "renewableEnergy": 46.5,
+      "pm25": 13.38,
+      "protectedAreas": 29.4,
+      "population": 212812405,
+      "gdp": 2279920092492.13,
+      "co2PerCapita": 2.32,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2023,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "ca": {
+      "forestArea": 39.46,
+      "co2Mt": 577.97,
+      "renewableEnergy": 23.8,
+      "pm25": 6.7,
+      "protectedAreas": 11.6,
+      "population": 41651653,
+      "gdp": 2319899772425.92,
+      "co2PerCapita": 14.01,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "cd": {
+      "forestArea": 54.19,
+      "co2Mt": 6.21,
+      "renewableEnergy": 96.3,
+      "pm25": 58.2,
+      "protectedAreas": 14.9,
+      "population": 112832473,
+      "gdp": 91030531316.99,
+      "co2PerCapita": 0.06,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "ch": {
+      "forestArea": 32.38,
+      "co2Mt": 33.73,
+      "renewableEnergy": 27.7,
+      "pm25": 7.3,
+      "protectedAreas": 12.5,
+      "population": 9092436,
+      "gdp": 1043529899250.92,
+      "co2PerCapita": 3.75,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "cl": {
+      "forestArea": 25.01,
+      "co2Mt": 77.82,
+      "renewableEnergy": 24.2,
+      "pm25": 23.1,
+      "protectedAreas": 37.9,
+      "population": 19859921,
+      "gdp": 357371159574.86,
+      "co2PerCapita": 3.94,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2023,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "cn": {
+      "forestArea": 24.03,
+      "co2Mt": 13124.73,
+      "renewableEnergy": 15.2,
+      "pm25": 31,
+      "protectedAreas": 14.7,
+      "population": 1406585000,
+      "gdp": 19498039388042.6,
+      "co2PerCapita": 9.32,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "co": {
+      "forestArea": 52.77,
+      "co2Mt": 95.08,
+      "renewableEnergy": 29.7,
+      "pm25": 13.8,
+      "protectedAreas": 26.5,
+      "population": 53425635,
+      "gdp": 457410034202.52,
+      "co2PerCapita": 1.8,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "cr": {
+      "forestArea": 60.4,
+      "co2Mt": 8.38,
+      "renewableEnergy": 34.2,
+      "pm25": 7,
+      "protectedAreas": 28.2,
+      "population": 5152950,
+      "gdp": 102904921157.48,
+      "co2PerCapita": 1.63,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
       }
     },
     "cu": {
@@ -1513,7 +351,68 @@
         "pm25": 2023,
         "protectedAreas": 2025,
         "population": 2025,
-        "gdp": 2020
+        "gdp": 2020,
+        "co2PerCapita": 2024
+      }
+    },
+    "cz": {
+      "forestArea": 34.76,
+      "co2Mt": 77.75,
+      "renewableEnergy": 17.2,
+      "pm25": 12.7,
+      "protectedAreas": 21.9,
+      "population": 10886878,
+      "gdp": 391026962800.48,
+      "co2PerCapita": 7.13,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "de": {
+      "forestArea": 32.68,
+      "co2Mt": 579.94,
+      "renewableEnergy": 17.6,
+      "pm25": 9,
+      "protectedAreas": 40,
+      "population": 83491249,
+      "gdp": 5050922925047.05,
+      "co2PerCapita": 6.94,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "dk": {
+      "forestArea": 15.78,
+      "co2Mt": 25.57,
+      "renewableEnergy": 39.5,
+      "pm25": 7.2,
+      "protectedAreas": 23.8,
+      "population": 6009169,
+      "gdp": 462526660468.39,
+      "co2PerCapita": 4.28,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
       }
     },
     "do": {
@@ -1532,7 +431,1188 @@
         "pm25": 2023,
         "protectedAreas": 2025,
         "population": 2025,
-        "gdp": 2025
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "dz": {
+      "forestArea": 0.83,
+      "co2Mt": 186.36,
+      "renewableEnergy": 0.1,
+      "pm25": 15.4,
+      "protectedAreas": 4.4,
+      "population": 47435312,
+      "gdp": 287031225987.74,
+      "co2PerCapita": 3.98,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "ec": {
+      "forestArea": 49.55,
+      "co2Mt": 47.96,
+      "renewableEnergy": 18.9,
+      "pm25": 9.7,
+      "protectedAreas": 20.2,
+      "population": 18289896,
+      "gdp": 130320560400,
+      "co2PerCapita": 2.64,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "eg": {
+      "forestArea": 0.05,
+      "co2Mt": 291.64,
+      "renewableEnergy": 6.1,
+      "pm25": 39.8,
+      "protectedAreas": 11.6,
+      "population": 118365995,
+      "gdp": 365254630179.74,
+      "co2PerCapita": 2.5,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "es": {
+      "forestArea": 37.19,
+      "co2Mt": 220.08,
+      "renewableEnergy": 19,
+      "pm25": 8.7,
+      "protectedAreas": 22.1,
+      "population": 49355143,
+      "gdp": 1906453309985.88,
+      "co2PerCapita": 4.51,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "et": {
+      "forestArea": 14.93,
+      "co2Mt": 19.36,
+      "renewableEnergy": 90.6,
+      "pm25": 22.2,
+      "protectedAreas": 17,
+      "population": 135472051,
+      "gdp": 126358758448.36,
+      "co2PerCapita": 0.15,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "fi": {
+      "forestArea": 73.72,
+      "co2Mt": 31.11,
+      "renewableEnergy": 50.2,
+      "pm25": 5.2,
+      "protectedAreas": 13.5,
+      "population": 5646436,
+      "gdp": 317039368819.61,
+      "co2PerCapita": 5.54,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "fj": {
+      "forestArea": 63.5,
+      "co2Mt": 1.51,
+      "renewableEnergy": 28.4,
+      "pm25": 6.45,
+      "protectedAreas": 1,
+      "population": 933154,
+      "gdp": 6198013062.07,
+      "co2PerCapita": 1.62,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2022,
+        "pm25": 2023,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "fr": {
+      "forestArea": 32.48,
+      "co2Mt": 274.45,
+      "renewableEnergy": 16.2,
+      "pm25": 8.1,
+      "protectedAreas": 36.7,
+      "population": 68720337,
+      "gdp": 3366315927447.33,
+      "co2PerCapita": 4,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "gb": {
+      "forestArea": 13.29,
+      "co2Mt": 292.42,
+      "renewableEnergy": 12.2,
+      "pm25": 7.4,
+      "protectedAreas": 42.1,
+      "population": 69487000,
+      "gdp": 4002587541846.01,
+      "co2PerCapita": 4.22,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "gh": {
+      "forestArea": 35.19,
+      "co2Mt": 24.17,
+      "renewableEnergy": 39,
+      "pm25": 35.8,
+      "protectedAreas": 7.9,
+      "population": 35064272,
+      "gdp": 114209905278.72,
+      "co2PerCapita": 0.7,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "gr": {
+      "forestArea": 30.27,
+      "co2Mt": 52.51,
+      "renewableEnergy": 21.5,
+      "pm25": 11.5,
+      "protectedAreas": 11.2,
+      "population": 10413962,
+      "gdp": 280635521324.44,
+      "co2PerCapita": 5.05,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "hu": {
+      "forestArea": 22.45,
+      "co2Mt": 42.63,
+      "renewableEnergy": 15.3,
+      "pm25": 12.9,
+      "protectedAreas": 22.3,
+      "population": 9514251,
+      "gdp": 246490213513.05,
+      "co2PerCapita": 4.46,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "id": {
+      "forestArea": 47.72,
+      "co2Mt": 812.2,
+      "renewableEnergy": 20.2,
+      "pm25": 35.5,
+      "protectedAreas": 5.2,
+      "population": 285721236,
+      "gdp": 1445642584163.81,
+      "co2PerCapita": 2.87,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "ie": {
+      "forestArea": 11.53,
+      "co2Mt": 32.57,
+      "renewableEnergy": 12.7,
+      "pm25": 6.5,
+      "protectedAreas": 4,
+      "population": 5484367,
+      "gdp": 721701359046.31,
+      "co2PerCapita": 6.04,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "il": {
+      "forestArea": 6.47,
+      "co2Mt": 57.67,
+      "renewableEnergy": 6.2,
+      "pm25": 17.2,
+      "protectedAreas": 12.2,
+      "population": 10122800,
+      "gdp": 610777842873.6,
+      "co2PerCapita": 5.77,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "in": {
+      "forestArea": 24.54,
+      "co2Mt": 3153.83,
+      "renewableEnergy": 34.9,
+      "pm25": 50.6,
+      "protectedAreas": 4.5,
+      "population": 1463865525,
+      "gdp": 3956067115771.63,
+      "co2PerCapita": 2.17,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "iq": {
+      "forestArea": 1.9,
+      "co2Mt": 238.67,
+      "renewableEnergy": 1.1,
+      "pm25": 38.4,
+      "protectedAreas": 1.5,
+      "population": 47020774,
+      "gdp": 254367293538.46,
+      "co2PerCapita": 5.18,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "ir": {
+      "forestArea": 6.65,
+      "co2Mt": 828.99,
+      "renewableEnergy": 0.9,
+      "pm25": 40.25,
+      "protectedAreas": 7,
+      "population": 92417681,
+      "gdp": 362682115433.36,
+      "co2PerCapita": 9.05,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2023,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "it": {
+      "forestArea": 32.89,
+      "co2Mt": 299.23,
+      "renewableEnergy": 17.5,
+      "pm25": 14.2,
+      "protectedAreas": 14.8,
+      "population": 58915656,
+      "gdp": 2551556954100.35,
+      "co2PerCapita": 5.08,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "jm": {
+      "forestArea": 56.19,
+      "co2Mt": 8.07,
+      "renewableEnergy": 10.5,
+      "pm25": 21.65,
+      "protectedAreas": 1.6,
+      "population": 2837077,
+      "gdp": 22704903217.56,
+      "co2PerCapita": 2.84,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2023,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "jp": {
+      "forestArea": 68.4,
+      "co2Mt": 972.27,
+      "renewableEnergy": 8.8,
+      "pm25": 8.6,
+      "protectedAreas": 15.1,
+      "population": 123366734,
+      "gdp": 4435162999976.94,
+      "co2PerCapita": 7.84,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "ke": {
+      "forestArea": 6.22,
+      "co2Mt": 21.64,
+      "renewableEnergy": 67.7,
+      "pm25": 14.3,
+      "protectedAreas": 11.8,
+      "population": 57532493,
+      "gdp": 135941278878.82,
+      "co2PerCapita": 0.38,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "kh": {
+      "forestArea": 43.06,
+      "co2Mt": 19.44,
+      "renewableEnergy": 52.4,
+      "pm25": 21.9,
+      "protectedAreas": 31.8,
+      "population": 17847982,
+      "gdp": 51267065842.96,
+      "co2PerCapita": 1.1,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "kr": {
+      "forestArea": 64.11,
+      "co2Mt": 588.01,
+      "renewableEnergy": 3.6,
+      "pm25": 17,
+      "protectedAreas": 5.9,
+      "population": 51684564,
+      "gdp": 1872374961553.15,
+      "co2PerCapita": 11.36,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "kz": {
+      "forestArea": 1.31,
+      "co2Mt": 258.8,
+      "renewableEnergy": 2,
+      "pm25": 15.1,
+      "protectedAreas": 11.8,
+      "population": 20843754,
+      "gdp": 306239209650.02,
+      "co2PerCapita": 12.57,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "lk": {
+      "forestArea": 34,
+      "co2Mt": 23.33,
+      "renewableEnergy": 48.8,
+      "pm25": 17.9,
+      "protectedAreas": 3.7,
+      "population": 21756000,
+      "gdp": 108825231671.2,
+      "co2PerCapita": 1.06,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "ma": {
+      "forestArea": 12.94,
+      "co2Mt": 70.04,
+      "renewableEnergy": 10.9,
+      "pm25": 18.72,
+      "protectedAreas": 1.4,
+      "population": 38430770,
+      "gdp": 182374250612.28,
+      "co2PerCapita": 1.84,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2023,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "mm": {
+      "forestArea": 42.4,
+      "co2Mt": 31.36,
+      "renewableEnergy": 62.9,
+      "pm25": 25.2,
+      "protectedAreas": 4.1,
+      "population": 54850648,
+      "gdp": 81665773809.52,
+      "co2PerCapita": 0.58,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "mn": {
+      "forestArea": 9.09,
+      "co2Mt": 27.66,
+      "renewableEnergy": 3,
+      "pm25": 25.6,
+      "protectedAreas": 19.8,
+      "population": 3568978,
+      "gdp": 25369107325.45,
+      "co2PerCapita": 7.85,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "mx": {
+      "forestArea": 33.6,
+      "co2Mt": 475.99,
+      "renewableEnergy": 13,
+      "pm25": 17.4,
+      "protectedAreas": 19.9,
+      "population": 131946900,
+      "gdp": 1832641364775.52,
+      "co2PerCapita": 3.64,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "my": {
+      "forestArea": 57.72,
+      "co2Mt": 295.95,
+      "renewableEnergy": 7.5,
+      "pm25": 18.3,
+      "protectedAreas": 8.4,
+      "population": 35977838,
+      "gdp": 472193128644.6,
+      "co2PerCapita": 8.32,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "mz": {
+      "forestArea": 45.81,
+      "co2Mt": 10.11,
+      "renewableEnergy": 76.9,
+      "pm25": 13.72,
+      "protectedAreas": 18,
+      "population": 35631653,
+      "gdp": 22337997046.19,
+      "co2PerCapita": 0.29,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2023,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "ng": {
+      "forestArea": 23.21,
+      "co2Mt": 131.91,
+      "renewableEnergy": 80.3,
+      "pm25": 40.1,
+      "protectedAreas": 11.6,
+      "population": 237527782,
+      "gdp": 290794361542.11,
+      "co2PerCapita": 0.57,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "nl": {
+      "forestArea": 11.06,
+      "co2Mt": 118.79,
+      "renewableEnergy": 12.2,
+      "pm25": 8.9,
+      "protectedAreas": 29.8,
+      "population": 18087633,
+      "gdp": 1332767651100.39,
+      "co2PerCapita": 6.6,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "no": {
+      "forestArea": 33.5,
+      "co2Mt": 40,
+      "renewableEnergy": 61.4,
+      "pm25": 6.6,
+      "protectedAreas": 5.4,
+      "population": 5610870,
+      "gdp": 530755719438.88,
+      "co2PerCapita": 7.18,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "np": {
+      "forestArea": 41.59,
+      "co2Mt": 15.89,
+      "renewableEnergy": 73.7,
+      "pm25": 42.8,
+      "protectedAreas": 23.6,
+      "population": 29618118,
+      "gdp": 45489810283.11,
+      "co2PerCapita": 0.54,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "nz": {
+      "forestArea": 37.79,
+      "co2Mt": 31.81,
+      "renewableEnergy": 28.9,
+      "pm25": 4.4,
+      "protectedAreas": 30.6,
+      "population": 5324700,
+      "gdp": 264057413739.97,
+      "co2PerCapita": 6.01,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "pe": {
+      "forestArea": 56.1,
+      "co2Mt": 69.27,
+      "renewableEnergy": 30.6,
+      "pm25": 17.1,
+      "protectedAreas": 16.5,
+      "population": 34576665,
+      "gdp": 334854659181.89,
+      "co2PerCapita": 2.02,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "pg": {
+      "forestArea": 78.95,
+      "co2Mt": 5.47,
+      "renewableEnergy": 54.6,
+      "pm25": 14.11,
+      "protectedAreas": 0.7,
+      "population": 10762817,
+      "gdp": 32498658653.84,
+      "co2PerCapita": 0.52,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2022,
+        "pm25": 2023,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "ph": {
+      "forestArea": 24.46,
+      "co2Mt": 174.11,
+      "renewableEnergy": 28,
+      "pm25": 14.8,
+      "protectedAreas": 3.6,
+      "population": 116786962,
+      "gdp": 487086123720.42,
+      "co2PerCapita": 1.5,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "pk": {
+      "forestArea": 4.67,
+      "co2Mt": 203.99,
+      "renewableEnergy": 41.6,
+      "pm25": 73.7,
+      "protectedAreas": 15.2,
+      "population": 255219554,
+      "gdp": 407307214476.22,
+      "co2PerCapita": 0.81,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "pl": {
+      "forestArea": 31.08,
+      "co2Mt": 276.06,
+      "renewableEnergy": 15.2,
+      "pm25": 14.8,
+      "protectedAreas": 38.1,
+      "population": 36435861,
+      "gdp": 1035491784197.44,
+      "co2PerCapita": 7.55,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "pt": {
+      "forestArea": 36.15,
+      "co2Mt": 35.56,
+      "renewableEnergy": 32.3,
+      "pm25": 6.8,
+      "protectedAreas": 17.2,
+      "population": 10804871,
+      "gdp": 346639825141.82,
+      "co2PerCapita": 3.32,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "ro": {
+      "forestArea": 30.12,
+      "co2Mt": 70.88,
+      "renewableEnergy": 23.6,
+      "pm25": 15.3,
+      "protectedAreas": 24.3,
+      "population": 19020271,
+      "gdp": 428677977854.83,
+      "co2PerCapita": 3.72,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "ru": {
+      "forestArea": 49.78,
+      "co2Mt": 2009.15,
+      "renewableEnergy": 3.5,
+      "pm25": 9.8,
+      "protectedAreas": 8.6,
+      "population": 143513328,
+      "gdp": 2561310169358.74,
+      "co2PerCapita": 13.98,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "sa": {
+      "forestArea": 0.45,
+      "co2Mt": 652.51,
+      "renewableEnergy": 0.1,
+      "pm25": 25.1,
+      "protectedAreas": 17,
+      "population": 36973555,
+      "gdp": 1276942933333.33,
+      "co2PerCapita": 18.48,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "se": {
+      "forestArea": 68.7,
+      "co2Mt": 37.77,
+      "renewableEnergy": 57.9,
+      "pm25": 5.3,
+      "protectedAreas": 15.9,
+      "population": 10596620,
+      "gdp": 668998664082.08,
+      "co2PerCapita": 3.57,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "sg": {
+      "forestArea": 20.93,
+      "co2Mt": 58.87,
+      "renewableEnergy": 1.1,
+      "pm25": 11.4,
+      "protectedAreas": 2.1,
+      "population": 6111175,
+      "gdp": 603869516998.74,
+      "co2PerCapita": 9.75,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "sn": {
+      "forestArea": 41.28,
+      "co2Mt": 14.2,
+      "renewableEnergy": 35.4,
+      "pm25": 22.3,
+      "protectedAreas": 16.6,
+      "population": 18931966,
+      "gdp": 37006536238.37,
+      "co2PerCapita": 0.77,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "th": {
+      "forestArea": 38.69,
+      "co2Mt": 283.81,
+      "renewableEnergy": 19,
+      "pm25": 19.8,
+      "protectedAreas": 13.4,
+      "population": 71619863,
+      "gdp": 577009981112.02,
+      "co2PerCapita": 3.96,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "tr": {
+      "forestArea": 29.48,
+      "co2Mt": 460.03,
+      "renewableEnergy": 12,
+      "pm25": 15.3,
+      "protectedAreas": 5.7,
+      "population": 85878556,
+      "gdp": 1597293229287,
+      "co2PerCapita": 5.38,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "tz": {
+      "forestArea": 50.05,
+      "co2Mt": 21.34,
+      "renewableEnergy": 78.3,
+      "pm25": 20.17,
+      "protectedAreas": 32.3,
+      "population": 70545865,
+      "gdp": 90143496090.44,
+      "co2PerCapita": 0.31,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2023,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "ua": {
+      "forestArea": 16.76,
+      "co2Mt": 118.48,
+      "renewableEnergy": 8.9,
+      "pm25": 9.2,
+      "protectedAreas": 17.9,
+      "population": 38980376,
+      "gdp": 214233312784.4,
+      "co2PerCapita": 3.13,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "us": {
+      "forestArea": 33.87,
+      "co2Mt": 4632.16,
+      "renewableEnergy": 10.9,
+      "pm25": 7.1,
+      "protectedAreas": 15.8,
+      "population": 341784857,
+      "gdp": 30769700000000,
+      "co2PerCapita": 13.62,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "uy": {
+      "forestArea": 11.96,
+      "co2Mt": 8.7,
+      "renewableEnergy": 57.8,
+      "pm25": 11.5,
+      "protectedAreas": 2.4,
+      "population": 3384688,
+      "gdp": 85347696277.69,
+      "co2PerCapita": 2.57,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "uz": {
+      "forestArea": 8.55,
+      "co2Mt": 148.54,
+      "renewableEnergy": 1,
+      "pm25": 31.4,
+      "protectedAreas": 14.1,
+      "population": 37053428,
+      "gdp": 147038081129.41,
+      "co2PerCapita": 4.09,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "ve": {
+      "forestArea": 52.23,
+      "co2Mt": 96.41,
+      "renewableEnergy": 33.7,
+      "pm25": 19.2,
+      "protectedAreas": 39,
+      "population": 28516896,
+      "gdp": 99661244155.63,
+      "co2PerCapita": 3.39,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2023,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "vn": {
+      "forestArea": 47.45,
+      "co2Mt": 430.82,
+      "renewableEnergy": 24.2,
+      "pm25": 28.7,
+      "protectedAreas": 2.9,
+      "population": 101598527,
+      "gdp": 514697215165.07,
+      "co2PerCapita": 4.27,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
+      }
+    },
+    "za": {
+      "forestArea": 13.97,
+      "co2Mt": 440.17,
+      "renewableEnergy": 9.7,
+      "pm25": 18.8,
+      "protectedAreas": 12.9,
+      "population": 64747319,
+      "gdp": 427184325997.31,
+      "co2PerCapita": 6.88,
+      "dataYear": {
+        "forestArea": 2023,
+        "co2Mt": 2024,
+        "renewableEnergy": 2021,
+        "pm25": 2024,
+        "protectedAreas": 2025,
+        "population": 2025,
+        "gdp": 2025,
+        "co2PerCapita": 2024
       }
     }
   }

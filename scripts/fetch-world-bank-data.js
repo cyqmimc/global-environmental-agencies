@@ -10,6 +10,7 @@
 import { readFileSync, writeFileSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
+import { fetchJson, validatePage, derivePerCapita } from "./update-utils.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -26,7 +27,7 @@ const INDICATORS = {
 };
 
 // Wider range to capture latest available year per indicator
-const DATE_RANGE = "2015:2025";
+const DATE_RANGE = `2015:${new Date().getUTCFullYear()}`;
 const BASE_URL = "https://api.worldbank.org/v2";
 
 async function fetchAllPages(url) {
@@ -34,12 +35,8 @@ async function fetchAllPages(url) {
   let allData = [];
   while (true) {
     const pageUrl = `${url}&page=${page}&per_page=1000`;
-    const res = await fetch(pageUrl);
-    if (!res.ok) {
-      throw new Error(`World Bank API returned HTTP ${res.status}`);
-    }
-    const json = await res.json();
-    if (!json[1] || !Array.isArray(json[1])) break;
+    const json = await fetchJson(pageUrl);
+    validatePage(json?.[1], json?.[0]?.pages, page);
     allData = allData.concat(json[1]);
     const meta = json[0];
     if (page >= meta.pages) break;
@@ -54,8 +51,8 @@ async function getAlpha3to2Map() {
   if (_alpha3to2Cache) return _alpha3to2Cache;
   console.log("  Fetching country code mapping...");
   const url = `${BASE_URL}/country?format=json&per_page=500`;
-  const res = await fetch(url);
-  const json = await res.json();
+  const json = await fetchJson(url);
+  validatePage(json?.[1], json?.[0]?.pages, 1);
   const map = {};
   if (json[1]) {
     for (const c of json[1]) {
@@ -85,7 +82,7 @@ async function fetchIndicator(code, label) {
     // Index by country alpha-2 code, keeping both latest + history
     const result = {};
     for (const entry of data) {
-      if (entry.value == null) continue;
+      if (typeof entry.value !== "number" || !Number.isFinite(entry.value)) continue;
       const rawId = entry.country?.id;
       if (!rawId) continue;
 
@@ -99,7 +96,8 @@ async function fetchIndicator(code, label) {
       }
       if (!key) continue;
 
-      const year = parseInt(entry.date);
+      const year = Number(entry.date);
+      if (!Number.isInteger(year) || year < 2015) continue;
       if (!result[key]) result[key] = { value: null, year: 0, history: [] };
       result[key].history.push({ year, value: Math.round(entry.value * 100) / 100 });
       if (year > result[key].year) {
@@ -187,14 +185,9 @@ async function main() {
       }
     }
 
-    // Use direct WB per-capita indicator (preferred), fallback to computed
-    if (countryData.co2PerCapitaDirect != null) {
-      countryData.co2PerCapita = countryData.co2PerCapitaDirect;
-    } else if (countryData.co2Mt != null && countryData.population != null && countryData.population > 0) {
-      countryData.co2PerCapita = Math.round((countryData.co2Mt * 1e6 / countryData.population) * 100) / 100;
-    } else {
-      countryData.co2PerCapita = null;
-    }
+    const perCapita = derivePerCapita(indicatorData, iso2);
+    countryData.co2PerCapita = perCapita.value;
+    dataYear.co2PerCapita = perCapita.year;
     // Remove helper fields from output
     delete countryData.co2PerCapitaDirect;
     delete dataYear.co2PerCapitaDirect;
