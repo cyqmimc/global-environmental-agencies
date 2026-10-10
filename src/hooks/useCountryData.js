@@ -31,6 +31,7 @@ export default function useCountryData() {
   const [historyLoaded, setHistoryLoaded] = useState(false);
   const [status, setStatus] = useState("loading");
   const [error, setError] = useState(null);
+  const [unavailableSources, setUnavailableSources] = useState([]);
   const [loadAttempt, setLoadAttempt] = useState(0);
   const fetchedRef = useRef(false);
 
@@ -38,14 +39,25 @@ export default function useCountryData() {
     let cancelled = false;
     setStatus("loading");
     setError(null);
+    setUnavailableSources([]);
+    setWbMeta(null);
+    setSdgMeta(null);
+
+    const unavailable = [];
+    const optionalSnapshot = (url, source) =>
+      fetchJson(url).catch(() => {
+        unavailable.push(source);
+        return { countries: {}, meta: null };
+      });
 
     Promise.all([
       fetchJson("/countries-core.json"),
-      fetchJson("/wb-latest.json").catch(() => ({ countries: {}, meta: null })),
-      fetchJson("/sdg-latest.json").catch(() => ({ countries: {}, meta: null })),
+      optionalSnapshot("/wb-latest.json", "wb"),
+      optionalSnapshot("/sdg-latest.json", "sdg"),
     ])
       .then(([countriesData, wbData, sdgData]) => {
         if (cancelled) return;
+        setUnavailableSources(unavailable);
         if (wbData.meta) setWbMeta(wbData.meta);
         if (sdgData.meta) setSdgMeta(sdgData.meta);
         const merged = countriesData.map((c) => {
@@ -152,5 +164,5 @@ export default function useCountryData() {
     };
   }, [countries]);
 
-  return { countries, wbMeta, sdgMeta, globalAvg, loadDetail, loadAllDetails, historyLoaded, status, error, retry };
+  return { countries, wbMeta, sdgMeta, globalAvg, loadDetail, loadAllDetails, historyLoaded, status, error, retry, unavailableSources };
 }

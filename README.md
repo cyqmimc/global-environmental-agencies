@@ -27,6 +27,7 @@ A one-stop platform to explore environmental agencies, data, and treaty complian
 - **双行筛选** — 履约状态（NDC/碳价/BTR/基加利/30×30）+ 职能领域，可叠加
 
 ### 工具功能
+- **数据加载提示** — 部分来源加载失败时显示提示并支持重试，页脚分别展示世界银行与 SDG 的获取日期
 - **国家对比** — 选择 2-3 个国家并排对比所有指标 + 图表
 - **中英双语** — 所有内容支持中英文切换
 - **CSV 导出** — 导出筛选结果，含全部数据字段

@@ -73,7 +73,7 @@ export default function GlobalEnvironmentalAgencies() {
   const { theme, toggle: toggleTheme } = useDarkMode();
   const { scheme: colorScheme, toggle: toggleColorScheme, isClassic } = useColorScheme();
   const isDark = theme === "dark";
-  const { countries, wbMeta, sdgMeta, globalAvg, loadDetail, loadAllDetails, historyLoaded, status, error, retry } = useCountryData();
+  const { countries, wbMeta, sdgMeta, globalAvg, loadDetail, loadAllDetails, historyLoaded, status, error, retry, unavailableSources } = useCountryData();
   const { favorites, toggle: toggleFav, isFav } = useFavorites();
   // Note: useCountryData prefetches the detail bundle on idle so rankings
   // export and other bulk consumers get full rows without each user click.
@@ -458,6 +458,18 @@ export default function GlobalEnvironmentalAgencies() {
       </div>
 
       <main className="max-w-7xl mx-auto px-6 pt-4 pb-6">
+        {unavailableSources.length > 0 && (
+          <div role="status" className="mb-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900 dark:border-amber-800 dark:bg-amber-950 dark:text-amber-200">
+            <p>
+              {t("部分数据未能加载：", "Some data could not be loaded: ")}
+              {unavailableSources.map((source) => source === "wb" ? t("世界银行", "World Bank") : t("联合国 SDG", "UN SDG")).join(" / ")}
+              {t("。相关指标暂不可用，可重试加载。", ". Affected indicators are unavailable. Retry to load them.")}
+            </p>
+            <button onClick={retry} className="mt-2 underline font-medium cursor-pointer">
+              {t("重新加载数据", "Reload data")}
+            </button>
+          </div>
+        )}
         {/* World Map */}
         {countries.length > 0 && (
           <WorldMap
@@ -783,7 +795,12 @@ export default function GlobalEnvironmentalAgencies() {
             {wbMeta?.fetchedAt && (
               <span>
                 {" · "}
-                {t("数据获取于", "Fetched on")} {wbMeta.fetchedAt.slice(0, 10)}
+                {t("世界银行获取于", "World Bank fetched on")} {wbMeta.fetchedAt.slice(0, 10)}
+              </span>
+            )}
+            {sdgMeta?.fetchedAt && (
+              <span>
+                {" · "}{t("SDG 获取于", "SDG fetched on")} {sdgMeta.fetchedAt.slice(0, 10)}
               </span>
             )}
           </p>

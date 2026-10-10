@@ -133,7 +133,7 @@ node -e "JSON.parse(require('fs').readFileSync('public/countries.json','utf8'));
 
 | 数据类别 | 更新日期 | 操作人 |
 |---------|---------|--------|
-| 世界银行指标 | 2026-09-24 | 官方 API 复核，数值未变；保留 67 国 IQAir 2024 覆盖值，补齐人均 CO₂ 年份 |
+| 世界银行指标 | 2026-10-10 | 官方 API 刷新 80 国；森林指标更新至 2024 年，79 国森林覆盖数值变化；保留 67 国 IQAir 2024 覆盖值 |
 | 碳定价数据 | 2026-04-03 | WB Carbon Pricing Dashboard (2025-04-01数据) |
 | NDC 评级 | 2026-04-02 | 手动录入 |
 | NDC 3.0 (2035目标) | 2026-09-01 | 63/80 国已提交；按 UNFCCC NDC Registry 核对提交日期，明确目标保留官方数值 |
@@ -144,4 +144,4 @@ node -e "JSON.parse(require('fs').readFileSync('public/countries.json','utf8'));
 | CBD 30×30 | 2026-04-01 | 手动录入 |
 | 机构信息 | 2026-04-01 | 手动录入 |
 | EPI 评分 | 2026-04-01 | 手动录入 (2024 EPI) |
-| 联合国 SDG 环境指标 | 2026-09-24 | UN Global SDG Indicators Database 2026.Q2.G.02；各系列采用最新共同年份 |
+| 联合国 SDG 环境指标 | 2026-10-10 | 官方 API 重新核验 4 项指标；各系列采用最新共同年份，快照数值及覆盖率未变 |
