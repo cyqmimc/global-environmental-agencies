@@ -24,6 +24,7 @@ const CompareDialog = lazy(() => import("./components/CompareDialog"));
 const ClimateEquityView = lazy(() => import("./components/ClimateEquityView"));
 const AboutPage = lazy(() => import("./components/AboutPage"));
 const RankingsView = lazy(() => import("./components/RankingsView"));
+const SdgDataView = lazy(() => import("./components/SdgDataView"));
 
 const REGIONS = [
   { value: "", labelZh: "全部地区", labelEn: "All Regions" },
@@ -59,9 +60,12 @@ export default function GlobalEnvironmentalAgencies() {
   const [compareLoading, setCompareLoading] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
   const [viewMode, setViewMode] = useState(urlParams.view || "cards");
+  const [sdgMetric, setSdgMetric] = useState(urlParams.sdgMetric);
+  const [sdgDescending, setSdgDescending] = useState(urlParams.sdgDescending);
   const [copied, setCopied] = useState(false);
   const [regionalPdfLoading, setRegionalPdfLoading] = useState(false);
   const [regionalPdfError, setRegionalPdfError] = useState(false);
+  const [csvState, setCsvState] = useState("idle");
   const initialWeights = decodeWeights(urlParams.w);
   const [stateWeights, setStateWeights] = useState(initialWeights.stateWeights);
   const [governanceWeights, setGovernanceWeights] = useState(initialWeights.governanceWeights);
@@ -106,6 +110,8 @@ export default function GlobalEnvironmentalAgencies() {
       country: openCountryIso || "",
       favOnly: filters.favOnly,
       view: viewMode,
+      sdgMetric,
+      sdgDescending,
       w: weightsAreDefault ? "" : encodeWeights(stateWeights, governanceWeights),
     });
   }, [
@@ -113,6 +119,7 @@ export default function GlobalEnvironmentalAgencies() {
     filters.complianceFilter, filters.sortOrder, filters.page,
     filters.favOnly, language, openCountryIso, viewMode,
     stateWeights, governanceWeights, weightsAreDefault,
+    sdgMetric, sdgDescending,
   ]);
 
   // Keep <link rel="canonical"> in sync with client-side navigation so a
@@ -622,10 +629,21 @@ export default function GlobalEnvironmentalAgencies() {
                     : t("导出当前结果 PDF", "Export Results PDF")}
                 </button>
                 <button
-                  onClick={() => exportCSV(filters.filteredCountries, language)}
+                  disabled={csvState === "loading"}
+                  onClick={async () => {
+                    setCsvState("loading");
+                    try {
+                      const full = await loadAllDetails();
+                      const byIso = new Map(full.map((country) => [country.isoCode, country]));
+                      exportCSV(filters.filteredCountries.map((country) => byIso.get(country.isoCode) || country), language);
+                      setCsvState("idle");
+                    } catch {
+                      setCsvState("error");
+                    }
+                  }}
                   className="text-sm text-green-700 dark:text-green-400 hover:text-green-800 font-medium flex items-center gap-1 cursor-pointer"
                 >
-                  <span>📥</span> {t("导出 CSV", "Export CSV")}
+                  <span>📥</span> {csvState === "loading" ? t("准备导出…", "Preparing export…") : csvState === "error" ? t("导出失败，重试", "Export failed — retry") : t("导出 CSV", "Export CSV")}
                 </button>
               </div>
             )}
@@ -633,11 +651,12 @@ export default function GlobalEnvironmentalAgencies() {
         </div>
 
         {/* View Toggle */}
-        <div className="flex items-center gap-2 mb-4">
+        <div className="flex flex-wrap items-center gap-2 mb-4">
           {[
             { key: "cards", zh: "卡片", en: "Cards" },
             { key: "rankings", zh: "排行榜", en: "Rankings" },
             { key: "equity", zh: "气候公平", en: "Climate Equity" },
+            { key: "sdg", zh: "SDG 数据", en: "SDG Data" },
           ].map((v) => (
             <button
               key={v.key}
@@ -655,7 +674,9 @@ export default function GlobalEnvironmentalAgencies() {
 
         <Suspense fallback={<div className="text-center py-20 text-gray-500 dark:text-gray-400">Loading...</div>}>
         <ErrorBoundary language={language} onReset={() => setViewMode("cards")}>
-          {viewMode === "equity" ? (
+          {viewMode === "sdg" ? (
+            <SdgDataView countries={filters.filteredCountries} allCountries={countries} meta={sdgMeta} language={language} t={t} onCountryClick={openCountryDetail} metric={sdgMetric} descending={sdgDescending} onMetricChange={(key, descending) => { setSdgMetric(key); setSdgDescending(descending); }} onDirectionChange={() => setSdgDescending((value) => !value)} />
+          ) : viewMode === "equity" ? (
             <ClimateEquityView
               countries={filters.filteredCountries}
               language={language}
@@ -744,6 +765,7 @@ export default function GlobalEnvironmentalAgencies() {
           <ErrorBoundary language={language} onReset={() => setShowCompare(false)}>
             <CompareDialog
               compareList={compareList}
+              sdgMeta={sdgMeta}
               language={language}
               t={t}
               onClose={() => setShowCompare(false)}

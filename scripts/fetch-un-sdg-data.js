@@ -16,52 +16,8 @@ const ROOT = path.resolve(__dirname, "..");
 const API_BASE = process.env.SDG_API_BASE || "https://unstats.un.org/SDGAPI/v1/sdg";
 const SOURCE_URL = "https://unstats.un.org/sdgs/dataportal/database";
 
-export const SERIES_CONFIG = [
-  {
-    key: "waterStress",
-    series: "ER_H2O_STRESS",
-    indicator: "6.4.2",
-    goal: 6,
-    unit: "%",
-    direction: "lower",
-    labelZh: "水资源压力",
-    labelEn: "Water stress",
-    dimensions: { Activity: "TOTAL", "Reporting Type": "G" },
-  },
-  {
-    key: "materialConsumptionGdp",
-    series: "EN_MAT_DOMCMPG",
-    indicator: "12.2.2",
-    goal: 12,
-    unit: "kg/2020 USD",
-    direction: "lower",
-    labelZh: "单位 GDP 国内物质消费",
-    labelEn: "Material consumption / GDP",
-    dimensions: { "Type of product": "ALP", "Reporting Type": "G" },
-  },
-  {
-    key: "marineKbaProtected",
-    series: "ER_MRN_MPA",
-    indicator: "14.5.1",
-    goal: 14,
-    unit: "%",
-    direction: "higher",
-    labelZh: "海洋关键生物多样性区保护覆盖",
-    labelEn: "Marine KBA protection",
-    dimensions: { "Reporting Type": "G" },
-  },
-  {
-    key: "degradedLand",
-    series: "AG_LND_DGRD",
-    indicator: "15.3.1",
-    goal: 15,
-    unit: "%",
-    direction: "lower",
-    labelZh: "土地退化面积占比",
-    labelEn: "Degraded land",
-    dimensions: { "Reporting Type": "G" },
-  },
-];
+import { SDG_INDICATORS } from "../src/utils/sdg.js";
+export const SERIES_CONFIG = SDG_INDICATORS;
 
 const COUNTRY_NAME_ALIASES = {
   ae: "United Arab Emirates",
@@ -223,6 +179,8 @@ async function main() {
       labelEn: config.labelEn,
       unit: config.unit,
       direction: config.direction,
+      dimensions: config.dimensions,
+      metadataUrl: `https://unstats.un.org/sdgs/metadata/files/Metadata-${config.indicator.split(".").map((part) => part.padStart(2, "0")).join("-")}.pdf`,
       release: fetched.release,
       dataYear: fetched.dataYear,
       description: fetched.description,

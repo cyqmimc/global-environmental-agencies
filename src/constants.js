@@ -1,3 +1,5 @@
+import { SDG_INDICATORS, sdgValue } from "./utils/sdg.js";
+
 export const TREATY_LABELS = {
   "Paris Agreement": "巴黎协定",
   "CBD": "生物多样性公约",
@@ -107,6 +109,8 @@ export function getUrlParams() {
     country: pathCountry || p.get("country") || "",
     favOnly: p.get("favOnly") === "1",
     view: p.get("view") || "cards",
+    sdgMetric: SDG_INDICATORS.some((item) => item.key === p.get("sdg")) ? p.get("sdg") : "safeDrinkingWater",
+    sdgDescending: p.get("sdgOrder") !== "asc",
     w: p.get("w") || "",
   };
 }
@@ -121,6 +125,8 @@ export function setUrlParams(params) {
   if (params.page > 1) p.set("page", params.page);
   if (params.favOnly) p.set("favOnly", "1");
   if (params.view && params.view !== "cards") p.set("view", params.view);
+  if (params.sdgMetric && params.sdgMetric !== "safeDrinkingWater") p.set("sdg", params.sdgMetric);
+  if (params.sdgDescending === false) p.set("sdgOrder", "asc");
   if (params.w) p.set("w", params.w);
 
   // A country is open: use the canonical /country/xx or /en/country/xx path
@@ -202,7 +208,7 @@ export function csvQuote(v) {
 }
 
 // --- CSV export ---
-export function exportCSV(items, language, filename) {
+export function buildCSV(items, language) {
   const t = (zh, en) => (language === "zh" ? zh : en);
   const header = [
     t("国家", "Country"),
@@ -235,6 +241,11 @@ export function exportCSV(items, language, filename) {
     t("核心法律", "Key Laws"),
     t("重点公约(节选)", "Selected Treaties"),
     t("官网", "Website"),
+    "ISO",
+    ...SDG_INDICATORS.flatMap((definition) => {
+      const label = language === "zh" ? definition.labelZh : definition.labelEn;
+      return [`SDG ${definition.indicator} ${label} (${definition.unit})`, `${label} ${t("年份", "Year")}`, `${label} ${t("状态", "Status")}`, `${label} ${t("数据性质", "Nature")}`];
+    }),
   ];
   const rows = items.map((c) => {
     const pop = c.wb?.population;
@@ -261,7 +272,7 @@ export function exportCSV(items, language, filename) {
       c.wb?.pm25?.toFixed(1) ?? "",
       c.wb?.dataYear?.pm25 ?? "",
       c.wb?.co2PerCapita?.toFixed(2) ?? "",
-      c.wb?.dataYear?.co2Mt ?? "",
+      c.wb?.dataYear?.co2PerCapita ?? "",
       c.wb?.protectedAreas?.toFixed(1) ?? "",
       c.wb?.dataYear?.protectedAreas ?? "",
       pop ?? "",
@@ -274,12 +285,20 @@ export function exportCSV(items, language, filename) {
       (c.keyLaws || []).map((l) => (language === "zh" ? l.nameZh : l.nameEn) + "(" + l.year + ")").join(" / "),
       c.treaties ? c.treaties.map((tr) => language === "zh" ? (TREATY_LABELS[tr] || tr) : tr).join(" / ") : "",
       c.website,
+      c.isoCode,
+      ...SDG_INDICATORS.flatMap(({ key }) => {
+        const observation = c.sdg?.[key];
+        return [sdgValue(observation), observation?.year ?? "", observation?.status ?? "missing", observation?.nature ?? ""];
+      }),
     ];
   });
   const BOM = "﻿";
-  const csv =
-    BOM +
+  return BOM +
     [header, ...rows].map((r) => r.map(csvQuote).join(",")).join("\n");
+}
+
+export function exportCSV(items, language, filename) {
+  const csv = buildCSV(items, language);
   const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
   const link = document.createElement("a");
   link.href = URL.createObjectURL(blob);

@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback, useRef } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { fetchJson } from "../utils/fetchWithRetry";
 
 let detailCache = null;
@@ -13,13 +13,13 @@ let idlePrefetchPromise = null;
 function fetchIdleBundle() {
   if (!idlePrefetchPromise) {
     idlePrefetchPromise = Promise.all([
-      fetchJson("/countries-detail.json").catch(() => ({})),
-      fetchJson("/wb-history.json").catch(() => ({ countries: {} })),
+      detailCache ? Promise.resolve(detailCache) : fetchJson("/countries-detail.json").catch(() => null),
+      historyCache ? Promise.resolve({ countries: historyCache }) : fetchJson("/wb-history.json").catch(() => null),
     ]).then(([detail, history]) => {
-      detailCache = detail;
-      historyCache = history.countries || {};
+      if (detail) detailCache = detail;
+      if (history?.countries) historyCache = history.countries;
       return { detail, history: historyCache };
-    });
+    }).finally(() => { idlePrefetchPromise = null; });
   }
   return idlePrefetchPromise;
 }
@@ -33,7 +33,6 @@ export default function useCountryData() {
   const [error, setError] = useState(null);
   const [unavailableSources, setUnavailableSources] = useState([]);
   const [loadAttempt, setLoadAttempt] = useState(0);
-  const fetchedRef = useRef(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -72,15 +71,14 @@ export default function useCountryData() {
         // Idle prefetch of detail + history bundles. Once resolved, merge
         // history into wb.history for every country so Sparklines/TrendLineChart
         // light up without needing a per-country fetch.
-        if (!fetchedRef.current) {
-          fetchedRef.current = true;
-          const kick = () =>
-            fetchIdleBundle()
+          const kick = () => {
+            if (cancelled) return;
+            return fetchIdleBundle()
               .then(({ history }) => {
                 if (cancelled) return;
                 setCountries((prev) =>
                   prev.map((c) =>
-                    c.wb && history[c.isoCode]
+                    c.wb && history?.[c.isoCode]
                       ? { ...c, wb: { ...c.wb, history: history[c.isoCode] } }
                       : c
                   )
@@ -88,9 +86,9 @@ export default function useCountryData() {
               })
               .catch(() => {})
               .finally(() => { if (!cancelled) setHistoryLoaded(true); });
+          };
           if (typeof requestIdleCallback === "function") requestIdleCallback(kick, { timeout: 2000 });
           else setTimeout(kick, 1000);
-        }
       })
       .catch((err) => {
         if (cancelled) return;
@@ -103,7 +101,6 @@ export default function useCountryData() {
   }, [loadAttempt]);
 
   const retry = useCallback(() => {
-    fetchedRef.current = false;
     setLoadAttempt((n) => n + 1);
   }, []);
 
@@ -114,7 +111,9 @@ export default function useCountryData() {
     if (!detailCache) await fetchIdleBundle();
     const d = detailCache?.[country.isoCode];
     const h = historyCache?.[country.isoCode];
-    if (!d && !h) return country;
+    // Keep the same record on detail failure so the selection effect does
+    // not start an endless fetch loop; reopening/exporting can retry.
+    if (!d) return country;
 
     const enriched = {
       ...country,
@@ -135,7 +134,9 @@ export default function useCountryData() {
    */
   const loadAllDetails = useCallback(async () => {
     if (!detailCache) await fetchIdleBundle();
-    if (!detailCache) return countries;
+    if (!detailCache || countries.some((country) => !detailCache[country.isoCode])) {
+      throw new Error("Country details are unavailable; retry the export.");
+    }
     const enriched = countries.map((c) =>
       c._detail ? c : { ...c, ...(detailCache[c.isoCode] || {}), _detail: true }
     );

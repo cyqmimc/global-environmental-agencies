@@ -3,6 +3,7 @@ import { TREATY_LABELS, RESPONSIBILITY_LABELS, NDC_RATING_CONFIG, PROVENANCE } f
 import DataYearBadge from "./DataYearBadge";
 import useDialogA11y from "../hooks/useDialogA11y";
 import { normalizeComparisonCountries } from "../utils/comparison";
+import { SDG_INDICATORS, formatSdgValue, sdgValue } from "../utils/sdg";
 import {
   carbonIntensity,
   gdpPerCapita,
@@ -14,7 +15,7 @@ import {
 
 const COMPARE_COLORS = ["#22c55e", "#3b82f6", "#f59e0b"];
 
-export default function CompareDialog({ compareList, language, t, onClose, onClear }) {
+export default function CompareDialog({ compareList, sdgMeta, language, t, onClose, onClear }) {
   const dialogRef = useDialogA11y(true, onClose);
   const countries = normalizeComparisonCountries(compareList);
   return (
@@ -437,23 +438,45 @@ export default function CompareDialog({ compareList, language, t, onClose, onCle
             </table>
           </div>
 
+          <section className="mb-6">
+            <h4 className="text-sm font-semibold mb-2">{t("SDG 指标对比", "SDG Indicator Comparison")}</h4>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">{t("各指标使用共同年份，缺失值不按零值处理。", "Each indicator uses a common year; missing values are never treated as zero.")}</p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead><tr className="border-b border-gray-200 dark:border-gray-800">
+                  <th scope="col" className="text-left py-2">{t("指标", "Indicator")}</th>
+                  {countries.map((country) => <th key={country.isoCode} scope="col" className="text-right px-2">{language === "zh" ? country.countryZh : country.countryEn}</th>)}
+                </tr></thead>
+                <tbody>{SDG_INDICATORS.map((item) => {
+                  const definition = sdgMeta?.indicators?.[item.key] || item;
+                  return <tr key={item.key} className="border-b border-gray-100 dark:border-gray-800">
+                    <th scope="row" className="text-left py-3 font-normal text-gray-500 dark:text-gray-400">SDG {item.indicator} · {language === "zh" ? item.labelZh : item.labelEn}<span className="block text-xs">{definition.unit} · {definition.dataYear || "—"}</span></th>
+                    {countries.map((country) => {
+                      const observation = country.sdg?.[item.key];
+                      return <td key={country.isoCode} className="text-right px-2 tabular-nums">{sdgValue(observation) !== null ? formatSdgValue(item.key, observation) : observation?.status === "not_applicable" ? t("不适用", "N/A") : "—"}</td>;
+                    })}
+                  </tr>;
+                })}</tbody>
+              </table>
+            </div>
+          </section>
+
           {/* Comparison chart */}
           <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4">
             <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3">
               {t("数据对比", "Data Comparison")}
             </h4>
-            <BarChart
-              labels={[
-                t("森林覆盖率 (%)", "Forest (%)"),
-                t("碳排放 (Mt)", "CO₂ (Mt)"),
-                t("EPI 评分", "EPI Score"),
-              ]}
-              datasets={countries.map((c, i) => ({
-                label: language === "zh" ? c.countryZh : c.countryEn,
-                data: [c.wb?.forestArea ?? 0, c.wb?.co2Mt ?? 0, c.epiScore],
-                color: COMPARE_COLORS[i],
-              }))}
-            />
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {[
+                { label: t("森林覆盖率 (%)", "Forest (%)"), value: (country) => country.wb?.forestArea },
+                { label: t("碳排放 (Mt)", "CO₂ (Mt)"), value: (country) => country.wb?.co2Mt },
+                { label: t("EPI 评分", "EPI Score"), value: (country) => country.epiScore },
+              ].map((metric) => <BarChart key={metric.label} labels={[metric.label]} datasets={countries.map((country, index) => ({
+                label: language === "zh" ? country.countryZh : country.countryEn,
+                data: [metric.value(country)],
+                color: COMPARE_COLORS[index],
+              }))} />)}
+            </div>
           </div>
 
           {/* Close + clear */}

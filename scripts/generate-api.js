@@ -51,7 +51,7 @@ function readJson(p) {
 // pitfall) this needs to avoid. See README.md's "公共 API" section for the
 // full citation-format guidance this summarizes.
 // ---------------------------------------------------------------------
-function buildMeta({ endpoint, count, wbMeta }) {
+function buildMeta({ endpoint, count, wbMeta, sdgMeta }) {
   return {
     version: API_VERSION,
     generatedAt: new Date().toISOString(),
@@ -59,6 +59,7 @@ function buildMeta({ endpoint, count, wbMeta }) {
     ...(count != null ? { count } : {}),
     dataAsOf: {
       worldBank: wbMeta?.fetchedAt ?? null,
+      unSdg: sdgMeta?.fetchedAt ?? null,
       pm25Note: wbMeta?.pm25Source ?? null,
     },
     project: {
@@ -69,7 +70,7 @@ function buildMeta({ endpoint, count, wbMeta }) {
     },
     suggestedCitation:
       `${PROJECT_NAME} (${new Date().getUTCFullYear()}). Retrieved from ${BASE_URL}/api/v1/. ` +
-      `Underlying figures are from World Bank Open Data, Yale EPI, and Climate Action Tracker — ` +
+      `Underlying figures are from World Bank Open Data, UN Global SDG Indicators Database, Yale EPI, and Climate Action Tracker — ` +
       `see license.fields below for which applies to which field before reuse.`,
     license: {
       summary:
@@ -101,16 +102,23 @@ function buildMeta({ endpoint, count, wbMeta }) {
           sourceUrl: "https://data.worldbank.org/",
           license: "CC BY 4.0",
         },
+        unSdg: {
+          appliesTo: "sdg, indicators and SDG observations",
+          source: "UN Global SDG Indicators Database",
+          sourceUrl: "https://unstats.un.org/sdgs/dataportal/database",
+          license: "Source-specific terms apply; consult UN SDG and the indicator custodian metadata before reuse",
+        },
       },
     },
   };
 }
 
-function flattenCountry(country, wbRow, scores) {
+function flattenCountry(country, wbRow, scores, sdgRow) {
   const wb = wbRow || {};
   const dataYear = wb.dataYear || {};
   return {
     isoCode: country.isoCode,
+    sdg: sdgRow || null,
     countryEn: country.countryEn,
     countryZh: country.countryZh,
     region: country.region,
@@ -181,11 +189,12 @@ function computeAllScores(merged) {
 function main() {
   const countries = readJson(join(ROOT, "public", "countries.json"));
   const wb = readJson(join(ROOT, "public", "wb-latest.json"));
+  const sdg = readJson(join(ROOT, "public", "sdg-latest.json"));
   const merged = countries.map((c) => ({ ...c, wb: wb.countries?.[c.isoCode] || null }));
   const scoresByIso = computeAllScores(merged);
 
   const flattened = countries.map((c) =>
-    flattenCountry(c, wb.countries?.[c.isoCode], scoresByIso.get(c.isoCode))
+    flattenCountry(c, wb.countries?.[c.isoCode], scoresByIso.get(c.isoCode), sdg.countries?.[c.isoCode])
   );
 
   const apiDir = join(DIST, "api", "v1");
@@ -196,7 +205,7 @@ function main() {
   writeFileSync(
     join(apiDir, "countries.json"),
     JSON.stringify(
-      { _meta: buildMeta({ endpoint: "/api/v1/countries.json", count: flattened.length, wbMeta: wb.meta }), countries: flattened },
+      { _meta: buildMeta({ endpoint: "/api/v1/countries.json", count: flattened.length, wbMeta: wb.meta, sdgMeta: sdg.meta }), countries: flattened },
       null,
       2
     ) + "\n"
@@ -207,12 +216,19 @@ function main() {
     writeFileSync(
       join(countryDir, `${c.isoCode}.json`),
       JSON.stringify(
-        { _meta: buildMeta({ endpoint: `/api/v1/country/${c.isoCode}.json`, wbMeta: wb.meta }), country: c },
+        { _meta: buildMeta({ endpoint: `/api/v1/country/${c.isoCode}.json`, wbMeta: wb.meta, sdgMeta: sdg.meta }), country: c },
         null,
         2
       ) + "\n"
     );
   });
+
+  writeFileSync(join(apiDir, "sdg.json"), JSON.stringify({
+    _meta: buildMeta({ endpoint: "/api/v1/sdg.json", count: countries.length, sdgMeta: sdg.meta }),
+    source: sdg.meta,
+    countries: sdg.countries,
+  }, null, 2) + "\n");
+  console.log("✓ Wrote dist/api/v1/sdg.json (7 indicators, 80 countries)");
 
   // 3. Rankings — sorted by Governance score (this project's point of
   // differentiation, see README's methodology section), State included

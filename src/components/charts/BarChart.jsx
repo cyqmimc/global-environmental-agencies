@@ -15,7 +15,7 @@ export default function BarChart({ labels, datasets }) {
   const plotH = chartH - padTop - padBot;
 
   // Find max value
-  const allVals = datasets.flatMap((ds) => ds.data);
+  const allVals = datasets.flatMap((ds) => ds.data).filter(Number.isFinite);
   const maxVal = Math.max(...allVals, 1);
   const niceMax = Math.ceil(maxVal / 10) * 10 || 10;
 
@@ -25,7 +25,7 @@ export default function BarChart({ labels, datasets }) {
 
   return (
     <div className="flex flex-col items-center">
-      <svg viewBox={`0 0 ${chartW} ${chartH}`} width="100%" preserveAspectRatio="xMidYMid meet">
+      <svg role="img" aria-label={labels.join(", ")} viewBox={`0 0 ${chartW} ${chartH}`} width="100%" preserveAspectRatio="xMidYMid meet">
         {/* Y grid + labels */}
         {yLines.map((val) => {
           const y = padTop + plotH - (val / niceMax) * plotH;
@@ -45,12 +45,15 @@ export default function BarChart({ labels, datasets }) {
           return (
             <g key={li}>
               {datasets.map((ds, di) => {
-                const val = ds.data[li] ?? 0;
+                const raw = ds.data[li];
+                const available = Number.isFinite(raw);
+                const val = available ? raw : 0;
                 const barH = (val / niceMax) * plotH;
                 const x = groupX + di * (barWidth + gap);
                 const y = padTop + plotH - barH;
                 return (
                   <g key={di}>
+                    <title>{ds.label}: {available ? val : "—"}</title>
                     <rect
                       x={x}
                       y={y}
@@ -59,7 +62,7 @@ export default function BarChart({ labels, datasets }) {
                       rx="4"
                       fill={ds.color}
                     />
-                    {val > 0 && (
+                    {(
                       <text
                         x={x + barWidth / 2}
                         y={y - 4}
@@ -67,7 +70,7 @@ export default function BarChart({ labels, datasets }) {
                         fontSize="9"
                         className="fill-gray-500 dark:fill-gray-400"
                       >
-                        {val >= 100 ? Math.round(val) : val.toFixed(1)}
+                        {available ? val >= 100 ? Math.round(val) : val.toFixed(1) : "—"}
                       </text>
                     )}
                   </g>

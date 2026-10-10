@@ -23,7 +23,7 @@ data/countries/<iso>.json (源文件, 80 个文件, 手动编辑 —— 详见 C
 前端合并: country = { ...core数据, wb: wb-latest数据 }
 空闲预取: country.wb.history = wb-history数据；country = { ...country, ...detail数据 }
 
-UN SDG API ──→ fetch-un-sdg-data.js ──→ sdg-latest.json（4 个环境指标，构建期静态生成）
+UN SDG API ──→ fetch-un-sdg-data.js ──→ sdg-latest.json（7 个环境指标，构建期静态生成）
 前端合并: country.sdg = sdg-latest.countries[iso]
 ```
 
@@ -39,7 +39,7 @@ UN SDG API ──→ fetch-un-sdg-data.js ──→ sdg-latest.json（4 个环�
 | 数据 | 命令 | 更新频率 | 说明 |
 |------|------|---------|------|
 | 世界银行环境指标 | `npm run fetch-data` | 每季度 | CO₂(AR5→2024)、森林、可再生能源、PM2.5、保护区、人口、GDP |
-| 联合国 SDG 环境指标 | `npm run fetch-sdg-data` | 每季度 | 6.4.2 水压力、12.2.2 材料效率、14.5.1 海洋 KBA、15.3.1 土地退化 |
+| 联合国 SDG 环境指标 | `npm run fetch-sdg-data` | 每季度 | 6.4.2 水压力、12.2.2 材料效率、14.5.1 海洋 KBA、15.3.1 土地退化、6.1.1 安全饮用水、7.1.2 清洁烹饪、15.5.1 红色名录指数 |
 | PM2.5 补充 | 手动更新 wb-latest.json | 每年 | IQAir World Air Quality Report (地面监测, 优先于WB卫星数据) |
 | 碳定价 | 手动更新 data/countries/<iso>.json 后运行 build-data | 每年 | WB Carbon Pricing Dashboard Excel 下载 |
 
@@ -144,4 +144,6 @@ node -e "JSON.parse(require('fs').readFileSync('public/countries.json','utf8'));
 | CBD 30×30 | 2026-04-01 | 手动录入 |
 | 机构信息 | 2026-04-01 | 手动录入 |
 | EPI 评分 | 2026-04-01 | 手动录入 (2024 EPI) |
-| 联合国 SDG 环境指标 | 2026-10-10 | 官方 API 重新核验 4 项指标；各系列采用最新共同年份，快照数值及覆盖率未变 |
+| 联合国 SDG 环境指标 | 2026-10-10 | 官方 2026.Q3.G.01 版；扩展为 7 项，全国口径；新增安全饮用水 66/80（2024）、清洁烹饪 80/80（2024）、红色名录指数 80/80（2025） |
+
+新增指标定义统一维护于 `src/utils/sdg.js`。安全饮用水和清洁烹饪只选 `Location=ALLAREA`、`Reporting Type=G`，不以城乡值或区域数据代替全国值；红色名录指数选全球可比口径 `Reporting Type=G`，范围为 0–1，越高表示整体灭绝风险越低。共同年份无数据时记录 `missing`，不使用更旧年份填补。页面、CSV、公共 API 均保留缺失和不适用状态。详细接入评估见 [DATA-EXPANSION.md](DATA-EXPANSION.md)。

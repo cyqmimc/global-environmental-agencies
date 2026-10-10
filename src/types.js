@@ -67,6 +67,9 @@
  * @property {SdgObservation} materialConsumptionGdp
  * @property {SdgObservation} marineKbaProtected
  * @property {SdgObservation} degradedLand
+ * @property {SdgObservation} safeDrinkingWater
+ * @property {SdgObservation} cleanCooking
+ * @property {SdgObservation} redListIndex
  */
 
 /**

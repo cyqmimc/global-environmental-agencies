@@ -10,7 +10,8 @@ A one-stop platform to explore environmental agencies, data, and treaty complian
 - **80 个国家** — 覆盖 G20 全部成员、主要排放国、6 大洲代表
 - **SVG 世界地图** — EPI、NDC、碳价、可再生能源、PM2.5、保护区、碳强度、NDC 3.0、LDN 共 9 种指标
 - **世界银行数据** — 森林面积、CO₂排放、可再生能源、PM2.5、自然保护区等 8 项指标
-- **联合国 SDG 环境快照** — 官方全球数据库中的水压力、材料效率、海洋 KBA 保护、土地退化 4 项指标
+- **联合国 SDG 环境快照** — 官方全球数据库中的水压力、材料效率、海洋 KBA 保护、土地退化、安全饮用水、清洁烹饪、红色名录指数 7 项指标
+- **SDG 数据浏览** — 指标切换、数值排序、地区及现有条件筛选、全局/筛选结果覆盖率，支持打开国家详情，指标与排序方向保留在分享链接中
 - **6 维雷达图** — 森林 / 可再生能源 / 保护区 / 空气质量 / 碳效率 / EPI 环境画像
 
 ### 公约履约追踪
@@ -28,9 +29,9 @@ A one-stop platform to explore environmental agencies, data, and treaty complian
 
 ### 工具功能
 - **数据加载提示** — 部分来源加载失败时显示提示并支持重试，页脚分别展示世界银行与 SDG 的获取日期
-- **国家对比** — 选择 2-3 个国家并排对比所有指标 + 图表
+- **国家对比** — 选择 2-3 个国家并排对比环境及 SDG 指标；不同单位的指标分图展示
 - **中英双语** — 所有内容支持中英文切换
-- **CSV 导出** — 导出筛选结果，含全部数据字段
+- **CSV 导出** — 导出筛选结果，自动补齐法律/公约详情，附七项 SDG 的数值、年份、缺失状态及数据性质
 - **URL 状态同步** — 筛选条件写入 URL，可分享
 - **关于页** — 数据来源、方法论、许可证、反馈入口
 - **公共 JSON API** — 零后端静态接口，供第三方引用（见下方「公共 API」）
@@ -39,7 +40,7 @@ A one-stop platform to explore environmental agencies, data, and treaty complian
 ## 技术栈
 
 - **前端**: React 18 + Vite 8 + Tailwind CSS v4
-- **图表**: Chart.js (Bar + Radar)
+- **图表**: 原生 SVG（柱状图、雷达图、趋势图、散点图），无外部图表库
 - **地图**: SVG 世界地图 (55KB, CC BY-SA 3.0)
 - **数据**: 世界银行 Open Data API（静态生成，零运行时依赖）
 - **部署**: 纯静态，无后端
@@ -72,7 +73,7 @@ npx netlify deploy --prod
 
 ```bash
 npm run fetch-data      # 拉取最新世界银行数据（建议每季度）
-npm run fetch-sdg-data  # 拉取 4 项联合国官方 SDG 环境指标
+npm run fetch-sdg-data  # 拉取 7 项联合国官方 SDG 环境指标
 npm run check-updates   # 检查哪些数据需要更新
 ```
 
@@ -137,6 +138,9 @@ scripts/
 | `GET /api/v1/countries.json` | 全部 80 国，字段已扁平化 |
 | `GET /api/v1/country/<iso>.json` | 单个国家（`<iso>` 为小写 2 位 ISO 3166-1 alpha-2，如 `us`） |
 | `GET /api/v1/rankings.json` | 按治理指数排序的排行榜（State + Governance 双分数，默认权重） |
+| `GET /api/v1/sdg.json` | 七项 SDG 指标的定义、来源、口径、年份、覆盖率及 80 国观测值 |
+
+国家批量与单国接口增加 `sdg` 对象，保留 `status/value/year/unit/nature`；`_meta.dataAsOf.unSdg` 表示获取时间。SDG 数据的使用条款按联合国及各指标保管机构规定，见指标元数据；不沿用世界银行字段的许可。新增指标不计入状态或治理评分。
 
 每个响应都带 `_meta`：`version`（API 版本）、`generatedAt`（生成时间）、`project`（本项目信息）、`suggestedCitation`（建议引用文本）、`license`（见下）。CORS 已开放（`Access-Control-Allow-Origin: *`），可直接在浏览器 `fetch()` 跨域调用；响应长缓存（`vercel.json`），内容只在每次构建部署时更新。
 

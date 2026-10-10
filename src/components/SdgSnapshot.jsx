@@ -1,8 +1,13 @@
+import { SDG_INDICATORS, formatSdgValue } from "../utils/sdg";
+
 const GOAL_COLORS = {
   waterStress: "#26bde2",
   materialConsumptionGdp: "#bf8b2e",
   marineKbaProtected: "#0a97d9",
   degradedLand: "#56c02b",
+  safeDrinkingWater: "#26bde2",
+  cleanCooking: "#b58b00",
+  redListIndex: "#56c02b",
 };
 
 const NATURE_LABELS = {
@@ -13,15 +18,9 @@ const NATURE_LABELS = {
   M: { zh: "模型数据", en: "Modelled" },
 };
 
-function formatValue(key, observation) {
-  if (observation?.status !== "available") return null;
-  if (key === "materialConsumptionGdp") return observation.value.toFixed(2);
-  return observation.value.toFixed(1);
-}
-
 export default function SdgSnapshot({ snapshot, meta, language, t }) {
   const indicators = meta?.indicators || {};
-  const rows = ["waterStress", "materialConsumptionGdp", "marineKbaProtected", "degradedLand"];
+  const rows = SDG_INDICATORS.map(({ key }) => key);
 
   return (
     <section className="mb-5 rounded-xl border border-sky-100 dark:border-sky-900 bg-sky-50/50 dark:bg-sky-950/20 p-4">
@@ -49,9 +48,9 @@ export default function SdgSnapshot({ snapshot, meta, language, t }) {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {rows.map((key) => {
-          const definition = indicators[key] || {};
-          const observation = snapshot[key] || { status: "missing" };
-          const value = formatValue(key, observation);
+          const definition = indicators[key] || SDG_INDICATORS.find((item) => item.key === key);
+          const observation = snapshot?.[key] || { status: "missing" };
+          const value = formatSdgValue(key, observation);
           const nature = NATURE_LABELS[observation.nature];
           return (
             <div

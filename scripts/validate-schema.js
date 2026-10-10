@@ -298,7 +298,7 @@ try {
 }
 
 const sdgErrors = [];
-const SDG_KEYS = ["waterStress", "materialConsumptionGdp", "marineKbaProtected", "degradedLand"];
+const SDG_KEYS = ["waterStress", "materialConsumptionGdp", "marineKbaProtected", "degradedLand", "safeDrinkingWater", "cleanCooking", "redListIndex"];
 const SDG_STATUSES = new Set(["available", "missing", "not_applicable"]);
 
 if (!sdg.meta?.indicators || !sdg.countries || typeof sdg.countries !== "object") {
@@ -314,6 +314,8 @@ if (!sdg.meta?.indicators || !sdg.countries || typeof sdg.countries !== "object"
       sdgErrors.push(`${key}: missing indicator/series code`);
     }
     if (!Number.isInteger(definition.dataYear)) sdgErrors.push(`${key}: invalid dataYear`);
+    const count = [...isoSet].filter((iso) => sdg.countries[iso]?.[key]?.status === "available").length;
+    if (definition.coverage !== count) sdgErrors.push(`${key}: coverage differs from available observations`);
   }
 
   for (const iso of isoSet) {
@@ -330,6 +332,10 @@ if (!sdg.meta?.indicators || !sdg.countries || typeof sdg.countries !== "object"
       }
       if (observation.status === "available") {
         if (!Number.isFinite(observation.value)) sdgErrors.push(`${iso}.${key}: value must be finite`);
+        if (["safeDrinkingWater", "cleanCooking", "redListIndex"].includes(key)) {
+          const maximum = key === "redListIndex" ? 1 : 100;
+          if (observation.value < 0 || observation.value > maximum) sdgErrors.push(`${iso}.${key}: value outside 0–${maximum}`);
+        }
         if (!Number.isInteger(observation.year)) sdgErrors.push(`${iso}.${key}: year must be an integer`);
         if (observation.year !== sdg.meta.indicators[key].dataYear) {
           sdgErrors.push(`${iso}.${key}: year differs from the series dataYear`);
